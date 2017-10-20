@@ -230,14 +230,14 @@ void TableStruct::InitDefaultsImpl() {
   ::google::protobuf::internal::OnShutdownDestroyMessage(
       &_ReferencedAttributes_default_instance_);_CheckRequest_QuotasEntry_default_instance_._instance.get_mutable()->set_default_instance(_CheckRequest_QuotasEntry_default_instance_._instance.get_mutable());
   _CheckRequest_QuotasEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _CheckRequest_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::Attributes*>(
-      ::istio::mixer::v1::Attributes::internal_default_instance());
+  _CheckRequest_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::CompressedAttributes*>(
+      ::istio::mixer::v1::CompressedAttributes::internal_default_instance());
   _CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->status_ = const_cast< ::google::rpc::Status*>(
       ::google::rpc::Status::internal_default_instance());
   _CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->valid_duration_ = const_cast< ::google::protobuf::Duration*>(
       ::google::protobuf::Duration::internal_default_instance());
-  _CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::Attributes*>(
-      ::istio::mixer::v1::Attributes::internal_default_instance());
+  _CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::CompressedAttributes*>(
+      ::istio::mixer::v1::CompressedAttributes::internal_default_instance());
   _CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->referenced_attributes_ = const_cast< ::istio::mixer::v1::ReferencedAttributes*>(
       ::istio::mixer::v1::ReferencedAttributes::internal_default_instance());
   _CheckResponse_QuotaResult_default_instance_._instance.get_mutable()->valid_duration_ = const_cast< ::google::protobuf::Duration*>(
@@ -261,44 +261,45 @@ void AddDescriptorsImpl() {
       "\n\024mixer/v1/check.proto\022\016istio.mixer.v1\032\024"
       "gogoproto/gogo.proto\032\036google/protobuf/du"
       "ration.proto\032\027google/rpc/status.proto\032\031m"
-      "ixer/v1/attributes.proto\"\306\002\n\014CheckReques"
-      "t\0224\n\nattributes\030\001 \001(\0132\032.istio.mixer.v1.A"
-      "ttributesB\004\310\336\037\000\022\031\n\021global_word_count\030\002 \001"
-      "(\r\022\030\n\020deduplication_id\030\003 \001(\t\022>\n\006quotas\030\004"
-      " \003(\0132(.istio.mixer.v1.CheckRequest.Quota"
-      "sEntryB\004\310\336\037\000\0322\n\013QuotaParams\022\016\n\006amount\030\001 "
-      "\001(\003\022\023\n\013best_effort\030\002 \001(\010\032W\n\013QuotasEntry\022"
-      "\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.istio.mixe"
-      "r.v1.CheckRequest.QuotaParams:\0028\001\"\300\005\n\rCh"
-      "eckResponse\022L\n\014precondition\030\002 \001(\01320.isti"
-      "o.mixer.v1.CheckResponse.PreconditionRes"
-      "ultB\004\310\336\037\000\022\?\n\006quotas\030\003 \003(\0132).istio.mixer."
-      "v1.CheckResponse.QuotasEntryB\004\310\336\037\000\032\225\002\n\022P"
-      "reconditionResult\022(\n\006status\030\001 \001(\0132\022.goog"
-      "le.rpc.StatusB\004\310\336\037\000\022;\n\016valid_duration\030\002 "
-      "\001(\0132\031.google.protobuf.DurationB\010\310\336\037\000\230\337\037\001"
-      "\022\027\n\017valid_use_count\030\003 \001(\005\0224\n\nattributes\030"
-      "\004 \001(\0132\032.istio.mixer.v1.AttributesB\004\310\336\037\000\022"
-      "I\n\025referenced_attributes\030\005 \001(\0132$.istio.m"
-      "ixer.v1.ReferencedAttributesB\004\310\336\037\000\032\255\001\n\013Q"
-      "uotaResult\022;\n\016valid_duration\030\001 \001(\0132\031.goo"
-      "gle.protobuf.DurationB\010\310\336\037\000\230\337\037\001\022\026\n\016grant"
-      "ed_amount\030\002 \001(\003\022I\n\025referenced_attributes"
-      "\030\005 \001(\0132$.istio.mixer.v1.ReferencedAttrib"
-      "utesB\004\310\336\037\000\032X\n\013QuotasEntry\022\013\n\003key\030\001 \001(\t\0228"
-      "\n\005value\030\002 \001(\0132).istio.mixer.v1.CheckResp"
-      "onse.QuotaResult:\0028\001\"\270\002\n\024ReferencedAttri"
-      "butes\022\r\n\005words\030\001 \003(\t\022T\n\021attribute_matche"
-      "s\030\002 \003(\01323.istio.mixer.v1.ReferencedAttri"
-      "butes.AttributeMatchB\004\310\336\037\000\032p\n\016AttributeM"
-      "atch\022\014\n\004name\030\001 \001(\021\022A\n\tcondition\030\002 \001(\0162.."
-      "istio.mixer.v1.ReferencedAttributes.Cond"
-      "ition\022\r\n\005regex\030\003 \001(\t\"I\n\tCondition\022\031\n\025CON"
-      "DITION_UNSPECIFIED\020\000\022\013\n\007ABSENCE\020\001\022\t\n\005EXA"
-      "CT\020\002\022\t\n\005REGEX\020\003B\014\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
+      "ixer/v1/attributes.proto\"\320\002\n\014CheckReques"
+      "t\022>\n\nattributes\030\001 \001(\0132$.istio.mixer.v1.C"
+      "ompressedAttributesB\004\310\336\037\000\022\031\n\021global_word"
+      "_count\030\002 \001(\r\022\030\n\020deduplication_id\030\003 \001(\t\022>"
+      "\n\006quotas\030\004 \003(\0132(.istio.mixer.v1.CheckReq"
+      "uest.QuotasEntryB\004\310\336\037\000\0322\n\013QuotaParams\022\016\n"
+      "\006amount\030\001 \001(\003\022\023\n\013best_effort\030\002 \001(\010\032W\n\013Qu"
+      "otasEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(."
+      "istio.mixer.v1.CheckRequest.QuotaParams:"
+      "\0028\001\"\312\005\n\rCheckResponse\022L\n\014precondition\030\002 "
+      "\001(\01320.istio.mixer.v1.CheckResponse.Preco"
+      "nditionResultB\004\310\336\037\000\022\?\n\006quotas\030\003 \003(\0132).is"
+      "tio.mixer.v1.CheckResponse.QuotasEntryB\004"
+      "\310\336\037\000\032\237\002\n\022PreconditionResult\022(\n\006status\030\001 "
+      "\001(\0132\022.google.rpc.StatusB\004\310\336\037\000\022;\n\016valid_d"
+      "uration\030\002 \001(\0132\031.google.protobuf.Duration"
+      "B\010\310\336\037\000\230\337\037\001\022\027\n\017valid_use_count\030\003 \001(\005\022>\n\na"
+      "ttributes\030\004 \001(\0132$.istio.mixer.v1.Compres"
+      "sedAttributesB\004\310\336\037\000\022I\n\025referenced_attrib"
+      "utes\030\005 \001(\0132$.istio.mixer.v1.ReferencedAt"
+      "tributesB\004\310\336\037\000\032\255\001\n\013QuotaResult\022;\n\016valid_"
+      "duration\030\001 \001(\0132\031.google.protobuf.Duratio"
+      "nB\010\310\336\037\000\230\337\037\001\022\026\n\016granted_amount\030\002 \001(\003\022I\n\025r"
+      "eferenced_attributes\030\005 \001(\0132$.istio.mixer"
+      ".v1.ReferencedAttributesB\004\310\336\037\000\032X\n\013Quotas"
+      "Entry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).isti"
+      "o.mixer.v1.CheckResponse.QuotaResult:\0028\001"
+      "\"\270\002\n\024ReferencedAttributes\022\r\n\005words\030\001 \003(\t"
+      "\022T\n\021attribute_matches\030\002 \003(\01323.istio.mixe"
+      "r.v1.ReferencedAttributes.AttributeMatch"
+      "B\004\310\336\037\000\032p\n\016AttributeMatch\022\014\n\004name\030\001 \001(\021\022A"
+      "\n\tcondition\030\002 \001(\0162..istio.mixer.v1.Refer"
+      "encedAttributes.Condition\022\r\n\005regex\030\003 \001(\t"
+      "\"I\n\tCondition\022\031\n\025CONDITION_UNSPECIFIED\020\000"
+      "\022\013\n\007ABSENCE\020\001\022\t\n\005EXACT\020\002\022\t\n\005REGEX\020\003B\014\310\341\036"
+      "\000\250\342\036\000\360\341\036\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1517);
+      descriptor, 1537);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "mixer/v1/check.proto", &protobuf_RegisterTypes);
   ::gogoproto::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
@@ -702,7 +703,7 @@ CheckRequest::CheckRequest(const CheckRequest& from)
     deduplication_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.deduplication_id_);
   }
   if (from.has_attributes()) {
-    attributes_ = new ::istio::mixer::v1::Attributes(*from.attributes_);
+    attributes_ = new ::istio::mixer::v1::CompressedAttributes(*from.attributes_);
   } else {
     attributes_ = NULL;
   }
@@ -777,7 +778,7 @@ bool CheckRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+      // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -868,7 +869,7 @@ void CheckRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->attributes_, output);
@@ -952,7 +953,7 @@ void CheckRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -1066,7 +1067,7 @@ size_t CheckRequest::ByteSizeLong() const {
         this->deduplication_id());
   }
 
-  // .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1115,7 +1116,7 @@ void CheckRequest::MergeFrom(const CheckRequest& from) {
     deduplication_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.deduplication_id_);
   }
   if (from.has_attributes()) {
-    mutable_attributes()->::istio::mixer::v1::Attributes::MergeFrom(from.attributes());
+    mutable_attributes()->::istio::mixer::v1::CompressedAttributes::MergeFrom(from.attributes());
   }
   if (from.global_word_count() != 0) {
     set_global_word_count(from.global_word_count());
@@ -1162,7 +1163,7 @@ void CheckRequest::InternalSwap(CheckRequest* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CheckRequest
 
-// .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+// .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
 bool CheckRequest::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
@@ -1170,28 +1171,28 @@ void CheckRequest::clear_attributes() {
   if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
   attributes_ = NULL;
 }
-const ::istio::mixer::v1::Attributes& CheckRequest::attributes() const {
-  const ::istio::mixer::v1::Attributes* p = attributes_;
+const ::istio::mixer::v1::CompressedAttributes& CheckRequest::attributes() const {
+  const ::istio::mixer::v1::CompressedAttributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckRequest.attributes)
-  return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
-      &::istio::mixer::v1::_Attributes_default_instance_);
+  return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::CompressedAttributes*>(
+      &::istio::mixer::v1::_CompressedAttributes_default_instance_);
 }
-::istio::mixer::v1::Attributes* CheckRequest::mutable_attributes() {
+::istio::mixer::v1::CompressedAttributes* CheckRequest::mutable_attributes() {
   
   if (attributes_ == NULL) {
-    attributes_ = new ::istio::mixer::v1::Attributes;
+    attributes_ = new ::istio::mixer::v1::CompressedAttributes;
   }
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckRequest.attributes)
   return attributes_;
 }
-::istio::mixer::v1::Attributes* CheckRequest::release_attributes() {
+::istio::mixer::v1::CompressedAttributes* CheckRequest::release_attributes() {
   // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckRequest.attributes)
   
-  ::istio::mixer::v1::Attributes* temp = attributes_;
+  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
   attributes_ = NULL;
   return temp;
 }
-void CheckRequest::set_allocated_attributes(::istio::mixer::v1::Attributes* attributes) {
+void CheckRequest::set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes) {
   delete attributes_;
   attributes_ = attributes;
   if (attributes) {
@@ -1323,7 +1324,7 @@ CheckResponse_PreconditionResult::CheckResponse_PreconditionResult(const CheckRe
     valid_duration_ = NULL;
   }
   if (from.has_attributes()) {
-    attributes_ = new ::istio::mixer::v1::Attributes(*from.attributes_);
+    attributes_ = new ::istio::mixer::v1::CompressedAttributes(*from.attributes_);
   } else {
     attributes_ = NULL;
   }
@@ -1452,7 +1453,7 @@ bool CheckResponse_PreconditionResult::MergePartialFromCodedStream(
         break;
       }
 
-      // .istio.mixer.v1.Attributes attributes = 4 [(.gogoproto.nullable) = false];
+      // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
@@ -1519,7 +1520,7 @@ void CheckResponse_PreconditionResult::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->valid_use_count(), output);
   }
 
-  // .istio.mixer.v1.Attributes attributes = 4 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, *this->attributes_, output);
@@ -1564,7 +1565,7 @@ void CheckResponse_PreconditionResult::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->valid_use_count(), target);
   }
 
-  // .istio.mixer.v1.Attributes attributes = 4 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -1609,7 +1610,7 @@ size_t CheckResponse_PreconditionResult::ByteSizeLong() const {
         *this->valid_duration_);
   }
 
-  // .istio.mixer.v1.Attributes attributes = 4 [(.gogoproto.nullable) = false];
+  // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1666,7 +1667,7 @@ void CheckResponse_PreconditionResult::MergeFrom(const CheckResponse_Preconditio
     mutable_valid_duration()->::google::protobuf::Duration::MergeFrom(from.valid_duration());
   }
   if (from.has_attributes()) {
-    mutable_attributes()->::istio::mixer::v1::Attributes::MergeFrom(from.attributes());
+    mutable_attributes()->::istio::mixer::v1::CompressedAttributes::MergeFrom(from.attributes());
   }
   if (from.has_referenced_attributes()) {
     mutable_referenced_attributes()->::istio::mixer::v1::ReferencedAttributes::MergeFrom(from.referenced_attributes());
@@ -1816,7 +1817,7 @@ void CheckResponse_PreconditionResult::set_valid_use_count(::google::protobuf::i
   // @@protoc_insertion_point(field_set:istio.mixer.v1.CheckResponse.PreconditionResult.valid_use_count)
 }
 
-// .istio.mixer.v1.Attributes attributes = 4 [(.gogoproto.nullable) = false];
+// .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
 bool CheckResponse_PreconditionResult::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
@@ -1824,28 +1825,28 @@ void CheckResponse_PreconditionResult::clear_attributes() {
   if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
   attributes_ = NULL;
 }
-const ::istio::mixer::v1::Attributes& CheckResponse_PreconditionResult::attributes() const {
-  const ::istio::mixer::v1::Attributes* p = attributes_;
+const ::istio::mixer::v1::CompressedAttributes& CheckResponse_PreconditionResult::attributes() const {
+  const ::istio::mixer::v1::CompressedAttributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
-  return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
-      &::istio::mixer::v1::_Attributes_default_instance_);
+  return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::CompressedAttributes*>(
+      &::istio::mixer::v1::_CompressedAttributes_default_instance_);
 }
-::istio::mixer::v1::Attributes* CheckResponse_PreconditionResult::mutable_attributes() {
+::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResult::mutable_attributes() {
   
   if (attributes_ == NULL) {
-    attributes_ = new ::istio::mixer::v1::Attributes;
+    attributes_ = new ::istio::mixer::v1::CompressedAttributes;
   }
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
   return attributes_;
 }
-::istio::mixer::v1::Attributes* CheckResponse_PreconditionResult::release_attributes() {
+::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResult::release_attributes() {
   // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
   
-  ::istio::mixer::v1::Attributes* temp = attributes_;
+  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
   attributes_ = NULL;
   return temp;
 }
-void CheckResponse_PreconditionResult::set_allocated_attributes(::istio::mixer::v1::Attributes* attributes) {
+void CheckResponse_PreconditionResult::set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes) {
   delete attributes_;
   attributes_ = attributes;
   if (attributes) {

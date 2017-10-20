@@ -20,51 +20,84 @@
 namespace istio {
 namespace mixer {
 namespace v1 {
-class Attributes_StringsEntryDefaultTypeInternal {
+class Attributes_AttributesEntryDefaultTypeInternal {
 public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_StringsEntry>
+ ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_AttributesEntry>
      _instance;
-} _Attributes_StringsEntry_default_instance_;
-class Attributes_Int64sEntryDefaultTypeInternal {
+} _Attributes_AttributesEntry_default_instance_;
+class Attributes_AttributeValueDefaultTypeInternal {
 public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_Int64sEntry>
+ ::google::protobuf::internal::ExplicitlyConstructed<Attributes_AttributeValue>
      _instance;
-} _Attributes_Int64sEntry_default_instance_;
-class Attributes_DoublesEntryDefaultTypeInternal {
+  ::google::protobuf::internal::ArenaStringPtr string_value_;
+  ::google::protobuf::int64 int64_value_;
+  double double_value_;
+  bool bool_value_;
+  ::google::protobuf::internal::ArenaStringPtr bytes_value_;
+  const ::google::protobuf::Timestamp* timestamp_value_;
+  const ::google::protobuf::Duration* duration_value_;
+  const ::istio::mixer::v1::Attributes_StringMap* string_map_value_;
+} _Attributes_AttributeValue_default_instance_;
+class Attributes_StringMap_EntriesEntryDefaultTypeInternal {
 public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_DoublesEntry>
+ ::google::protobuf::internal::ExplicitlyConstructed<Attributes_StringMap::Attributes_StringMap_EntriesEntry>
      _instance;
-} _Attributes_DoublesEntry_default_instance_;
-class Attributes_BoolsEntryDefaultTypeInternal {
+} _Attributes_StringMap_EntriesEntry_default_instance_;
+class Attributes_StringMapDefaultTypeInternal {
 public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_BoolsEntry>
+ ::google::protobuf::internal::ExplicitlyConstructed<Attributes_StringMap>
      _instance;
-} _Attributes_BoolsEntry_default_instance_;
-class Attributes_TimestampsEntryDefaultTypeInternal {
-public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_TimestampsEntry>
-     _instance;
-} _Attributes_TimestampsEntry_default_instance_;
-class Attributes_DurationsEntryDefaultTypeInternal {
-public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_DurationsEntry>
-     _instance;
-} _Attributes_DurationsEntry_default_instance_;
-class Attributes_BytesEntryDefaultTypeInternal {
-public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_BytesEntry>
-     _instance;
-} _Attributes_BytesEntry_default_instance_;
-class Attributes_StringMapsEntryDefaultTypeInternal {
-public:
- ::google::protobuf::internal::ExplicitlyConstructed<Attributes::Attributes_StringMapsEntry>
-     _instance;
-} _Attributes_StringMapsEntry_default_instance_;
+} _Attributes_StringMap_default_instance_;
 class AttributesDefaultTypeInternal {
 public:
  ::google::protobuf::internal::ExplicitlyConstructed<Attributes>
      _instance;
 } _Attributes_default_instance_;
+class CompressedAttributes_StringsEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_StringsEntry>
+     _instance;
+} _CompressedAttributes_StringsEntry_default_instance_;
+class CompressedAttributes_Int64sEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_Int64sEntry>
+     _instance;
+} _CompressedAttributes_Int64sEntry_default_instance_;
+class CompressedAttributes_DoublesEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_DoublesEntry>
+     _instance;
+} _CompressedAttributes_DoublesEntry_default_instance_;
+class CompressedAttributes_BoolsEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_BoolsEntry>
+     _instance;
+} _CompressedAttributes_BoolsEntry_default_instance_;
+class CompressedAttributes_TimestampsEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_TimestampsEntry>
+     _instance;
+} _CompressedAttributes_TimestampsEntry_default_instance_;
+class CompressedAttributes_DurationsEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_DurationsEntry>
+     _instance;
+} _CompressedAttributes_DurationsEntry_default_instance_;
+class CompressedAttributes_BytesEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_BytesEntry>
+     _instance;
+} _CompressedAttributes_BytesEntry_default_instance_;
+class CompressedAttributes_StringMapsEntryDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes::CompressedAttributes_StringMapsEntry>
+     _instance;
+} _CompressedAttributes_StringMapsEntry_default_instance_;
+class CompressedAttributesDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CompressedAttributes>
+     _instance;
+} _CompressedAttributes_default_instance_;
 class StringMap_EntriesEntryDefaultTypeInternal {
 public:
  ::google::protobuf::internal::ExplicitlyConstructed<StringMap::StringMap_EntriesEntry>
@@ -81,7 +114,7 @@ namespace protobuf_mixer_2fv1_2fattributes_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[11];
+::google::protobuf::Metadata file_level_metadata[16];
 
 }  // namespace
 
@@ -107,23 +140,54 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
   { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes_AttributeValue, _internal_metadata_),
+  ~0u,  // no _extensions_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes_AttributeValue, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, string_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, int64_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, double_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, bool_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, bytes_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, timestamp_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, duration_value_),
+  offsetof(Attributes_AttributeValueDefaultTypeInternal, string_map_value_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes_AttributeValue, value_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes_StringMap, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes_StringMap, entries_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, words_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, strings_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, int64s_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, doubles_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, bools_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, timestamps_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, durations_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, bytes_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, string_maps_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Attributes, attributes_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, words_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, strings_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, int64s_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, doubles_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, bools_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, timestamps_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, durations_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, bytes_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompressedAttributes, string_maps_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StringMap, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -132,20 +196,28 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StringMap, entries_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(Attributes)},
-  { 14, -1, sizeof(StringMap)},
+  { 0, -1, sizeof(Attributes_AttributeValue)},
+  { 14, -1, sizeof(Attributes_StringMap)},
+  { 20, -1, sizeof(Attributes)},
+  { 26, -1, sizeof(CompressedAttributes)},
+  { 40, -1, sizeof(StringMap)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_StringsEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_Int64sEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_DoublesEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_BoolsEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_TimestampsEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_DurationsEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_BytesEntry_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_StringMapsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_AttributesEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_AttributeValue_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_StringMap_EntriesEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_StringMap_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_Attributes_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_StringsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_Int64sEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_DoublesEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_BoolsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_TimestampsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_DurationsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_BytesEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_StringMapsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CompressedAttributes_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_StringMap_EntriesEntry_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_StringMap_default_instance_),
 };
@@ -158,15 +230,17 @@ void protobuf_AssignDescriptors() {
   AssignDescriptors(
       "mixer/v1/attributes.proto", schemas, file_default_instances, TableStruct::offsets, factory,
       file_level_metadata, NULL, NULL);
-file_level_metadata[0].reflection = Attributes::Attributes_StringsEntry::CreateReflection(file_level_metadata[0].descriptor, _Attributes_StringsEntry_default_instance_._instance.get_mutable());
-file_level_metadata[1].reflection = Attributes::Attributes_Int64sEntry::CreateReflection(file_level_metadata[1].descriptor, _Attributes_Int64sEntry_default_instance_._instance.get_mutable());
-file_level_metadata[2].reflection = Attributes::Attributes_DoublesEntry::CreateReflection(file_level_metadata[2].descriptor, _Attributes_DoublesEntry_default_instance_._instance.get_mutable());
-file_level_metadata[3].reflection = Attributes::Attributes_BoolsEntry::CreateReflection(file_level_metadata[3].descriptor, _Attributes_BoolsEntry_default_instance_._instance.get_mutable());
-file_level_metadata[4].reflection = Attributes::Attributes_TimestampsEntry::CreateReflection(file_level_metadata[4].descriptor, _Attributes_TimestampsEntry_default_instance_._instance.get_mutable());
-file_level_metadata[5].reflection = Attributes::Attributes_DurationsEntry::CreateReflection(file_level_metadata[5].descriptor, _Attributes_DurationsEntry_default_instance_._instance.get_mutable());
-file_level_metadata[6].reflection = Attributes::Attributes_BytesEntry::CreateReflection(file_level_metadata[6].descriptor, _Attributes_BytesEntry_default_instance_._instance.get_mutable());
-file_level_metadata[7].reflection = Attributes::Attributes_StringMapsEntry::CreateReflection(file_level_metadata[7].descriptor, _Attributes_StringMapsEntry_default_instance_._instance.get_mutable());
-file_level_metadata[9].reflection = StringMap::StringMap_EntriesEntry::CreateReflection(file_level_metadata[9].descriptor, _StringMap_EntriesEntry_default_instance_._instance.get_mutable());
+file_level_metadata[0].reflection = Attributes::Attributes_AttributesEntry::CreateReflection(file_level_metadata[0].descriptor, _Attributes_AttributesEntry_default_instance_._instance.get_mutable());
+file_level_metadata[2].reflection = Attributes_StringMap::Attributes_StringMap_EntriesEntry::CreateReflection(file_level_metadata[2].descriptor, _Attributes_StringMap_EntriesEntry_default_instance_._instance.get_mutable());
+file_level_metadata[5].reflection = CompressedAttributes::CompressedAttributes_StringsEntry::CreateReflection(file_level_metadata[5].descriptor, _CompressedAttributes_StringsEntry_default_instance_._instance.get_mutable());
+file_level_metadata[6].reflection = CompressedAttributes::CompressedAttributes_Int64sEntry::CreateReflection(file_level_metadata[6].descriptor, _CompressedAttributes_Int64sEntry_default_instance_._instance.get_mutable());
+file_level_metadata[7].reflection = CompressedAttributes::CompressedAttributes_DoublesEntry::CreateReflection(file_level_metadata[7].descriptor, _CompressedAttributes_DoublesEntry_default_instance_._instance.get_mutable());
+file_level_metadata[8].reflection = CompressedAttributes::CompressedAttributes_BoolsEntry::CreateReflection(file_level_metadata[8].descriptor, _CompressedAttributes_BoolsEntry_default_instance_._instance.get_mutable());
+file_level_metadata[9].reflection = CompressedAttributes::CompressedAttributes_TimestampsEntry::CreateReflection(file_level_metadata[9].descriptor, _CompressedAttributes_TimestampsEntry_default_instance_._instance.get_mutable());
+file_level_metadata[10].reflection = CompressedAttributes::CompressedAttributes_DurationsEntry::CreateReflection(file_level_metadata[10].descriptor, _CompressedAttributes_DurationsEntry_default_instance_._instance.get_mutable());
+file_level_metadata[11].reflection = CompressedAttributes::CompressedAttributes_BytesEntry::CreateReflection(file_level_metadata[11].descriptor, _CompressedAttributes_BytesEntry_default_instance_._instance.get_mutable());
+file_level_metadata[12].reflection = CompressedAttributes::CompressedAttributes_StringMapsEntry::CreateReflection(file_level_metadata[12].descriptor, _CompressedAttributes_StringMapsEntry_default_instance_._instance.get_mutable());
+file_level_metadata[14].reflection = StringMap::StringMap_EntriesEntry::CreateReflection(file_level_metadata[14].descriptor, _StringMap_EntriesEntry_default_instance_._instance.get_mutable());
 }
 
 void protobuf_AssignDescriptorsOnce() {
@@ -177,7 +251,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 11);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 16);
 }
 
 }  // namespace
@@ -188,44 +262,71 @@ void TableStruct::InitDefaultsImpl() {
   ::gogoproto::protobuf_gogoproto_2fgogo_2eproto::InitDefaults();
   ::google::protobuf::protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaults();
   ::google::protobuf::protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaults();
-  _Attributes_StringsEntry_default_instance_._instance.DefaultConstruct();
+  _Attributes_AttributesEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_StringsEntry_default_instance_);_Attributes_Int64sEntry_default_instance_._instance.DefaultConstruct();
+      &_Attributes_AttributesEntry_default_instance_);_Attributes_AttributeValue_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_Int64sEntry_default_instance_);_Attributes_DoublesEntry_default_instance_._instance.DefaultConstruct();
+      &_Attributes_AttributeValue_default_instance_);_Attributes_StringMap_EntriesEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_DoublesEntry_default_instance_);_Attributes_BoolsEntry_default_instance_._instance.DefaultConstruct();
+      &_Attributes_StringMap_EntriesEntry_default_instance_);_Attributes_StringMap_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_BoolsEntry_default_instance_);_Attributes_TimestampsEntry_default_instance_._instance.DefaultConstruct();
+      &_Attributes_StringMap_default_instance_);_Attributes_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_TimestampsEntry_default_instance_);_Attributes_DurationsEntry_default_instance_._instance.DefaultConstruct();
+      &_Attributes_default_instance_);_CompressedAttributes_StringsEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_DurationsEntry_default_instance_);_Attributes_BytesEntry_default_instance_._instance.DefaultConstruct();
+      &_CompressedAttributes_StringsEntry_default_instance_);_CompressedAttributes_Int64sEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_BytesEntry_default_instance_);_Attributes_StringMapsEntry_default_instance_._instance.DefaultConstruct();
+      &_CompressedAttributes_Int64sEntry_default_instance_);_CompressedAttributes_DoublesEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_StringMapsEntry_default_instance_);_Attributes_default_instance_._instance.DefaultConstruct();
+      &_CompressedAttributes_DoublesEntry_default_instance_);_CompressedAttributes_BoolsEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_Attributes_default_instance_);_StringMap_EntriesEntry_default_instance_._instance.DefaultConstruct();
+      &_CompressedAttributes_BoolsEntry_default_instance_);_CompressedAttributes_TimestampsEntry_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CompressedAttributes_TimestampsEntry_default_instance_);_CompressedAttributes_DurationsEntry_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CompressedAttributes_DurationsEntry_default_instance_);_CompressedAttributes_BytesEntry_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CompressedAttributes_BytesEntry_default_instance_);_CompressedAttributes_StringMapsEntry_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CompressedAttributes_StringMapsEntry_default_instance_);_CompressedAttributes_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CompressedAttributes_default_instance_);_StringMap_EntriesEntry_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
       &_StringMap_EntriesEntry_default_instance_);_StringMap_default_instance_._instance.DefaultConstruct();
   ::google::protobuf::internal::OnShutdownDestroyMessage(
-      &_StringMap_default_instance_);_Attributes_StringsEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_StringsEntry_default_instance_._instance.get_mutable());
-  _Attributes_StringsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_Int64sEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_Int64sEntry_default_instance_._instance.get_mutable());
-  _Attributes_Int64sEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_DoublesEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_DoublesEntry_default_instance_._instance.get_mutable());
-  _Attributes_DoublesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_BoolsEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_BoolsEntry_default_instance_._instance.get_mutable());
-  _Attributes_BoolsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_TimestampsEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_TimestampsEntry_default_instance_._instance.get_mutable());
-  _Attributes_TimestampsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_DurationsEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_DurationsEntry_default_instance_._instance.get_mutable());
-  _Attributes_DurationsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_BytesEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_BytesEntry_default_instance_._instance.get_mutable());
-  _Attributes_BytesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
-  _Attributes_StringMapsEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_StringMapsEntry_default_instance_._instance.get_mutable());
-  _Attributes_StringMapsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+      &_StringMap_default_instance_);_Attributes_AttributesEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_AttributesEntry_default_instance_._instance.get_mutable());
+  _Attributes_AttributesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _Attributes_AttributeValue_default_instance_.string_value_.UnsafeSetDefault(
+      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _Attributes_AttributeValue_default_instance_.int64_value_ = GOOGLE_LONGLONG(0);
+  _Attributes_AttributeValue_default_instance_.double_value_ = 0;
+  _Attributes_AttributeValue_default_instance_.bool_value_ = false;
+  _Attributes_AttributeValue_default_instance_.bytes_value_.UnsafeSetDefault(
+      &::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _Attributes_AttributeValue_default_instance_.timestamp_value_ = const_cast< ::google::protobuf::Timestamp*>(
+      ::google::protobuf::Timestamp::internal_default_instance());
+  _Attributes_AttributeValue_default_instance_.duration_value_ = const_cast< ::google::protobuf::Duration*>(
+      ::google::protobuf::Duration::internal_default_instance());
+  _Attributes_AttributeValue_default_instance_.string_map_value_ = const_cast< ::istio::mixer::v1::Attributes_StringMap*>(
+      ::istio::mixer::v1::Attributes_StringMap::internal_default_instance());
+  _Attributes_StringMap_EntriesEntry_default_instance_._instance.get_mutable()->set_default_instance(_Attributes_StringMap_EntriesEntry_default_instance_._instance.get_mutable());
+  _Attributes_StringMap_EntriesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_StringsEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_StringsEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_StringsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_Int64sEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_Int64sEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_Int64sEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_DoublesEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_DoublesEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_DoublesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_BoolsEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_BoolsEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_BoolsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_TimestampsEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_TimestampsEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_TimestampsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_DurationsEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_DurationsEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_DurationsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_BytesEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_BytesEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_BytesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
+  _CompressedAttributes_StringMapsEntry_default_instance_._instance.get_mutable()->set_default_instance(_CompressedAttributes_StringMapsEntry_default_instance_._instance.get_mutable());
+  _CompressedAttributes_StringMapsEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
   _StringMap_EntriesEntry_default_instance_._instance.get_mutable()->set_default_instance(_StringMap_EntriesEntry_default_instance_._instance.get_mutable());
   _StringMap_EntriesEntry_default_instance_._instance.get_mutable()->InitAsDefaultInstance();
 }
@@ -241,38 +342,56 @@ void AddDescriptorsImpl() {
       "\n\031mixer/v1/attributes.proto\022\016istio.mixer"
       ".v1\032\024gogoproto/gogo.proto\032\036google/protob"
       "uf/duration.proto\032\037google/protobuf/times"
-      "tamp.proto\"\341\007\n\nAttributes\022\r\n\005words\030\001 \003(\t"
-      "\0228\n\007strings\030\002 \003(\0132\'.istio.mixer.v1.Attri"
-      "butes.StringsEntry\0226\n\006int64s\030\003 \003(\0132&.ist"
-      "io.mixer.v1.Attributes.Int64sEntry\0228\n\007do"
-      "ubles\030\004 \003(\0132\'.istio.mixer.v1.Attributes."
-      "DoublesEntry\0224\n\005bools\030\005 \003(\0132%.istio.mixe"
-      "r.v1.Attributes.BoolsEntry\022H\n\ntimestamps"
-      "\030\006 \003(\0132*.istio.mixer.v1.Attributes.Times"
-      "tampsEntryB\010\310\336\037\000\220\337\037\001\022F\n\tdurations\030\007 \003(\0132"
-      ").istio.mixer.v1.Attributes.DurationsEnt"
-      "ryB\010\310\336\037\000\230\337\037\001\0224\n\005bytes\030\010 \003(\0132%.istio.mixe"
-      "r.v1.Attributes.BytesEntry\022E\n\013string_map"
-      "s\030\t \003(\0132*.istio.mixer.v1.Attributes.Stri"
-      "ngMapsEntryB\004\310\336\037\000\032.\n\014StringsEntry\022\013\n\003key"
-      "\030\001 \001(\021\022\r\n\005value\030\002 \001(\021:\0028\001\032-\n\013Int64sEntry"
-      "\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\003:\0028\001\032.\n\014Doub"
-      "lesEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\001:\0028\001"
-      "\032,\n\nBoolsEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001"
-      "(\010:\0028\001\032M\n\017TimestampsEntry\022\013\n\003key\030\001 \001(\021\022)"
-      "\n\005value\030\002 \001(\0132\032.google.protobuf.Timestam"
-      "p:\0028\001\032K\n\016DurationsEntry\022\013\n\003key\030\001 \001(\021\022(\n\005"
-      "value\030\002 \001(\0132\031.google.protobuf.Duration:\002"
-      "8\001\032,\n\nBytesEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002"
-      " \001(\014:\0028\001\032L\n\017StringMapsEntry\022\013\n\003key\030\001 \001(\021"
-      "\022(\n\005value\030\002 \001(\0132\031.istio.mixer.v1.StringM"
-      "ap:\0028\001\"t\n\tStringMap\0227\n\007entries\030\001 \003(\0132&.i"
-      "stio.mixer.v1.StringMap.EntriesEntry\032.\n\014"
-      "EntriesEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\021"
-      ":\0028\001B\014\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
+      "tamp.proto\"\351\004\n\nAttributes\022>\n\nattributes\030"
+      "\001 \003(\0132*.istio.mixer.v1.Attributes.Attrib"
+      "utesEntry\032\\\n\017AttributesEntry\022\013\n\003key\030\001 \001("
+      "\t\0228\n\005value\030\002 \001(\0132).istio.mixer.v1.Attrib"
+      "utes.AttributeValue:\0028\001\032\273\002\n\016AttributeVal"
+      "ue\022\026\n\014string_value\030\002 \001(\tH\000\022\025\n\013int64_valu"
+      "e\030\003 \001(\003H\000\022\026\n\014double_value\030\004 \001(\001H\000\022\024\n\nboo"
+      "l_value\030\005 \001(\010H\000\022\025\n\013bytes_value\030\006 \001(\014H\000\0225"
+      "\n\017timestamp_value\030\007 \001(\0132\032.google.protobu"
+      "f.TimestampH\000\0223\n\016duration_value\030\010 \001(\0132\031."
+      "google.protobuf.DurationH\000\022@\n\020string_map"
+      "_value\030\t \001(\0132$.istio.mixer.v1.Attributes"
+      ".StringMapH\000B\007\n\005value\032\177\n\tStringMap\022B\n\007en"
+      "tries\030\001 \003(\01321.istio.mixer.v1.Attributes."
+      "StringMap.EntriesEntry\032.\n\014EntriesEntry\022\013"
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\273\010\n\024Compr"
+      "essedAttributes\022\r\n\005words\030\001 \003(\t\022B\n\007string"
+      "s\030\002 \003(\01321.istio.mixer.v1.CompressedAttri"
+      "butes.StringsEntry\022@\n\006int64s\030\003 \003(\01320.ist"
+      "io.mixer.v1.CompressedAttributes.Int64sE"
+      "ntry\022B\n\007doubles\030\004 \003(\01321.istio.mixer.v1.C"
+      "ompressedAttributes.DoublesEntry\022>\n\005bool"
+      "s\030\005 \003(\0132/.istio.mixer.v1.CompressedAttri"
+      "butes.BoolsEntry\022R\n\ntimestamps\030\006 \003(\01324.i"
+      "stio.mixer.v1.CompressedAttributes.Times"
+      "tampsEntryB\010\310\336\037\000\220\337\037\001\022P\n\tdurations\030\007 \003(\0132"
+      "3.istio.mixer.v1.CompressedAttributes.Du"
+      "rationsEntryB\010\310\336\037\000\230\337\037\001\022>\n\005bytes\030\010 \003(\0132/."
+      "istio.mixer.v1.CompressedAttributes.Byte"
+      "sEntry\022O\n\013string_maps\030\t \003(\01324.istio.mixe"
+      "r.v1.CompressedAttributes.StringMapsEntr"
+      "yB\004\310\336\037\000\032.\n\014StringsEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005"
+      "value\030\002 \001(\021:\0028\001\032-\n\013Int64sEntry\022\013\n\003key\030\001 "
+      "\001(\021\022\r\n\005value\030\002 \001(\003:\0028\001\032.\n\014DoublesEntry\022\013"
+      "\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\001:\0028\001\032,\n\nBoolsE"
+      "ntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\010:\0028\001\032M\n\017"
+      "TimestampsEntry\022\013\n\003key\030\001 \001(\021\022)\n\005value\030\002 "
+      "\001(\0132\032.google.protobuf.Timestamp:\0028\001\032K\n\016D"
+      "urationsEntry\022\013\n\003key\030\001 \001(\021\022(\n\005value\030\002 \001("
+      "\0132\031.google.protobuf.Duration:\0028\001\032,\n\nByte"
+      "sEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\014:\0028\001\032L"
+      "\n\017StringMapsEntry\022\013\n\003key\030\001 \001(\021\022(\n\005value\030"
+      "\002 \001(\0132\031.istio.mixer.v1.StringMap:\0028\001\"t\n\t"
+      "StringMap\0227\n\007entries\030\001 \003(\0132&.istio.mixer"
+      ".v1.StringMap.EntriesEntry\032.\n\014EntriesEnt"
+      "ry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\021:\0028\001B\014\310\341\036\000"
+      "\250\342\036\000\360\341\036\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1266);
+      descriptor, 1976);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "mixer/v1/attributes.proto", &protobuf_RegisterTypes);
   ::gogoproto::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
@@ -297,150 +416,17 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
-Attributes::Attributes_StringsEntry::Attributes_StringsEntry() {}
-Attributes::Attributes_StringsEntry::Attributes_StringsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_StringsEntry::GetMetadata() const {
+Attributes::Attributes_AttributesEntry::Attributes_AttributesEntry() {}
+Attributes::Attributes_AttributesEntry::Attributes_AttributesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata Attributes::Attributes_AttributesEntry::GetMetadata() const {
   protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[0];
 }
-void Attributes::Attributes_StringsEntry::MergeFrom(
+void Attributes::Attributes_AttributesEntry::MergeFrom(
     const ::google::protobuf::Message& other) {
   ::google::protobuf::Message::MergeFrom(other);
 }
-void Attributes::Attributes_StringsEntry::MergeFrom(const Attributes_StringsEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_Int64sEntry::Attributes_Int64sEntry() {}
-Attributes::Attributes_Int64sEntry::Attributes_Int64sEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_Int64sEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[1];
-}
-void Attributes::Attributes_Int64sEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_Int64sEntry::MergeFrom(const Attributes_Int64sEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_DoublesEntry::Attributes_DoublesEntry() {}
-Attributes::Attributes_DoublesEntry::Attributes_DoublesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_DoublesEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[2];
-}
-void Attributes::Attributes_DoublesEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_DoublesEntry::MergeFrom(const Attributes_DoublesEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_BoolsEntry::Attributes_BoolsEntry() {}
-Attributes::Attributes_BoolsEntry::Attributes_BoolsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_BoolsEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[3];
-}
-void Attributes::Attributes_BoolsEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_BoolsEntry::MergeFrom(const Attributes_BoolsEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_TimestampsEntry::Attributes_TimestampsEntry() {}
-Attributes::Attributes_TimestampsEntry::Attributes_TimestampsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_TimestampsEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[4];
-}
-void Attributes::Attributes_TimestampsEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_TimestampsEntry::MergeFrom(const Attributes_TimestampsEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_DurationsEntry::Attributes_DurationsEntry() {}
-Attributes::Attributes_DurationsEntry::Attributes_DurationsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_DurationsEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[5];
-}
-void Attributes::Attributes_DurationsEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_DurationsEntry::MergeFrom(const Attributes_DurationsEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_BytesEntry::Attributes_BytesEntry() {}
-Attributes::Attributes_BytesEntry::Attributes_BytesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_BytesEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[6];
-}
-void Attributes::Attributes_BytesEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_BytesEntry::MergeFrom(const Attributes_BytesEntry& other) {
-  MergeFromInternal(other);
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-Attributes::Attributes_StringMapsEntry::Attributes_StringMapsEntry() {}
-Attributes::Attributes_StringMapsEntry::Attributes_StringMapsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
-::google::protobuf::Metadata Attributes::Attributes_StringMapsEntry::GetMetadata() const {
-  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[7];
-}
-void Attributes::Attributes_StringMapsEntry::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
-}
-void Attributes::Attributes_StringMapsEntry::MergeFrom(const Attributes_StringMapsEntry& other) {
+void Attributes::Attributes_AttributesEntry::MergeFrom(const Attributes_AttributesEntry& other) {
   MergeFromInternal(other);
 }
 
@@ -450,15 +436,1444 @@ void Attributes::Attributes_StringMapsEntry::MergeFrom(const Attributes_StringMa
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Attributes::kWordsFieldNumber;
-const int Attributes::kStringsFieldNumber;
-const int Attributes::kInt64SFieldNumber;
-const int Attributes::kDoublesFieldNumber;
-const int Attributes::kBoolsFieldNumber;
-const int Attributes::kTimestampsFieldNumber;
-const int Attributes::kDurationsFieldNumber;
-const int Attributes::kBytesFieldNumber;
-const int Attributes::kStringMapsFieldNumber;
+const int Attributes_AttributeValue::kStringValueFieldNumber;
+const int Attributes_AttributeValue::kInt64ValueFieldNumber;
+const int Attributes_AttributeValue::kDoubleValueFieldNumber;
+const int Attributes_AttributeValue::kBoolValueFieldNumber;
+const int Attributes_AttributeValue::kBytesValueFieldNumber;
+const int Attributes_AttributeValue::kTimestampValueFieldNumber;
+const int Attributes_AttributeValue::kDurationValueFieldNumber;
+const int Attributes_AttributeValue::kStringMapValueFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Attributes_AttributeValue::Attributes_AttributeValue()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:istio.mixer.v1.Attributes.AttributeValue)
+}
+Attributes_AttributeValue::Attributes_AttributeValue(const Attributes_AttributeValue& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  clear_has_value();
+  switch (from.value_case()) {
+    case kStringValue: {
+      set_string_value(from.string_value());
+      break;
+    }
+    case kInt64Value: {
+      set_int64_value(from.int64_value());
+      break;
+    }
+    case kDoubleValue: {
+      set_double_value(from.double_value());
+      break;
+    }
+    case kBoolValue: {
+      set_bool_value(from.bool_value());
+      break;
+    }
+    case kBytesValue: {
+      set_bytes_value(from.bytes_value());
+      break;
+    }
+    case kTimestampValue: {
+      mutable_timestamp_value()->::google::protobuf::Timestamp::MergeFrom(from.timestamp_value());
+      break;
+    }
+    case kDurationValue: {
+      mutable_duration_value()->::google::protobuf::Duration::MergeFrom(from.duration_value());
+      break;
+    }
+    case kStringMapValue: {
+      mutable_string_map_value()->::istio::mixer::v1::Attributes_StringMap::MergeFrom(from.string_map_value());
+      break;
+    }
+    case VALUE_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:istio.mixer.v1.Attributes.AttributeValue)
+}
+
+void Attributes_AttributeValue::SharedCtor() {
+  clear_has_value();
+  _cached_size_ = 0;
+}
+
+Attributes_AttributeValue::~Attributes_AttributeValue() {
+  // @@protoc_insertion_point(destructor:istio.mixer.v1.Attributes.AttributeValue)
+  SharedDtor();
+}
+
+void Attributes_AttributeValue::SharedDtor() {
+  if (has_value()) {
+    clear_value();
+  }
+}
+
+void Attributes_AttributeValue::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Attributes_AttributeValue::descriptor() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Attributes_AttributeValue& Attributes_AttributeValue::default_instance() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+Attributes_AttributeValue* Attributes_AttributeValue::New(::google::protobuf::Arena* arena) const {
+  Attributes_AttributeValue* n = new Attributes_AttributeValue;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Attributes_AttributeValue::clear_value() {
+// @@protoc_insertion_point(one_of_clear_start:istio.mixer.v1.Attributes.AttributeValue)
+  switch (value_case()) {
+    case kStringValue: {
+      value_.string_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      break;
+    }
+    case kInt64Value: {
+      // No need to clear
+      break;
+    }
+    case kDoubleValue: {
+      // No need to clear
+      break;
+    }
+    case kBoolValue: {
+      // No need to clear
+      break;
+    }
+    case kBytesValue: {
+      value_.bytes_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+      break;
+    }
+    case kTimestampValue: {
+      delete value_.timestamp_value_;
+      break;
+    }
+    case kDurationValue: {
+      delete value_.duration_value_;
+      break;
+    }
+    case kStringMapValue: {
+      delete value_.string_map_value_;
+      break;
+    }
+    case VALUE_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = VALUE_NOT_SET;
+}
+
+
+void Attributes_AttributeValue::Clear() {
+// @@protoc_insertion_point(message_clear_start:istio.mixer.v1.Attributes.AttributeValue)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_value();
+  _internal_metadata_.Clear();
+}
+
+bool Attributes_AttributeValue::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:istio.mixer.v1.Attributes.AttributeValue)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string string_value = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_string_value()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->string_value().data(), static_cast<int>(this->string_value().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "istio.mixer.v1.Attributes.AttributeValue.string_value"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 int64_value = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+          clear_value();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &value_.int64_value_)));
+          set_has_int64_value();
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // double double_value = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
+          clear_value();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &value_.double_value_)));
+          set_has_double_value();
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool bool_value = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+          clear_value();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &value_.bool_value_)));
+          set_has_bool_value();
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes bytes_value = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_bytes_value()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.Timestamp timestamp_value = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_timestamp_value()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.Duration duration_value = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_duration_value()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_string_map_value()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:istio.mixer.v1.Attributes.AttributeValue)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:istio.mixer.v1.Attributes.AttributeValue)
+  return false;
+#undef DO_
+}
+
+void Attributes_AttributeValue::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:istio.mixer.v1.Attributes.AttributeValue)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string string_value = 2;
+  if (has_string_value()) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->string_value().data(), static_cast<int>(this->string_value().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.Attributes.AttributeValue.string_value");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->string_value(), output);
+  }
+
+  // int64 int64_value = 3;
+  if (has_int64_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->int64_value(), output);
+  }
+
+  // double double_value = 4;
+  if (has_double_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->double_value(), output);
+  }
+
+  // bool bool_value = 5;
+  if (has_bool_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->bool_value(), output);
+  }
+
+  // bytes bytes_value = 6;
+  if (has_bytes_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      6, this->bytes_value(), output);
+  }
+
+  // .google.protobuf.Timestamp timestamp_value = 7;
+  if (has_timestamp_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, *value_.timestamp_value_, output);
+  }
+
+  // .google.protobuf.Duration duration_value = 8;
+  if (has_duration_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, *value_.duration_value_, output);
+  }
+
+  // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+  if (has_string_map_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, *value_.string_map_value_, output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:istio.mixer.v1.Attributes.AttributeValue)
+}
+
+::google::protobuf::uint8* Attributes_AttributeValue::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:istio.mixer.v1.Attributes.AttributeValue)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string string_value = 2;
+  if (has_string_value()) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->string_value().data(), static_cast<int>(this->string_value().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.Attributes.AttributeValue.string_value");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->string_value(), target);
+  }
+
+  // int64 int64_value = 3;
+  if (has_int64_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->int64_value(), target);
+  }
+
+  // double double_value = 4;
+  if (has_double_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->double_value(), target);
+  }
+
+  // bool bool_value = 5;
+  if (has_bool_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->bool_value(), target);
+  }
+
+  // bytes bytes_value = 6;
+  if (has_bytes_value()) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        6, this->bytes_value(), target);
+  }
+
+  // .google.protobuf.Timestamp timestamp_value = 7;
+  if (has_timestamp_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        7, *value_.timestamp_value_, deterministic, target);
+  }
+
+  // .google.protobuf.Duration duration_value = 8;
+  if (has_duration_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        8, *value_.duration_value_, deterministic, target);
+  }
+
+  // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+  if (has_string_map_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        9, *value_.string_map_value_, deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:istio.mixer.v1.Attributes.AttributeValue)
+  return target;
+}
+
+size_t Attributes_AttributeValue::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:istio.mixer.v1.Attributes.AttributeValue)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  switch (value_case()) {
+    // string string_value = 2;
+    case kStringValue: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->string_value());
+      break;
+    }
+    // int64 int64_value = 3;
+    case kInt64Value: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int64Size(
+          this->int64_value());
+      break;
+    }
+    // double double_value = 4;
+    case kDoubleValue: {
+      total_size += 1 + 8;
+      break;
+    }
+    // bool bool_value = 5;
+    case kBoolValue: {
+      total_size += 1 + 1;
+      break;
+    }
+    // bytes bytes_value = 6;
+    case kBytesValue: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->bytes_value());
+      break;
+    }
+    // .google.protobuf.Timestamp timestamp_value = 7;
+    case kTimestampValue: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *value_.timestamp_value_);
+      break;
+    }
+    // .google.protobuf.Duration duration_value = 8;
+    case kDurationValue: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *value_.duration_value_);
+      break;
+    }
+    // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+    case kStringMapValue: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *value_.string_map_value_);
+      break;
+    }
+    case VALUE_NOT_SET: {
+      break;
+    }
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Attributes_AttributeValue::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:istio.mixer.v1.Attributes.AttributeValue)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Attributes_AttributeValue* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Attributes_AttributeValue>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:istio.mixer.v1.Attributes.AttributeValue)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:istio.mixer.v1.Attributes.AttributeValue)
+    MergeFrom(*source);
+  }
+}
+
+void Attributes_AttributeValue::MergeFrom(const Attributes_AttributeValue& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:istio.mixer.v1.Attributes.AttributeValue)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.value_case()) {
+    case kStringValue: {
+      set_string_value(from.string_value());
+      break;
+    }
+    case kInt64Value: {
+      set_int64_value(from.int64_value());
+      break;
+    }
+    case kDoubleValue: {
+      set_double_value(from.double_value());
+      break;
+    }
+    case kBoolValue: {
+      set_bool_value(from.bool_value());
+      break;
+    }
+    case kBytesValue: {
+      set_bytes_value(from.bytes_value());
+      break;
+    }
+    case kTimestampValue: {
+      mutable_timestamp_value()->::google::protobuf::Timestamp::MergeFrom(from.timestamp_value());
+      break;
+    }
+    case kDurationValue: {
+      mutable_duration_value()->::google::protobuf::Duration::MergeFrom(from.duration_value());
+      break;
+    }
+    case kStringMapValue: {
+      mutable_string_map_value()->::istio::mixer::v1::Attributes_StringMap::MergeFrom(from.string_map_value());
+      break;
+    }
+    case VALUE_NOT_SET: {
+      break;
+    }
+  }
+}
+
+void Attributes_AttributeValue::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:istio.mixer.v1.Attributes.AttributeValue)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Attributes_AttributeValue::CopyFrom(const Attributes_AttributeValue& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:istio.mixer.v1.Attributes.AttributeValue)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Attributes_AttributeValue::IsInitialized() const {
+  return true;
+}
+
+void Attributes_AttributeValue::Swap(Attributes_AttributeValue* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Attributes_AttributeValue::InternalSwap(Attributes_AttributeValue* other) {
+  using std::swap;
+  swap(value_, other->value_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Attributes_AttributeValue::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Attributes_AttributeValue
+
+// string string_value = 2;
+bool Attributes_AttributeValue::has_string_value() const {
+  return value_case() == kStringValue;
+}
+void Attributes_AttributeValue::set_has_string_value() {
+  _oneof_case_[0] = kStringValue;
+}
+void Attributes_AttributeValue::clear_string_value() {
+  if (has_string_value()) {
+    value_.string_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    clear_has_value();
+  }
+}
+const ::std::string& Attributes_AttributeValue::string_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (has_string_value()) {
+    return value_.string_value_.GetNoArena();
+  }
+  return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
+}
+void Attributes_AttributeValue::set_string_value(const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+#if LANG_CXX11
+void Attributes_AttributeValue::set_string_value(::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+#endif
+void Attributes_AttributeValue::set_string_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+void Attributes_AttributeValue::set_string_value(const char* value, size_t size) {
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+::std::string* Attributes_AttributeValue::mutable_string_value() {
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  return value_.string_value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Attributes_AttributeValue::release_string_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (has_string_value()) {
+    clear_has_value();
+    return value_.string_value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  } else {
+    return NULL;
+  }
+}
+void Attributes_AttributeValue::set_allocated_string_value(::std::string* string_value) {
+  if (!has_string_value()) {
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_value();
+  if (string_value != NULL) {
+    set_has_string_value();
+    value_.string_value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        string_value);
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+
+// int64 int64_value = 3;
+bool Attributes_AttributeValue::has_int64_value() const {
+  return value_case() == kInt64Value;
+}
+void Attributes_AttributeValue::set_has_int64_value() {
+  _oneof_case_[0] = kInt64Value;
+}
+void Attributes_AttributeValue::clear_int64_value() {
+  if (has_int64_value()) {
+    value_.int64_value_ = GOOGLE_LONGLONG(0);
+    clear_has_value();
+  }
+}
+::google::protobuf::int64 Attributes_AttributeValue::int64_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.int64_value)
+  if (has_int64_value()) {
+    return value_.int64_value_;
+  }
+  return GOOGLE_LONGLONG(0);
+}
+void Attributes_AttributeValue::set_int64_value(::google::protobuf::int64 value) {
+  if (!has_int64_value()) {
+    clear_value();
+    set_has_int64_value();
+  }
+  value_.int64_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.int64_value)
+}
+
+// double double_value = 4;
+bool Attributes_AttributeValue::has_double_value() const {
+  return value_case() == kDoubleValue;
+}
+void Attributes_AttributeValue::set_has_double_value() {
+  _oneof_case_[0] = kDoubleValue;
+}
+void Attributes_AttributeValue::clear_double_value() {
+  if (has_double_value()) {
+    value_.double_value_ = 0;
+    clear_has_value();
+  }
+}
+double Attributes_AttributeValue::double_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.double_value)
+  if (has_double_value()) {
+    return value_.double_value_;
+  }
+  return 0;
+}
+void Attributes_AttributeValue::set_double_value(double value) {
+  if (!has_double_value()) {
+    clear_value();
+    set_has_double_value();
+  }
+  value_.double_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.double_value)
+}
+
+// bool bool_value = 5;
+bool Attributes_AttributeValue::has_bool_value() const {
+  return value_case() == kBoolValue;
+}
+void Attributes_AttributeValue::set_has_bool_value() {
+  _oneof_case_[0] = kBoolValue;
+}
+void Attributes_AttributeValue::clear_bool_value() {
+  if (has_bool_value()) {
+    value_.bool_value_ = false;
+    clear_has_value();
+  }
+}
+bool Attributes_AttributeValue::bool_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.bool_value)
+  if (has_bool_value()) {
+    return value_.bool_value_;
+  }
+  return false;
+}
+void Attributes_AttributeValue::set_bool_value(bool value) {
+  if (!has_bool_value()) {
+    clear_value();
+    set_has_bool_value();
+  }
+  value_.bool_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bool_value)
+}
+
+// bytes bytes_value = 6;
+bool Attributes_AttributeValue::has_bytes_value() const {
+  return value_case() == kBytesValue;
+}
+void Attributes_AttributeValue::set_has_bytes_value() {
+  _oneof_case_[0] = kBytesValue;
+}
+void Attributes_AttributeValue::clear_bytes_value() {
+  if (has_bytes_value()) {
+    value_.bytes_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    clear_has_value();
+  }
+}
+const ::std::string& Attributes_AttributeValue::bytes_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (has_bytes_value()) {
+    return value_.bytes_value_.GetNoArena();
+  }
+  return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
+}
+void Attributes_AttributeValue::set_bytes_value(const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+#if LANG_CXX11
+void Attributes_AttributeValue::set_bytes_value(::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+#endif
+void Attributes_AttributeValue::set_bytes_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+void Attributes_AttributeValue::set_bytes_value(const void* value, size_t size) {
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+::std::string* Attributes_AttributeValue::mutable_bytes_value() {
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  return value_.bytes_value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Attributes_AttributeValue::release_bytes_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (has_bytes_value()) {
+    clear_has_value();
+    return value_.bytes_value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  } else {
+    return NULL;
+  }
+}
+void Attributes_AttributeValue::set_allocated_bytes_value(::std::string* bytes_value) {
+  if (!has_bytes_value()) {
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_value();
+  if (bytes_value != NULL) {
+    set_has_bytes_value();
+    value_.bytes_value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        bytes_value);
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+
+// .google.protobuf.Timestamp timestamp_value = 7;
+bool Attributes_AttributeValue::has_timestamp_value() const {
+  return value_case() == kTimestampValue;
+}
+void Attributes_AttributeValue::set_has_timestamp_value() {
+  _oneof_case_[0] = kTimestampValue;
+}
+void Attributes_AttributeValue::clear_timestamp_value() {
+  if (has_timestamp_value()) {
+    delete value_.timestamp_value_;
+    clear_has_value();
+  }
+}
+ const ::google::protobuf::Timestamp& Attributes_AttributeValue::timestamp_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  return has_timestamp_value()
+      ? *value_.timestamp_value_
+      : ::google::protobuf::Timestamp::default_instance();
+}
+::google::protobuf::Timestamp* Attributes_AttributeValue::mutable_timestamp_value() {
+  if (!has_timestamp_value()) {
+    clear_value();
+    set_has_timestamp_value();
+    value_.timestamp_value_ = new ::google::protobuf::Timestamp;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  return value_.timestamp_value_;
+}
+::google::protobuf::Timestamp* Attributes_AttributeValue::release_timestamp_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  if (has_timestamp_value()) {
+    clear_has_value();
+    ::google::protobuf::Timestamp* temp = value_.timestamp_value_;
+    value_.timestamp_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+void Attributes_AttributeValue::set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value) {
+  clear_value();
+  if (timestamp_value) {
+    if (static_cast< ::google::protobuf::Timestamp*>(timestamp_value)->GetArena() != NULL) {
+      ::google::protobuf::Timestamp* new_timestamp_value = new ::google::protobuf::Timestamp;
+      new_timestamp_value->CopyFrom(*timestamp_value);
+      timestamp_value = new_timestamp_value;
+    }
+    set_has_timestamp_value();
+    value_.timestamp_value_ = timestamp_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+}
+
+// .google.protobuf.Duration duration_value = 8;
+bool Attributes_AttributeValue::has_duration_value() const {
+  return value_case() == kDurationValue;
+}
+void Attributes_AttributeValue::set_has_duration_value() {
+  _oneof_case_[0] = kDurationValue;
+}
+void Attributes_AttributeValue::clear_duration_value() {
+  if (has_duration_value()) {
+    delete value_.duration_value_;
+    clear_has_value();
+  }
+}
+ const ::google::protobuf::Duration& Attributes_AttributeValue::duration_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  return has_duration_value()
+      ? *value_.duration_value_
+      : ::google::protobuf::Duration::default_instance();
+}
+::google::protobuf::Duration* Attributes_AttributeValue::mutable_duration_value() {
+  if (!has_duration_value()) {
+    clear_value();
+    set_has_duration_value();
+    value_.duration_value_ = new ::google::protobuf::Duration;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  return value_.duration_value_;
+}
+::google::protobuf::Duration* Attributes_AttributeValue::release_duration_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  if (has_duration_value()) {
+    clear_has_value();
+    ::google::protobuf::Duration* temp = value_.duration_value_;
+    value_.duration_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+void Attributes_AttributeValue::set_allocated_duration_value(::google::protobuf::Duration* duration_value) {
+  clear_value();
+  if (duration_value) {
+    if (static_cast< ::google::protobuf::Duration*>(duration_value)->GetArena() != NULL) {
+      ::google::protobuf::Duration* new_duration_value = new ::google::protobuf::Duration;
+      new_duration_value->CopyFrom(*duration_value);
+      duration_value = new_duration_value;
+    }
+    set_has_duration_value();
+    value_.duration_value_ = duration_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+}
+
+// .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+bool Attributes_AttributeValue::has_string_map_value() const {
+  return value_case() == kStringMapValue;
+}
+void Attributes_AttributeValue::set_has_string_map_value() {
+  _oneof_case_[0] = kStringMapValue;
+}
+void Attributes_AttributeValue::clear_string_map_value() {
+  if (has_string_map_value()) {
+    delete value_.string_map_value_;
+    clear_has_value();
+  }
+}
+ const ::istio::mixer::v1::Attributes_StringMap& Attributes_AttributeValue::string_map_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  return has_string_map_value()
+      ? *value_.string_map_value_
+      : ::istio::mixer::v1::Attributes_StringMap::default_instance();
+}
+::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::mutable_string_map_value() {
+  if (!has_string_map_value()) {
+    clear_value();
+    set_has_string_map_value();
+    value_.string_map_value_ = new ::istio::mixer::v1::Attributes_StringMap;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  return value_.string_map_value_;
+}
+::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::release_string_map_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  if (has_string_map_value()) {
+    clear_has_value();
+    ::istio::mixer::v1::Attributes_StringMap* temp = value_.string_map_value_;
+    value_.string_map_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+void Attributes_AttributeValue::set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value) {
+  clear_value();
+  if (string_map_value) {
+    set_has_string_map_value();
+    value_.string_map_value_ = string_map_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+}
+
+bool Attributes_AttributeValue::has_value() const {
+  return value_case() != VALUE_NOT_SET;
+}
+void Attributes_AttributeValue::clear_has_value() {
+  _oneof_case_[0] = VALUE_NOT_SET;
+}
+Attributes_AttributeValue::ValueCase Attributes_AttributeValue::value_case() const {
+  return Attributes_AttributeValue::ValueCase(_oneof_case_[0]);
+}
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+Attributes_StringMap::Attributes_StringMap_EntriesEntry::Attributes_StringMap_EntriesEntry() {}
+Attributes_StringMap::Attributes_StringMap_EntriesEntry::Attributes_StringMap_EntriesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata Attributes_StringMap::Attributes_StringMap_EntriesEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[2];
+}
+void Attributes_StringMap::Attributes_StringMap_EntriesEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void Attributes_StringMap::Attributes_StringMap_EntriesEntry::MergeFrom(const Attributes_StringMap_EntriesEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Attributes_StringMap::kEntriesFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Attributes_StringMap::Attributes_StringMap()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:istio.mixer.v1.Attributes.StringMap)
+}
+Attributes_StringMap::Attributes_StringMap(const Attributes_StringMap& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  entries_.MergeFrom(from.entries_);
+  // @@protoc_insertion_point(copy_constructor:istio.mixer.v1.Attributes.StringMap)
+}
+
+void Attributes_StringMap::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+Attributes_StringMap::~Attributes_StringMap() {
+  // @@protoc_insertion_point(destructor:istio.mixer.v1.Attributes.StringMap)
+  SharedDtor();
+}
+
+void Attributes_StringMap::SharedDtor() {
+}
+
+void Attributes_StringMap::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Attributes_StringMap::descriptor() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Attributes_StringMap& Attributes_StringMap::default_instance() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+Attributes_StringMap* Attributes_StringMap::New(::google::protobuf::Arena* arena) const {
+  Attributes_StringMap* n = new Attributes_StringMap;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Attributes_StringMap::Clear() {
+// @@protoc_insertion_point(message_clear_start:istio.mixer.v1.Attributes.StringMap)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  entries_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool Attributes_StringMap::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:istio.mixer.v1.Attributes.StringMap)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // map<string, string> entries = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          Attributes_StringMap_EntriesEntry::Parser< ::google::protobuf::internal::MapField<
+              Attributes_StringMap_EntriesEntry,
+              ::std::string, ::std::string,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              0 >,
+            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&entries_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.key().data(), static_cast<int>(parser.key().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "istio.mixer.v1.Attributes.StringMap.EntriesEntry.key"));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.value().data(), static_cast<int>(parser.value().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "istio.mixer.v1.Attributes.StringMap.EntriesEntry.value"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:istio.mixer.v1.Attributes.StringMap)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:istio.mixer.v1.Attributes.StringMap)
+  return false;
+#undef DO_
+}
+
+void Attributes_StringMap::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:istio.mixer.v1.Attributes.StringMap)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // map<string, string> entries = 1;
+  if (!this->entries().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.StringMap.EntriesEntry.key");
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.StringMap.EntriesEntry.value");
+      }
+    };
+
+    if (output->IsSerializationDeterministic() &&
+        this->entries().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->entries().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->entries().begin();
+          it != this->entries().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<Attributes_StringMap_EntriesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(entries_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            1, *entry, output);
+        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<Attributes_StringMap_EntriesEntry> entry;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->entries().begin();
+          it != this->entries().end(); ++it) {
+        entry.reset(entries_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            1, *entry, output);
+        Utf8Check::Check(&*it);
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:istio.mixer.v1.Attributes.StringMap)
+}
+
+::google::protobuf::uint8* Attributes_StringMap::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:istio.mixer.v1.Attributes.StringMap)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // map<string, string> entries = 1;
+  if (!this->entries().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.StringMap.EntriesEntry.key");
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.StringMap.EntriesEntry.value");
+      }
+    };
+
+    if (deterministic &&
+        this->entries().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->entries().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->entries().begin();
+          it != this->entries().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<Attributes_StringMap_EntriesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(entries_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       1, *entry, deterministic, target);
+;
+        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<Attributes_StringMap_EntriesEntry> entry;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->entries().begin();
+          it != this->entries().end(); ++it) {
+        entry.reset(entries_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       1, *entry, deterministic, target);
+;
+        Utf8Check::Check(&*it);
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:istio.mixer.v1.Attributes.StringMap)
+  return target;
+}
+
+size_t Attributes_StringMap::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:istio.mixer.v1.Attributes.StringMap)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // map<string, string> entries = 1;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->entries_size());
+  {
+    ::google::protobuf::scoped_ptr<Attributes_StringMap_EntriesEntry> entry;
+    for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+        it = this->entries().begin();
+        it != this->entries().end(); ++it) {
+      entry.reset(entries_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Attributes_StringMap::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:istio.mixer.v1.Attributes.StringMap)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Attributes_StringMap* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Attributes_StringMap>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:istio.mixer.v1.Attributes.StringMap)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:istio.mixer.v1.Attributes.StringMap)
+    MergeFrom(*source);
+  }
+}
+
+void Attributes_StringMap::MergeFrom(const Attributes_StringMap& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:istio.mixer.v1.Attributes.StringMap)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  entries_.MergeFrom(from.entries_);
+}
+
+void Attributes_StringMap::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:istio.mixer.v1.Attributes.StringMap)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Attributes_StringMap::CopyFrom(const Attributes_StringMap& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:istio.mixer.v1.Attributes.StringMap)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Attributes_StringMap::IsInitialized() const {
+  return true;
+}
+
+void Attributes_StringMap::Swap(Attributes_StringMap* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Attributes_StringMap::InternalSwap(Attributes_StringMap* other) {
+  using std::swap;
+  entries_.Swap(&other->entries_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Attributes_StringMap::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Attributes_StringMap
+
+// map<string, string> entries = 1;
+int Attributes_StringMap::entries_size() const {
+  return entries_.size();
+}
+void Attributes_StringMap::clear_entries() {
+  entries_.Clear();
+}
+ const ::google::protobuf::Map< ::std::string, ::std::string >&
+Attributes_StringMap::entries() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.StringMap.entries)
+  return entries_.GetMap();
+}
+ ::google::protobuf::Map< ::std::string, ::std::string >*
+Attributes_StringMap::mutable_entries() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.StringMap.entries)
+  return entries_.MutableMap();
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Attributes::kAttributesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Attributes::Attributes()
@@ -472,17 +1887,9 @@ Attributes::Attributes()
 Attributes::Attributes(const Attributes& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      words_(from.words_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  strings_.MergeFrom(from.strings_);
-  int64s_.MergeFrom(from.int64s_);
-  doubles_.MergeFrom(from.doubles_);
-  bools_.MergeFrom(from.bools_);
-  timestamps_.MergeFrom(from.timestamps_);
-  durations_.MergeFrom(from.durations_);
-  bytes_.MergeFrom(from.bytes_);
-  string_maps_.MergeFrom(from.string_maps_);
+  attributes_.MergeFrom(from.attributes_);
   // @@protoc_insertion_point(copy_constructor:istio.mixer.v1.Attributes)
 }
 
@@ -527,15 +1934,7 @@ void Attributes::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  words_.Clear();
-  strings_.Clear();
-  int64s_.Clear();
-  doubles_.Clear();
-  bools_.Clear();
-  timestamps_.Clear();
-  durations_.Clear();
-  bytes_.Clear();
-  string_maps_.Clear();
+  attributes_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -549,169 +1948,23 @@ bool Attributes::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated string words = 1;
+      // map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->add_words()));
+          Attributes_AttributesEntry::Parser< ::google::protobuf::internal::MapField<
+              Attributes_AttributesEntry,
+              ::std::string, ::istio::mixer::v1::Attributes_AttributeValue,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+              0 >,
+            ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue > > parser(&attributes_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->words(this->words_size() - 1).data(),
-            static_cast<int>(this->words(this->words_size() - 1).length()),
+            parser.key().data(), static_cast<int>(parser.key().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "istio.mixer.v1.Attributes.words"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, sint32> strings = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          Attributes_StringsEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_StringsEntry,
-              ::google::protobuf::int32, ::google::protobuf::int32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 > > parser(&strings_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, int64> int64s = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          Attributes_Int64sEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_Int64sEntry,
-              ::google::protobuf::int32, ::google::protobuf::int64,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 > > parser(&int64s_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, double> doubles = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          Attributes_DoublesEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_DoublesEntry,
-              ::google::protobuf::int32, double,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, double > > parser(&doubles_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, bool> bools = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          Attributes_BoolsEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_BoolsEntry,
-              ::google::protobuf::int32, bool,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_BOOL,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, bool > > parser(&bools_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          Attributes_TimestampsEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_TimestampsEntry,
-              ::google::protobuf::int32, ::google::protobuf::Timestamp,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp > > parser(&timestamps_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          Attributes_DurationsEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_DurationsEntry,
-              ::google::protobuf::int32, ::google::protobuf::Duration,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration > > parser(&durations_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, bytes> bytes = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          Attributes_BytesEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_BytesEntry,
-              ::google::protobuf::int32, ::std::string,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_BYTES,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::std::string > > parser(&bytes_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          Attributes_StringMapsEntry::Parser< ::google::protobuf::internal::MapField<
-              Attributes_StringMapsEntry,
-              ::google::protobuf::int32, ::istio::mixer::v1::StringMap,
-              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
-              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-              0 >,
-            ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap > > parser(&string_maps_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
+            "istio.mixer.v1.Attributes.AttributesEntry.key"));
         } else {
           goto handle_unusual;
         }
@@ -744,324 +1997,51 @@ void Attributes::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string words = 1;
-  for (int i = 0, n = this->words_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->words(i).data(), static_cast<int>(this->words(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "istio.mixer.v1.Attributes.words");
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      1, this->words(i), output);
-  }
-
-  // map<sint32, sint32> strings = 2;
-  if (!this->strings().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_pointer
+  // map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
+  if (!this->attributes().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_pointer
         ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.AttributesEntry.key");
+      }
+    };
 
     if (output->IsSerializationDeterministic() &&
-        this->strings().size() > 1) {
+        this->attributes().size() > 1) {
       ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->strings().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::size_type size_type;
+          new SortItem[this->attributes().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
-          it = this->strings().begin();
-          it != this->strings().end(); ++it, ++n) {
+      for (::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_iterator
+          it = this->attributes().begin();
+          it != this->attributes().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_StringsEntry> entry;
+      ::google::protobuf::scoped_ptr<Attributes_AttributesEntry> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(strings_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        entry.reset(attributes_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
         ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            2, *entry, output);
+            1, *entry, output);
+        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
       }
     } else {
-      ::google::protobuf::scoped_ptr<Attributes_StringsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
-          it = this->strings().begin();
-          it != this->strings().end(); ++it) {
-        entry.reset(strings_.NewEntryWrapper(
+      ::google::protobuf::scoped_ptr<Attributes_AttributesEntry> entry;
+      for (::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_iterator
+          it = this->attributes().begin();
+          it != this->attributes().end(); ++it) {
+        entry.reset(attributes_.NewEntryWrapper(
             it->first, it->second));
         ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            2, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, int64> int64s = 3;
-  if (!this->int64s().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->int64s().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->int64s().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
-          it = this->int64s().begin();
-          it != this->int64s().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_Int64sEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(int64s_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            3, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_Int64sEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
-          it = this->int64s().begin();
-          it != this->int64s().end(); ++it) {
-        entry.reset(int64s_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            3, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, double> doubles = 4;
-  if (!this->doubles().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->doubles().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->doubles().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
-          it = this->doubles().begin();
-          it != this->doubles().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_DoublesEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(doubles_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            4, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_DoublesEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
-          it = this->doubles().begin();
-          it != this->doubles().end(); ++it) {
-        entry.reset(doubles_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            4, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, bool> bools = 5;
-  if (!this->bools().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->bools().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->bools().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
-          it = this->bools().begin();
-          it != this->bools().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_BoolsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(bools_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            5, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_BoolsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
-          it = this->bools().begin();
-          it != this->bools().end(); ++it) {
-        entry.reset(bools_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            5, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-  if (!this->timestamps().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->timestamps().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->timestamps().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
-          it = this->timestamps().begin();
-          it != this->timestamps().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_TimestampsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(timestamps_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            6, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_TimestampsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
-          it = this->timestamps().begin();
-          it != this->timestamps().end(); ++it) {
-        entry.reset(timestamps_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            6, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-  if (!this->durations().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->durations().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->durations().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
-          it = this->durations().begin();
-          it != this->durations().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_DurationsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(durations_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            7, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_DurationsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
-          it = this->durations().begin();
-          it != this->durations().end(); ++it) {
-        entry.reset(durations_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            7, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, bytes> bytes = 8;
-  if (!this->bytes().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->bytes().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->bytes().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
-          it = this->bytes().begin();
-          it != this->bytes().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_BytesEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(bytes_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            8, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_BytesEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
-          it = this->bytes().begin();
-          it != this->bytes().end(); ++it) {
-        entry.reset(bytes_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            8, *entry, output);
-      }
-    }
-  }
-
-  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-  if (!this->string_maps().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (output->IsSerializationDeterministic() &&
-        this->string_maps().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->string_maps().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
-          it = this->string_maps().begin();
-          it != this->string_maps().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_StringMapsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(string_maps_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            9, *entry, output);
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_StringMapsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
-          it = this->string_maps().begin();
-          it != this->string_maps().end(); ++it) {
-        entry.reset(string_maps_.NewEntryWrapper(
-            it->first, it->second));
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            9, *entry, output);
+            1, *entry, output);
+        Utf8Check::Check(&*it);
       }
     }
   }
@@ -1080,356 +2060,55 @@ void Attributes::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string words = 1;
-  for (int i = 0, n = this->words_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->words(i).data(), static_cast<int>(this->words(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "istio.mixer.v1.Attributes.words");
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteStringToArray(1, this->words(i), target);
-  }
-
-  // map<sint32, sint32> strings = 2;
-  if (!this->strings().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_pointer
+  // map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
+  if (!this->attributes().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_pointer
         ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "istio.mixer.v1.Attributes.AttributesEntry.key");
+      }
+    };
 
     if (deterministic &&
-        this->strings().size() > 1) {
+        this->attributes().size() > 1) {
       ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->strings().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::size_type size_type;
+          new SortItem[this->attributes().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
-          it = this->strings().begin();
-          it != this->strings().end(); ++it, ++n) {
+      for (::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_iterator
+          it = this->attributes().begin();
+          it != this->attributes().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_StringsEntry> entry;
+      ::google::protobuf::scoped_ptr<Attributes_AttributesEntry> entry;
       for (size_type i = 0; i < n; i++) {
-        entry.reset(strings_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        entry.reset(attributes_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second));
         target = ::google::protobuf::internal::WireFormatLite::
                    InternalWriteMessageNoVirtualToArray(
-                       2, *entry, deterministic, target);
+                       1, *entry, deterministic, target);
 ;
+        Utf8Check::Check(items[static_cast<ptrdiff_t>(i)]);
       }
     } else {
-      ::google::protobuf::scoped_ptr<Attributes_StringsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
-          it = this->strings().begin();
-          it != this->strings().end(); ++it) {
-        entry.reset(strings_.NewEntryWrapper(
+      ::google::protobuf::scoped_ptr<Attributes_AttributesEntry> entry;
+      for (::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_iterator
+          it = this->attributes().begin();
+          it != this->attributes().end(); ++it) {
+        entry.reset(attributes_.NewEntryWrapper(
             it->first, it->second));
         target = ::google::protobuf::internal::WireFormatLite::
                    InternalWriteMessageNoVirtualToArray(
-                       2, *entry, deterministic, target);
+                       1, *entry, deterministic, target);
 ;
-      }
-    }
-  }
-
-  // map<sint32, int64> int64s = 3;
-  if (!this->int64s().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->int64s().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->int64s().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
-          it = this->int64s().begin();
-          it != this->int64s().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_Int64sEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(int64s_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       3, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_Int64sEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
-          it = this->int64s().begin();
-          it != this->int64s().end(); ++it) {
-        entry.reset(int64s_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       3, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, double> doubles = 4;
-  if (!this->doubles().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->doubles().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->doubles().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
-          it = this->doubles().begin();
-          it != this->doubles().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_DoublesEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(doubles_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       4, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_DoublesEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
-          it = this->doubles().begin();
-          it != this->doubles().end(); ++it) {
-        entry.reset(doubles_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       4, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, bool> bools = 5;
-  if (!this->bools().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->bools().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->bools().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
-          it = this->bools().begin();
-          it != this->bools().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_BoolsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(bools_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       5, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_BoolsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
-          it = this->bools().begin();
-          it != this->bools().end(); ++it) {
-        entry.reset(bools_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       5, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-  if (!this->timestamps().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->timestamps().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->timestamps().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
-          it = this->timestamps().begin();
-          it != this->timestamps().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_TimestampsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(timestamps_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       6, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_TimestampsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
-          it = this->timestamps().begin();
-          it != this->timestamps().end(); ++it) {
-        entry.reset(timestamps_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       6, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-  if (!this->durations().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->durations().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->durations().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
-          it = this->durations().begin();
-          it != this->durations().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_DurationsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(durations_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       7, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_DurationsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
-          it = this->durations().begin();
-          it != this->durations().end(); ++it) {
-        entry.reset(durations_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       7, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, bytes> bytes = 8;
-  if (!this->bytes().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->bytes().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->bytes().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
-          it = this->bytes().begin();
-          it != this->bytes().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_BytesEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(bytes_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       8, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_BytesEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
-          it = this->bytes().begin();
-          it != this->bytes().end(); ++it) {
-        entry.reset(bytes_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       8, *entry, deterministic, target);
-;
-      }
-    }
-  }
-
-  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-  if (!this->string_maps().empty()) {
-    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_pointer
-        ConstPtr;
-    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
-    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
-
-    if (deterministic &&
-        this->string_maps().size() > 1) {
-      ::google::protobuf::scoped_array<SortItem> items(
-          new SortItem[this->string_maps().size()]);
-      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::size_type size_type;
-      size_type n = 0;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
-          it = this->string_maps().begin();
-          it != this->string_maps().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      ::google::protobuf::scoped_ptr<Attributes_StringMapsEntry> entry;
-      for (size_type i = 0; i < n; i++) {
-        entry.reset(string_maps_.NewEntryWrapper(
-            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       9, *entry, deterministic, target);
-;
-      }
-    } else {
-      ::google::protobuf::scoped_ptr<Attributes_StringMapsEntry> entry;
-      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
-          it = this->string_maps().begin();
-          it != this->string_maps().end(); ++it) {
-        entry.reset(string_maps_.NewEntryWrapper(
-            it->first, it->second));
-        target = ::google::protobuf::internal::WireFormatLite::
-                   InternalWriteMessageNoVirtualToArray(
-                       9, *entry, deterministic, target);
-;
+        Utf8Check::Check(&*it);
       }
     }
   }
@@ -1451,121 +2130,15 @@ size_t Attributes::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated string words = 1;
+  // map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
   total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->words_size());
-  for (int i = 0, n = this->words_size(); i < n; i++) {
-    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-      this->words(i));
-  }
-
-  // map<sint32, sint32> strings = 2;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->strings_size());
+      ::google::protobuf::internal::FromIntSize(this->attributes_size());
   {
-    ::google::protobuf::scoped_ptr<Attributes_StringsEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
-        it = this->strings().begin();
-        it != this->strings().end(); ++it) {
-      entry.reset(strings_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, int64> int64s = 3;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->int64s_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_Int64sEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
-        it = this->int64s().begin();
-        it != this->int64s().end(); ++it) {
-      entry.reset(int64s_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, double> doubles = 4;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->doubles_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_DoublesEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
-        it = this->doubles().begin();
-        it != this->doubles().end(); ++it) {
-      entry.reset(doubles_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, bool> bools = 5;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->bools_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_BoolsEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
-        it = this->bools().begin();
-        it != this->bools().end(); ++it) {
-      entry.reset(bools_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->timestamps_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_TimestampsEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
-        it = this->timestamps().begin();
-        it != this->timestamps().end(); ++it) {
-      entry.reset(timestamps_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->durations_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_DurationsEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
-        it = this->durations().begin();
-        it != this->durations().end(); ++it) {
-      entry.reset(durations_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, bytes> bytes = 8;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->bytes_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_BytesEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
-        it = this->bytes().begin();
-        it != this->bytes().end(); ++it) {
-      entry.reset(bytes_.NewEntryWrapper(it->first, it->second));
-      total_size += ::google::protobuf::internal::WireFormatLite::
-          MessageSizeNoVirtual(*entry);
-    }
-  }
-
-  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->string_maps_size());
-  {
-    ::google::protobuf::scoped_ptr<Attributes_StringMapsEntry> entry;
-    for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
-        it = this->string_maps().begin();
-        it != this->string_maps().end(); ++it) {
-      entry.reset(string_maps_.NewEntryWrapper(it->first, it->second));
+    ::google::protobuf::scoped_ptr<Attributes_AttributesEntry> entry;
+    for (::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >::const_iterator
+        it = this->attributes().begin();
+        it != this->attributes().end(); ++it) {
+      entry.reset(attributes_.NewEntryWrapper(it->first, it->second));
       total_size += ::google::protobuf::internal::WireFormatLite::
           MessageSizeNoVirtual(*entry);
     }
@@ -1600,15 +2173,7 @@ void Attributes::MergeFrom(const Attributes& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  words_.MergeFrom(from.words_);
-  strings_.MergeFrom(from.strings_);
-  int64s_.MergeFrom(from.int64s_);
-  doubles_.MergeFrom(from.doubles_);
-  bools_.MergeFrom(from.bools_);
-  timestamps_.MergeFrom(from.timestamps_);
-  durations_.MergeFrom(from.durations_);
-  bytes_.MergeFrom(from.bytes_);
-  string_maps_.MergeFrom(from.string_maps_);
+  attributes_.MergeFrom(from.attributes_);
 }
 
 void Attributes::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1635,6 +2200,1379 @@ void Attributes::Swap(Attributes* other) {
 }
 void Attributes::InternalSwap(Attributes* other) {
   using std::swap;
+  attributes_.Swap(&other->attributes_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Attributes::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Attributes
+
+// map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
+int Attributes::attributes_size() const {
+  return attributes_.size();
+}
+void Attributes::clear_attributes() {
+  attributes_.Clear();
+}
+ const ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >&
+Attributes::attributes() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.attributes)
+  return attributes_.GetMap();
+}
+ ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >*
+Attributes::mutable_attributes() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.attributes)
+  return attributes_.MutableMap();
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_StringsEntry::CompressedAttributes_StringsEntry() {}
+CompressedAttributes::CompressedAttributes_StringsEntry::CompressedAttributes_StringsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_StringsEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[5];
+}
+void CompressedAttributes::CompressedAttributes_StringsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_StringsEntry::MergeFrom(const CompressedAttributes_StringsEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_Int64sEntry::CompressedAttributes_Int64sEntry() {}
+CompressedAttributes::CompressedAttributes_Int64sEntry::CompressedAttributes_Int64sEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_Int64sEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[6];
+}
+void CompressedAttributes::CompressedAttributes_Int64sEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_Int64sEntry::MergeFrom(const CompressedAttributes_Int64sEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_DoublesEntry::CompressedAttributes_DoublesEntry() {}
+CompressedAttributes::CompressedAttributes_DoublesEntry::CompressedAttributes_DoublesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_DoublesEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[7];
+}
+void CompressedAttributes::CompressedAttributes_DoublesEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_DoublesEntry::MergeFrom(const CompressedAttributes_DoublesEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_BoolsEntry::CompressedAttributes_BoolsEntry() {}
+CompressedAttributes::CompressedAttributes_BoolsEntry::CompressedAttributes_BoolsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_BoolsEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[8];
+}
+void CompressedAttributes::CompressedAttributes_BoolsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_BoolsEntry::MergeFrom(const CompressedAttributes_BoolsEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_TimestampsEntry::CompressedAttributes_TimestampsEntry() {}
+CompressedAttributes::CompressedAttributes_TimestampsEntry::CompressedAttributes_TimestampsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_TimestampsEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[9];
+}
+void CompressedAttributes::CompressedAttributes_TimestampsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_TimestampsEntry::MergeFrom(const CompressedAttributes_TimestampsEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_DurationsEntry::CompressedAttributes_DurationsEntry() {}
+CompressedAttributes::CompressedAttributes_DurationsEntry::CompressedAttributes_DurationsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_DurationsEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[10];
+}
+void CompressedAttributes::CompressedAttributes_DurationsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_DurationsEntry::MergeFrom(const CompressedAttributes_DurationsEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_BytesEntry::CompressedAttributes_BytesEntry() {}
+CompressedAttributes::CompressedAttributes_BytesEntry::CompressedAttributes_BytesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_BytesEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[11];
+}
+void CompressedAttributes::CompressedAttributes_BytesEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_BytesEntry::MergeFrom(const CompressedAttributes_BytesEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+CompressedAttributes::CompressedAttributes_StringMapsEntry::CompressedAttributes_StringMapsEntry() {}
+CompressedAttributes::CompressedAttributes_StringMapsEntry::CompressedAttributes_StringMapsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata CompressedAttributes::CompressedAttributes_StringMapsEntry::GetMetadata() const {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[12];
+}
+void CompressedAttributes::CompressedAttributes_StringMapsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void CompressedAttributes::CompressedAttributes_StringMapsEntry::MergeFrom(const CompressedAttributes_StringMapsEntry& other) {
+  MergeFromInternal(other);
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CompressedAttributes::kWordsFieldNumber;
+const int CompressedAttributes::kStringsFieldNumber;
+const int CompressedAttributes::kInt64SFieldNumber;
+const int CompressedAttributes::kDoublesFieldNumber;
+const int CompressedAttributes::kBoolsFieldNumber;
+const int CompressedAttributes::kTimestampsFieldNumber;
+const int CompressedAttributes::kDurationsFieldNumber;
+const int CompressedAttributes::kBytesFieldNumber;
+const int CompressedAttributes::kStringMapsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CompressedAttributes::CompressedAttributes()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:istio.mixer.v1.CompressedAttributes)
+}
+CompressedAttributes::CompressedAttributes(const CompressedAttributes& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      words_(from.words_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  strings_.MergeFrom(from.strings_);
+  int64s_.MergeFrom(from.int64s_);
+  doubles_.MergeFrom(from.doubles_);
+  bools_.MergeFrom(from.bools_);
+  timestamps_.MergeFrom(from.timestamps_);
+  durations_.MergeFrom(from.durations_);
+  bytes_.MergeFrom(from.bytes_);
+  string_maps_.MergeFrom(from.string_maps_);
+  // @@protoc_insertion_point(copy_constructor:istio.mixer.v1.CompressedAttributes)
+}
+
+void CompressedAttributes::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CompressedAttributes::~CompressedAttributes() {
+  // @@protoc_insertion_point(destructor:istio.mixer.v1.CompressedAttributes)
+  SharedDtor();
+}
+
+void CompressedAttributes::SharedDtor() {
+}
+
+void CompressedAttributes::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CompressedAttributes::descriptor() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CompressedAttributes& CompressedAttributes::default_instance() {
+  protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CompressedAttributes* CompressedAttributes::New(::google::protobuf::Arena* arena) const {
+  CompressedAttributes* n = new CompressedAttributes;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void CompressedAttributes::Clear() {
+// @@protoc_insertion_point(message_clear_start:istio.mixer.v1.CompressedAttributes)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  words_.Clear();
+  strings_.Clear();
+  int64s_.Clear();
+  doubles_.Clear();
+  bools_.Clear();
+  timestamps_.Clear();
+  durations_.Clear();
+  bytes_.Clear();
+  string_maps_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CompressedAttributes::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:istio.mixer.v1.CompressedAttributes)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated string words = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_words()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->words(this->words_size() - 1).data(),
+            static_cast<int>(this->words(this->words_size() - 1).length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "istio.mixer.v1.CompressedAttributes.words"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, sint32> strings = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          CompressedAttributes_StringsEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_StringsEntry,
+              ::google::protobuf::int32, ::google::protobuf::int32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 > > parser(&strings_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, int64> int64s = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          CompressedAttributes_Int64sEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_Int64sEntry,
+              ::google::protobuf::int32, ::google::protobuf::int64,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 > > parser(&int64s_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, double> doubles = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          CompressedAttributes_DoublesEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_DoublesEntry,
+              ::google::protobuf::int32, double,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, double > > parser(&doubles_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, bool> bools = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          CompressedAttributes_BoolsEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_BoolsEntry,
+              ::google::protobuf::int32, bool,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_BOOL,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, bool > > parser(&bools_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          CompressedAttributes_TimestampsEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_TimestampsEntry,
+              ::google::protobuf::int32, ::google::protobuf::Timestamp,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp > > parser(&timestamps_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          CompressedAttributes_DurationsEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_DurationsEntry,
+              ::google::protobuf::int32, ::google::protobuf::Duration,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration > > parser(&durations_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, bytes> bytes = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
+          CompressedAttributes_BytesEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_BytesEntry,
+              ::google::protobuf::int32, ::std::string,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_BYTES,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::std::string > > parser(&bytes_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
+          CompressedAttributes_StringMapsEntry::Parser< ::google::protobuf::internal::MapField<
+              CompressedAttributes_StringMapsEntry,
+              ::google::protobuf::int32, ::istio::mixer::v1::StringMap,
+              ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap > > parser(&string_maps_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:istio.mixer.v1.CompressedAttributes)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:istio.mixer.v1.CompressedAttributes)
+  return false;
+#undef DO_
+}
+
+void CompressedAttributes::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:istio.mixer.v1.CompressedAttributes)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated string words = 1;
+  for (int i = 0, n = this->words_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->words(i).data(), static_cast<int>(this->words(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.CompressedAttributes.words");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->words(i), output);
+  }
+
+  // map<sint32, sint32> strings = 2;
+  if (!this->strings().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->strings().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->strings().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
+          it = this->strings().begin();
+          it != this->strings().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(strings_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            2, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
+          it = this->strings().begin();
+          it != this->strings().end(); ++it) {
+        entry.reset(strings_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            2, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, int64> int64s = 3;
+  if (!this->int64s().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->int64s().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->int64s().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->int64s().begin();
+          it != this->int64s().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_Int64sEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(int64s_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            3, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_Int64sEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->int64s().begin();
+          it != this->int64s().end(); ++it) {
+        entry.reset(int64s_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            3, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, double> doubles = 4;
+  if (!this->doubles().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->doubles().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->doubles().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
+          it = this->doubles().begin();
+          it != this->doubles().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DoublesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(doubles_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            4, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DoublesEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
+          it = this->doubles().begin();
+          it != this->doubles().end(); ++it) {
+        entry.reset(doubles_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            4, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, bool> bools = 5;
+  if (!this->bools().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->bools().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->bools().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
+          it = this->bools().begin();
+          it != this->bools().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BoolsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(bools_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            5, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BoolsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
+          it = this->bools().begin();
+          it != this->bools().end(); ++it) {
+        entry.reset(bools_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            5, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
+  if (!this->timestamps().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->timestamps().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->timestamps().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
+          it = this->timestamps().begin();
+          it != this->timestamps().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_TimestampsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(timestamps_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            6, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_TimestampsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
+          it = this->timestamps().begin();
+          it != this->timestamps().end(); ++it) {
+        entry.reset(timestamps_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            6, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
+  if (!this->durations().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->durations().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->durations().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
+          it = this->durations().begin();
+          it != this->durations().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DurationsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(durations_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            7, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DurationsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
+          it = this->durations().begin();
+          it != this->durations().end(); ++it) {
+        entry.reset(durations_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            7, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, bytes> bytes = 8;
+  if (!this->bytes().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->bytes().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->bytes().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
+          it = this->bytes().begin();
+          it != this->bytes().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BytesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(bytes_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            8, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BytesEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
+          it = this->bytes().begin();
+          it != this->bytes().end(); ++it) {
+        entry.reset(bytes_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            8, *entry, output);
+      }
+    }
+  }
+
+  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
+  if (!this->string_maps().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->string_maps().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->string_maps().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
+          it = this->string_maps().begin();
+          it != this->string_maps().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringMapsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(string_maps_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            9, *entry, output);
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringMapsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
+          it = this->string_maps().begin();
+          it != this->string_maps().end(); ++it) {
+        entry.reset(string_maps_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            9, *entry, output);
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:istio.mixer.v1.CompressedAttributes)
+}
+
+::google::protobuf::uint8* CompressedAttributes::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:istio.mixer.v1.CompressedAttributes)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated string words = 1;
+  for (int i = 0, n = this->words_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->words(i).data(), static_cast<int>(this->words(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.CompressedAttributes.words");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(1, this->words(i), target);
+  }
+
+  // map<sint32, sint32> strings = 2;
+  if (!this->strings().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->strings().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->strings().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
+          it = this->strings().begin();
+          it != this->strings().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(strings_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       2, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
+          it = this->strings().begin();
+          it != this->strings().end(); ++it) {
+        entry.reset(strings_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       2, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, int64> int64s = 3;
+  if (!this->int64s().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->int64s().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->int64s().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->int64s().begin();
+          it != this->int64s().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_Int64sEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(int64s_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       3, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_Int64sEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->int64s().begin();
+          it != this->int64s().end(); ++it) {
+        entry.reset(int64s_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       3, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, double> doubles = 4;
+  if (!this->doubles().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->doubles().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->doubles().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, double >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
+          it = this->doubles().begin();
+          it != this->doubles().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DoublesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(doubles_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       4, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DoublesEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
+          it = this->doubles().begin();
+          it != this->doubles().end(); ++it) {
+        entry.reset(doubles_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       4, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, bool> bools = 5;
+  if (!this->bools().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->bools().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->bools().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, bool >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
+          it = this->bools().begin();
+          it != this->bools().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BoolsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(bools_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       5, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BoolsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
+          it = this->bools().begin();
+          it != this->bools().end(); ++it) {
+        entry.reset(bools_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       5, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
+  if (!this->timestamps().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->timestamps().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->timestamps().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
+          it = this->timestamps().begin();
+          it != this->timestamps().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_TimestampsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(timestamps_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       6, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_TimestampsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
+          it = this->timestamps().begin();
+          it != this->timestamps().end(); ++it) {
+        entry.reset(timestamps_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       6, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
+  if (!this->durations().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->durations().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->durations().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
+          it = this->durations().begin();
+          it != this->durations().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DurationsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(durations_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       7, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_DurationsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
+          it = this->durations().begin();
+          it != this->durations().end(); ++it) {
+        entry.reset(durations_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       7, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, bytes> bytes = 8;
+  if (!this->bytes().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->bytes().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->bytes().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
+          it = this->bytes().begin();
+          it != this->bytes().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BytesEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(bytes_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       8, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_BytesEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
+          it = this->bytes().begin();
+          it != this->bytes().end(); ++it) {
+        entry.reset(bytes_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       8, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
+  if (!this->string_maps().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->string_maps().size() > 1) {
+      ::google::protobuf::scoped_array<SortItem> items(
+          new SortItem[this->string_maps().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
+          it = this->string_maps().begin();
+          it != this->string_maps().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringMapsEntry> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(string_maps_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       9, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::google::protobuf::scoped_ptr<CompressedAttributes_StringMapsEntry> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
+          it = this->string_maps().begin();
+          it != this->string_maps().end(); ++it) {
+        entry.reset(string_maps_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       9, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:istio.mixer.v1.CompressedAttributes)
+  return target;
+}
+
+size_t CompressedAttributes::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:istio.mixer.v1.CompressedAttributes)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // repeated string words = 1;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->words_size());
+  for (int i = 0, n = this->words_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->words(i));
+  }
+
+  // map<sint32, sint32> strings = 2;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->strings_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_StringsEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >::const_iterator
+        it = this->strings().begin();
+        it != this->strings().end(); ++it) {
+      entry.reset(strings_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, int64> int64s = 3;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->int64s_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_Int64sEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+        it = this->int64s().begin();
+        it != this->int64s().end(); ++it) {
+      entry.reset(int64s_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, double> doubles = 4;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->doubles_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_DoublesEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, double >::const_iterator
+        it = this->doubles().begin();
+        it != this->doubles().end(); ++it) {
+      entry.reset(doubles_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, bool> bools = 5;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->bools_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_BoolsEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, bool >::const_iterator
+        it = this->bools().begin();
+        it != this->bools().end(); ++it) {
+      entry.reset(bools_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->timestamps_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_TimestampsEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >::const_iterator
+        it = this->timestamps().begin();
+        it != this->timestamps().end(); ++it) {
+      entry.reset(timestamps_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->durations_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_DurationsEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >::const_iterator
+        it = this->durations().begin();
+        it != this->durations().end(); ++it) {
+      entry.reset(durations_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, bytes> bytes = 8;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->bytes_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_BytesEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::std::string >::const_iterator
+        it = this->bytes().begin();
+        it != this->bytes().end(); ++it) {
+      entry.reset(bytes_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->string_maps_size());
+  {
+    ::google::protobuf::scoped_ptr<CompressedAttributes_StringMapsEntry> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >::const_iterator
+        it = this->string_maps().begin();
+        it != this->string_maps().end(); ++it) {
+      entry.reset(string_maps_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CompressedAttributes::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:istio.mixer.v1.CompressedAttributes)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CompressedAttributes* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CompressedAttributes>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:istio.mixer.v1.CompressedAttributes)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:istio.mixer.v1.CompressedAttributes)
+    MergeFrom(*source);
+  }
+}
+
+void CompressedAttributes::MergeFrom(const CompressedAttributes& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:istio.mixer.v1.CompressedAttributes)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  words_.MergeFrom(from.words_);
+  strings_.MergeFrom(from.strings_);
+  int64s_.MergeFrom(from.int64s_);
+  doubles_.MergeFrom(from.doubles_);
+  bools_.MergeFrom(from.bools_);
+  timestamps_.MergeFrom(from.timestamps_);
+  durations_.MergeFrom(from.durations_);
+  bytes_.MergeFrom(from.bytes_);
+  string_maps_.MergeFrom(from.string_maps_);
+}
+
+void CompressedAttributes::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:istio.mixer.v1.CompressedAttributes)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CompressedAttributes::CopyFrom(const CompressedAttributes& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:istio.mixer.v1.CompressedAttributes)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CompressedAttributes::IsInitialized() const {
+  return true;
+}
+
+void CompressedAttributes::Swap(CompressedAttributes* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CompressedAttributes::InternalSwap(CompressedAttributes* other) {
+  using std::swap;
   words_.InternalSwap(&other->words_);
   strings_.Swap(&other->strings_);
   int64s_.Swap(&other->int64s_);
@@ -1648,224 +3586,224 @@ void Attributes::InternalSwap(Attributes* other) {
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata Attributes::GetMetadata() const {
+::google::protobuf::Metadata CompressedAttributes::GetMetadata() const {
   protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// Attributes
+// CompressedAttributes
 
 // repeated string words = 1;
-int Attributes::words_size() const {
+int CompressedAttributes::words_size() const {
   return words_.size();
 }
-void Attributes::clear_words() {
+void CompressedAttributes::clear_words() {
   words_.Clear();
 }
-const ::std::string& Attributes::words(int index) const {
-  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.words)
+const ::std::string& CompressedAttributes::words(int index) const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.CompressedAttributes.words)
   return words_.Get(index);
 }
-::std::string* Attributes::mutable_words(int index) {
-  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.words)
+::std::string* CompressedAttributes::mutable_words(int index) {
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CompressedAttributes.words)
   return words_.Mutable(index);
 }
-void Attributes::set_words(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.words)
+void CompressedAttributes::set_words(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.CompressedAttributes.words)
   words_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-void Attributes::set_words(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.words)
+void CompressedAttributes::set_words(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.CompressedAttributes.words)
   words_.Mutable(index)->assign(std::move(value));
 }
 #endif
-void Attributes::set_words(int index, const char* value) {
+void CompressedAttributes::set_words(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   words_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.CompressedAttributes.words)
 }
-void Attributes::set_words(int index, const char* value, size_t size) {
+void CompressedAttributes::set_words(int index, const char* value, size_t size) {
   words_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.CompressedAttributes.words)
 }
-::std::string* Attributes::add_words() {
-  // @@protoc_insertion_point(field_add_mutable:istio.mixer.v1.Attributes.words)
+::std::string* CompressedAttributes::add_words() {
+  // @@protoc_insertion_point(field_add_mutable:istio.mixer.v1.CompressedAttributes.words)
   return words_.Add();
 }
-void Attributes::add_words(const ::std::string& value) {
+void CompressedAttributes::add_words(const ::std::string& value) {
   words_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add:istio.mixer.v1.CompressedAttributes.words)
 }
 #if LANG_CXX11
-void Attributes::add_words(::std::string&& value) {
+void CompressedAttributes::add_words(::std::string&& value) {
   words_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add:istio.mixer.v1.CompressedAttributes.words)
 }
 #endif
-void Attributes::add_words(const char* value) {
+void CompressedAttributes::add_words(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   words_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add_char:istio.mixer.v1.CompressedAttributes.words)
 }
-void Attributes::add_words(const char* value, size_t size) {
+void CompressedAttributes::add_words(const char* value, size_t size) {
   words_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add_pointer:istio.mixer.v1.CompressedAttributes.words)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
-Attributes::words() const {
-  // @@protoc_insertion_point(field_list:istio.mixer.v1.Attributes.words)
+CompressedAttributes::words() const {
+  // @@protoc_insertion_point(field_list:istio.mixer.v1.CompressedAttributes.words)
   return words_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
-Attributes::mutable_words() {
-  // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.Attributes.words)
+CompressedAttributes::mutable_words() {
+  // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.CompressedAttributes.words)
   return &words_;
 }
 
 // map<sint32, sint32> strings = 2;
-int Attributes::strings_size() const {
+int CompressedAttributes::strings_size() const {
   return strings_.size();
 }
-void Attributes::clear_strings() {
+void CompressedAttributes::clear_strings() {
   strings_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >&
-Attributes::strings() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.strings)
+CompressedAttributes::strings() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.strings)
   return strings_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >*
-Attributes::mutable_strings() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.strings)
+CompressedAttributes::mutable_strings() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.strings)
   return strings_.MutableMap();
 }
 
 // map<sint32, int64> int64s = 3;
-int Attributes::int64s_size() const {
+int CompressedAttributes::int64s_size() const {
   return int64s_.size();
 }
-void Attributes::clear_int64s() {
+void CompressedAttributes::clear_int64s() {
   int64s_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >&
-Attributes::int64s() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.int64s)
+CompressedAttributes::int64s() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.int64s)
   return int64s_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >*
-Attributes::mutable_int64s() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.int64s)
+CompressedAttributes::mutable_int64s() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.int64s)
   return int64s_.MutableMap();
 }
 
 // map<sint32, double> doubles = 4;
-int Attributes::doubles_size() const {
+int CompressedAttributes::doubles_size() const {
   return doubles_.size();
 }
-void Attributes::clear_doubles() {
+void CompressedAttributes::clear_doubles() {
   doubles_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, double >&
-Attributes::doubles() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.doubles)
+CompressedAttributes::doubles() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.doubles)
   return doubles_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, double >*
-Attributes::mutable_doubles() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.doubles)
+CompressedAttributes::mutable_doubles() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.doubles)
   return doubles_.MutableMap();
 }
 
 // map<sint32, bool> bools = 5;
-int Attributes::bools_size() const {
+int CompressedAttributes::bools_size() const {
   return bools_.size();
 }
-void Attributes::clear_bools() {
+void CompressedAttributes::clear_bools() {
   bools_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, bool >&
-Attributes::bools() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.bools)
+CompressedAttributes::bools() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.bools)
   return bools_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, bool >*
-Attributes::mutable_bools() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.bools)
+CompressedAttributes::mutable_bools() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.bools)
   return bools_.MutableMap();
 }
 
 // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-int Attributes::timestamps_size() const {
+int CompressedAttributes::timestamps_size() const {
   return timestamps_.size();
 }
-void Attributes::clear_timestamps() {
+void CompressedAttributes::clear_timestamps() {
   timestamps_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >&
-Attributes::timestamps() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.timestamps)
+CompressedAttributes::timestamps() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.timestamps)
   return timestamps_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >*
-Attributes::mutable_timestamps() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.timestamps)
+CompressedAttributes::mutable_timestamps() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.timestamps)
   return timestamps_.MutableMap();
 }
 
 // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-int Attributes::durations_size() const {
+int CompressedAttributes::durations_size() const {
   return durations_.size();
 }
-void Attributes::clear_durations() {
+void CompressedAttributes::clear_durations() {
   durations_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >&
-Attributes::durations() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.durations)
+CompressedAttributes::durations() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.durations)
   return durations_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >*
-Attributes::mutable_durations() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.durations)
+CompressedAttributes::mutable_durations() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.durations)
   return durations_.MutableMap();
 }
 
 // map<sint32, bytes> bytes = 8;
-int Attributes::bytes_size() const {
+int CompressedAttributes::bytes_size() const {
   return bytes_.size();
 }
-void Attributes::clear_bytes() {
+void CompressedAttributes::clear_bytes() {
   bytes_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >&
-Attributes::bytes() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.bytes)
+CompressedAttributes::bytes() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.bytes)
   return bytes_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >*
-Attributes::mutable_bytes() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.bytes)
+CompressedAttributes::mutable_bytes() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.bytes)
   return bytes_.MutableMap();
 }
 
 // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-int Attributes::string_maps_size() const {
+int CompressedAttributes::string_maps_size() const {
   return string_maps_.size();
 }
-void Attributes::clear_string_maps() {
+void CompressedAttributes::clear_string_maps() {
   string_maps_.Clear();
 }
  const ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >&
-Attributes::string_maps() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.string_maps)
+CompressedAttributes::string_maps() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.string_maps)
   return string_maps_.GetMap();
 }
  ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >*
-Attributes::mutable_string_maps() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.string_maps)
+CompressedAttributes::mutable_string_maps() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.string_maps)
   return string_maps_.MutableMap();
 }
 
@@ -1877,7 +3815,7 @@ StringMap::StringMap_EntriesEntry::StringMap_EntriesEntry() {}
 StringMap::StringMap_EntriesEntry::StringMap_EntriesEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
 ::google::protobuf::Metadata StringMap::StringMap_EntriesEntry::GetMetadata() const {
   protobuf_mixer_2fv1_2fattributes_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[9];
+  return protobuf_mixer_2fv1_2fattributes_2eproto::file_level_metadata[14];
 }
 void StringMap::StringMap_EntriesEntry::MergeFrom(
     const ::google::protobuf::Message& other) {

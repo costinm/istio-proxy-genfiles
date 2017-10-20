@@ -42,30 +42,45 @@ namespace v1 {
 class Attributes;
 class AttributesDefaultTypeInternal;
 extern AttributesDefaultTypeInternal _Attributes_default_instance_;
-class Attributes_BoolsEntry;
-class Attributes_BoolsEntryDefaultTypeInternal;
-extern Attributes_BoolsEntryDefaultTypeInternal _Attributes_BoolsEntry_default_instance_;
-class Attributes_BytesEntry;
-class Attributes_BytesEntryDefaultTypeInternal;
-extern Attributes_BytesEntryDefaultTypeInternal _Attributes_BytesEntry_default_instance_;
-class Attributes_DoublesEntry;
-class Attributes_DoublesEntryDefaultTypeInternal;
-extern Attributes_DoublesEntryDefaultTypeInternal _Attributes_DoublesEntry_default_instance_;
-class Attributes_DurationsEntry;
-class Attributes_DurationsEntryDefaultTypeInternal;
-extern Attributes_DurationsEntryDefaultTypeInternal _Attributes_DurationsEntry_default_instance_;
-class Attributes_Int64sEntry;
-class Attributes_Int64sEntryDefaultTypeInternal;
-extern Attributes_Int64sEntryDefaultTypeInternal _Attributes_Int64sEntry_default_instance_;
-class Attributes_StringMapsEntry;
-class Attributes_StringMapsEntryDefaultTypeInternal;
-extern Attributes_StringMapsEntryDefaultTypeInternal _Attributes_StringMapsEntry_default_instance_;
-class Attributes_StringsEntry;
-class Attributes_StringsEntryDefaultTypeInternal;
-extern Attributes_StringsEntryDefaultTypeInternal _Attributes_StringsEntry_default_instance_;
-class Attributes_TimestampsEntry;
-class Attributes_TimestampsEntryDefaultTypeInternal;
-extern Attributes_TimestampsEntryDefaultTypeInternal _Attributes_TimestampsEntry_default_instance_;
+class Attributes_AttributeValue;
+class Attributes_AttributeValueDefaultTypeInternal;
+extern Attributes_AttributeValueDefaultTypeInternal _Attributes_AttributeValue_default_instance_;
+class Attributes_AttributesEntry;
+class Attributes_AttributesEntryDefaultTypeInternal;
+extern Attributes_AttributesEntryDefaultTypeInternal _Attributes_AttributesEntry_default_instance_;
+class Attributes_StringMap;
+class Attributes_StringMapDefaultTypeInternal;
+extern Attributes_StringMapDefaultTypeInternal _Attributes_StringMap_default_instance_;
+class Attributes_StringMap_EntriesEntry;
+class Attributes_StringMap_EntriesEntryDefaultTypeInternal;
+extern Attributes_StringMap_EntriesEntryDefaultTypeInternal _Attributes_StringMap_EntriesEntry_default_instance_;
+class CompressedAttributes;
+class CompressedAttributesDefaultTypeInternal;
+extern CompressedAttributesDefaultTypeInternal _CompressedAttributes_default_instance_;
+class CompressedAttributes_BoolsEntry;
+class CompressedAttributes_BoolsEntryDefaultTypeInternal;
+extern CompressedAttributes_BoolsEntryDefaultTypeInternal _CompressedAttributes_BoolsEntry_default_instance_;
+class CompressedAttributes_BytesEntry;
+class CompressedAttributes_BytesEntryDefaultTypeInternal;
+extern CompressedAttributes_BytesEntryDefaultTypeInternal _CompressedAttributes_BytesEntry_default_instance_;
+class CompressedAttributes_DoublesEntry;
+class CompressedAttributes_DoublesEntryDefaultTypeInternal;
+extern CompressedAttributes_DoublesEntryDefaultTypeInternal _CompressedAttributes_DoublesEntry_default_instance_;
+class CompressedAttributes_DurationsEntry;
+class CompressedAttributes_DurationsEntryDefaultTypeInternal;
+extern CompressedAttributes_DurationsEntryDefaultTypeInternal _CompressedAttributes_DurationsEntry_default_instance_;
+class CompressedAttributes_Int64sEntry;
+class CompressedAttributes_Int64sEntryDefaultTypeInternal;
+extern CompressedAttributes_Int64sEntryDefaultTypeInternal _CompressedAttributes_Int64sEntry_default_instance_;
+class CompressedAttributes_StringMapsEntry;
+class CompressedAttributes_StringMapsEntryDefaultTypeInternal;
+extern CompressedAttributes_StringMapsEntryDefaultTypeInternal _CompressedAttributes_StringMapsEntry_default_instance_;
+class CompressedAttributes_StringsEntry;
+class CompressedAttributes_StringsEntryDefaultTypeInternal;
+extern CompressedAttributes_StringsEntryDefaultTypeInternal _CompressedAttributes_StringsEntry_default_instance_;
+class CompressedAttributes_TimestampsEntry;
+class CompressedAttributes_TimestampsEntryDefaultTypeInternal;
+extern CompressedAttributes_TimestampsEntryDefaultTypeInternal _CompressedAttributes_TimestampsEntry_default_instance_;
 class StringMap;
 class StringMapDefaultTypeInternal;
 extern StringMapDefaultTypeInternal _StringMap_default_instance_;
@@ -100,25 +115,350 @@ void InitDefaults();
 
 // -------------------------------------------------------------------
 
+class Attributes_AttributeValue : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:istio.mixer.v1.Attributes.AttributeValue) */ {
+ public:
+  Attributes_AttributeValue();
+  virtual ~Attributes_AttributeValue();
 
+  Attributes_AttributeValue(const Attributes_AttributeValue& from);
+
+  inline Attributes_AttributeValue& operator=(const Attributes_AttributeValue& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Attributes_AttributeValue(Attributes_AttributeValue&& from) noexcept
+    : Attributes_AttributeValue() {
+    *this = ::std::move(from);
+  }
+
+  inline Attributes_AttributeValue& operator=(Attributes_AttributeValue&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Attributes_AttributeValue& default_instance();
+
+  enum ValueCase {
+    kStringValue = 2,
+    kInt64Value = 3,
+    kDoubleValue = 4,
+    kBoolValue = 5,
+    kBytesValue = 6,
+    kTimestampValue = 7,
+    kDurationValue = 8,
+    kStringMapValue = 9,
+    VALUE_NOT_SET = 0,
+  };
+
+  static inline const Attributes_AttributeValue* internal_default_instance() {
+    return reinterpret_cast<const Attributes_AttributeValue*>(
+               &_Attributes_AttributeValue_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(Attributes_AttributeValue* other);
+  friend void swap(Attributes_AttributeValue& a, Attributes_AttributeValue& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Attributes_AttributeValue* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Attributes_AttributeValue* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Attributes_AttributeValue& from);
+  void MergeFrom(const Attributes_AttributeValue& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Attributes_AttributeValue* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string string_value = 2;
+  private:
+  bool has_string_value() const;
+  public:
+  void clear_string_value();
+  static const int kStringValueFieldNumber = 2;
+  const ::std::string& string_value() const;
+  void set_string_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_string_value(::std::string&& value);
+  #endif
+  void set_string_value(const char* value);
+  void set_string_value(const char* value, size_t size);
+  ::std::string* mutable_string_value();
+  ::std::string* release_string_value();
+  void set_allocated_string_value(::std::string* string_value);
+
+  // int64 int64_value = 3;
+  private:
+  bool has_int64_value() const;
+  public:
+  void clear_int64_value();
+  static const int kInt64ValueFieldNumber = 3;
+  ::google::protobuf::int64 int64_value() const;
+  void set_int64_value(::google::protobuf::int64 value);
+
+  // double double_value = 4;
+  private:
+  bool has_double_value() const;
+  public:
+  void clear_double_value();
+  static const int kDoubleValueFieldNumber = 4;
+  double double_value() const;
+  void set_double_value(double value);
+
+  // bool bool_value = 5;
+  private:
+  bool has_bool_value() const;
+  public:
+  void clear_bool_value();
+  static const int kBoolValueFieldNumber = 5;
+  bool bool_value() const;
+  void set_bool_value(bool value);
+
+  // bytes bytes_value = 6;
+  private:
+  bool has_bytes_value() const;
+  public:
+  void clear_bytes_value();
+  static const int kBytesValueFieldNumber = 6;
+  const ::std::string& bytes_value() const;
+  void set_bytes_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_bytes_value(::std::string&& value);
+  #endif
+  void set_bytes_value(const char* value);
+  void set_bytes_value(const void* value, size_t size);
+  ::std::string* mutable_bytes_value();
+  ::std::string* release_bytes_value();
+  void set_allocated_bytes_value(::std::string* bytes_value);
+
+  // .google.protobuf.Timestamp timestamp_value = 7;
+  bool has_timestamp_value() const;
+  void clear_timestamp_value();
+  static const int kTimestampValueFieldNumber = 7;
+  const ::google::protobuf::Timestamp& timestamp_value() const;
+  ::google::protobuf::Timestamp* mutable_timestamp_value();
+  ::google::protobuf::Timestamp* release_timestamp_value();
+  void set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value);
+
+  // .google.protobuf.Duration duration_value = 8;
+  bool has_duration_value() const;
+  void clear_duration_value();
+  static const int kDurationValueFieldNumber = 8;
+  const ::google::protobuf::Duration& duration_value() const;
+  ::google::protobuf::Duration* mutable_duration_value();
+  ::google::protobuf::Duration* release_duration_value();
+  void set_allocated_duration_value(::google::protobuf::Duration* duration_value);
+
+  // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+  bool has_string_map_value() const;
+  void clear_string_map_value();
+  static const int kStringMapValueFieldNumber = 9;
+  const ::istio::mixer::v1::Attributes_StringMap& string_map_value() const;
+  ::istio::mixer::v1::Attributes_StringMap* mutable_string_map_value();
+  ::istio::mixer::v1::Attributes_StringMap* release_string_map_value();
+  void set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value);
+
+  ValueCase value_case() const;
+  // @@protoc_insertion_point(class_scope:istio.mixer.v1.Attributes.AttributeValue)
+ private:
+  void set_has_string_value();
+  void set_has_int64_value();
+  void set_has_double_value();
+  void set_has_bool_value();
+  void set_has_bytes_value();
+  void set_has_timestamp_value();
+  void set_has_duration_value();
+  void set_has_string_map_value();
+
+  inline bool has_value() const;
+  void clear_value();
+  inline void clear_has_value();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  union ValueUnion {
+    ValueUnion() {}
+    ::google::protobuf::internal::ArenaStringPtr string_value_;
+    ::google::protobuf::int64 int64_value_;
+    double double_value_;
+    bool bool_value_;
+    ::google::protobuf::internal::ArenaStringPtr bytes_value_;
+    ::google::protobuf::Timestamp* timestamp_value_;
+    ::google::protobuf::Duration* duration_value_;
+    ::istio::mixer::v1::Attributes_StringMap* string_map_value_;
+  } value_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _oneof_case_[1];
+
+  friend struct protobuf_mixer_2fv1_2fattributes_2eproto::TableStruct;
+};
 // -------------------------------------------------------------------
 
 
 // -------------------------------------------------------------------
 
+class Attributes_StringMap : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:istio.mixer.v1.Attributes.StringMap) */ {
+ public:
+  Attributes_StringMap();
+  virtual ~Attributes_StringMap();
 
-// -------------------------------------------------------------------
+  Attributes_StringMap(const Attributes_StringMap& from);
+
+  inline Attributes_StringMap& operator=(const Attributes_StringMap& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Attributes_StringMap(Attributes_StringMap&& from) noexcept
+    : Attributes_StringMap() {
+    *this = ::std::move(from);
+  }
+
+  inline Attributes_StringMap& operator=(Attributes_StringMap&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Attributes_StringMap& default_instance();
+
+  static inline const Attributes_StringMap* internal_default_instance() {
+    return reinterpret_cast<const Attributes_StringMap*>(
+               &_Attributes_StringMap_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
+
+  void Swap(Attributes_StringMap* other);
+  friend void swap(Attributes_StringMap& a, Attributes_StringMap& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Attributes_StringMap* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Attributes_StringMap* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Attributes_StringMap& from);
+  void MergeFrom(const Attributes_StringMap& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Attributes_StringMap* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
 
 
-// -------------------------------------------------------------------
+  // accessors -------------------------------------------------------
 
+  // map<string, string> entries = 1;
+  int entries_size() const;
+  void clear_entries();
+  static const int kEntriesFieldNumber = 1;
+  const ::google::protobuf::Map< ::std::string, ::std::string >&
+      entries() const;
+  ::google::protobuf::Map< ::std::string, ::std::string >*
+      mutable_entries();
 
-// -------------------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:istio.mixer.v1.Attributes.StringMap)
+ private:
 
-
-// -------------------------------------------------------------------
-
-
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  public:
+  class Attributes_StringMap_EntriesEntry : public ::google::protobuf::internal::MapEntry<Attributes_StringMap_EntriesEntry, 
+      ::std::string, ::std::string,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      0 > {
+  public:
+    typedef ::google::protobuf::internal::MapEntry<Attributes_StringMap_EntriesEntry, 
+      ::std::string, ::std::string,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      0 > SuperType;
+    Attributes_StringMap_EntriesEntry();
+    Attributes_StringMap_EntriesEntry(::google::protobuf::Arena* arena);
+    void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
+    void MergeFrom(const Attributes_StringMap_EntriesEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_StringMap_EntriesEntry_default_instance_); }
+    ::google::protobuf::Metadata GetMetadata() const;
+  };
+  private:
+  ::google::protobuf::internal::MapField<
+      Attributes_StringMap_EntriesEntry,
+      ::std::string, ::std::string,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      0 > entries_;
+  private:
+  mutable int _cached_size_;
+  friend struct protobuf_mixer_2fv1_2fattributes_2eproto::TableStruct;
+};
 // -------------------------------------------------------------------
 
 class Attributes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:istio.mixer.v1.Attributes) */ {
@@ -155,7 +495,7 @@ class Attributes : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_Attributes_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    4;
 
   void Swap(Attributes* other);
   friend void swap(Attributes& a, Attributes& b) {
@@ -187,6 +527,159 @@ class Attributes : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Attributes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  typedef Attributes_AttributeValue AttributeValue;
+  typedef Attributes_StringMap StringMap;
+
+  // accessors -------------------------------------------------------
+
+  // map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
+  int attributes_size() const;
+  void clear_attributes();
+  static const int kAttributesFieldNumber = 1;
+  const ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >&
+      attributes() const;
+  ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >*
+      mutable_attributes();
+
+  // @@protoc_insertion_point(class_scope:istio.mixer.v1.Attributes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  public:
+  class Attributes_AttributesEntry : public ::google::protobuf::internal::MapEntry<Attributes_AttributesEntry, 
+      ::std::string, ::istio::mixer::v1::Attributes_AttributeValue,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+      0 > {
+  public:
+    typedef ::google::protobuf::internal::MapEntry<Attributes_AttributesEntry, 
+      ::std::string, ::istio::mixer::v1::Attributes_AttributeValue,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+      0 > SuperType;
+    Attributes_AttributesEntry();
+    Attributes_AttributesEntry(::google::protobuf::Arena* arena);
+    void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
+    void MergeFrom(const Attributes_AttributesEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_AttributesEntry_default_instance_); }
+    ::google::protobuf::Metadata GetMetadata() const;
+  };
+  private:
+  ::google::protobuf::internal::MapField<
+      Attributes_AttributesEntry,
+      ::std::string, ::istio::mixer::v1::Attributes_AttributeValue,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
+      0 > attributes_;
+  private:
+  mutable int _cached_size_;
+  friend struct protobuf_mixer_2fv1_2fattributes_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+
+class CompressedAttributes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:istio.mixer.v1.CompressedAttributes) */ {
+ public:
+  CompressedAttributes();
+  virtual ~CompressedAttributes();
+
+  CompressedAttributes(const CompressedAttributes& from);
+
+  inline CompressedAttributes& operator=(const CompressedAttributes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CompressedAttributes(CompressedAttributes&& from) noexcept
+    : CompressedAttributes() {
+    *this = ::std::move(from);
+  }
+
+  inline CompressedAttributes& operator=(CompressedAttributes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CompressedAttributes& default_instance();
+
+  static inline const CompressedAttributes* internal_default_instance() {
+    return reinterpret_cast<const CompressedAttributes*>(
+               &_CompressedAttributes_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    13;
+
+  void Swap(CompressedAttributes* other);
+  friend void swap(CompressedAttributes& a, CompressedAttributes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CompressedAttributes* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  CompressedAttributes* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CompressedAttributes& from);
+  void MergeFrom(const CompressedAttributes& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CompressedAttributes* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -297,222 +790,222 @@ class Attributes : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >*
       mutable_string_maps();
 
-  // @@protoc_insertion_point(class_scope:istio.mixer.v1.Attributes)
+  // @@protoc_insertion_point(class_scope:istio.mixer.v1.CompressedAttributes)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::std::string> words_;
   public:
-  class Attributes_StringsEntry : public ::google::protobuf::internal::MapEntry<Attributes_StringsEntry, 
+  class CompressedAttributes_StringsEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_StringsEntry, 
       ::google::protobuf::int32, ::google::protobuf::int32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_StringsEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_StringsEntry, 
       ::google::protobuf::int32, ::google::protobuf::int32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       0 > SuperType;
-    Attributes_StringsEntry();
-    Attributes_StringsEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_StringsEntry();
+    CompressedAttributes_StringsEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_StringsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_StringsEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_StringsEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_StringsEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_StringsEntry,
+      CompressedAttributes_StringsEntry,
       ::google::protobuf::int32, ::google::protobuf::int32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       0 > strings_;
   private:
   public:
-  class Attributes_Int64sEntry : public ::google::protobuf::internal::MapEntry<Attributes_Int64sEntry, 
+  class CompressedAttributes_Int64sEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_Int64sEntry, 
       ::google::protobuf::int32, ::google::protobuf::int64,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_Int64sEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_Int64sEntry, 
       ::google::protobuf::int32, ::google::protobuf::int64,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
       0 > SuperType;
-    Attributes_Int64sEntry();
-    Attributes_Int64sEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_Int64sEntry();
+    CompressedAttributes_Int64sEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_Int64sEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_Int64sEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_Int64sEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_Int64sEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_Int64sEntry,
+      CompressedAttributes_Int64sEntry,
       ::google::protobuf::int32, ::google::protobuf::int64,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
       0 > int64s_;
   private:
   public:
-  class Attributes_DoublesEntry : public ::google::protobuf::internal::MapEntry<Attributes_DoublesEntry, 
+  class CompressedAttributes_DoublesEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_DoublesEntry, 
       ::google::protobuf::int32, double,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_DoublesEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_DoublesEntry, 
       ::google::protobuf::int32, double,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE,
       0 > SuperType;
-    Attributes_DoublesEntry();
-    Attributes_DoublesEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_DoublesEntry();
+    CompressedAttributes_DoublesEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_DoublesEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_DoublesEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_DoublesEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_DoublesEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_DoublesEntry,
+      CompressedAttributes_DoublesEntry,
       ::google::protobuf::int32, double,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE,
       0 > doubles_;
   private:
   public:
-  class Attributes_BoolsEntry : public ::google::protobuf::internal::MapEntry<Attributes_BoolsEntry, 
+  class CompressedAttributes_BoolsEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_BoolsEntry, 
       ::google::protobuf::int32, bool,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BOOL,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_BoolsEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_BoolsEntry, 
       ::google::protobuf::int32, bool,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BOOL,
       0 > SuperType;
-    Attributes_BoolsEntry();
-    Attributes_BoolsEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_BoolsEntry();
+    CompressedAttributes_BoolsEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_BoolsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_BoolsEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_BoolsEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_BoolsEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_BoolsEntry,
+      CompressedAttributes_BoolsEntry,
       ::google::protobuf::int32, bool,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BOOL,
       0 > bools_;
   private:
   public:
-  class Attributes_TimestampsEntry : public ::google::protobuf::internal::MapEntry<Attributes_TimestampsEntry, 
+  class CompressedAttributes_TimestampsEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_TimestampsEntry, 
       ::google::protobuf::int32, ::google::protobuf::Timestamp,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_TimestampsEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_TimestampsEntry, 
       ::google::protobuf::int32, ::google::protobuf::Timestamp,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > SuperType;
-    Attributes_TimestampsEntry();
-    Attributes_TimestampsEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_TimestampsEntry();
+    CompressedAttributes_TimestampsEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_TimestampsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_TimestampsEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_TimestampsEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_TimestampsEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_TimestampsEntry,
+      CompressedAttributes_TimestampsEntry,
       ::google::protobuf::int32, ::google::protobuf::Timestamp,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > timestamps_;
   private:
   public:
-  class Attributes_DurationsEntry : public ::google::protobuf::internal::MapEntry<Attributes_DurationsEntry, 
+  class CompressedAttributes_DurationsEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_DurationsEntry, 
       ::google::protobuf::int32, ::google::protobuf::Duration,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_DurationsEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_DurationsEntry, 
       ::google::protobuf::int32, ::google::protobuf::Duration,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > SuperType;
-    Attributes_DurationsEntry();
-    Attributes_DurationsEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_DurationsEntry();
+    CompressedAttributes_DurationsEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_DurationsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_DurationsEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_DurationsEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_DurationsEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_DurationsEntry,
+      CompressedAttributes_DurationsEntry,
       ::google::protobuf::int32, ::google::protobuf::Duration,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > durations_;
   private:
   public:
-  class Attributes_BytesEntry : public ::google::protobuf::internal::MapEntry<Attributes_BytesEntry, 
+  class CompressedAttributes_BytesEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_BytesEntry, 
       ::google::protobuf::int32, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BYTES,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_BytesEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_BytesEntry, 
       ::google::protobuf::int32, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BYTES,
       0 > SuperType;
-    Attributes_BytesEntry();
-    Attributes_BytesEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_BytesEntry();
+    CompressedAttributes_BytesEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_BytesEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_BytesEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_BytesEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_BytesEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_BytesEntry,
+      CompressedAttributes_BytesEntry,
       ::google::protobuf::int32, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_BYTES,
       0 > bytes_;
   private:
   public:
-  class Attributes_StringMapsEntry : public ::google::protobuf::internal::MapEntry<Attributes_StringMapsEntry, 
+  class CompressedAttributes_StringMapsEntry : public ::google::protobuf::internal::MapEntry<CompressedAttributes_StringMapsEntry, 
       ::google::protobuf::int32, ::istio::mixer::v1::StringMap,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > {
   public:
-    typedef ::google::protobuf::internal::MapEntry<Attributes_StringMapsEntry, 
+    typedef ::google::protobuf::internal::MapEntry<CompressedAttributes_StringMapsEntry, 
       ::google::protobuf::int32, ::istio::mixer::v1::StringMap,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > SuperType;
-    Attributes_StringMapsEntry();
-    Attributes_StringMapsEntry(::google::protobuf::Arena* arena);
+    CompressedAttributes_StringMapsEntry();
+    CompressedAttributes_StringMapsEntry(::google::protobuf::Arena* arena);
     void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const Attributes_StringMapsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_Attributes_StringMapsEntry_default_instance_); }
+    void MergeFrom(const CompressedAttributes_StringMapsEntry& other);
+    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_CompressedAttributes_StringMapsEntry_default_instance_); }
     ::google::protobuf::Metadata GetMetadata() const;
   };
   private:
   ::google::protobuf::internal::MapField<
-      Attributes_StringMapsEntry,
+      CompressedAttributes_StringMapsEntry,
       ::google::protobuf::int32, ::istio::mixer::v1::StringMap,
       ::google::protobuf::internal::WireFormatLite::TYPE_SINT32,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
@@ -560,7 +1053,7 @@ class StringMap : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_StringMap_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    15;
 
   void Swap(StringMap* other);
   friend void swap(StringMap& a, StringMap& b) {
@@ -663,232 +1156,724 @@ class StringMap : public ::google::protobuf::Message /* @@protoc_insertion_point
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
+// Attributes_AttributeValue
+
+// string string_value = 2;
+inline bool Attributes_AttributeValue::has_string_value() const {
+  return value_case() == kStringValue;
+}
+inline void Attributes_AttributeValue::set_has_string_value() {
+  _oneof_case_[0] = kStringValue;
+}
+inline void Attributes_AttributeValue::clear_string_value() {
+  if (has_string_value()) {
+    value_.string_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    clear_has_value();
+  }
+}
+inline const ::std::string& Attributes_AttributeValue::string_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (has_string_value()) {
+    return value_.string_value_.GetNoArena();
+  }
+  return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
+}
+inline void Attributes_AttributeValue::set_string_value(const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+#if LANG_CXX11
+inline void Attributes_AttributeValue::set_string_value(::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+#endif
+inline void Attributes_AttributeValue::set_string_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+inline void Attributes_AttributeValue::set_string_value(const char* value, size_t size) {
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.string_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+inline ::std::string* Attributes_AttributeValue::mutable_string_value() {
+  if (!has_string_value()) {
+    clear_value();
+    set_has_string_value();
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  return value_.string_value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Attributes_AttributeValue::release_string_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_value)
+  if (has_string_value()) {
+    clear_has_value();
+    return value_.string_value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_string_value(::std::string* string_value) {
+  if (!has_string_value()) {
+    value_.string_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_value();
+  if (string_value != NULL) {
+    set_has_string_value();
+    value_.string_value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        string_value);
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_value)
+}
+
+// int64 int64_value = 3;
+inline bool Attributes_AttributeValue::has_int64_value() const {
+  return value_case() == kInt64Value;
+}
+inline void Attributes_AttributeValue::set_has_int64_value() {
+  _oneof_case_[0] = kInt64Value;
+}
+inline void Attributes_AttributeValue::clear_int64_value() {
+  if (has_int64_value()) {
+    value_.int64_value_ = GOOGLE_LONGLONG(0);
+    clear_has_value();
+  }
+}
+inline ::google::protobuf::int64 Attributes_AttributeValue::int64_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.int64_value)
+  if (has_int64_value()) {
+    return value_.int64_value_;
+  }
+  return GOOGLE_LONGLONG(0);
+}
+inline void Attributes_AttributeValue::set_int64_value(::google::protobuf::int64 value) {
+  if (!has_int64_value()) {
+    clear_value();
+    set_has_int64_value();
+  }
+  value_.int64_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.int64_value)
+}
+
+// double double_value = 4;
+inline bool Attributes_AttributeValue::has_double_value() const {
+  return value_case() == kDoubleValue;
+}
+inline void Attributes_AttributeValue::set_has_double_value() {
+  _oneof_case_[0] = kDoubleValue;
+}
+inline void Attributes_AttributeValue::clear_double_value() {
+  if (has_double_value()) {
+    value_.double_value_ = 0;
+    clear_has_value();
+  }
+}
+inline double Attributes_AttributeValue::double_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.double_value)
+  if (has_double_value()) {
+    return value_.double_value_;
+  }
+  return 0;
+}
+inline void Attributes_AttributeValue::set_double_value(double value) {
+  if (!has_double_value()) {
+    clear_value();
+    set_has_double_value();
+  }
+  value_.double_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.double_value)
+}
+
+// bool bool_value = 5;
+inline bool Attributes_AttributeValue::has_bool_value() const {
+  return value_case() == kBoolValue;
+}
+inline void Attributes_AttributeValue::set_has_bool_value() {
+  _oneof_case_[0] = kBoolValue;
+}
+inline void Attributes_AttributeValue::clear_bool_value() {
+  if (has_bool_value()) {
+    value_.bool_value_ = false;
+    clear_has_value();
+  }
+}
+inline bool Attributes_AttributeValue::bool_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.bool_value)
+  if (has_bool_value()) {
+    return value_.bool_value_;
+  }
+  return false;
+}
+inline void Attributes_AttributeValue::set_bool_value(bool value) {
+  if (!has_bool_value()) {
+    clear_value();
+    set_has_bool_value();
+  }
+  value_.bool_value_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bool_value)
+}
+
+// bytes bytes_value = 6;
+inline bool Attributes_AttributeValue::has_bytes_value() const {
+  return value_case() == kBytesValue;
+}
+inline void Attributes_AttributeValue::set_has_bytes_value() {
+  _oneof_case_[0] = kBytesValue;
+}
+inline void Attributes_AttributeValue::clear_bytes_value() {
+  if (has_bytes_value()) {
+    value_.bytes_value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    clear_has_value();
+  }
+}
+inline const ::std::string& Attributes_AttributeValue::bytes_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (has_bytes_value()) {
+    return value_.bytes_value_.GetNoArena();
+  }
+  return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
+}
+inline void Attributes_AttributeValue::set_bytes_value(const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+#if LANG_CXX11
+inline void Attributes_AttributeValue::set_bytes_value(::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+#endif
+inline void Attributes_AttributeValue::set_bytes_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+inline void Attributes_AttributeValue::set_bytes_value(const void* value, size_t size) {
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  value_.bytes_value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+inline ::std::string* Attributes_AttributeValue::mutable_bytes_value() {
+  if (!has_bytes_value()) {
+    clear_value();
+    set_has_bytes_value();
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  return value_.bytes_value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Attributes_AttributeValue::release_bytes_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+  if (has_bytes_value()) {
+    clear_has_value();
+    return value_.bytes_value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_bytes_value(::std::string* bytes_value) {
+  if (!has_bytes_value()) {
+    value_.bytes_value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_value();
+  if (bytes_value != NULL) {
+    set_has_bytes_value();
+    value_.bytes_value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        bytes_value);
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.bytes_value)
+}
+
+// .google.protobuf.Timestamp timestamp_value = 7;
+inline bool Attributes_AttributeValue::has_timestamp_value() const {
+  return value_case() == kTimestampValue;
+}
+inline void Attributes_AttributeValue::set_has_timestamp_value() {
+  _oneof_case_[0] = kTimestampValue;
+}
+inline void Attributes_AttributeValue::clear_timestamp_value() {
+  if (has_timestamp_value()) {
+    delete value_.timestamp_value_;
+    clear_has_value();
+  }
+}
+inline  const ::google::protobuf::Timestamp& Attributes_AttributeValue::timestamp_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  return has_timestamp_value()
+      ? *value_.timestamp_value_
+      : ::google::protobuf::Timestamp::default_instance();
+}
+inline ::google::protobuf::Timestamp* Attributes_AttributeValue::mutable_timestamp_value() {
+  if (!has_timestamp_value()) {
+    clear_value();
+    set_has_timestamp_value();
+    value_.timestamp_value_ = new ::google::protobuf::Timestamp;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  return value_.timestamp_value_;
+}
+inline ::google::protobuf::Timestamp* Attributes_AttributeValue::release_timestamp_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  if (has_timestamp_value()) {
+    clear_has_value();
+    ::google::protobuf::Timestamp* temp = value_.timestamp_value_;
+    value_.timestamp_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value) {
+  clear_value();
+  if (timestamp_value) {
+    if (static_cast< ::google::protobuf::Timestamp*>(timestamp_value)->GetArena() != NULL) {
+      ::google::protobuf::Timestamp* new_timestamp_value = new ::google::protobuf::Timestamp;
+      new_timestamp_value->CopyFrom(*timestamp_value);
+      timestamp_value = new_timestamp_value;
+    }
+    set_has_timestamp_value();
+    value_.timestamp_value_ = timestamp_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+}
+
+// .google.protobuf.Duration duration_value = 8;
+inline bool Attributes_AttributeValue::has_duration_value() const {
+  return value_case() == kDurationValue;
+}
+inline void Attributes_AttributeValue::set_has_duration_value() {
+  _oneof_case_[0] = kDurationValue;
+}
+inline void Attributes_AttributeValue::clear_duration_value() {
+  if (has_duration_value()) {
+    delete value_.duration_value_;
+    clear_has_value();
+  }
+}
+inline  const ::google::protobuf::Duration& Attributes_AttributeValue::duration_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  return has_duration_value()
+      ? *value_.duration_value_
+      : ::google::protobuf::Duration::default_instance();
+}
+inline ::google::protobuf::Duration* Attributes_AttributeValue::mutable_duration_value() {
+  if (!has_duration_value()) {
+    clear_value();
+    set_has_duration_value();
+    value_.duration_value_ = new ::google::protobuf::Duration;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  return value_.duration_value_;
+}
+inline ::google::protobuf::Duration* Attributes_AttributeValue::release_duration_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  if (has_duration_value()) {
+    clear_has_value();
+    ::google::protobuf::Duration* temp = value_.duration_value_;
+    value_.duration_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_duration_value(::google::protobuf::Duration* duration_value) {
+  clear_value();
+  if (duration_value) {
+    if (static_cast< ::google::protobuf::Duration*>(duration_value)->GetArena() != NULL) {
+      ::google::protobuf::Duration* new_duration_value = new ::google::protobuf::Duration;
+      new_duration_value->CopyFrom(*duration_value);
+      duration_value = new_duration_value;
+    }
+    set_has_duration_value();
+    value_.duration_value_ = duration_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+}
+
+// .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
+inline bool Attributes_AttributeValue::has_string_map_value() const {
+  return value_case() == kStringMapValue;
+}
+inline void Attributes_AttributeValue::set_has_string_map_value() {
+  _oneof_case_[0] = kStringMapValue;
+}
+inline void Attributes_AttributeValue::clear_string_map_value() {
+  if (has_string_map_value()) {
+    delete value_.string_map_value_;
+    clear_has_value();
+  }
+}
+inline  const ::istio::mixer::v1::Attributes_StringMap& Attributes_AttributeValue::string_map_value() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  return has_string_map_value()
+      ? *value_.string_map_value_
+      : ::istio::mixer::v1::Attributes_StringMap::default_instance();
+}
+inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::mutable_string_map_value() {
+  if (!has_string_map_value()) {
+    clear_value();
+    set_has_string_map_value();
+    value_.string_map_value_ = new ::istio::mixer::v1::Attributes_StringMap;
+  }
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  return value_.string_map_value_;
+}
+inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::release_string_map_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  if (has_string_map_value()) {
+    clear_has_value();
+    ::istio::mixer::v1::Attributes_StringMap* temp = value_.string_map_value_;
+    value_.string_map_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value) {
+  clear_value();
+  if (string_map_value) {
+    set_has_string_map_value();
+    value_.string_map_value_ = string_map_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+}
+
+inline bool Attributes_AttributeValue::has_value() const {
+  return value_case() != VALUE_NOT_SET;
+}
+inline void Attributes_AttributeValue::clear_has_value() {
+  _oneof_case_[0] = VALUE_NOT_SET;
+}
+inline Attributes_AttributeValue::ValueCase Attributes_AttributeValue::value_case() const {
+  return Attributes_AttributeValue::ValueCase(_oneof_case_[0]);
+}
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
+// Attributes_StringMap
 
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
+// map<string, string> entries = 1;
+inline int Attributes_StringMap::entries_size() const {
+  return entries_.size();
+}
+inline void Attributes_StringMap::clear_entries() {
+  entries_.Clear();
+}
+inline const ::google::protobuf::Map< ::std::string, ::std::string >&
+Attributes_StringMap::entries() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.StringMap.entries)
+  return entries_.GetMap();
+}
+inline ::google::protobuf::Map< ::std::string, ::std::string >*
+Attributes_StringMap::mutable_entries() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.StringMap.entries)
+  return entries_.MutableMap();
+}
 
 // -------------------------------------------------------------------
 
 // Attributes
 
+// map<string, .istio.mixer.v1.Attributes.AttributeValue> attributes = 1;
+inline int Attributes::attributes_size() const {
+  return attributes_.size();
+}
+inline void Attributes::clear_attributes() {
+  attributes_.Clear();
+}
+inline const ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >&
+Attributes::attributes() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.attributes)
+  return attributes_.GetMap();
+}
+inline ::google::protobuf::Map< ::std::string, ::istio::mixer::v1::Attributes_AttributeValue >*
+Attributes::mutable_attributes() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.attributes)
+  return attributes_.MutableMap();
+}
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// CompressedAttributes
+
 // repeated string words = 1;
-inline int Attributes::words_size() const {
+inline int CompressedAttributes::words_size() const {
   return words_.size();
 }
-inline void Attributes::clear_words() {
+inline void CompressedAttributes::clear_words() {
   words_.Clear();
 }
-inline const ::std::string& Attributes::words(int index) const {
-  // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.words)
+inline const ::std::string& CompressedAttributes::words(int index) const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.CompressedAttributes.words)
   return words_.Get(index);
 }
-inline ::std::string* Attributes::mutable_words(int index) {
-  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.words)
+inline ::std::string* CompressedAttributes::mutable_words(int index) {
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CompressedAttributes.words)
   return words_.Mutable(index);
 }
-inline void Attributes::set_words(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.words)
+inline void CompressedAttributes::set_words(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.CompressedAttributes.words)
   words_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-inline void Attributes::set_words(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:istio.mixer.v1.Attributes.words)
+inline void CompressedAttributes::set_words(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.CompressedAttributes.words)
   words_.Mutable(index)->assign(std::move(value));
 }
 #endif
-inline void Attributes::set_words(int index, const char* value) {
+inline void CompressedAttributes::set_words(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   words_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.CompressedAttributes.words)
 }
-inline void Attributes::set_words(int index, const char* value, size_t size) {
+inline void CompressedAttributes::set_words(int index, const char* value, size_t size) {
   words_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.CompressedAttributes.words)
 }
-inline ::std::string* Attributes::add_words() {
-  // @@protoc_insertion_point(field_add_mutable:istio.mixer.v1.Attributes.words)
+inline ::std::string* CompressedAttributes::add_words() {
+  // @@protoc_insertion_point(field_add_mutable:istio.mixer.v1.CompressedAttributes.words)
   return words_.Add();
 }
-inline void Attributes::add_words(const ::std::string& value) {
+inline void CompressedAttributes::add_words(const ::std::string& value) {
   words_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add:istio.mixer.v1.CompressedAttributes.words)
 }
 #if LANG_CXX11
-inline void Attributes::add_words(::std::string&& value) {
+inline void CompressedAttributes::add_words(::std::string&& value) {
   words_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add:istio.mixer.v1.CompressedAttributes.words)
 }
 #endif
-inline void Attributes::add_words(const char* value) {
+inline void CompressedAttributes::add_words(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   words_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add_char:istio.mixer.v1.CompressedAttributes.words)
 }
-inline void Attributes::add_words(const char* value, size_t size) {
+inline void CompressedAttributes::add_words(const char* value, size_t size) {
   words_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:istio.mixer.v1.Attributes.words)
+  // @@protoc_insertion_point(field_add_pointer:istio.mixer.v1.CompressedAttributes.words)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-Attributes::words() const {
-  // @@protoc_insertion_point(field_list:istio.mixer.v1.Attributes.words)
+CompressedAttributes::words() const {
+  // @@protoc_insertion_point(field_list:istio.mixer.v1.CompressedAttributes.words)
   return words_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-Attributes::mutable_words() {
-  // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.Attributes.words)
+CompressedAttributes::mutable_words() {
+  // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.CompressedAttributes.words)
   return &words_;
 }
 
 // map<sint32, sint32> strings = 2;
-inline int Attributes::strings_size() const {
+inline int CompressedAttributes::strings_size() const {
   return strings_.size();
 }
-inline void Attributes::clear_strings() {
+inline void CompressedAttributes::clear_strings() {
   strings_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >&
-Attributes::strings() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.strings)
+CompressedAttributes::strings() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.strings)
   return strings_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int32 >*
-Attributes::mutable_strings() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.strings)
+CompressedAttributes::mutable_strings() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.strings)
   return strings_.MutableMap();
 }
 
 // map<sint32, int64> int64s = 3;
-inline int Attributes::int64s_size() const {
+inline int CompressedAttributes::int64s_size() const {
   return int64s_.size();
 }
-inline void Attributes::clear_int64s() {
+inline void CompressedAttributes::clear_int64s() {
   int64s_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >&
-Attributes::int64s() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.int64s)
+CompressedAttributes::int64s() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.int64s)
   return int64s_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >*
-Attributes::mutable_int64s() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.int64s)
+CompressedAttributes::mutable_int64s() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.int64s)
   return int64s_.MutableMap();
 }
 
 // map<sint32, double> doubles = 4;
-inline int Attributes::doubles_size() const {
+inline int CompressedAttributes::doubles_size() const {
   return doubles_.size();
 }
-inline void Attributes::clear_doubles() {
+inline void CompressedAttributes::clear_doubles() {
   doubles_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, double >&
-Attributes::doubles() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.doubles)
+CompressedAttributes::doubles() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.doubles)
   return doubles_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, double >*
-Attributes::mutable_doubles() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.doubles)
+CompressedAttributes::mutable_doubles() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.doubles)
   return doubles_.MutableMap();
 }
 
 // map<sint32, bool> bools = 5;
-inline int Attributes::bools_size() const {
+inline int CompressedAttributes::bools_size() const {
   return bools_.size();
 }
-inline void Attributes::clear_bools() {
+inline void CompressedAttributes::clear_bools() {
   bools_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, bool >&
-Attributes::bools() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.bools)
+CompressedAttributes::bools() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.bools)
   return bools_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, bool >*
-Attributes::mutable_bools() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.bools)
+CompressedAttributes::mutable_bools() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.bools)
   return bools_.MutableMap();
 }
 
 // map<sint32, .google.protobuf.Timestamp> timestamps = 6 [(.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];
-inline int Attributes::timestamps_size() const {
+inline int CompressedAttributes::timestamps_size() const {
   return timestamps_.size();
 }
-inline void Attributes::clear_timestamps() {
+inline void CompressedAttributes::clear_timestamps() {
   timestamps_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >&
-Attributes::timestamps() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.timestamps)
+CompressedAttributes::timestamps() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.timestamps)
   return timestamps_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >*
-Attributes::mutable_timestamps() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.timestamps)
+CompressedAttributes::mutable_timestamps() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.timestamps)
   return timestamps_.MutableMap();
 }
 
 // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
-inline int Attributes::durations_size() const {
+inline int CompressedAttributes::durations_size() const {
   return durations_.size();
 }
-inline void Attributes::clear_durations() {
+inline void CompressedAttributes::clear_durations() {
   durations_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >&
-Attributes::durations() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.durations)
+CompressedAttributes::durations() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.durations)
   return durations_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >*
-Attributes::mutable_durations() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.durations)
+CompressedAttributes::mutable_durations() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.durations)
   return durations_.MutableMap();
 }
 
 // map<sint32, bytes> bytes = 8;
-inline int Attributes::bytes_size() const {
+inline int CompressedAttributes::bytes_size() const {
   return bytes_.size();
 }
-inline void Attributes::clear_bytes() {
+inline void CompressedAttributes::clear_bytes() {
   bytes_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >&
-Attributes::bytes() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.bytes)
+CompressedAttributes::bytes() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.bytes)
   return bytes_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::std::string >*
-Attributes::mutable_bytes() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.bytes)
+CompressedAttributes::mutable_bytes() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.bytes)
   return bytes_.MutableMap();
 }
 
 // map<sint32, .istio.mixer.v1.StringMap> string_maps = 9 [(.gogoproto.nullable) = false];
-inline int Attributes::string_maps_size() const {
+inline int CompressedAttributes::string_maps_size() const {
   return string_maps_.size();
 }
-inline void Attributes::clear_string_maps() {
+inline void CompressedAttributes::clear_string_maps() {
   string_maps_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >&
-Attributes::string_maps() const {
-  // @@protoc_insertion_point(field_map:istio.mixer.v1.Attributes.string_maps)
+CompressedAttributes::string_maps() const {
+  // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.string_maps)
   return string_maps_.GetMap();
 }
 inline ::google::protobuf::Map< ::google::protobuf::int32, ::istio::mixer::v1::StringMap >*
-Attributes::mutable_string_maps() {
-  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.Attributes.string_maps)
+CompressedAttributes::mutable_string_maps() {
+  // @@protoc_insertion_point(field_mutable_map:istio.mixer.v1.CompressedAttributes.string_maps)
   return string_maps_.MutableMap();
 }
 
@@ -920,6 +1905,16 @@ StringMap::mutable_entries() {
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

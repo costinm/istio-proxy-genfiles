@@ -188,6 +188,10 @@ const std::vector<std::string> kGlobalWords{
     "destination.labels",
     "destination.user",
     "source.service",
+    "api.service",
+    "api.version",
+    "api.operation",
+    "api.protocol",
 };
 
 }  // namespace

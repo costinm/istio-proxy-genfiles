@@ -124,14 +124,14 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025mixer/v1/report.proto\022\016istio.mixer.v1\032"
       "\024gogoproto/gogo.proto\032\031mixer/v1/attribut"
-      "es.proto\"w\n\rReportRequest\0224\n\nattributes\030"
-      "\001 \003(\0132\032.istio.mixer.v1.AttributesB\004\310\336\037\000\022"
-      "\025\n\rdefault_words\030\002 \003(\t\022\031\n\021global_word_co"
-      "unt\030\003 \001(\r\"\020\n\016ReportResponseB\014\310\341\036\000\250\342\036\000\360\341\036"
-      "\000b\006proto3"
+      "es.proto\"\201\001\n\rReportRequest\022>\n\nattributes"
+      "\030\001 \003(\0132$.istio.mixer.v1.CompressedAttrib"
+      "utesB\004\310\336\037\000\022\025\n\rdefault_words\030\002 \003(\t\022\031\n\021glo"
+      "bal_word_count\030\003 \001(\r\"\020\n\016ReportResponseB\014"
+      "\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 249);
+      descriptor, 260);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "mixer/v1/report.proto", &protobuf_RegisterTypes);
   ::gogoproto::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
@@ -238,7 +238,7 @@ bool ReportRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+      // repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -307,7 +307,7 @@ void ReportRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->attributes_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -343,7 +343,7 @@ void ReportRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->attributes_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -383,7 +383,7 @@ size_t ReportRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   {
     unsigned int count = static_cast<unsigned int>(this->attributes_size());
     total_size += 1UL * count;
@@ -484,31 +484,31 @@ void ReportRequest::InternalSwap(ReportRequest* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // ReportRequest
 
-// repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+// repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
 int ReportRequest::attributes_size() const {
   return attributes_.size();
 }
 void ReportRequest::clear_attributes() {
   attributes_.Clear();
 }
-const ::istio::mixer::v1::Attributes& ReportRequest::attributes(int index) const {
+const ::istio::mixer::v1::CompressedAttributes& ReportRequest::attributes(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Get(index);
 }
-::istio::mixer::v1::Attributes* ReportRequest::mutable_attributes(int index) {
+::istio::mixer::v1::CompressedAttributes* ReportRequest::mutable_attributes(int index) {
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Mutable(index);
 }
-::istio::mixer::v1::Attributes* ReportRequest::add_attributes() {
+::istio::mixer::v1::CompressedAttributes* ReportRequest::add_attributes() {
   // @@protoc_insertion_point(field_add:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >*
+::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >*
 ReportRequest::mutable_attributes() {
   // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.ReportRequest.attributes)
   return &attributes_;
 }
-const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >&
+const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >&
 ReportRequest::attributes() const {
   // @@protoc_insertion_point(field_list:istio.mixer.v1.ReportRequest.attributes)
   return attributes_;

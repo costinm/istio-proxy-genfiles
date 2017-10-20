@@ -147,16 +147,16 @@ class ReportRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+  // repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   int attributes_size() const;
   void clear_attributes();
   static const int kAttributesFieldNumber = 1;
-  const ::istio::mixer::v1::Attributes& attributes(int index) const;
-  ::istio::mixer::v1::Attributes* mutable_attributes(int index);
-  ::istio::mixer::v1::Attributes* add_attributes();
-  ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >*
+  const ::istio::mixer::v1::CompressedAttributes& attributes(int index) const;
+  ::istio::mixer::v1::CompressedAttributes* mutable_attributes(int index);
+  ::istio::mixer::v1::CompressedAttributes* add_attributes();
+  ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >*
       mutable_attributes();
-  const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >&
+  const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >&
       attributes() const;
 
   // repeated string default_words = 2;
@@ -191,7 +191,7 @@ class ReportRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes > attributes_;
+  ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes > attributes_;
   ::google::protobuf::RepeatedPtrField< ::std::string> default_words_;
   ::google::protobuf::uint32 global_word_count_;
   mutable int _cached_size_;
@@ -299,31 +299,31 @@ class ReportResponse : public ::google::protobuf::Message /* @@protoc_insertion_
 #endif  // __GNUC__
 // ReportRequest
 
-// repeated .istio.mixer.v1.Attributes attributes = 1 [(.gogoproto.nullable) = false];
+// repeated .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
 inline int ReportRequest::attributes_size() const {
   return attributes_.size();
 }
 inline void ReportRequest::clear_attributes() {
   attributes_.Clear();
 }
-inline const ::istio::mixer::v1::Attributes& ReportRequest::attributes(int index) const {
+inline const ::istio::mixer::v1::CompressedAttributes& ReportRequest::attributes(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Get(index);
 }
-inline ::istio::mixer::v1::Attributes* ReportRequest::mutable_attributes(int index) {
+inline ::istio::mixer::v1::CompressedAttributes* ReportRequest::mutable_attributes(int index) {
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Mutable(index);
 }
-inline ::istio::mixer::v1::Attributes* ReportRequest::add_attributes() {
+inline ::istio::mixer::v1::CompressedAttributes* ReportRequest::add_attributes() {
   // @@protoc_insertion_point(field_add:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >*
+inline ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >*
 ReportRequest::mutable_attributes() {
   // @@protoc_insertion_point(field_mutable_list:istio.mixer.v1.ReportRequest.attributes)
   return &attributes_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::Attributes >&
+inline const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::CompressedAttributes >&
 ReportRequest::attributes() const {
   // @@protoc_insertion_point(field_list:istio.mixer.v1.ReportRequest.attributes)
   return attributes_;
