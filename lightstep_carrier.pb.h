@@ -33,13 +33,40 @@
 #include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
+
+namespace protobuf_lightstep_5fcarrier_2eproto {
+// Internal implementation detail -- do not use these members.
+struct TableStruct {
+  static const ::google::protobuf::internal::ParseTableField entries[];
+  static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
+  static const ::google::protobuf::internal::ParseTable schema[4];
+  static const ::google::protobuf::internal::FieldMetadata field_metadata[];
+  static const ::google::protobuf::internal::SerializationTable serialization_table[];
+  static const ::google::protobuf::uint32 offsets[];
+};
+void AddDescriptors();
+void InitDefaultsBinaryCarrierImpl();
+void InitDefaultsBinaryCarrier();
+void InitDefaultsBasicTracerCarrier_BaggageItemsEntry_DoNotUseImpl();
+void InitDefaultsBasicTracerCarrier_BaggageItemsEntry_DoNotUse();
+void InitDefaultsBasicTracerCarrierImpl();
+void InitDefaultsBasicTracerCarrier();
+void InitDefaultsTextCarrierPairImpl();
+void InitDefaultsTextCarrierPair();
+inline void InitDefaults() {
+  InitDefaultsBinaryCarrier();
+  InitDefaultsBasicTracerCarrier_BaggageItemsEntry_DoNotUse();
+  InitDefaultsBasicTracerCarrier();
+  InitDefaultsTextCarrierPair();
+}
+}  // namespace protobuf_lightstep_5fcarrier_2eproto
 namespace lightstep {
 class BasicTracerCarrier;
 class BasicTracerCarrierDefaultTypeInternal;
 extern BasicTracerCarrierDefaultTypeInternal _BasicTracerCarrier_default_instance_;
-class BasicTracerCarrier_BaggageItemsEntry;
-class BasicTracerCarrier_BaggageItemsEntryDefaultTypeInternal;
-extern BasicTracerCarrier_BaggageItemsEntryDefaultTypeInternal _BasicTracerCarrier_BaggageItemsEntry_default_instance_;
+class BasicTracerCarrier_BaggageItemsEntry_DoNotUse;
+class BasicTracerCarrier_BaggageItemsEntry_DoNotUseDefaultTypeInternal;
+extern BasicTracerCarrier_BaggageItemsEntry_DoNotUseDefaultTypeInternal _BasicTracerCarrier_BaggageItemsEntry_DoNotUse_default_instance_;
 class BinaryCarrier;
 class BinaryCarrierDefaultTypeInternal;
 extern BinaryCarrierDefaultTypeInternal _BinaryCarrier_default_instance_;
@@ -47,23 +74,7 @@ class TextCarrierPair;
 class TextCarrierPairDefaultTypeInternal;
 extern TextCarrierPairDefaultTypeInternal _TextCarrierPair_default_instance_;
 }  // namespace lightstep
-
 namespace lightstep {
-
-namespace protobuf_lightstep_5fcarrier_2eproto {
-// Internal implementation detail -- do not call these.
-struct TableStruct {
-  static const ::google::protobuf::internal::ParseTableField entries[];
-  static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[];
-  static const ::google::protobuf::uint32 offsets[];
-  static const ::google::protobuf::internal::FieldMetadata field_metadata[];
-  static const ::google::protobuf::internal::SerializationTable serialization_table[];
-  static void InitDefaultsImpl();
-};
-void AddDescriptors();
-void InitDefaults();
-}  // namespace protobuf_lightstep_5fcarrier_2eproto
 
 // ===================================================================
 
@@ -96,6 +107,7 @@ class BinaryCarrier : public ::google::protobuf::Message /* @@protoc_insertion_p
   static const ::google::protobuf::Descriptor* descriptor();
   static const BinaryCarrier& default_instance();
 
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const BinaryCarrier* internal_default_instance() {
     return reinterpret_cast<const BinaryCarrier*>(
                &_BinaryCarrier_default_instance_);
@@ -165,8 +177,8 @@ class BinaryCarrier : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_basic_ctx();
   static const int kBasicCtxFieldNumber = 2;
   const ::lightstep::BasicTracerCarrier& basic_ctx() const;
-  ::lightstep::BasicTracerCarrier* mutable_basic_ctx();
   ::lightstep::BasicTracerCarrier* release_basic_ctx();
+  ::lightstep::BasicTracerCarrier* mutable_basic_ctx();
   void set_allocated_basic_ctx(::lightstep::BasicTracerCarrier* basic_ctx);
 
   // @@protoc_insertion_point(class_scope:lightstep.BinaryCarrier)
@@ -176,10 +188,29 @@ class BinaryCarrier : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::RepeatedPtrField< ::lightstep::TextCarrierPair > text_ctx_;
   ::lightstep::BasicTracerCarrier* basic_ctx_;
   mutable int _cached_size_;
-  friend struct protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend struct ::protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend void ::protobuf_lightstep_5fcarrier_2eproto::InitDefaultsBinaryCarrierImpl();
 };
 // -------------------------------------------------------------------
 
+class BasicTracerCarrier_BaggageItemsEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<BasicTracerCarrier_BaggageItemsEntry_DoNotUse, 
+    ::std::string, ::std::string,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    0 > {
+public:
+  typedef ::google::protobuf::internal::MapEntry<BasicTracerCarrier_BaggageItemsEntry_DoNotUse, 
+    ::std::string, ::std::string,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    0 > SuperType;
+  BasicTracerCarrier_BaggageItemsEntry_DoNotUse();
+  BasicTracerCarrier_BaggageItemsEntry_DoNotUse(::google::protobuf::Arena* arena);
+  void MergeFrom(const BasicTracerCarrier_BaggageItemsEntry_DoNotUse& other);
+  static const BasicTracerCarrier_BaggageItemsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const BasicTracerCarrier_BaggageItemsEntry_DoNotUse*>(&_BasicTracerCarrier_BaggageItemsEntry_DoNotUse_default_instance_); }
+  void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
+  ::google::protobuf::Metadata GetMetadata() const;
+};
 
 // -------------------------------------------------------------------
 
@@ -212,6 +243,7 @@ class BasicTracerCarrier : public ::google::protobuf::Message /* @@protoc_insert
   static const ::google::protobuf::Descriptor* descriptor();
   static const BasicTracerCarrier& default_instance();
 
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const BasicTracerCarrier* internal_default_instance() {
     return reinterpret_cast<const BasicTracerCarrier*>(
                &_BasicTracerCarrier_default_instance_);
@@ -296,38 +328,18 @@ class BasicTracerCarrier : public ::google::protobuf::Message /* @@protoc_insert
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  public:
-  class BasicTracerCarrier_BaggageItemsEntry : public ::google::protobuf::internal::MapEntry<BasicTracerCarrier_BaggageItemsEntry, 
-      ::std::string, ::std::string,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      0 > {
-  public:
-    typedef ::google::protobuf::internal::MapEntry<BasicTracerCarrier_BaggageItemsEntry, 
-      ::std::string, ::std::string,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      0 > SuperType;
-    BasicTracerCarrier_BaggageItemsEntry();
-    BasicTracerCarrier_BaggageItemsEntry(::google::protobuf::Arena* arena);
-    void MergeFrom(const ::google::protobuf::Message& other) PROTOBUF_FINAL;
-    void MergeFrom(const BasicTracerCarrier_BaggageItemsEntry& other);
-    static const Message* internal_default_instance() { return reinterpret_cast<const Message*>(&_BasicTracerCarrier_BaggageItemsEntry_default_instance_); }
-    ::google::protobuf::Metadata GetMetadata() const;
-  };
-  private:
   ::google::protobuf::internal::MapField<
-      BasicTracerCarrier_BaggageItemsEntry,
+      BasicTracerCarrier_BaggageItemsEntry_DoNotUse,
       ::std::string, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       0 > baggage_items_;
-  private:
   ::google::protobuf::uint64 trace_id_;
   ::google::protobuf::uint64 span_id_;
   bool sampled_;
   mutable int _cached_size_;
-  friend struct protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend struct ::protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend void ::protobuf_lightstep_5fcarrier_2eproto::InitDefaultsBasicTracerCarrierImpl();
 };
 // -------------------------------------------------------------------
 
@@ -360,6 +372,7 @@ class TextCarrierPair : public ::google::protobuf::Message /* @@protoc_insertion
   static const ::google::protobuf::Descriptor* descriptor();
   static const TextCarrierPair& default_instance();
 
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const TextCarrierPair* internal_default_instance() {
     return reinterpret_cast<const TextCarrierPair*>(
                &_TextCarrierPair_default_instance_);
@@ -447,14 +460,14 @@ class TextCarrierPair : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::internal::ArenaStringPtr key_;
   ::google::protobuf::internal::ArenaStringPtr value_;
   mutable int _cached_size_;
-  friend struct protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend struct ::protobuf_lightstep_5fcarrier_2eproto::TableStruct;
+  friend void ::protobuf_lightstep_5fcarrier_2eproto::InitDefaultsTextCarrierPairImpl();
 };
 // ===================================================================
 
 
 // ===================================================================
 
-#if !PROTOBUF_INLINE_NOT_IN_HEADERS
 #ifdef __GNUC__
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
@@ -496,7 +509,9 @@ inline bool BinaryCarrier::has_basic_ctx() const {
   return this != internal_default_instance() && basic_ctx_ != NULL;
 }
 inline void BinaryCarrier::clear_basic_ctx() {
-  if (GetArenaNoVirtual() == NULL && basic_ctx_ != NULL) delete basic_ctx_;
+  if (GetArenaNoVirtual() == NULL && basic_ctx_ != NULL) {
+    delete basic_ctx_;
+  }
   basic_ctx_ = NULL;
 }
 inline const ::lightstep::BasicTracerCarrier& BinaryCarrier::basic_ctx() const {
@@ -504,6 +519,13 @@ inline const ::lightstep::BasicTracerCarrier& BinaryCarrier::basic_ctx() const {
   // @@protoc_insertion_point(field_get:lightstep.BinaryCarrier.basic_ctx)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::BasicTracerCarrier*>(
       &::lightstep::_BasicTracerCarrier_default_instance_);
+}
+inline ::lightstep::BasicTracerCarrier* BinaryCarrier::release_basic_ctx() {
+  // @@protoc_insertion_point(field_release:lightstep.BinaryCarrier.basic_ctx)
+  
+  ::lightstep::BasicTracerCarrier* temp = basic_ctx_;
+  basic_ctx_ = NULL;
+  return temp;
 }
 inline ::lightstep::BasicTracerCarrier* BinaryCarrier::mutable_basic_ctx() {
   
@@ -513,21 +535,22 @@ inline ::lightstep::BasicTracerCarrier* BinaryCarrier::mutable_basic_ctx() {
   // @@protoc_insertion_point(field_mutable:lightstep.BinaryCarrier.basic_ctx)
   return basic_ctx_;
 }
-inline ::lightstep::BasicTracerCarrier* BinaryCarrier::release_basic_ctx() {
-  // @@protoc_insertion_point(field_release:lightstep.BinaryCarrier.basic_ctx)
-  
-  ::lightstep::BasicTracerCarrier* temp = basic_ctx_;
-  basic_ctx_ = NULL;
-  return temp;
-}
 inline void BinaryCarrier::set_allocated_basic_ctx(::lightstep::BasicTracerCarrier* basic_ctx) {
-  delete basic_ctx_;
-  basic_ctx_ = basic_ctx;
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete basic_ctx_;
+  }
   if (basic_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      basic_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, basic_ctx, submessage_arena);
+    }
     
   } else {
     
   }
+  basic_ctx_ = basic_ctx;
   // @@protoc_insertion_point(field_set_allocated:lightstep.BinaryCarrier.basic_ctx)
 }
 
@@ -710,7 +733,6 @@ inline void TextCarrierPair::set_allocated_value(::std::string* value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-#endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -719,7 +741,6 @@ inline void TextCarrierPair::set_allocated_value(::std::string* value) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-
 
 }  // namespace lightstep
 
