@@ -195,6 +195,7 @@ const std::vector<std::string> kGlobalWords{
     "request.auth.principal",
     "request.auth.audiences",
     "request.auth.presenter",
+    "request.api_key",
 };
 
 }  // namespace

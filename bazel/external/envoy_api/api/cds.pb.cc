@@ -304,6 +304,7 @@ void InitDefaultsClusterImpl() {
   protobuf_api_2faddress_2eproto::InitDefaultsBindConfig();
   protobuf_api_2fcds_2eproto::InitDefaultsCluster_LbSubsetConfig();
   protobuf_api_2fcds_2eproto::InitDefaultsCluster_RingHashLbConfig();
+  protobuf_api_2fbase_2eproto::InitDefaultsTransportSocket();
   {
     void* ptr = &::envoy::api::v2::_Cluster_default_instance_;
     new (ptr) ::envoy::api::v2::Cluster();
@@ -364,6 +365,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_OutlierDetection, success_rate_minimum_hosts_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_OutlierDetection, success_rate_request_volume_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_OutlierDetection, success_rate_stdev_factor_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_OutlierDetection, consecutive_gateway_failure_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_OutlierDetection, enforcing_consecutive_gateway_failure_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster_LbSubsetConfig_LbSubsetSelector, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -419,6 +422,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster, upstream_bind_config_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster, lb_subset_config_),
   offsetof(::envoy::api::v2::ClusterDefaultTypeInternal, ring_hash_lb_config_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster, transport_socket_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster, protocol_options_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Cluster, lb_config_),
 };
@@ -428,11 +432,11 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 16, -1, sizeof(::envoy::api::v2::CircuitBreakers)},
   { 22, -1, sizeof(::envoy::api::v2::Cluster_EdsClusterConfig)},
   { 29, -1, sizeof(::envoy::api::v2::Cluster_OutlierDetection)},
-  { 43, -1, sizeof(::envoy::api::v2::Cluster_LbSubsetConfig_LbSubsetSelector)},
-  { 49, -1, sizeof(::envoy::api::v2::Cluster_LbSubsetConfig)},
-  { 57, -1, sizeof(::envoy::api::v2::Cluster_RingHashLbConfig_DeprecatedV1)},
-  { 63, -1, sizeof(::envoy::api::v2::Cluster_RingHashLbConfig)},
-  { 70, -1, sizeof(::envoy::api::v2::Cluster)},
+  { 45, -1, sizeof(::envoy::api::v2::Cluster_LbSubsetConfig_LbSubsetSelector)},
+  { 51, -1, sizeof(::envoy::api::v2::Cluster_LbSubsetConfig)},
+  { 59, -1, sizeof(::envoy::api::v2::Cluster_RingHashLbConfig_DeprecatedV1)},
+  { 65, -1, sizeof(::envoy::api::v2::Cluster_RingHashLbConfig)},
+  { 72, -1, sizeof(::envoy::api::v2::Cluster)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -487,7 +491,7 @@ void AddDescriptorsImpl() {
       "ts\030\003 \001(\0132\034.google.protobuf.UInt32Value\0222"
       "\n\014max_requests\030\004 \001(\0132\034.google.protobuf.U"
       "Int32Value\0221\n\013max_retries\030\005 \001(\0132\034.google"
-      ".protobuf.UInt32Value\"\214\026\n\007Cluster\022\014\n\004nam"
+      ".protobuf.UInt32Value\"\325\027\n\007Cluster\022\014\n\004nam"
       "e\030\001 \001(\t\0221\n\004type\030\002 \001(\0162#.envoy.api.v2.Clu"
       "ster.DiscoveryType\022B\n\022eds_cluster_config"
       "\030\003 \001(\0132&.envoy.api.v2.Cluster.EdsCluster"
@@ -520,54 +524,59 @@ void AddDescriptorsImpl() {
       "envoy.api.v2.BindConfig\022>\n\020lb_subset_con"
       "fig\030\026 \001(\0132$.envoy.api.v2.Cluster.LbSubse"
       "tConfig\022E\n\023ring_hash_lb_config\030\027 \001(\0132&.e"
-      "nvoy.api.v2.Cluster.RingHashLbConfigH\001\032X"
-      "\n\020EdsClusterConfig\022.\n\neds_config\030\001 \001(\0132\032"
-      ".envoy.api.v2.ConfigSource\022\024\n\014service_na"
-      "me\030\002 \001(\t\032\256\004\n\020OutlierDetection\0225\n\017consecu"
-      "tive_5xx\030\001 \001(\0132\034.google.protobuf.UInt32V"
-      "alue\022+\n\010interval\030\002 \001(\0132\031.google.protobuf"
-      ".Duration\0225\n\022base_ejection_time\030\003 \001(\0132\031."
-      "google.protobuf.Duration\022:\n\024max_ejection"
-      "_percent\030\004 \001(\0132\034.google.protobuf.UInt32V"
-      "alue\022\?\n\031enforcing_consecutive_5xx\030\005 \001(\0132"
-      "\034.google.protobuf.UInt32Value\022<\n\026enforci"
-      "ng_success_rate\030\006 \001(\0132\034.google.protobuf."
-      "UInt32Value\022@\n\032success_rate_minimum_host"
-      "s\030\007 \001(\0132\034.google.protobuf.UInt32Value\022A\n"
-      "\033success_rate_request_volume\030\010 \001(\0132\034.goo"
-      "gle.protobuf.UInt32Value\022\?\n\031success_rate"
-      "_stdev_factor\030\t \001(\0132\034.google.protobuf.UI"
-      "nt32Value\032\333\002\n\016LbSubsetConfig\022T\n\017fallback"
-      "_policy\030\001 \001(\0162;.envoy.api.v2.Cluster.LbS"
-      "ubsetConfig.LbSubsetFallbackPolicy\022/\n\016de"
-      "fault_subset\030\002 \001(\0132\027.google.protobuf.Str"
-      "uct\022O\n\020subset_selectors\030\003 \003(\01325.envoy.ap"
-      "i.v2.Cluster.LbSubsetConfig.LbSubsetSele"
-      "ctor\032 \n\020LbSubsetSelector\022\014\n\004keys\030\001 \003(\t\"O"
-      "\n\026LbSubsetFallbackPolicy\022\017\n\013NO_FALLBACK\020"
-      "\000\022\020\n\014ANY_ENDPOINT\020\001\022\022\n\016DEFAULT_SUBSET\020\002\032"
-      "\331\001\n\020RingHashLbConfig\0227\n\021minimum_ring_siz"
-      "e\030\001 \001(\0132\034.google.protobuf.UInt64Value\022J\n"
-      "\rdeprecated_v1\030\002 \001(\01323.envoy.api.v2.Clus"
-      "ter.RingHashLbConfig.DeprecatedV1\032@\n\014Dep"
-      "recatedV1\0220\n\014use_std_hash\030\001 \001(\0132\032.google"
-      ".protobuf.BoolValue\"W\n\rDiscoveryType\022\n\n\006"
-      "STATIC\020\000\022\016\n\nSTRICT_DNS\020\001\022\017\n\013LOGICAL_DNS\020"
-      "\002\022\007\n\003EDS\020\003\022\020\n\014ORIGINAL_DST\020\004\"^\n\010LbPolicy"
-      "\022\017\n\013ROUND_ROBIN\020\000\022\021\n\rLEAST_REQUEST\020\001\022\r\n\t"
-      "RING_HASH\020\002\022\n\n\006RANDOM\020\003\022\023\n\017ORIGINAL_DST_"
-      "LB\020\004\"5\n\017DnsLookupFamily\022\010\n\004AUTO\020\000\022\013\n\007V4_"
-      "ONLY\020\001\022\013\n\007V6_ONLY\020\002B\022\n\020protocol_optionsB"
-      "\013\n\tlb_config2\347\001\n\027ClusterDiscoveryService"
-      "\022W\n\016StreamClusters\022\036.envoy.api.v2.Discov"
-      "eryRequest\032\037.envoy.api.v2.DiscoveryRespo"
-      "nse\"\000(\0010\001\022s\n\rFetchClusters\022\036.envoy.api.v"
-      "2.DiscoveryRequest\032\037.envoy.api.v2.Discov"
-      "eryResponse\"!\202\323\344\223\002\033\"\026/v2/discovery:clust"
-      "ers:\001*b\006proto3"
+      "nvoy.api.v2.Cluster.RingHashLbConfigH\001\0227"
+      "\n\020transport_socket\030\030 \001(\0132\035.envoy.api.v2."
+      "TransportSocket\032X\n\020EdsClusterConfig\022.\n\ne"
+      "ds_config\030\001 \001(\0132\032.envoy.api.v2.ConfigSou"
+      "rce\022\024\n\014service_name\030\002 \001(\t\032\276\005\n\020OutlierDet"
+      "ection\0225\n\017consecutive_5xx\030\001 \001(\0132\034.google"
+      ".protobuf.UInt32Value\022+\n\010interval\030\002 \001(\0132"
+      "\031.google.protobuf.Duration\0225\n\022base_eject"
+      "ion_time\030\003 \001(\0132\031.google.protobuf.Duratio"
+      "n\022:\n\024max_ejection_percent\030\004 \001(\0132\034.google"
+      ".protobuf.UInt32Value\022\?\n\031enforcing_conse"
+      "cutive_5xx\030\005 \001(\0132\034.google.protobuf.UInt3"
+      "2Value\022<\n\026enforcing_success_rate\030\006 \001(\0132\034"
+      ".google.protobuf.UInt32Value\022@\n\032success_"
+      "rate_minimum_hosts\030\007 \001(\0132\034.google.protob"
+      "uf.UInt32Value\022A\n\033success_rate_request_v"
+      "olume\030\010 \001(\0132\034.google.protobuf.UInt32Valu"
+      "e\022\?\n\031success_rate_stdev_factor\030\t \001(\0132\034.g"
+      "oogle.protobuf.UInt32Value\022A\n\033consecutiv"
+      "e_gateway_failure\030\n \001(\0132\034.google.protobu"
+      "f.UInt32Value\022K\n%enforcing_consecutive_g"
+      "ateway_failure\030\013 \001(\0132\034.google.protobuf.U"
+      "Int32Value\032\333\002\n\016LbSubsetConfig\022T\n\017fallbac"
+      "k_policy\030\001 \001(\0162;.envoy.api.v2.Cluster.Lb"
+      "SubsetConfig.LbSubsetFallbackPolicy\022/\n\016d"
+      "efault_subset\030\002 \001(\0132\027.google.protobuf.St"
+      "ruct\022O\n\020subset_selectors\030\003 \003(\01325.envoy.a"
+      "pi.v2.Cluster.LbSubsetConfig.LbSubsetSel"
+      "ector\032 \n\020LbSubsetSelector\022\014\n\004keys\030\001 \003(\t\""
+      "O\n\026LbSubsetFallbackPolicy\022\017\n\013NO_FALLBACK"
+      "\020\000\022\020\n\014ANY_ENDPOINT\020\001\022\022\n\016DEFAULT_SUBSET\020\002"
+      "\032\331\001\n\020RingHashLbConfig\0227\n\021minimum_ring_si"
+      "ze\030\001 \001(\0132\034.google.protobuf.UInt64Value\022J"
+      "\n\rdeprecated_v1\030\002 \001(\01323.envoy.api.v2.Clu"
+      "ster.RingHashLbConfig.DeprecatedV1\032@\n\014De"
+      "precatedV1\0220\n\014use_std_hash\030\001 \001(\0132\032.googl"
+      "e.protobuf.BoolValue\"W\n\rDiscoveryType\022\n\n"
+      "\006STATIC\020\000\022\016\n\nSTRICT_DNS\020\001\022\017\n\013LOGICAL_DNS"
+      "\020\002\022\007\n\003EDS\020\003\022\020\n\014ORIGINAL_DST\020\004\"^\n\010LbPolic"
+      "y\022\017\n\013ROUND_ROBIN\020\000\022\021\n\rLEAST_REQUEST\020\001\022\r\n"
+      "\tRING_HASH\020\002\022\n\n\006RANDOM\020\003\022\023\n\017ORIGINAL_DST"
+      "_LB\020\004\"5\n\017DnsLookupFamily\022\010\n\004AUTO\020\000\022\013\n\007V4"
+      "_ONLY\020\001\022\013\n\007V6_ONLY\020\002B\022\n\020protocol_options"
+      "B\013\n\tlb_config2\347\001\n\027ClusterDiscoveryServic"
+      "e\022W\n\016StreamClusters\022\036.envoy.api.v2.Disco"
+      "veryRequest\032\037.envoy.api.v2.DiscoveryResp"
+      "onse\"\000(\0010\001\022s\n\rFetchClusters\022\036.envoy.api."
+      "v2.DiscoveryRequest\032\037.envoy.api.v2.Disco"
+      "veryResponse\"!\202\323\344\223\002\033\"\026/v2/discovery:clus"
+      "ters:\001*b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3774);
+      descriptor, 3975);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/cds.proto", &protobuf_RegisterTypes);
   ::protobuf_api_2faddress_2eproto::AddDescriptors();
@@ -1988,6 +1997,10 @@ void Cluster_OutlierDetection::InitAsDefaultInstance() {
       ::google::protobuf::UInt32Value::internal_default_instance());
   ::envoy::api::v2::_Cluster_OutlierDetection_default_instance_._instance.get_mutable()->success_rate_stdev_factor_ = const_cast< ::google::protobuf::UInt32Value*>(
       ::google::protobuf::UInt32Value::internal_default_instance());
+  ::envoy::api::v2::_Cluster_OutlierDetection_default_instance_._instance.get_mutable()->consecutive_gateway_failure_ = const_cast< ::google::protobuf::UInt32Value*>(
+      ::google::protobuf::UInt32Value::internal_default_instance());
+  ::envoy::api::v2::_Cluster_OutlierDetection_default_instance_._instance.get_mutable()->enforcing_consecutive_gateway_failure_ = const_cast< ::google::protobuf::UInt32Value*>(
+      ::google::protobuf::UInt32Value::internal_default_instance());
 }
 void Cluster_OutlierDetection::clear_consecutive_5xx() {
   if (GetArenaNoVirtual() == NULL && consecutive_5xx_ != NULL) {
@@ -2043,6 +2056,18 @@ void Cluster_OutlierDetection::clear_success_rate_stdev_factor() {
   }
   success_rate_stdev_factor_ = NULL;
 }
+void Cluster_OutlierDetection::clear_consecutive_gateway_failure() {
+  if (GetArenaNoVirtual() == NULL && consecutive_gateway_failure_ != NULL) {
+    delete consecutive_gateway_failure_;
+  }
+  consecutive_gateway_failure_ = NULL;
+}
+void Cluster_OutlierDetection::clear_enforcing_consecutive_gateway_failure() {
+  if (GetArenaNoVirtual() == NULL && enforcing_consecutive_gateway_failure_ != NULL) {
+    delete enforcing_consecutive_gateway_failure_;
+  }
+  enforcing_consecutive_gateway_failure_ = NULL;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Cluster_OutlierDetection::kConsecutive5XxFieldNumber;
 const int Cluster_OutlierDetection::kIntervalFieldNumber;
@@ -2053,6 +2078,8 @@ const int Cluster_OutlierDetection::kEnforcingSuccessRateFieldNumber;
 const int Cluster_OutlierDetection::kSuccessRateMinimumHostsFieldNumber;
 const int Cluster_OutlierDetection::kSuccessRateRequestVolumeFieldNumber;
 const int Cluster_OutlierDetection::kSuccessRateStdevFactorFieldNumber;
+const int Cluster_OutlierDetection::kConsecutiveGatewayFailureFieldNumber;
+const int Cluster_OutlierDetection::kEnforcingConsecutiveGatewayFailureFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Cluster_OutlierDetection::Cluster_OutlierDetection()
@@ -2113,13 +2140,23 @@ Cluster_OutlierDetection::Cluster_OutlierDetection(const Cluster_OutlierDetectio
   } else {
     success_rate_stdev_factor_ = NULL;
   }
+  if (from.has_consecutive_gateway_failure()) {
+    consecutive_gateway_failure_ = new ::google::protobuf::UInt32Value(*from.consecutive_gateway_failure_);
+  } else {
+    consecutive_gateway_failure_ = NULL;
+  }
+  if (from.has_enforcing_consecutive_gateway_failure()) {
+    enforcing_consecutive_gateway_failure_ = new ::google::protobuf::UInt32Value(*from.enforcing_consecutive_gateway_failure_);
+  } else {
+    enforcing_consecutive_gateway_failure_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:envoy.api.v2.Cluster.OutlierDetection)
 }
 
 void Cluster_OutlierDetection::SharedCtor() {
   ::memset(&consecutive_5xx_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&success_rate_stdev_factor_) -
-      reinterpret_cast<char*>(&consecutive_5xx_)) + sizeof(success_rate_stdev_factor_));
+      reinterpret_cast<char*>(&enforcing_consecutive_gateway_failure_) -
+      reinterpret_cast<char*>(&consecutive_5xx_)) + sizeof(enforcing_consecutive_gateway_failure_));
   _cached_size_ = 0;
 }
 
@@ -2138,6 +2175,8 @@ void Cluster_OutlierDetection::SharedDtor() {
   if (this != internal_default_instance()) delete success_rate_minimum_hosts_;
   if (this != internal_default_instance()) delete success_rate_request_volume_;
   if (this != internal_default_instance()) delete success_rate_stdev_factor_;
+  if (this != internal_default_instance()) delete consecutive_gateway_failure_;
+  if (this != internal_default_instance()) delete enforcing_consecutive_gateway_failure_;
 }
 
 void Cluster_OutlierDetection::SetCachedSize(int size) const {
@@ -2205,6 +2244,14 @@ void Cluster_OutlierDetection::Clear() {
     delete success_rate_stdev_factor_;
   }
   success_rate_stdev_factor_ = NULL;
+  if (GetArenaNoVirtual() == NULL && consecutive_gateway_failure_ != NULL) {
+    delete consecutive_gateway_failure_;
+  }
+  consecutive_gateway_failure_ = NULL;
+  if (GetArenaNoVirtual() == NULL && enforcing_consecutive_gateway_failure_ != NULL) {
+    delete enforcing_consecutive_gateway_failure_;
+  }
+  enforcing_consecutive_gateway_failure_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -2326,6 +2373,30 @@ bool Cluster_OutlierDetection::MergePartialFromCodedStream(
         break;
       }
 
+      // .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_consecutive_gateway_failure()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_enforcing_consecutive_gateway_failure()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -2406,6 +2477,18 @@ void Cluster_OutlierDetection::SerializeWithCachedSizes(
       9, *this->success_rate_stdev_factor_, output);
   }
 
+  // .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+  if (this->has_consecutive_gateway_failure()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, *this->consecutive_gateway_failure_, output);
+  }
+
+  // .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+  if (this->has_enforcing_consecutive_gateway_failure()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, *this->enforcing_consecutive_gateway_failure_, output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -2481,6 +2564,20 @@ void Cluster_OutlierDetection::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         9, *this->success_rate_stdev_factor_, deterministic, target);
+  }
+
+  // .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+  if (this->has_consecutive_gateway_failure()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, *this->consecutive_gateway_failure_, deterministic, target);
+  }
+
+  // .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+  if (this->has_enforcing_consecutive_gateway_failure()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, *this->enforcing_consecutive_gateway_failure_, deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2563,6 +2660,20 @@ size_t Cluster_OutlierDetection::ByteSizeLong() const {
         *this->success_rate_stdev_factor_);
   }
 
+  // .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+  if (this->has_consecutive_gateway_failure()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->consecutive_gateway_failure_);
+  }
+
+  // .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+  if (this->has_enforcing_consecutive_gateway_failure()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->enforcing_consecutive_gateway_failure_);
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -2619,6 +2730,12 @@ void Cluster_OutlierDetection::MergeFrom(const Cluster_OutlierDetection& from) {
   if (from.has_success_rate_stdev_factor()) {
     mutable_success_rate_stdev_factor()->::google::protobuf::UInt32Value::MergeFrom(from.success_rate_stdev_factor());
   }
+  if (from.has_consecutive_gateway_failure()) {
+    mutable_consecutive_gateway_failure()->::google::protobuf::UInt32Value::MergeFrom(from.consecutive_gateway_failure());
+  }
+  if (from.has_enforcing_consecutive_gateway_failure()) {
+    mutable_enforcing_consecutive_gateway_failure()->::google::protobuf::UInt32Value::MergeFrom(from.enforcing_consecutive_gateway_failure());
+  }
 }
 
 void Cluster_OutlierDetection::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2654,6 +2771,8 @@ void Cluster_OutlierDetection::InternalSwap(Cluster_OutlierDetection* other) {
   swap(success_rate_minimum_hosts_, other->success_rate_minimum_hosts_);
   swap(success_rate_request_volume_, other->success_rate_request_volume_);
   swap(success_rate_stdev_factor_, other->success_rate_stdev_factor_);
+  swap(consecutive_gateway_failure_, other->consecutive_gateway_failure_);
+  swap(enforcing_consecutive_gateway_failure_, other->enforcing_consecutive_gateway_failure_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -3848,6 +3967,8 @@ void Cluster::InitAsDefaultInstance() {
       ::envoy::api::v2::Cluster_LbSubsetConfig::internal_default_instance());
   ::envoy::api::v2::_Cluster_default_instance_.ring_hash_lb_config_ = const_cast< ::envoy::api::v2::Cluster_RingHashLbConfig*>(
       ::envoy::api::v2::Cluster_RingHashLbConfig::internal_default_instance());
+  ::envoy::api::v2::_Cluster_default_instance_._instance.get_mutable()->transport_socket_ = const_cast< ::envoy::api::v2::TransportSocket*>(
+      ::envoy::api::v2::TransportSocket::internal_default_instance());
 }
 void Cluster::clear_connect_timeout() {
   if (GetArenaNoVirtual() == NULL && connect_timeout_ != NULL) {
@@ -3994,6 +4115,12 @@ void Cluster::set_allocated_ring_hash_lb_config(::envoy::api::v2::Cluster_RingHa
   }
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Cluster.ring_hash_lb_config)
 }
+void Cluster::clear_transport_socket() {
+  if (GetArenaNoVirtual() == NULL && transport_socket_ != NULL) {
+    delete transport_socket_;
+  }
+  transport_socket_ = NULL;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Cluster::kNameFieldNumber;
 const int Cluster::kTypeFieldNumber;
@@ -4018,6 +4145,7 @@ const int Cluster::kCleanupIntervalFieldNumber;
 const int Cluster::kUpstreamBindConfigFieldNumber;
 const int Cluster::kLbSubsetConfigFieldNumber;
 const int Cluster::kRingHashLbConfigFieldNumber;
+const int Cluster::kTransportSocketFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Cluster::Cluster()
@@ -4095,6 +4223,11 @@ Cluster::Cluster(const Cluster& from)
   } else {
     lb_subset_config_ = NULL;
   }
+  if (from.has_transport_socket()) {
+    transport_socket_ = new ::envoy::api::v2::TransportSocket(*from.transport_socket_);
+  } else {
+    transport_socket_ = NULL;
+  }
   ::memcpy(&type_, &from.type_,
     static_cast<size_t>(reinterpret_cast<char*>(&dns_lookup_family_) -
     reinterpret_cast<char*>(&type_)) + sizeof(dns_lookup_family_));
@@ -4161,6 +4294,7 @@ void Cluster::SharedDtor() {
   if (this != internal_default_instance()) delete cleanup_interval_;
   if (this != internal_default_instance()) delete upstream_bind_config_;
   if (this != internal_default_instance()) delete lb_subset_config_;
+  if (this != internal_default_instance()) delete transport_socket_;
   if (has_protocol_options()) {
     clear_protocol_options();
   }
@@ -4287,6 +4421,10 @@ void Cluster::Clear() {
     delete lb_subset_config_;
   }
   lb_subset_config_ = NULL;
+  if (GetArenaNoVirtual() == NULL && transport_socket_ != NULL) {
+    delete transport_socket_;
+  }
+  transport_socket_ = NULL;
   ::memset(&type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&dns_lookup_family_) -
       reinterpret_cast<char*>(&type_)) + sizeof(dns_lookup_family_));
@@ -4591,6 +4729,18 @@ bool Cluster::MergePartialFromCodedStream(
         break;
       }
 
+      // .envoy.api.v2.TransportSocket transport_socket = 24;
+      case 24: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(194u /* 194 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_transport_socket()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -4760,6 +4910,12 @@ void Cluster::SerializeWithCachedSizes(
   if (has_ring_hash_lb_config()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       23, *lb_config_.ring_hash_lb_config_, output);
+  }
+
+  // .envoy.api.v2.TransportSocket transport_socket = 24;
+  if (this->has_transport_socket()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      24, *this->transport_socket_, output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4941,6 +5097,13 @@ void Cluster::SerializeWithCachedSizes(
         23, *lb_config_.ring_hash_lb_config_, deterministic, target);
   }
 
+  // .envoy.api.v2.TransportSocket transport_socket = 24;
+  if (this->has_transport_socket()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        24, *this->transport_socket_, deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -5075,6 +5238,13 @@ size_t Cluster::ByteSizeLong() const {
         *this->lb_subset_config_);
   }
 
+  // .envoy.api.v2.TransportSocket transport_socket = 24;
+  if (this->has_transport_socket()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->transport_socket_);
+  }
+
   // .envoy.api.v2.Cluster.DiscoveryType type = 2;
   if (this->type() != 0) {
     total_size += 1 +
@@ -5207,6 +5377,9 @@ void Cluster::MergeFrom(const Cluster& from) {
   if (from.has_lb_subset_config()) {
     mutable_lb_subset_config()->::envoy::api::v2::Cluster_LbSubsetConfig::MergeFrom(from.lb_subset_config());
   }
+  if (from.has_transport_socket()) {
+    mutable_transport_socket()->::envoy::api::v2::TransportSocket::MergeFrom(from.transport_socket());
+  }
   if (from.type() != 0) {
     set_type(from.type());
   }
@@ -5287,6 +5460,7 @@ void Cluster::InternalSwap(Cluster* other) {
   swap(cleanup_interval_, other->cleanup_interval_);
   swap(upstream_bind_config_, other->upstream_bind_config_);
   swap(lb_subset_config_, other->lb_subset_config_);
+  swap(transport_socket_, other->transport_socket_);
   swap(type_, other->type_);
   swap(lb_policy_, other->lb_policy_);
   swap(dns_lookup_family_, other->dns_lookup_family_);

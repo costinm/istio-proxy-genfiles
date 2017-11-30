@@ -342,6 +342,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::ReferencedAttributes_AttributeMatch, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::ReferencedAttributes_AttributeMatch, condition_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::ReferencedAttributes_AttributeMatch, regex_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::ReferencedAttributes_AttributeMatch, map_key_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::ReferencedAttributes, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -359,7 +360,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 43, 50, sizeof(::istio::mixer::v1::CheckResponse_QuotasEntry_DoNotUse)},
   { 52, -1, sizeof(::istio::mixer::v1::CheckResponse)},
   { 59, -1, sizeof(::istio::mixer::v1::ReferencedAttributes_AttributeMatch)},
-  { 67, -1, sizeof(::istio::mixer::v1::ReferencedAttributes)},
+  { 68, -1, sizeof(::istio::mixer::v1::ReferencedAttributes)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -426,18 +427,18 @@ void AddDescriptorsImpl() {
       ".v1.ReferencedAttributesB\004\310\336\037\000\032X\n\013Quotas"
       "Entry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).isti"
       "o.mixer.v1.CheckResponse.QuotaResult:\0028\001"
-      "\"\270\002\n\024ReferencedAttributes\022\r\n\005words\030\001 \003(\t"
+      "\"\312\002\n\024ReferencedAttributes\022\r\n\005words\030\001 \003(\t"
       "\022T\n\021attribute_matches\030\002 \003(\01323.istio.mixe"
       "r.v1.ReferencedAttributes.AttributeMatch"
-      "B\004\310\336\037\000\032p\n\016AttributeMatch\022\014\n\004name\030\001 \001(\021\022A"
-      "\n\tcondition\030\002 \001(\0162..istio.mixer.v1.Refer"
-      "encedAttributes.Condition\022\r\n\005regex\030\003 \001(\t"
-      "\"I\n\tCondition\022\031\n\025CONDITION_UNSPECIFIED\020\000"
-      "\022\013\n\007ABSENCE\020\001\022\t\n\005EXACT\020\002\022\t\n\005REGEX\020\003B\014\310\341\036"
-      "\000\250\342\036\000\360\341\036\000b\006proto3"
+      "B\004\310\336\037\000\032\201\001\n\016AttributeMatch\022\014\n\004name\030\001 \001(\021\022"
+      "A\n\tcondition\030\002 \001(\0162..istio.mixer.v1.Refe"
+      "rencedAttributes.Condition\022\r\n\005regex\030\003 \001("
+      "\t\022\017\n\007map_key\030\004 \001(\021\"I\n\tCondition\022\031\n\025CONDI"
+      "TION_UNSPECIFIED\020\000\022\013\n\007ABSENCE\020\001\022\t\n\005EXACT"
+      "\020\002\022\t\n\005REGEX\020\003B\014\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1537);
+      descriptor, 1555);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "mixer/v1/check.proto", &protobuf_RegisterTypes);
   ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
@@ -2493,6 +2494,7 @@ void ReferencedAttributes_AttributeMatch::InitAsDefaultInstance() {
 const int ReferencedAttributes_AttributeMatch::kNameFieldNumber;
 const int ReferencedAttributes_AttributeMatch::kConditionFieldNumber;
 const int ReferencedAttributes_AttributeMatch::kRegexFieldNumber;
+const int ReferencedAttributes_AttributeMatch::kMapKeyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ReferencedAttributes_AttributeMatch::ReferencedAttributes_AttributeMatch()
@@ -2513,16 +2515,16 @@ ReferencedAttributes_AttributeMatch::ReferencedAttributes_AttributeMatch(const R
     regex_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.regex_);
   }
   ::memcpy(&name_, &from.name_,
-    static_cast<size_t>(reinterpret_cast<char*>(&condition_) -
-    reinterpret_cast<char*>(&name_)) + sizeof(condition_));
+    static_cast<size_t>(reinterpret_cast<char*>(&map_key_) -
+    reinterpret_cast<char*>(&name_)) + sizeof(map_key_));
   // @@protoc_insertion_point(copy_constructor:istio.mixer.v1.ReferencedAttributes.AttributeMatch)
 }
 
 void ReferencedAttributes_AttributeMatch::SharedCtor() {
   regex_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&name_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&condition_) -
-      reinterpret_cast<char*>(&name_)) + sizeof(condition_));
+      reinterpret_cast<char*>(&map_key_) -
+      reinterpret_cast<char*>(&name_)) + sizeof(map_key_));
   _cached_size_ = 0;
 }
 
@@ -2566,8 +2568,8 @@ void ReferencedAttributes_AttributeMatch::Clear() {
 
   regex_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&name_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&condition_) -
-      reinterpret_cast<char*>(&name_)) + sizeof(condition_));
+      reinterpret_cast<char*>(&map_key_) -
+      reinterpret_cast<char*>(&name_)) + sizeof(map_key_));
   _internal_metadata_.Clear();
 }
 
@@ -2626,6 +2628,20 @@ bool ReferencedAttributes_AttributeMatch::MergePartialFromCodedStream(
         break;
       }
 
+      // sint32 map_key = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SINT32>(
+                 input, &map_key_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -2673,6 +2689,11 @@ void ReferencedAttributes_AttributeMatch::SerializeWithCachedSizes(
       3, this->regex(), output);
   }
 
+  // sint32 map_key = 4;
+  if (this->map_key() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteSInt32(4, this->map_key(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -2707,6 +2728,11 @@ void ReferencedAttributes_AttributeMatch::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->regex(), target);
+  }
+
+  // sint32 map_key = 4;
+  if (this->map_key() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteSInt32ToArray(4, this->map_key(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2744,6 +2770,13 @@ size_t ReferencedAttributes_AttributeMatch::ByteSizeLong() const {
   if (this->condition() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->condition());
+  }
+
+  // sint32 map_key = 4;
+  if (this->map_key() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::SInt32Size(
+        this->map_key());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2785,6 +2818,9 @@ void ReferencedAttributes_AttributeMatch::MergeFrom(const ReferencedAttributes_A
   if (from.condition() != 0) {
     set_condition(from.condition());
   }
+  if (from.map_key() != 0) {
+    set_map_key(from.map_key());
+  }
 }
 
 void ReferencedAttributes_AttributeMatch::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2814,6 +2850,7 @@ void ReferencedAttributes_AttributeMatch::InternalSwap(ReferencedAttributes_Attr
   regex_.Swap(&other->regex_);
   swap(name_, other->name_);
   swap(condition_, other->condition_);
+  swap(map_key_, other->map_key_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }

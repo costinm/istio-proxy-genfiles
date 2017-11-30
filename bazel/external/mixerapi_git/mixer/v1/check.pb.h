@@ -917,6 +917,12 @@ class ReferencedAttributes_AttributeMatch : public ::google::protobuf::Message /
   ::istio::mixer::v1::ReferencedAttributes_Condition condition() const;
   void set_condition(::istio::mixer::v1::ReferencedAttributes_Condition value);
 
+  // sint32 map_key = 4;
+  void clear_map_key();
+  static const int kMapKeyFieldNumber = 4;
+  ::google::protobuf::int32 map_key() const;
+  void set_map_key(::google::protobuf::int32 value);
+
   // @@protoc_insertion_point(class_scope:istio.mixer.v1.ReferencedAttributes.AttributeMatch)
  private:
 
@@ -924,6 +930,7 @@ class ReferencedAttributes_AttributeMatch : public ::google::protobuf::Message /
   ::google::protobuf::internal::ArenaStringPtr regex_;
   ::google::protobuf::int32 name_;
   int condition_;
+  ::google::protobuf::int32 map_key_;
   mutable int _cached_size_;
   friend struct ::protobuf_mixer_2fv1_2fcheck_2eproto::TableStruct;
   friend void ::protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsReferencedAttributes_AttributeMatchImpl();
@@ -1733,6 +1740,20 @@ inline void ReferencedAttributes_AttributeMatch::set_allocated_regex(::std::stri
   }
   regex_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), regex);
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.ReferencedAttributes.AttributeMatch.regex)
+}
+
+// sint32 map_key = 4;
+inline void ReferencedAttributes_AttributeMatch::clear_map_key() {
+  map_key_ = 0;
+}
+inline ::google::protobuf::int32 ReferencedAttributes_AttributeMatch::map_key() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.ReferencedAttributes.AttributeMatch.map_key)
+  return map_key_;
+}
+inline void ReferencedAttributes_AttributeMatch::set_map_key(::google::protobuf::int32 value) {
+  
+  map_key_ = value;
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.ReferencedAttributes.AttributeMatch.map_key)
 }
 
 // -------------------------------------------------------------------

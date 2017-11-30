@@ -848,6 +848,24 @@ class Cluster_OutlierDetection : public ::google::protobuf::Message /* @@protoc_
   ::google::protobuf::UInt32Value* mutable_success_rate_stdev_factor();
   void set_allocated_success_rate_stdev_factor(::google::protobuf::UInt32Value* success_rate_stdev_factor);
 
+  // .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+  bool has_consecutive_gateway_failure() const;
+  void clear_consecutive_gateway_failure();
+  static const int kConsecutiveGatewayFailureFieldNumber = 10;
+  const ::google::protobuf::UInt32Value& consecutive_gateway_failure() const;
+  ::google::protobuf::UInt32Value* release_consecutive_gateway_failure();
+  ::google::protobuf::UInt32Value* mutable_consecutive_gateway_failure();
+  void set_allocated_consecutive_gateway_failure(::google::protobuf::UInt32Value* consecutive_gateway_failure);
+
+  // .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+  bool has_enforcing_consecutive_gateway_failure() const;
+  void clear_enforcing_consecutive_gateway_failure();
+  static const int kEnforcingConsecutiveGatewayFailureFieldNumber = 11;
+  const ::google::protobuf::UInt32Value& enforcing_consecutive_gateway_failure() const;
+  ::google::protobuf::UInt32Value* release_enforcing_consecutive_gateway_failure();
+  ::google::protobuf::UInt32Value* mutable_enforcing_consecutive_gateway_failure();
+  void set_allocated_enforcing_consecutive_gateway_failure(::google::protobuf::UInt32Value* enforcing_consecutive_gateway_failure);
+
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Cluster.OutlierDetection)
  private:
 
@@ -861,6 +879,8 @@ class Cluster_OutlierDetection : public ::google::protobuf::Message /* @@protoc_
   ::google::protobuf::UInt32Value* success_rate_minimum_hosts_;
   ::google::protobuf::UInt32Value* success_rate_request_volume_;
   ::google::protobuf::UInt32Value* success_rate_stdev_factor_;
+  ::google::protobuf::UInt32Value* consecutive_gateway_failure_;
+  ::google::protobuf::UInt32Value* enforcing_consecutive_gateway_failure_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2fcds_2eproto::TableStruct;
   friend void ::protobuf_api_2fcds_2eproto::InitDefaultsCluster_OutlierDetectionImpl();
@@ -1691,6 +1711,15 @@ class Cluster : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::envoy::api::v2::Cluster_LbSubsetConfig* mutable_lb_subset_config();
   void set_allocated_lb_subset_config(::envoy::api::v2::Cluster_LbSubsetConfig* lb_subset_config);
 
+  // .envoy.api.v2.TransportSocket transport_socket = 24;
+  bool has_transport_socket() const;
+  void clear_transport_socket();
+  static const int kTransportSocketFieldNumber = 24;
+  const ::envoy::api::v2::TransportSocket& transport_socket() const;
+  ::envoy::api::v2::TransportSocket* release_transport_socket();
+  ::envoy::api::v2::TransportSocket* mutable_transport_socket();
+  void set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket);
+
   // .envoy.api.v2.Cluster.DiscoveryType type = 2;
   void clear_type();
   static const int kTypeFieldNumber = 2;
@@ -1788,6 +1817,7 @@ class Cluster : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::Duration* cleanup_interval_;
   ::envoy::api::v2::BindConfig* upstream_bind_config_;
   ::envoy::api::v2::Cluster_LbSubsetConfig* lb_subset_config_;
+  ::envoy::api::v2::TransportSocket* transport_socket_;
   int type_;
   int lb_policy_;
   int dns_lookup_family_;
@@ -2603,6 +2633,96 @@ inline void Cluster_OutlierDetection::set_allocated_success_rate_stdev_factor(::
   }
   success_rate_stdev_factor_ = success_rate_stdev_factor;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Cluster.OutlierDetection.success_rate_stdev_factor)
+}
+
+// .google.protobuf.UInt32Value consecutive_gateway_failure = 10;
+inline bool Cluster_OutlierDetection::has_consecutive_gateway_failure() const {
+  return this != internal_default_instance() && consecutive_gateway_failure_ != NULL;
+}
+inline const ::google::protobuf::UInt32Value& Cluster_OutlierDetection::consecutive_gateway_failure() const {
+  const ::google::protobuf::UInt32Value* p = consecutive_gateway_failure_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.Cluster.OutlierDetection.consecutive_gateway_failure)
+  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
+      &::google::protobuf::_UInt32Value_default_instance_);
+}
+inline ::google::protobuf::UInt32Value* Cluster_OutlierDetection::release_consecutive_gateway_failure() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Cluster.OutlierDetection.consecutive_gateway_failure)
+  
+  ::google::protobuf::UInt32Value* temp = consecutive_gateway_failure_;
+  consecutive_gateway_failure_ = NULL;
+  return temp;
+}
+inline ::google::protobuf::UInt32Value* Cluster_OutlierDetection::mutable_consecutive_gateway_failure() {
+  
+  if (consecutive_gateway_failure_ == NULL) {
+    consecutive_gateway_failure_ = new ::google::protobuf::UInt32Value;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.Cluster.OutlierDetection.consecutive_gateway_failure)
+  return consecutive_gateway_failure_;
+}
+inline void Cluster_OutlierDetection::set_allocated_consecutive_gateway_failure(::google::protobuf::UInt32Value* consecutive_gateway_failure) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(consecutive_gateway_failure_);
+  }
+  if (consecutive_gateway_failure) {
+    ::google::protobuf::Arena* submessage_arena =
+      reinterpret_cast< ::google::protobuf::MessageLite*>(consecutive_gateway_failure)->GetArena();
+    if (message_arena != submessage_arena) {
+      consecutive_gateway_failure = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, consecutive_gateway_failure, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  consecutive_gateway_failure_ = consecutive_gateway_failure;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Cluster.OutlierDetection.consecutive_gateway_failure)
+}
+
+// .google.protobuf.UInt32Value enforcing_consecutive_gateway_failure = 11;
+inline bool Cluster_OutlierDetection::has_enforcing_consecutive_gateway_failure() const {
+  return this != internal_default_instance() && enforcing_consecutive_gateway_failure_ != NULL;
+}
+inline const ::google::protobuf::UInt32Value& Cluster_OutlierDetection::enforcing_consecutive_gateway_failure() const {
+  const ::google::protobuf::UInt32Value* p = enforcing_consecutive_gateway_failure_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.Cluster.OutlierDetection.enforcing_consecutive_gateway_failure)
+  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
+      &::google::protobuf::_UInt32Value_default_instance_);
+}
+inline ::google::protobuf::UInt32Value* Cluster_OutlierDetection::release_enforcing_consecutive_gateway_failure() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Cluster.OutlierDetection.enforcing_consecutive_gateway_failure)
+  
+  ::google::protobuf::UInt32Value* temp = enforcing_consecutive_gateway_failure_;
+  enforcing_consecutive_gateway_failure_ = NULL;
+  return temp;
+}
+inline ::google::protobuf::UInt32Value* Cluster_OutlierDetection::mutable_enforcing_consecutive_gateway_failure() {
+  
+  if (enforcing_consecutive_gateway_failure_ == NULL) {
+    enforcing_consecutive_gateway_failure_ = new ::google::protobuf::UInt32Value;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.Cluster.OutlierDetection.enforcing_consecutive_gateway_failure)
+  return enforcing_consecutive_gateway_failure_;
+}
+inline void Cluster_OutlierDetection::set_allocated_enforcing_consecutive_gateway_failure(::google::protobuf::UInt32Value* enforcing_consecutive_gateway_failure) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(enforcing_consecutive_gateway_failure_);
+  }
+  if (enforcing_consecutive_gateway_failure) {
+    ::google::protobuf::Arena* submessage_arena =
+      reinterpret_cast< ::google::protobuf::MessageLite*>(enforcing_consecutive_gateway_failure)->GetArena();
+    if (message_arena != submessage_arena) {
+      enforcing_consecutive_gateway_failure = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, enforcing_consecutive_gateway_failure, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  enforcing_consecutive_gateway_failure_ = enforcing_consecutive_gateway_failure;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Cluster.OutlierDetection.enforcing_consecutive_gateway_failure)
 }
 
 // -------------------------------------------------------------------
@@ -3786,6 +3906,50 @@ inline ::envoy::api::v2::Cluster_RingHashLbConfig* Cluster::mutable_ring_hash_lb
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Cluster.ring_hash_lb_config)
   return lb_config_.ring_hash_lb_config_;
+}
+
+// .envoy.api.v2.TransportSocket transport_socket = 24;
+inline bool Cluster::has_transport_socket() const {
+  return this != internal_default_instance() && transport_socket_ != NULL;
+}
+inline const ::envoy::api::v2::TransportSocket& Cluster::transport_socket() const {
+  const ::envoy::api::v2::TransportSocket* p = transport_socket_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.Cluster.transport_socket)
+  return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::TransportSocket*>(
+      &::envoy::api::v2::_TransportSocket_default_instance_);
+}
+inline ::envoy::api::v2::TransportSocket* Cluster::release_transport_socket() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Cluster.transport_socket)
+  
+  ::envoy::api::v2::TransportSocket* temp = transport_socket_;
+  transport_socket_ = NULL;
+  return temp;
+}
+inline ::envoy::api::v2::TransportSocket* Cluster::mutable_transport_socket() {
+  
+  if (transport_socket_ == NULL) {
+    transport_socket_ = new ::envoy::api::v2::TransportSocket;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.Cluster.transport_socket)
+  return transport_socket_;
+}
+inline void Cluster::set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(transport_socket_);
+  }
+  if (transport_socket) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      transport_socket = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, transport_socket, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transport_socket_ = transport_socket;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Cluster.transport_socket)
 }
 
 inline bool Cluster::has_protocol_options() const {

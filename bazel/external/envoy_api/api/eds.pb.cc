@@ -294,6 +294,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::LocalityLbEndpoints, locality_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::LocalityLbEndpoints, lb_endpoints_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::LocalityLbEndpoints, load_balancing_weight_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::LocalityLbEndpoints, priority_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::EndpointLoadMetricStats, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -340,7 +341,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::ClusterLoadAssignment, cluster_name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::ClusterLoadAssignment, endpoints_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::ClusterLoadAssignment, failover_endpoints_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::ClusterLoadAssignment, policy_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::LoadStatsResponse, _internal_metadata_),
@@ -353,12 +353,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::envoy::api::v2::LbEndpoint)},
   { 9, -1, sizeof(::envoy::api::v2::LocalityLbEndpoints)},
-  { 17, -1, sizeof(::envoy::api::v2::EndpointLoadMetricStats)},
-  { 25, -1, sizeof(::envoy::api::v2::UpstreamLocalityStats)},
-  { 35, -1, sizeof(::envoy::api::v2::ClusterStats)},
-  { 43, -1, sizeof(::envoy::api::v2::LoadStatsRequest)},
-  { 50, -1, sizeof(::envoy::api::v2::ClusterLoadAssignment_Policy)},
-  { 56, -1, sizeof(::envoy::api::v2::ClusterLoadAssignment)},
+  { 18, -1, sizeof(::envoy::api::v2::EndpointLoadMetricStats)},
+  { 26, -1, sizeof(::envoy::api::v2::UpstreamLocalityStats)},
+  { 36, -1, sizeof(::envoy::api::v2::ClusterStats)},
+  { 44, -1, sizeof(::envoy::api::v2::LoadStatsRequest)},
+  { 51, -1, sizeof(::envoy::api::v2::ClusterLoadAssignment_Policy)},
+  { 57, -1, sizeof(::envoy::api::v2::ClusterLoadAssignment)},
   { 65, -1, sizeof(::envoy::api::v2::LoadStatsResponse)},
 };
 
@@ -405,47 +405,47 @@ void AddDescriptorsImpl() {
       "t\0221\n\rhealth_status\030\002 \001(\0162\032.envoy.api.v2."
       "HealthStatus\022(\n\010metadata\030\003 \001(\0132\026.envoy.a"
       "pi.v2.Metadata\022;\n\025load_balancing_weight\030"
-      "\004 \001(\0132\034.google.protobuf.UInt32Value\"\254\001\n\023"
+      "\004 \001(\0132\034.google.protobuf.UInt32Value\"\334\001\n\023"
       "LocalityLbEndpoints\022(\n\010locality\030\001 \001(\0132\026."
       "envoy.api.v2.Locality\022.\n\014lb_endpoints\030\002 "
       "\003(\0132\030.envoy.api.v2.LbEndpoint\022;\n\025load_ba"
       "lancing_weight\030\003 \001(\0132\034.google.protobuf.U"
-      "Int32Value\"u\n\027EndpointLoadMetricStats\022\023\n"
-      "\013metric_name\030\001 \001(\t\022)\n!num_requests_finis"
-      "hed_with_metric\030\002 \001(\004\022\032\n\022total_metric_va"
-      "lue\030\003 \001(\001\"\350\001\n\025UpstreamLocalityStats\022(\n\010l"
-      "ocality\030\001 \001(\0132\026.envoy.api.v2.Locality\022!\n"
-      "\031total_successful_requests\030\002 \001(\004\022\"\n\032tota"
-      "l_requests_in_progress\030\003 \001(\004\022\034\n\024total_er"
-      "ror_requests\030\004 \001(\004\022@\n\021load_metric_stats\030"
-      "\005 \003(\0132%.envoy.api.v2.EndpointLoadMetricS"
-      "tats\"\212\001\n\014ClusterStats\022\024\n\014cluster_name\030\001 "
-      "\001(\t\022D\n\027upstream_locality_stats\030\002 \003(\0132#.e"
-      "nvoy.api.v2.UpstreamLocalityStats\022\036\n\026tot"
-      "al_dropped_requests\030\003 \001(\004\"g\n\020LoadStatsRe"
-      "quest\022 \n\004node\030\001 \001(\0132\022.envoy.api.v2.Node\022"
-      "1\n\rcluster_stats\030\002 \003(\0132\032.envoy.api.v2.Cl"
-      "usterStats\"\377\001\n\025ClusterLoadAssignment\022\024\n\014"
-      "cluster_name\030\001 \001(\t\0224\n\tendpoints\030\002 \003(\0132!."
-      "envoy.api.v2.LocalityLbEndpoints\022=\n\022fail"
-      "over_endpoints\030\003 \003(\0132!.envoy.api.v2.Loca"
-      "lityLbEndpoints\022:\n\006policy\030\004 \001(\0132*.envoy."
-      "api.v2.ClusterLoadAssignment.Policy\032\037\n\006P"
-      "olicy\022\025\n\rdrop_overload\030\001 \001(\001\"a\n\021LoadStat"
-      "sResponse\022\020\n\010clusters\030\001 \003(\t\022:\n\027load_repo"
-      "rting_interval\030\002 \001(\0132\031.google.protobuf.D"
-      "uration2\305\002\n\030EndpointDiscoveryService\022X\n\017"
-      "StreamEndpoints\022\036.envoy.api.v2.Discovery"
-      "Request\032\037.envoy.api.v2.DiscoveryResponse"
-      "\"\000(\0010\001\022u\n\016FetchEndpoints\022\036.envoy.api.v2."
-      "DiscoveryRequest\032\037.envoy.api.v2.Discover"
-      "yResponse\"\"\202\323\344\223\002\034\"\027/v2/discovery:endpoin"
-      "ts:\001*\022X\n\017StreamLoadStats\022\036.envoy.api.v2."
-      "LoadStatsRequest\032\037.envoy.api.v2.LoadStat"
-      "sResponse\"\000(\0010\001b\006proto3"
+      "Int32Value\022.\n\010priority\030\005 \001(\0132\034.google.pr"
+      "otobuf.UInt32Value\"u\n\027EndpointLoadMetric"
+      "Stats\022\023\n\013metric_name\030\001 \001(\t\022)\n!num_reques"
+      "ts_finished_with_metric\030\002 \001(\004\022\032\n\022total_m"
+      "etric_value\030\003 \001(\001\"\350\001\n\025UpstreamLocalitySt"
+      "ats\022(\n\010locality\030\001 \001(\0132\026.envoy.api.v2.Loc"
+      "ality\022!\n\031total_successful_requests\030\002 \001(\004"
+      "\022\"\n\032total_requests_in_progress\030\003 \001(\004\022\034\n\024"
+      "total_error_requests\030\004 \001(\004\022@\n\021load_metri"
+      "c_stats\030\005 \003(\0132%.envoy.api.v2.EndpointLoa"
+      "dMetricStats\"\212\001\n\014ClusterStats\022\024\n\014cluster"
+      "_name\030\001 \001(\t\022D\n\027upstream_locality_stats\030\002"
+      " \003(\0132#.envoy.api.v2.UpstreamLocalityStat"
+      "s\022\036\n\026total_dropped_requests\030\003 \001(\004\"g\n\020Loa"
+      "dStatsRequest\022 \n\004node\030\001 \001(\0132\022.envoy.api."
+      "v2.Node\0221\n\rcluster_stats\030\002 \003(\0132\032.envoy.a"
+      "pi.v2.ClusterStats\"\300\001\n\025ClusterLoadAssign"
+      "ment\022\024\n\014cluster_name\030\001 \001(\t\0224\n\tendpoints\030"
+      "\002 \003(\0132!.envoy.api.v2.LocalityLbEndpoints"
+      "\022:\n\006policy\030\004 \001(\0132*.envoy.api.v2.ClusterL"
+      "oadAssignment.Policy\032\037\n\006Policy\022\025\n\rdrop_o"
+      "verload\030\001 \001(\001\"a\n\021LoadStatsResponse\022\020\n\010cl"
+      "usters\030\001 \003(\t\022:\n\027load_reporting_interval\030"
+      "\002 \001(\0132\031.google.protobuf.Duration2\305\002\n\030End"
+      "pointDiscoveryService\022X\n\017StreamEndpoints"
+      "\022\036.envoy.api.v2.DiscoveryRequest\032\037.envoy"
+      ".api.v2.DiscoveryResponse\"\000(\0010\001\022u\n\016Fetch"
+      "Endpoints\022\036.envoy.api.v2.DiscoveryReques"
+      "t\032\037.envoy.api.v2.DiscoveryResponse\"\"\202\323\344\223"
+      "\002\034\"\027/v2/discovery:endpoints:\001*\022X\n\017Stream"
+      "LoadStats\022\036.envoy.api.v2.LoadStatsReques"
+      "t\032\037.envoy.api.v2.LoadStatsResponse\"\000(\0010\001"
+      "b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1863);
+      descriptor, 1848);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/eds.proto", &protobuf_RegisterTypes);
   ::protobuf_api_2fbase_2eproto::AddDescriptors();
@@ -885,6 +885,8 @@ void LocalityLbEndpoints::InitAsDefaultInstance() {
       ::envoy::api::v2::Locality::internal_default_instance());
   ::envoy::api::v2::_LocalityLbEndpoints_default_instance_._instance.get_mutable()->load_balancing_weight_ = const_cast< ::google::protobuf::UInt32Value*>(
       ::google::protobuf::UInt32Value::internal_default_instance());
+  ::envoy::api::v2::_LocalityLbEndpoints_default_instance_._instance.get_mutable()->priority_ = const_cast< ::google::protobuf::UInt32Value*>(
+      ::google::protobuf::UInt32Value::internal_default_instance());
 }
 void LocalityLbEndpoints::clear_locality() {
   if (GetArenaNoVirtual() == NULL && locality_ != NULL) {
@@ -898,10 +900,17 @@ void LocalityLbEndpoints::clear_load_balancing_weight() {
   }
   load_balancing_weight_ = NULL;
 }
+void LocalityLbEndpoints::clear_priority() {
+  if (GetArenaNoVirtual() == NULL && priority_ != NULL) {
+    delete priority_;
+  }
+  priority_ = NULL;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int LocalityLbEndpoints::kLocalityFieldNumber;
 const int LocalityLbEndpoints::kLbEndpointsFieldNumber;
 const int LocalityLbEndpoints::kLoadBalancingWeightFieldNumber;
+const int LocalityLbEndpoints::kPriorityFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 LocalityLbEndpoints::LocalityLbEndpoints()
@@ -928,13 +937,18 @@ LocalityLbEndpoints::LocalityLbEndpoints(const LocalityLbEndpoints& from)
   } else {
     load_balancing_weight_ = NULL;
   }
+  if (from.has_priority()) {
+    priority_ = new ::google::protobuf::UInt32Value(*from.priority_);
+  } else {
+    priority_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:envoy.api.v2.LocalityLbEndpoints)
 }
 
 void LocalityLbEndpoints::SharedCtor() {
   ::memset(&locality_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&load_balancing_weight_) -
-      reinterpret_cast<char*>(&locality_)) + sizeof(load_balancing_weight_));
+      reinterpret_cast<char*>(&priority_) -
+      reinterpret_cast<char*>(&locality_)) + sizeof(priority_));
   _cached_size_ = 0;
 }
 
@@ -946,6 +960,7 @@ LocalityLbEndpoints::~LocalityLbEndpoints() {
 void LocalityLbEndpoints::SharedDtor() {
   if (this != internal_default_instance()) delete locality_;
   if (this != internal_default_instance()) delete load_balancing_weight_;
+  if (this != internal_default_instance()) delete priority_;
 }
 
 void LocalityLbEndpoints::SetCachedSize(int size) const {
@@ -986,6 +1001,10 @@ void LocalityLbEndpoints::Clear() {
     delete load_balancing_weight_;
   }
   load_balancing_weight_ = NULL;
+  if (GetArenaNoVirtual() == NULL && priority_ != NULL) {
+    delete priority_;
+  }
+  priority_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -1028,6 +1047,18 @@ bool LocalityLbEndpoints::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_load_balancing_weight()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.UInt32Value priority = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_priority()));
         } else {
           goto handle_unusual;
         }
@@ -1079,6 +1110,12 @@ void LocalityLbEndpoints::SerializeWithCachedSizes(
       3, *this->load_balancing_weight_, output);
   }
 
+  // .google.protobuf.UInt32Value priority = 5;
+  if (this->has_priority()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, *this->priority_, output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -1113,6 +1150,13 @@ void LocalityLbEndpoints::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         3, *this->load_balancing_weight_, deterministic, target);
+  }
+
+  // .google.protobuf.UInt32Value priority = 5;
+  if (this->has_priority()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, *this->priority_, deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1157,6 +1201,13 @@ size_t LocalityLbEndpoints::ByteSizeLong() const {
         *this->load_balancing_weight_);
   }
 
+  // .google.protobuf.UInt32Value priority = 5;
+  if (this->has_priority()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->priority_);
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1193,6 +1244,9 @@ void LocalityLbEndpoints::MergeFrom(const LocalityLbEndpoints& from) {
   if (from.has_load_balancing_weight()) {
     mutable_load_balancing_weight()->::google::protobuf::UInt32Value::MergeFrom(from.load_balancing_weight());
   }
+  if (from.has_priority()) {
+    mutable_priority()->::google::protobuf::UInt32Value::MergeFrom(from.priority());
+  }
 }
 
 void LocalityLbEndpoints::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1222,6 +1276,7 @@ void LocalityLbEndpoints::InternalSwap(LocalityLbEndpoints* other) {
   lb_endpoints_.InternalSwap(&other->lb_endpoints_);
   swap(locality_, other->locality_);
   swap(load_balancing_weight_, other->load_balancing_weight_);
+  swap(priority_, other->priority_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -2859,7 +2914,6 @@ void ClusterLoadAssignment::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ClusterLoadAssignment::kClusterNameFieldNumber;
 const int ClusterLoadAssignment::kEndpointsFieldNumber;
-const int ClusterLoadAssignment::kFailoverEndpointsFieldNumber;
 const int ClusterLoadAssignment::kPolicyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -2875,7 +2929,6 @@ ClusterLoadAssignment::ClusterLoadAssignment(const ClusterLoadAssignment& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       endpoints_(from.endpoints_),
-      failover_endpoints_(from.failover_endpoints_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   cluster_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -2936,7 +2989,6 @@ void ClusterLoadAssignment::Clear() {
   (void) cached_has_bits;
 
   endpoints_.Clear();
-  failover_endpoints_.Clear();
   cluster_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && policy_ != NULL) {
     delete policy_;
@@ -2976,17 +3028,6 @@ bool ClusterLoadAssignment::MergePartialFromCodedStream(
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_endpoints()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_failover_endpoints()));
         } else {
           goto handle_unusual;
         }
@@ -3048,13 +3089,6 @@ void ClusterLoadAssignment::SerializeWithCachedSizes(
       2, this->endpoints(static_cast<int>(i)), output);
   }
 
-  // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->failover_endpoints_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->failover_endpoints(static_cast<int>(i)), output);
-  }
-
   // .envoy.api.v2.ClusterLoadAssignment.Policy policy = 4;
   if (this->has_policy()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -3094,14 +3128,6 @@ void ClusterLoadAssignment::SerializeWithCachedSizes(
         2, this->endpoints(static_cast<int>(i)), deterministic, target);
   }
 
-  // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->failover_endpoints_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->failover_endpoints(static_cast<int>(i)), deterministic, target);
-  }
-
   // .envoy.api.v2.ClusterLoadAssignment.Policy policy = 4;
   if (this->has_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -3134,17 +3160,6 @@ size_t ClusterLoadAssignment::ByteSizeLong() const {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           this->endpoints(static_cast<int>(i)));
-    }
-  }
-
-  // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->failover_endpoints_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->failover_endpoints(static_cast<int>(i)));
     }
   }
 
@@ -3192,7 +3207,6 @@ void ClusterLoadAssignment::MergeFrom(const ClusterLoadAssignment& from) {
   (void) cached_has_bits;
 
   endpoints_.MergeFrom(from.endpoints_);
-  failover_endpoints_.MergeFrom(from.failover_endpoints_);
   if (from.cluster_name().size() > 0) {
 
     cluster_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.cluster_name_);
@@ -3227,7 +3241,6 @@ void ClusterLoadAssignment::Swap(ClusterLoadAssignment* other) {
 void ClusterLoadAssignment::InternalSwap(ClusterLoadAssignment* other) {
   using std::swap;
   endpoints_.InternalSwap(&other->endpoints_);
-  failover_endpoints_.InternalSwap(&other->failover_endpoints_);
   cluster_name_.Swap(&other->cluster_name_);
   swap(policy_, other->policy_);
   _internal_metadata_.Swap(&other->_internal_metadata_);

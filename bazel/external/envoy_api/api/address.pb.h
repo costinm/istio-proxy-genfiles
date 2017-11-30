@@ -31,6 +31,7 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include <google/protobuf/wrappers.pb.h>
+#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2faddress_2eproto {
@@ -192,7 +193,7 @@ class Pipe : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // string path = 1;
+  // string path = 1 [(.validate.rules) = {
   void clear_path();
   static const int kPathFieldNumber = 1;
   const ::std::string& path() const;
@@ -359,7 +360,7 @@ class SocketAddress : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_resolver_name();
   void set_allocated_resolver_name(::std::string* resolver_name);
 
-  // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+  // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
   void clear_protocol();
   static const int kProtocolFieldNumber = 1;
   ::envoy::api::v2::SocketAddress_Protocol protocol() const;
@@ -500,7 +501,7 @@ class BindConfig : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // .envoy.api.v2.SocketAddress source_address = 1;
+  // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
   bool has_source_address() const;
   void clear_source_address();
   static const int kSourceAddressFieldNumber = 1;
@@ -732,7 +733,7 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // string address_prefix = 1;
+  // string address_prefix = 1 [(.validate.rules) = {
   void clear_address_prefix();
   static const int kAddressPrefixFieldNumber = 1;
   const ::std::string& address_prefix() const;
@@ -746,7 +747,7 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_address_prefix();
   void set_allocated_address_prefix(::std::string* address_prefix);
 
-  // .google.protobuf.UInt32Value prefix_len = 2;
+  // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
   bool has_prefix_len() const;
   void clear_prefix_len();
   static const int kPrefixLenFieldNumber = 2;
@@ -776,7 +777,7 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
 #endif  // __GNUC__
 // Pipe
 
-// string path = 1;
+// string path = 1 [(.validate.rules) = {
 inline void Pipe::clear_path() {
   path_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -833,7 +834,7 @@ inline void Pipe::set_allocated_path(::std::string* path) {
 
 // SocketAddress
 
-// .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+// .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
 inline void SocketAddress::clear_protocol() {
   protocol_ = 0;
 }
@@ -1090,7 +1091,7 @@ inline SocketAddress::PortSpecifierCase SocketAddress::port_specifier_case() con
 
 // BindConfig
 
-// .envoy.api.v2.SocketAddress source_address = 1;
+// .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
 inline bool BindConfig::has_source_address() const {
   return this != internal_default_instance() && source_address_ != NULL;
 }
@@ -1237,7 +1238,7 @@ inline Address::AddressCase Address::address_case() const {
 
 // CidrRange
 
-// string address_prefix = 1;
+// string address_prefix = 1 [(.validate.rules) = {
 inline void CidrRange::clear_address_prefix() {
   address_prefix_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1290,7 +1291,7 @@ inline void CidrRange::set_allocated_address_prefix(::std::string* address_prefi
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CidrRange.address_prefix)
 }
 
-// .google.protobuf.UInt32Value prefix_len = 2;
+// .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
 inline bool CidrRange::has_prefix_len() const {
   return this != internal_default_instance() && prefix_len_ != NULL;
 }

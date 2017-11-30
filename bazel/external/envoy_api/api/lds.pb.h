@@ -28,6 +28,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "api/address.pb.h"
 #include "api/base.pb.h"
@@ -98,6 +99,27 @@ namespace envoy {
 namespace api {
 namespace v2 {
 
+enum Listener_DrainType {
+  Listener_DrainType_DEFAULT = 0,
+  Listener_DrainType_MODIFY_ONLY = 1,
+  Listener_DrainType_Listener_DrainType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  Listener_DrainType_Listener_DrainType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool Listener_DrainType_IsValid(int value);
+const Listener_DrainType Listener_DrainType_DrainType_MIN = Listener_DrainType_DEFAULT;
+const Listener_DrainType Listener_DrainType_DrainType_MAX = Listener_DrainType_MODIFY_ONLY;
+const int Listener_DrainType_DrainType_ARRAYSIZE = Listener_DrainType_DrainType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* Listener_DrainType_descriptor();
+inline const ::std::string& Listener_DrainType_Name(Listener_DrainType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Listener_DrainType_descriptor(), value);
+}
+inline bool Listener_DrainType_Parse(
+    const ::std::string& name, Listener_DrainType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Listener_DrainType>(
+    Listener_DrainType_descriptor(), name, value);
+}
 // ===================================================================
 
 class Filter_DeprecatedV1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:envoy.api.v2.Filter.DeprecatedV1) */ {
@@ -655,6 +677,15 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::envoy::api::v2::Metadata* mutable_metadata();
   void set_allocated_metadata(::envoy::api::v2::Metadata* metadata);
 
+  // .envoy.api.v2.TransportSocket transport_socket = 6;
+  bool has_transport_socket() const;
+  void clear_transport_socket();
+  static const int kTransportSocketFieldNumber = 6;
+  const ::envoy::api::v2::TransportSocket& transport_socket() const;
+  ::envoy::api::v2::TransportSocket* release_transport_socket();
+  ::envoy::api::v2::TransportSocket* mutable_transport_socket();
+  void set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket);
+
   // @@protoc_insertion_point(class_scope:envoy.api.v2.FilterChain)
  private:
 
@@ -664,6 +695,7 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::envoy::api::v2::DownstreamTlsContext* tls_context_;
   ::google::protobuf::BoolValue* use_proxy_proto_;
   ::envoy::api::v2::Metadata* metadata_;
+  ::envoy::api::v2::TransportSocket* transport_socket_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2flds_2eproto::TableStruct;
   friend void ::protobuf_api_2flds_2eproto::InitDefaultsFilterChainImpl();
@@ -854,6 +886,32 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   typedef Listener_DeprecatedV1 DeprecatedV1;
 
+  typedef Listener_DrainType DrainType;
+  static const DrainType DEFAULT =
+    Listener_DrainType_DEFAULT;
+  static const DrainType MODIFY_ONLY =
+    Listener_DrainType_MODIFY_ONLY;
+  static inline bool DrainType_IsValid(int value) {
+    return Listener_DrainType_IsValid(value);
+  }
+  static const DrainType DrainType_MIN =
+    Listener_DrainType_DrainType_MIN;
+  static const DrainType DrainType_MAX =
+    Listener_DrainType_DrainType_MAX;
+  static const int DrainType_ARRAYSIZE =
+    Listener_DrainType_DrainType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  DrainType_descriptor() {
+    return Listener_DrainType_descriptor();
+  }
+  static inline const ::std::string& DrainType_Name(DrainType value) {
+    return Listener_DrainType_Name(value);
+  }
+  static inline bool DrainType_Parse(const ::std::string& name,
+      DrainType* value) {
+    return Listener_DrainType_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   // repeated .envoy.api.v2.FilterChain filter_chains = 3;
@@ -927,6 +985,12 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::envoy::api::v2::Listener_DeprecatedV1* mutable_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::Listener_DeprecatedV1* deprecated_v1);
 
+  // .envoy.api.v2.Listener.DrainType drain_type = 8;
+  void clear_drain_type();
+  static const int kDrainTypeFieldNumber = 8;
+  ::envoy::api::v2::Listener_DrainType drain_type() const;
+  void set_drain_type(::envoy::api::v2::Listener_DrainType value);
+
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Listener)
  private:
 
@@ -938,6 +1002,7 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::UInt32Value* per_connection_buffer_limit_bytes_;
   ::envoy::api::v2::Metadata* metadata_;
   ::envoy::api::v2::Listener_DeprecatedV1* deprecated_v1_;
+  int drain_type_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2flds_2eproto::TableStruct;
   friend void ::protobuf_api_2flds_2eproto::InitDefaultsListenerImpl();
@@ -1672,6 +1737,50 @@ inline void FilterChain::set_allocated_metadata(::envoy::api::v2::Metadata* meta
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.metadata)
 }
 
+// .envoy.api.v2.TransportSocket transport_socket = 6;
+inline bool FilterChain::has_transport_socket() const {
+  return this != internal_default_instance() && transport_socket_ != NULL;
+}
+inline const ::envoy::api::v2::TransportSocket& FilterChain::transport_socket() const {
+  const ::envoy::api::v2::TransportSocket* p = transport_socket_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.transport_socket)
+  return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::TransportSocket*>(
+      &::envoy::api::v2::_TransportSocket_default_instance_);
+}
+inline ::envoy::api::v2::TransportSocket* FilterChain::release_transport_socket() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.transport_socket)
+  
+  ::envoy::api::v2::TransportSocket* temp = transport_socket_;
+  transport_socket_ = NULL;
+  return temp;
+}
+inline ::envoy::api::v2::TransportSocket* FilterChain::mutable_transport_socket() {
+  
+  if (transport_socket_ == NULL) {
+    transport_socket_ = new ::envoy::api::v2::TransportSocket;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.transport_socket)
+  return transport_socket_;
+}
+inline void FilterChain::set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(transport_socket_);
+  }
+  if (transport_socket) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      transport_socket = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, transport_socket, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transport_socket_ = transport_socket;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.transport_socket)
+}
+
 // -------------------------------------------------------------------
 
 // Listener_DeprecatedV1
@@ -2036,6 +2145,20 @@ inline void Listener::set_allocated_deprecated_v1(::envoy::api::v2::Listener_Dep
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.deprecated_v1)
 }
 
+// .envoy.api.v2.Listener.DrainType drain_type = 8;
+inline void Listener::clear_drain_type() {
+  drain_type_ = 0;
+}
+inline ::envoy::api::v2::Listener_DrainType Listener::drain_type() const {
+  // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.drain_type)
+  return static_cast< ::envoy::api::v2::Listener_DrainType >(drain_type_);
+}
+inline void Listener::set_drain_type(::envoy::api::v2::Listener_DrainType value) {
+  
+  drain_type_ = value;
+  // @@protoc_insertion_point(field_set:envoy.api.v2.Listener.drain_type)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -2055,6 +2178,18 @@ inline void Listener::set_allocated_deprecated_v1(::envoy::api::v2::Listener_Dep
 }  // namespace v2
 }  // namespace api
 }  // namespace envoy
+
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::envoy::api::v2::Listener_DrainType> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::envoy::api::v2::Listener_DrainType>() {
+  return ::envoy::api::v2::Listener_DrainType_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 

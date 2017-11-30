@@ -358,6 +358,15 @@ class LocalityLbEndpoints : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::UInt32Value* mutable_load_balancing_weight();
   void set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight);
 
+  // .google.protobuf.UInt32Value priority = 5;
+  bool has_priority() const;
+  void clear_priority();
+  static const int kPriorityFieldNumber = 5;
+  const ::google::protobuf::UInt32Value& priority() const;
+  ::google::protobuf::UInt32Value* release_priority();
+  ::google::protobuf::UInt32Value* mutable_priority();
+  void set_allocated_priority(::google::protobuf::UInt32Value* priority);
+
   // @@protoc_insertion_point(class_scope:envoy.api.v2.LocalityLbEndpoints)
  private:
 
@@ -365,6 +374,7 @@ class LocalityLbEndpoints : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LbEndpoint > lb_endpoints_;
   ::envoy::api::v2::Locality* locality_;
   ::google::protobuf::UInt32Value* load_balancing_weight_;
+  ::google::protobuf::UInt32Value* priority_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2feds_2eproto::TableStruct;
   friend void ::protobuf_api_2feds_2eproto::InitDefaultsLocalityLbEndpointsImpl();
@@ -1065,18 +1075,6 @@ class ClusterLoadAssignment : public ::google::protobuf::Message /* @@protoc_ins
   const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
       endpoints() const;
 
-  // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-  int failover_endpoints_size() const;
-  void clear_failover_endpoints();
-  static const int kFailoverEndpointsFieldNumber = 3;
-  const ::envoy::api::v2::LocalityLbEndpoints& failover_endpoints(int index) const;
-  ::envoy::api::v2::LocalityLbEndpoints* mutable_failover_endpoints(int index);
-  ::envoy::api::v2::LocalityLbEndpoints* add_failover_endpoints();
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >*
-      mutable_failover_endpoints();
-  const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
-      failover_endpoints() const;
-
   // string cluster_name = 1;
   void clear_cluster_name();
   static const int kClusterNameFieldNumber = 1;
@@ -1105,7 +1103,6 @@ class ClusterLoadAssignment : public ::google::protobuf::Message /* @@protoc_ins
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints > endpoints_;
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints > failover_endpoints_;
   ::google::protobuf::internal::ArenaStringPtr cluster_name_;
   ::envoy::api::v2::ClusterLoadAssignment_Policy* policy_;
   mutable int _cached_size_;
@@ -1516,6 +1513,51 @@ inline void LocalityLbEndpoints::set_allocated_load_balancing_weight(::google::p
   }
   load_balancing_weight_ = load_balancing_weight;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
+}
+
+// .google.protobuf.UInt32Value priority = 5;
+inline bool LocalityLbEndpoints::has_priority() const {
+  return this != internal_default_instance() && priority_ != NULL;
+}
+inline const ::google::protobuf::UInt32Value& LocalityLbEndpoints::priority() const {
+  const ::google::protobuf::UInt32Value* p = priority_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.LocalityLbEndpoints.priority)
+  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
+      &::google::protobuf::_UInt32Value_default_instance_);
+}
+inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::release_priority() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.priority)
+  
+  ::google::protobuf::UInt32Value* temp = priority_;
+  priority_ = NULL;
+  return temp;
+}
+inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::mutable_priority() {
+  
+  if (priority_ == NULL) {
+    priority_ = new ::google::protobuf::UInt32Value;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.LocalityLbEndpoints.priority)
+  return priority_;
+}
+inline void LocalityLbEndpoints::set_allocated_priority(::google::protobuf::UInt32Value* priority) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(priority_);
+  }
+  if (priority) {
+    ::google::protobuf::Arena* submessage_arena =
+      reinterpret_cast< ::google::protobuf::MessageLite*>(priority)->GetArena();
+    if (message_arena != submessage_arena) {
+      priority = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, priority, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  priority_ = priority;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.priority)
 }
 
 // -------------------------------------------------------------------
@@ -2005,36 +2047,6 @@ inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbE
 ClusterLoadAssignment::endpoints() const {
   // @@protoc_insertion_point(field_list:envoy.api.v2.ClusterLoadAssignment.endpoints)
   return endpoints_;
-}
-
-// repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
-inline int ClusterLoadAssignment::failover_endpoints_size() const {
-  return failover_endpoints_.size();
-}
-inline void ClusterLoadAssignment::clear_failover_endpoints() {
-  failover_endpoints_.Clear();
-}
-inline const ::envoy::api::v2::LocalityLbEndpoints& ClusterLoadAssignment::failover_endpoints(int index) const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
-  return failover_endpoints_.Get(index);
-}
-inline ::envoy::api::v2::LocalityLbEndpoints* ClusterLoadAssignment::mutable_failover_endpoints(int index) {
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
-  return failover_endpoints_.Mutable(index);
-}
-inline ::envoy::api::v2::LocalityLbEndpoints* ClusterLoadAssignment::add_failover_endpoints() {
-  // @@protoc_insertion_point(field_add:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
-  return failover_endpoints_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >*
-ClusterLoadAssignment::mutable_failover_endpoints() {
-  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
-  return &failover_endpoints_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
-ClusterLoadAssignment::failover_endpoints() const {
-  // @@protoc_insertion_point(field_list:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
-  return failover_endpoints_;
 }
 
 // .envoy.api.v2.ClusterLoadAssignment.Policy policy = 4;

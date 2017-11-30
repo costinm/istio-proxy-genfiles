@@ -80,6 +80,11 @@ class ConfigSourceDefaultTypeInternal {
   const ::envoy::api::v2::ApiConfigSource* api_config_source_;
   const ::envoy::api::v2::AggregatedConfigSource* ads_;
 } _ConfigSource_default_instance_;
+class TransportSocketDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<TransportSocket>
+      _instance;
+} _TransportSocket_default_instance_;
 }  // namespace v2
 }  // namespace api
 }  // namespace envoy
@@ -324,7 +329,29 @@ void InitDefaultsConfigSource() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsConfigSourceImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[11];
+void InitDefaultsTransportSocketImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_google_2fprotobuf_2fstruct_2eproto::InitDefaultsListValue();
+  {
+    void* ptr = &::envoy::api::v2::_TransportSocket_default_instance_;
+    new (ptr) ::envoy::api::v2::TransportSocket();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::envoy::api::v2::TransportSocket::InitAsDefaultInstance();
+}
+
+void InitDefaultsTransportSocket() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTransportSocketImpl);
+}
+
+::google::protobuf::Metadata file_level_metadata[12];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -410,6 +437,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   offsetof(::envoy::api::v2::ConfigSourceDefaultTypeInternal, api_config_source_),
   offsetof(::envoy::api::v2::ConfigSourceDefaultTypeInternal, ads_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::ConfigSource, config_source_specifier_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::TransportSocket, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::TransportSocket, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::TransportSocket, config_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::envoy::api::v2::Locality)},
@@ -423,6 +457,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 60, -1, sizeof(::envoy::api::v2::ApiConfigSource)},
   { 68, -1, sizeof(::envoy::api::v2::AggregatedConfigSource)},
   { 73, -1, sizeof(::envoy::api::v2::ConfigSource)},
+  { 82, -1, sizeof(::envoy::api::v2::TransportSocket)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -437,6 +472,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::envoy::api::v2::_ApiConfigSource_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::envoy::api::v2::_AggregatedConfigSource_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::envoy::api::v2::_ConfigSource_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::envoy::api::v2::_TransportSocket_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -455,7 +491,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 11);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
 }
 
 void AddDescriptorsImpl() {
@@ -464,46 +500,51 @@ void AddDescriptorsImpl() {
       "\n\016api/base.proto\022\014envoy.api.v2\032\021api/addr"
       "ess.proto\032\036google/protobuf/duration.prot"
       "o\032\034google/protobuf/struct.proto\032\036google/"
-      "protobuf/wrappers.proto\":\n\010Locality\022\016\n\006r"
-      "egion\030\001 \001(\t\022\014\n\004zone\030\002 \001(\t\022\020\n\010sub_zone\030\003 "
-      "\001(\t\"\217\001\n\004Node\022\n\n\002id\030\001 \001(\t\022\017\n\007cluster\030\002 \001("
-      "\t\022)\n\010metadata\030\003 \001(\0132\027.google.protobuf.St"
-      "ruct\022(\n\010locality\030\004 \001(\0132\026.envoy.api.v2.Lo"
-      "cality\022\025\n\rbuild_version\030\005 \001(\t\"2\n\010Endpoin"
-      "t\022&\n\007address\030\001 \001(\0132\025.envoy.api.v2.Addres"
-      "s\"\237\001\n\010Metadata\022C\n\017filter_metadata\030\001 \003(\0132"
-      "*.envoy.api.v2.Metadata.FilterMetadataEn"
-      "try\032N\n\023FilterMetadataEntry\022\013\n\003key\030\001 \001(\t\022"
-      "&\n\005value\030\002 \001(\0132\027.google.protobuf.Struct:"
-      "\0028\001\";\n\rRuntimeUInt32\022\025\n\rdefault_value\030\002 "
-      "\001(\r\022\023\n\013runtime_key\030\003 \001(\t\")\n\013HeaderValue\022"
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"j\n\021HeaderVal"
-      "ueOption\022)\n\006header\030\001 \001(\0132\031.envoy.api.v2."
-      "HeaderValue\022*\n\006append\030\002 \001(\0132\032.google.pro"
-      "tobuf.BoolValue\"\302\001\n\017ApiConfigSource\0227\n\010a"
-      "pi_type\030\001 \001(\0162%.envoy.api.v2.ApiConfigSo"
-      "urce.ApiType\022\024\n\014cluster_name\030\002 \003(\t\0220\n\rre"
-      "fresh_delay\030\003 \001(\0132\031.google.protobuf.Dura"
-      "tion\".\n\007ApiType\022\017\n\013REST_LEGACY\020\000\022\010\n\004REST"
-      "\020\001\022\010\n\004GRPC\020\002\"\030\n\026AggregatedConfigSource\"\252"
-      "\001\n\014ConfigSource\022\016\n\004path\030\001 \001(\tH\000\022:\n\021api_c"
-      "onfig_source\030\002 \001(\0132\035.envoy.api.v2.ApiCon"
-      "figSourceH\000\0223\n\003ads\030\003 \001(\0132$.envoy.api.v2."
-      "AggregatedConfigSourceH\000B\031\n\027config_sourc"
-      "e_specifier*(\n\017RoutingPriority\022\013\n\007DEFAUL"
-      "T\020\000\022\010\n\004HIGH\020\001*~\n\rRequestMethod\022\026\n\022METHOD"
-      "_UNSPECIFIED\020\000\022\007\n\003GET\020\001\022\010\n\004HEAD\020\002\022\010\n\004POS"
-      "T\020\003\022\007\n\003PUT\020\004\022\n\n\006DELETE\020\005\022\013\n\007CONNECT\020\006\022\013\n"
-      "\007OPTIONS\020\007\022\t\n\005TRACE\020\010B\005Z\003apib\006proto3"
+      "protobuf/wrappers.proto\032\027validate/valida"
+      "te.proto\":\n\010Locality\022\016\n\006region\030\001 \001(\t\022\014\n\004"
+      "zone\030\002 \001(\t\022\020\n\010sub_zone\030\003 \001(\t\"\245\001\n\004Node\022\025\n"
+      "\002id\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022\032\n\007cluster\030\002 \001(\tB\t\272"
+      "\351\300\003\004r\002\020\001\022)\n\010metadata\030\003 \001(\0132\027.google.prot"
+      "obuf.Struct\022(\n\010locality\030\004 \001(\0132\026.envoy.ap"
+      "i.v2.Locality\022\025\n\rbuild_version\030\005 \001(\t\"2\n\010"
+      "Endpoint\022&\n\007address\030\001 \001(\0132\025.envoy.api.v2"
+      ".Address\"\237\001\n\010Metadata\022C\n\017filter_metadata"
+      "\030\001 \003(\0132*.envoy.api.v2.Metadata.FilterMet"
+      "adataEntry\032N\n\023FilterMetadataEntry\022\013\n\003key"
+      "\030\001 \001(\t\022&\n\005value\030\002 \001(\0132\027.google.protobuf."
+      "Struct:\0028\001\"F\n\rRuntimeUInt32\022\025\n\rdefault_v"
+      "alue\030\002 \001(\r\022\036\n\013runtime_key\030\003 \001(\tB\t\272\351\300\003\004r\002"
+      "\020\001\")\n\013HeaderValue\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030"
+      "\002 \001(\t\"j\n\021HeaderValueOption\022)\n\006header\030\001 \001"
+      "(\0132\031.envoy.api.v2.HeaderValue\022*\n\006append\030"
+      "\002 \001(\0132\032.google.protobuf.BoolValue\"\316\001\n\017Ap"
+      "iConfigSource\0227\n\010api_type\030\001 \001(\0162%.envoy."
+      "api.v2.ApiConfigSource.ApiType\022 \n\014cluste"
+      "r_name\030\002 \003(\tB\n\272\351\300\003\005\222\001\002\010\001\0220\n\rrefresh_dela"
+      "y\030\003 \001(\0132\031.google.protobuf.Duration\".\n\007Ap"
+      "iType\022\017\n\013REST_LEGACY\020\000\022\010\n\004REST\020\001\022\010\n\004GRPC"
+      "\020\002\"\030\n\026AggregatedConfigSource\"\261\001\n\014ConfigS"
+      "ource\022\016\n\004path\030\001 \001(\tH\000\022:\n\021api_config_sour"
+      "ce\030\002 \001(\0132\035.envoy.api.v2.ApiConfigSourceH"
+      "\000\0223\n\003ads\030\003 \001(\0132$.envoy.api.v2.Aggregated"
+      "ConfigSourceH\000B \n\027config_source_specifie"
+      "r\022\005\270\351\300\003\001\"S\n\017TransportSocket\022\027\n\004name\030\001 \001("
+      "\tB\t\272\351\300\003\004r\002\020\001\022\'\n\006config\030\002 \001(\0132\027.google.pr"
+      "otobuf.Struct*(\n\017RoutingPriority\022\013\n\007DEFA"
+      "ULT\020\000\022\010\n\004HIGH\020\001*~\n\rRequestMethod\022\026\n\022METH"
+      "OD_UNSPECIFIED\020\000\022\007\n\003GET\020\001\022\010\n\004HEAD\020\002\022\010\n\004P"
+      "OST\020\003\022\007\n\003PUT\020\004\022\n\n\006DELETE\020\005\022\013\n\007CONNECT\020\006\022"
+      "\013\n\007OPTIONS\020\007\022\t\n\005TRACE\020\010B\005Z\003apib\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1356);
+      descriptor, 1518);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/base.proto", &protobuf_RegisterTypes);
   ::protobuf_api_2faddress_2eproto::AddDescriptors();
   ::protobuf_google_2fprotobuf_2fduration_2eproto::AddDescriptors();
   ::protobuf_google_2fprotobuf_2fstruct_2eproto::AddDescriptors();
   ::protobuf_google_2fprotobuf_2fwrappers_2eproto::AddDescriptors();
+  ::protobuf_validate_2fvalidate_2eproto::AddDescriptors();
 }
 
 void AddDescriptors() {
@@ -1085,7 +1126,7 @@ bool Node::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string id = 1;
+      // string id = 1 [(.validate.rules) = {
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -1101,7 +1142,7 @@ bool Node::MergePartialFromCodedStream(
         break;
       }
 
-      // string cluster = 2;
+      // string cluster = 2 [(.validate.rules) = {
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -1183,7 +1224,7 @@ void Node::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string id = 1;
+  // string id = 1 [(.validate.rules) = {
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
@@ -1193,7 +1234,7 @@ void Node::SerializeWithCachedSizes(
       1, this->id(), output);
   }
 
-  // string cluster = 2;
+  // string cluster = 2 [(.validate.rules) = {
   if (this->cluster().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster().data(), static_cast<int>(this->cluster().length()),
@@ -1239,7 +1280,7 @@ void Node::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string id = 1;
+  // string id = 1 [(.validate.rules) = {
   if (this->id().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
@@ -1250,7 +1291,7 @@ void Node::SerializeWithCachedSizes(
         1, this->id(), target);
   }
 
-  // string cluster = 2;
+  // string cluster = 2 [(.validate.rules) = {
   if (this->cluster().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster().data(), static_cast<int>(this->cluster().length()),
@@ -1303,14 +1344,14 @@ size_t Node::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string id = 1;
+  // string id = 1 [(.validate.rules) = {
   if (this->id().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->id());
   }
 
-  // string cluster = 2;
+  // string cluster = 2 [(.validate.rules) = {
   if (this->cluster().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -2147,7 +2188,7 @@ bool RuntimeUInt32::MergePartialFromCodedStream(
         break;
       }
 
-      // string runtime_key = 3;
+      // string runtime_key = 3 [(.validate.rules) = {
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
@@ -2194,7 +2235,7 @@ void RuntimeUInt32::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->default_value(), output);
   }
 
-  // string runtime_key = 3;
+  // string runtime_key = 3 [(.validate.rules) = {
   if (this->runtime_key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->runtime_key().data(), static_cast<int>(this->runtime_key().length()),
@@ -2223,7 +2264,7 @@ void RuntimeUInt32::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->default_value(), target);
   }
 
-  // string runtime_key = 3;
+  // string runtime_key = 3 [(.validate.rules) = {
   if (this->runtime_key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->runtime_key().data(), static_cast<int>(this->runtime_key().length()),
@@ -2251,7 +2292,7 @@ size_t RuntimeUInt32::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string runtime_key = 3;
+  // string runtime_key = 3 [(.validate.rules) = {
   if (this->runtime_key().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -3078,7 +3119,7 @@ bool ApiConfigSource::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string cluster_name = 2;
+      // repeated string cluster_name = 2 [(.validate.rules) = {
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -3139,7 +3180,7 @@ void ApiConfigSource::SerializeWithCachedSizes(
       1, this->api_type(), output);
   }
 
-  // repeated string cluster_name = 2;
+  // repeated string cluster_name = 2 [(.validate.rules) = {
   for (int i = 0, n = this->cluster_name_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster_name(i).data(), static_cast<int>(this->cluster_name(i).length()),
@@ -3175,7 +3216,7 @@ void ApiConfigSource::SerializeWithCachedSizes(
       1, this->api_type(), target);
   }
 
-  // repeated string cluster_name = 2;
+  // repeated string cluster_name = 2 [(.validate.rules) = {
   for (int i = 0, n = this->cluster_name_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster_name(i).data(), static_cast<int>(this->cluster_name(i).length()),
@@ -3209,7 +3250,7 @@ size_t ApiConfigSource::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated string cluster_name = 2;
+  // repeated string cluster_name = 2 [(.validate.rules) = {
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->cluster_name_size());
   for (int i = 0, n = this->cluster_name_size(); i < n; i++) {
@@ -3908,6 +3949,318 @@ void ConfigSource::InternalSwap(ConfigSource* other) {
 }
 
 ::google::protobuf::Metadata ConfigSource::GetMetadata() const {
+  protobuf_api_2fbase_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_api_2fbase_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void TransportSocket::InitAsDefaultInstance() {
+  ::envoy::api::v2::_TransportSocket_default_instance_._instance.get_mutable()->config_ = const_cast< ::google::protobuf::Struct*>(
+      ::google::protobuf::Struct::internal_default_instance());
+}
+void TransportSocket::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) {
+    delete config_;
+  }
+  config_ = NULL;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int TransportSocket::kNameFieldNumber;
+const int TransportSocket::kConfigFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+TransportSocket::TransportSocket()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_api_2fbase_2eproto::InitDefaultsTransportSocket();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:envoy.api.v2.TransportSocket)
+}
+TransportSocket::TransportSocket(const TransportSocket& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.name().size() > 0) {
+    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.has_config()) {
+    config_ = new ::google::protobuf::Struct(*from.config_);
+  } else {
+    config_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:envoy.api.v2.TransportSocket)
+}
+
+void TransportSocket::SharedCtor() {
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  config_ = NULL;
+  _cached_size_ = 0;
+}
+
+TransportSocket::~TransportSocket() {
+  // @@protoc_insertion_point(destructor:envoy.api.v2.TransportSocket)
+  SharedDtor();
+}
+
+void TransportSocket::SharedDtor() {
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete config_;
+}
+
+void TransportSocket::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* TransportSocket::descriptor() {
+  ::protobuf_api_2fbase_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_api_2fbase_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const TransportSocket& TransportSocket::default_instance() {
+  ::protobuf_api_2fbase_2eproto::InitDefaultsTransportSocket();
+  return *internal_default_instance();
+}
+
+TransportSocket* TransportSocket::New(::google::protobuf::Arena* arena) const {
+  TransportSocket* n = new TransportSocket;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void TransportSocket::Clear() {
+// @@protoc_insertion_point(message_clear_start:envoy.api.v2.TransportSocket)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) {
+    delete config_;
+  }
+  config_ = NULL;
+  _internal_metadata_.Clear();
+}
+
+bool TransportSocket::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:envoy.api.v2.TransportSocket)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string name = 1 [(.validate.rules) = {
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->name().data(), static_cast<int>(this->name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "envoy.api.v2.TransportSocket.name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.Struct config = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_config()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:envoy.api.v2.TransportSocket)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:envoy.api.v2.TransportSocket)
+  return false;
+#undef DO_
+}
+
+void TransportSocket::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:envoy.api.v2.TransportSocket)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1 [(.validate.rules) = {
+  if (this->name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->name().data(), static_cast<int>(this->name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "envoy.api.v2.TransportSocket.name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->name(), output);
+  }
+
+  // .google.protobuf.Struct config = 2;
+  if (this->has_config()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, *this->config_, output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:envoy.api.v2.TransportSocket)
+}
+
+::google::protobuf::uint8* TransportSocket::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:envoy.api.v2.TransportSocket)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1 [(.validate.rules) = {
+  if (this->name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->name().data(), static_cast<int>(this->name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "envoy.api.v2.TransportSocket.name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->name(), target);
+  }
+
+  // .google.protobuf.Struct config = 2;
+  if (this->has_config()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, *this->config_, deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:envoy.api.v2.TransportSocket)
+  return target;
+}
+
+size_t TransportSocket::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:envoy.api.v2.TransportSocket)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string name = 1 [(.validate.rules) = {
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->name());
+  }
+
+  // .google.protobuf.Struct config = 2;
+  if (this->has_config()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->config_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void TransportSocket::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:envoy.api.v2.TransportSocket)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TransportSocket* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const TransportSocket>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:envoy.api.v2.TransportSocket)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:envoy.api.v2.TransportSocket)
+    MergeFrom(*source);
+  }
+}
+
+void TransportSocket::MergeFrom(const TransportSocket& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:envoy.api.v2.TransportSocket)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.has_config()) {
+    mutable_config()->::google::protobuf::Struct::MergeFrom(from.config());
+  }
+}
+
+void TransportSocket::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:envoy.api.v2.TransportSocket)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TransportSocket::CopyFrom(const TransportSocket& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:envoy.api.v2.TransportSocket)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TransportSocket::IsInitialized() const {
+  return true;
+}
+
+void TransportSocket::Swap(TransportSocket* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void TransportSocket::InternalSwap(TransportSocket* other) {
+  using std::swap;
+  name_.Swap(&other->name_);
+  swap(config_, other->config_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata TransportSocket::GetMetadata() const {
   protobuf_api_2fbase_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_api_2fbase_2eproto::file_level_metadata[kIndexInFileMessages];
 }

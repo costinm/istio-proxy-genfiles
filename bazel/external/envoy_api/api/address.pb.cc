@@ -246,26 +246,29 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\021api/address.proto\022\014envoy.api.v2\032\036googl"
-      "e/protobuf/wrappers.proto\"\024\n\004Pipe\022\014\n\004pat"
-      "h\030\001 \001(\t\"\313\001\n\rSocketAddress\0226\n\010protocol\030\001 "
-      "\001(\0162$.envoy.api.v2.SocketAddress.Protoco"
-      "l\022\017\n\007address\030\002 \001(\t\022\024\n\nport_value\030\003 \001(\rH\000"
-      "\022\024\n\nnamed_port\030\004 \001(\tH\000\022\025\n\rresolver_name\030"
-      "\005 \001(\t\"\034\n\010Protocol\022\007\n\003TCP\020\000\022\007\n\003UDP\020\001B\020\n\016p"
-      "ort_specifier\"A\n\nBindConfig\0223\n\016source_ad"
-      "dress\030\001 \001(\0132\033.envoy.api.v2.SocketAddress"
-      "\"o\n\007Address\0225\n\016socket_address\030\001 \001(\0132\033.en"
-      "voy.api.v2.SocketAddressH\000\022\"\n\004pipe\030\002 \001(\013"
-      "2\022.envoy.api.v2.PipeH\000B\t\n\007address\"U\n\tCid"
-      "rRange\022\026\n\016address_prefix\030\001 \001(\t\0220\n\nprefix"
-      "_len\030\002 \001(\0132\034.google.protobuf.UInt32Value"
-      "b\006proto3"
+      "e/protobuf/wrappers.proto\032\027validate/vali"
+      "date.proto\"\037\n\004Pipe\022\027\n\004path\030\001 \001(\tB\t\272\351\300\003\004r"
+      "\002\020\001\"\336\001\n\rSocketAddress\022B\n\010protocol\030\001 \001(\0162"
+      "$.envoy.api.v2.SocketAddress.ProtocolB\n\272"
+      "\351\300\003\005\202\001\002\030\000\022\017\n\007address\030\002 \001(\t\022\024\n\nport_value"
+      "\030\003 \001(\rH\000\022\024\n\nnamed_port\030\004 \001(\tH\000\022\025\n\rresolv"
+      "er_name\030\005 \001(\t\"\034\n\010Protocol\022\007\n\003TCP\020\000\022\007\n\003UD"
+      "P\020\001B\027\n\016port_specifier\022\005\270\351\300\003\001\"M\n\nBindConf"
+      "ig\022\?\n\016source_address\030\001 \001(\0132\033.envoy.api.v"
+      "2.SocketAddressB\n\272\351\300\003\005\212\001\002\020\001\"v\n\007Address\0225"
+      "\n\016socket_address\030\001 \001(\0132\033.envoy.api.v2.So"
+      "cketAddressH\000\022\"\n\004pipe\030\002 \001(\0132\022.envoy.api."
+      "v2.PipeH\000B\020\n\007address\022\005\270\351\300\003\001\"l\n\tCidrRange"
+      "\022!\n\016address_prefix\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022<\n\np"
+      "refix_len\030\002 \001(\0132\034.google.protobuf.UInt32"
+      "ValueB\n\272\351\300\003\005*\003\030\200\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 568);
+      descriptor, 665);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/address.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2fwrappers_2eproto::AddDescriptors();
+  ::protobuf_validate_2fvalidate_2eproto::AddDescriptors();
 }
 
 void AddDescriptors() {
@@ -389,7 +392,7 @@ bool Pipe::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string path = 1;
+      // string path = 1 [(.validate.rules) = {
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -431,7 +434,7 @@ void Pipe::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string path = 1;
+  // string path = 1 [(.validate.rules) = {
   if (this->path().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->path().data(), static_cast<int>(this->path().length()),
@@ -455,7 +458,7 @@ void Pipe::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string path = 1;
+  // string path = 1 [(.validate.rules) = {
   if (this->path().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->path().data(), static_cast<int>(this->path().length()),
@@ -483,7 +486,7 @@ size_t Pipe::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string path = 1;
+  // string path = 1 [(.validate.rules) = {
   if (this->path().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -700,7 +703,7 @@ bool SocketAddress::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+      // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
@@ -804,7 +807,7 @@ void SocketAddress::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+  // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
   if (this->protocol() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->protocol(), output);
@@ -859,7 +862,7 @@ void SocketAddress::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+  // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
   if (this->protocol() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->protocol(), target);
@@ -934,7 +937,7 @@ size_t SocketAddress::ByteSizeLong() const {
         this->resolver_name());
   }
 
-  // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
+  // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
   if (this->protocol() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->protocol());
@@ -1144,7 +1147,7 @@ bool BindConfig::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .envoy.api.v2.SocketAddress source_address = 1;
+      // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -1182,7 +1185,7 @@ void BindConfig::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.SocketAddress source_address = 1;
+  // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
   if (this->has_source_address()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->source_address_, output);
@@ -1202,7 +1205,7 @@ void BindConfig::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.SocketAddress source_address = 1;
+  // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
   if (this->has_source_address()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -1226,7 +1229,7 @@ size_t BindConfig::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .envoy.api.v2.SocketAddress source_address = 1;
+  // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
   if (this->has_source_address()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -1762,7 +1765,7 @@ bool CidrRange::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string address_prefix = 1;
+      // string address_prefix = 1 [(.validate.rules) = {
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -1778,7 +1781,7 @@ bool CidrRange::MergePartialFromCodedStream(
         break;
       }
 
-      // .google.protobuf.UInt32Value prefix_len = 2;
+      // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -1816,7 +1819,7 @@ void CidrRange::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string address_prefix = 1;
+  // string address_prefix = 1 [(.validate.rules) = {
   if (this->address_prefix().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->address_prefix().data(), static_cast<int>(this->address_prefix().length()),
@@ -1826,7 +1829,7 @@ void CidrRange::SerializeWithCachedSizes(
       1, this->address_prefix(), output);
   }
 
-  // .google.protobuf.UInt32Value prefix_len = 2;
+  // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
   if (this->has_prefix_len()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->prefix_len_, output);
@@ -1846,7 +1849,7 @@ void CidrRange::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string address_prefix = 1;
+  // string address_prefix = 1 [(.validate.rules) = {
   if (this->address_prefix().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->address_prefix().data(), static_cast<int>(this->address_prefix().length()),
@@ -1857,7 +1860,7 @@ void CidrRange::SerializeWithCachedSizes(
         1, this->address_prefix(), target);
   }
 
-  // .google.protobuf.UInt32Value prefix_len = 2;
+  // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
   if (this->has_prefix_len()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -1881,14 +1884,14 @@ size_t CidrRange::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string address_prefix = 1;
+  // string address_prefix = 1 [(.validate.rules) = {
   if (this->address_prefix().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->address_prefix());
   }
 
-  // .google.protobuf.UInt32Value prefix_len = 2;
+  // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
   if (this->has_prefix_len()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(

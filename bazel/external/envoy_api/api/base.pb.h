@@ -37,6 +37,7 @@
 #include <google/protobuf/duration.pb.h>
 #include <google/protobuf/struct.pb.h>
 #include <google/protobuf/wrappers.pb.h>
+#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2fbase_2eproto {
@@ -44,7 +45,7 @@ namespace protobuf_api_2fbase_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[11];
+  static const ::google::protobuf::internal::ParseTable schema[12];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -72,6 +73,8 @@ void InitDefaultsAggregatedConfigSourceImpl();
 void InitDefaultsAggregatedConfigSource();
 void InitDefaultsConfigSourceImpl();
 void InitDefaultsConfigSource();
+void InitDefaultsTransportSocketImpl();
+void InitDefaultsTransportSocket();
 inline void InitDefaults() {
   InitDefaultsLocality();
   InitDefaultsNode();
@@ -84,6 +87,7 @@ inline void InitDefaults() {
   InitDefaultsApiConfigSource();
   InitDefaultsAggregatedConfigSource();
   InitDefaultsConfigSource();
+  InitDefaultsTransportSocket();
 }
 }  // namespace protobuf_api_2fbase_2eproto
 namespace envoy {
@@ -122,6 +126,9 @@ extern NodeDefaultTypeInternal _Node_default_instance_;
 class RuntimeUInt32;
 class RuntimeUInt32DefaultTypeInternal;
 extern RuntimeUInt32DefaultTypeInternal _RuntimeUInt32_default_instance_;
+class TransportSocket;
+class TransportSocketDefaultTypeInternal;
+extern TransportSocketDefaultTypeInternal _TransportSocket_default_instance_;
 }  // namespace v2
 }  // namespace api
 }  // namespace envoy
@@ -421,7 +428,7 @@ class Node : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // string id = 1;
+  // string id = 1 [(.validate.rules) = {
   void clear_id();
   static const int kIdFieldNumber = 1;
   const ::std::string& id() const;
@@ -435,7 +442,7 @@ class Node : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   ::std::string* release_id();
   void set_allocated_id(::std::string* id);
 
-  // string cluster = 2;
+  // string cluster = 2 [(.validate.rules) = {
   void clear_cluster();
   static const int kClusterFieldNumber = 2;
   const ::std::string& cluster() const;
@@ -809,7 +816,7 @@ class RuntimeUInt32 : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // string runtime_key = 3;
+  // string runtime_key = 3 [(.validate.rules) = {
   void clear_runtime_key();
   static const int kRuntimeKeyFieldNumber = 3;
   const ::std::string& runtime_key() const;
@@ -1185,7 +1192,7 @@ class ApiConfigSource : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // repeated string cluster_name = 2;
+  // repeated string cluster_name = 2 [(.validate.rules) = {
   int cluster_name_size() const;
   void clear_cluster_name();
   static const int kClusterNameFieldNumber = 2;
@@ -1475,6 +1482,123 @@ class ConfigSource : public ::google::protobuf::Message /* @@protoc_insertion_po
   friend struct ::protobuf_api_2fbase_2eproto::TableStruct;
   friend void ::protobuf_api_2fbase_2eproto::InitDefaultsConfigSourceImpl();
 };
+// -------------------------------------------------------------------
+
+class TransportSocket : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:envoy.api.v2.TransportSocket) */ {
+ public:
+  TransportSocket();
+  virtual ~TransportSocket();
+
+  TransportSocket(const TransportSocket& from);
+
+  inline TransportSocket& operator=(const TransportSocket& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TransportSocket(TransportSocket&& from) noexcept
+    : TransportSocket() {
+    *this = ::std::move(from);
+  }
+
+  inline TransportSocket& operator=(TransportSocket&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TransportSocket& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TransportSocket* internal_default_instance() {
+    return reinterpret_cast<const TransportSocket*>(
+               &_TransportSocket_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    11;
+
+  void Swap(TransportSocket* other);
+  friend void swap(TransportSocket& a, TransportSocket& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TransportSocket* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  TransportSocket* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const TransportSocket& from);
+  void MergeFrom(const TransportSocket& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(TransportSocket* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string name = 1 [(.validate.rules) = {
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // .google.protobuf.Struct config = 2;
+  bool has_config() const;
+  void clear_config();
+  static const int kConfigFieldNumber = 2;
+  const ::google::protobuf::Struct& config() const;
+  ::google::protobuf::Struct* release_config();
+  ::google::protobuf::Struct* mutable_config();
+  void set_allocated_config(::google::protobuf::Struct* config);
+
+  // @@protoc_insertion_point(class_scope:envoy.api.v2.TransportSocket)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::Struct* config_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_api_2fbase_2eproto::TableStruct;
+  friend void ::protobuf_api_2fbase_2eproto::InitDefaultsTransportSocketImpl();
+};
 // ===================================================================
 
 
@@ -1649,7 +1773,7 @@ inline void Locality::set_allocated_sub_zone(::std::string* sub_zone) {
 
 // Node
 
-// string id = 1;
+// string id = 1 [(.validate.rules) = {
 inline void Node::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1702,7 +1826,7 @@ inline void Node::set_allocated_id(::std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Node.id)
 }
 
-// string cluster = 2;
+// string cluster = 2 [(.validate.rules) = {
 inline void Node::clear_cluster() {
   cluster_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1990,7 +2114,7 @@ inline void RuntimeUInt32::set_default_value(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:envoy.api.v2.RuntimeUInt32.default_value)
 }
 
-// string runtime_key = 3;
+// string runtime_key = 3 [(.validate.rules) = {
 inline void RuntimeUInt32::clear_runtime_key() {
   runtime_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2270,7 +2394,7 @@ inline void ApiConfigSource::set_api_type(::envoy::api::v2::ApiConfigSource_ApiT
   // @@protoc_insertion_point(field_set:envoy.api.v2.ApiConfigSource.api_type)
 }
 
-// repeated string cluster_name = 2;
+// repeated string cluster_name = 2 [(.validate.rules) = {
 inline int ApiConfigSource::cluster_name_size() const {
   return cluster_name_.size();
 }
@@ -2576,9 +2700,113 @@ inline void ConfigSource::clear_has_config_source_specifier() {
 inline ConfigSource::ConfigSourceSpecifierCase ConfigSource::config_source_specifier_case() const {
   return ConfigSource::ConfigSourceSpecifierCase(_oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// TransportSocket
+
+// string name = 1 [(.validate.rules) = {
+inline void TransportSocket::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& TransportSocket::name() const {
+  // @@protoc_insertion_point(field_get:envoy.api.v2.TransportSocket.name)
+  return name_.GetNoArena();
+}
+inline void TransportSocket::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:envoy.api.v2.TransportSocket.name)
+}
+#if LANG_CXX11
+inline void TransportSocket::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:envoy.api.v2.TransportSocket.name)
+}
+#endif
+inline void TransportSocket::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:envoy.api.v2.TransportSocket.name)
+}
+inline void TransportSocket::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:envoy.api.v2.TransportSocket.name)
+}
+inline ::std::string* TransportSocket::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.TransportSocket.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TransportSocket::release_name() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TransportSocket.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransportSocket::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TransportSocket.name)
+}
+
+// .google.protobuf.Struct config = 2;
+inline bool TransportSocket::has_config() const {
+  return this != internal_default_instance() && config_ != NULL;
+}
+inline const ::google::protobuf::Struct& TransportSocket::config() const {
+  const ::google::protobuf::Struct* p = config_;
+  // @@protoc_insertion_point(field_get:envoy.api.v2.TransportSocket.config)
+  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
+      &::google::protobuf::_Struct_default_instance_);
+}
+inline ::google::protobuf::Struct* TransportSocket::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TransportSocket.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
+inline ::google::protobuf::Struct* TransportSocket::mutable_config() {
+  
+  if (config_ == NULL) {
+    config_ = new ::google::protobuf::Struct;
+  }
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.TransportSocket.config)
+  return config_;
+}
+inline void TransportSocket::set_allocated_config(::google::protobuf::Struct* config) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  }
+  if (config) {
+    ::google::protobuf::Arena* submessage_arena =
+      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
+    if (message_arena != submessage_arena) {
+      config = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, config, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  config_ = config;
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TransportSocket.config)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
