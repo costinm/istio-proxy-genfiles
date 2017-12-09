@@ -321,13 +321,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_selector();
   ::std::string* release_selector();
   void set_allocated_selector(::std::string* selector);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_selector();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_selector(
       ::std::string* selector);
 
@@ -344,13 +338,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_body();
   ::std::string* release_body();
   void set_allocated_body(::std::string* body);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_body();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_body(
       ::std::string* body);
 
@@ -370,13 +358,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_get();
   ::std::string* release_get();
   void set_allocated_get(::std::string* get);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_get();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_get(
       ::std::string* get);
 
@@ -396,13 +378,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_put();
   ::std::string* release_put();
   void set_allocated_put(::std::string* put);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_put();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_put(
       ::std::string* put);
 
@@ -422,13 +398,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_post();
   ::std::string* release_post();
   void set_allocated_post(::std::string* post);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_post();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_post(
       ::std::string* post);
 
@@ -448,13 +418,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_delete_();
   ::std::string* release_delete_();
   void set_allocated_delete_(::std::string* delete_);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_delete_();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_delete_(
       ::std::string* delete_);
 
@@ -474,13 +438,7 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::std::string* mutable_patch();
   ::std::string* release_patch();
   void set_allocated_patch(::std::string* patch);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_patch();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_patch(
       ::std::string* patch);
 
@@ -490,14 +448,17 @@ class HttpRule : public ::google::protobuf::Message /* @@protoc_insertion_point(
   static const int kCustomFieldNumber = 8;
   private:
   void _slow_mutable_custom();
+  void _slow_set_allocated_custom(
+      ::google::protobuf::Arena* message_arena, ::google::api::CustomHttpPattern** custom);
+  ::google::api::CustomHttpPattern* _slow_release_custom();
   public:
   const ::google::api::CustomHttpPattern& custom() const;
-  ::google::api::CustomHttpPattern* release_custom();
   ::google::api::CustomHttpPattern* mutable_custom();
+  ::google::api::CustomHttpPattern* release_custom();
   void set_allocated_custom(::google::api::CustomHttpPattern* custom);
+  ::google::api::CustomHttpPattern* unsafe_arena_release_custom();
   void unsafe_arena_set_allocated_custom(
       ::google::api::CustomHttpPattern* custom);
-  ::google::api::CustomHttpPattern* unsafe_arena_release_custom();
 
   PatternCase pattern_case() const;
   // @@protoc_insertion_point(class_scope:google.api.HttpRule)
@@ -644,13 +605,7 @@ class CustomHttpPattern : public ::google::protobuf::Message /* @@protoc_inserti
   ::std::string* mutable_kind();
   ::std::string* release_kind();
   void set_allocated_kind(::std::string* kind);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_kind();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_kind(
       ::std::string* kind);
 
@@ -667,13 +622,7 @@ class CustomHttpPattern : public ::google::protobuf::Message /* @@protoc_inserti
   ::std::string* mutable_path();
   ::std::string* release_path();
   void set_allocated_path(::std::string* path);
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   ::std::string* unsafe_arena_release_path();
-  PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
   void unsafe_arena_set_allocated_path(
       ::std::string* path);
 
@@ -780,6 +729,13 @@ inline ::std::string* HttpRule::release_selector() {
   
   return selector_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
+inline ::std::string* HttpRule::unsafe_arena_release_selector() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.selector)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return selector_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
 inline void HttpRule::set_allocated_selector(::std::string* selector) {
   if (selector != NULL) {
     
@@ -789,13 +745,6 @@ inline void HttpRule::set_allocated_selector(::std::string* selector) {
   selector_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), selector,
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.selector)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_selector() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.selector)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  
-  return selector_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      GetArenaNoVirtual());
 }
 inline void HttpRule::unsafe_arena_set_allocated_selector(
     ::std::string* selector) {
@@ -898,6 +847,17 @@ inline ::std::string* HttpRule::release_get() {
     return NULL;
   }
 }
+inline ::std::string* HttpRule::unsafe_arena_release_get() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.get)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_get()) {
+    clear_has_pattern();
+    return pattern_.get_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
 inline void HttpRule::set_allocated_get(::std::string* get) {
   if (!has_get()) {
     pattern_.get_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -909,17 +869,6 @@ inline void HttpRule::set_allocated_get(::std::string* get) {
         GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.get)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_get() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.get)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  if (has_get()) {
-    clear_has_pattern();
-    return pattern_.get_.UnsafeArenaRelease(
-        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  } else {
-    return NULL;
-  }
 }
 inline void HttpRule::unsafe_arena_set_allocated_get(::std::string* get) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
@@ -1022,6 +971,17 @@ inline ::std::string* HttpRule::release_put() {
     return NULL;
   }
 }
+inline ::std::string* HttpRule::unsafe_arena_release_put() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.put)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_put()) {
+    clear_has_pattern();
+    return pattern_.put_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
 inline void HttpRule::set_allocated_put(::std::string* put) {
   if (!has_put()) {
     pattern_.put_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1033,17 +993,6 @@ inline void HttpRule::set_allocated_put(::std::string* put) {
         GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.put)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_put() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.put)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  if (has_put()) {
-    clear_has_pattern();
-    return pattern_.put_.UnsafeArenaRelease(
-        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  } else {
-    return NULL;
-  }
 }
 inline void HttpRule::unsafe_arena_set_allocated_put(::std::string* put) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
@@ -1146,6 +1095,17 @@ inline ::std::string* HttpRule::release_post() {
     return NULL;
   }
 }
+inline ::std::string* HttpRule::unsafe_arena_release_post() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.post)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_post()) {
+    clear_has_pattern();
+    return pattern_.post_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
 inline void HttpRule::set_allocated_post(::std::string* post) {
   if (!has_post()) {
     pattern_.post_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1157,17 +1117,6 @@ inline void HttpRule::set_allocated_post(::std::string* post) {
         GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.post)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_post() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.post)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  if (has_post()) {
-    clear_has_pattern();
-    return pattern_.post_.UnsafeArenaRelease(
-        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  } else {
-    return NULL;
-  }
 }
 inline void HttpRule::unsafe_arena_set_allocated_post(::std::string* post) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
@@ -1270,6 +1219,17 @@ inline ::std::string* HttpRule::release_delete_() {
     return NULL;
   }
 }
+inline ::std::string* HttpRule::unsafe_arena_release_delete_() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.delete)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_delete_()) {
+    clear_has_pattern();
+    return pattern_.delete__.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
 inline void HttpRule::set_allocated_delete_(::std::string* delete_) {
   if (!has_delete_()) {
     pattern_.delete__.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1281,17 +1241,6 @@ inline void HttpRule::set_allocated_delete_(::std::string* delete_) {
         GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.delete)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_delete_() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.delete)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  if (has_delete_()) {
-    clear_has_pattern();
-    return pattern_.delete__.UnsafeArenaRelease(
-        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  } else {
-    return NULL;
-  }
 }
 inline void HttpRule::unsafe_arena_set_allocated_delete_(::std::string* delete_) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
@@ -1394,6 +1343,17 @@ inline ::std::string* HttpRule::release_patch() {
     return NULL;
   }
 }
+inline ::std::string* HttpRule::unsafe_arena_release_patch() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.patch)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_patch()) {
+    clear_has_pattern();
+    return pattern_.patch_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
 inline void HttpRule::set_allocated_patch(::std::string* patch) {
   if (!has_patch()) {
     pattern_.patch_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1405,17 +1365,6 @@ inline void HttpRule::set_allocated_patch(::std::string* patch) {
         GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.patch)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_patch() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.patch)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  if (has_patch()) {
-    clear_has_pattern();
-    return pattern_.patch_.UnsafeArenaRelease(
-        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  } else {
-    return NULL;
-  }
 }
 inline void HttpRule::unsafe_arena_set_allocated_patch(::std::string* patch) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
@@ -1445,25 +1394,58 @@ inline void HttpRule::clear_custom() {
     clear_has_pattern();
   }
 }
+inline  const ::google::api::CustomHttpPattern& HttpRule::custom() const {
+  // @@protoc_insertion_point(field_get:google.api.HttpRule.custom)
+  return has_custom()
+      ? *pattern_.custom_
+      : ::google::api::CustomHttpPattern::default_instance();
+}
+inline ::google::api::CustomHttpPattern* HttpRule::mutable_custom() {
+  if (!has_custom()) {
+    clear_pattern();
+    set_has_custom();
+    pattern_.custom_ = 
+      ::google::protobuf::Arena::CreateMessage< ::google::api::CustomHttpPattern >(
+      GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_mutable:google.api.HttpRule.custom)
+  return pattern_.custom_;
+}
 inline ::google::api::CustomHttpPattern* HttpRule::release_custom() {
   // @@protoc_insertion_point(field_release:google.api.HttpRule.custom)
   if (has_custom()) {
     clear_has_pattern();
-      ::google::api::CustomHttpPattern* temp = pattern_.custom_;
     if (GetArenaNoVirtual() != NULL) {
-      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp, NULL);
+      ::google::api::CustomHttpPattern* temp = new ::google::api::CustomHttpPattern(*pattern_.custom_);
+      pattern_.custom_ = NULL;
+      return temp;
+    } else {
+      ::google::api::CustomHttpPattern* temp = pattern_.custom_;
+      pattern_.custom_ = NULL;
+      return temp;
     }
-    pattern_.custom_ = NULL;
-    return temp;
   } else {
     return NULL;
   }
 }
-inline const ::google::api::CustomHttpPattern& HttpRule::custom() const {
-  // @@protoc_insertion_point(field_get:google.api.HttpRule.custom)
-  return has_custom()
-      ? *pattern_.custom_
-      : *reinterpret_cast< ::google::api::CustomHttpPattern*>(&::google::api::_CustomHttpPattern_default_instance_);
+inline void HttpRule::set_allocated_custom(::google::api::CustomHttpPattern* custom) {
+  clear_pattern();
+  if (custom) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(custom) == NULL) {
+      GetArenaNoVirtual()->Own(custom);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(custom)) {
+      ::google::api::CustomHttpPattern* new_custom = 
+          ::google::protobuf::Arena::CreateMessage< ::google::api::CustomHttpPattern >(
+          GetArenaNoVirtual());
+      new_custom->CopyFrom(*custom);
+      custom = new_custom;
+    }
+    set_has_custom();
+    pattern_.custom_ = custom;
+  }
+  // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.custom)
 }
 inline ::google::api::CustomHttpPattern* HttpRule::unsafe_arena_release_custom() {
   // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.custom)
@@ -1476,24 +1458,13 @@ inline ::google::api::CustomHttpPattern* HttpRule::unsafe_arena_release_custom()
     return NULL;
   }
 }
-inline void HttpRule::unsafe_arena_set_allocated_custom(::google::api::CustomHttpPattern* custom) {
+inline  void HttpRule::unsafe_arena_set_allocated_custom(::google::api::CustomHttpPattern* custom) {
   clear_pattern();
   if (custom) {
     set_has_custom();
     pattern_.custom_ = custom;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:google.api.HttpRule.custom)
-}
-inline ::google::api::CustomHttpPattern* HttpRule::mutable_custom() {
-  if (!has_custom()) {
-    clear_pattern();
-    set_has_custom();
-    pattern_.custom_ = 
-      ::google::protobuf::Arena::CreateMessage< ::google::api::CustomHttpPattern >(
-      GetArenaNoVirtual());
-  }
-  // @@protoc_insertion_point(field_mutable:google.api.HttpRule.custom)
-  return pattern_.custom_;
 }
 
 // string body = 7;
@@ -1541,6 +1512,13 @@ inline ::std::string* HttpRule::release_body() {
   
   return body_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
+inline ::std::string* HttpRule::unsafe_arena_release_body() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.body)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return body_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
 inline void HttpRule::set_allocated_body(::std::string* body) {
   if (body != NULL) {
     
@@ -1550,13 +1528,6 @@ inline void HttpRule::set_allocated_body(::std::string* body) {
   body_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), body,
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:google.api.HttpRule.body)
-}
-inline ::std::string* HttpRule::unsafe_arena_release_body() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.HttpRule.body)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  
-  return body_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      GetArenaNoVirtual());
 }
 inline void HttpRule::unsafe_arena_set_allocated_body(
     ::std::string* body) {
@@ -1659,6 +1630,13 @@ inline ::std::string* CustomHttpPattern::release_kind() {
   
   return kind_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
+inline ::std::string* CustomHttpPattern::unsafe_arena_release_kind() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.CustomHttpPattern.kind)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return kind_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
 inline void CustomHttpPattern::set_allocated_kind(::std::string* kind) {
   if (kind != NULL) {
     
@@ -1668,13 +1646,6 @@ inline void CustomHttpPattern::set_allocated_kind(::std::string* kind) {
   kind_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), kind,
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:google.api.CustomHttpPattern.kind)
-}
-inline ::std::string* CustomHttpPattern::unsafe_arena_release_kind() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.CustomHttpPattern.kind)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  
-  return kind_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      GetArenaNoVirtual());
 }
 inline void CustomHttpPattern::unsafe_arena_set_allocated_kind(
     ::std::string* kind) {
@@ -1734,6 +1705,13 @@ inline ::std::string* CustomHttpPattern::release_path() {
   
   return path_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
+inline ::std::string* CustomHttpPattern::unsafe_arena_release_path() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.CustomHttpPattern.path)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return path_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
 inline void CustomHttpPattern::set_allocated_path(::std::string* path) {
   if (path != NULL) {
     
@@ -1743,13 +1721,6 @@ inline void CustomHttpPattern::set_allocated_path(::std::string* path) {
   path_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), path,
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:google.api.CustomHttpPattern.path)
-}
-inline ::std::string* CustomHttpPattern::unsafe_arena_release_path() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:google.api.CustomHttpPattern.path)
-  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
-  
-  return path_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      GetArenaNoVirtual());
 }
 inline void CustomHttpPattern::unsafe_arena_set_allocated_path(
     ::std::string* path) {

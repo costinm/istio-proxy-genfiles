@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -37,11 +33,7 @@ namespace protobuf_api_2ffilter_2ffault_2eproto {
 void InitDefaultsFaultDelayImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   {
     void* ptr = &::envoy::api::v2::filter::_FaultDelay_default_instance_;
@@ -101,21 +93,19 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\026api/filter/fault.proto\022\023envoy.api.v2.f"
-      "ilter\032\036google/protobuf/duration.proto\032\027v"
-      "alidate/validate.proto\"\325\001\n\nFaultDelay\022<\n"
-      "\004type\030\001 \001(\0162..envoy.api.v2.filter.FaultD"
-      "elay.FaultDelayType\022\032\n\007percent\030\002 \001(\rB\t\272\351"
-      "\300\003\004*\002\030d\022<\n\013fixed_delay\030\003 \001(\0132\031.google.pr"
-      "otobuf.DurationB\n\272\351\300\003\005\252\001\002*\000H\000\"\033\n\016FaultDe"
-      "layType\022\t\n\005FIXED\020\000B\022\n\020fault_delay_typeB\010"
-      "Z\006filterb\006proto3"
+      "ilter\032\036google/protobuf/duration.proto\"\276\001"
+      "\n\nFaultDelay\022<\n\004type\030\001 \001(\0162..envoy.api.v"
+      "2.filter.FaultDelay.FaultDelayType\022\017\n\007pe"
+      "rcent\030\002 \001(\r\0220\n\013fixed_delay\030\003 \001(\0132\031.googl"
+      "e.protobuf.DurationH\000\"\033\n\016FaultDelayType\022"
+      "\t\n\005FIXED\020\000B\022\n\020fault_delay_typeB\010Z\006filter"
+      "b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 336);
+      descriptor, 288);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/filter/fault.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2fduration_2eproto::AddDescriptors();
-  ::protobuf_validate_2fvalidate_2eproto::AddDescriptors();
 }
 
 void AddDescriptors() {
@@ -158,27 +148,6 @@ const int FaultDelay::FaultDelayType_ARRAYSIZE;
 void FaultDelay::InitAsDefaultInstance() {
   ::envoy::api::v2::filter::_FaultDelay_default_instance_.fixed_delay_ = const_cast< ::google::protobuf::Duration*>(
       ::google::protobuf::Duration::internal_default_instance());
-}
-void FaultDelay::set_allocated_fixed_delay(::google::protobuf::Duration* fixed_delay) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_fault_delay_type();
-  if (fixed_delay) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(fixed_delay)->GetArena();
-    if (message_arena != submessage_arena) {
-      fixed_delay = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, fixed_delay, submessage_arena);
-    }
-    set_has_fixed_delay();
-    fault_delay_type_.fixed_delay_ = fixed_delay;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.FaultDelay.fixed_delay)
-}
-void FaultDelay::clear_fixed_delay() {
-  if (has_fixed_delay()) {
-    delete fault_delay_type_.fixed_delay_;
-    clear_has_fault_delay_type();
-  }
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FaultDelay::kTypeFieldNumber;
@@ -310,7 +279,7 @@ bool FaultDelay::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 percent = 2 [(.validate.rules) = {
+      // uint32 percent = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
@@ -324,11 +293,11 @@ bool FaultDelay::MergePartialFromCodedStream(
         break;
       }
 
-      // .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+      // .google.protobuf.Duration fixed_delay = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_fixed_delay()));
         } else {
           goto handle_unusual;
@@ -368,12 +337,12 @@ void FaultDelay::SerializeWithCachedSizes(
       1, this->type(), output);
   }
 
-  // uint32 percent = 2 [(.validate.rules) = {
+  // uint32 percent = 2;
   if (this->percent() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->percent(), output);
   }
 
-  // .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+  // .google.protobuf.Duration fixed_delay = 3;
   if (has_fixed_delay()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *fault_delay_type_.fixed_delay_, output);
@@ -399,15 +368,15 @@ void FaultDelay::SerializeWithCachedSizes(
       1, this->type(), target);
   }
 
-  // uint32 percent = 2 [(.validate.rules) = {
+  // uint32 percent = 2;
   if (this->percent() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->percent(), target);
   }
 
-  // .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+  // .google.protobuf.Duration fixed_delay = 3;
   if (has_fixed_delay()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *fault_delay_type_.fixed_delay_, deterministic, target);
   }
 
@@ -434,7 +403,7 @@ size_t FaultDelay::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
   }
 
-  // uint32 percent = 2 [(.validate.rules) = {
+  // uint32 percent = 2;
   if (this->percent() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
@@ -442,10 +411,10 @@ size_t FaultDelay::ByteSizeLong() const {
   }
 
   switch (fault_delay_type_case()) {
-    // .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+    // .google.protobuf.Duration fixed_delay = 3;
     case kFixedDelay: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *fault_delay_type_.fixed_delay_);
       break;
     }

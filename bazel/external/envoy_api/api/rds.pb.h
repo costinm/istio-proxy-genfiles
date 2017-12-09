@@ -30,13 +30,11 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
-#include "api/auth.pb.h"
 #include "api/base.pb.h"
 #include "api/discovery.pb.h"
 #include "google/api/annotations.pb.h"
 #include <google/protobuf/duration.pb.h>
 #include <google/protobuf/wrappers.pb.h>
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2frds_2eproto {
@@ -219,30 +217,6 @@ namespace envoy {
 namespace api {
 namespace v2 {
 
-enum RedirectAction_RedirectResponseCode {
-  RedirectAction_RedirectResponseCode_MOVED_PERMANENTLY = 0,
-  RedirectAction_RedirectResponseCode_FOUND = 1,
-  RedirectAction_RedirectResponseCode_SEE_OTHER = 2,
-  RedirectAction_RedirectResponseCode_TEMPORARY_REDIRECT = 3,
-  RedirectAction_RedirectResponseCode_PERMANENT_REDIRECT = 4,
-  RedirectAction_RedirectResponseCode_RedirectAction_RedirectResponseCode_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  RedirectAction_RedirectResponseCode_RedirectAction_RedirectResponseCode_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
-};
-bool RedirectAction_RedirectResponseCode_IsValid(int value);
-const RedirectAction_RedirectResponseCode RedirectAction_RedirectResponseCode_RedirectResponseCode_MIN = RedirectAction_RedirectResponseCode_MOVED_PERMANENTLY;
-const RedirectAction_RedirectResponseCode RedirectAction_RedirectResponseCode_RedirectResponseCode_MAX = RedirectAction_RedirectResponseCode_PERMANENT_REDIRECT;
-const int RedirectAction_RedirectResponseCode_RedirectResponseCode_ARRAYSIZE = RedirectAction_RedirectResponseCode_RedirectResponseCode_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* RedirectAction_RedirectResponseCode_descriptor();
-inline const ::std::string& RedirectAction_RedirectResponseCode_Name(RedirectAction_RedirectResponseCode value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    RedirectAction_RedirectResponseCode_descriptor(), value);
-}
-inline bool RedirectAction_RedirectResponseCode_Parse(
-    const ::std::string& name, RedirectAction_RedirectResponseCode* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<RedirectAction_RedirectResponseCode>(
-    RedirectAction_RedirectResponseCode_descriptor(), name, value);
-}
 enum VirtualHost_TlsRequirementType {
   VirtualHost_TlsRequirementType_NONE = 0,
   VirtualHost_TlsRequirementType_EXTERNAL_ONLY = 1,
@@ -349,7 +323,7 @@ class WeightedCluster_ClusterWeight : public ::google::protobuf::Message /* @@pr
 
   // accessors -------------------------------------------------------
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   void clear_name();
   static const int kNameFieldNumber = 1;
   const ::std::string& name() const;
@@ -363,13 +337,13 @@ class WeightedCluster_ClusterWeight : public ::google::protobuf::Message /* @@pr
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
 
-  // .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value weight = 2;
   bool has_weight() const;
   void clear_weight();
   static const int kWeightFieldNumber = 2;
   const ::google::protobuf::UInt32Value& weight() const;
-  ::google::protobuf::UInt32Value* release_weight();
   ::google::protobuf::UInt32Value* mutable_weight();
+  ::google::protobuf::UInt32Value* release_weight();
   void set_allocated_weight(::google::protobuf::UInt32Value* weight);
 
   // .envoy.api.v2.Metadata metadata_match = 3;
@@ -377,8 +351,8 @@ class WeightedCluster_ClusterWeight : public ::google::protobuf::Message /* @@pr
   void clear_metadata_match();
   static const int kMetadataMatchFieldNumber = 3;
   const ::envoy::api::v2::Metadata& metadata_match() const;
-  ::envoy::api::v2::Metadata* release_metadata_match();
   ::envoy::api::v2::Metadata* mutable_metadata_match();
+  ::envoy::api::v2::Metadata* release_metadata_match();
   void set_allocated_metadata_match(::envoy::api::v2::Metadata* metadata_match);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.WeightedCluster.ClusterWeight)
@@ -478,7 +452,7 @@ class WeightedCluster : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
   int clusters_size() const;
   void clear_clusters();
   static const int kClustersFieldNumber = 1;
@@ -622,8 +596,8 @@ class RouteMatch : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_case_sensitive();
   static const int kCaseSensitiveFieldNumber = 4;
   const ::google::protobuf::BoolValue& case_sensitive() const;
-  ::google::protobuf::BoolValue* release_case_sensitive();
   ::google::protobuf::BoolValue* mutable_case_sensitive();
+  ::google::protobuf::BoolValue* release_case_sensitive();
   void set_allocated_case_sensitive(::google::protobuf::BoolValue* case_sensitive);
 
   // .envoy.api.v2.RuntimeUInt32 runtime = 5;
@@ -631,8 +605,8 @@ class RouteMatch : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_runtime();
   static const int kRuntimeFieldNumber = 5;
   const ::envoy::api::v2::RuntimeUInt32& runtime() const;
-  ::envoy::api::v2::RuntimeUInt32* release_runtime();
   ::envoy::api::v2::RuntimeUInt32* mutable_runtime();
+  ::envoy::api::v2::RuntimeUInt32* release_runtime();
   void set_allocated_runtime(::envoy::api::v2::RuntimeUInt32* runtime);
 
   // string prefix = 1;
@@ -880,8 +854,8 @@ class CorsPolicy : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_allow_credentials();
   static const int kAllowCredentialsFieldNumber = 6;
   const ::google::protobuf::BoolValue& allow_credentials() const;
-  ::google::protobuf::BoolValue* release_allow_credentials();
   ::google::protobuf::BoolValue* mutable_allow_credentials();
+  ::google::protobuf::BoolValue* release_allow_credentials();
   void set_allocated_allow_credentials(::google::protobuf::BoolValue* allow_credentials);
 
   // .google.protobuf.BoolValue enabled = 7;
@@ -889,8 +863,8 @@ class CorsPolicy : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_enabled();
   static const int kEnabledFieldNumber = 7;
   const ::google::protobuf::BoolValue& enabled() const;
-  ::google::protobuf::BoolValue* release_enabled();
   ::google::protobuf::BoolValue* mutable_enabled();
+  ::google::protobuf::BoolValue* release_enabled();
   void set_allocated_enabled(::google::protobuf::BoolValue* enabled);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.CorsPolicy)
@@ -1011,8 +985,8 @@ class RouteAction_RetryPolicy : public ::google::protobuf::Message /* @@protoc_i
   void clear_num_retries();
   static const int kNumRetriesFieldNumber = 2;
   const ::google::protobuf::UInt32Value& num_retries() const;
-  ::google::protobuf::UInt32Value* release_num_retries();
   ::google::protobuf::UInt32Value* mutable_num_retries();
+  ::google::protobuf::UInt32Value* release_num_retries();
   void set_allocated_num_retries(::google::protobuf::UInt32Value* num_retries);
 
   // .google.protobuf.Duration per_try_timeout = 3;
@@ -1020,8 +994,8 @@ class RouteAction_RetryPolicy : public ::google::protobuf::Message /* @@protoc_i
   void clear_per_try_timeout();
   static const int kPerTryTimeoutFieldNumber = 3;
   const ::google::protobuf::Duration& per_try_timeout() const;
-  ::google::protobuf::Duration* release_per_try_timeout();
   ::google::protobuf::Duration* mutable_per_try_timeout();
+  ::google::protobuf::Duration* release_per_try_timeout();
   void set_allocated_per_try_timeout(::google::protobuf::Duration* per_try_timeout);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RouteAction.RetryPolicy)
@@ -1119,7 +1093,7 @@ class RouteAction_RequestMirrorPolicy : public ::google::protobuf::Message /* @@
 
   // accessors -------------------------------------------------------
 
-  // string cluster = 1 [(.validate.rules) = {
+  // string cluster = 1;
   void clear_cluster();
   static const int kClusterFieldNumber = 1;
   const ::std::string& cluster() const;
@@ -1241,7 +1215,7 @@ class RouteAction_HashPolicy_Header : public ::google::protobuf::Message /* @@pr
 
   // accessors -------------------------------------------------------
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   void clear_header_name();
   static const int kHeaderNameFieldNumber = 1;
   const ::std::string& header_name() const;
@@ -1348,7 +1322,7 @@ class RouteAction_HashPolicy_Cookie : public ::google::protobuf::Message /* @@pr
 
   // accessors -------------------------------------------------------
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   void clear_name();
   static const int kNameFieldNumber = 1;
   const ::std::string& name() const;
@@ -1367,8 +1341,8 @@ class RouteAction_HashPolicy_Cookie : public ::google::protobuf::Message /* @@pr
   void clear_ttl();
   static const int kTtlFieldNumber = 2;
   const ::google::protobuf::Duration& ttl() const;
-  ::google::protobuf::Duration* release_ttl();
   ::google::protobuf::Duration* mutable_ttl();
+  ::google::protobuf::Duration* release_ttl();
   void set_allocated_ttl(::google::protobuf::Duration* ttl);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RouteAction.HashPolicy.Cookie)
@@ -1580,8 +1554,8 @@ class RouteAction_HashPolicy : public ::google::protobuf::Message /* @@protoc_in
   void clear_header();
   static const int kHeaderFieldNumber = 1;
   const ::envoy::api::v2::RouteAction_HashPolicy_Header& header() const;
-  ::envoy::api::v2::RouteAction_HashPolicy_Header* release_header();
   ::envoy::api::v2::RouteAction_HashPolicy_Header* mutable_header();
+  ::envoy::api::v2::RouteAction_HashPolicy_Header* release_header();
   void set_allocated_header(::envoy::api::v2::RouteAction_HashPolicy_Header* header);
 
   // .envoy.api.v2.RouteAction.HashPolicy.Cookie cookie = 2;
@@ -1589,8 +1563,8 @@ class RouteAction_HashPolicy : public ::google::protobuf::Message /* @@protoc_in
   void clear_cookie();
   static const int kCookieFieldNumber = 2;
   const ::envoy::api::v2::RouteAction_HashPolicy_Cookie& cookie() const;
-  ::envoy::api::v2::RouteAction_HashPolicy_Cookie* release_cookie();
   ::envoy::api::v2::RouteAction_HashPolicy_Cookie* mutable_cookie();
+  ::envoy::api::v2::RouteAction_HashPolicy_Cookie* release_cookie();
   void set_allocated_cookie(::envoy::api::v2::RouteAction_HashPolicy_Cookie* cookie);
 
   // .envoy.api.v2.RouteAction.HashPolicy.ConnectionProperties connection_properties = 3;
@@ -1598,8 +1572,8 @@ class RouteAction_HashPolicy : public ::google::protobuf::Message /* @@protoc_in
   void clear_connection_properties();
   static const int kConnectionPropertiesFieldNumber = 3;
   const ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties& connection_properties() const;
-  ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* release_connection_properties();
   ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* mutable_connection_properties();
+  ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* release_connection_properties();
   void set_allocated_connection_properties(::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* connection_properties);
 
   PolicySpecifierCase policy_specifier_case() const;
@@ -1763,40 +1737,6 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::RouteAction_HashPolicy >&
       hash_policy() const;
 
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-  int response_headers_to_add_size() const;
-  void clear_response_headers_to_add();
-  static const int kResponseHeadersToAddFieldNumber = 18;
-  const ::envoy::api::v2::HeaderValueOption& response_headers_to_add(int index) const;
-  ::envoy::api::v2::HeaderValueOption* mutable_response_headers_to_add(int index);
-  ::envoy::api::v2::HeaderValueOption* add_response_headers_to_add();
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >*
-      mutable_response_headers_to_add();
-  const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >&
-      response_headers_to_add() const;
-
-  // repeated string response_headers_to_remove = 19;
-  int response_headers_to_remove_size() const;
-  void clear_response_headers_to_remove();
-  static const int kResponseHeadersToRemoveFieldNumber = 19;
-  const ::std::string& response_headers_to_remove(int index) const;
-  ::std::string* mutable_response_headers_to_remove(int index);
-  void set_response_headers_to_remove(int index, const ::std::string& value);
-  #if LANG_CXX11
-  void set_response_headers_to_remove(int index, ::std::string&& value);
-  #endif
-  void set_response_headers_to_remove(int index, const char* value);
-  void set_response_headers_to_remove(int index, const char* value, size_t size);
-  ::std::string* add_response_headers_to_remove();
-  void add_response_headers_to_remove(const ::std::string& value);
-  #if LANG_CXX11
-  void add_response_headers_to_remove(::std::string&& value);
-  #endif
-  void add_response_headers_to_remove(const char* value);
-  void add_response_headers_to_remove(const char* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& response_headers_to_remove() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_response_headers_to_remove();
-
   // string prefix_rewrite = 5;
   void clear_prefix_rewrite();
   static const int kPrefixRewriteFieldNumber = 5;
@@ -1816,8 +1756,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_metadata_match();
   static const int kMetadataMatchFieldNumber = 4;
   const ::envoy::api::v2::Metadata& metadata_match() const;
-  ::envoy::api::v2::Metadata* release_metadata_match();
   ::envoy::api::v2::Metadata* mutable_metadata_match();
+  ::envoy::api::v2::Metadata* release_metadata_match();
   void set_allocated_metadata_match(::envoy::api::v2::Metadata* metadata_match);
 
   // .google.protobuf.Duration timeout = 8;
@@ -1825,8 +1765,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_timeout();
   static const int kTimeoutFieldNumber = 8;
   const ::google::protobuf::Duration& timeout() const;
-  ::google::protobuf::Duration* release_timeout();
   ::google::protobuf::Duration* mutable_timeout();
+  ::google::protobuf::Duration* release_timeout();
   void set_allocated_timeout(::google::protobuf::Duration* timeout);
 
   // .envoy.api.v2.RouteAction.RetryPolicy retry_policy = 9;
@@ -1834,8 +1774,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_retry_policy();
   static const int kRetryPolicyFieldNumber = 9;
   const ::envoy::api::v2::RouteAction_RetryPolicy& retry_policy() const;
-  ::envoy::api::v2::RouteAction_RetryPolicy* release_retry_policy();
   ::envoy::api::v2::RouteAction_RetryPolicy* mutable_retry_policy();
+  ::envoy::api::v2::RouteAction_RetryPolicy* release_retry_policy();
   void set_allocated_retry_policy(::envoy::api::v2::RouteAction_RetryPolicy* retry_policy);
 
   // .envoy.api.v2.RouteAction.RequestMirrorPolicy request_mirror_policy = 10;
@@ -1843,8 +1783,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_request_mirror_policy();
   static const int kRequestMirrorPolicyFieldNumber = 10;
   const ::envoy::api::v2::RouteAction_RequestMirrorPolicy& request_mirror_policy() const;
-  ::envoy::api::v2::RouteAction_RequestMirrorPolicy* release_request_mirror_policy();
   ::envoy::api::v2::RouteAction_RequestMirrorPolicy* mutable_request_mirror_policy();
+  ::envoy::api::v2::RouteAction_RequestMirrorPolicy* release_request_mirror_policy();
   void set_allocated_request_mirror_policy(::envoy::api::v2::RouteAction_RequestMirrorPolicy* request_mirror_policy);
 
   // .google.protobuf.BoolValue include_vh_rate_limits = 14;
@@ -1852,8 +1792,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_include_vh_rate_limits();
   static const int kIncludeVhRateLimitsFieldNumber = 14;
   const ::google::protobuf::BoolValue& include_vh_rate_limits() const;
-  ::google::protobuf::BoolValue* release_include_vh_rate_limits();
   ::google::protobuf::BoolValue* mutable_include_vh_rate_limits();
+  ::google::protobuf::BoolValue* release_include_vh_rate_limits();
   void set_allocated_include_vh_rate_limits(::google::protobuf::BoolValue* include_vh_rate_limits);
 
   // .google.protobuf.BoolValue use_websocket = 16;
@@ -1861,8 +1801,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_use_websocket();
   static const int kUseWebsocketFieldNumber = 16;
   const ::google::protobuf::BoolValue& use_websocket() const;
-  ::google::protobuf::BoolValue* release_use_websocket();
   ::google::protobuf::BoolValue* mutable_use_websocket();
+  ::google::protobuf::BoolValue* release_use_websocket();
   void set_allocated_use_websocket(::google::protobuf::BoolValue* use_websocket);
 
   // .envoy.api.v2.CorsPolicy cors = 17;
@@ -1870,8 +1810,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_cors();
   static const int kCorsFieldNumber = 17;
   const ::envoy::api::v2::CorsPolicy& cors() const;
-  ::envoy::api::v2::CorsPolicy* release_cors();
   ::envoy::api::v2::CorsPolicy* mutable_cors();
+  ::envoy::api::v2::CorsPolicy* release_cors();
   void set_allocated_cors(::envoy::api::v2::CorsPolicy* cors);
 
   // .envoy.api.v2.RoutingPriority priority = 11;
@@ -1919,8 +1859,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_weighted_clusters();
   static const int kWeightedClustersFieldNumber = 3;
   const ::envoy::api::v2::WeightedCluster& weighted_clusters() const;
-  ::envoy::api::v2::WeightedCluster* release_weighted_clusters();
   ::envoy::api::v2::WeightedCluster* mutable_weighted_clusters();
+  ::envoy::api::v2::WeightedCluster* release_weighted_clusters();
   void set_allocated_weighted_clusters(::envoy::api::v2::WeightedCluster* weighted_clusters);
 
   // string host_rewrite = 6;
@@ -1945,8 +1885,8 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_auto_host_rewrite();
   static const int kAutoHostRewriteFieldNumber = 7;
   const ::google::protobuf::BoolValue& auto_host_rewrite() const;
-  ::google::protobuf::BoolValue* release_auto_host_rewrite();
   ::google::protobuf::BoolValue* mutable_auto_host_rewrite();
+  ::google::protobuf::BoolValue* release_auto_host_rewrite();
   void set_allocated_auto_host_rewrite(::google::protobuf::BoolValue* auto_host_rewrite);
 
   ClusterSpecifierCase cluster_specifier_case() const;
@@ -1971,8 +1911,6 @@ class RouteAction : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption > request_headers_to_add_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::RateLimit > rate_limits_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::RouteAction_HashPolicy > hash_policy_;
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption > response_headers_to_add_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> response_headers_to_remove_;
   ::google::protobuf::internal::ArenaStringPtr prefix_rewrite_;
   ::envoy::api::v2::Metadata* metadata_match_;
   ::google::protobuf::Duration* timeout_;
@@ -2081,38 +2019,6 @@ class RedirectAction : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // nested types ----------------------------------------------------
 
-  typedef RedirectAction_RedirectResponseCode RedirectResponseCode;
-  static const RedirectResponseCode MOVED_PERMANENTLY =
-    RedirectAction_RedirectResponseCode_MOVED_PERMANENTLY;
-  static const RedirectResponseCode FOUND =
-    RedirectAction_RedirectResponseCode_FOUND;
-  static const RedirectResponseCode SEE_OTHER =
-    RedirectAction_RedirectResponseCode_SEE_OTHER;
-  static const RedirectResponseCode TEMPORARY_REDIRECT =
-    RedirectAction_RedirectResponseCode_TEMPORARY_REDIRECT;
-  static const RedirectResponseCode PERMANENT_REDIRECT =
-    RedirectAction_RedirectResponseCode_PERMANENT_REDIRECT;
-  static inline bool RedirectResponseCode_IsValid(int value) {
-    return RedirectAction_RedirectResponseCode_IsValid(value);
-  }
-  static const RedirectResponseCode RedirectResponseCode_MIN =
-    RedirectAction_RedirectResponseCode_RedirectResponseCode_MIN;
-  static const RedirectResponseCode RedirectResponseCode_MAX =
-    RedirectAction_RedirectResponseCode_RedirectResponseCode_MAX;
-  static const int RedirectResponseCode_ARRAYSIZE =
-    RedirectAction_RedirectResponseCode_RedirectResponseCode_ARRAYSIZE;
-  static inline const ::google::protobuf::EnumDescriptor*
-  RedirectResponseCode_descriptor() {
-    return RedirectAction_RedirectResponseCode_descriptor();
-  }
-  static inline const ::std::string& RedirectResponseCode_Name(RedirectResponseCode value) {
-    return RedirectAction_RedirectResponseCode_Name(value);
-  }
-  static inline bool RedirectResponseCode_Parse(const ::std::string& name,
-      RedirectResponseCode* value) {
-    return RedirectAction_RedirectResponseCode_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
   // string host_redirect = 1;
@@ -2143,19 +2049,12 @@ class RedirectAction : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_path_redirect();
   void set_allocated_path_redirect(::std::string* path_redirect);
 
-  // .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-  void clear_response_code();
-  static const int kResponseCodeFieldNumber = 3;
-  ::envoy::api::v2::RedirectAction_RedirectResponseCode response_code() const;
-  void set_response_code(::envoy::api::v2::RedirectAction_RedirectResponseCode value);
-
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RedirectAction)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr host_redirect_;
   ::google::protobuf::internal::ArenaStringPtr path_redirect_;
-  int response_code_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2frds_2eproto::TableStruct;
   friend void ::protobuf_api_2frds_2eproto::InitDefaultsRedirectActionImpl();
@@ -2244,7 +2143,7 @@ class Decorator : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // string operation = 1 [(.validate.rules) = {
+  // string operation = 1;
   void clear_operation();
   static const int kOperationFieldNumber = 1;
   const ::std::string& operation() const;
@@ -2357,13 +2256,13 @@ class Route : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 
   // accessors -------------------------------------------------------
 
-  // .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+  // .envoy.api.v2.RouteMatch match = 1;
   bool has_match() const;
   void clear_match();
   static const int kMatchFieldNumber = 1;
   const ::envoy::api::v2::RouteMatch& match() const;
-  ::envoy::api::v2::RouteMatch* release_match();
   ::envoy::api::v2::RouteMatch* mutable_match();
+  ::envoy::api::v2::RouteMatch* release_match();
   void set_allocated_match(::envoy::api::v2::RouteMatch* match);
 
   // .envoy.api.v2.Metadata metadata = 4;
@@ -2371,8 +2270,8 @@ class Route : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_metadata();
   static const int kMetadataFieldNumber = 4;
   const ::envoy::api::v2::Metadata& metadata() const;
-  ::envoy::api::v2::Metadata* release_metadata();
   ::envoy::api::v2::Metadata* mutable_metadata();
+  ::envoy::api::v2::Metadata* release_metadata();
   void set_allocated_metadata(::envoy::api::v2::Metadata* metadata);
 
   // .envoy.api.v2.Decorator decorator = 5;
@@ -2380,26 +2279,17 @@ class Route : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_decorator();
   static const int kDecoratorFieldNumber = 5;
   const ::envoy::api::v2::Decorator& decorator() const;
-  ::envoy::api::v2::Decorator* release_decorator();
   ::envoy::api::v2::Decorator* mutable_decorator();
+  ::envoy::api::v2::Decorator* release_decorator();
   void set_allocated_decorator(::envoy::api::v2::Decorator* decorator);
-
-  // .envoy.api.v2.AuthAction auth = 6;
-  bool has_auth() const;
-  void clear_auth();
-  static const int kAuthFieldNumber = 6;
-  const ::envoy::api::v2::AuthAction& auth() const;
-  ::envoy::api::v2::AuthAction* release_auth();
-  ::envoy::api::v2::AuthAction* mutable_auth();
-  void set_allocated_auth(::envoy::api::v2::AuthAction* auth);
 
   // .envoy.api.v2.RouteAction route = 2;
   bool has_route() const;
   void clear_route();
   static const int kRouteFieldNumber = 2;
   const ::envoy::api::v2::RouteAction& route() const;
-  ::envoy::api::v2::RouteAction* release_route();
   ::envoy::api::v2::RouteAction* mutable_route();
+  ::envoy::api::v2::RouteAction* release_route();
   void set_allocated_route(::envoy::api::v2::RouteAction* route);
 
   // .envoy.api.v2.RedirectAction redirect = 3;
@@ -2407,8 +2297,8 @@ class Route : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_redirect();
   static const int kRedirectFieldNumber = 3;
   const ::envoy::api::v2::RedirectAction& redirect() const;
-  ::envoy::api::v2::RedirectAction* release_redirect();
   ::envoy::api::v2::RedirectAction* mutable_redirect();
+  ::envoy::api::v2::RedirectAction* release_redirect();
   void set_allocated_redirect(::envoy::api::v2::RedirectAction* redirect);
 
   ActionCase action_case() const;
@@ -2425,7 +2315,6 @@ class Route : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::envoy::api::v2::RouteMatch* match_;
   ::envoy::api::v2::Metadata* metadata_;
   ::envoy::api::v2::Decorator* decorator_;
-  ::envoy::api::v2::AuthAction* auth_;
   union ActionUnion {
     ActionUnion() {}
     ::envoy::api::v2::RouteAction* route_;
@@ -2521,7 +2410,7 @@ class VirtualCluster : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // string pattern = 1 [(.validate.rules) = {
+  // string pattern = 1;
   void clear_pattern();
   static const int kPatternFieldNumber = 1;
   const ::std::string& pattern() const;
@@ -2535,7 +2424,7 @@ class VirtualCluster : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_pattern();
   void set_allocated_pattern(::std::string* pattern);
 
-  // string name = 2 [(.validate.rules) = {
+  // string name = 2;
   void clear_name();
   static const int kNameFieldNumber = 2;
   const ::std::string& name() const;
@@ -2834,7 +2723,7 @@ class RateLimit_Action_RequestHeaders : public ::google::protobuf::Message /* @@
 
   // accessors -------------------------------------------------------
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   void clear_header_name();
   static const int kHeaderNameFieldNumber = 1;
   const ::std::string& header_name() const;
@@ -2848,7 +2737,7 @@ class RateLimit_Action_RequestHeaders : public ::google::protobuf::Message /* @@
   ::std::string* release_header_name();
   void set_allocated_header_name(::std::string* header_name);
 
-  // string descriptor_key = 2 [(.validate.rules) = {
+  // string descriptor_key = 2;
   void clear_descriptor_key();
   static const int kDescriptorKeyFieldNumber = 2;
   const ::std::string& descriptor_key() const;
@@ -3048,7 +2937,7 @@ class RateLimit_Action_GenericKey : public ::google::protobuf::Message /* @@prot
 
   // accessors -------------------------------------------------------
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   void clear_descriptor_value();
   static const int kDescriptorValueFieldNumber = 1;
   const ::std::string& descriptor_value() const;
@@ -3155,7 +3044,7 @@ class RateLimit_Action_HeaderValueMatch : public ::google::protobuf::Message /* 
 
   // accessors -------------------------------------------------------
 
-  // repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.HeaderMatcher headers = 3;
   int headers_size() const;
   void clear_headers();
   static const int kHeadersFieldNumber = 3;
@@ -3167,7 +3056,7 @@ class RateLimit_Action_HeaderValueMatch : public ::google::protobuf::Message /* 
   const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderMatcher >&
       headers() const;
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   void clear_descriptor_value();
   static const int kDescriptorValueFieldNumber = 1;
   const ::std::string& descriptor_value() const;
@@ -3186,8 +3075,8 @@ class RateLimit_Action_HeaderValueMatch : public ::google::protobuf::Message /* 
   void clear_expect_match();
   static const int kExpectMatchFieldNumber = 2;
   const ::google::protobuf::BoolValue& expect_match() const;
-  ::google::protobuf::BoolValue* release_expect_match();
   ::google::protobuf::BoolValue* mutable_expect_match();
+  ::google::protobuf::BoolValue* release_expect_match();
   void set_allocated_expect_match(::google::protobuf::BoolValue* expect_match);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RateLimit.Action.HeaderValueMatch)
@@ -3307,8 +3196,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_source_cluster();
   static const int kSourceClusterFieldNumber = 1;
   const ::envoy::api::v2::RateLimit_Action_SourceCluster& source_cluster() const;
-  ::envoy::api::v2::RateLimit_Action_SourceCluster* release_source_cluster();
   ::envoy::api::v2::RateLimit_Action_SourceCluster* mutable_source_cluster();
+  ::envoy::api::v2::RateLimit_Action_SourceCluster* release_source_cluster();
   void set_allocated_source_cluster(::envoy::api::v2::RateLimit_Action_SourceCluster* source_cluster);
 
   // .envoy.api.v2.RateLimit.Action.DestinationCluster destination_cluster = 2;
@@ -3316,8 +3205,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_destination_cluster();
   static const int kDestinationClusterFieldNumber = 2;
   const ::envoy::api::v2::RateLimit_Action_DestinationCluster& destination_cluster() const;
-  ::envoy::api::v2::RateLimit_Action_DestinationCluster* release_destination_cluster();
   ::envoy::api::v2::RateLimit_Action_DestinationCluster* mutable_destination_cluster();
+  ::envoy::api::v2::RateLimit_Action_DestinationCluster* release_destination_cluster();
   void set_allocated_destination_cluster(::envoy::api::v2::RateLimit_Action_DestinationCluster* destination_cluster);
 
   // .envoy.api.v2.RateLimit.Action.RequestHeaders request_headers = 3;
@@ -3325,8 +3214,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_request_headers();
   static const int kRequestHeadersFieldNumber = 3;
   const ::envoy::api::v2::RateLimit_Action_RequestHeaders& request_headers() const;
-  ::envoy::api::v2::RateLimit_Action_RequestHeaders* release_request_headers();
   ::envoy::api::v2::RateLimit_Action_RequestHeaders* mutable_request_headers();
+  ::envoy::api::v2::RateLimit_Action_RequestHeaders* release_request_headers();
   void set_allocated_request_headers(::envoy::api::v2::RateLimit_Action_RequestHeaders* request_headers);
 
   // .envoy.api.v2.RateLimit.Action.RemoteAddress remote_address = 4;
@@ -3334,8 +3223,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_remote_address();
   static const int kRemoteAddressFieldNumber = 4;
   const ::envoy::api::v2::RateLimit_Action_RemoteAddress& remote_address() const;
-  ::envoy::api::v2::RateLimit_Action_RemoteAddress* release_remote_address();
   ::envoy::api::v2::RateLimit_Action_RemoteAddress* mutable_remote_address();
+  ::envoy::api::v2::RateLimit_Action_RemoteAddress* release_remote_address();
   void set_allocated_remote_address(::envoy::api::v2::RateLimit_Action_RemoteAddress* remote_address);
 
   // .envoy.api.v2.RateLimit.Action.GenericKey generic_key = 5;
@@ -3343,8 +3232,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_generic_key();
   static const int kGenericKeyFieldNumber = 5;
   const ::envoy::api::v2::RateLimit_Action_GenericKey& generic_key() const;
-  ::envoy::api::v2::RateLimit_Action_GenericKey* release_generic_key();
   ::envoy::api::v2::RateLimit_Action_GenericKey* mutable_generic_key();
+  ::envoy::api::v2::RateLimit_Action_GenericKey* release_generic_key();
   void set_allocated_generic_key(::envoy::api::v2::RateLimit_Action_GenericKey* generic_key);
 
   // .envoy.api.v2.RateLimit.Action.HeaderValueMatch header_value_match = 6;
@@ -3352,8 +3241,8 @@ class RateLimit_Action : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_header_value_match();
   static const int kHeaderValueMatchFieldNumber = 6;
   const ::envoy::api::v2::RateLimit_Action_HeaderValueMatch& header_value_match() const;
-  ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* release_header_value_match();
   ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* mutable_header_value_match();
+  ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* release_header_value_match();
   void set_allocated_header_value_match(::envoy::api::v2::RateLimit_Action_HeaderValueMatch* header_value_match);
 
   ActionSpecifierCase action_specifier_case() const;
@@ -3472,7 +3361,7 @@ class RateLimit : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.RateLimit.Action actions = 3;
   int actions_size() const;
   void clear_actions();
   static const int kActionsFieldNumber = 3;
@@ -3498,13 +3387,13 @@ class RateLimit : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_disable_key();
   void set_allocated_disable_key(::std::string* disable_key);
 
-  // .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value stage = 1;
   bool has_stage() const;
   void clear_stage();
   static const int kStageFieldNumber = 1;
   const ::google::protobuf::UInt32Value& stage() const;
-  ::google::protobuf::UInt32Value* release_stage();
   ::google::protobuf::UInt32Value* mutable_stage();
+  ::google::protobuf::UInt32Value* release_stage();
   void set_allocated_stage(::google::protobuf::UInt32Value* stage);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RateLimit)
@@ -3602,7 +3491,7 @@ class HeaderMatcher : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   void clear_name();
   static const int kNameFieldNumber = 1;
   const ::std::string& name() const;
@@ -3635,8 +3524,8 @@ class HeaderMatcher : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_regex();
   static const int kRegexFieldNumber = 3;
   const ::google::protobuf::BoolValue& regex() const;
-  ::google::protobuf::BoolValue* release_regex();
   ::google::protobuf::BoolValue* mutable_regex();
+  ::google::protobuf::BoolValue* release_regex();
   void set_allocated_regex(::google::protobuf::BoolValue* regex);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.HeaderMatcher)
@@ -3762,7 +3651,7 @@ class VirtualHost : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // repeated string domains = 2 [(.validate.rules) = {
+  // repeated string domains = 2;
   int domains_size() const;
   void clear_domains();
   static const int kDomainsFieldNumber = 2;
@@ -3832,41 +3721,7 @@ class VirtualHost : public ::google::protobuf::Message /* @@protoc_insertion_poi
   const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >&
       request_headers_to_add() const;
 
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-  int response_headers_to_add_size() const;
-  void clear_response_headers_to_add();
-  static const int kResponseHeadersToAddFieldNumber = 10;
-  const ::envoy::api::v2::HeaderValueOption& response_headers_to_add(int index) const;
-  ::envoy::api::v2::HeaderValueOption* mutable_response_headers_to_add(int index);
-  ::envoy::api::v2::HeaderValueOption* add_response_headers_to_add();
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >*
-      mutable_response_headers_to_add();
-  const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >&
-      response_headers_to_add() const;
-
-  // repeated string response_headers_to_remove = 11;
-  int response_headers_to_remove_size() const;
-  void clear_response_headers_to_remove();
-  static const int kResponseHeadersToRemoveFieldNumber = 11;
-  const ::std::string& response_headers_to_remove(int index) const;
-  ::std::string* mutable_response_headers_to_remove(int index);
-  void set_response_headers_to_remove(int index, const ::std::string& value);
-  #if LANG_CXX11
-  void set_response_headers_to_remove(int index, ::std::string&& value);
-  #endif
-  void set_response_headers_to_remove(int index, const char* value);
-  void set_response_headers_to_remove(int index, const char* value, size_t size);
-  ::std::string* add_response_headers_to_remove();
-  void add_response_headers_to_remove(const ::std::string& value);
-  #if LANG_CXX11
-  void add_response_headers_to_remove(::std::string&& value);
-  #endif
-  void add_response_headers_to_remove(const char* value);
-  void add_response_headers_to_remove(const char* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& response_headers_to_remove() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_response_headers_to_remove();
-
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   void clear_name();
   static const int kNameFieldNumber = 1;
   const ::std::string& name() const;
@@ -3885,18 +3740,9 @@ class VirtualHost : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_cors();
   static const int kCorsFieldNumber = 8;
   const ::envoy::api::v2::CorsPolicy& cors() const;
-  ::envoy::api::v2::CorsPolicy* release_cors();
   ::envoy::api::v2::CorsPolicy* mutable_cors();
+  ::envoy::api::v2::CorsPolicy* release_cors();
   void set_allocated_cors(::envoy::api::v2::CorsPolicy* cors);
-
-  // .envoy.api.v2.AuthAction auth = 9;
-  bool has_auth() const;
-  void clear_auth();
-  static const int kAuthFieldNumber = 9;
-  const ::envoy::api::v2::AuthAction& auth() const;
-  ::envoy::api::v2::AuthAction* release_auth();
-  ::envoy::api::v2::AuthAction* mutable_auth();
-  void set_allocated_auth(::envoy::api::v2::AuthAction* auth);
 
   // .envoy.api.v2.VirtualHost.TlsRequirementType require_tls = 4;
   void clear_require_tls();
@@ -3913,11 +3759,8 @@ class VirtualHost : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::VirtualCluster > virtual_clusters_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::RateLimit > rate_limits_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption > request_headers_to_add_;
-  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption > response_headers_to_add_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> response_headers_to_remove_;
   ::google::protobuf::internal::ArenaStringPtr name_;
   ::envoy::api::v2::CorsPolicy* cors_;
-  ::envoy::api::v2::AuthAction* auth_;
   int require_tls_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2frds_2eproto::TableStruct;
@@ -4106,8 +3949,8 @@ class RouteConfiguration : public ::google::protobuf::Message /* @@protoc_insert
   void clear_validate_clusters();
   static const int kValidateClustersFieldNumber = 7;
   const ::google::protobuf::BoolValue& validate_clusters() const;
-  ::google::protobuf::BoolValue* release_validate_clusters();
   ::google::protobuf::BoolValue* mutable_validate_clusters();
+  ::google::protobuf::BoolValue* release_validate_clusters();
   void set_allocated_validate_clusters(::google::protobuf::BoolValue* validate_clusters);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.RouteConfiguration)
@@ -4136,7 +3979,7 @@ class RouteConfiguration : public ::google::protobuf::Message /* @@protoc_insert
 #endif  // __GNUC__
 // WeightedCluster_ClusterWeight
 
-// string name = 1 [(.validate.rules) = {
+// string name = 1;
 inline void WeightedCluster_ClusterWeight::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -4189,22 +4032,19 @@ inline void WeightedCluster_ClusterWeight::set_allocated_name(::std::string* nam
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.WeightedCluster.ClusterWeight.name)
 }
 
-// .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+// .google.protobuf.UInt32Value weight = 2;
 inline bool WeightedCluster_ClusterWeight::has_weight() const {
   return this != internal_default_instance() && weight_ != NULL;
+}
+inline void WeightedCluster_ClusterWeight::clear_weight() {
+  if (GetArenaNoVirtual() == NULL && weight_ != NULL) delete weight_;
+  weight_ = NULL;
 }
 inline const ::google::protobuf::UInt32Value& WeightedCluster_ClusterWeight::weight() const {
   const ::google::protobuf::UInt32Value* p = weight_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.WeightedCluster.ClusterWeight.weight)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* WeightedCluster_ClusterWeight::release_weight() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.WeightedCluster.ClusterWeight.weight)
-  
-  ::google::protobuf::UInt32Value* temp = weight_;
-  weight_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* WeightedCluster_ClusterWeight::mutable_weight() {
   
@@ -4214,23 +4054,26 @@ inline ::google::protobuf::UInt32Value* WeightedCluster_ClusterWeight::mutable_w
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.WeightedCluster.ClusterWeight.weight)
   return weight_;
 }
+inline ::google::protobuf::UInt32Value* WeightedCluster_ClusterWeight::release_weight() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.WeightedCluster.ClusterWeight.weight)
+  
+  ::google::protobuf::UInt32Value* temp = weight_;
+  weight_ = NULL;
+  return temp;
+}
 inline void WeightedCluster_ClusterWeight::set_allocated_weight(::google::protobuf::UInt32Value* weight) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(weight_);
+  delete weight_;
+  if (weight != NULL && weight->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_weight = new ::google::protobuf::UInt32Value;
+    new_weight->CopyFrom(*weight);
+    weight = new_weight;
   }
+  weight_ = weight;
   if (weight) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(weight)->GetArena();
-    if (message_arena != submessage_arena) {
-      weight = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, weight, submessage_arena);
-    }
     
   } else {
     
   }
-  weight_ = weight;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.WeightedCluster.ClusterWeight.weight)
 }
 
@@ -4238,18 +4081,15 @@ inline void WeightedCluster_ClusterWeight::set_allocated_weight(::google::protob
 inline bool WeightedCluster_ClusterWeight::has_metadata_match() const {
   return this != internal_default_instance() && metadata_match_ != NULL;
 }
+inline void WeightedCluster_ClusterWeight::clear_metadata_match() {
+  if (GetArenaNoVirtual() == NULL && metadata_match_ != NULL) delete metadata_match_;
+  metadata_match_ = NULL;
+}
 inline const ::envoy::api::v2::Metadata& WeightedCluster_ClusterWeight::metadata_match() const {
   const ::envoy::api::v2::Metadata* p = metadata_match_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.WeightedCluster.ClusterWeight.metadata_match)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* WeightedCluster_ClusterWeight::release_metadata_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.WeightedCluster.ClusterWeight.metadata_match)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_match_;
-  metadata_match_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* WeightedCluster_ClusterWeight::mutable_metadata_match() {
   
@@ -4259,22 +4099,21 @@ inline ::envoy::api::v2::Metadata* WeightedCluster_ClusterWeight::mutable_metada
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.WeightedCluster.ClusterWeight.metadata_match)
   return metadata_match_;
 }
+inline ::envoy::api::v2::Metadata* WeightedCluster_ClusterWeight::release_metadata_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.WeightedCluster.ClusterWeight.metadata_match)
+  
+  ::envoy::api::v2::Metadata* temp = metadata_match_;
+  metadata_match_ = NULL;
+  return temp;
+}
 inline void WeightedCluster_ClusterWeight::set_allocated_metadata_match(::envoy::api::v2::Metadata* metadata_match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_match_);
-  }
+  delete metadata_match_;
+  metadata_match_ = metadata_match;
   if (metadata_match) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata_match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata_match, submessage_arena);
-    }
     
   } else {
     
   }
-  metadata_match_ = metadata_match;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.WeightedCluster.ClusterWeight.metadata_match)
 }
 
@@ -4282,7 +4121,7 @@ inline void WeightedCluster_ClusterWeight::set_allocated_metadata_match(::envoy:
 
 // WeightedCluster
 
-// repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+// repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
 inline int WeightedCluster::clusters_size() const {
   return clusters_.size();
 }
@@ -4658,18 +4497,15 @@ inline void RouteMatch::set_allocated_regex(::std::string* regex) {
 inline bool RouteMatch::has_case_sensitive() const {
   return this != internal_default_instance() && case_sensitive_ != NULL;
 }
+inline void RouteMatch::clear_case_sensitive() {
+  if (GetArenaNoVirtual() == NULL && case_sensitive_ != NULL) delete case_sensitive_;
+  case_sensitive_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& RouteMatch::case_sensitive() const {
   const ::google::protobuf::BoolValue* p = case_sensitive_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteMatch.case_sensitive)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* RouteMatch::release_case_sensitive() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteMatch.case_sensitive)
-  
-  ::google::protobuf::BoolValue* temp = case_sensitive_;
-  case_sensitive_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* RouteMatch::mutable_case_sensitive() {
   
@@ -4679,23 +4515,26 @@ inline ::google::protobuf::BoolValue* RouteMatch::mutable_case_sensitive() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteMatch.case_sensitive)
   return case_sensitive_;
 }
+inline ::google::protobuf::BoolValue* RouteMatch::release_case_sensitive() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteMatch.case_sensitive)
+  
+  ::google::protobuf::BoolValue* temp = case_sensitive_;
+  case_sensitive_ = NULL;
+  return temp;
+}
 inline void RouteMatch::set_allocated_case_sensitive(::google::protobuf::BoolValue* case_sensitive) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(case_sensitive_);
+  delete case_sensitive_;
+  if (case_sensitive != NULL && case_sensitive->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_case_sensitive = new ::google::protobuf::BoolValue;
+    new_case_sensitive->CopyFrom(*case_sensitive);
+    case_sensitive = new_case_sensitive;
   }
+  case_sensitive_ = case_sensitive;
   if (case_sensitive) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(case_sensitive)->GetArena();
-    if (message_arena != submessage_arena) {
-      case_sensitive = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, case_sensitive, submessage_arena);
-    }
     
   } else {
     
   }
-  case_sensitive_ = case_sensitive;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteMatch.case_sensitive)
 }
 
@@ -4703,18 +4542,15 @@ inline void RouteMatch::set_allocated_case_sensitive(::google::protobuf::BoolVal
 inline bool RouteMatch::has_runtime() const {
   return this != internal_default_instance() && runtime_ != NULL;
 }
+inline void RouteMatch::clear_runtime() {
+  if (GetArenaNoVirtual() == NULL && runtime_ != NULL) delete runtime_;
+  runtime_ = NULL;
+}
 inline const ::envoy::api::v2::RuntimeUInt32& RouteMatch::runtime() const {
   const ::envoy::api::v2::RuntimeUInt32* p = runtime_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteMatch.runtime)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RuntimeUInt32*>(
       &::envoy::api::v2::_RuntimeUInt32_default_instance_);
-}
-inline ::envoy::api::v2::RuntimeUInt32* RouteMatch::release_runtime() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteMatch.runtime)
-  
-  ::envoy::api::v2::RuntimeUInt32* temp = runtime_;
-  runtime_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RuntimeUInt32* RouteMatch::mutable_runtime() {
   
@@ -4724,22 +4560,21 @@ inline ::envoy::api::v2::RuntimeUInt32* RouteMatch::mutable_runtime() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteMatch.runtime)
   return runtime_;
 }
+inline ::envoy::api::v2::RuntimeUInt32* RouteMatch::release_runtime() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteMatch.runtime)
+  
+  ::envoy::api::v2::RuntimeUInt32* temp = runtime_;
+  runtime_ = NULL;
+  return temp;
+}
 inline void RouteMatch::set_allocated_runtime(::envoy::api::v2::RuntimeUInt32* runtime) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(runtime_);
-  }
+  delete runtime_;
+  runtime_ = runtime;
   if (runtime) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      runtime = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, runtime, submessage_arena);
-    }
     
   } else {
     
   }
-  runtime_ = runtime;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteMatch.runtime)
 }
 
@@ -5071,18 +4906,15 @@ inline void CorsPolicy::set_allocated_max_age(::std::string* max_age) {
 inline bool CorsPolicy::has_allow_credentials() const {
   return this != internal_default_instance() && allow_credentials_ != NULL;
 }
+inline void CorsPolicy::clear_allow_credentials() {
+  if (GetArenaNoVirtual() == NULL && allow_credentials_ != NULL) delete allow_credentials_;
+  allow_credentials_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& CorsPolicy::allow_credentials() const {
   const ::google::protobuf::BoolValue* p = allow_credentials_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.CorsPolicy.allow_credentials)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* CorsPolicy::release_allow_credentials() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CorsPolicy.allow_credentials)
-  
-  ::google::protobuf::BoolValue* temp = allow_credentials_;
-  allow_credentials_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* CorsPolicy::mutable_allow_credentials() {
   
@@ -5092,23 +4924,26 @@ inline ::google::protobuf::BoolValue* CorsPolicy::mutable_allow_credentials() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CorsPolicy.allow_credentials)
   return allow_credentials_;
 }
+inline ::google::protobuf::BoolValue* CorsPolicy::release_allow_credentials() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CorsPolicy.allow_credentials)
+  
+  ::google::protobuf::BoolValue* temp = allow_credentials_;
+  allow_credentials_ = NULL;
+  return temp;
+}
 inline void CorsPolicy::set_allocated_allow_credentials(::google::protobuf::BoolValue* allow_credentials) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(allow_credentials_);
+  delete allow_credentials_;
+  if (allow_credentials != NULL && allow_credentials->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_allow_credentials = new ::google::protobuf::BoolValue;
+    new_allow_credentials->CopyFrom(*allow_credentials);
+    allow_credentials = new_allow_credentials;
   }
+  allow_credentials_ = allow_credentials;
   if (allow_credentials) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(allow_credentials)->GetArena();
-    if (message_arena != submessage_arena) {
-      allow_credentials = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, allow_credentials, submessage_arena);
-    }
     
   } else {
     
   }
-  allow_credentials_ = allow_credentials;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CorsPolicy.allow_credentials)
 }
 
@@ -5116,18 +4951,15 @@ inline void CorsPolicy::set_allocated_allow_credentials(::google::protobuf::Bool
 inline bool CorsPolicy::has_enabled() const {
   return this != internal_default_instance() && enabled_ != NULL;
 }
+inline void CorsPolicy::clear_enabled() {
+  if (GetArenaNoVirtual() == NULL && enabled_ != NULL) delete enabled_;
+  enabled_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& CorsPolicy::enabled() const {
   const ::google::protobuf::BoolValue* p = enabled_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.CorsPolicy.enabled)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* CorsPolicy::release_enabled() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CorsPolicy.enabled)
-  
-  ::google::protobuf::BoolValue* temp = enabled_;
-  enabled_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* CorsPolicy::mutable_enabled() {
   
@@ -5137,23 +4969,26 @@ inline ::google::protobuf::BoolValue* CorsPolicy::mutable_enabled() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CorsPolicy.enabled)
   return enabled_;
 }
+inline ::google::protobuf::BoolValue* CorsPolicy::release_enabled() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CorsPolicy.enabled)
+  
+  ::google::protobuf::BoolValue* temp = enabled_;
+  enabled_ = NULL;
+  return temp;
+}
 inline void CorsPolicy::set_allocated_enabled(::google::protobuf::BoolValue* enabled) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(enabled_);
+  delete enabled_;
+  if (enabled != NULL && enabled->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_enabled = new ::google::protobuf::BoolValue;
+    new_enabled->CopyFrom(*enabled);
+    enabled = new_enabled;
   }
+  enabled_ = enabled;
   if (enabled) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(enabled)->GetArena();
-    if (message_arena != submessage_arena) {
-      enabled = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, enabled, submessage_arena);
-    }
     
   } else {
     
   }
-  enabled_ = enabled;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CorsPolicy.enabled)
 }
 
@@ -5218,18 +5053,15 @@ inline void RouteAction_RetryPolicy::set_allocated_retry_on(::std::string* retry
 inline bool RouteAction_RetryPolicy::has_num_retries() const {
   return this != internal_default_instance() && num_retries_ != NULL;
 }
+inline void RouteAction_RetryPolicy::clear_num_retries() {
+  if (GetArenaNoVirtual() == NULL && num_retries_ != NULL) delete num_retries_;
+  num_retries_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& RouteAction_RetryPolicy::num_retries() const {
   const ::google::protobuf::UInt32Value* p = num_retries_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.RetryPolicy.num_retries)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* RouteAction_RetryPolicy::release_num_retries() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.RetryPolicy.num_retries)
-  
-  ::google::protobuf::UInt32Value* temp = num_retries_;
-  num_retries_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* RouteAction_RetryPolicy::mutable_num_retries() {
   
@@ -5239,23 +5071,26 @@ inline ::google::protobuf::UInt32Value* RouteAction_RetryPolicy::mutable_num_ret
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.RetryPolicy.num_retries)
   return num_retries_;
 }
+inline ::google::protobuf::UInt32Value* RouteAction_RetryPolicy::release_num_retries() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.RetryPolicy.num_retries)
+  
+  ::google::protobuf::UInt32Value* temp = num_retries_;
+  num_retries_ = NULL;
+  return temp;
+}
 inline void RouteAction_RetryPolicy::set_allocated_num_retries(::google::protobuf::UInt32Value* num_retries) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(num_retries_);
+  delete num_retries_;
+  if (num_retries != NULL && num_retries->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_num_retries = new ::google::protobuf::UInt32Value;
+    new_num_retries->CopyFrom(*num_retries);
+    num_retries = new_num_retries;
   }
+  num_retries_ = num_retries;
   if (num_retries) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(num_retries)->GetArena();
-    if (message_arena != submessage_arena) {
-      num_retries = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, num_retries, submessage_arena);
-    }
     
   } else {
     
   }
-  num_retries_ = num_retries;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.RetryPolicy.num_retries)
 }
 
@@ -5263,18 +5098,15 @@ inline void RouteAction_RetryPolicy::set_allocated_num_retries(::google::protobu
 inline bool RouteAction_RetryPolicy::has_per_try_timeout() const {
   return this != internal_default_instance() && per_try_timeout_ != NULL;
 }
+inline void RouteAction_RetryPolicy::clear_per_try_timeout() {
+  if (GetArenaNoVirtual() == NULL && per_try_timeout_ != NULL) delete per_try_timeout_;
+  per_try_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& RouteAction_RetryPolicy::per_try_timeout() const {
   const ::google::protobuf::Duration* p = per_try_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.RetryPolicy.per_try_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* RouteAction_RetryPolicy::release_per_try_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.RetryPolicy.per_try_timeout)
-  
-  ::google::protobuf::Duration* temp = per_try_timeout_;
-  per_try_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* RouteAction_RetryPolicy::mutable_per_try_timeout() {
   
@@ -5284,23 +5116,26 @@ inline ::google::protobuf::Duration* RouteAction_RetryPolicy::mutable_per_try_ti
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.RetryPolicy.per_try_timeout)
   return per_try_timeout_;
 }
+inline ::google::protobuf::Duration* RouteAction_RetryPolicy::release_per_try_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.RetryPolicy.per_try_timeout)
+  
+  ::google::protobuf::Duration* temp = per_try_timeout_;
+  per_try_timeout_ = NULL;
+  return temp;
+}
 inline void RouteAction_RetryPolicy::set_allocated_per_try_timeout(::google::protobuf::Duration* per_try_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(per_try_timeout_);
+  delete per_try_timeout_;
+  if (per_try_timeout != NULL && per_try_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_per_try_timeout = new ::google::protobuf::Duration;
+    new_per_try_timeout->CopyFrom(*per_try_timeout);
+    per_try_timeout = new_per_try_timeout;
   }
+  per_try_timeout_ = per_try_timeout;
   if (per_try_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(per_try_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      per_try_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, per_try_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  per_try_timeout_ = per_try_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.RetryPolicy.per_try_timeout)
 }
 
@@ -5308,7 +5143,7 @@ inline void RouteAction_RetryPolicy::set_allocated_per_try_timeout(::google::pro
 
 // RouteAction_RequestMirrorPolicy
 
-// string cluster = 1 [(.validate.rules) = {
+// string cluster = 1;
 inline void RouteAction_RequestMirrorPolicy::clear_cluster() {
   cluster_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5418,7 +5253,7 @@ inline void RouteAction_RequestMirrorPolicy::set_allocated_runtime_key(::std::st
 
 // RouteAction_HashPolicy_Header
 
-// string header_name = 1 [(.validate.rules) = {
+// string header_name = 1;
 inline void RouteAction_HashPolicy_Header::clear_header_name() {
   header_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5475,7 +5310,7 @@ inline void RouteAction_HashPolicy_Header::set_allocated_header_name(::std::stri
 
 // RouteAction_HashPolicy_Cookie
 
-// string name = 1 [(.validate.rules) = {
+// string name = 1;
 inline void RouteAction_HashPolicy_Cookie::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -5532,18 +5367,15 @@ inline void RouteAction_HashPolicy_Cookie::set_allocated_name(::std::string* nam
 inline bool RouteAction_HashPolicy_Cookie::has_ttl() const {
   return this != internal_default_instance() && ttl_ != NULL;
 }
+inline void RouteAction_HashPolicy_Cookie::clear_ttl() {
+  if (GetArenaNoVirtual() == NULL && ttl_ != NULL) delete ttl_;
+  ttl_ = NULL;
+}
 inline const ::google::protobuf::Duration& RouteAction_HashPolicy_Cookie::ttl() const {
   const ::google::protobuf::Duration* p = ttl_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.HashPolicy.Cookie.ttl)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* RouteAction_HashPolicy_Cookie::release_ttl() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.Cookie.ttl)
-  
-  ::google::protobuf::Duration* temp = ttl_;
-  ttl_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* RouteAction_HashPolicy_Cookie::mutable_ttl() {
   
@@ -5553,23 +5385,26 @@ inline ::google::protobuf::Duration* RouteAction_HashPolicy_Cookie::mutable_ttl(
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.HashPolicy.Cookie.ttl)
   return ttl_;
 }
+inline ::google::protobuf::Duration* RouteAction_HashPolicy_Cookie::release_ttl() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.Cookie.ttl)
+  
+  ::google::protobuf::Duration* temp = ttl_;
+  ttl_ = NULL;
+  return temp;
+}
 inline void RouteAction_HashPolicy_Cookie::set_allocated_ttl(::google::protobuf::Duration* ttl) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(ttl_);
+  delete ttl_;
+  if (ttl != NULL && ttl->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_ttl = new ::google::protobuf::Duration;
+    new_ttl->CopyFrom(*ttl);
+    ttl = new_ttl;
   }
+  ttl_ = ttl;
   if (ttl) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(ttl)->GetArena();
-    if (message_arena != submessage_arena) {
-      ttl = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, ttl, submessage_arena);
-    }
     
   } else {
     
   }
-  ttl_ = ttl;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.Cookie.ttl)
 }
 
@@ -5608,22 +5443,11 @@ inline void RouteAction_HashPolicy::clear_header() {
     clear_has_policy_specifier();
   }
 }
-inline ::envoy::api::v2::RouteAction_HashPolicy_Header* RouteAction_HashPolicy::release_header() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.header)
-  if (has_header()) {
-    clear_has_policy_specifier();
-      ::envoy::api::v2::RouteAction_HashPolicy_Header* temp = policy_specifier_.header_;
-    policy_specifier_.header_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RouteAction_HashPolicy_Header& RouteAction_HashPolicy::header() const {
+inline  const ::envoy::api::v2::RouteAction_HashPolicy_Header& RouteAction_HashPolicy::header() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.HashPolicy.header)
   return has_header()
       ? *policy_specifier_.header_
-      : *reinterpret_cast< ::envoy::api::v2::RouteAction_HashPolicy_Header*>(&::envoy::api::v2::_RouteAction_HashPolicy_Header_default_instance_);
+      : ::envoy::api::v2::RouteAction_HashPolicy_Header::default_instance();
 }
 inline ::envoy::api::v2::RouteAction_HashPolicy_Header* RouteAction_HashPolicy::mutable_header() {
   if (!has_header()) {
@@ -5633,6 +5457,25 @@ inline ::envoy::api::v2::RouteAction_HashPolicy_Header* RouteAction_HashPolicy::
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.HashPolicy.header)
   return policy_specifier_.header_;
+}
+inline ::envoy::api::v2::RouteAction_HashPolicy_Header* RouteAction_HashPolicy::release_header() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.header)
+  if (has_header()) {
+    clear_has_policy_specifier();
+    ::envoy::api::v2::RouteAction_HashPolicy_Header* temp = policy_specifier_.header_;
+    policy_specifier_.header_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RouteAction_HashPolicy::set_allocated_header(::envoy::api::v2::RouteAction_HashPolicy_Header* header) {
+  clear_policy_specifier();
+  if (header) {
+    set_has_header();
+    policy_specifier_.header_ = header;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.header)
 }
 
 // .envoy.api.v2.RouteAction.HashPolicy.Cookie cookie = 2;
@@ -5648,22 +5491,11 @@ inline void RouteAction_HashPolicy::clear_cookie() {
     clear_has_policy_specifier();
   }
 }
-inline ::envoy::api::v2::RouteAction_HashPolicy_Cookie* RouteAction_HashPolicy::release_cookie() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.cookie)
-  if (has_cookie()) {
-    clear_has_policy_specifier();
-      ::envoy::api::v2::RouteAction_HashPolicy_Cookie* temp = policy_specifier_.cookie_;
-    policy_specifier_.cookie_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RouteAction_HashPolicy_Cookie& RouteAction_HashPolicy::cookie() const {
+inline  const ::envoy::api::v2::RouteAction_HashPolicy_Cookie& RouteAction_HashPolicy::cookie() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.HashPolicy.cookie)
   return has_cookie()
       ? *policy_specifier_.cookie_
-      : *reinterpret_cast< ::envoy::api::v2::RouteAction_HashPolicy_Cookie*>(&::envoy::api::v2::_RouteAction_HashPolicy_Cookie_default_instance_);
+      : ::envoy::api::v2::RouteAction_HashPolicy_Cookie::default_instance();
 }
 inline ::envoy::api::v2::RouteAction_HashPolicy_Cookie* RouteAction_HashPolicy::mutable_cookie() {
   if (!has_cookie()) {
@@ -5673,6 +5505,25 @@ inline ::envoy::api::v2::RouteAction_HashPolicy_Cookie* RouteAction_HashPolicy::
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.HashPolicy.cookie)
   return policy_specifier_.cookie_;
+}
+inline ::envoy::api::v2::RouteAction_HashPolicy_Cookie* RouteAction_HashPolicy::release_cookie() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.cookie)
+  if (has_cookie()) {
+    clear_has_policy_specifier();
+    ::envoy::api::v2::RouteAction_HashPolicy_Cookie* temp = policy_specifier_.cookie_;
+    policy_specifier_.cookie_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RouteAction_HashPolicy::set_allocated_cookie(::envoy::api::v2::RouteAction_HashPolicy_Cookie* cookie) {
+  clear_policy_specifier();
+  if (cookie) {
+    set_has_cookie();
+    policy_specifier_.cookie_ = cookie;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.cookie)
 }
 
 // .envoy.api.v2.RouteAction.HashPolicy.ConnectionProperties connection_properties = 3;
@@ -5688,22 +5539,11 @@ inline void RouteAction_HashPolicy::clear_connection_properties() {
     clear_has_policy_specifier();
   }
 }
-inline ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* RouteAction_HashPolicy::release_connection_properties() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
-  if (has_connection_properties()) {
-    clear_has_policy_specifier();
-      ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* temp = policy_specifier_.connection_properties_;
-    policy_specifier_.connection_properties_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties& RouteAction_HashPolicy::connection_properties() const {
+inline  const ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties& RouteAction_HashPolicy::connection_properties() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
   return has_connection_properties()
       ? *policy_specifier_.connection_properties_
-      : *reinterpret_cast< ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties*>(&::envoy::api::v2::_RouteAction_HashPolicy_ConnectionProperties_default_instance_);
+      : ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties::default_instance();
 }
 inline ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* RouteAction_HashPolicy::mutable_connection_properties() {
   if (!has_connection_properties()) {
@@ -5713,6 +5553,25 @@ inline ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* RouteActio
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
   return policy_specifier_.connection_properties_;
+}
+inline ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* RouteAction_HashPolicy::release_connection_properties() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
+  if (has_connection_properties()) {
+    clear_has_policy_specifier();
+    ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* temp = policy_specifier_.connection_properties_;
+    policy_specifier_.connection_properties_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RouteAction_HashPolicy::set_allocated_connection_properties(::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* connection_properties) {
+  clear_policy_specifier();
+  if (connection_properties) {
+    set_has_connection_properties();
+    policy_specifier_.connection_properties_ = connection_properties;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
 }
 
 inline bool RouteAction_HashPolicy::has_policy_specifier() const {
@@ -5931,22 +5790,11 @@ inline void RouteAction::clear_weighted_clusters() {
     clear_has_cluster_specifier();
   }
 }
-inline ::envoy::api::v2::WeightedCluster* RouteAction::release_weighted_clusters() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.weighted_clusters)
-  if (has_weighted_clusters()) {
-    clear_has_cluster_specifier();
-      ::envoy::api::v2::WeightedCluster* temp = cluster_specifier_.weighted_clusters_;
-    cluster_specifier_.weighted_clusters_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::WeightedCluster& RouteAction::weighted_clusters() const {
+inline  const ::envoy::api::v2::WeightedCluster& RouteAction::weighted_clusters() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.weighted_clusters)
   return has_weighted_clusters()
       ? *cluster_specifier_.weighted_clusters_
-      : *reinterpret_cast< ::envoy::api::v2::WeightedCluster*>(&::envoy::api::v2::_WeightedCluster_default_instance_);
+      : ::envoy::api::v2::WeightedCluster::default_instance();
 }
 inline ::envoy::api::v2::WeightedCluster* RouteAction::mutable_weighted_clusters() {
   if (!has_weighted_clusters()) {
@@ -5957,23 +5805,39 @@ inline ::envoy::api::v2::WeightedCluster* RouteAction::mutable_weighted_clusters
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.weighted_clusters)
   return cluster_specifier_.weighted_clusters_;
 }
+inline ::envoy::api::v2::WeightedCluster* RouteAction::release_weighted_clusters() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.weighted_clusters)
+  if (has_weighted_clusters()) {
+    clear_has_cluster_specifier();
+    ::envoy::api::v2::WeightedCluster* temp = cluster_specifier_.weighted_clusters_;
+    cluster_specifier_.weighted_clusters_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RouteAction::set_allocated_weighted_clusters(::envoy::api::v2::WeightedCluster* weighted_clusters) {
+  clear_cluster_specifier();
+  if (weighted_clusters) {
+    set_has_weighted_clusters();
+    cluster_specifier_.weighted_clusters_ = weighted_clusters;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.weighted_clusters)
+}
 
 // .envoy.api.v2.Metadata metadata_match = 4;
 inline bool RouteAction::has_metadata_match() const {
   return this != internal_default_instance() && metadata_match_ != NULL;
+}
+inline void RouteAction::clear_metadata_match() {
+  if (GetArenaNoVirtual() == NULL && metadata_match_ != NULL) delete metadata_match_;
+  metadata_match_ = NULL;
 }
 inline const ::envoy::api::v2::Metadata& RouteAction::metadata_match() const {
   const ::envoy::api::v2::Metadata* p = metadata_match_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.metadata_match)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* RouteAction::release_metadata_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.metadata_match)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_match_;
-  metadata_match_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* RouteAction::mutable_metadata_match() {
   
@@ -5983,22 +5847,21 @@ inline ::envoy::api::v2::Metadata* RouteAction::mutable_metadata_match() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.metadata_match)
   return metadata_match_;
 }
+inline ::envoy::api::v2::Metadata* RouteAction::release_metadata_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.metadata_match)
+  
+  ::envoy::api::v2::Metadata* temp = metadata_match_;
+  metadata_match_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_metadata_match(::envoy::api::v2::Metadata* metadata_match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_match_);
-  }
+  delete metadata_match_;
+  metadata_match_ = metadata_match;
   if (metadata_match) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata_match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata_match, submessage_arena);
-    }
     
   } else {
     
   }
-  metadata_match_ = metadata_match;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.metadata_match)
 }
 
@@ -6157,22 +6020,17 @@ inline bool RouteAction::has_auto_host_rewrite() const {
 inline void RouteAction::set_has_auto_host_rewrite() {
   _oneof_case_[1] = kAutoHostRewrite;
 }
-inline ::google::protobuf::BoolValue* RouteAction::release_auto_host_rewrite() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.auto_host_rewrite)
+inline void RouteAction::clear_auto_host_rewrite() {
   if (has_auto_host_rewrite()) {
+    delete host_rewrite_specifier_.auto_host_rewrite_;
     clear_has_host_rewrite_specifier();
-      ::google::protobuf::BoolValue* temp = host_rewrite_specifier_.auto_host_rewrite_;
-    host_rewrite_specifier_.auto_host_rewrite_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::google::protobuf::BoolValue& RouteAction::auto_host_rewrite() const {
+inline  const ::google::protobuf::BoolValue& RouteAction::auto_host_rewrite() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.auto_host_rewrite)
   return has_auto_host_rewrite()
       ? *host_rewrite_specifier_.auto_host_rewrite_
-      : *reinterpret_cast< ::google::protobuf::BoolValue*>(&::google::protobuf::_BoolValue_default_instance_);
+      : ::google::protobuf::BoolValue::default_instance();
 }
 inline ::google::protobuf::BoolValue* RouteAction::mutable_auto_host_rewrite() {
   if (!has_auto_host_rewrite()) {
@@ -6183,23 +6041,44 @@ inline ::google::protobuf::BoolValue* RouteAction::mutable_auto_host_rewrite() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.auto_host_rewrite)
   return host_rewrite_specifier_.auto_host_rewrite_;
 }
+inline ::google::protobuf::BoolValue* RouteAction::release_auto_host_rewrite() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.auto_host_rewrite)
+  if (has_auto_host_rewrite()) {
+    clear_has_host_rewrite_specifier();
+    ::google::protobuf::BoolValue* temp = host_rewrite_specifier_.auto_host_rewrite_;
+    host_rewrite_specifier_.auto_host_rewrite_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RouteAction::set_allocated_auto_host_rewrite(::google::protobuf::BoolValue* auto_host_rewrite) {
+  clear_host_rewrite_specifier();
+  if (auto_host_rewrite) {
+    if (static_cast< ::google::protobuf::BoolValue*>(auto_host_rewrite)->GetArena() != NULL) {
+      ::google::protobuf::BoolValue* new_auto_host_rewrite = new ::google::protobuf::BoolValue;
+      new_auto_host_rewrite->CopyFrom(*auto_host_rewrite);
+      auto_host_rewrite = new_auto_host_rewrite;
+    }
+    set_has_auto_host_rewrite();
+    host_rewrite_specifier_.auto_host_rewrite_ = auto_host_rewrite;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.auto_host_rewrite)
+}
 
 // .google.protobuf.Duration timeout = 8;
 inline bool RouteAction::has_timeout() const {
   return this != internal_default_instance() && timeout_ != NULL;
+}
+inline void RouteAction::clear_timeout() {
+  if (GetArenaNoVirtual() == NULL && timeout_ != NULL) delete timeout_;
+  timeout_ = NULL;
 }
 inline const ::google::protobuf::Duration& RouteAction::timeout() const {
   const ::google::protobuf::Duration* p = timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* RouteAction::release_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.timeout)
-  
-  ::google::protobuf::Duration* temp = timeout_;
-  timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* RouteAction::mutable_timeout() {
   
@@ -6209,23 +6088,26 @@ inline ::google::protobuf::Duration* RouteAction::mutable_timeout() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.timeout)
   return timeout_;
 }
+inline ::google::protobuf::Duration* RouteAction::release_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.timeout)
+  
+  ::google::protobuf::Duration* temp = timeout_;
+  timeout_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_timeout(::google::protobuf::Duration* timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(timeout_);
+  delete timeout_;
+  if (timeout != NULL && timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_timeout = new ::google::protobuf::Duration;
+    new_timeout->CopyFrom(*timeout);
+    timeout = new_timeout;
   }
+  timeout_ = timeout;
   if (timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  timeout_ = timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.timeout)
 }
 
@@ -6234,9 +6116,7 @@ inline bool RouteAction::has_retry_policy() const {
   return this != internal_default_instance() && retry_policy_ != NULL;
 }
 inline void RouteAction::clear_retry_policy() {
-  if (GetArenaNoVirtual() == NULL && retry_policy_ != NULL) {
-    delete retry_policy_;
-  }
+  if (GetArenaNoVirtual() == NULL && retry_policy_ != NULL) delete retry_policy_;
   retry_policy_ = NULL;
 }
 inline const ::envoy::api::v2::RouteAction_RetryPolicy& RouteAction::retry_policy() const {
@@ -6244,13 +6124,6 @@ inline const ::envoy::api::v2::RouteAction_RetryPolicy& RouteAction::retry_polic
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.retry_policy)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RouteAction_RetryPolicy*>(
       &::envoy::api::v2::_RouteAction_RetryPolicy_default_instance_);
-}
-inline ::envoy::api::v2::RouteAction_RetryPolicy* RouteAction::release_retry_policy() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.retry_policy)
-  
-  ::envoy::api::v2::RouteAction_RetryPolicy* temp = retry_policy_;
-  retry_policy_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RouteAction_RetryPolicy* RouteAction::mutable_retry_policy() {
   
@@ -6260,22 +6133,21 @@ inline ::envoy::api::v2::RouteAction_RetryPolicy* RouteAction::mutable_retry_pol
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.retry_policy)
   return retry_policy_;
 }
+inline ::envoy::api::v2::RouteAction_RetryPolicy* RouteAction::release_retry_policy() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.retry_policy)
+  
+  ::envoy::api::v2::RouteAction_RetryPolicy* temp = retry_policy_;
+  retry_policy_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_retry_policy(::envoy::api::v2::RouteAction_RetryPolicy* retry_policy) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete retry_policy_;
-  }
+  delete retry_policy_;
+  retry_policy_ = retry_policy;
   if (retry_policy) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      retry_policy = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, retry_policy, submessage_arena);
-    }
     
   } else {
     
   }
-  retry_policy_ = retry_policy;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.retry_policy)
 }
 
@@ -6284,9 +6156,7 @@ inline bool RouteAction::has_request_mirror_policy() const {
   return this != internal_default_instance() && request_mirror_policy_ != NULL;
 }
 inline void RouteAction::clear_request_mirror_policy() {
-  if (GetArenaNoVirtual() == NULL && request_mirror_policy_ != NULL) {
-    delete request_mirror_policy_;
-  }
+  if (GetArenaNoVirtual() == NULL && request_mirror_policy_ != NULL) delete request_mirror_policy_;
   request_mirror_policy_ = NULL;
 }
 inline const ::envoy::api::v2::RouteAction_RequestMirrorPolicy& RouteAction::request_mirror_policy() const {
@@ -6294,13 +6164,6 @@ inline const ::envoy::api::v2::RouteAction_RequestMirrorPolicy& RouteAction::req
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.request_mirror_policy)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RouteAction_RequestMirrorPolicy*>(
       &::envoy::api::v2::_RouteAction_RequestMirrorPolicy_default_instance_);
-}
-inline ::envoy::api::v2::RouteAction_RequestMirrorPolicy* RouteAction::release_request_mirror_policy() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.request_mirror_policy)
-  
-  ::envoy::api::v2::RouteAction_RequestMirrorPolicy* temp = request_mirror_policy_;
-  request_mirror_policy_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RouteAction_RequestMirrorPolicy* RouteAction::mutable_request_mirror_policy() {
   
@@ -6310,22 +6173,21 @@ inline ::envoy::api::v2::RouteAction_RequestMirrorPolicy* RouteAction::mutable_r
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.request_mirror_policy)
   return request_mirror_policy_;
 }
+inline ::envoy::api::v2::RouteAction_RequestMirrorPolicy* RouteAction::release_request_mirror_policy() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.request_mirror_policy)
+  
+  ::envoy::api::v2::RouteAction_RequestMirrorPolicy* temp = request_mirror_policy_;
+  request_mirror_policy_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_request_mirror_policy(::envoy::api::v2::RouteAction_RequestMirrorPolicy* request_mirror_policy) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete request_mirror_policy_;
-  }
+  delete request_mirror_policy_;
+  request_mirror_policy_ = request_mirror_policy;
   if (request_mirror_policy) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      request_mirror_policy = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, request_mirror_policy, submessage_arena);
-    }
     
   } else {
     
   }
-  request_mirror_policy_ = request_mirror_policy;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.request_mirror_policy)
 }
 
@@ -6346,6 +6208,9 @@ inline void RouteAction::set_priority(::envoy::api::v2::RoutingPriority value) {
 // repeated .envoy.api.v2.HeaderValueOption request_headers_to_add = 12;
 inline int RouteAction::request_headers_to_add_size() const {
   return request_headers_to_add_.size();
+}
+inline void RouteAction::clear_request_headers_to_add() {
+  request_headers_to_add_.Clear();
 }
 inline const ::envoy::api::v2::HeaderValueOption& RouteAction::request_headers_to_add(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.request_headers_to_add)
@@ -6368,102 +6233,6 @@ inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValue
 RouteAction::request_headers_to_add() const {
   // @@protoc_insertion_point(field_list:envoy.api.v2.RouteAction.request_headers_to_add)
   return request_headers_to_add_;
-}
-
-// repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-inline int RouteAction::response_headers_to_add_size() const {
-  return response_headers_to_add_.size();
-}
-inline const ::envoy::api::v2::HeaderValueOption& RouteAction::response_headers_to_add(int index) const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.response_headers_to_add)
-  return response_headers_to_add_.Get(index);
-}
-inline ::envoy::api::v2::HeaderValueOption* RouteAction::mutable_response_headers_to_add(int index) {
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.response_headers_to_add)
-  return response_headers_to_add_.Mutable(index);
-}
-inline ::envoy::api::v2::HeaderValueOption* RouteAction::add_response_headers_to_add() {
-  // @@protoc_insertion_point(field_add:envoy.api.v2.RouteAction.response_headers_to_add)
-  return response_headers_to_add_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >*
-RouteAction::mutable_response_headers_to_add() {
-  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.RouteAction.response_headers_to_add)
-  return &response_headers_to_add_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >&
-RouteAction::response_headers_to_add() const {
-  // @@protoc_insertion_point(field_list:envoy.api.v2.RouteAction.response_headers_to_add)
-  return response_headers_to_add_;
-}
-
-// repeated string response_headers_to_remove = 19;
-inline int RouteAction::response_headers_to_remove_size() const {
-  return response_headers_to_remove_.size();
-}
-inline void RouteAction::clear_response_headers_to_remove() {
-  response_headers_to_remove_.Clear();
-}
-inline const ::std::string& RouteAction::response_headers_to_remove(int index) const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.response_headers_to_remove)
-  return response_headers_to_remove_.Get(index);
-}
-inline ::std::string* RouteAction::mutable_response_headers_to_remove(int index) {
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.response_headers_to_remove)
-  return response_headers_to_remove_.Mutable(index);
-}
-inline void RouteAction::set_response_headers_to_remove(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:envoy.api.v2.RouteAction.response_headers_to_remove)
-  response_headers_to_remove_.Mutable(index)->assign(value);
-}
-#if LANG_CXX11
-inline void RouteAction::set_response_headers_to_remove(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:envoy.api.v2.RouteAction.response_headers_to_remove)
-  response_headers_to_remove_.Mutable(index)->assign(std::move(value));
-}
-#endif
-inline void RouteAction::set_response_headers_to_remove(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  response_headers_to_remove_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-inline void RouteAction::set_response_headers_to_remove(int index, const char* value, size_t size) {
-  response_headers_to_remove_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-inline ::std::string* RouteAction::add_response_headers_to_remove() {
-  // @@protoc_insertion_point(field_add_mutable:envoy.api.v2.RouteAction.response_headers_to_remove)
-  return response_headers_to_remove_.Add();
-}
-inline void RouteAction::add_response_headers_to_remove(const ::std::string& value) {
-  response_headers_to_remove_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-#if LANG_CXX11
-inline void RouteAction::add_response_headers_to_remove(::std::string&& value) {
-  response_headers_to_remove_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-#endif
-inline void RouteAction::add_response_headers_to_remove(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  response_headers_to_remove_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-inline void RouteAction::add_response_headers_to_remove(const char* value, size_t size) {
-  response_headers_to_remove_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:envoy.api.v2.RouteAction.response_headers_to_remove)
-}
-inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RouteAction::response_headers_to_remove() const {
-  // @@protoc_insertion_point(field_list:envoy.api.v2.RouteAction.response_headers_to_remove)
-  return response_headers_to_remove_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-RouteAction::mutable_response_headers_to_remove() {
-  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.RouteAction.response_headers_to_remove)
-  return &response_headers_to_remove_;
 }
 
 // repeated .envoy.api.v2.RateLimit rate_limits = 13;
@@ -6500,18 +6269,15 @@ RouteAction::rate_limits() const {
 inline bool RouteAction::has_include_vh_rate_limits() const {
   return this != internal_default_instance() && include_vh_rate_limits_ != NULL;
 }
+inline void RouteAction::clear_include_vh_rate_limits() {
+  if (GetArenaNoVirtual() == NULL && include_vh_rate_limits_ != NULL) delete include_vh_rate_limits_;
+  include_vh_rate_limits_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& RouteAction::include_vh_rate_limits() const {
   const ::google::protobuf::BoolValue* p = include_vh_rate_limits_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.include_vh_rate_limits)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* RouteAction::release_include_vh_rate_limits() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.include_vh_rate_limits)
-  
-  ::google::protobuf::BoolValue* temp = include_vh_rate_limits_;
-  include_vh_rate_limits_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* RouteAction::mutable_include_vh_rate_limits() {
   
@@ -6521,23 +6287,26 @@ inline ::google::protobuf::BoolValue* RouteAction::mutable_include_vh_rate_limit
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.include_vh_rate_limits)
   return include_vh_rate_limits_;
 }
+inline ::google::protobuf::BoolValue* RouteAction::release_include_vh_rate_limits() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.include_vh_rate_limits)
+  
+  ::google::protobuf::BoolValue* temp = include_vh_rate_limits_;
+  include_vh_rate_limits_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_include_vh_rate_limits(::google::protobuf::BoolValue* include_vh_rate_limits) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(include_vh_rate_limits_);
+  delete include_vh_rate_limits_;
+  if (include_vh_rate_limits != NULL && include_vh_rate_limits->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_include_vh_rate_limits = new ::google::protobuf::BoolValue;
+    new_include_vh_rate_limits->CopyFrom(*include_vh_rate_limits);
+    include_vh_rate_limits = new_include_vh_rate_limits;
   }
+  include_vh_rate_limits_ = include_vh_rate_limits;
   if (include_vh_rate_limits) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(include_vh_rate_limits)->GetArena();
-    if (message_arena != submessage_arena) {
-      include_vh_rate_limits = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, include_vh_rate_limits, submessage_arena);
-    }
     
   } else {
     
   }
-  include_vh_rate_limits_ = include_vh_rate_limits;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.include_vh_rate_limits)
 }
 
@@ -6575,18 +6344,15 @@ RouteAction::hash_policy() const {
 inline bool RouteAction::has_use_websocket() const {
   return this != internal_default_instance() && use_websocket_ != NULL;
 }
+inline void RouteAction::clear_use_websocket() {
+  if (GetArenaNoVirtual() == NULL && use_websocket_ != NULL) delete use_websocket_;
+  use_websocket_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& RouteAction::use_websocket() const {
   const ::google::protobuf::BoolValue* p = use_websocket_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.use_websocket)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* RouteAction::release_use_websocket() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.use_websocket)
-  
-  ::google::protobuf::BoolValue* temp = use_websocket_;
-  use_websocket_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* RouteAction::mutable_use_websocket() {
   
@@ -6596,23 +6362,26 @@ inline ::google::protobuf::BoolValue* RouteAction::mutable_use_websocket() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.use_websocket)
   return use_websocket_;
 }
+inline ::google::protobuf::BoolValue* RouteAction::release_use_websocket() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.use_websocket)
+  
+  ::google::protobuf::BoolValue* temp = use_websocket_;
+  use_websocket_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_use_websocket(::google::protobuf::BoolValue* use_websocket) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(use_websocket_);
+  delete use_websocket_;
+  if (use_websocket != NULL && use_websocket->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_use_websocket = new ::google::protobuf::BoolValue;
+    new_use_websocket->CopyFrom(*use_websocket);
+    use_websocket = new_use_websocket;
   }
+  use_websocket_ = use_websocket;
   if (use_websocket) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(use_websocket)->GetArena();
-    if (message_arena != submessage_arena) {
-      use_websocket = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, use_websocket, submessage_arena);
-    }
     
   } else {
     
   }
-  use_websocket_ = use_websocket;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.use_websocket)
 }
 
@@ -6621,9 +6390,7 @@ inline bool RouteAction::has_cors() const {
   return this != internal_default_instance() && cors_ != NULL;
 }
 inline void RouteAction::clear_cors() {
-  if (GetArenaNoVirtual() == NULL && cors_ != NULL) {
-    delete cors_;
-  }
+  if (GetArenaNoVirtual() == NULL && cors_ != NULL) delete cors_;
   cors_ = NULL;
 }
 inline const ::envoy::api::v2::CorsPolicy& RouteAction::cors() const {
@@ -6631,13 +6398,6 @@ inline const ::envoy::api::v2::CorsPolicy& RouteAction::cors() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteAction.cors)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CorsPolicy*>(
       &::envoy::api::v2::_CorsPolicy_default_instance_);
-}
-inline ::envoy::api::v2::CorsPolicy* RouteAction::release_cors() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.cors)
-  
-  ::envoy::api::v2::CorsPolicy* temp = cors_;
-  cors_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CorsPolicy* RouteAction::mutable_cors() {
   
@@ -6647,22 +6407,21 @@ inline ::envoy::api::v2::CorsPolicy* RouteAction::mutable_cors() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteAction.cors)
   return cors_;
 }
+inline ::envoy::api::v2::CorsPolicy* RouteAction::release_cors() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteAction.cors)
+  
+  ::envoy::api::v2::CorsPolicy* temp = cors_;
+  cors_ = NULL;
+  return temp;
+}
 inline void RouteAction::set_allocated_cors(::envoy::api::v2::CorsPolicy* cors) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete cors_;
-  }
+  delete cors_;
+  cors_ = cors;
   if (cors) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      cors = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, cors, submessage_arena);
-    }
     
   } else {
     
   }
-  cors_ = cors;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.cors)
 }
 
@@ -6794,25 +6553,11 @@ inline void RedirectAction::set_allocated_path_redirect(::std::string* path_redi
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RedirectAction.path_redirect)
 }
 
-// .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-inline void RedirectAction::clear_response_code() {
-  response_code_ = 0;
-}
-inline ::envoy::api::v2::RedirectAction_RedirectResponseCode RedirectAction::response_code() const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.RedirectAction.response_code)
-  return static_cast< ::envoy::api::v2::RedirectAction_RedirectResponseCode >(response_code_);
-}
-inline void RedirectAction::set_response_code(::envoy::api::v2::RedirectAction_RedirectResponseCode value) {
-  
-  response_code_ = value;
-  // @@protoc_insertion_point(field_set:envoy.api.v2.RedirectAction.response_code)
-}
-
 // -------------------------------------------------------------------
 
 // Decorator
 
-// string operation = 1 [(.validate.rules) = {
+// string operation = 1;
 inline void Decorator::clear_operation() {
   operation_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -6869,14 +6614,12 @@ inline void Decorator::set_allocated_operation(::std::string* operation) {
 
 // Route
 
-// .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+// .envoy.api.v2.RouteMatch match = 1;
 inline bool Route::has_match() const {
   return this != internal_default_instance() && match_ != NULL;
 }
 inline void Route::clear_match() {
-  if (GetArenaNoVirtual() == NULL && match_ != NULL) {
-    delete match_;
-  }
+  if (GetArenaNoVirtual() == NULL && match_ != NULL) delete match_;
   match_ = NULL;
 }
 inline const ::envoy::api::v2::RouteMatch& Route::match() const {
@@ -6884,13 +6627,6 @@ inline const ::envoy::api::v2::RouteMatch& Route::match() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Route.match)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RouteMatch*>(
       &::envoy::api::v2::_RouteMatch_default_instance_);
-}
-inline ::envoy::api::v2::RouteMatch* Route::release_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.match)
-  
-  ::envoy::api::v2::RouteMatch* temp = match_;
-  match_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RouteMatch* Route::mutable_match() {
   
@@ -6900,22 +6636,21 @@ inline ::envoy::api::v2::RouteMatch* Route::mutable_match() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.match)
   return match_;
 }
+inline ::envoy::api::v2::RouteMatch* Route::release_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.match)
+  
+  ::envoy::api::v2::RouteMatch* temp = match_;
+  match_ = NULL;
+  return temp;
+}
 inline void Route::set_allocated_match(::envoy::api::v2::RouteMatch* match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete match_;
-  }
+  delete match_;
+  match_ = match;
   if (match) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, match, submessage_arena);
-    }
     
   } else {
     
   }
-  match_ = match;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.match)
 }
 
@@ -6932,22 +6667,11 @@ inline void Route::clear_route() {
     clear_has_action();
   }
 }
-inline ::envoy::api::v2::RouteAction* Route::release_route() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.route)
-  if (has_route()) {
-    clear_has_action();
-      ::envoy::api::v2::RouteAction* temp = action_.route_;
-    action_.route_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RouteAction& Route::route() const {
+inline  const ::envoy::api::v2::RouteAction& Route::route() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Route.route)
   return has_route()
       ? *action_.route_
-      : *reinterpret_cast< ::envoy::api::v2::RouteAction*>(&::envoy::api::v2::_RouteAction_default_instance_);
+      : ::envoy::api::v2::RouteAction::default_instance();
 }
 inline ::envoy::api::v2::RouteAction* Route::mutable_route() {
   if (!has_route()) {
@@ -6957,6 +6681,25 @@ inline ::envoy::api::v2::RouteAction* Route::mutable_route() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.route)
   return action_.route_;
+}
+inline ::envoy::api::v2::RouteAction* Route::release_route() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.route)
+  if (has_route()) {
+    clear_has_action();
+    ::envoy::api::v2::RouteAction* temp = action_.route_;
+    action_.route_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Route::set_allocated_route(::envoy::api::v2::RouteAction* route) {
+  clear_action();
+  if (route) {
+    set_has_route();
+    action_.route_ = route;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.route)
 }
 
 // .envoy.api.v2.RedirectAction redirect = 3;
@@ -6972,22 +6715,11 @@ inline void Route::clear_redirect() {
     clear_has_action();
   }
 }
-inline ::envoy::api::v2::RedirectAction* Route::release_redirect() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.redirect)
-  if (has_redirect()) {
-    clear_has_action();
-      ::envoy::api::v2::RedirectAction* temp = action_.redirect_;
-    action_.redirect_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RedirectAction& Route::redirect() const {
+inline  const ::envoy::api::v2::RedirectAction& Route::redirect() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Route.redirect)
   return has_redirect()
       ? *action_.redirect_
-      : *reinterpret_cast< ::envoy::api::v2::RedirectAction*>(&::envoy::api::v2::_RedirectAction_default_instance_);
+      : ::envoy::api::v2::RedirectAction::default_instance();
 }
 inline ::envoy::api::v2::RedirectAction* Route::mutable_redirect() {
   if (!has_redirect()) {
@@ -6998,23 +6730,39 @@ inline ::envoy::api::v2::RedirectAction* Route::mutable_redirect() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.redirect)
   return action_.redirect_;
 }
+inline ::envoy::api::v2::RedirectAction* Route::release_redirect() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.redirect)
+  if (has_redirect()) {
+    clear_has_action();
+    ::envoy::api::v2::RedirectAction* temp = action_.redirect_;
+    action_.redirect_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Route::set_allocated_redirect(::envoy::api::v2::RedirectAction* redirect) {
+  clear_action();
+  if (redirect) {
+    set_has_redirect();
+    action_.redirect_ = redirect;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.redirect)
+}
 
 // .envoy.api.v2.Metadata metadata = 4;
 inline bool Route::has_metadata() const {
   return this != internal_default_instance() && metadata_ != NULL;
+}
+inline void Route::clear_metadata() {
+  if (GetArenaNoVirtual() == NULL && metadata_ != NULL) delete metadata_;
+  metadata_ = NULL;
 }
 inline const ::envoy::api::v2::Metadata& Route::metadata() const {
   const ::envoy::api::v2::Metadata* p = metadata_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Route.metadata)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* Route::release_metadata() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.metadata)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_;
-  metadata_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* Route::mutable_metadata() {
   
@@ -7024,22 +6772,21 @@ inline ::envoy::api::v2::Metadata* Route::mutable_metadata() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.metadata)
   return metadata_;
 }
+inline ::envoy::api::v2::Metadata* Route::release_metadata() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.metadata)
+  
+  ::envoy::api::v2::Metadata* temp = metadata_;
+  metadata_ = NULL;
+  return temp;
+}
 inline void Route::set_allocated_metadata(::envoy::api::v2::Metadata* metadata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_);
-  }
+  delete metadata_;
+  metadata_ = metadata;
   if (metadata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata, submessage_arena);
-    }
     
   } else {
     
   }
-  metadata_ = metadata;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.metadata)
 }
 
@@ -7048,9 +6795,7 @@ inline bool Route::has_decorator() const {
   return this != internal_default_instance() && decorator_ != NULL;
 }
 inline void Route::clear_decorator() {
-  if (GetArenaNoVirtual() == NULL && decorator_ != NULL) {
-    delete decorator_;
-  }
+  if (GetArenaNoVirtual() == NULL && decorator_ != NULL) delete decorator_;
   decorator_ = NULL;
 }
 inline const ::envoy::api::v2::Decorator& Route::decorator() const {
@@ -7058,13 +6803,6 @@ inline const ::envoy::api::v2::Decorator& Route::decorator() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Route.decorator)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Decorator*>(
       &::envoy::api::v2::_Decorator_default_instance_);
-}
-inline ::envoy::api::v2::Decorator* Route::release_decorator() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.decorator)
-  
-  ::envoy::api::v2::Decorator* temp = decorator_;
-  decorator_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Decorator* Route::mutable_decorator() {
   
@@ -7074,67 +6812,22 @@ inline ::envoy::api::v2::Decorator* Route::mutable_decorator() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.decorator)
   return decorator_;
 }
-inline void Route::set_allocated_decorator(::envoy::api::v2::Decorator* decorator) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete decorator_;
-  }
-  if (decorator) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      decorator = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, decorator, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  decorator_ = decorator;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.decorator)
-}
-
-// .envoy.api.v2.AuthAction auth = 6;
-inline bool Route::has_auth() const {
-  return this != internal_default_instance() && auth_ != NULL;
-}
-inline const ::envoy::api::v2::AuthAction& Route::auth() const {
-  const ::envoy::api::v2::AuthAction* p = auth_;
-  // @@protoc_insertion_point(field_get:envoy.api.v2.Route.auth)
-  return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::AuthAction*>(
-      &::envoy::api::v2::_AuthAction_default_instance_);
-}
-inline ::envoy::api::v2::AuthAction* Route::release_auth() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.auth)
+inline ::envoy::api::v2::Decorator* Route::release_decorator() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Route.decorator)
   
-  ::envoy::api::v2::AuthAction* temp = auth_;
-  auth_ = NULL;
+  ::envoy::api::v2::Decorator* temp = decorator_;
+  decorator_ = NULL;
   return temp;
 }
-inline ::envoy::api::v2::AuthAction* Route::mutable_auth() {
-  
-  if (auth_ == NULL) {
-    auth_ = new ::envoy::api::v2::AuthAction;
-  }
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.Route.auth)
-  return auth_;
-}
-inline void Route::set_allocated_auth(::envoy::api::v2::AuthAction* auth) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(auth_);
-  }
-  if (auth) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      auth = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, auth, submessage_arena);
-    }
+inline void Route::set_allocated_decorator(::envoy::api::v2::Decorator* decorator) {
+  delete decorator_;
+  decorator_ = decorator;
+  if (decorator) {
     
   } else {
     
   }
-  auth_ = auth;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.auth)
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.decorator)
 }
 
 inline bool Route::has_action() const {
@@ -7150,7 +6843,7 @@ inline Route::ActionCase Route::action_case() const {
 
 // VirtualCluster
 
-// string pattern = 1 [(.validate.rules) = {
+// string pattern = 1;
 inline void VirtualCluster::clear_pattern() {
   pattern_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7203,7 +6896,7 @@ inline void VirtualCluster::set_allocated_pattern(::std::string* pattern) {
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.VirtualCluster.pattern)
 }
 
-// string name = 2 [(.validate.rules) = {
+// string name = 2;
 inline void VirtualCluster::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7282,7 +6975,7 @@ inline void VirtualCluster::set_method(::envoy::api::v2::RequestMethod value) {
 
 // RateLimit_Action_RequestHeaders
 
-// string header_name = 1 [(.validate.rules) = {
+// string header_name = 1;
 inline void RateLimit_Action_RequestHeaders::clear_header_name() {
   header_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7335,7 +7028,7 @@ inline void RateLimit_Action_RequestHeaders::set_allocated_header_name(::std::st
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.RequestHeaders.header_name)
 }
 
-// string descriptor_key = 2 [(.validate.rules) = {
+// string descriptor_key = 2;
 inline void RateLimit_Action_RequestHeaders::clear_descriptor_key() {
   descriptor_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7396,7 +7089,7 @@ inline void RateLimit_Action_RequestHeaders::set_allocated_descriptor_key(::std:
 
 // RateLimit_Action_GenericKey
 
-// string descriptor_value = 1 [(.validate.rules) = {
+// string descriptor_value = 1;
 inline void RateLimit_Action_GenericKey::clear_descriptor_value() {
   descriptor_value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7453,7 +7146,7 @@ inline void RateLimit_Action_GenericKey::set_allocated_descriptor_value(::std::s
 
 // RateLimit_Action_HeaderValueMatch
 
-// string descriptor_value = 1 [(.validate.rules) = {
+// string descriptor_value = 1;
 inline void RateLimit_Action_HeaderValueMatch::clear_descriptor_value() {
   descriptor_value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -7510,18 +7203,15 @@ inline void RateLimit_Action_HeaderValueMatch::set_allocated_descriptor_value(::
 inline bool RateLimit_Action_HeaderValueMatch::has_expect_match() const {
   return this != internal_default_instance() && expect_match_ != NULL;
 }
+inline void RateLimit_Action_HeaderValueMatch::clear_expect_match() {
+  if (GetArenaNoVirtual() == NULL && expect_match_ != NULL) delete expect_match_;
+  expect_match_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& RateLimit_Action_HeaderValueMatch::expect_match() const {
   const ::google::protobuf::BoolValue* p = expect_match_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.HeaderValueMatch.expect_match)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* RateLimit_Action_HeaderValueMatch::release_expect_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.HeaderValueMatch.expect_match)
-  
-  ::google::protobuf::BoolValue* temp = expect_match_;
-  expect_match_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* RateLimit_Action_HeaderValueMatch::mutable_expect_match() {
   
@@ -7531,27 +7221,30 @@ inline ::google::protobuf::BoolValue* RateLimit_Action_HeaderValueMatch::mutable
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.HeaderValueMatch.expect_match)
   return expect_match_;
 }
+inline ::google::protobuf::BoolValue* RateLimit_Action_HeaderValueMatch::release_expect_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.HeaderValueMatch.expect_match)
+  
+  ::google::protobuf::BoolValue* temp = expect_match_;
+  expect_match_ = NULL;
+  return temp;
+}
 inline void RateLimit_Action_HeaderValueMatch::set_allocated_expect_match(::google::protobuf::BoolValue* expect_match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(expect_match_);
+  delete expect_match_;
+  if (expect_match != NULL && expect_match->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_expect_match = new ::google::protobuf::BoolValue;
+    new_expect_match->CopyFrom(*expect_match);
+    expect_match = new_expect_match;
   }
+  expect_match_ = expect_match;
   if (expect_match) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(expect_match)->GetArena();
-    if (message_arena != submessage_arena) {
-      expect_match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, expect_match, submessage_arena);
-    }
     
   } else {
     
   }
-  expect_match_ = expect_match;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.HeaderValueMatch.expect_match)
 }
 
-// repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+// repeated .envoy.api.v2.HeaderMatcher headers = 3;
 inline int RateLimit_Action_HeaderValueMatch::headers_size() const {
   return headers_.size();
 }
@@ -7598,22 +7291,11 @@ inline void RateLimit_Action::clear_source_cluster() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_SourceCluster* RateLimit_Action::release_source_cluster() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.source_cluster)
-  if (has_source_cluster()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_SourceCluster* temp = action_specifier_.source_cluster_;
-    action_specifier_.source_cluster_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_SourceCluster& RateLimit_Action::source_cluster() const {
+inline  const ::envoy::api::v2::RateLimit_Action_SourceCluster& RateLimit_Action::source_cluster() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.source_cluster)
   return has_source_cluster()
       ? *action_specifier_.source_cluster_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_SourceCluster*>(&::envoy::api::v2::_RateLimit_Action_SourceCluster_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_SourceCluster::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_SourceCluster* RateLimit_Action::mutable_source_cluster() {
   if (!has_source_cluster()) {
@@ -7623,6 +7305,25 @@ inline ::envoy::api::v2::RateLimit_Action_SourceCluster* RateLimit_Action::mutab
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.source_cluster)
   return action_specifier_.source_cluster_;
+}
+inline ::envoy::api::v2::RateLimit_Action_SourceCluster* RateLimit_Action::release_source_cluster() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.source_cluster)
+  if (has_source_cluster()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_SourceCluster* temp = action_specifier_.source_cluster_;
+    action_specifier_.source_cluster_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_source_cluster(::envoy::api::v2::RateLimit_Action_SourceCluster* source_cluster) {
+  clear_action_specifier();
+  if (source_cluster) {
+    set_has_source_cluster();
+    action_specifier_.source_cluster_ = source_cluster;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.source_cluster)
 }
 
 // .envoy.api.v2.RateLimit.Action.DestinationCluster destination_cluster = 2;
@@ -7638,22 +7339,11 @@ inline void RateLimit_Action::clear_destination_cluster() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_DestinationCluster* RateLimit_Action::release_destination_cluster() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.destination_cluster)
-  if (has_destination_cluster()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_DestinationCluster* temp = action_specifier_.destination_cluster_;
-    action_specifier_.destination_cluster_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_DestinationCluster& RateLimit_Action::destination_cluster() const {
+inline  const ::envoy::api::v2::RateLimit_Action_DestinationCluster& RateLimit_Action::destination_cluster() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.destination_cluster)
   return has_destination_cluster()
       ? *action_specifier_.destination_cluster_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_DestinationCluster*>(&::envoy::api::v2::_RateLimit_Action_DestinationCluster_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_DestinationCluster::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_DestinationCluster* RateLimit_Action::mutable_destination_cluster() {
   if (!has_destination_cluster()) {
@@ -7663,6 +7353,25 @@ inline ::envoy::api::v2::RateLimit_Action_DestinationCluster* RateLimit_Action::
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.destination_cluster)
   return action_specifier_.destination_cluster_;
+}
+inline ::envoy::api::v2::RateLimit_Action_DestinationCluster* RateLimit_Action::release_destination_cluster() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.destination_cluster)
+  if (has_destination_cluster()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_DestinationCluster* temp = action_specifier_.destination_cluster_;
+    action_specifier_.destination_cluster_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_destination_cluster(::envoy::api::v2::RateLimit_Action_DestinationCluster* destination_cluster) {
+  clear_action_specifier();
+  if (destination_cluster) {
+    set_has_destination_cluster();
+    action_specifier_.destination_cluster_ = destination_cluster;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.destination_cluster)
 }
 
 // .envoy.api.v2.RateLimit.Action.RequestHeaders request_headers = 3;
@@ -7678,22 +7387,11 @@ inline void RateLimit_Action::clear_request_headers() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_RequestHeaders* RateLimit_Action::release_request_headers() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.request_headers)
-  if (has_request_headers()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_RequestHeaders* temp = action_specifier_.request_headers_;
-    action_specifier_.request_headers_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_RequestHeaders& RateLimit_Action::request_headers() const {
+inline  const ::envoy::api::v2::RateLimit_Action_RequestHeaders& RateLimit_Action::request_headers() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.request_headers)
   return has_request_headers()
       ? *action_specifier_.request_headers_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_RequestHeaders*>(&::envoy::api::v2::_RateLimit_Action_RequestHeaders_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_RequestHeaders::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_RequestHeaders* RateLimit_Action::mutable_request_headers() {
   if (!has_request_headers()) {
@@ -7703,6 +7401,25 @@ inline ::envoy::api::v2::RateLimit_Action_RequestHeaders* RateLimit_Action::muta
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.request_headers)
   return action_specifier_.request_headers_;
+}
+inline ::envoy::api::v2::RateLimit_Action_RequestHeaders* RateLimit_Action::release_request_headers() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.request_headers)
+  if (has_request_headers()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_RequestHeaders* temp = action_specifier_.request_headers_;
+    action_specifier_.request_headers_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_request_headers(::envoy::api::v2::RateLimit_Action_RequestHeaders* request_headers) {
+  clear_action_specifier();
+  if (request_headers) {
+    set_has_request_headers();
+    action_specifier_.request_headers_ = request_headers;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.request_headers)
 }
 
 // .envoy.api.v2.RateLimit.Action.RemoteAddress remote_address = 4;
@@ -7718,22 +7435,11 @@ inline void RateLimit_Action::clear_remote_address() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_RemoteAddress* RateLimit_Action::release_remote_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.remote_address)
-  if (has_remote_address()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_RemoteAddress* temp = action_specifier_.remote_address_;
-    action_specifier_.remote_address_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_RemoteAddress& RateLimit_Action::remote_address() const {
+inline  const ::envoy::api::v2::RateLimit_Action_RemoteAddress& RateLimit_Action::remote_address() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.remote_address)
   return has_remote_address()
       ? *action_specifier_.remote_address_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_RemoteAddress*>(&::envoy::api::v2::_RateLimit_Action_RemoteAddress_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_RemoteAddress::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_RemoteAddress* RateLimit_Action::mutable_remote_address() {
   if (!has_remote_address()) {
@@ -7743,6 +7449,25 @@ inline ::envoy::api::v2::RateLimit_Action_RemoteAddress* RateLimit_Action::mutab
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.remote_address)
   return action_specifier_.remote_address_;
+}
+inline ::envoy::api::v2::RateLimit_Action_RemoteAddress* RateLimit_Action::release_remote_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.remote_address)
+  if (has_remote_address()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_RemoteAddress* temp = action_specifier_.remote_address_;
+    action_specifier_.remote_address_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_remote_address(::envoy::api::v2::RateLimit_Action_RemoteAddress* remote_address) {
+  clear_action_specifier();
+  if (remote_address) {
+    set_has_remote_address();
+    action_specifier_.remote_address_ = remote_address;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.remote_address)
 }
 
 // .envoy.api.v2.RateLimit.Action.GenericKey generic_key = 5;
@@ -7758,22 +7483,11 @@ inline void RateLimit_Action::clear_generic_key() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_GenericKey* RateLimit_Action::release_generic_key() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.generic_key)
-  if (has_generic_key()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_GenericKey* temp = action_specifier_.generic_key_;
-    action_specifier_.generic_key_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_GenericKey& RateLimit_Action::generic_key() const {
+inline  const ::envoy::api::v2::RateLimit_Action_GenericKey& RateLimit_Action::generic_key() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.generic_key)
   return has_generic_key()
       ? *action_specifier_.generic_key_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_GenericKey*>(&::envoy::api::v2::_RateLimit_Action_GenericKey_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_GenericKey::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_GenericKey* RateLimit_Action::mutable_generic_key() {
   if (!has_generic_key()) {
@@ -7783,6 +7497,25 @@ inline ::envoy::api::v2::RateLimit_Action_GenericKey* RateLimit_Action::mutable_
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.generic_key)
   return action_specifier_.generic_key_;
+}
+inline ::envoy::api::v2::RateLimit_Action_GenericKey* RateLimit_Action::release_generic_key() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.generic_key)
+  if (has_generic_key()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_GenericKey* temp = action_specifier_.generic_key_;
+    action_specifier_.generic_key_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_generic_key(::envoy::api::v2::RateLimit_Action_GenericKey* generic_key) {
+  clear_action_specifier();
+  if (generic_key) {
+    set_has_generic_key();
+    action_specifier_.generic_key_ = generic_key;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.generic_key)
 }
 
 // .envoy.api.v2.RateLimit.Action.HeaderValueMatch header_value_match = 6;
@@ -7798,22 +7531,11 @@ inline void RateLimit_Action::clear_header_value_match() {
     clear_has_action_specifier();
   }
 }
-inline ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* RateLimit_Action::release_header_value_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.header_value_match)
-  if (has_header_value_match()) {
-    clear_has_action_specifier();
-      ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* temp = action_specifier_.header_value_match_;
-    action_specifier_.header_value_match_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::RateLimit_Action_HeaderValueMatch& RateLimit_Action::header_value_match() const {
+inline  const ::envoy::api::v2::RateLimit_Action_HeaderValueMatch& RateLimit_Action::header_value_match() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.Action.header_value_match)
   return has_header_value_match()
       ? *action_specifier_.header_value_match_
-      : *reinterpret_cast< ::envoy::api::v2::RateLimit_Action_HeaderValueMatch*>(&::envoy::api::v2::_RateLimit_Action_HeaderValueMatch_default_instance_);
+      : ::envoy::api::v2::RateLimit_Action_HeaderValueMatch::default_instance();
 }
 inline ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* RateLimit_Action::mutable_header_value_match() {
   if (!has_header_value_match()) {
@@ -7823,6 +7545,25 @@ inline ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* RateLimit_Action::mu
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.Action.header_value_match)
   return action_specifier_.header_value_match_;
+}
+inline ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* RateLimit_Action::release_header_value_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.Action.header_value_match)
+  if (has_header_value_match()) {
+    clear_has_action_specifier();
+    ::envoy::api::v2::RateLimit_Action_HeaderValueMatch* temp = action_specifier_.header_value_match_;
+    action_specifier_.header_value_match_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void RateLimit_Action::set_allocated_header_value_match(::envoy::api::v2::RateLimit_Action_HeaderValueMatch* header_value_match) {
+  clear_action_specifier();
+  if (header_value_match) {
+    set_has_header_value_match();
+    action_specifier_.header_value_match_ = header_value_match;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.header_value_match)
 }
 
 inline bool RateLimit_Action::has_action_specifier() const {
@@ -7838,22 +7579,19 @@ inline RateLimit_Action::ActionSpecifierCase RateLimit_Action::action_specifier_
 
 // RateLimit
 
-// .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+// .google.protobuf.UInt32Value stage = 1;
 inline bool RateLimit::has_stage() const {
   return this != internal_default_instance() && stage_ != NULL;
+}
+inline void RateLimit::clear_stage() {
+  if (GetArenaNoVirtual() == NULL && stage_ != NULL) delete stage_;
+  stage_ = NULL;
 }
 inline const ::google::protobuf::UInt32Value& RateLimit::stage() const {
   const ::google::protobuf::UInt32Value* p = stage_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RateLimit.stage)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* RateLimit::release_stage() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.stage)
-  
-  ::google::protobuf::UInt32Value* temp = stage_;
-  stage_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* RateLimit::mutable_stage() {
   
@@ -7863,23 +7601,26 @@ inline ::google::protobuf::UInt32Value* RateLimit::mutable_stage() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RateLimit.stage)
   return stage_;
 }
+inline ::google::protobuf::UInt32Value* RateLimit::release_stage() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RateLimit.stage)
+  
+  ::google::protobuf::UInt32Value* temp = stage_;
+  stage_ = NULL;
+  return temp;
+}
 inline void RateLimit::set_allocated_stage(::google::protobuf::UInt32Value* stage) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(stage_);
+  delete stage_;
+  if (stage != NULL && stage->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_stage = new ::google::protobuf::UInt32Value;
+    new_stage->CopyFrom(*stage);
+    stage = new_stage;
   }
+  stage_ = stage;
   if (stage) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(stage)->GetArena();
-    if (message_arena != submessage_arena) {
-      stage = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, stage, submessage_arena);
-    }
     
   } else {
     
   }
-  stage_ = stage;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.stage)
 }
 
@@ -7936,7 +7677,7 @@ inline void RateLimit::set_allocated_disable_key(::std::string* disable_key) {
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.disable_key)
 }
 
-// repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+// repeated .envoy.api.v2.RateLimit.Action actions = 3;
 inline int RateLimit::actions_size() const {
   return actions_.size();
 }
@@ -7970,7 +7711,7 @@ RateLimit::actions() const {
 
 // HeaderMatcher
 
-// string name = 1 [(.validate.rules) = {
+// string name = 1;
 inline void HeaderMatcher::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -8080,18 +7821,15 @@ inline void HeaderMatcher::set_allocated_value(::std::string* value) {
 inline bool HeaderMatcher::has_regex() const {
   return this != internal_default_instance() && regex_ != NULL;
 }
+inline void HeaderMatcher::clear_regex() {
+  if (GetArenaNoVirtual() == NULL && regex_ != NULL) delete regex_;
+  regex_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HeaderMatcher::regex() const {
   const ::google::protobuf::BoolValue* p = regex_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.HeaderMatcher.regex)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HeaderMatcher::release_regex() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.HeaderMatcher.regex)
-  
-  ::google::protobuf::BoolValue* temp = regex_;
-  regex_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HeaderMatcher::mutable_regex() {
   
@@ -8101,23 +7839,26 @@ inline ::google::protobuf::BoolValue* HeaderMatcher::mutable_regex() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.HeaderMatcher.regex)
   return regex_;
 }
+inline ::google::protobuf::BoolValue* HeaderMatcher::release_regex() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.HeaderMatcher.regex)
+  
+  ::google::protobuf::BoolValue* temp = regex_;
+  regex_ = NULL;
+  return temp;
+}
 inline void HeaderMatcher::set_allocated_regex(::google::protobuf::BoolValue* regex) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(regex_);
+  delete regex_;
+  if (regex != NULL && regex->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_regex = new ::google::protobuf::BoolValue;
+    new_regex->CopyFrom(*regex);
+    regex = new_regex;
   }
+  regex_ = regex;
   if (regex) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(regex)->GetArena();
-    if (message_arena != submessage_arena) {
-      regex = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, regex, submessage_arena);
-    }
     
   } else {
     
   }
-  regex_ = regex;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.HeaderMatcher.regex)
 }
 
@@ -8125,7 +7866,7 @@ inline void HeaderMatcher::set_allocated_regex(::google::protobuf::BoolValue* re
 
 // VirtualHost
 
-// string name = 1 [(.validate.rules) = {
+// string name = 1;
 inline void VirtualHost::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -8178,7 +7919,7 @@ inline void VirtualHost::set_allocated_name(::std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.VirtualHost.name)
 }
 
-// repeated string domains = 2 [(.validate.rules) = {
+// repeated string domains = 2;
 inline int VirtualHost::domains_size() const {
   return domains_.size();
 }
@@ -8355,6 +8096,9 @@ VirtualHost::rate_limits() const {
 inline int VirtualHost::request_headers_to_add_size() const {
   return request_headers_to_add_.size();
 }
+inline void VirtualHost::clear_request_headers_to_add() {
+  request_headers_to_add_.Clear();
+}
 inline const ::envoy::api::v2::HeaderValueOption& VirtualHost::request_headers_to_add(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.VirtualHost.request_headers_to_add)
   return request_headers_to_add_.Get(index);
@@ -8378,110 +8122,12 @@ VirtualHost::request_headers_to_add() const {
   return request_headers_to_add_;
 }
 
-// repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-inline int VirtualHost::response_headers_to_add_size() const {
-  return response_headers_to_add_.size();
-}
-inline const ::envoy::api::v2::HeaderValueOption& VirtualHost::response_headers_to_add(int index) const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.VirtualHost.response_headers_to_add)
-  return response_headers_to_add_.Get(index);
-}
-inline ::envoy::api::v2::HeaderValueOption* VirtualHost::mutable_response_headers_to_add(int index) {
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.VirtualHost.response_headers_to_add)
-  return response_headers_to_add_.Mutable(index);
-}
-inline ::envoy::api::v2::HeaderValueOption* VirtualHost::add_response_headers_to_add() {
-  // @@protoc_insertion_point(field_add:envoy.api.v2.VirtualHost.response_headers_to_add)
-  return response_headers_to_add_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >*
-VirtualHost::mutable_response_headers_to_add() {
-  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.VirtualHost.response_headers_to_add)
-  return &response_headers_to_add_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::HeaderValueOption >&
-VirtualHost::response_headers_to_add() const {
-  // @@protoc_insertion_point(field_list:envoy.api.v2.VirtualHost.response_headers_to_add)
-  return response_headers_to_add_;
-}
-
-// repeated string response_headers_to_remove = 11;
-inline int VirtualHost::response_headers_to_remove_size() const {
-  return response_headers_to_remove_.size();
-}
-inline void VirtualHost::clear_response_headers_to_remove() {
-  response_headers_to_remove_.Clear();
-}
-inline const ::std::string& VirtualHost::response_headers_to_remove(int index) const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  return response_headers_to_remove_.Get(index);
-}
-inline ::std::string* VirtualHost::mutable_response_headers_to_remove(int index) {
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  return response_headers_to_remove_.Mutable(index);
-}
-inline void VirtualHost::set_response_headers_to_remove(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  response_headers_to_remove_.Mutable(index)->assign(value);
-}
-#if LANG_CXX11
-inline void VirtualHost::set_response_headers_to_remove(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  response_headers_to_remove_.Mutable(index)->assign(std::move(value));
-}
-#endif
-inline void VirtualHost::set_response_headers_to_remove(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  response_headers_to_remove_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-inline void VirtualHost::set_response_headers_to_remove(int index, const char* value, size_t size) {
-  response_headers_to_remove_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-inline ::std::string* VirtualHost::add_response_headers_to_remove() {
-  // @@protoc_insertion_point(field_add_mutable:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  return response_headers_to_remove_.Add();
-}
-inline void VirtualHost::add_response_headers_to_remove(const ::std::string& value) {
-  response_headers_to_remove_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-#if LANG_CXX11
-inline void VirtualHost::add_response_headers_to_remove(::std::string&& value) {
-  response_headers_to_remove_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-#endif
-inline void VirtualHost::add_response_headers_to_remove(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  response_headers_to_remove_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-inline void VirtualHost::add_response_headers_to_remove(const char* value, size_t size) {
-  response_headers_to_remove_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:envoy.api.v2.VirtualHost.response_headers_to_remove)
-}
-inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-VirtualHost::response_headers_to_remove() const {
-  // @@protoc_insertion_point(field_list:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  return response_headers_to_remove_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-VirtualHost::mutable_response_headers_to_remove() {
-  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.VirtualHost.response_headers_to_remove)
-  return &response_headers_to_remove_;
-}
-
 // .envoy.api.v2.CorsPolicy cors = 8;
 inline bool VirtualHost::has_cors() const {
   return this != internal_default_instance() && cors_ != NULL;
 }
 inline void VirtualHost::clear_cors() {
-  if (GetArenaNoVirtual() == NULL && cors_ != NULL) {
-    delete cors_;
-  }
+  if (GetArenaNoVirtual() == NULL && cors_ != NULL) delete cors_;
   cors_ = NULL;
 }
 inline const ::envoy::api::v2::CorsPolicy& VirtualHost::cors() const {
@@ -8489,13 +8135,6 @@ inline const ::envoy::api::v2::CorsPolicy& VirtualHost::cors() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.VirtualHost.cors)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CorsPolicy*>(
       &::envoy::api::v2::_CorsPolicy_default_instance_);
-}
-inline ::envoy::api::v2::CorsPolicy* VirtualHost::release_cors() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.VirtualHost.cors)
-  
-  ::envoy::api::v2::CorsPolicy* temp = cors_;
-  cors_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CorsPolicy* VirtualHost::mutable_cors() {
   
@@ -8505,67 +8144,22 @@ inline ::envoy::api::v2::CorsPolicy* VirtualHost::mutable_cors() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.VirtualHost.cors)
   return cors_;
 }
-inline void VirtualHost::set_allocated_cors(::envoy::api::v2::CorsPolicy* cors) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete cors_;
-  }
-  if (cors) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      cors = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, cors, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  cors_ = cors;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.VirtualHost.cors)
-}
-
-// .envoy.api.v2.AuthAction auth = 9;
-inline bool VirtualHost::has_auth() const {
-  return this != internal_default_instance() && auth_ != NULL;
-}
-inline const ::envoy::api::v2::AuthAction& VirtualHost::auth() const {
-  const ::envoy::api::v2::AuthAction* p = auth_;
-  // @@protoc_insertion_point(field_get:envoy.api.v2.VirtualHost.auth)
-  return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::AuthAction*>(
-      &::envoy::api::v2::_AuthAction_default_instance_);
-}
-inline ::envoy::api::v2::AuthAction* VirtualHost::release_auth() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.VirtualHost.auth)
+inline ::envoy::api::v2::CorsPolicy* VirtualHost::release_cors() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.VirtualHost.cors)
   
-  ::envoy::api::v2::AuthAction* temp = auth_;
-  auth_ = NULL;
+  ::envoy::api::v2::CorsPolicy* temp = cors_;
+  cors_ = NULL;
   return temp;
 }
-inline ::envoy::api::v2::AuthAction* VirtualHost::mutable_auth() {
-  
-  if (auth_ == NULL) {
-    auth_ = new ::envoy::api::v2::AuthAction;
-  }
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.VirtualHost.auth)
-  return auth_;
-}
-inline void VirtualHost::set_allocated_auth(::envoy::api::v2::AuthAction* auth) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(auth_);
-  }
-  if (auth) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      auth = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, auth, submessage_arena);
-    }
+inline void VirtualHost::set_allocated_cors(::envoy::api::v2::CorsPolicy* cors) {
+  delete cors_;
+  cors_ = cors;
+  if (cors) {
     
   } else {
     
   }
-  auth_ = auth;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.VirtualHost.auth)
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.VirtualHost.cors)
 }
 
 // -------------------------------------------------------------------
@@ -8728,6 +8322,9 @@ RouteConfiguration::mutable_internal_only_headers() {
 inline int RouteConfiguration::response_headers_to_add_size() const {
   return response_headers_to_add_.size();
 }
+inline void RouteConfiguration::clear_response_headers_to_add() {
+  response_headers_to_add_.Clear();
+}
 inline const ::envoy::api::v2::HeaderValueOption& RouteConfiguration::response_headers_to_add(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteConfiguration.response_headers_to_add)
   return response_headers_to_add_.Get(index);
@@ -8824,6 +8421,9 @@ RouteConfiguration::mutable_response_headers_to_remove() {
 inline int RouteConfiguration::request_headers_to_add_size() const {
   return request_headers_to_add_.size();
 }
+inline void RouteConfiguration::clear_request_headers_to_add() {
+  request_headers_to_add_.Clear();
+}
 inline const ::envoy::api::v2::HeaderValueOption& RouteConfiguration::request_headers_to_add(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteConfiguration.request_headers_to_add)
   return request_headers_to_add_.Get(index);
@@ -8851,18 +8451,15 @@ RouteConfiguration::request_headers_to_add() const {
 inline bool RouteConfiguration::has_validate_clusters() const {
   return this != internal_default_instance() && validate_clusters_ != NULL;
 }
+inline void RouteConfiguration::clear_validate_clusters() {
+  if (GetArenaNoVirtual() == NULL && validate_clusters_ != NULL) delete validate_clusters_;
+  validate_clusters_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& RouteConfiguration::validate_clusters() const {
   const ::google::protobuf::BoolValue* p = validate_clusters_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.RouteConfiguration.validate_clusters)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* RouteConfiguration::release_validate_clusters() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteConfiguration.validate_clusters)
-  
-  ::google::protobuf::BoolValue* temp = validate_clusters_;
-  validate_clusters_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* RouteConfiguration::mutable_validate_clusters() {
   
@@ -8872,23 +8469,26 @@ inline ::google::protobuf::BoolValue* RouteConfiguration::mutable_validate_clust
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.RouteConfiguration.validate_clusters)
   return validate_clusters_;
 }
+inline ::google::protobuf::BoolValue* RouteConfiguration::release_validate_clusters() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.RouteConfiguration.validate_clusters)
+  
+  ::google::protobuf::BoolValue* temp = validate_clusters_;
+  validate_clusters_ = NULL;
+  return temp;
+}
 inline void RouteConfiguration::set_allocated_validate_clusters(::google::protobuf::BoolValue* validate_clusters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(validate_clusters_);
+  delete validate_clusters_;
+  if (validate_clusters != NULL && validate_clusters->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_validate_clusters = new ::google::protobuf::BoolValue;
+    new_validate_clusters->CopyFrom(*validate_clusters);
+    validate_clusters = new_validate_clusters;
   }
+  validate_clusters_ = validate_clusters;
   if (validate_clusters) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(validate_clusters)->GetArena();
-    if (message_arena != submessage_arena) {
-      validate_clusters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, validate_clusters, submessage_arena);
-    }
     
   } else {
     
   }
-  validate_clusters_ = validate_clusters;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteConfiguration.validate_clusters)
 }
 
@@ -8955,11 +8555,6 @@ inline void RouteConfiguration::set_allocated_validate_clusters(::google::protob
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::envoy::api::v2::RedirectAction_RedirectResponseCode> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::envoy::api::v2::RedirectAction_RedirectResponseCode>() {
-  return ::envoy::api::v2::RedirectAction_RedirectResponseCode_descriptor();
-}
 template <> struct is_proto_enum< ::envoy::api::v2::VirtualHost_TlsRequirementType> : ::google::protobuf::internal::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::envoy::api::v2::VirtualHost_TlsRequirementType>() {

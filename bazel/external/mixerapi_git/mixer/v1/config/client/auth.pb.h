@@ -388,13 +388,27 @@ class JWT : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::std::string* release_jwks_uri();
   void set_allocated_jwks_uri(::std::string* jwks_uri);
 
+  // string jwks_uri_envoy_cluster = 7;
+  void clear_jwks_uri_envoy_cluster();
+  static const int kJwksUriEnvoyClusterFieldNumber = 7;
+  const ::std::string& jwks_uri_envoy_cluster() const;
+  void set_jwks_uri_envoy_cluster(const ::std::string& value);
+  #if LANG_CXX11
+  void set_jwks_uri_envoy_cluster(::std::string&& value);
+  #endif
+  void set_jwks_uri_envoy_cluster(const char* value);
+  void set_jwks_uri_envoy_cluster(const char* value, size_t size);
+  ::std::string* mutable_jwks_uri_envoy_cluster();
+  ::std::string* release_jwks_uri_envoy_cluster();
+  void set_allocated_jwks_uri_envoy_cluster(::std::string* jwks_uri_envoy_cluster);
+
   // .google.protobuf.Duration public_key_cache_duration = 5;
   bool has_public_key_cache_duration() const;
   void clear_public_key_cache_duration();
   static const int kPublicKeyCacheDurationFieldNumber = 5;
   const ::google::protobuf::Duration& public_key_cache_duration() const;
-  ::google::protobuf::Duration* release_public_key_cache_duration();
   ::google::protobuf::Duration* mutable_public_key_cache_duration();
+  ::google::protobuf::Duration* release_public_key_cache_duration();
   void set_allocated_public_key_cache_duration(::google::protobuf::Duration* public_key_cache_duration);
 
   // bool forward_jwt = 4;
@@ -411,6 +425,7 @@ class JWT : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::config::client::JWT_Location > locations_;
   ::google::protobuf::internal::ArenaStringPtr issuer_;
   ::google::protobuf::internal::ArenaStringPtr jwks_uri_;
+  ::google::protobuf::internal::ArenaStringPtr jwks_uri_envoy_cluster_;
   ::google::protobuf::Duration* public_key_cache_duration_;
   bool forward_jwt_;
   mutable int _cached_size_;
@@ -1169,18 +1184,15 @@ inline void JWT::set_forward_jwt(bool value) {
 inline bool JWT::has_public_key_cache_duration() const {
   return this != internal_default_instance() && public_key_cache_duration_ != NULL;
 }
+inline void JWT::clear_public_key_cache_duration() {
+  if (GetArenaNoVirtual() == NULL && public_key_cache_duration_ != NULL) delete public_key_cache_duration_;
+  public_key_cache_duration_ = NULL;
+}
 inline const ::google::protobuf::Duration& JWT::public_key_cache_duration() const {
   const ::google::protobuf::Duration* p = public_key_cache_duration_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.JWT.public_key_cache_duration)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* JWT::release_public_key_cache_duration() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.JWT.public_key_cache_duration)
-  
-  ::google::protobuf::Duration* temp = public_key_cache_duration_;
-  public_key_cache_duration_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* JWT::mutable_public_key_cache_duration() {
   
@@ -1190,23 +1202,26 @@ inline ::google::protobuf::Duration* JWT::mutable_public_key_cache_duration() {
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.JWT.public_key_cache_duration)
   return public_key_cache_duration_;
 }
+inline ::google::protobuf::Duration* JWT::release_public_key_cache_duration() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.JWT.public_key_cache_duration)
+  
+  ::google::protobuf::Duration* temp = public_key_cache_duration_;
+  public_key_cache_duration_ = NULL;
+  return temp;
+}
 inline void JWT::set_allocated_public_key_cache_duration(::google::protobuf::Duration* public_key_cache_duration) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(public_key_cache_duration_);
+  delete public_key_cache_duration_;
+  if (public_key_cache_duration != NULL && public_key_cache_duration->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_public_key_cache_duration = new ::google::protobuf::Duration;
+    new_public_key_cache_duration->CopyFrom(*public_key_cache_duration);
+    public_key_cache_duration = new_public_key_cache_duration;
   }
+  public_key_cache_duration_ = public_key_cache_duration;
   if (public_key_cache_duration) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(public_key_cache_duration)->GetArena();
-    if (message_arena != submessage_arena) {
-      public_key_cache_duration = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, public_key_cache_duration, submessage_arena);
-    }
     
   } else {
     
   }
-  public_key_cache_duration_ = public_key_cache_duration;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.JWT.public_key_cache_duration)
 }
 
@@ -1238,6 +1253,59 @@ inline const ::google::protobuf::RepeatedPtrField< ::istio::mixer::v1::config::c
 JWT::locations() const {
   // @@protoc_insertion_point(field_list:istio.mixer.v1.config.client.JWT.locations)
   return locations_;
+}
+
+// string jwks_uri_envoy_cluster = 7;
+inline void JWT::clear_jwks_uri_envoy_cluster() {
+  jwks_uri_envoy_cluster_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& JWT::jwks_uri_envoy_cluster() const {
+  // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+  return jwks_uri_envoy_cluster_.GetNoArena();
+}
+inline void JWT::set_jwks_uri_envoy_cluster(const ::std::string& value) {
+  
+  jwks_uri_envoy_cluster_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+}
+#if LANG_CXX11
+inline void JWT::set_jwks_uri_envoy_cluster(::std::string&& value) {
+  
+  jwks_uri_envoy_cluster_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+}
+#endif
+inline void JWT::set_jwks_uri_envoy_cluster(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  jwks_uri_envoy_cluster_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+}
+inline void JWT::set_jwks_uri_envoy_cluster(const char* value, size_t size) {
+  
+  jwks_uri_envoy_cluster_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+}
+inline ::std::string* JWT::mutable_jwks_uri_envoy_cluster() {
+  
+  // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+  return jwks_uri_envoy_cluster_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* JWT::release_jwks_uri_envoy_cluster() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
+  
+  return jwks_uri_envoy_cluster_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void JWT::set_allocated_jwks_uri_envoy_cluster(::std::string* jwks_uri_envoy_cluster) {
+  if (jwks_uri_envoy_cluster != NULL) {
+    
+  } else {
+    
+  }
+  jwks_uri_envoy_cluster_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), jwks_uri_envoy_cluster);
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster)
 }
 
 // -------------------------------------------------------------------
@@ -1391,6 +1459,9 @@ inline void EndUserAuthenticationPolicySpecReference::set_allocated_namespace_(:
 // repeated .istio.mixer.v1.config.client.IstioService services = 1;
 inline int EndUserAuthenticationPolicySpecBinding::services_size() const {
   return services_.size();
+}
+inline void EndUserAuthenticationPolicySpecBinding::clear_services() {
+  services_.Clear();
 }
 inline const ::istio::mixer::v1::config::client::IstioService& EndUserAuthenticationPolicySpecBinding::services(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.EndUserAuthenticationPolicySpecBinding.services)

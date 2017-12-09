@@ -311,6 +311,9 @@ class ReportResponse : public ::google::protobuf::Message /* @@protoc_insertion_
 inline int ReportRequest::attributes_size() const {
   return attributes_.size();
 }
+inline void ReportRequest::clear_attributes() {
+  attributes_.Clear();
+}
 inline const ::istio::mixer::v1::CompressedAttributes& ReportRequest::attributes(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.ReportRequest.attributes)
   return attributes_.Get(index);

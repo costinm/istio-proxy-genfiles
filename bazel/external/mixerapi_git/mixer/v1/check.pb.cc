@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -74,11 +70,7 @@ namespace protobuf_mixer_2fv1_2fcheck_2eproto {
 void InitDefaultsCheckRequest_QuotaParamsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CheckRequest_QuotaParams_default_instance_;
     new (ptr) ::istio::mixer::v1::CheckRequest_QuotaParams();
@@ -95,11 +87,7 @@ void InitDefaultsCheckRequest_QuotaParams() {
 void InitDefaultsCheckRequest_QuotasEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsCheckRequest_QuotaParams();
   {
     void* ptr = &::istio::mixer::v1::_CheckRequest_QuotasEntry_DoNotUse_default_instance_;
@@ -116,11 +104,7 @@ void InitDefaultsCheckRequest_QuotasEntry_DoNotUse() {
 void InitDefaultsCheckRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes();
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsCheckRequest_QuotasEntry_DoNotUse();
   {
@@ -139,11 +123,7 @@ void InitDefaultsCheckRequest() {
 void InitDefaultsCheckResponse_PreconditionResultImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2frpc_2fstatus_2eproto::InitDefaultsStatus();
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes();
@@ -164,11 +144,7 @@ void InitDefaultsCheckResponse_PreconditionResult() {
 void InitDefaultsCheckResponse_QuotaResultImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsReferencedAttributes();
   {
@@ -187,11 +163,7 @@ void InitDefaultsCheckResponse_QuotaResult() {
 void InitDefaultsCheckResponse_QuotasEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsCheckResponse_QuotaResult();
   {
     void* ptr = &::istio::mixer::v1::_CheckResponse_QuotasEntry_DoNotUse_default_instance_;
@@ -208,11 +180,7 @@ void InitDefaultsCheckResponse_QuotasEntry_DoNotUse() {
 void InitDefaultsCheckResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsCheckResponse_PreconditionResult();
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsCheckResponse_QuotasEntry_DoNotUse();
   {
@@ -231,11 +199,7 @@ void InitDefaultsCheckResponse() {
 void InitDefaultsReferencedAttributes_AttributeMatchImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_ReferencedAttributes_AttributeMatch_default_instance_;
     new (ptr) ::istio::mixer::v1::ReferencedAttributes_AttributeMatch();
@@ -252,11 +216,7 @@ void InitDefaultsReferencedAttributes_AttributeMatch() {
 void InitDefaultsReferencedAttributesImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fcheck_2eproto::InitDefaultsReferencedAttributes_AttributeMatch();
   {
     void* ptr = &::istio::mixer::v1::_ReferencedAttributes_default_instance_;
@@ -788,12 +748,6 @@ void CheckRequest::InitAsDefaultInstance() {
   ::istio::mixer::v1::_CheckRequest_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::CompressedAttributes*>(
       ::istio::mixer::v1::CompressedAttributes::internal_default_instance());
 }
-void CheckRequest::clear_attributes() {
-  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) {
-    delete attributes_;
-  }
-  attributes_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CheckRequest::kAttributesFieldNumber;
 const int CheckRequest::kGlobalWordCountFieldNumber;
@@ -899,7 +853,7 @@ bool CheckRequest::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_attributes()));
         } else {
           goto handle_unusual;
@@ -1073,7 +1027,7 @@ void CheckRequest::SerializeWithCachedSizes(
   // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->attributes_, deterministic, target);
   }
 
@@ -1187,7 +1141,7 @@ size_t CheckRequest::ByteSizeLong() const {
   // .istio.mixer.v1.CompressedAttributes attributes = 1 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->attributes_);
   }
 
@@ -1289,24 +1243,6 @@ void CheckResponse_PreconditionResult::InitAsDefaultInstance() {
       ::istio::mixer::v1::CompressedAttributes::internal_default_instance());
   ::istio::mixer::v1::_CheckResponse_PreconditionResult_default_instance_._instance.get_mutable()->referenced_attributes_ = const_cast< ::istio::mixer::v1::ReferencedAttributes*>(
       ::istio::mixer::v1::ReferencedAttributes::internal_default_instance());
-}
-void CheckResponse_PreconditionResult::clear_status() {
-  if (GetArenaNoVirtual() == NULL && status_ != NULL) {
-    delete status_;
-  }
-  status_ = NULL;
-}
-void CheckResponse_PreconditionResult::clear_valid_duration() {
-  if (GetArenaNoVirtual() == NULL && valid_duration_ != NULL) {
-    delete valid_duration_;
-  }
-  valid_duration_ = NULL;
-}
-void CheckResponse_PreconditionResult::clear_attributes() {
-  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) {
-    delete attributes_;
-  }
-  attributes_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CheckResponse_PreconditionResult::kStatusFieldNumber;
@@ -1435,7 +1371,7 @@ bool CheckResponse_PreconditionResult::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_status()));
         } else {
           goto handle_unusual;
@@ -1447,7 +1383,7 @@ bool CheckResponse_PreconditionResult::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_valid_duration()));
         } else {
           goto handle_unusual;
@@ -1473,7 +1409,7 @@ bool CheckResponse_PreconditionResult::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_attributes()));
         } else {
           goto handle_unusual;
@@ -1485,7 +1421,7 @@ bool CheckResponse_PreconditionResult::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_referenced_attributes()));
         } else {
           goto handle_unusual;
@@ -1565,14 +1501,14 @@ void CheckResponse_PreconditionResult::SerializeWithCachedSizes(
   // .google.rpc.Status status = 1 [(.gogoproto.nullable) = false];
   if (this->has_status()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->status_, deterministic, target);
   }
 
   // .google.protobuf.Duration valid_duration = 2 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
   if (this->has_valid_duration()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->valid_duration_, deterministic, target);
   }
 
@@ -1584,14 +1520,14 @@ void CheckResponse_PreconditionResult::SerializeWithCachedSizes(
   // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->attributes_, deterministic, target);
   }
 
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
   if (this->has_referenced_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->referenced_attributes_, deterministic, target);
   }
 
@@ -1615,28 +1551,28 @@ size_t CheckResponse_PreconditionResult::ByteSizeLong() const {
   // .google.rpc.Status status = 1 [(.gogoproto.nullable) = false];
   if (this->has_status()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->status_);
   }
 
   // .google.protobuf.Duration valid_duration = 2 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
   if (this->has_valid_duration()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->valid_duration_);
   }
 
   // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
   if (this->has_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->attributes_);
   }
 
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
   if (this->has_referenced_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->referenced_attributes_);
   }
 
@@ -1739,12 +1675,6 @@ void CheckResponse_QuotaResult::InitAsDefaultInstance() {
       ::google::protobuf::Duration::internal_default_instance());
   ::istio::mixer::v1::_CheckResponse_QuotaResult_default_instance_._instance.get_mutable()->referenced_attributes_ = const_cast< ::istio::mixer::v1::ReferencedAttributes*>(
       ::istio::mixer::v1::ReferencedAttributes::internal_default_instance());
-}
-void CheckResponse_QuotaResult::clear_valid_duration() {
-  if (GetArenaNoVirtual() == NULL && valid_duration_ != NULL) {
-    delete valid_duration_;
-  }
-  valid_duration_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CheckResponse_QuotaResult::kValidDurationFieldNumber;
@@ -1851,7 +1781,7 @@ bool CheckResponse_QuotaResult::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_valid_duration()));
         } else {
           goto handle_unusual;
@@ -1877,7 +1807,7 @@ bool CheckResponse_QuotaResult::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_referenced_attributes()));
         } else {
           goto handle_unusual;
@@ -1945,7 +1875,7 @@ void CheckResponse_QuotaResult::SerializeWithCachedSizes(
   // .google.protobuf.Duration valid_duration = 1 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
   if (this->has_valid_duration()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->valid_duration_, deterministic, target);
   }
 
@@ -1957,7 +1887,7 @@ void CheckResponse_QuotaResult::SerializeWithCachedSizes(
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
   if (this->has_referenced_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->referenced_attributes_, deterministic, target);
   }
 
@@ -1981,14 +1911,14 @@ size_t CheckResponse_QuotaResult::ByteSizeLong() const {
   // .google.protobuf.Duration valid_duration = 1 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
   if (this->has_valid_duration()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->valid_duration_);
   }
 
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
   if (this->has_referenced_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->referenced_attributes_);
   }
 
@@ -2191,7 +2121,7 @@ bool CheckResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_precondition()));
         } else {
           goto handle_unusual;
@@ -2320,7 +2250,7 @@ void CheckResponse::SerializeWithCachedSizes(
   // .istio.mixer.v1.CheckResponse.PreconditionResult precondition = 2 [(.gogoproto.nullable) = false];
   if (this->has_precondition()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->precondition_, deterministic, target);
   }
 
@@ -2411,7 +2341,7 @@ size_t CheckResponse::ByteSizeLong() const {
   // .istio.mixer.v1.CheckResponse.PreconditionResult precondition = 2 [(.gogoproto.nullable) = false];
   if (this->has_precondition()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->precondition_);
   }
 
@@ -2965,7 +2895,8 @@ bool ReferencedAttributes::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_attribute_matches()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_attribute_matches()));
         } else {
           goto handle_unusual;
         }
@@ -3043,7 +2974,7 @@ void ReferencedAttributes::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->attribute_matches_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->attribute_matches(static_cast<int>(i)), deterministic, target);
   }
 
@@ -3078,7 +3009,7 @@ size_t ReferencedAttributes::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->attribute_matches(static_cast<int>(i)));
     }
   }

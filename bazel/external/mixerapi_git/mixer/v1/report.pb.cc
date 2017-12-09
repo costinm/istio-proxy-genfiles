@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -39,11 +35,7 @@ namespace protobuf_mixer_2fv1_2freport_2eproto {
 void InitDefaultsReportRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes();
   {
     void* ptr = &::istio::mixer::v1::_ReportRequest_default_instance_;
@@ -61,11 +53,7 @@ void InitDefaultsReportRequest() {
 void InitDefaultsReportResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_ReportResponse_default_instance_;
     new (ptr) ::istio::mixer::v1::ReportResponse();
@@ -163,9 +151,6 @@ namespace v1 {
 
 void ReportRequest::InitAsDefaultInstance() {
 }
-void ReportRequest::clear_attributes() {
-  attributes_.Clear();
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ReportRequest::kAttributesFieldNumber;
 const int ReportRequest::kDefaultWordsFieldNumber;
@@ -253,7 +238,8 @@ bool ReportRequest::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_attributes()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_attributes()));
         } else {
           goto handle_unusual;
         }
@@ -357,7 +343,7 @@ void ReportRequest::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->attributes_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->attributes(static_cast<int>(i)), deterministic, target);
   }
 
@@ -399,7 +385,7 @@ size_t ReportRequest::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->attributes(static_cast<int>(i)));
     }
   }

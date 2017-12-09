@@ -31,7 +31,6 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include <google/protobuf/duration.pb.h>
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2ffilter_2ffault_2eproto {
@@ -206,19 +205,19 @@ class FaultDelay : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::envoy::api::v2::filter::FaultDelay_FaultDelayType type() const;
   void set_type(::envoy::api::v2::filter::FaultDelay_FaultDelayType value);
 
-  // uint32 percent = 2 [(.validate.rules) = {
+  // uint32 percent = 2;
   void clear_percent();
   static const int kPercentFieldNumber = 2;
   ::google::protobuf::uint32 percent() const;
   void set_percent(::google::protobuf::uint32 value);
 
-  // .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+  // .google.protobuf.Duration fixed_delay = 3;
   bool has_fixed_delay() const;
   void clear_fixed_delay();
   static const int kFixedDelayFieldNumber = 3;
   const ::google::protobuf::Duration& fixed_delay() const;
-  ::google::protobuf::Duration* release_fixed_delay();
   ::google::protobuf::Duration* mutable_fixed_delay();
+  ::google::protobuf::Duration* release_fixed_delay();
   void set_allocated_fixed_delay(::google::protobuf::Duration* fixed_delay);
 
   FaultDelayTypeCase fault_delay_type_case() const;
@@ -268,7 +267,7 @@ inline void FaultDelay::set_type(::envoy::api::v2::filter::FaultDelay_FaultDelay
   // @@protoc_insertion_point(field_set:envoy.api.v2.filter.FaultDelay.type)
 }
 
-// uint32 percent = 2 [(.validate.rules) = {
+// uint32 percent = 2;
 inline void FaultDelay::clear_percent() {
   percent_ = 0u;
 }
@@ -282,29 +281,24 @@ inline void FaultDelay::set_percent(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:envoy.api.v2.filter.FaultDelay.percent)
 }
 
-// .google.protobuf.Duration fixed_delay = 3 [(.validate.rules) = {
+// .google.protobuf.Duration fixed_delay = 3;
 inline bool FaultDelay::has_fixed_delay() const {
   return fault_delay_type_case() == kFixedDelay;
 }
 inline void FaultDelay::set_has_fixed_delay() {
   _oneof_case_[0] = kFixedDelay;
 }
-inline ::google::protobuf::Duration* FaultDelay::release_fixed_delay() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.FaultDelay.fixed_delay)
+inline void FaultDelay::clear_fixed_delay() {
   if (has_fixed_delay()) {
+    delete fault_delay_type_.fixed_delay_;
     clear_has_fault_delay_type();
-      ::google::protobuf::Duration* temp = fault_delay_type_.fixed_delay_;
-    fault_delay_type_.fixed_delay_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::google::protobuf::Duration& FaultDelay::fixed_delay() const {
+inline  const ::google::protobuf::Duration& FaultDelay::fixed_delay() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.FaultDelay.fixed_delay)
   return has_fixed_delay()
       ? *fault_delay_type_.fixed_delay_
-      : *reinterpret_cast< ::google::protobuf::Duration*>(&::google::protobuf::_Duration_default_instance_);
+      : ::google::protobuf::Duration::default_instance();
 }
 inline ::google::protobuf::Duration* FaultDelay::mutable_fixed_delay() {
   if (!has_fixed_delay()) {
@@ -314,6 +308,30 @@ inline ::google::protobuf::Duration* FaultDelay::mutable_fixed_delay() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.FaultDelay.fixed_delay)
   return fault_delay_type_.fixed_delay_;
+}
+inline ::google::protobuf::Duration* FaultDelay::release_fixed_delay() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.FaultDelay.fixed_delay)
+  if (has_fixed_delay()) {
+    clear_has_fault_delay_type();
+    ::google::protobuf::Duration* temp = fault_delay_type_.fixed_delay_;
+    fault_delay_type_.fixed_delay_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void FaultDelay::set_allocated_fixed_delay(::google::protobuf::Duration* fixed_delay) {
+  clear_fault_delay_type();
+  if (fixed_delay) {
+    if (static_cast< ::google::protobuf::Duration*>(fixed_delay)->GetArena() != NULL) {
+      ::google::protobuf::Duration* new_fixed_delay = new ::google::protobuf::Duration;
+      new_fixed_delay->CopyFrom(*fixed_delay);
+      fixed_delay = new_fixed_delay;
+    }
+    set_has_fixed_delay();
+    fault_delay_type_.fixed_delay_ = fixed_delay;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.FaultDelay.fixed_delay)
 }
 
 inline bool FaultDelay::has_fault_delay_type() const {

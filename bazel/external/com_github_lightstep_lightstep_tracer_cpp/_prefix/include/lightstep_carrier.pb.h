@@ -177,8 +177,8 @@ class BinaryCarrier : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_basic_ctx();
   static const int kBasicCtxFieldNumber = 2;
   const ::lightstep::BasicTracerCarrier& basic_ctx() const;
-  ::lightstep::BasicTracerCarrier* release_basic_ctx();
   ::lightstep::BasicTracerCarrier* mutable_basic_ctx();
+  ::lightstep::BasicTracerCarrier* release_basic_ctx();
   void set_allocated_basic_ctx(::lightstep::BasicTracerCarrier* basic_ctx);
 
   // @@protoc_insertion_point(class_scope:lightstep.BinaryCarrier)
@@ -509,9 +509,7 @@ inline bool BinaryCarrier::has_basic_ctx() const {
   return this != internal_default_instance() && basic_ctx_ != NULL;
 }
 inline void BinaryCarrier::clear_basic_ctx() {
-  if (GetArenaNoVirtual() == NULL && basic_ctx_ != NULL) {
-    delete basic_ctx_;
-  }
+  if (GetArenaNoVirtual() == NULL && basic_ctx_ != NULL) delete basic_ctx_;
   basic_ctx_ = NULL;
 }
 inline const ::lightstep::BasicTracerCarrier& BinaryCarrier::basic_ctx() const {
@@ -519,13 +517,6 @@ inline const ::lightstep::BasicTracerCarrier& BinaryCarrier::basic_ctx() const {
   // @@protoc_insertion_point(field_get:lightstep.BinaryCarrier.basic_ctx)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::BasicTracerCarrier*>(
       &::lightstep::_BasicTracerCarrier_default_instance_);
-}
-inline ::lightstep::BasicTracerCarrier* BinaryCarrier::release_basic_ctx() {
-  // @@protoc_insertion_point(field_release:lightstep.BinaryCarrier.basic_ctx)
-  
-  ::lightstep::BasicTracerCarrier* temp = basic_ctx_;
-  basic_ctx_ = NULL;
-  return temp;
 }
 inline ::lightstep::BasicTracerCarrier* BinaryCarrier::mutable_basic_ctx() {
   
@@ -535,22 +526,21 @@ inline ::lightstep::BasicTracerCarrier* BinaryCarrier::mutable_basic_ctx() {
   // @@protoc_insertion_point(field_mutable:lightstep.BinaryCarrier.basic_ctx)
   return basic_ctx_;
 }
+inline ::lightstep::BasicTracerCarrier* BinaryCarrier::release_basic_ctx() {
+  // @@protoc_insertion_point(field_release:lightstep.BinaryCarrier.basic_ctx)
+  
+  ::lightstep::BasicTracerCarrier* temp = basic_ctx_;
+  basic_ctx_ = NULL;
+  return temp;
+}
 inline void BinaryCarrier::set_allocated_basic_ctx(::lightstep::BasicTracerCarrier* basic_ctx) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete basic_ctx_;
-  }
+  delete basic_ctx_;
+  basic_ctx_ = basic_ctx;
   if (basic_ctx) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      basic_ctx = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, basic_ctx, submessage_arena);
-    }
     
   } else {
     
   }
-  basic_ctx_ = basic_ctx;
   // @@protoc_insertion_point(field_set_allocated:lightstep.BinaryCarrier.basic_ctx)
 }
 

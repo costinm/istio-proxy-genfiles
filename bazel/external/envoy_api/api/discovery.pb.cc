@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -39,11 +35,7 @@ namespace protobuf_api_2fdiscovery_2eproto {
 void InitDefaultsDiscoveryRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fbase_2eproto::InitDefaultsNode();
   {
     void* ptr = &::envoy::api::v2::_DiscoveryRequest_default_instance_;
@@ -61,11 +53,7 @@ void InitDefaultsDiscoveryRequest() {
 void InitDefaultsDiscoveryResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fany_2eproto::InitDefaultsAny();
   {
     void* ptr = &::envoy::api::v2::_DiscoveryResponse_default_instance_;
@@ -178,12 +166,6 @@ namespace v2 {
 void DiscoveryRequest::InitAsDefaultInstance() {
   ::envoy::api::v2::_DiscoveryRequest_default_instance_._instance.get_mutable()->node_ = const_cast< ::envoy::api::v2::Node*>(
       ::envoy::api::v2::Node::internal_default_instance());
-}
-void DiscoveryRequest::clear_node() {
-  if (GetArenaNoVirtual() == NULL && node_ != NULL) {
-    delete node_;
-  }
-  node_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DiscoveryRequest::kVersionInfoFieldNumber;
@@ -317,7 +299,7 @@ bool DiscoveryRequest::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_node()));
         } else {
           goto handle_unusual;
@@ -474,7 +456,7 @@ void DiscoveryRequest::SerializeWithCachedSizes(
   // .envoy.api.v2.Node node = 2;
   if (this->has_node()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->node_, deterministic, target);
   }
 
@@ -559,7 +541,7 @@ size_t DiscoveryRequest::ByteSizeLong() const {
   // .envoy.api.v2.Node node = 2;
   if (this->has_node()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->node_);
   }
 
@@ -652,9 +634,6 @@ void DiscoveryRequest::InternalSwap(DiscoveryRequest* other) {
 // ===================================================================
 
 void DiscoveryResponse::InitAsDefaultInstance() {
-}
-void DiscoveryResponse::clear_resources() {
-  resources_.Clear();
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DiscoveryResponse::kVersionInfoFieldNumber;
@@ -780,7 +759,8 @@ bool DiscoveryResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_resources()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_resources()));
         } else {
           goto handle_unusual;
         }
@@ -930,7 +910,7 @@ void DiscoveryResponse::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->resources_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->resources(static_cast<int>(i)), deterministic, target);
   }
 
@@ -984,7 +964,7 @@ size_t DiscoveryResponse::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->resources(static_cast<int>(i)));
     }
   }

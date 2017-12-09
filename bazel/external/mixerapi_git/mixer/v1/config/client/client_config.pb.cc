@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -58,11 +54,7 @@ namespace protobuf_mixer_2fv1_2fconfig_2fclient_2fclient_5fconfig_2eproto {
 void InitDefaultsServiceConfigImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fapi_5fspec_2eproto::InitDefaultsHTTPAPISpec();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsQuotaSpec();
@@ -83,11 +75,7 @@ void InitDefaultsServiceConfig() {
 void InitDefaultsTransportConfigImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_TransportConfig_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::TransportConfig();
@@ -104,11 +92,7 @@ void InitDefaultsTransportConfig() {
 void InitDefaultsHttpClientConfig_ServiceConfigsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fclient_5fconfig_2eproto::InitDefaultsServiceConfig();
   {
     void* ptr = &::istio::mixer::v1::config::client::_HttpClientConfig_ServiceConfigsEntry_DoNotUse_default_instance_;
@@ -125,11 +109,7 @@ void InitDefaultsHttpClientConfig_ServiceConfigsEntry_DoNotUse() {
 void InitDefaultsHttpClientConfigImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fclient_5fconfig_2eproto::InitDefaultsTransportConfig();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fclient_5fconfig_2eproto::InitDefaultsHttpClientConfig_ServiceConfigsEntry_DoNotUse();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes();
@@ -149,11 +129,7 @@ void InitDefaultsHttpClientConfig() {
 void InitDefaultsTcpClientConfigImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fclient_5fconfig_2eproto::InitDefaultsTransportConfig();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsQuotaSpec();
@@ -359,24 +335,6 @@ void ServiceConfig::InitAsDefaultInstance() {
   ::istio::mixer::v1::config::client::_ServiceConfig_default_instance_._instance.get_mutable()->end_user_authn_spec_ = const_cast< ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec*>(
       ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec::internal_default_instance());
 }
-void ServiceConfig::clear_mixer_attributes() {
-  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) {
-    delete mixer_attributes_;
-  }
-  mixer_attributes_ = NULL;
-}
-void ServiceConfig::clear_http_api_spec() {
-  http_api_spec_.Clear();
-}
-void ServiceConfig::clear_quota_spec() {
-  quota_spec_.Clear();
-}
-void ServiceConfig::clear_end_user_authn_spec() {
-  if (GetArenaNoVirtual() == NULL && end_user_authn_spec_ != NULL) {
-    delete end_user_authn_spec_;
-  }
-  end_user_authn_spec_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ServiceConfig::kDisableCheckCallsFieldNumber;
 const int ServiceConfig::kDisableReportCallsFieldNumber;
@@ -521,7 +479,7 @@ bool ServiceConfig::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_mixer_attributes()));
         } else {
           goto handle_unusual;
@@ -533,7 +491,8 @@ bool ServiceConfig::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_http_api_spec()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_http_api_spec()));
         } else {
           goto handle_unusual;
         }
@@ -544,7 +503,8 @@ bool ServiceConfig::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_quota_spec()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quota_spec()));
         } else {
           goto handle_unusual;
         }
@@ -555,7 +515,7 @@ bool ServiceConfig::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_end_user_authn_spec()));
         } else {
           goto handle_unusual;
@@ -652,7 +612,7 @@ void ServiceConfig::SerializeWithCachedSizes(
   // .istio.mixer.v1.Attributes mixer_attributes = 3;
   if (this->has_mixer_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->mixer_attributes_, deterministic, target);
   }
 
@@ -660,7 +620,7 @@ void ServiceConfig::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->http_api_spec_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, this->http_api_spec(static_cast<int>(i)), deterministic, target);
   }
 
@@ -668,14 +628,14 @@ void ServiceConfig::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->quota_spec_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, this->quota_spec(static_cast<int>(i)), deterministic, target);
   }
 
   // .istio.mixer.v1.config.client.EndUserAuthenticationPolicySpec end_user_authn_spec = 6;
   if (this->has_end_user_authn_spec()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, *this->end_user_authn_spec_, deterministic, target);
   }
 
@@ -702,7 +662,7 @@ size_t ServiceConfig::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->http_api_spec(static_cast<int>(i)));
     }
   }
@@ -713,7 +673,7 @@ size_t ServiceConfig::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->quota_spec(static_cast<int>(i)));
     }
   }
@@ -721,14 +681,14 @@ size_t ServiceConfig::ByteSizeLong() const {
   // .istio.mixer.v1.Attributes mixer_attributes = 3;
   if (this->has_mixer_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->mixer_attributes_);
   }
 
   // .istio.mixer.v1.config.client.EndUserAuthenticationPolicySpec end_user_authn_spec = 6;
   if (this->has_end_user_authn_spec()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->end_user_authn_spec_);
   }
 
@@ -1202,18 +1162,6 @@ void HttpClientConfig::InitAsDefaultInstance() {
   ::istio::mixer::v1::config::client::_HttpClientConfig_default_instance_._instance.get_mutable()->forward_attributes_ = const_cast< ::istio::mixer::v1::Attributes*>(
       ::istio::mixer::v1::Attributes::internal_default_instance());
 }
-void HttpClientConfig::clear_mixer_attributes() {
-  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) {
-    delete mixer_attributes_;
-  }
-  mixer_attributes_ = NULL;
-}
-void HttpClientConfig::clear_forward_attributes() {
-  if (GetArenaNoVirtual() == NULL && forward_attributes_ != NULL) {
-    delete forward_attributes_;
-  }
-  forward_attributes_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HttpClientConfig::kTransportFieldNumber;
 const int HttpClientConfig::kServiceConfigsFieldNumber;
@@ -1338,7 +1286,7 @@ bool HttpClientConfig::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_transport()));
         } else {
           goto handle_unusual;
@@ -1389,7 +1337,7 @@ bool HttpClientConfig::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_mixer_attributes()));
         } else {
           goto handle_unusual;
@@ -1401,7 +1349,7 @@ bool HttpClientConfig::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_forward_attributes()));
         } else {
           goto handle_unusual;
@@ -1529,7 +1477,7 @@ void HttpClientConfig::SerializeWithCachedSizes(
   // .istio.mixer.v1.config.client.TransportConfig transport = 1;
   if (this->has_transport()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->transport_, deterministic, target);
   }
 
@@ -1600,14 +1548,14 @@ void HttpClientConfig::SerializeWithCachedSizes(
   // .istio.mixer.v1.Attributes mixer_attributes = 4;
   if (this->has_mixer_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->mixer_attributes_, deterministic, target);
   }
 
   // .istio.mixer.v1.Attributes forward_attributes = 5;
   if (this->has_forward_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->forward_attributes_, deterministic, target);
   }
 
@@ -1652,21 +1600,21 @@ size_t HttpClientConfig::ByteSizeLong() const {
   // .istio.mixer.v1.config.client.TransportConfig transport = 1;
   if (this->has_transport()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->transport_);
   }
 
   // .istio.mixer.v1.Attributes mixer_attributes = 4;
   if (this->has_mixer_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->mixer_attributes_);
   }
 
   // .istio.mixer.v1.Attributes forward_attributes = 5;
   if (this->has_forward_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->forward_attributes_);
   }
 
@@ -1763,18 +1711,6 @@ void TcpClientConfig::InitAsDefaultInstance() {
       ::istio::mixer::v1::Attributes::internal_default_instance());
   ::istio::mixer::v1::config::client::_TcpClientConfig_default_instance_._instance.get_mutable()->connection_quota_spec_ = const_cast< ::istio::mixer::v1::config::client::QuotaSpec*>(
       ::istio::mixer::v1::config::client::QuotaSpec::internal_default_instance());
-}
-void TcpClientConfig::clear_mixer_attributes() {
-  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) {
-    delete mixer_attributes_;
-  }
-  mixer_attributes_ = NULL;
-}
-void TcpClientConfig::clear_connection_quota_spec() {
-  if (GetArenaNoVirtual() == NULL && connection_quota_spec_ != NULL) {
-    delete connection_quota_spec_;
-  }
-  connection_quota_spec_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int TcpClientConfig::kTransportFieldNumber;
@@ -1897,7 +1833,7 @@ bool TcpClientConfig::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_transport()));
         } else {
           goto handle_unusual;
@@ -1909,7 +1845,7 @@ bool TcpClientConfig::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_mixer_attributes()));
         } else {
           goto handle_unusual;
@@ -1949,7 +1885,7 @@ bool TcpClientConfig::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_connection_quota_spec()));
         } else {
           goto handle_unusual;
@@ -2028,14 +1964,14 @@ void TcpClientConfig::SerializeWithCachedSizes(
   // .istio.mixer.v1.config.client.TransportConfig transport = 1;
   if (this->has_transport()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->transport_, deterministic, target);
   }
 
   // .istio.mixer.v1.Attributes mixer_attributes = 2;
   if (this->has_mixer_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->mixer_attributes_, deterministic, target);
   }
 
@@ -2052,7 +1988,7 @@ void TcpClientConfig::SerializeWithCachedSizes(
   // .istio.mixer.v1.config.client.QuotaSpec connection_quota_spec = 5;
   if (this->has_connection_quota_spec()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->connection_quota_spec_, deterministic, target);
   }
 
@@ -2076,21 +2012,21 @@ size_t TcpClientConfig::ByteSizeLong() const {
   // .istio.mixer.v1.config.client.TransportConfig transport = 1;
   if (this->has_transport()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->transport_);
   }
 
   // .istio.mixer.v1.Attributes mixer_attributes = 2;
   if (this->has_mixer_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->mixer_attributes_);
   }
 
   // .istio.mixer.v1.config.client.QuotaSpec connection_quota_spec = 5;
   if (this->has_connection_quota_spec()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->connection_quota_spec_);
   }
 

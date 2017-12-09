@@ -1604,6 +1604,9 @@ inline void QuotaSpecBinding_QuotaSpecReference::set_allocated_namespace_(::std:
 inline int QuotaSpecBinding::services_size() const {
   return services_.size();
 }
+inline void QuotaSpecBinding::clear_services() {
+  services_.Clear();
+}
 inline const ::istio::mixer::v1::config::client::IstioService& QuotaSpecBinding::services(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.QuotaSpecBinding.services)
   return services_.Get(index);

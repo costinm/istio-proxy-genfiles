@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -117,11 +113,7 @@ namespace protobuf_mixer_2fv1_2fattributes_2eproto {
 void InitDefaultsAttributes_AttributesEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes_AttributeValue();
   {
     void* ptr = &::istio::mixer::v1::_Attributes_AttributesEntry_DoNotUse_default_instance_;
@@ -138,11 +130,7 @@ void InitDefaultsAttributes_AttributesEntry_DoNotUse() {
 void InitDefaultsAttributes_AttributeValueImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes_StringMap();
@@ -162,11 +150,7 @@ void InitDefaultsAttributes_AttributeValue() {
 void InitDefaultsAttributes_StringMap_EntriesEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_Attributes_StringMap_EntriesEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::Attributes_StringMap_EntriesEntry_DoNotUse();
@@ -182,11 +166,7 @@ void InitDefaultsAttributes_StringMap_EntriesEntry_DoNotUse() {
 void InitDefaultsAttributes_StringMapImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes_StringMap_EntriesEntry_DoNotUse();
   {
     void* ptr = &::istio::mixer::v1::_Attributes_StringMap_default_instance_;
@@ -204,11 +184,7 @@ void InitDefaultsAttributes_StringMap() {
 void InitDefaultsAttributesImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes_AttributesEntry_DoNotUse();
   {
     void* ptr = &::istio::mixer::v1::_Attributes_default_instance_;
@@ -226,11 +202,7 @@ void InitDefaultsAttributes() {
 void InitDefaultsCompressedAttributes_StringsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_StringsEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::CompressedAttributes_StringsEntry_DoNotUse();
@@ -246,11 +218,7 @@ void InitDefaultsCompressedAttributes_StringsEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_Int64sEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_Int64sEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::CompressedAttributes_Int64sEntry_DoNotUse();
@@ -266,11 +234,7 @@ void InitDefaultsCompressedAttributes_Int64sEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_DoublesEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_DoublesEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::CompressedAttributes_DoublesEntry_DoNotUse();
@@ -286,11 +250,7 @@ void InitDefaultsCompressedAttributes_DoublesEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_BoolsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_BoolsEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::CompressedAttributes_BoolsEntry_DoNotUse();
@@ -306,11 +266,7 @@ void InitDefaultsCompressedAttributes_BoolsEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_TimestampsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_TimestampsEntry_DoNotUse_default_instance_;
@@ -327,11 +283,7 @@ void InitDefaultsCompressedAttributes_TimestampsEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_DurationsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_DurationsEntry_DoNotUse_default_instance_;
@@ -348,11 +300,7 @@ void InitDefaultsCompressedAttributes_DurationsEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_BytesEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_BytesEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::CompressedAttributes_BytesEntry_DoNotUse();
@@ -368,11 +316,7 @@ void InitDefaultsCompressedAttributes_BytesEntry_DoNotUse() {
 void InitDefaultsCompressedAttributes_StringMapsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsStringMap();
   {
     void* ptr = &::istio::mixer::v1::_CompressedAttributes_StringMapsEntry_DoNotUse_default_instance_;
@@ -389,11 +333,7 @@ void InitDefaultsCompressedAttributes_StringMapsEntry_DoNotUse() {
 void InitDefaultsCompressedAttributesImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes_StringsEntry_DoNotUse();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes_Int64sEntry_DoNotUse();
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsCompressedAttributes_DoublesEntry_DoNotUse();
@@ -418,11 +358,7 @@ void InitDefaultsCompressedAttributes() {
 void InitDefaultsStringMap_EntriesEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::_StringMap_EntriesEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::StringMap_EntriesEntry_DoNotUse();
@@ -438,11 +374,7 @@ void InitDefaultsStringMap_EntriesEntry_DoNotUse() {
 void InitDefaultsStringMapImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsStringMap_EntriesEntry_DoNotUse();
   {
     void* ptr = &::istio::mixer::v1::_StringMap_default_instance_;
@@ -775,62 +707,6 @@ void Attributes_AttributeValue::InitAsDefaultInstance() {
   ::istio::mixer::v1::_Attributes_AttributeValue_default_instance_.string_map_value_ = const_cast< ::istio::mixer::v1::Attributes_StringMap*>(
       ::istio::mixer::v1::Attributes_StringMap::internal_default_instance());
 }
-void Attributes_AttributeValue::set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_value();
-  if (timestamp_value) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(timestamp_value)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp_value = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, timestamp_value, submessage_arena);
-    }
-    set_has_timestamp_value();
-    value_.timestamp_value_ = timestamp_value;
-  }
-  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
-}
-void Attributes_AttributeValue::clear_timestamp_value() {
-  if (has_timestamp_value()) {
-    delete value_.timestamp_value_;
-    clear_has_value();
-  }
-}
-void Attributes_AttributeValue::set_allocated_duration_value(::google::protobuf::Duration* duration_value) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_value();
-  if (duration_value) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(duration_value)->GetArena();
-    if (message_arena != submessage_arena) {
-      duration_value = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, duration_value, submessage_arena);
-    }
-    set_has_duration_value();
-    value_.duration_value_ = duration_value;
-  }
-  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.duration_value)
-}
-void Attributes_AttributeValue::clear_duration_value() {
-  if (has_duration_value()) {
-    delete value_.duration_value_;
-    clear_has_value();
-  }
-}
-void Attributes_AttributeValue::set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_value();
-  if (string_map_value) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      string_map_value = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, string_map_value, submessage_arena);
-    }
-    set_has_string_map_value();
-    value_.string_map_value_ = string_map_value;
-  }
-  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Attributes_AttributeValue::kStringValueFieldNumber;
 const int Attributes_AttributeValue::kInt64ValueFieldNumber;
@@ -1075,7 +951,7 @@ bool Attributes_AttributeValue::MergePartialFromCodedStream(
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_timestamp_value()));
         } else {
           goto handle_unusual;
@@ -1087,7 +963,7 @@ bool Attributes_AttributeValue::MergePartialFromCodedStream(
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_duration_value()));
         } else {
           goto handle_unusual;
@@ -1099,7 +975,7 @@ bool Attributes_AttributeValue::MergePartialFromCodedStream(
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_string_map_value()));
         } else {
           goto handle_unusual;
@@ -1232,21 +1108,21 @@ void Attributes_AttributeValue::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp timestamp_value = 7;
   if (has_timestamp_value()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         7, *value_.timestamp_value_, deterministic, target);
   }
 
   // .google.protobuf.Duration duration_value = 8;
   if (has_duration_value()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         8, *value_.duration_value_, deterministic, target);
   }
 
   // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
   if (has_string_map_value()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         9, *value_.string_map_value_, deterministic, target);
   }
 
@@ -1302,21 +1178,21 @@ size_t Attributes_AttributeValue::ByteSizeLong() const {
     // .google.protobuf.Timestamp timestamp_value = 7;
     case kTimestampValue: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *value_.timestamp_value_);
       break;
     }
     // .google.protobuf.Duration duration_value = 8;
     case kDurationValue: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *value_.duration_value_);
       break;
     }
     // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
     case kStringMapValue: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *value_.string_map_value_);
       break;
     }
@@ -2282,12 +2158,6 @@ void CompressedAttributes_StringMapsEntry_DoNotUse::MergeFrom(
 // ===================================================================
 
 void CompressedAttributes::InitAsDefaultInstance() {
-}
-void CompressedAttributes::clear_timestamps() {
-  timestamps_.Clear();
-}
-void CompressedAttributes::clear_durations() {
-  durations_.Clear();
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CompressedAttributes::kWordsFieldNumber;

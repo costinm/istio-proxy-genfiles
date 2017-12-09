@@ -340,8 +340,8 @@ class Attributes_AttributeValue : public ::google::protobuf::Message /* @@protoc
   void clear_timestamp_value();
   static const int kTimestampValueFieldNumber = 7;
   const ::google::protobuf::Timestamp& timestamp_value() const;
-  ::google::protobuf::Timestamp* release_timestamp_value();
   ::google::protobuf::Timestamp* mutable_timestamp_value();
+  ::google::protobuf::Timestamp* release_timestamp_value();
   void set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value);
 
   // .google.protobuf.Duration duration_value = 8;
@@ -349,8 +349,8 @@ class Attributes_AttributeValue : public ::google::protobuf::Message /* @@protoc
   void clear_duration_value();
   static const int kDurationValueFieldNumber = 8;
   const ::google::protobuf::Duration& duration_value() const;
-  ::google::protobuf::Duration* release_duration_value();
   ::google::protobuf::Duration* mutable_duration_value();
+  ::google::protobuf::Duration* release_duration_value();
   void set_allocated_duration_value(::google::protobuf::Duration* duration_value);
 
   // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
@@ -358,8 +358,8 @@ class Attributes_AttributeValue : public ::google::protobuf::Message /* @@protoc
   void clear_string_map_value();
   static const int kStringMapValueFieldNumber = 9;
   const ::istio::mixer::v1::Attributes_StringMap& string_map_value() const;
-  ::istio::mixer::v1::Attributes_StringMap* release_string_map_value();
   ::istio::mixer::v1::Attributes_StringMap* mutable_string_map_value();
+  ::istio::mixer::v1::Attributes_StringMap* release_string_map_value();
   void set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value);
 
   ValueCase value_case() const;
@@ -1465,22 +1465,17 @@ inline bool Attributes_AttributeValue::has_timestamp_value() const {
 inline void Attributes_AttributeValue::set_has_timestamp_value() {
   _oneof_case_[0] = kTimestampValue;
 }
-inline ::google::protobuf::Timestamp* Attributes_AttributeValue::release_timestamp_value() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+inline void Attributes_AttributeValue::clear_timestamp_value() {
   if (has_timestamp_value()) {
+    delete value_.timestamp_value_;
     clear_has_value();
-      ::google::protobuf::Timestamp* temp = value_.timestamp_value_;
-    value_.timestamp_value_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::google::protobuf::Timestamp& Attributes_AttributeValue::timestamp_value() const {
+inline  const ::google::protobuf::Timestamp& Attributes_AttributeValue::timestamp_value() const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
   return has_timestamp_value()
       ? *value_.timestamp_value_
-      : *reinterpret_cast< ::google::protobuf::Timestamp*>(&::google::protobuf::_Timestamp_default_instance_);
+      : ::google::protobuf::Timestamp::default_instance();
 }
 inline ::google::protobuf::Timestamp* Attributes_AttributeValue::mutable_timestamp_value() {
   if (!has_timestamp_value()) {
@@ -1491,6 +1486,30 @@ inline ::google::protobuf::Timestamp* Attributes_AttributeValue::mutable_timesta
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
   return value_.timestamp_value_;
 }
+inline ::google::protobuf::Timestamp* Attributes_AttributeValue::release_timestamp_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+  if (has_timestamp_value()) {
+    clear_has_value();
+    ::google::protobuf::Timestamp* temp = value_.timestamp_value_;
+    value_.timestamp_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_timestamp_value(::google::protobuf::Timestamp* timestamp_value) {
+  clear_value();
+  if (timestamp_value) {
+    if (static_cast< ::google::protobuf::Timestamp*>(timestamp_value)->GetArena() != NULL) {
+      ::google::protobuf::Timestamp* new_timestamp_value = new ::google::protobuf::Timestamp;
+      new_timestamp_value->CopyFrom(*timestamp_value);
+      timestamp_value = new_timestamp_value;
+    }
+    set_has_timestamp_value();
+    value_.timestamp_value_ = timestamp_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.timestamp_value)
+}
 
 // .google.protobuf.Duration duration_value = 8;
 inline bool Attributes_AttributeValue::has_duration_value() const {
@@ -1499,22 +1518,17 @@ inline bool Attributes_AttributeValue::has_duration_value() const {
 inline void Attributes_AttributeValue::set_has_duration_value() {
   _oneof_case_[0] = kDurationValue;
 }
-inline ::google::protobuf::Duration* Attributes_AttributeValue::release_duration_value() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+inline void Attributes_AttributeValue::clear_duration_value() {
   if (has_duration_value()) {
+    delete value_.duration_value_;
     clear_has_value();
-      ::google::protobuf::Duration* temp = value_.duration_value_;
-    value_.duration_value_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::google::protobuf::Duration& Attributes_AttributeValue::duration_value() const {
+inline  const ::google::protobuf::Duration& Attributes_AttributeValue::duration_value() const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.duration_value)
   return has_duration_value()
       ? *value_.duration_value_
-      : *reinterpret_cast< ::google::protobuf::Duration*>(&::google::protobuf::_Duration_default_instance_);
+      : ::google::protobuf::Duration::default_instance();
 }
 inline ::google::protobuf::Duration* Attributes_AttributeValue::mutable_duration_value() {
   if (!has_duration_value()) {
@@ -1524,6 +1538,30 @@ inline ::google::protobuf::Duration* Attributes_AttributeValue::mutable_duration
   }
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.duration_value)
   return value_.duration_value_;
+}
+inline ::google::protobuf::Duration* Attributes_AttributeValue::release_duration_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.duration_value)
+  if (has_duration_value()) {
+    clear_has_value();
+    ::google::protobuf::Duration* temp = value_.duration_value_;
+    value_.duration_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_duration_value(::google::protobuf::Duration* duration_value) {
+  clear_value();
+  if (duration_value) {
+    if (static_cast< ::google::protobuf::Duration*>(duration_value)->GetArena() != NULL) {
+      ::google::protobuf::Duration* new_duration_value = new ::google::protobuf::Duration;
+      new_duration_value->CopyFrom(*duration_value);
+      duration_value = new_duration_value;
+    }
+    set_has_duration_value();
+    value_.duration_value_ = duration_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.duration_value)
 }
 
 // .istio.mixer.v1.Attributes.StringMap string_map_value = 9;
@@ -1539,22 +1577,11 @@ inline void Attributes_AttributeValue::clear_string_map_value() {
     clear_has_value();
   }
 }
-inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::release_string_map_value() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
-  if (has_string_map_value()) {
-    clear_has_value();
-      ::istio::mixer::v1::Attributes_StringMap* temp = value_.string_map_value_;
-    value_.string_map_value_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::istio::mixer::v1::Attributes_StringMap& Attributes_AttributeValue::string_map_value() const {
+inline  const ::istio::mixer::v1::Attributes_StringMap& Attributes_AttributeValue::string_map_value() const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
   return has_string_map_value()
       ? *value_.string_map_value_
-      : *reinterpret_cast< ::istio::mixer::v1::Attributes_StringMap*>(&::istio::mixer::v1::_Attributes_StringMap_default_instance_);
+      : ::istio::mixer::v1::Attributes_StringMap::default_instance();
 }
 inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::mutable_string_map_value() {
   if (!has_string_map_value()) {
@@ -1564,6 +1591,25 @@ inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::muta
   }
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
   return value_.string_map_value_;
+}
+inline ::istio::mixer::v1::Attributes_StringMap* Attributes_AttributeValue::release_string_map_value() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
+  if (has_string_map_value()) {
+    clear_has_value();
+    ::istio::mixer::v1::Attributes_StringMap* temp = value_.string_map_value_;
+    value_.string_map_value_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Attributes_AttributeValue::set_allocated_string_map_value(::istio::mixer::v1::Attributes_StringMap* string_map_value) {
+  clear_value();
+  if (string_map_value) {
+    set_has_string_map_value();
+    value_.string_map_value_ = string_map_value;
+  }
+  // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.Attributes.AttributeValue.string_map_value)
 }
 
 inline bool Attributes_AttributeValue::has_value() const {
@@ -1786,6 +1832,9 @@ CompressedAttributes::mutable_bools() {
 inline int CompressedAttributes::timestamps_size() const {
   return timestamps_.size();
 }
+inline void CompressedAttributes::clear_timestamps() {
+  timestamps_.Clear();
+}
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Timestamp >&
 CompressedAttributes::timestamps() const {
   // @@protoc_insertion_point(field_map:istio.mixer.v1.CompressedAttributes.timestamps)
@@ -1800,6 +1849,9 @@ CompressedAttributes::mutable_timestamps() {
 // map<sint32, .google.protobuf.Duration> durations = 7 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
 inline int CompressedAttributes::durations_size() const {
   return durations_.size();
+}
+inline void CompressedAttributes::clear_durations() {
+  durations_.Clear();
 }
 inline const ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::Duration >&
 CompressedAttributes::durations() const {

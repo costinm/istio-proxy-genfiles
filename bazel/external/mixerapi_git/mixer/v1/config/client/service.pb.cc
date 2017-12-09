@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -43,11 +39,7 @@ namespace protobuf_mixer_2fv1_2fconfig_2fclient_2fservice_2eproto {
 void InitDefaultsIstioService_LabelsEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_IstioService_LabelsEntry_DoNotUse_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::IstioService_LabelsEntry_DoNotUse();
@@ -63,11 +55,7 @@ void InitDefaultsIstioService_LabelsEntry_DoNotUse() {
 void InitDefaultsIstioServiceImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fservice_2eproto::InitDefaultsIstioService_LabelsEntry_DoNotUse();
   {
     void* ptr = &::istio::mixer::v1::config::client::_IstioService_default_instance_;

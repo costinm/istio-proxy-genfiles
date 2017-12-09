@@ -261,8 +261,8 @@ class Http1ProtocolOptions : public ::google::protobuf::Message /* @@protoc_inse
   void clear_allow_absolute_url();
   static const int kAllowAbsoluteUrlFieldNumber = 1;
   const ::google::protobuf::BoolValue& allow_absolute_url() const;
-  ::google::protobuf::BoolValue* release_allow_absolute_url();
   ::google::protobuf::BoolValue* mutable_allow_absolute_url();
+  ::google::protobuf::BoolValue* release_allow_absolute_url();
   void set_allocated_allow_absolute_url(::google::protobuf::BoolValue* allow_absolute_url);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Http1ProtocolOptions)
@@ -363,8 +363,8 @@ class Http2ProtocolOptions : public ::google::protobuf::Message /* @@protoc_inse
   void clear_hpack_table_size();
   static const int kHpackTableSizeFieldNumber = 1;
   const ::google::protobuf::UInt32Value& hpack_table_size() const;
-  ::google::protobuf::UInt32Value* release_hpack_table_size();
   ::google::protobuf::UInt32Value* mutable_hpack_table_size();
+  ::google::protobuf::UInt32Value* release_hpack_table_size();
   void set_allocated_hpack_table_size(::google::protobuf::UInt32Value* hpack_table_size);
 
   // .google.protobuf.UInt32Value max_concurrent_streams = 2;
@@ -372,8 +372,8 @@ class Http2ProtocolOptions : public ::google::protobuf::Message /* @@protoc_inse
   void clear_max_concurrent_streams();
   static const int kMaxConcurrentStreamsFieldNumber = 2;
   const ::google::protobuf::UInt32Value& max_concurrent_streams() const;
-  ::google::protobuf::UInt32Value* release_max_concurrent_streams();
   ::google::protobuf::UInt32Value* mutable_max_concurrent_streams();
+  ::google::protobuf::UInt32Value* release_max_concurrent_streams();
   void set_allocated_max_concurrent_streams(::google::protobuf::UInt32Value* max_concurrent_streams);
 
   // .google.protobuf.UInt32Value initial_stream_window_size = 3;
@@ -381,8 +381,8 @@ class Http2ProtocolOptions : public ::google::protobuf::Message /* @@protoc_inse
   void clear_initial_stream_window_size();
   static const int kInitialStreamWindowSizeFieldNumber = 3;
   const ::google::protobuf::UInt32Value& initial_stream_window_size() const;
-  ::google::protobuf::UInt32Value* release_initial_stream_window_size();
   ::google::protobuf::UInt32Value* mutable_initial_stream_window_size();
+  ::google::protobuf::UInt32Value* release_initial_stream_window_size();
   void set_allocated_initial_stream_window_size(::google::protobuf::UInt32Value* initial_stream_window_size);
 
   // .google.protobuf.UInt32Value initial_connection_window_size = 4;
@@ -390,8 +390,8 @@ class Http2ProtocolOptions : public ::google::protobuf::Message /* @@protoc_inse
   void clear_initial_connection_window_size();
   static const int kInitialConnectionWindowSizeFieldNumber = 4;
   const ::google::protobuf::UInt32Value& initial_connection_window_size() const;
-  ::google::protobuf::UInt32Value* release_initial_connection_window_size();
   ::google::protobuf::UInt32Value* mutable_initial_connection_window_size();
+  ::google::protobuf::UInt32Value* release_initial_connection_window_size();
   void set_allocated_initial_connection_window_size(::google::protobuf::UInt32Value* initial_connection_window_size);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Http2ProtocolOptions)
@@ -495,8 +495,8 @@ class GrpcProtocolOptions : public ::google::protobuf::Message /* @@protoc_inser
   void clear_http2_protocol_options();
   static const int kHttp2ProtocolOptionsFieldNumber = 1;
   const ::envoy::api::v2::Http2ProtocolOptions& http2_protocol_options() const;
-  ::envoy::api::v2::Http2ProtocolOptions* release_http2_protocol_options();
   ::envoy::api::v2::Http2ProtocolOptions* mutable_http2_protocol_options();
+  ::envoy::api::v2::Http2ProtocolOptions* release_http2_protocol_options();
   void set_allocated_http2_protocol_options(::envoy::api::v2::Http2ProtocolOptions* http2_protocol_options);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.GrpcProtocolOptions)
@@ -527,18 +527,15 @@ class GrpcProtocolOptions : public ::google::protobuf::Message /* @@protoc_inser
 inline bool Http1ProtocolOptions::has_allow_absolute_url() const {
   return this != internal_default_instance() && allow_absolute_url_ != NULL;
 }
+inline void Http1ProtocolOptions::clear_allow_absolute_url() {
+  if (GetArenaNoVirtual() == NULL && allow_absolute_url_ != NULL) delete allow_absolute_url_;
+  allow_absolute_url_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& Http1ProtocolOptions::allow_absolute_url() const {
   const ::google::protobuf::BoolValue* p = allow_absolute_url_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Http1ProtocolOptions.allow_absolute_url)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* Http1ProtocolOptions::release_allow_absolute_url() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Http1ProtocolOptions.allow_absolute_url)
-  
-  ::google::protobuf::BoolValue* temp = allow_absolute_url_;
-  allow_absolute_url_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* Http1ProtocolOptions::mutable_allow_absolute_url() {
   
@@ -548,23 +545,26 @@ inline ::google::protobuf::BoolValue* Http1ProtocolOptions::mutable_allow_absolu
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Http1ProtocolOptions.allow_absolute_url)
   return allow_absolute_url_;
 }
+inline ::google::protobuf::BoolValue* Http1ProtocolOptions::release_allow_absolute_url() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Http1ProtocolOptions.allow_absolute_url)
+  
+  ::google::protobuf::BoolValue* temp = allow_absolute_url_;
+  allow_absolute_url_ = NULL;
+  return temp;
+}
 inline void Http1ProtocolOptions::set_allocated_allow_absolute_url(::google::protobuf::BoolValue* allow_absolute_url) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(allow_absolute_url_);
+  delete allow_absolute_url_;
+  if (allow_absolute_url != NULL && allow_absolute_url->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_allow_absolute_url = new ::google::protobuf::BoolValue;
+    new_allow_absolute_url->CopyFrom(*allow_absolute_url);
+    allow_absolute_url = new_allow_absolute_url;
   }
+  allow_absolute_url_ = allow_absolute_url;
   if (allow_absolute_url) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(allow_absolute_url)->GetArena();
-    if (message_arena != submessage_arena) {
-      allow_absolute_url = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, allow_absolute_url, submessage_arena);
-    }
     
   } else {
     
   }
-  allow_absolute_url_ = allow_absolute_url;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Http1ProtocolOptions.allow_absolute_url)
 }
 
@@ -576,18 +576,15 @@ inline void Http1ProtocolOptions::set_allocated_allow_absolute_url(::google::pro
 inline bool Http2ProtocolOptions::has_hpack_table_size() const {
   return this != internal_default_instance() && hpack_table_size_ != NULL;
 }
+inline void Http2ProtocolOptions::clear_hpack_table_size() {
+  if (GetArenaNoVirtual() == NULL && hpack_table_size_ != NULL) delete hpack_table_size_;
+  hpack_table_size_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& Http2ProtocolOptions::hpack_table_size() const {
   const ::google::protobuf::UInt32Value* p = hpack_table_size_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Http2ProtocolOptions.hpack_table_size)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_hpack_table_size() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.hpack_table_size)
-  
-  ::google::protobuf::UInt32Value* temp = hpack_table_size_;
-  hpack_table_size_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_hpack_table_size() {
   
@@ -597,23 +594,26 @@ inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_hpack_tabl
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Http2ProtocolOptions.hpack_table_size)
   return hpack_table_size_;
 }
+inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_hpack_table_size() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.hpack_table_size)
+  
+  ::google::protobuf::UInt32Value* temp = hpack_table_size_;
+  hpack_table_size_ = NULL;
+  return temp;
+}
 inline void Http2ProtocolOptions::set_allocated_hpack_table_size(::google::protobuf::UInt32Value* hpack_table_size) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(hpack_table_size_);
+  delete hpack_table_size_;
+  if (hpack_table_size != NULL && hpack_table_size->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_hpack_table_size = new ::google::protobuf::UInt32Value;
+    new_hpack_table_size->CopyFrom(*hpack_table_size);
+    hpack_table_size = new_hpack_table_size;
   }
+  hpack_table_size_ = hpack_table_size;
   if (hpack_table_size) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(hpack_table_size)->GetArena();
-    if (message_arena != submessage_arena) {
-      hpack_table_size = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, hpack_table_size, submessage_arena);
-    }
     
   } else {
     
   }
-  hpack_table_size_ = hpack_table_size;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Http2ProtocolOptions.hpack_table_size)
 }
 
@@ -621,18 +621,15 @@ inline void Http2ProtocolOptions::set_allocated_hpack_table_size(::google::proto
 inline bool Http2ProtocolOptions::has_max_concurrent_streams() const {
   return this != internal_default_instance() && max_concurrent_streams_ != NULL;
 }
+inline void Http2ProtocolOptions::clear_max_concurrent_streams() {
+  if (GetArenaNoVirtual() == NULL && max_concurrent_streams_ != NULL) delete max_concurrent_streams_;
+  max_concurrent_streams_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& Http2ProtocolOptions::max_concurrent_streams() const {
   const ::google::protobuf::UInt32Value* p = max_concurrent_streams_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Http2ProtocolOptions.max_concurrent_streams)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_max_concurrent_streams() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.max_concurrent_streams)
-  
-  ::google::protobuf::UInt32Value* temp = max_concurrent_streams_;
-  max_concurrent_streams_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_max_concurrent_streams() {
   
@@ -642,23 +639,26 @@ inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_max_concur
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Http2ProtocolOptions.max_concurrent_streams)
   return max_concurrent_streams_;
 }
+inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_max_concurrent_streams() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.max_concurrent_streams)
+  
+  ::google::protobuf::UInt32Value* temp = max_concurrent_streams_;
+  max_concurrent_streams_ = NULL;
+  return temp;
+}
 inline void Http2ProtocolOptions::set_allocated_max_concurrent_streams(::google::protobuf::UInt32Value* max_concurrent_streams) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(max_concurrent_streams_);
+  delete max_concurrent_streams_;
+  if (max_concurrent_streams != NULL && max_concurrent_streams->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_max_concurrent_streams = new ::google::protobuf::UInt32Value;
+    new_max_concurrent_streams->CopyFrom(*max_concurrent_streams);
+    max_concurrent_streams = new_max_concurrent_streams;
   }
+  max_concurrent_streams_ = max_concurrent_streams;
   if (max_concurrent_streams) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(max_concurrent_streams)->GetArena();
-    if (message_arena != submessage_arena) {
-      max_concurrent_streams = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, max_concurrent_streams, submessage_arena);
-    }
     
   } else {
     
   }
-  max_concurrent_streams_ = max_concurrent_streams;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Http2ProtocolOptions.max_concurrent_streams)
 }
 
@@ -666,18 +666,15 @@ inline void Http2ProtocolOptions::set_allocated_max_concurrent_streams(::google:
 inline bool Http2ProtocolOptions::has_initial_stream_window_size() const {
   return this != internal_default_instance() && initial_stream_window_size_ != NULL;
 }
+inline void Http2ProtocolOptions::clear_initial_stream_window_size() {
+  if (GetArenaNoVirtual() == NULL && initial_stream_window_size_ != NULL) delete initial_stream_window_size_;
+  initial_stream_window_size_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& Http2ProtocolOptions::initial_stream_window_size() const {
   const ::google::protobuf::UInt32Value* p = initial_stream_window_size_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Http2ProtocolOptions.initial_stream_window_size)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_initial_stream_window_size() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.initial_stream_window_size)
-  
-  ::google::protobuf::UInt32Value* temp = initial_stream_window_size_;
-  initial_stream_window_size_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_initial_stream_window_size() {
   
@@ -687,23 +684,26 @@ inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_initial_st
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Http2ProtocolOptions.initial_stream_window_size)
   return initial_stream_window_size_;
 }
+inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_initial_stream_window_size() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.initial_stream_window_size)
+  
+  ::google::protobuf::UInt32Value* temp = initial_stream_window_size_;
+  initial_stream_window_size_ = NULL;
+  return temp;
+}
 inline void Http2ProtocolOptions::set_allocated_initial_stream_window_size(::google::protobuf::UInt32Value* initial_stream_window_size) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(initial_stream_window_size_);
+  delete initial_stream_window_size_;
+  if (initial_stream_window_size != NULL && initial_stream_window_size->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_initial_stream_window_size = new ::google::protobuf::UInt32Value;
+    new_initial_stream_window_size->CopyFrom(*initial_stream_window_size);
+    initial_stream_window_size = new_initial_stream_window_size;
   }
+  initial_stream_window_size_ = initial_stream_window_size;
   if (initial_stream_window_size) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(initial_stream_window_size)->GetArena();
-    if (message_arena != submessage_arena) {
-      initial_stream_window_size = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, initial_stream_window_size, submessage_arena);
-    }
     
   } else {
     
   }
-  initial_stream_window_size_ = initial_stream_window_size;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Http2ProtocolOptions.initial_stream_window_size)
 }
 
@@ -711,18 +711,15 @@ inline void Http2ProtocolOptions::set_allocated_initial_stream_window_size(::goo
 inline bool Http2ProtocolOptions::has_initial_connection_window_size() const {
   return this != internal_default_instance() && initial_connection_window_size_ != NULL;
 }
+inline void Http2ProtocolOptions::clear_initial_connection_window_size() {
+  if (GetArenaNoVirtual() == NULL && initial_connection_window_size_ != NULL) delete initial_connection_window_size_;
+  initial_connection_window_size_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& Http2ProtocolOptions::initial_connection_window_size() const {
   const ::google::protobuf::UInt32Value* p = initial_connection_window_size_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Http2ProtocolOptions.initial_connection_window_size)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_initial_connection_window_size() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.initial_connection_window_size)
-  
-  ::google::protobuf::UInt32Value* temp = initial_connection_window_size_;
-  initial_connection_window_size_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_initial_connection_window_size() {
   
@@ -732,23 +729,26 @@ inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::mutable_initial_co
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Http2ProtocolOptions.initial_connection_window_size)
   return initial_connection_window_size_;
 }
+inline ::google::protobuf::UInt32Value* Http2ProtocolOptions::release_initial_connection_window_size() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Http2ProtocolOptions.initial_connection_window_size)
+  
+  ::google::protobuf::UInt32Value* temp = initial_connection_window_size_;
+  initial_connection_window_size_ = NULL;
+  return temp;
+}
 inline void Http2ProtocolOptions::set_allocated_initial_connection_window_size(::google::protobuf::UInt32Value* initial_connection_window_size) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(initial_connection_window_size_);
+  delete initial_connection_window_size_;
+  if (initial_connection_window_size != NULL && initial_connection_window_size->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_initial_connection_window_size = new ::google::protobuf::UInt32Value;
+    new_initial_connection_window_size->CopyFrom(*initial_connection_window_size);
+    initial_connection_window_size = new_initial_connection_window_size;
   }
+  initial_connection_window_size_ = initial_connection_window_size;
   if (initial_connection_window_size) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(initial_connection_window_size)->GetArena();
-    if (message_arena != submessage_arena) {
-      initial_connection_window_size = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, initial_connection_window_size, submessage_arena);
-    }
     
   } else {
     
   }
-  initial_connection_window_size_ = initial_connection_window_size;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Http2ProtocolOptions.initial_connection_window_size)
 }
 
@@ -761,9 +761,7 @@ inline bool GrpcProtocolOptions::has_http2_protocol_options() const {
   return this != internal_default_instance() && http2_protocol_options_ != NULL;
 }
 inline void GrpcProtocolOptions::clear_http2_protocol_options() {
-  if (GetArenaNoVirtual() == NULL && http2_protocol_options_ != NULL) {
-    delete http2_protocol_options_;
-  }
+  if (GetArenaNoVirtual() == NULL && http2_protocol_options_ != NULL) delete http2_protocol_options_;
   http2_protocol_options_ = NULL;
 }
 inline const ::envoy::api::v2::Http2ProtocolOptions& GrpcProtocolOptions::http2_protocol_options() const {
@@ -771,13 +769,6 @@ inline const ::envoy::api::v2::Http2ProtocolOptions& GrpcProtocolOptions::http2_
   // @@protoc_insertion_point(field_get:envoy.api.v2.GrpcProtocolOptions.http2_protocol_options)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Http2ProtocolOptions*>(
       &::envoy::api::v2::_Http2ProtocolOptions_default_instance_);
-}
-inline ::envoy::api::v2::Http2ProtocolOptions* GrpcProtocolOptions::release_http2_protocol_options() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.GrpcProtocolOptions.http2_protocol_options)
-  
-  ::envoy::api::v2::Http2ProtocolOptions* temp = http2_protocol_options_;
-  http2_protocol_options_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Http2ProtocolOptions* GrpcProtocolOptions::mutable_http2_protocol_options() {
   
@@ -787,22 +778,21 @@ inline ::envoy::api::v2::Http2ProtocolOptions* GrpcProtocolOptions::mutable_http
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.GrpcProtocolOptions.http2_protocol_options)
   return http2_protocol_options_;
 }
+inline ::envoy::api::v2::Http2ProtocolOptions* GrpcProtocolOptions::release_http2_protocol_options() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.GrpcProtocolOptions.http2_protocol_options)
+  
+  ::envoy::api::v2::Http2ProtocolOptions* temp = http2_protocol_options_;
+  http2_protocol_options_ = NULL;
+  return temp;
+}
 inline void GrpcProtocolOptions::set_allocated_http2_protocol_options(::envoy::api::v2::Http2ProtocolOptions* http2_protocol_options) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete http2_protocol_options_;
-  }
+  delete http2_protocol_options_;
+  http2_protocol_options_ = http2_protocol_options;
   if (http2_protocol_options) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      http2_protocol_options = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, http2_protocol_options, submessage_arena);
-    }
     
   } else {
     
   }
-  http2_protocol_options_ = http2_protocol_options;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.GrpcProtocolOptions.http2_protocol_options)
 }
 

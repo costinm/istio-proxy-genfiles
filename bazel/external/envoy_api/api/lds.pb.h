@@ -28,7 +28,6 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "api/address.pb.h"
 #include "api/base.pb.h"
@@ -99,27 +98,6 @@ namespace envoy {
 namespace api {
 namespace v2 {
 
-enum Listener_DrainType {
-  Listener_DrainType_DEFAULT = 0,
-  Listener_DrainType_MODIFY_ONLY = 1,
-  Listener_DrainType_Listener_DrainType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  Listener_DrainType_Listener_DrainType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
-};
-bool Listener_DrainType_IsValid(int value);
-const Listener_DrainType Listener_DrainType_DrainType_MIN = Listener_DrainType_DEFAULT;
-const Listener_DrainType Listener_DrainType_DrainType_MAX = Listener_DrainType_MODIFY_ONLY;
-const int Listener_DrainType_DrainType_ARRAYSIZE = Listener_DrainType_DrainType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* Listener_DrainType_descriptor();
-inline const ::std::string& Listener_DrainType_Name(Listener_DrainType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    Listener_DrainType_descriptor(), value);
-}
-inline bool Listener_DrainType_Parse(
-    const ::std::string& name, Listener_DrainType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<Listener_DrainType>(
-    Listener_DrainType_descriptor(), name, value);
-}
 // ===================================================================
 
 class Filter_DeprecatedV1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:envoy.api.v2.Filter.DeprecatedV1) */ {
@@ -332,8 +310,8 @@ class Filter : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   void clear_config();
   static const int kConfigFieldNumber = 2;
   const ::google::protobuf::Struct& config() const;
-  ::google::protobuf::Struct* release_config();
   ::google::protobuf::Struct* mutable_config();
+  ::google::protobuf::Struct* release_config();
   void set_allocated_config(::google::protobuf::Struct* config);
 
   // .envoy.api.v2.Filter.DeprecatedV1 deprecated_v1 = 3;
@@ -341,8 +319,8 @@ class Filter : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   void clear_deprecated_v1();
   static const int kDeprecatedV1FieldNumber = 3;
   const ::envoy::api::v2::Filter_DeprecatedV1& deprecated_v1() const;
-  ::envoy::api::v2::Filter_DeprecatedV1* release_deprecated_v1();
   ::envoy::api::v2::Filter_DeprecatedV1* mutable_deprecated_v1();
+  ::envoy::api::v2::Filter_DeprecatedV1* release_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::Filter_DeprecatedV1* deprecated_v1);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Filter)
@@ -517,8 +495,8 @@ class FilterChainMatch : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_suffix_len();
   static const int kSuffixLenFieldNumber = 5;
   const ::google::protobuf::UInt32Value& suffix_len() const;
-  ::google::protobuf::UInt32Value* release_suffix_len();
   ::google::protobuf::UInt32Value* mutable_suffix_len();
+  ::google::protobuf::UInt32Value* release_suffix_len();
   void set_allocated_suffix_len(::google::protobuf::UInt32Value* suffix_len);
 
   // .google.protobuf.UInt32Value destination_port = 8;
@@ -526,8 +504,8 @@ class FilterChainMatch : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_destination_port();
   static const int kDestinationPortFieldNumber = 8;
   const ::google::protobuf::UInt32Value& destination_port() const;
-  ::google::protobuf::UInt32Value* release_destination_port();
   ::google::protobuf::UInt32Value* mutable_destination_port();
+  ::google::protobuf::UInt32Value* release_destination_port();
   void set_allocated_destination_port(::google::protobuf::UInt32Value* destination_port);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.FilterChainMatch)
@@ -646,8 +624,8 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_filter_chain_match();
   static const int kFilterChainMatchFieldNumber = 1;
   const ::envoy::api::v2::FilterChainMatch& filter_chain_match() const;
-  ::envoy::api::v2::FilterChainMatch* release_filter_chain_match();
   ::envoy::api::v2::FilterChainMatch* mutable_filter_chain_match();
+  ::envoy::api::v2::FilterChainMatch* release_filter_chain_match();
   void set_allocated_filter_chain_match(::envoy::api::v2::FilterChainMatch* filter_chain_match);
 
   // .envoy.api.v2.DownstreamTlsContext tls_context = 2;
@@ -655,8 +633,8 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_tls_context();
   static const int kTlsContextFieldNumber = 2;
   const ::envoy::api::v2::DownstreamTlsContext& tls_context() const;
-  ::envoy::api::v2::DownstreamTlsContext* release_tls_context();
   ::envoy::api::v2::DownstreamTlsContext* mutable_tls_context();
+  ::envoy::api::v2::DownstreamTlsContext* release_tls_context();
   void set_allocated_tls_context(::envoy::api::v2::DownstreamTlsContext* tls_context);
 
   // .google.protobuf.BoolValue use_proxy_proto = 4;
@@ -664,8 +642,8 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_use_proxy_proto();
   static const int kUseProxyProtoFieldNumber = 4;
   const ::google::protobuf::BoolValue& use_proxy_proto() const;
-  ::google::protobuf::BoolValue* release_use_proxy_proto();
   ::google::protobuf::BoolValue* mutable_use_proxy_proto();
+  ::google::protobuf::BoolValue* release_use_proxy_proto();
   void set_allocated_use_proxy_proto(::google::protobuf::BoolValue* use_proxy_proto);
 
   // .envoy.api.v2.Metadata metadata = 5;
@@ -673,18 +651,9 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_metadata();
   static const int kMetadataFieldNumber = 5;
   const ::envoy::api::v2::Metadata& metadata() const;
-  ::envoy::api::v2::Metadata* release_metadata();
   ::envoy::api::v2::Metadata* mutable_metadata();
+  ::envoy::api::v2::Metadata* release_metadata();
   void set_allocated_metadata(::envoy::api::v2::Metadata* metadata);
-
-  // .envoy.api.v2.TransportSocket transport_socket = 6;
-  bool has_transport_socket() const;
-  void clear_transport_socket();
-  static const int kTransportSocketFieldNumber = 6;
-  const ::envoy::api::v2::TransportSocket& transport_socket() const;
-  ::envoy::api::v2::TransportSocket* release_transport_socket();
-  ::envoy::api::v2::TransportSocket* mutable_transport_socket();
-  void set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.FilterChain)
  private:
@@ -695,7 +664,6 @@ class FilterChain : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::envoy::api::v2::DownstreamTlsContext* tls_context_;
   ::google::protobuf::BoolValue* use_proxy_proto_;
   ::envoy::api::v2::Metadata* metadata_;
-  ::envoy::api::v2::TransportSocket* transport_socket_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2flds_2eproto::TableStruct;
   friend void ::protobuf_api_2flds_2eproto::InitDefaultsFilterChainImpl();
@@ -789,8 +757,8 @@ class Listener_DeprecatedV1 : public ::google::protobuf::Message /* @@protoc_ins
   void clear_bind_to_port();
   static const int kBindToPortFieldNumber = 1;
   const ::google::protobuf::BoolValue& bind_to_port() const;
-  ::google::protobuf::BoolValue* release_bind_to_port();
   ::google::protobuf::BoolValue* mutable_bind_to_port();
+  ::google::protobuf::BoolValue* release_bind_to_port();
   void set_allocated_bind_to_port(::google::protobuf::BoolValue* bind_to_port);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Listener.DeprecatedV1)
@@ -886,32 +854,6 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   typedef Listener_DeprecatedV1 DeprecatedV1;
 
-  typedef Listener_DrainType DrainType;
-  static const DrainType DEFAULT =
-    Listener_DrainType_DEFAULT;
-  static const DrainType MODIFY_ONLY =
-    Listener_DrainType_MODIFY_ONLY;
-  static inline bool DrainType_IsValid(int value) {
-    return Listener_DrainType_IsValid(value);
-  }
-  static const DrainType DrainType_MIN =
-    Listener_DrainType_DrainType_MIN;
-  static const DrainType DrainType_MAX =
-    Listener_DrainType_DrainType_MAX;
-  static const int DrainType_ARRAYSIZE =
-    Listener_DrainType_DrainType_ARRAYSIZE;
-  static inline const ::google::protobuf::EnumDescriptor*
-  DrainType_descriptor() {
-    return Listener_DrainType_descriptor();
-  }
-  static inline const ::std::string& DrainType_Name(DrainType value) {
-    return Listener_DrainType_Name(value);
-  }
-  static inline bool DrainType_Parse(const ::std::string& name,
-      DrainType* value) {
-    return Listener_DrainType_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
   // repeated .envoy.api.v2.FilterChain filter_chains = 3;
@@ -945,8 +887,8 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_address();
   static const int kAddressFieldNumber = 2;
   const ::envoy::api::v2::Address& address() const;
-  ::envoy::api::v2::Address* release_address();
   ::envoy::api::v2::Address* mutable_address();
+  ::envoy::api::v2::Address* release_address();
   void set_allocated_address(::envoy::api::v2::Address* address);
 
   // .google.protobuf.BoolValue use_original_dst = 4;
@@ -954,8 +896,8 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_use_original_dst();
   static const int kUseOriginalDstFieldNumber = 4;
   const ::google::protobuf::BoolValue& use_original_dst() const;
-  ::google::protobuf::BoolValue* release_use_original_dst();
   ::google::protobuf::BoolValue* mutable_use_original_dst();
+  ::google::protobuf::BoolValue* release_use_original_dst();
   void set_allocated_use_original_dst(::google::protobuf::BoolValue* use_original_dst);
 
   // .google.protobuf.UInt32Value per_connection_buffer_limit_bytes = 5;
@@ -963,8 +905,8 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_per_connection_buffer_limit_bytes();
   static const int kPerConnectionBufferLimitBytesFieldNumber = 5;
   const ::google::protobuf::UInt32Value& per_connection_buffer_limit_bytes() const;
-  ::google::protobuf::UInt32Value* release_per_connection_buffer_limit_bytes();
   ::google::protobuf::UInt32Value* mutable_per_connection_buffer_limit_bytes();
+  ::google::protobuf::UInt32Value* release_per_connection_buffer_limit_bytes();
   void set_allocated_per_connection_buffer_limit_bytes(::google::protobuf::UInt32Value* per_connection_buffer_limit_bytes);
 
   // .envoy.api.v2.Metadata metadata = 6;
@@ -972,8 +914,8 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_metadata();
   static const int kMetadataFieldNumber = 6;
   const ::envoy::api::v2::Metadata& metadata() const;
-  ::envoy::api::v2::Metadata* release_metadata();
   ::envoy::api::v2::Metadata* mutable_metadata();
+  ::envoy::api::v2::Metadata* release_metadata();
   void set_allocated_metadata(::envoy::api::v2::Metadata* metadata);
 
   // .envoy.api.v2.Listener.DeprecatedV1 deprecated_v1 = 7;
@@ -981,15 +923,9 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_deprecated_v1();
   static const int kDeprecatedV1FieldNumber = 7;
   const ::envoy::api::v2::Listener_DeprecatedV1& deprecated_v1() const;
-  ::envoy::api::v2::Listener_DeprecatedV1* release_deprecated_v1();
   ::envoy::api::v2::Listener_DeprecatedV1* mutable_deprecated_v1();
+  ::envoy::api::v2::Listener_DeprecatedV1* release_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::Listener_DeprecatedV1* deprecated_v1);
-
-  // .envoy.api.v2.Listener.DrainType drain_type = 8;
-  void clear_drain_type();
-  static const int kDrainTypeFieldNumber = 8;
-  ::envoy::api::v2::Listener_DrainType drain_type() const;
-  void set_drain_type(::envoy::api::v2::Listener_DrainType value);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Listener)
  private:
@@ -1002,7 +938,6 @@ class Listener : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::UInt32Value* per_connection_buffer_limit_bytes_;
   ::envoy::api::v2::Metadata* metadata_;
   ::envoy::api::v2::Listener_DeprecatedV1* deprecated_v1_;
-  int drain_type_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2flds_2eproto::TableStruct;
   friend void ::protobuf_api_2flds_2eproto::InitDefaultsListenerImpl();
@@ -1132,18 +1067,15 @@ inline void Filter::set_allocated_name(::std::string* name) {
 inline bool Filter::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
+inline void Filter::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) delete config_;
+  config_ = NULL;
+}
 inline const ::google::protobuf::Struct& Filter::config() const {
   const ::google::protobuf::Struct* p = config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Filter.config)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
       &::google::protobuf::_Struct_default_instance_);
-}
-inline ::google::protobuf::Struct* Filter::release_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Filter.config)
-  
-  ::google::protobuf::Struct* temp = config_;
-  config_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Struct* Filter::mutable_config() {
   
@@ -1153,23 +1085,26 @@ inline ::google::protobuf::Struct* Filter::mutable_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Filter.config)
   return config_;
 }
+inline ::google::protobuf::Struct* Filter::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Filter.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
 inline void Filter::set_allocated_config(::google::protobuf::Struct* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  delete config_;
+  if (config != NULL && config->GetArena() != NULL) {
+    ::google::protobuf::Struct* new_config = new ::google::protobuf::Struct;
+    new_config->CopyFrom(*config);
+    config = new_config;
   }
+  config_ = config;
   if (config) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
     
   } else {
     
   }
-  config_ = config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Filter.config)
 }
 
@@ -1178,9 +1113,7 @@ inline bool Filter::has_deprecated_v1() const {
   return this != internal_default_instance() && deprecated_v1_ != NULL;
 }
 inline void Filter::clear_deprecated_v1() {
-  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) {
-    delete deprecated_v1_;
-  }
+  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) delete deprecated_v1_;
   deprecated_v1_ = NULL;
 }
 inline const ::envoy::api::v2::Filter_DeprecatedV1& Filter::deprecated_v1() const {
@@ -1188,13 +1121,6 @@ inline const ::envoy::api::v2::Filter_DeprecatedV1& Filter::deprecated_v1() cons
   // @@protoc_insertion_point(field_get:envoy.api.v2.Filter.deprecated_v1)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Filter_DeprecatedV1*>(
       &::envoy::api::v2::_Filter_DeprecatedV1_default_instance_);
-}
-inline ::envoy::api::v2::Filter_DeprecatedV1* Filter::release_deprecated_v1() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Filter.deprecated_v1)
-  
-  ::envoy::api::v2::Filter_DeprecatedV1* temp = deprecated_v1_;
-  deprecated_v1_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Filter_DeprecatedV1* Filter::mutable_deprecated_v1() {
   
@@ -1204,22 +1130,21 @@ inline ::envoy::api::v2::Filter_DeprecatedV1* Filter::mutable_deprecated_v1() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Filter.deprecated_v1)
   return deprecated_v1_;
 }
+inline ::envoy::api::v2::Filter_DeprecatedV1* Filter::release_deprecated_v1() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Filter.deprecated_v1)
+  
+  ::envoy::api::v2::Filter_DeprecatedV1* temp = deprecated_v1_;
+  deprecated_v1_ = NULL;
+  return temp;
+}
 inline void Filter::set_allocated_deprecated_v1(::envoy::api::v2::Filter_DeprecatedV1* deprecated_v1) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete deprecated_v1_;
-  }
+  delete deprecated_v1_;
+  deprecated_v1_ = deprecated_v1;
   if (deprecated_v1) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      deprecated_v1 = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, deprecated_v1, submessage_arena);
-    }
     
   } else {
     
   }
-  deprecated_v1_ = deprecated_v1;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Filter.deprecated_v1)
 }
 
@@ -1299,6 +1224,9 @@ FilterChainMatch::mutable_sni_domains() {
 // repeated .envoy.api.v2.CidrRange prefix_ranges = 3;
 inline int FilterChainMatch::prefix_ranges_size() const {
   return prefix_ranges_.size();
+}
+inline void FilterChainMatch::clear_prefix_ranges() {
+  prefix_ranges_.Clear();
 }
 inline const ::envoy::api::v2::CidrRange& FilterChainMatch::prefix_ranges(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChainMatch.prefix_ranges)
@@ -1380,18 +1308,15 @@ inline void FilterChainMatch::set_allocated_address_suffix(::std::string* addres
 inline bool FilterChainMatch::has_suffix_len() const {
   return this != internal_default_instance() && suffix_len_ != NULL;
 }
+inline void FilterChainMatch::clear_suffix_len() {
+  if (GetArenaNoVirtual() == NULL && suffix_len_ != NULL) delete suffix_len_;
+  suffix_len_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& FilterChainMatch::suffix_len() const {
   const ::google::protobuf::UInt32Value* p = suffix_len_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChainMatch.suffix_len)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* FilterChainMatch::release_suffix_len() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChainMatch.suffix_len)
-  
-  ::google::protobuf::UInt32Value* temp = suffix_len_;
-  suffix_len_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* FilterChainMatch::mutable_suffix_len() {
   
@@ -1401,29 +1326,35 @@ inline ::google::protobuf::UInt32Value* FilterChainMatch::mutable_suffix_len() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChainMatch.suffix_len)
   return suffix_len_;
 }
+inline ::google::protobuf::UInt32Value* FilterChainMatch::release_suffix_len() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChainMatch.suffix_len)
+  
+  ::google::protobuf::UInt32Value* temp = suffix_len_;
+  suffix_len_ = NULL;
+  return temp;
+}
 inline void FilterChainMatch::set_allocated_suffix_len(::google::protobuf::UInt32Value* suffix_len) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(suffix_len_);
+  delete suffix_len_;
+  if (suffix_len != NULL && suffix_len->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_suffix_len = new ::google::protobuf::UInt32Value;
+    new_suffix_len->CopyFrom(*suffix_len);
+    suffix_len = new_suffix_len;
   }
+  suffix_len_ = suffix_len;
   if (suffix_len) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(suffix_len)->GetArena();
-    if (message_arena != submessage_arena) {
-      suffix_len = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, suffix_len, submessage_arena);
-    }
     
   } else {
     
   }
-  suffix_len_ = suffix_len;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChainMatch.suffix_len)
 }
 
 // repeated .envoy.api.v2.CidrRange source_prefix_ranges = 6;
 inline int FilterChainMatch::source_prefix_ranges_size() const {
   return source_prefix_ranges_.size();
+}
+inline void FilterChainMatch::clear_source_prefix_ranges() {
+  source_prefix_ranges_.Clear();
 }
 inline const ::envoy::api::v2::CidrRange& FilterChainMatch::source_prefix_ranges(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChainMatch.source_prefix_ranges)
@@ -1452,6 +1383,9 @@ FilterChainMatch::source_prefix_ranges() const {
 inline int FilterChainMatch::source_ports_size() const {
   return source_ports_.size();
 }
+inline void FilterChainMatch::clear_source_ports() {
+  source_ports_.Clear();
+}
 inline const ::google::protobuf::UInt32Value& FilterChainMatch::source_ports(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChainMatch.source_ports)
   return source_ports_.Get(index);
@@ -1479,18 +1413,15 @@ FilterChainMatch::source_ports() const {
 inline bool FilterChainMatch::has_destination_port() const {
   return this != internal_default_instance() && destination_port_ != NULL;
 }
+inline void FilterChainMatch::clear_destination_port() {
+  if (GetArenaNoVirtual() == NULL && destination_port_ != NULL) delete destination_port_;
+  destination_port_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& FilterChainMatch::destination_port() const {
   const ::google::protobuf::UInt32Value* p = destination_port_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChainMatch.destination_port)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* FilterChainMatch::release_destination_port() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChainMatch.destination_port)
-  
-  ::google::protobuf::UInt32Value* temp = destination_port_;
-  destination_port_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* FilterChainMatch::mutable_destination_port() {
   
@@ -1500,23 +1431,26 @@ inline ::google::protobuf::UInt32Value* FilterChainMatch::mutable_destination_po
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChainMatch.destination_port)
   return destination_port_;
 }
+inline ::google::protobuf::UInt32Value* FilterChainMatch::release_destination_port() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChainMatch.destination_port)
+  
+  ::google::protobuf::UInt32Value* temp = destination_port_;
+  destination_port_ = NULL;
+  return temp;
+}
 inline void FilterChainMatch::set_allocated_destination_port(::google::protobuf::UInt32Value* destination_port) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(destination_port_);
+  delete destination_port_;
+  if (destination_port != NULL && destination_port->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_destination_port = new ::google::protobuf::UInt32Value;
+    new_destination_port->CopyFrom(*destination_port);
+    destination_port = new_destination_port;
   }
+  destination_port_ = destination_port;
   if (destination_port) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(destination_port)->GetArena();
-    if (message_arena != submessage_arena) {
-      destination_port = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, destination_port, submessage_arena);
-    }
     
   } else {
     
   }
-  destination_port_ = destination_port;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChainMatch.destination_port)
 }
 
@@ -1529,9 +1463,7 @@ inline bool FilterChain::has_filter_chain_match() const {
   return this != internal_default_instance() && filter_chain_match_ != NULL;
 }
 inline void FilterChain::clear_filter_chain_match() {
-  if (GetArenaNoVirtual() == NULL && filter_chain_match_ != NULL) {
-    delete filter_chain_match_;
-  }
+  if (GetArenaNoVirtual() == NULL && filter_chain_match_ != NULL) delete filter_chain_match_;
   filter_chain_match_ = NULL;
 }
 inline const ::envoy::api::v2::FilterChainMatch& FilterChain::filter_chain_match() const {
@@ -1539,13 +1471,6 @@ inline const ::envoy::api::v2::FilterChainMatch& FilterChain::filter_chain_match
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.filter_chain_match)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::FilterChainMatch*>(
       &::envoy::api::v2::_FilterChainMatch_default_instance_);
-}
-inline ::envoy::api::v2::FilterChainMatch* FilterChain::release_filter_chain_match() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.filter_chain_match)
-  
-  ::envoy::api::v2::FilterChainMatch* temp = filter_chain_match_;
-  filter_chain_match_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::FilterChainMatch* FilterChain::mutable_filter_chain_match() {
   
@@ -1555,22 +1480,21 @@ inline ::envoy::api::v2::FilterChainMatch* FilterChain::mutable_filter_chain_mat
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.filter_chain_match)
   return filter_chain_match_;
 }
+inline ::envoy::api::v2::FilterChainMatch* FilterChain::release_filter_chain_match() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.filter_chain_match)
+  
+  ::envoy::api::v2::FilterChainMatch* temp = filter_chain_match_;
+  filter_chain_match_ = NULL;
+  return temp;
+}
 inline void FilterChain::set_allocated_filter_chain_match(::envoy::api::v2::FilterChainMatch* filter_chain_match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete filter_chain_match_;
-  }
+  delete filter_chain_match_;
+  filter_chain_match_ = filter_chain_match;
   if (filter_chain_match) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      filter_chain_match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, filter_chain_match, submessage_arena);
-    }
     
   } else {
     
   }
-  filter_chain_match_ = filter_chain_match;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.filter_chain_match)
 }
 
@@ -1578,18 +1502,15 @@ inline void FilterChain::set_allocated_filter_chain_match(::envoy::api::v2::Filt
 inline bool FilterChain::has_tls_context() const {
   return this != internal_default_instance() && tls_context_ != NULL;
 }
+inline void FilterChain::clear_tls_context() {
+  if (GetArenaNoVirtual() == NULL && tls_context_ != NULL) delete tls_context_;
+  tls_context_ = NULL;
+}
 inline const ::envoy::api::v2::DownstreamTlsContext& FilterChain::tls_context() const {
   const ::envoy::api::v2::DownstreamTlsContext* p = tls_context_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.tls_context)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DownstreamTlsContext*>(
       &::envoy::api::v2::_DownstreamTlsContext_default_instance_);
-}
-inline ::envoy::api::v2::DownstreamTlsContext* FilterChain::release_tls_context() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.tls_context)
-  
-  ::envoy::api::v2::DownstreamTlsContext* temp = tls_context_;
-  tls_context_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DownstreamTlsContext* FilterChain::mutable_tls_context() {
   
@@ -1599,22 +1520,21 @@ inline ::envoy::api::v2::DownstreamTlsContext* FilterChain::mutable_tls_context(
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.tls_context)
   return tls_context_;
 }
+inline ::envoy::api::v2::DownstreamTlsContext* FilterChain::release_tls_context() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.tls_context)
+  
+  ::envoy::api::v2::DownstreamTlsContext* temp = tls_context_;
+  tls_context_ = NULL;
+  return temp;
+}
 inline void FilterChain::set_allocated_tls_context(::envoy::api::v2::DownstreamTlsContext* tls_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(tls_context_);
-  }
+  delete tls_context_;
+  tls_context_ = tls_context;
   if (tls_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      tls_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tls_context, submessage_arena);
-    }
     
   } else {
     
   }
-  tls_context_ = tls_context;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.tls_context)
 }
 
@@ -1652,18 +1572,15 @@ FilterChain::filters() const {
 inline bool FilterChain::has_use_proxy_proto() const {
   return this != internal_default_instance() && use_proxy_proto_ != NULL;
 }
+inline void FilterChain::clear_use_proxy_proto() {
+  if (GetArenaNoVirtual() == NULL && use_proxy_proto_ != NULL) delete use_proxy_proto_;
+  use_proxy_proto_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& FilterChain::use_proxy_proto() const {
   const ::google::protobuf::BoolValue* p = use_proxy_proto_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.use_proxy_proto)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* FilterChain::release_use_proxy_proto() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.use_proxy_proto)
-  
-  ::google::protobuf::BoolValue* temp = use_proxy_proto_;
-  use_proxy_proto_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* FilterChain::mutable_use_proxy_proto() {
   
@@ -1673,23 +1590,26 @@ inline ::google::protobuf::BoolValue* FilterChain::mutable_use_proxy_proto() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.use_proxy_proto)
   return use_proxy_proto_;
 }
+inline ::google::protobuf::BoolValue* FilterChain::release_use_proxy_proto() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.use_proxy_proto)
+  
+  ::google::protobuf::BoolValue* temp = use_proxy_proto_;
+  use_proxy_proto_ = NULL;
+  return temp;
+}
 inline void FilterChain::set_allocated_use_proxy_proto(::google::protobuf::BoolValue* use_proxy_proto) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(use_proxy_proto_);
+  delete use_proxy_proto_;
+  if (use_proxy_proto != NULL && use_proxy_proto->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_use_proxy_proto = new ::google::protobuf::BoolValue;
+    new_use_proxy_proto->CopyFrom(*use_proxy_proto);
+    use_proxy_proto = new_use_proxy_proto;
   }
+  use_proxy_proto_ = use_proxy_proto;
   if (use_proxy_proto) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(use_proxy_proto)->GetArena();
-    if (message_arena != submessage_arena) {
-      use_proxy_proto = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, use_proxy_proto, submessage_arena);
-    }
     
   } else {
     
   }
-  use_proxy_proto_ = use_proxy_proto;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.use_proxy_proto)
 }
 
@@ -1697,18 +1617,15 @@ inline void FilterChain::set_allocated_use_proxy_proto(::google::protobuf::BoolV
 inline bool FilterChain::has_metadata() const {
   return this != internal_default_instance() && metadata_ != NULL;
 }
+inline void FilterChain::clear_metadata() {
+  if (GetArenaNoVirtual() == NULL && metadata_ != NULL) delete metadata_;
+  metadata_ = NULL;
+}
 inline const ::envoy::api::v2::Metadata& FilterChain::metadata() const {
   const ::envoy::api::v2::Metadata* p = metadata_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.metadata)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* FilterChain::release_metadata() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.metadata)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_;
-  metadata_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* FilterChain::mutable_metadata() {
   
@@ -1718,67 +1635,22 @@ inline ::envoy::api::v2::Metadata* FilterChain::mutable_metadata() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.metadata)
   return metadata_;
 }
-inline void FilterChain::set_allocated_metadata(::envoy::api::v2::Metadata* metadata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_);
-  }
-  if (metadata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  metadata_ = metadata;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.metadata)
-}
-
-// .envoy.api.v2.TransportSocket transport_socket = 6;
-inline bool FilterChain::has_transport_socket() const {
-  return this != internal_default_instance() && transport_socket_ != NULL;
-}
-inline const ::envoy::api::v2::TransportSocket& FilterChain::transport_socket() const {
-  const ::envoy::api::v2::TransportSocket* p = transport_socket_;
-  // @@protoc_insertion_point(field_get:envoy.api.v2.FilterChain.transport_socket)
-  return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::TransportSocket*>(
-      &::envoy::api::v2::_TransportSocket_default_instance_);
-}
-inline ::envoy::api::v2::TransportSocket* FilterChain::release_transport_socket() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.transport_socket)
+inline ::envoy::api::v2::Metadata* FilterChain::release_metadata() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.FilterChain.metadata)
   
-  ::envoy::api::v2::TransportSocket* temp = transport_socket_;
-  transport_socket_ = NULL;
+  ::envoy::api::v2::Metadata* temp = metadata_;
+  metadata_ = NULL;
   return temp;
 }
-inline ::envoy::api::v2::TransportSocket* FilterChain::mutable_transport_socket() {
-  
-  if (transport_socket_ == NULL) {
-    transport_socket_ = new ::envoy::api::v2::TransportSocket;
-  }
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.FilterChain.transport_socket)
-  return transport_socket_;
-}
-inline void FilterChain::set_allocated_transport_socket(::envoy::api::v2::TransportSocket* transport_socket) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(transport_socket_);
-  }
-  if (transport_socket) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      transport_socket = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, transport_socket, submessage_arena);
-    }
+inline void FilterChain::set_allocated_metadata(::envoy::api::v2::Metadata* metadata) {
+  delete metadata_;
+  metadata_ = metadata;
+  if (metadata) {
     
   } else {
     
   }
-  transport_socket_ = transport_socket;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.transport_socket)
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.FilterChain.metadata)
 }
 
 // -------------------------------------------------------------------
@@ -1789,18 +1661,15 @@ inline void FilterChain::set_allocated_transport_socket(::envoy::api::v2::Transp
 inline bool Listener_DeprecatedV1::has_bind_to_port() const {
   return this != internal_default_instance() && bind_to_port_ != NULL;
 }
+inline void Listener_DeprecatedV1::clear_bind_to_port() {
+  if (GetArenaNoVirtual() == NULL && bind_to_port_ != NULL) delete bind_to_port_;
+  bind_to_port_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& Listener_DeprecatedV1::bind_to_port() const {
   const ::google::protobuf::BoolValue* p = bind_to_port_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.DeprecatedV1.bind_to_port)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* Listener_DeprecatedV1::release_bind_to_port() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.DeprecatedV1.bind_to_port)
-  
-  ::google::protobuf::BoolValue* temp = bind_to_port_;
-  bind_to_port_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* Listener_DeprecatedV1::mutable_bind_to_port() {
   
@@ -1810,23 +1679,26 @@ inline ::google::protobuf::BoolValue* Listener_DeprecatedV1::mutable_bind_to_por
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.DeprecatedV1.bind_to_port)
   return bind_to_port_;
 }
+inline ::google::protobuf::BoolValue* Listener_DeprecatedV1::release_bind_to_port() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.DeprecatedV1.bind_to_port)
+  
+  ::google::protobuf::BoolValue* temp = bind_to_port_;
+  bind_to_port_ = NULL;
+  return temp;
+}
 inline void Listener_DeprecatedV1::set_allocated_bind_to_port(::google::protobuf::BoolValue* bind_to_port) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(bind_to_port_);
+  delete bind_to_port_;
+  if (bind_to_port != NULL && bind_to_port->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_bind_to_port = new ::google::protobuf::BoolValue;
+    new_bind_to_port->CopyFrom(*bind_to_port);
+    bind_to_port = new_bind_to_port;
   }
+  bind_to_port_ = bind_to_port;
   if (bind_to_port) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(bind_to_port)->GetArena();
-    if (message_arena != submessage_arena) {
-      bind_to_port = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, bind_to_port, submessage_arena);
-    }
     
   } else {
     
   }
-  bind_to_port_ = bind_to_port;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.DeprecatedV1.bind_to_port)
 }
 
@@ -1891,18 +1763,15 @@ inline void Listener::set_allocated_name(::std::string* name) {
 inline bool Listener::has_address() const {
   return this != internal_default_instance() && address_ != NULL;
 }
+inline void Listener::clear_address() {
+  if (GetArenaNoVirtual() == NULL && address_ != NULL) delete address_;
+  address_ = NULL;
+}
 inline const ::envoy::api::v2::Address& Listener::address() const {
   const ::envoy::api::v2::Address* p = address_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.address)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Address*>(
       &::envoy::api::v2::_Address_default_instance_);
-}
-inline ::envoy::api::v2::Address* Listener::release_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.address)
-  
-  ::envoy::api::v2::Address* temp = address_;
-  address_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Address* Listener::mutable_address() {
   
@@ -1912,22 +1781,21 @@ inline ::envoy::api::v2::Address* Listener::mutable_address() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.address)
   return address_;
 }
+inline ::envoy::api::v2::Address* Listener::release_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.address)
+  
+  ::envoy::api::v2::Address* temp = address_;
+  address_ = NULL;
+  return temp;
+}
 inline void Listener::set_allocated_address(::envoy::api::v2::Address* address) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(address_);
-  }
+  delete address_;
+  address_ = address;
   if (address) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      address = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, address, submessage_arena);
-    }
     
   } else {
     
   }
-  address_ = address;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.address)
 }
 
@@ -1965,18 +1833,15 @@ Listener::filter_chains() const {
 inline bool Listener::has_use_original_dst() const {
   return this != internal_default_instance() && use_original_dst_ != NULL;
 }
+inline void Listener::clear_use_original_dst() {
+  if (GetArenaNoVirtual() == NULL && use_original_dst_ != NULL) delete use_original_dst_;
+  use_original_dst_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& Listener::use_original_dst() const {
   const ::google::protobuf::BoolValue* p = use_original_dst_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.use_original_dst)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* Listener::release_use_original_dst() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.use_original_dst)
-  
-  ::google::protobuf::BoolValue* temp = use_original_dst_;
-  use_original_dst_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* Listener::mutable_use_original_dst() {
   
@@ -1986,23 +1851,26 @@ inline ::google::protobuf::BoolValue* Listener::mutable_use_original_dst() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.use_original_dst)
   return use_original_dst_;
 }
+inline ::google::protobuf::BoolValue* Listener::release_use_original_dst() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.use_original_dst)
+  
+  ::google::protobuf::BoolValue* temp = use_original_dst_;
+  use_original_dst_ = NULL;
+  return temp;
+}
 inline void Listener::set_allocated_use_original_dst(::google::protobuf::BoolValue* use_original_dst) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(use_original_dst_);
+  delete use_original_dst_;
+  if (use_original_dst != NULL && use_original_dst->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_use_original_dst = new ::google::protobuf::BoolValue;
+    new_use_original_dst->CopyFrom(*use_original_dst);
+    use_original_dst = new_use_original_dst;
   }
+  use_original_dst_ = use_original_dst;
   if (use_original_dst) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(use_original_dst)->GetArena();
-    if (message_arena != submessage_arena) {
-      use_original_dst = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, use_original_dst, submessage_arena);
-    }
     
   } else {
     
   }
-  use_original_dst_ = use_original_dst;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.use_original_dst)
 }
 
@@ -2010,18 +1878,15 @@ inline void Listener::set_allocated_use_original_dst(::google::protobuf::BoolVal
 inline bool Listener::has_per_connection_buffer_limit_bytes() const {
   return this != internal_default_instance() && per_connection_buffer_limit_bytes_ != NULL;
 }
+inline void Listener::clear_per_connection_buffer_limit_bytes() {
+  if (GetArenaNoVirtual() == NULL && per_connection_buffer_limit_bytes_ != NULL) delete per_connection_buffer_limit_bytes_;
+  per_connection_buffer_limit_bytes_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& Listener::per_connection_buffer_limit_bytes() const {
   const ::google::protobuf::UInt32Value* p = per_connection_buffer_limit_bytes_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.per_connection_buffer_limit_bytes)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* Listener::release_per_connection_buffer_limit_bytes() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.per_connection_buffer_limit_bytes)
-  
-  ::google::protobuf::UInt32Value* temp = per_connection_buffer_limit_bytes_;
-  per_connection_buffer_limit_bytes_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* Listener::mutable_per_connection_buffer_limit_bytes() {
   
@@ -2031,23 +1896,26 @@ inline ::google::protobuf::UInt32Value* Listener::mutable_per_connection_buffer_
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.per_connection_buffer_limit_bytes)
   return per_connection_buffer_limit_bytes_;
 }
+inline ::google::protobuf::UInt32Value* Listener::release_per_connection_buffer_limit_bytes() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.per_connection_buffer_limit_bytes)
+  
+  ::google::protobuf::UInt32Value* temp = per_connection_buffer_limit_bytes_;
+  per_connection_buffer_limit_bytes_ = NULL;
+  return temp;
+}
 inline void Listener::set_allocated_per_connection_buffer_limit_bytes(::google::protobuf::UInt32Value* per_connection_buffer_limit_bytes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(per_connection_buffer_limit_bytes_);
+  delete per_connection_buffer_limit_bytes_;
+  if (per_connection_buffer_limit_bytes != NULL && per_connection_buffer_limit_bytes->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_per_connection_buffer_limit_bytes = new ::google::protobuf::UInt32Value;
+    new_per_connection_buffer_limit_bytes->CopyFrom(*per_connection_buffer_limit_bytes);
+    per_connection_buffer_limit_bytes = new_per_connection_buffer_limit_bytes;
   }
+  per_connection_buffer_limit_bytes_ = per_connection_buffer_limit_bytes;
   if (per_connection_buffer_limit_bytes) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(per_connection_buffer_limit_bytes)->GetArena();
-    if (message_arena != submessage_arena) {
-      per_connection_buffer_limit_bytes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, per_connection_buffer_limit_bytes, submessage_arena);
-    }
     
   } else {
     
   }
-  per_connection_buffer_limit_bytes_ = per_connection_buffer_limit_bytes;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.per_connection_buffer_limit_bytes)
 }
 
@@ -2055,18 +1923,15 @@ inline void Listener::set_allocated_per_connection_buffer_limit_bytes(::google::
 inline bool Listener::has_metadata() const {
   return this != internal_default_instance() && metadata_ != NULL;
 }
+inline void Listener::clear_metadata() {
+  if (GetArenaNoVirtual() == NULL && metadata_ != NULL) delete metadata_;
+  metadata_ = NULL;
+}
 inline const ::envoy::api::v2::Metadata& Listener::metadata() const {
   const ::envoy::api::v2::Metadata* p = metadata_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.metadata)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* Listener::release_metadata() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.metadata)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_;
-  metadata_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* Listener::mutable_metadata() {
   
@@ -2076,22 +1941,21 @@ inline ::envoy::api::v2::Metadata* Listener::mutable_metadata() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.metadata)
   return metadata_;
 }
+inline ::envoy::api::v2::Metadata* Listener::release_metadata() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.metadata)
+  
+  ::envoy::api::v2::Metadata* temp = metadata_;
+  metadata_ = NULL;
+  return temp;
+}
 inline void Listener::set_allocated_metadata(::envoy::api::v2::Metadata* metadata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_);
-  }
+  delete metadata_;
+  metadata_ = metadata;
   if (metadata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata, submessage_arena);
-    }
     
   } else {
     
   }
-  metadata_ = metadata;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.metadata)
 }
 
@@ -2100,9 +1964,7 @@ inline bool Listener::has_deprecated_v1() const {
   return this != internal_default_instance() && deprecated_v1_ != NULL;
 }
 inline void Listener::clear_deprecated_v1() {
-  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) {
-    delete deprecated_v1_;
-  }
+  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) delete deprecated_v1_;
   deprecated_v1_ = NULL;
 }
 inline const ::envoy::api::v2::Listener_DeprecatedV1& Listener::deprecated_v1() const {
@@ -2110,13 +1972,6 @@ inline const ::envoy::api::v2::Listener_DeprecatedV1& Listener::deprecated_v1() 
   // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.deprecated_v1)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Listener_DeprecatedV1*>(
       &::envoy::api::v2::_Listener_DeprecatedV1_default_instance_);
-}
-inline ::envoy::api::v2::Listener_DeprecatedV1* Listener::release_deprecated_v1() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.deprecated_v1)
-  
-  ::envoy::api::v2::Listener_DeprecatedV1* temp = deprecated_v1_;
-  deprecated_v1_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Listener_DeprecatedV1* Listener::mutable_deprecated_v1() {
   
@@ -2126,37 +1981,22 @@ inline ::envoy::api::v2::Listener_DeprecatedV1* Listener::mutable_deprecated_v1(
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Listener.deprecated_v1)
   return deprecated_v1_;
 }
+inline ::envoy::api::v2::Listener_DeprecatedV1* Listener::release_deprecated_v1() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Listener.deprecated_v1)
+  
+  ::envoy::api::v2::Listener_DeprecatedV1* temp = deprecated_v1_;
+  deprecated_v1_ = NULL;
+  return temp;
+}
 inline void Listener::set_allocated_deprecated_v1(::envoy::api::v2::Listener_DeprecatedV1* deprecated_v1) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete deprecated_v1_;
-  }
+  delete deprecated_v1_;
+  deprecated_v1_ = deprecated_v1;
   if (deprecated_v1) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      deprecated_v1 = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, deprecated_v1, submessage_arena);
-    }
     
   } else {
     
   }
-  deprecated_v1_ = deprecated_v1;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Listener.deprecated_v1)
-}
-
-// .envoy.api.v2.Listener.DrainType drain_type = 8;
-inline void Listener::clear_drain_type() {
-  drain_type_ = 0;
-}
-inline ::envoy::api::v2::Listener_DrainType Listener::drain_type() const {
-  // @@protoc_insertion_point(field_get:envoy.api.v2.Listener.drain_type)
-  return static_cast< ::envoy::api::v2::Listener_DrainType >(drain_type_);
-}
-inline void Listener::set_drain_type(::envoy::api::v2::Listener_DrainType value) {
-  
-  drain_type_ = value;
-  // @@protoc_insertion_point(field_set:envoy.api.v2.Listener.drain_type)
 }
 
 #ifdef __GNUC__
@@ -2178,18 +2018,6 @@ inline void Listener::set_drain_type(::envoy::api::v2::Listener_DrainType value)
 }  // namespace v2
 }  // namespace api
 }  // namespace envoy
-
-namespace google {
-namespace protobuf {
-
-template <> struct is_proto_enum< ::envoy::api::v2::Listener_DrainType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::envoy::api::v2::Listener_DrainType>() {
-  return ::envoy::api::v2::Listener_DrainType_descriptor();
-}
-
-}  // namespace protobuf
-}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 

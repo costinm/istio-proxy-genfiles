@@ -222,8 +222,8 @@ class DiscoveryRequest : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_node();
   static const int kNodeFieldNumber = 2;
   const ::envoy::api::v2::Node& node() const;
-  ::envoy::api::v2::Node* release_node();
   ::envoy::api::v2::Node* mutable_node();
+  ::envoy::api::v2::Node* release_node();
   void set_allocated_node(::envoy::api::v2::Node* node);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.DiscoveryRequest)
@@ -464,18 +464,15 @@ inline void DiscoveryRequest::set_allocated_version_info(::std::string* version_
 inline bool DiscoveryRequest::has_node() const {
   return this != internal_default_instance() && node_ != NULL;
 }
+inline void DiscoveryRequest::clear_node() {
+  if (GetArenaNoVirtual() == NULL && node_ != NULL) delete node_;
+  node_ = NULL;
+}
 inline const ::envoy::api::v2::Node& DiscoveryRequest::node() const {
   const ::envoy::api::v2::Node* p = node_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.DiscoveryRequest.node)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Node*>(
       &::envoy::api::v2::_Node_default_instance_);
-}
-inline ::envoy::api::v2::Node* DiscoveryRequest::release_node() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DiscoveryRequest.node)
-  
-  ::envoy::api::v2::Node* temp = node_;
-  node_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Node* DiscoveryRequest::mutable_node() {
   
@@ -485,22 +482,21 @@ inline ::envoy::api::v2::Node* DiscoveryRequest::mutable_node() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DiscoveryRequest.node)
   return node_;
 }
+inline ::envoy::api::v2::Node* DiscoveryRequest::release_node() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DiscoveryRequest.node)
+  
+  ::envoy::api::v2::Node* temp = node_;
+  node_ = NULL;
+  return temp;
+}
 inline void DiscoveryRequest::set_allocated_node(::envoy::api::v2::Node* node) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(node_);
-  }
+  delete node_;
+  node_ = node;
   if (node) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      node = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, node, submessage_arena);
-    }
     
   } else {
     
   }
-  node_ = node;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DiscoveryRequest.node)
 }
 
@@ -739,6 +735,9 @@ inline void DiscoveryResponse::set_allocated_version_info(::std::string* version
 // repeated .google.protobuf.Any resources = 2;
 inline int DiscoveryResponse::resources_size() const {
   return resources_.size();
+}
+inline void DiscoveryResponse::clear_resources() {
+  resources_.Clear();
 }
 inline const ::google::protobuf::Any& DiscoveryResponse::resources(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.DiscoveryResponse.resources)

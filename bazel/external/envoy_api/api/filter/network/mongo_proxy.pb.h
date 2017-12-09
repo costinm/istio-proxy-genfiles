@@ -30,7 +30,6 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "api/filter/fault.pb.h"
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2ffilter_2fnetwork_2fmongo_5fproxy_2eproto {
@@ -153,7 +152,7 @@ class MongoProxy : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // string stat_prefix = 1 [(.validate.rules) = {
+  // string stat_prefix = 1;
   void clear_stat_prefix();
   static const int kStatPrefixFieldNumber = 1;
   const ::std::string& stat_prefix() const;
@@ -186,8 +185,8 @@ class MongoProxy : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_delay();
   static const int kDelayFieldNumber = 3;
   const ::envoy::api::v2::filter::FaultDelay& delay() const;
-  ::envoy::api::v2::filter::FaultDelay* release_delay();
   ::envoy::api::v2::filter::FaultDelay* mutable_delay();
+  ::envoy::api::v2::filter::FaultDelay* release_delay();
   void set_allocated_delay(::envoy::api::v2::filter::FaultDelay* delay);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.network.MongoProxy)
@@ -212,7 +211,7 @@ class MongoProxy : public ::google::protobuf::Message /* @@protoc_insertion_poin
 #endif  // __GNUC__
 // MongoProxy
 
-// string stat_prefix = 1 [(.validate.rules) = {
+// string stat_prefix = 1;
 inline void MongoProxy::clear_stat_prefix() {
   stat_prefix_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -322,18 +321,15 @@ inline void MongoProxy::set_allocated_access_log(::std::string* access_log) {
 inline bool MongoProxy::has_delay() const {
   return this != internal_default_instance() && delay_ != NULL;
 }
+inline void MongoProxy::clear_delay() {
+  if (GetArenaNoVirtual() == NULL && delay_ != NULL) delete delay_;
+  delay_ = NULL;
+}
 inline const ::envoy::api::v2::filter::FaultDelay& MongoProxy::delay() const {
   const ::envoy::api::v2::filter::FaultDelay* p = delay_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.network.MongoProxy.delay)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::FaultDelay*>(
       &::envoy::api::v2::filter::_FaultDelay_default_instance_);
-}
-inline ::envoy::api::v2::filter::FaultDelay* MongoProxy::release_delay() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.network.MongoProxy.delay)
-  
-  ::envoy::api::v2::filter::FaultDelay* temp = delay_;
-  delay_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::FaultDelay* MongoProxy::mutable_delay() {
   
@@ -343,22 +339,21 @@ inline ::envoy::api::v2::filter::FaultDelay* MongoProxy::mutable_delay() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.network.MongoProxy.delay)
   return delay_;
 }
+inline ::envoy::api::v2::filter::FaultDelay* MongoProxy::release_delay() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.network.MongoProxy.delay)
+  
+  ::envoy::api::v2::filter::FaultDelay* temp = delay_;
+  delay_ = NULL;
+  return temp;
+}
 inline void MongoProxy::set_allocated_delay(::envoy::api::v2::filter::FaultDelay* delay) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(delay_);
-  }
+  delete delay_;
+  delay_ = delay;
   if (delay) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      delay = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, delay, submessage_arena);
-    }
     
   } else {
     
   }
-  delay_ = delay;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.network.MongoProxy.delay)
 }
 

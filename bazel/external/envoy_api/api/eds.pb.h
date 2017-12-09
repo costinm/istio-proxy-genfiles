@@ -204,8 +204,8 @@ class LbEndpoint : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_endpoint();
   static const int kEndpointFieldNumber = 1;
   const ::envoy::api::v2::Endpoint& endpoint() const;
-  ::envoy::api::v2::Endpoint* release_endpoint();
   ::envoy::api::v2::Endpoint* mutable_endpoint();
+  ::envoy::api::v2::Endpoint* release_endpoint();
   void set_allocated_endpoint(::envoy::api::v2::Endpoint* endpoint);
 
   // .envoy.api.v2.Metadata metadata = 3;
@@ -213,8 +213,8 @@ class LbEndpoint : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_metadata();
   static const int kMetadataFieldNumber = 3;
   const ::envoy::api::v2::Metadata& metadata() const;
-  ::envoy::api::v2::Metadata* release_metadata();
   ::envoy::api::v2::Metadata* mutable_metadata();
+  ::envoy::api::v2::Metadata* release_metadata();
   void set_allocated_metadata(::envoy::api::v2::Metadata* metadata);
 
   // .google.protobuf.UInt32Value load_balancing_weight = 4;
@@ -222,8 +222,8 @@ class LbEndpoint : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_load_balancing_weight();
   static const int kLoadBalancingWeightFieldNumber = 4;
   const ::google::protobuf::UInt32Value& load_balancing_weight() const;
-  ::google::protobuf::UInt32Value* release_load_balancing_weight();
   ::google::protobuf::UInt32Value* mutable_load_balancing_weight();
+  ::google::protobuf::UInt32Value* release_load_balancing_weight();
   void set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight);
 
   // .envoy.api.v2.HealthStatus health_status = 2;
@@ -345,8 +345,8 @@ class LocalityLbEndpoints : public ::google::protobuf::Message /* @@protoc_inser
   void clear_locality();
   static const int kLocalityFieldNumber = 1;
   const ::envoy::api::v2::Locality& locality() const;
-  ::envoy::api::v2::Locality* release_locality();
   ::envoy::api::v2::Locality* mutable_locality();
+  ::envoy::api::v2::Locality* release_locality();
   void set_allocated_locality(::envoy::api::v2::Locality* locality);
 
   // .google.protobuf.UInt32Value load_balancing_weight = 3;
@@ -354,18 +354,9 @@ class LocalityLbEndpoints : public ::google::protobuf::Message /* @@protoc_inser
   void clear_load_balancing_weight();
   static const int kLoadBalancingWeightFieldNumber = 3;
   const ::google::protobuf::UInt32Value& load_balancing_weight() const;
-  ::google::protobuf::UInt32Value* release_load_balancing_weight();
   ::google::protobuf::UInt32Value* mutable_load_balancing_weight();
+  ::google::protobuf::UInt32Value* release_load_balancing_weight();
   void set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight);
-
-  // .google.protobuf.UInt32Value priority = 5;
-  bool has_priority() const;
-  void clear_priority();
-  static const int kPriorityFieldNumber = 5;
-  const ::google::protobuf::UInt32Value& priority() const;
-  ::google::protobuf::UInt32Value* release_priority();
-  ::google::protobuf::UInt32Value* mutable_priority();
-  void set_allocated_priority(::google::protobuf::UInt32Value* priority);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.LocalityLbEndpoints)
  private:
@@ -374,7 +365,6 @@ class LocalityLbEndpoints : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LbEndpoint > lb_endpoints_;
   ::envoy::api::v2::Locality* locality_;
   ::google::protobuf::UInt32Value* load_balancing_weight_;
-  ::google::protobuf::UInt32Value* priority_;
   mutable int _cached_size_;
   friend struct ::protobuf_api_2feds_2eproto::TableStruct;
   friend void ::protobuf_api_2feds_2eproto::InitDefaultsLocalityLbEndpointsImpl();
@@ -601,8 +591,8 @@ class UpstreamLocalityStats : public ::google::protobuf::Message /* @@protoc_ins
   void clear_locality();
   static const int kLocalityFieldNumber = 1;
   const ::envoy::api::v2::Locality& locality() const;
-  ::envoy::api::v2::Locality* release_locality();
   ::envoy::api::v2::Locality* mutable_locality();
+  ::envoy::api::v2::Locality* release_locality();
   void set_allocated_locality(::envoy::api::v2::Locality* locality);
 
   // uint64 total_successful_requests = 2;
@@ -864,8 +854,8 @@ class LoadStatsRequest : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_node();
   static const int kNodeFieldNumber = 1;
   const ::envoy::api::v2::Node& node() const;
-  ::envoy::api::v2::Node* release_node();
   ::envoy::api::v2::Node* mutable_node();
+  ::envoy::api::v2::Node* release_node();
   void set_allocated_node(::envoy::api::v2::Node* node);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.LoadStatsRequest)
@@ -1075,6 +1065,18 @@ class ClusterLoadAssignment : public ::google::protobuf::Message /* @@protoc_ins
   const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
       endpoints() const;
 
+  // repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
+  int failover_endpoints_size() const;
+  void clear_failover_endpoints();
+  static const int kFailoverEndpointsFieldNumber = 3;
+  const ::envoy::api::v2::LocalityLbEndpoints& failover_endpoints(int index) const;
+  ::envoy::api::v2::LocalityLbEndpoints* mutable_failover_endpoints(int index);
+  ::envoy::api::v2::LocalityLbEndpoints* add_failover_endpoints();
+  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >*
+      mutable_failover_endpoints();
+  const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
+      failover_endpoints() const;
+
   // string cluster_name = 1;
   void clear_cluster_name();
   static const int kClusterNameFieldNumber = 1;
@@ -1094,8 +1096,8 @@ class ClusterLoadAssignment : public ::google::protobuf::Message /* @@protoc_ins
   void clear_policy();
   static const int kPolicyFieldNumber = 4;
   const ::envoy::api::v2::ClusterLoadAssignment_Policy& policy() const;
-  ::envoy::api::v2::ClusterLoadAssignment_Policy* release_policy();
   ::envoy::api::v2::ClusterLoadAssignment_Policy* mutable_policy();
+  ::envoy::api::v2::ClusterLoadAssignment_Policy* release_policy();
   void set_allocated_policy(::envoy::api::v2::ClusterLoadAssignment_Policy* policy);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.ClusterLoadAssignment)
@@ -1103,6 +1105,7 @@ class ClusterLoadAssignment : public ::google::protobuf::Message /* @@protoc_ins
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints > endpoints_;
+  ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints > failover_endpoints_;
   ::google::protobuf::internal::ArenaStringPtr cluster_name_;
   ::envoy::api::v2::ClusterLoadAssignment_Policy* policy_;
   mutable int _cached_size_;
@@ -1220,8 +1223,8 @@ class LoadStatsResponse : public ::google::protobuf::Message /* @@protoc_inserti
   void clear_load_reporting_interval();
   static const int kLoadReportingIntervalFieldNumber = 2;
   const ::google::protobuf::Duration& load_reporting_interval() const;
-  ::google::protobuf::Duration* release_load_reporting_interval();
   ::google::protobuf::Duration* mutable_load_reporting_interval();
+  ::google::protobuf::Duration* release_load_reporting_interval();
   void set_allocated_load_reporting_interval(::google::protobuf::Duration* load_reporting_interval);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.LoadStatsResponse)
@@ -1249,18 +1252,15 @@ class LoadStatsResponse : public ::google::protobuf::Message /* @@protoc_inserti
 inline bool LbEndpoint::has_endpoint() const {
   return this != internal_default_instance() && endpoint_ != NULL;
 }
+inline void LbEndpoint::clear_endpoint() {
+  if (GetArenaNoVirtual() == NULL && endpoint_ != NULL) delete endpoint_;
+  endpoint_ = NULL;
+}
 inline const ::envoy::api::v2::Endpoint& LbEndpoint::endpoint() const {
   const ::envoy::api::v2::Endpoint* p = endpoint_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LbEndpoint.endpoint)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Endpoint*>(
       &::envoy::api::v2::_Endpoint_default_instance_);
-}
-inline ::envoy::api::v2::Endpoint* LbEndpoint::release_endpoint() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.endpoint)
-  
-  ::envoy::api::v2::Endpoint* temp = endpoint_;
-  endpoint_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Endpoint* LbEndpoint::mutable_endpoint() {
   
@@ -1270,22 +1270,21 @@ inline ::envoy::api::v2::Endpoint* LbEndpoint::mutable_endpoint() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LbEndpoint.endpoint)
   return endpoint_;
 }
+inline ::envoy::api::v2::Endpoint* LbEndpoint::release_endpoint() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.endpoint)
+  
+  ::envoy::api::v2::Endpoint* temp = endpoint_;
+  endpoint_ = NULL;
+  return temp;
+}
 inline void LbEndpoint::set_allocated_endpoint(::envoy::api::v2::Endpoint* endpoint) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(endpoint_);
-  }
+  delete endpoint_;
+  endpoint_ = endpoint;
   if (endpoint) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      endpoint = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, endpoint, submessage_arena);
-    }
     
   } else {
     
   }
-  endpoint_ = endpoint;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LbEndpoint.endpoint)
 }
 
@@ -1307,18 +1306,15 @@ inline void LbEndpoint::set_health_status(::envoy::api::v2::HealthStatus value) 
 inline bool LbEndpoint::has_metadata() const {
   return this != internal_default_instance() && metadata_ != NULL;
 }
+inline void LbEndpoint::clear_metadata() {
+  if (GetArenaNoVirtual() == NULL && metadata_ != NULL) delete metadata_;
+  metadata_ = NULL;
+}
 inline const ::envoy::api::v2::Metadata& LbEndpoint::metadata() const {
   const ::envoy::api::v2::Metadata* p = metadata_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LbEndpoint.metadata)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Metadata*>(
       &::envoy::api::v2::_Metadata_default_instance_);
-}
-inline ::envoy::api::v2::Metadata* LbEndpoint::release_metadata() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.metadata)
-  
-  ::envoy::api::v2::Metadata* temp = metadata_;
-  metadata_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Metadata* LbEndpoint::mutable_metadata() {
   
@@ -1328,22 +1324,21 @@ inline ::envoy::api::v2::Metadata* LbEndpoint::mutable_metadata() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LbEndpoint.metadata)
   return metadata_;
 }
+inline ::envoy::api::v2::Metadata* LbEndpoint::release_metadata() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.metadata)
+  
+  ::envoy::api::v2::Metadata* temp = metadata_;
+  metadata_ = NULL;
+  return temp;
+}
 inline void LbEndpoint::set_allocated_metadata(::envoy::api::v2::Metadata* metadata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(metadata_);
-  }
+  delete metadata_;
+  metadata_ = metadata;
   if (metadata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      metadata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, metadata, submessage_arena);
-    }
     
   } else {
     
   }
-  metadata_ = metadata;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LbEndpoint.metadata)
 }
 
@@ -1351,18 +1346,15 @@ inline void LbEndpoint::set_allocated_metadata(::envoy::api::v2::Metadata* metad
 inline bool LbEndpoint::has_load_balancing_weight() const {
   return this != internal_default_instance() && load_balancing_weight_ != NULL;
 }
+inline void LbEndpoint::clear_load_balancing_weight() {
+  if (GetArenaNoVirtual() == NULL && load_balancing_weight_ != NULL) delete load_balancing_weight_;
+  load_balancing_weight_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& LbEndpoint::load_balancing_weight() const {
   const ::google::protobuf::UInt32Value* p = load_balancing_weight_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LbEndpoint.load_balancing_weight)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* LbEndpoint::release_load_balancing_weight() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.load_balancing_weight)
-  
-  ::google::protobuf::UInt32Value* temp = load_balancing_weight_;
-  load_balancing_weight_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* LbEndpoint::mutable_load_balancing_weight() {
   
@@ -1372,23 +1364,26 @@ inline ::google::protobuf::UInt32Value* LbEndpoint::mutable_load_balancing_weigh
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LbEndpoint.load_balancing_weight)
   return load_balancing_weight_;
 }
+inline ::google::protobuf::UInt32Value* LbEndpoint::release_load_balancing_weight() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LbEndpoint.load_balancing_weight)
+  
+  ::google::protobuf::UInt32Value* temp = load_balancing_weight_;
+  load_balancing_weight_ = NULL;
+  return temp;
+}
 inline void LbEndpoint::set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(load_balancing_weight_);
+  delete load_balancing_weight_;
+  if (load_balancing_weight != NULL && load_balancing_weight->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_load_balancing_weight = new ::google::protobuf::UInt32Value;
+    new_load_balancing_weight->CopyFrom(*load_balancing_weight);
+    load_balancing_weight = new_load_balancing_weight;
   }
+  load_balancing_weight_ = load_balancing_weight;
   if (load_balancing_weight) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(load_balancing_weight)->GetArena();
-    if (message_arena != submessage_arena) {
-      load_balancing_weight = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, load_balancing_weight, submessage_arena);
-    }
     
   } else {
     
   }
-  load_balancing_weight_ = load_balancing_weight;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LbEndpoint.load_balancing_weight)
 }
 
@@ -1400,18 +1395,15 @@ inline void LbEndpoint::set_allocated_load_balancing_weight(::google::protobuf::
 inline bool LocalityLbEndpoints::has_locality() const {
   return this != internal_default_instance() && locality_ != NULL;
 }
+inline void LocalityLbEndpoints::clear_locality() {
+  if (GetArenaNoVirtual() == NULL && locality_ != NULL) delete locality_;
+  locality_ = NULL;
+}
 inline const ::envoy::api::v2::Locality& LocalityLbEndpoints::locality() const {
   const ::envoy::api::v2::Locality* p = locality_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LocalityLbEndpoints.locality)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Locality*>(
       &::envoy::api::v2::_Locality_default_instance_);
-}
-inline ::envoy::api::v2::Locality* LocalityLbEndpoints::release_locality() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.locality)
-  
-  ::envoy::api::v2::Locality* temp = locality_;
-  locality_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Locality* LocalityLbEndpoints::mutable_locality() {
   
@@ -1421,22 +1413,21 @@ inline ::envoy::api::v2::Locality* LocalityLbEndpoints::mutable_locality() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LocalityLbEndpoints.locality)
   return locality_;
 }
+inline ::envoy::api::v2::Locality* LocalityLbEndpoints::release_locality() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.locality)
+  
+  ::envoy::api::v2::Locality* temp = locality_;
+  locality_ = NULL;
+  return temp;
+}
 inline void LocalityLbEndpoints::set_allocated_locality(::envoy::api::v2::Locality* locality) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(locality_);
-  }
+  delete locality_;
+  locality_ = locality;
   if (locality) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      locality = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, locality, submessage_arena);
-    }
     
   } else {
     
   }
-  locality_ = locality;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.locality)
 }
 
@@ -1474,18 +1465,15 @@ LocalityLbEndpoints::lb_endpoints() const {
 inline bool LocalityLbEndpoints::has_load_balancing_weight() const {
   return this != internal_default_instance() && load_balancing_weight_ != NULL;
 }
+inline void LocalityLbEndpoints::clear_load_balancing_weight() {
+  if (GetArenaNoVirtual() == NULL && load_balancing_weight_ != NULL) delete load_balancing_weight_;
+  load_balancing_weight_ = NULL;
+}
 inline const ::google::protobuf::UInt32Value& LocalityLbEndpoints::load_balancing_weight() const {
   const ::google::protobuf::UInt32Value* p = load_balancing_weight_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::release_load_balancing_weight() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
-  
-  ::google::protobuf::UInt32Value* temp = load_balancing_weight_;
-  load_balancing_weight_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::mutable_load_balancing_weight() {
   
@@ -1495,69 +1483,27 @@ inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::mutable_load_balanc
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
   return load_balancing_weight_;
 }
-inline void LocalityLbEndpoints::set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(load_balancing_weight_);
-  }
-  if (load_balancing_weight) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(load_balancing_weight)->GetArena();
-    if (message_arena != submessage_arena) {
-      load_balancing_weight = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, load_balancing_weight, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  load_balancing_weight_ = load_balancing_weight;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
-}
-
-// .google.protobuf.UInt32Value priority = 5;
-inline bool LocalityLbEndpoints::has_priority() const {
-  return this != internal_default_instance() && priority_ != NULL;
-}
-inline const ::google::protobuf::UInt32Value& LocalityLbEndpoints::priority() const {
-  const ::google::protobuf::UInt32Value* p = priority_;
-  // @@protoc_insertion_point(field_get:envoy.api.v2.LocalityLbEndpoints.priority)
-  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
-      &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::release_priority() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.priority)
+inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::release_load_balancing_weight() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
   
-  ::google::protobuf::UInt32Value* temp = priority_;
-  priority_ = NULL;
+  ::google::protobuf::UInt32Value* temp = load_balancing_weight_;
+  load_balancing_weight_ = NULL;
   return temp;
 }
-inline ::google::protobuf::UInt32Value* LocalityLbEndpoints::mutable_priority() {
-  
-  if (priority_ == NULL) {
-    priority_ = new ::google::protobuf::UInt32Value;
+inline void LocalityLbEndpoints::set_allocated_load_balancing_weight(::google::protobuf::UInt32Value* load_balancing_weight) {
+  delete load_balancing_weight_;
+  if (load_balancing_weight != NULL && load_balancing_weight->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_load_balancing_weight = new ::google::protobuf::UInt32Value;
+    new_load_balancing_weight->CopyFrom(*load_balancing_weight);
+    load_balancing_weight = new_load_balancing_weight;
   }
-  // @@protoc_insertion_point(field_mutable:envoy.api.v2.LocalityLbEndpoints.priority)
-  return priority_;
-}
-inline void LocalityLbEndpoints::set_allocated_priority(::google::protobuf::UInt32Value* priority) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(priority_);
-  }
-  if (priority) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(priority)->GetArena();
-    if (message_arena != submessage_arena) {
-      priority = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, priority, submessage_arena);
-    }
+  load_balancing_weight_ = load_balancing_weight;
+  if (load_balancing_weight) {
     
   } else {
     
   }
-  priority_ = priority;
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.priority)
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LocalityLbEndpoints.load_balancing_weight)
 }
 
 // -------------------------------------------------------------------
@@ -1653,18 +1599,15 @@ inline void EndpointLoadMetricStats::set_total_metric_value(double value) {
 inline bool UpstreamLocalityStats::has_locality() const {
   return this != internal_default_instance() && locality_ != NULL;
 }
+inline void UpstreamLocalityStats::clear_locality() {
+  if (GetArenaNoVirtual() == NULL && locality_ != NULL) delete locality_;
+  locality_ = NULL;
+}
 inline const ::envoy::api::v2::Locality& UpstreamLocalityStats::locality() const {
   const ::envoy::api::v2::Locality* p = locality_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.UpstreamLocalityStats.locality)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Locality*>(
       &::envoy::api::v2::_Locality_default_instance_);
-}
-inline ::envoy::api::v2::Locality* UpstreamLocalityStats::release_locality() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.UpstreamLocalityStats.locality)
-  
-  ::envoy::api::v2::Locality* temp = locality_;
-  locality_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Locality* UpstreamLocalityStats::mutable_locality() {
   
@@ -1674,22 +1617,21 @@ inline ::envoy::api::v2::Locality* UpstreamLocalityStats::mutable_locality() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.UpstreamLocalityStats.locality)
   return locality_;
 }
+inline ::envoy::api::v2::Locality* UpstreamLocalityStats::release_locality() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.UpstreamLocalityStats.locality)
+  
+  ::envoy::api::v2::Locality* temp = locality_;
+  locality_ = NULL;
+  return temp;
+}
 inline void UpstreamLocalityStats::set_allocated_locality(::envoy::api::v2::Locality* locality) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(locality_);
-  }
+  delete locality_;
+  locality_ = locality;
   if (locality) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      locality = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, locality, submessage_arena);
-    }
     
   } else {
     
   }
-  locality_ = locality;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.UpstreamLocalityStats.locality)
 }
 
@@ -1874,18 +1816,15 @@ inline void ClusterStats::set_total_dropped_requests(::google::protobuf::uint64 
 inline bool LoadStatsRequest::has_node() const {
   return this != internal_default_instance() && node_ != NULL;
 }
+inline void LoadStatsRequest::clear_node() {
+  if (GetArenaNoVirtual() == NULL && node_ != NULL) delete node_;
+  node_ = NULL;
+}
 inline const ::envoy::api::v2::Node& LoadStatsRequest::node() const {
   const ::envoy::api::v2::Node* p = node_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LoadStatsRequest.node)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Node*>(
       &::envoy::api::v2::_Node_default_instance_);
-}
-inline ::envoy::api::v2::Node* LoadStatsRequest::release_node() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LoadStatsRequest.node)
-  
-  ::envoy::api::v2::Node* temp = node_;
-  node_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Node* LoadStatsRequest::mutable_node() {
   
@@ -1895,22 +1834,21 @@ inline ::envoy::api::v2::Node* LoadStatsRequest::mutable_node() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LoadStatsRequest.node)
   return node_;
 }
+inline ::envoy::api::v2::Node* LoadStatsRequest::release_node() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LoadStatsRequest.node)
+  
+  ::envoy::api::v2::Node* temp = node_;
+  node_ = NULL;
+  return temp;
+}
 inline void LoadStatsRequest::set_allocated_node(::envoy::api::v2::Node* node) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(node_);
-  }
+  delete node_;
+  node_ = node;
   if (node) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      node = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, node, submessage_arena);
-    }
     
   } else {
     
   }
-  node_ = node;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LoadStatsRequest.node)
 }
 
@@ -2049,14 +1987,42 @@ ClusterLoadAssignment::endpoints() const {
   return endpoints_;
 }
 
+// repeated .envoy.api.v2.LocalityLbEndpoints failover_endpoints = 3;
+inline int ClusterLoadAssignment::failover_endpoints_size() const {
+  return failover_endpoints_.size();
+}
+inline void ClusterLoadAssignment::clear_failover_endpoints() {
+  failover_endpoints_.Clear();
+}
+inline const ::envoy::api::v2::LocalityLbEndpoints& ClusterLoadAssignment::failover_endpoints(int index) const {
+  // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
+  return failover_endpoints_.Get(index);
+}
+inline ::envoy::api::v2::LocalityLbEndpoints* ClusterLoadAssignment::mutable_failover_endpoints(int index) {
+  // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
+  return failover_endpoints_.Mutable(index);
+}
+inline ::envoy::api::v2::LocalityLbEndpoints* ClusterLoadAssignment::add_failover_endpoints() {
+  // @@protoc_insertion_point(field_add:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
+  return failover_endpoints_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >*
+ClusterLoadAssignment::mutable_failover_endpoints() {
+  // @@protoc_insertion_point(field_mutable_list:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
+  return &failover_endpoints_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::envoy::api::v2::LocalityLbEndpoints >&
+ClusterLoadAssignment::failover_endpoints() const {
+  // @@protoc_insertion_point(field_list:envoy.api.v2.ClusterLoadAssignment.failover_endpoints)
+  return failover_endpoints_;
+}
+
 // .envoy.api.v2.ClusterLoadAssignment.Policy policy = 4;
 inline bool ClusterLoadAssignment::has_policy() const {
   return this != internal_default_instance() && policy_ != NULL;
 }
 inline void ClusterLoadAssignment::clear_policy() {
-  if (GetArenaNoVirtual() == NULL && policy_ != NULL) {
-    delete policy_;
-  }
+  if (GetArenaNoVirtual() == NULL && policy_ != NULL) delete policy_;
   policy_ = NULL;
 }
 inline const ::envoy::api::v2::ClusterLoadAssignment_Policy& ClusterLoadAssignment::policy() const {
@@ -2064,13 +2030,6 @@ inline const ::envoy::api::v2::ClusterLoadAssignment_Policy& ClusterLoadAssignme
   // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterLoadAssignment.policy)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ClusterLoadAssignment_Policy*>(
       &::envoy::api::v2::_ClusterLoadAssignment_Policy_default_instance_);
-}
-inline ::envoy::api::v2::ClusterLoadAssignment_Policy* ClusterLoadAssignment::release_policy() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterLoadAssignment.policy)
-  
-  ::envoy::api::v2::ClusterLoadAssignment_Policy* temp = policy_;
-  policy_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ClusterLoadAssignment_Policy* ClusterLoadAssignment::mutable_policy() {
   
@@ -2080,22 +2039,21 @@ inline ::envoy::api::v2::ClusterLoadAssignment_Policy* ClusterLoadAssignment::mu
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterLoadAssignment.policy)
   return policy_;
 }
+inline ::envoy::api::v2::ClusterLoadAssignment_Policy* ClusterLoadAssignment::release_policy() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterLoadAssignment.policy)
+  
+  ::envoy::api::v2::ClusterLoadAssignment_Policy* temp = policy_;
+  policy_ = NULL;
+  return temp;
+}
 inline void ClusterLoadAssignment::set_allocated_policy(::envoy::api::v2::ClusterLoadAssignment_Policy* policy) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete policy_;
-  }
+  delete policy_;
+  policy_ = policy;
   if (policy) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      policy = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, policy, submessage_arena);
-    }
     
   } else {
     
   }
-  policy_ = policy;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.ClusterLoadAssignment.policy)
 }
 
@@ -2176,18 +2134,15 @@ LoadStatsResponse::mutable_clusters() {
 inline bool LoadStatsResponse::has_load_reporting_interval() const {
   return this != internal_default_instance() && load_reporting_interval_ != NULL;
 }
+inline void LoadStatsResponse::clear_load_reporting_interval() {
+  if (GetArenaNoVirtual() == NULL && load_reporting_interval_ != NULL) delete load_reporting_interval_;
+  load_reporting_interval_ = NULL;
+}
 inline const ::google::protobuf::Duration& LoadStatsResponse::load_reporting_interval() const {
   const ::google::protobuf::Duration* p = load_reporting_interval_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.LoadStatsResponse.load_reporting_interval)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* LoadStatsResponse::release_load_reporting_interval() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.LoadStatsResponse.load_reporting_interval)
-  
-  ::google::protobuf::Duration* temp = load_reporting_interval_;
-  load_reporting_interval_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* LoadStatsResponse::mutable_load_reporting_interval() {
   
@@ -2197,23 +2152,26 @@ inline ::google::protobuf::Duration* LoadStatsResponse::mutable_load_reporting_i
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.LoadStatsResponse.load_reporting_interval)
   return load_reporting_interval_;
 }
+inline ::google::protobuf::Duration* LoadStatsResponse::release_load_reporting_interval() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.LoadStatsResponse.load_reporting_interval)
+  
+  ::google::protobuf::Duration* temp = load_reporting_interval_;
+  load_reporting_interval_ = NULL;
+  return temp;
+}
 inline void LoadStatsResponse::set_allocated_load_reporting_interval(::google::protobuf::Duration* load_reporting_interval) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(load_reporting_interval_);
+  delete load_reporting_interval_;
+  if (load_reporting_interval != NULL && load_reporting_interval->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_load_reporting_interval = new ::google::protobuf::Duration;
+    new_load_reporting_interval->CopyFrom(*load_reporting_interval);
+    load_reporting_interval = new_load_reporting_interval;
   }
+  load_reporting_interval_ = load_reporting_interval;
   if (load_reporting_interval) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(load_reporting_interval)->GetArena();
-    if (message_arena != submessage_arena) {
-      load_reporting_interval = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, load_reporting_interval, submessage_arena);
-    }
     
   } else {
     
   }
-  load_reporting_interval_ = load_reporting_interval;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.LoadStatsResponse.load_reporting_interval)
 }
 

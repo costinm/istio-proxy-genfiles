@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -63,11 +59,7 @@ namespace protobuf_mixer_2fv1_2fconfig_2fclient_2fapi_5fspec_2eproto {
 void InitDefaultsHTTPAPISpecImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fapi_5fspec_2eproto::InitDefaultsHTTPAPISpecPattern();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fapi_5fspec_2eproto::InitDefaultsAPIKey();
@@ -87,11 +79,7 @@ void InitDefaultsHTTPAPISpec() {
 void InitDefaultsHTTPAPISpecPatternImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fattributes_2eproto::InitDefaultsAttributes();
   {
     void* ptr = &::istio::mixer::v1::config::client::_HTTPAPISpecPattern_default_instance_;
@@ -109,11 +97,7 @@ void InitDefaultsHTTPAPISpecPattern() {
 void InitDefaultsAPIKeyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_APIKey_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::APIKey();
@@ -130,11 +114,7 @@ void InitDefaultsAPIKey() {
 void InitDefaultsHTTPAPISpecReferenceImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_HTTPAPISpecReference_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::HTTPAPISpecReference();
@@ -151,11 +131,7 @@ void InitDefaultsHTTPAPISpecReference() {
 void InitDefaultsHTTPAPISpecBindingImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fservice_2eproto::InitDefaultsIstioService();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fapi_5fspec_2eproto::InitDefaultsHTTPAPISpecReference();
   {
@@ -307,12 +283,6 @@ void HTTPAPISpec::InitAsDefaultInstance() {
   ::istio::mixer::v1::config::client::_HTTPAPISpec_default_instance_._instance.get_mutable()->attributes_ = const_cast< ::istio::mixer::v1::Attributes*>(
       ::istio::mixer::v1::Attributes::internal_default_instance());
 }
-void HTTPAPISpec::clear_attributes() {
-  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) {
-    delete attributes_;
-  }
-  attributes_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HTTPAPISpec::kAttributesFieldNumber;
 const int HTTPAPISpec::kPatternsFieldNumber;
@@ -408,7 +378,7 @@ bool HTTPAPISpec::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_attributes()));
         } else {
           goto handle_unusual;
@@ -420,7 +390,8 @@ bool HTTPAPISpec::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_patterns()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_patterns()));
         } else {
           goto handle_unusual;
         }
@@ -431,7 +402,8 @@ bool HTTPAPISpec::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_api_keys()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_api_keys()));
         } else {
           goto handle_unusual;
         }
@@ -501,7 +473,7 @@ void HTTPAPISpec::SerializeWithCachedSizes(
   // .istio.mixer.v1.Attributes attributes = 1;
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->attributes_, deterministic, target);
   }
 
@@ -509,7 +481,7 @@ void HTTPAPISpec::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->patterns_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->patterns(static_cast<int>(i)), deterministic, target);
   }
 
@@ -517,7 +489,7 @@ void HTTPAPISpec::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->api_keys_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, this->api_keys(static_cast<int>(i)), deterministic, target);
   }
 
@@ -544,7 +516,7 @@ size_t HTTPAPISpec::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->patterns(static_cast<int>(i)));
     }
   }
@@ -555,7 +527,7 @@ size_t HTTPAPISpec::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->api_keys(static_cast<int>(i)));
     }
   }
@@ -563,7 +535,7 @@ size_t HTTPAPISpec::ByteSizeLong() const {
   // .istio.mixer.v1.Attributes attributes = 1;
   if (this->has_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->attributes_);
   }
 
@@ -649,12 +621,6 @@ void HTTPAPISpecPattern::InitAsDefaultInstance() {
       &::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::istio::mixer::v1::config::client::_HTTPAPISpecPattern_default_instance_.regex_.UnsafeSetDefault(
       &::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void HTTPAPISpecPattern::clear_attributes() {
-  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) {
-    delete attributes_;
-  }
-  attributes_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HTTPAPISpecPattern::kAttributesFieldNumber;
@@ -793,7 +759,7 @@ bool HTTPAPISpecPattern::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_attributes()));
         } else {
           goto handle_unusual;
@@ -928,7 +894,7 @@ void HTTPAPISpecPattern::SerializeWithCachedSizes(
   // .istio.mixer.v1.Attributes attributes = 1;
   if (this->has_attributes()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->attributes_, deterministic, target);
   }
 
@@ -992,7 +958,7 @@ size_t HTTPAPISpecPattern::ByteSizeLong() const {
   // .istio.mixer.v1.Attributes attributes = 1;
   if (this->has_attributes()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->attributes_);
   }
 
@@ -1831,9 +1797,6 @@ void HTTPAPISpecReference::InternalSwap(HTTPAPISpecReference* other) {
 
 void HTTPAPISpecBinding::InitAsDefaultInstance() {
 }
-void HTTPAPISpecBinding::clear_services() {
-  services_.Clear();
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HTTPAPISpecBinding::kServicesFieldNumber;
 const int HTTPAPISpecBinding::kApiSpecsFieldNumber;
@@ -1917,7 +1880,8 @@ bool HTTPAPISpecBinding::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_services()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_services()));
         } else {
           goto handle_unusual;
         }
@@ -1928,7 +1892,8 @@ bool HTTPAPISpecBinding::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_api_specs()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_api_specs()));
         } else {
           goto handle_unusual;
         }
@@ -1993,7 +1958,7 @@ void HTTPAPISpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->services_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->services(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2001,7 +1966,7 @@ void HTTPAPISpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->api_specs_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->api_specs(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2028,7 +1993,7 @@ size_t HTTPAPISpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->services(static_cast<int>(i)));
     }
   }
@@ -2039,7 +2004,7 @@ size_t HTTPAPISpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->api_specs(static_cast<int>(i)));
     }
   }

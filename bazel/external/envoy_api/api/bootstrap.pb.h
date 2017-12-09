@@ -518,8 +518,8 @@ class Tracing_Http : public ::google::protobuf::Message /* @@protoc_insertion_po
   void clear_config();
   static const int kConfigFieldNumber = 2;
   const ::google::protobuf::Struct& config() const;
-  ::google::protobuf::Struct* release_config();
   ::google::protobuf::Struct* mutable_config();
+  ::google::protobuf::Struct* release_config();
   void set_allocated_config(::google::protobuf::Struct* config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Tracing.Http)
@@ -623,8 +623,8 @@ class Tracing : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   void clear_http();
   static const int kHttpFieldNumber = 1;
   const ::envoy::api::v2::Tracing_Http& http() const;
-  ::envoy::api::v2::Tracing_Http* release_http();
   ::envoy::api::v2::Tracing_Http* mutable_http();
+  ::envoy::api::v2::Tracing_Http* release_http();
   void set_allocated_http(::envoy::api::v2::Tracing_Http* http);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Tracing)
@@ -753,8 +753,8 @@ class Admin : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_address();
   static const int kAddressFieldNumber = 3;
   const ::envoy::api::v2::Address& address() const;
-  ::envoy::api::v2::Address* release_address();
   ::envoy::api::v2::Address* mutable_address();
+  ::envoy::api::v2::Address* release_address();
   void set_allocated_address(::envoy::api::v2::Address* address);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Admin)
@@ -980,8 +980,8 @@ class ClusterManager : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_outlier_detection();
   static const int kOutlierDetectionFieldNumber = 2;
   const ::envoy::api::v2::ClusterManager_OutlierDetection& outlier_detection() const;
-  ::envoy::api::v2::ClusterManager_OutlierDetection* release_outlier_detection();
   ::envoy::api::v2::ClusterManager_OutlierDetection* mutable_outlier_detection();
+  ::envoy::api::v2::ClusterManager_OutlierDetection* release_outlier_detection();
   void set_allocated_outlier_detection(::envoy::api::v2::ClusterManager_OutlierDetection* outlier_detection);
 
   // .envoy.api.v2.BindConfig upstream_bind_config = 3;
@@ -989,8 +989,8 @@ class ClusterManager : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_upstream_bind_config();
   static const int kUpstreamBindConfigFieldNumber = 3;
   const ::envoy::api::v2::BindConfig& upstream_bind_config() const;
-  ::envoy::api::v2::BindConfig* release_upstream_bind_config();
   ::envoy::api::v2::BindConfig* mutable_upstream_bind_config();
+  ::envoy::api::v2::BindConfig* release_upstream_bind_config();
   void set_allocated_upstream_bind_config(::envoy::api::v2::BindConfig* upstream_bind_config);
 
   // .envoy.api.v2.ApiConfigSource load_stats_config = 4;
@@ -998,8 +998,8 @@ class ClusterManager : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_load_stats_config();
   static const int kLoadStatsConfigFieldNumber = 4;
   const ::envoy::api::v2::ApiConfigSource& load_stats_config() const;
-  ::envoy::api::v2::ApiConfigSource* release_load_stats_config();
   ::envoy::api::v2::ApiConfigSource* mutable_load_stats_config();
+  ::envoy::api::v2::ApiConfigSource* release_load_stats_config();
   void set_allocated_load_stats_config(::envoy::api::v2::ApiConfigSource* load_stats_config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.ClusterManager)
@@ -1109,8 +1109,8 @@ class StatsdSink : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_address();
   static const int kAddressFieldNumber = 1;
   const ::envoy::api::v2::Address& address() const;
-  ::envoy::api::v2::Address* release_address();
   ::envoy::api::v2::Address* mutable_address();
+  ::envoy::api::v2::Address* release_address();
   void set_allocated_address(::envoy::api::v2::Address* address);
 
   // string tcp_cluster_name = 2;
@@ -1255,8 +1255,8 @@ class StatsSink : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_config();
   static const int kConfigFieldNumber = 2;
   const ::google::protobuf::Struct& config() const;
-  ::google::protobuf::Struct* release_config();
   ::google::protobuf::Struct* mutable_config();
+  ::google::protobuf::Struct* release_config();
   void set_allocated_config(::google::protobuf::Struct* config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.StatsSink)
@@ -1492,8 +1492,8 @@ class StatsConfig : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_use_all_default_tags();
   static const int kUseAllDefaultTagsFieldNumber = 2;
   const ::google::protobuf::BoolValue& use_all_default_tags() const;
-  ::google::protobuf::BoolValue* release_use_all_default_tags();
   ::google::protobuf::BoolValue* mutable_use_all_default_tags();
+  ::google::protobuf::BoolValue* release_use_all_default_tags();
   void set_allocated_use_all_default_tags(::google::protobuf::BoolValue* use_all_default_tags);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.StatsConfig)
@@ -1595,8 +1595,8 @@ class Watchdog : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_miss_timeout();
   static const int kMissTimeoutFieldNumber = 1;
   const ::google::protobuf::Duration& miss_timeout() const;
-  ::google::protobuf::Duration* release_miss_timeout();
   ::google::protobuf::Duration* mutable_miss_timeout();
+  ::google::protobuf::Duration* release_miss_timeout();
   void set_allocated_miss_timeout(::google::protobuf::Duration* miss_timeout);
 
   // .google.protobuf.Duration megamiss_timeout = 2;
@@ -1604,8 +1604,8 @@ class Watchdog : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_megamiss_timeout();
   static const int kMegamissTimeoutFieldNumber = 2;
   const ::google::protobuf::Duration& megamiss_timeout() const;
-  ::google::protobuf::Duration* release_megamiss_timeout();
   ::google::protobuf::Duration* mutable_megamiss_timeout();
+  ::google::protobuf::Duration* release_megamiss_timeout();
   void set_allocated_megamiss_timeout(::google::protobuf::Duration* megamiss_timeout);
 
   // .google.protobuf.Duration kill_timeout = 3;
@@ -1613,8 +1613,8 @@ class Watchdog : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_kill_timeout();
   static const int kKillTimeoutFieldNumber = 3;
   const ::google::protobuf::Duration& kill_timeout() const;
-  ::google::protobuf::Duration* release_kill_timeout();
   ::google::protobuf::Duration* mutable_kill_timeout();
+  ::google::protobuf::Duration* release_kill_timeout();
   void set_allocated_kill_timeout(::google::protobuf::Duration* kill_timeout);
 
   // .google.protobuf.Duration multikill_timeout = 4;
@@ -1622,8 +1622,8 @@ class Watchdog : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_multikill_timeout();
   static const int kMultikillTimeoutFieldNumber = 4;
   const ::google::protobuf::Duration& multikill_timeout() const;
-  ::google::protobuf::Duration* release_multikill_timeout();
   ::google::protobuf::Duration* mutable_multikill_timeout();
+  ::google::protobuf::Duration* release_multikill_timeout();
   void set_allocated_multikill_timeout(::google::protobuf::Duration* multikill_timeout);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Watchdog)
@@ -2102,8 +2102,8 @@ class Bootstrap_DynamicResources_DeprecatedV1 : public ::google::protobuf::Messa
   void clear_sds_config();
   static const int kSdsConfigFieldNumber = 1;
   const ::envoy::api::v2::ConfigSource& sds_config() const;
-  ::envoy::api::v2::ConfigSource* release_sds_config();
   ::envoy::api::v2::ConfigSource* mutable_sds_config();
+  ::envoy::api::v2::ConfigSource* release_sds_config();
   void set_allocated_sds_config(::envoy::api::v2::ConfigSource* sds_config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1)
@@ -2206,8 +2206,8 @@ class Bootstrap_DynamicResources : public ::google::protobuf::Message /* @@proto
   void clear_lds_config();
   static const int kLdsConfigFieldNumber = 1;
   const ::envoy::api::v2::ConfigSource& lds_config() const;
-  ::envoy::api::v2::ConfigSource* release_lds_config();
   ::envoy::api::v2::ConfigSource* mutable_lds_config();
+  ::envoy::api::v2::ConfigSource* release_lds_config();
   void set_allocated_lds_config(::envoy::api::v2::ConfigSource* lds_config);
 
   // .envoy.api.v2.ConfigSource cds_config = 2;
@@ -2215,8 +2215,8 @@ class Bootstrap_DynamicResources : public ::google::protobuf::Message /* @@proto
   void clear_cds_config();
   static const int kCdsConfigFieldNumber = 2;
   const ::envoy::api::v2::ConfigSource& cds_config() const;
-  ::envoy::api::v2::ConfigSource* release_cds_config();
   ::envoy::api::v2::ConfigSource* mutable_cds_config();
+  ::envoy::api::v2::ConfigSource* release_cds_config();
   void set_allocated_cds_config(::envoy::api::v2::ConfigSource* cds_config);
 
   // .envoy.api.v2.ApiConfigSource ads_config = 3;
@@ -2224,8 +2224,8 @@ class Bootstrap_DynamicResources : public ::google::protobuf::Message /* @@proto
   void clear_ads_config();
   static const int kAdsConfigFieldNumber = 3;
   const ::envoy::api::v2::ApiConfigSource& ads_config() const;
-  ::envoy::api::v2::ApiConfigSource* release_ads_config();
   ::envoy::api::v2::ApiConfigSource* mutable_ads_config();
+  ::envoy::api::v2::ApiConfigSource* release_ads_config();
   void set_allocated_ads_config(::envoy::api::v2::ApiConfigSource* ads_config);
 
   // .envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1 deprecated_v1 = 4;
@@ -2233,8 +2233,8 @@ class Bootstrap_DynamicResources : public ::google::protobuf::Message /* @@proto
   void clear_deprecated_v1();
   static const int kDeprecatedV1FieldNumber = 4;
   const ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1& deprecated_v1() const;
-  ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* release_deprecated_v1();
   ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* mutable_deprecated_v1();
+  ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* release_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* deprecated_v1);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Bootstrap.DynamicResources)
@@ -2367,8 +2367,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_node();
   static const int kNodeFieldNumber = 1;
   const ::envoy::api::v2::Node& node() const;
-  ::envoy::api::v2::Node* release_node();
   ::envoy::api::v2::Node* mutable_node();
+  ::envoy::api::v2::Node* release_node();
   void set_allocated_node(::envoy::api::v2::Node* node);
 
   // .envoy.api.v2.Bootstrap.StaticResources static_resources = 2;
@@ -2376,8 +2376,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_static_resources();
   static const int kStaticResourcesFieldNumber = 2;
   const ::envoy::api::v2::Bootstrap_StaticResources& static_resources() const;
-  ::envoy::api::v2::Bootstrap_StaticResources* release_static_resources();
   ::envoy::api::v2::Bootstrap_StaticResources* mutable_static_resources();
+  ::envoy::api::v2::Bootstrap_StaticResources* release_static_resources();
   void set_allocated_static_resources(::envoy::api::v2::Bootstrap_StaticResources* static_resources);
 
   // .envoy.api.v2.Bootstrap.DynamicResources dynamic_resources = 3;
@@ -2385,8 +2385,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_dynamic_resources();
   static const int kDynamicResourcesFieldNumber = 3;
   const ::envoy::api::v2::Bootstrap_DynamicResources& dynamic_resources() const;
-  ::envoy::api::v2::Bootstrap_DynamicResources* release_dynamic_resources();
   ::envoy::api::v2::Bootstrap_DynamicResources* mutable_dynamic_resources();
+  ::envoy::api::v2::Bootstrap_DynamicResources* release_dynamic_resources();
   void set_allocated_dynamic_resources(::envoy::api::v2::Bootstrap_DynamicResources* dynamic_resources);
 
   // .envoy.api.v2.ClusterManager cluster_manager = 4;
@@ -2394,8 +2394,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_cluster_manager();
   static const int kClusterManagerFieldNumber = 4;
   const ::envoy::api::v2::ClusterManager& cluster_manager() const;
-  ::envoy::api::v2::ClusterManager* release_cluster_manager();
   ::envoy::api::v2::ClusterManager* mutable_cluster_manager();
+  ::envoy::api::v2::ClusterManager* release_cluster_manager();
   void set_allocated_cluster_manager(::envoy::api::v2::ClusterManager* cluster_manager);
 
   // .google.protobuf.Duration stats_flush_interval = 7;
@@ -2403,8 +2403,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_stats_flush_interval();
   static const int kStatsFlushIntervalFieldNumber = 7;
   const ::google::protobuf::Duration& stats_flush_interval() const;
-  ::google::protobuf::Duration* release_stats_flush_interval();
   ::google::protobuf::Duration* mutable_stats_flush_interval();
+  ::google::protobuf::Duration* release_stats_flush_interval();
   void set_allocated_stats_flush_interval(::google::protobuf::Duration* stats_flush_interval);
 
   // .envoy.api.v2.Watchdog watchdog = 8;
@@ -2412,8 +2412,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_watchdog();
   static const int kWatchdogFieldNumber = 8;
   const ::envoy::api::v2::Watchdog& watchdog() const;
-  ::envoy::api::v2::Watchdog* release_watchdog();
   ::envoy::api::v2::Watchdog* mutable_watchdog();
+  ::envoy::api::v2::Watchdog* release_watchdog();
   void set_allocated_watchdog(::envoy::api::v2::Watchdog* watchdog);
 
   // .envoy.api.v2.Tracing tracing = 9;
@@ -2421,8 +2421,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_tracing();
   static const int kTracingFieldNumber = 9;
   const ::envoy::api::v2::Tracing& tracing() const;
-  ::envoy::api::v2::Tracing* release_tracing();
   ::envoy::api::v2::Tracing* mutable_tracing();
+  ::envoy::api::v2::Tracing* release_tracing();
   void set_allocated_tracing(::envoy::api::v2::Tracing* tracing);
 
   // .envoy.api.v2.RateLimitServiceConfig rate_limit_service = 10;
@@ -2430,8 +2430,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_rate_limit_service();
   static const int kRateLimitServiceFieldNumber = 10;
   const ::envoy::api::v2::RateLimitServiceConfig& rate_limit_service() const;
-  ::envoy::api::v2::RateLimitServiceConfig* release_rate_limit_service();
   ::envoy::api::v2::RateLimitServiceConfig* mutable_rate_limit_service();
+  ::envoy::api::v2::RateLimitServiceConfig* release_rate_limit_service();
   void set_allocated_rate_limit_service(::envoy::api::v2::RateLimitServiceConfig* rate_limit_service);
 
   // .envoy.api.v2.Runtime runtime = 11;
@@ -2439,8 +2439,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_runtime();
   static const int kRuntimeFieldNumber = 11;
   const ::envoy::api::v2::Runtime& runtime() const;
-  ::envoy::api::v2::Runtime* release_runtime();
   ::envoy::api::v2::Runtime* mutable_runtime();
+  ::envoy::api::v2::Runtime* release_runtime();
   void set_allocated_runtime(::envoy::api::v2::Runtime* runtime);
 
   // .envoy.api.v2.Admin admin = 12;
@@ -2448,8 +2448,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_admin();
   static const int kAdminFieldNumber = 12;
   const ::envoy::api::v2::Admin& admin() const;
-  ::envoy::api::v2::Admin* release_admin();
   ::envoy::api::v2::Admin* mutable_admin();
+  ::envoy::api::v2::Admin* release_admin();
   void set_allocated_admin(::envoy::api::v2::Admin* admin);
 
   // .envoy.api.v2.StatsConfig stats_config = 13;
@@ -2457,8 +2457,8 @@ class Bootstrap : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_stats_config();
   static const int kStatsConfigFieldNumber = 13;
   const ::envoy::api::v2::StatsConfig& stats_config() const;
-  ::envoy::api::v2::StatsConfig* release_stats_config();
   ::envoy::api::v2::StatsConfig* mutable_stats_config();
+  ::envoy::api::v2::StatsConfig* release_stats_config();
   void set_allocated_stats_config(::envoy::api::v2::StatsConfig* stats_config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.Bootstrap)
@@ -2770,18 +2770,15 @@ inline void Tracing_Http::set_allocated_name(::std::string* name) {
 inline bool Tracing_Http::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
+inline void Tracing_Http::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) delete config_;
+  config_ = NULL;
+}
 inline const ::google::protobuf::Struct& Tracing_Http::config() const {
   const ::google::protobuf::Struct* p = config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Tracing.Http.config)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
       &::google::protobuf::_Struct_default_instance_);
-}
-inline ::google::protobuf::Struct* Tracing_Http::release_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Tracing.Http.config)
-  
-  ::google::protobuf::Struct* temp = config_;
-  config_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Struct* Tracing_Http::mutable_config() {
   
@@ -2791,23 +2788,26 @@ inline ::google::protobuf::Struct* Tracing_Http::mutable_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Tracing.Http.config)
   return config_;
 }
+inline ::google::protobuf::Struct* Tracing_Http::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Tracing.Http.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
 inline void Tracing_Http::set_allocated_config(::google::protobuf::Struct* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  delete config_;
+  if (config != NULL && config->GetArena() != NULL) {
+    ::google::protobuf::Struct* new_config = new ::google::protobuf::Struct;
+    new_config->CopyFrom(*config);
+    config = new_config;
   }
+  config_ = config;
   if (config) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
     
   } else {
     
   }
-  config_ = config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Tracing.Http.config)
 }
 
@@ -2820,9 +2820,7 @@ inline bool Tracing::has_http() const {
   return this != internal_default_instance() && http_ != NULL;
 }
 inline void Tracing::clear_http() {
-  if (GetArenaNoVirtual() == NULL && http_ != NULL) {
-    delete http_;
-  }
+  if (GetArenaNoVirtual() == NULL && http_ != NULL) delete http_;
   http_ = NULL;
 }
 inline const ::envoy::api::v2::Tracing_Http& Tracing::http() const {
@@ -2830,13 +2828,6 @@ inline const ::envoy::api::v2::Tracing_Http& Tracing::http() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Tracing.http)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Tracing_Http*>(
       &::envoy::api::v2::_Tracing_Http_default_instance_);
-}
-inline ::envoy::api::v2::Tracing_Http* Tracing::release_http() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Tracing.http)
-  
-  ::envoy::api::v2::Tracing_Http* temp = http_;
-  http_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Tracing_Http* Tracing::mutable_http() {
   
@@ -2846,22 +2837,21 @@ inline ::envoy::api::v2::Tracing_Http* Tracing::mutable_http() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Tracing.http)
   return http_;
 }
+inline ::envoy::api::v2::Tracing_Http* Tracing::release_http() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Tracing.http)
+  
+  ::envoy::api::v2::Tracing_Http* temp = http_;
+  http_ = NULL;
+  return temp;
+}
 inline void Tracing::set_allocated_http(::envoy::api::v2::Tracing_Http* http) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete http_;
-  }
+  delete http_;
+  http_ = http;
   if (http) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      http = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, http, submessage_arena);
-    }
     
   } else {
     
   }
-  http_ = http;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Tracing.http)
 }
 
@@ -2979,18 +2969,15 @@ inline void Admin::set_allocated_profile_path(::std::string* profile_path) {
 inline bool Admin::has_address() const {
   return this != internal_default_instance() && address_ != NULL;
 }
+inline void Admin::clear_address() {
+  if (GetArenaNoVirtual() == NULL && address_ != NULL) delete address_;
+  address_ = NULL;
+}
 inline const ::envoy::api::v2::Address& Admin::address() const {
   const ::envoy::api::v2::Address* p = address_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Admin.address)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Address*>(
       &::envoy::api::v2::_Address_default_instance_);
-}
-inline ::envoy::api::v2::Address* Admin::release_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Admin.address)
-  
-  ::envoy::api::v2::Address* temp = address_;
-  address_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Address* Admin::mutable_address() {
   
@@ -3000,22 +2987,21 @@ inline ::envoy::api::v2::Address* Admin::mutable_address() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Admin.address)
   return address_;
 }
+inline ::envoy::api::v2::Address* Admin::release_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Admin.address)
+  
+  ::envoy::api::v2::Address* temp = address_;
+  address_ = NULL;
+  return temp;
+}
 inline void Admin::set_allocated_address(::envoy::api::v2::Address* address) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(address_);
-  }
+  delete address_;
+  address_ = address;
   if (address) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      address = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, address, submessage_arena);
-    }
     
   } else {
     
   }
-  address_ = address;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Admin.address)
 }
 
@@ -3138,9 +3124,7 @@ inline bool ClusterManager::has_outlier_detection() const {
   return this != internal_default_instance() && outlier_detection_ != NULL;
 }
 inline void ClusterManager::clear_outlier_detection() {
-  if (GetArenaNoVirtual() == NULL && outlier_detection_ != NULL) {
-    delete outlier_detection_;
-  }
+  if (GetArenaNoVirtual() == NULL && outlier_detection_ != NULL) delete outlier_detection_;
   outlier_detection_ = NULL;
 }
 inline const ::envoy::api::v2::ClusterManager_OutlierDetection& ClusterManager::outlier_detection() const {
@@ -3148,13 +3132,6 @@ inline const ::envoy::api::v2::ClusterManager_OutlierDetection& ClusterManager::
   // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterManager.outlier_detection)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ClusterManager_OutlierDetection*>(
       &::envoy::api::v2::_ClusterManager_OutlierDetection_default_instance_);
-}
-inline ::envoy::api::v2::ClusterManager_OutlierDetection* ClusterManager::release_outlier_detection() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.outlier_detection)
-  
-  ::envoy::api::v2::ClusterManager_OutlierDetection* temp = outlier_detection_;
-  outlier_detection_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ClusterManager_OutlierDetection* ClusterManager::mutable_outlier_detection() {
   
@@ -3164,22 +3141,21 @@ inline ::envoy::api::v2::ClusterManager_OutlierDetection* ClusterManager::mutabl
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterManager.outlier_detection)
   return outlier_detection_;
 }
+inline ::envoy::api::v2::ClusterManager_OutlierDetection* ClusterManager::release_outlier_detection() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.outlier_detection)
+  
+  ::envoy::api::v2::ClusterManager_OutlierDetection* temp = outlier_detection_;
+  outlier_detection_ = NULL;
+  return temp;
+}
 inline void ClusterManager::set_allocated_outlier_detection(::envoy::api::v2::ClusterManager_OutlierDetection* outlier_detection) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete outlier_detection_;
-  }
+  delete outlier_detection_;
+  outlier_detection_ = outlier_detection;
   if (outlier_detection) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      outlier_detection = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, outlier_detection, submessage_arena);
-    }
     
   } else {
     
   }
-  outlier_detection_ = outlier_detection;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.ClusterManager.outlier_detection)
 }
 
@@ -3187,18 +3163,15 @@ inline void ClusterManager::set_allocated_outlier_detection(::envoy::api::v2::Cl
 inline bool ClusterManager::has_upstream_bind_config() const {
   return this != internal_default_instance() && upstream_bind_config_ != NULL;
 }
+inline void ClusterManager::clear_upstream_bind_config() {
+  if (GetArenaNoVirtual() == NULL && upstream_bind_config_ != NULL) delete upstream_bind_config_;
+  upstream_bind_config_ = NULL;
+}
 inline const ::envoy::api::v2::BindConfig& ClusterManager::upstream_bind_config() const {
   const ::envoy::api::v2::BindConfig* p = upstream_bind_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterManager.upstream_bind_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::BindConfig*>(
       &::envoy::api::v2::_BindConfig_default_instance_);
-}
-inline ::envoy::api::v2::BindConfig* ClusterManager::release_upstream_bind_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.upstream_bind_config)
-  
-  ::envoy::api::v2::BindConfig* temp = upstream_bind_config_;
-  upstream_bind_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::BindConfig* ClusterManager::mutable_upstream_bind_config() {
   
@@ -3208,22 +3181,21 @@ inline ::envoy::api::v2::BindConfig* ClusterManager::mutable_upstream_bind_confi
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterManager.upstream_bind_config)
   return upstream_bind_config_;
 }
+inline ::envoy::api::v2::BindConfig* ClusterManager::release_upstream_bind_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.upstream_bind_config)
+  
+  ::envoy::api::v2::BindConfig* temp = upstream_bind_config_;
+  upstream_bind_config_ = NULL;
+  return temp;
+}
 inline void ClusterManager::set_allocated_upstream_bind_config(::envoy::api::v2::BindConfig* upstream_bind_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(upstream_bind_config_);
-  }
+  delete upstream_bind_config_;
+  upstream_bind_config_ = upstream_bind_config;
   if (upstream_bind_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      upstream_bind_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, upstream_bind_config, submessage_arena);
-    }
     
   } else {
     
   }
-  upstream_bind_config_ = upstream_bind_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.ClusterManager.upstream_bind_config)
 }
 
@@ -3231,18 +3203,15 @@ inline void ClusterManager::set_allocated_upstream_bind_config(::envoy::api::v2:
 inline bool ClusterManager::has_load_stats_config() const {
   return this != internal_default_instance() && load_stats_config_ != NULL;
 }
+inline void ClusterManager::clear_load_stats_config() {
+  if (GetArenaNoVirtual() == NULL && load_stats_config_ != NULL) delete load_stats_config_;
+  load_stats_config_ = NULL;
+}
 inline const ::envoy::api::v2::ApiConfigSource& ClusterManager::load_stats_config() const {
   const ::envoy::api::v2::ApiConfigSource* p = load_stats_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.ClusterManager.load_stats_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ApiConfigSource*>(
       &::envoy::api::v2::_ApiConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ApiConfigSource* ClusterManager::release_load_stats_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.load_stats_config)
-  
-  ::envoy::api::v2::ApiConfigSource* temp = load_stats_config_;
-  load_stats_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ApiConfigSource* ClusterManager::mutable_load_stats_config() {
   
@@ -3252,22 +3221,21 @@ inline ::envoy::api::v2::ApiConfigSource* ClusterManager::mutable_load_stats_con
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.ClusterManager.load_stats_config)
   return load_stats_config_;
 }
+inline ::envoy::api::v2::ApiConfigSource* ClusterManager::release_load_stats_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.ClusterManager.load_stats_config)
+  
+  ::envoy::api::v2::ApiConfigSource* temp = load_stats_config_;
+  load_stats_config_ = NULL;
+  return temp;
+}
 inline void ClusterManager::set_allocated_load_stats_config(::envoy::api::v2::ApiConfigSource* load_stats_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(load_stats_config_);
-  }
+  delete load_stats_config_;
+  load_stats_config_ = load_stats_config;
   if (load_stats_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      load_stats_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, load_stats_config, submessage_arena);
-    }
     
   } else {
     
   }
-  load_stats_config_ = load_stats_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.ClusterManager.load_stats_config)
 }
 
@@ -3282,22 +3250,17 @@ inline bool StatsdSink::has_address() const {
 inline void StatsdSink::set_has_address() {
   _oneof_case_[0] = kAddress;
 }
-inline ::envoy::api::v2::Address* StatsdSink::release_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsdSink.address)
+inline void StatsdSink::clear_address() {
   if (has_address()) {
+    delete statsd_specifier_.address_;
     clear_has_statsd_specifier();
-      ::envoy::api::v2::Address* temp = statsd_specifier_.address_;
-    statsd_specifier_.address_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::envoy::api::v2::Address& StatsdSink::address() const {
+inline  const ::envoy::api::v2::Address& StatsdSink::address() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.StatsdSink.address)
   return has_address()
       ? *statsd_specifier_.address_
-      : *reinterpret_cast< ::envoy::api::v2::Address*>(&::envoy::api::v2::_Address_default_instance_);
+      : ::envoy::api::v2::Address::default_instance();
 }
 inline ::envoy::api::v2::Address* StatsdSink::mutable_address() {
   if (!has_address()) {
@@ -3307,6 +3270,25 @@ inline ::envoy::api::v2::Address* StatsdSink::mutable_address() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.StatsdSink.address)
   return statsd_specifier_.address_;
+}
+inline ::envoy::api::v2::Address* StatsdSink::release_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsdSink.address)
+  if (has_address()) {
+    clear_has_statsd_specifier();
+    ::envoy::api::v2::Address* temp = statsd_specifier_.address_;
+    statsd_specifier_.address_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void StatsdSink::set_allocated_address(::envoy::api::v2::Address* address) {
+  clear_statsd_specifier();
+  if (address) {
+    set_has_address();
+    statsd_specifier_.address_ = address;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.StatsdSink.address)
 }
 
 // string tcp_cluster_name = 2;
@@ -3474,18 +3456,15 @@ inline void StatsSink::set_allocated_name(::std::string* name) {
 inline bool StatsSink::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
+inline void StatsSink::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) delete config_;
+  config_ = NULL;
+}
 inline const ::google::protobuf::Struct& StatsSink::config() const {
   const ::google::protobuf::Struct* p = config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.StatsSink.config)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
       &::google::protobuf::_Struct_default_instance_);
-}
-inline ::google::protobuf::Struct* StatsSink::release_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsSink.config)
-  
-  ::google::protobuf::Struct* temp = config_;
-  config_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Struct* StatsSink::mutable_config() {
   
@@ -3495,23 +3474,26 @@ inline ::google::protobuf::Struct* StatsSink::mutable_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.StatsSink.config)
   return config_;
 }
+inline ::google::protobuf::Struct* StatsSink::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsSink.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
 inline void StatsSink::set_allocated_config(::google::protobuf::Struct* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  delete config_;
+  if (config != NULL && config->GetArena() != NULL) {
+    ::google::protobuf::Struct* new_config = new ::google::protobuf::Struct;
+    new_config->CopyFrom(*config);
+    config = new_config;
   }
+  config_ = config;
   if (config) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
     
   } else {
     
   }
-  config_ = config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.StatsSink.config)
 }
 
@@ -3663,18 +3645,15 @@ StatsConfig::stats_tags() const {
 inline bool StatsConfig::has_use_all_default_tags() const {
   return this != internal_default_instance() && use_all_default_tags_ != NULL;
 }
+inline void StatsConfig::clear_use_all_default_tags() {
+  if (GetArenaNoVirtual() == NULL && use_all_default_tags_ != NULL) delete use_all_default_tags_;
+  use_all_default_tags_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& StatsConfig::use_all_default_tags() const {
   const ::google::protobuf::BoolValue* p = use_all_default_tags_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.StatsConfig.use_all_default_tags)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* StatsConfig::release_use_all_default_tags() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsConfig.use_all_default_tags)
-  
-  ::google::protobuf::BoolValue* temp = use_all_default_tags_;
-  use_all_default_tags_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* StatsConfig::mutable_use_all_default_tags() {
   
@@ -3684,23 +3663,26 @@ inline ::google::protobuf::BoolValue* StatsConfig::mutable_use_all_default_tags(
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.StatsConfig.use_all_default_tags)
   return use_all_default_tags_;
 }
+inline ::google::protobuf::BoolValue* StatsConfig::release_use_all_default_tags() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.StatsConfig.use_all_default_tags)
+  
+  ::google::protobuf::BoolValue* temp = use_all_default_tags_;
+  use_all_default_tags_ = NULL;
+  return temp;
+}
 inline void StatsConfig::set_allocated_use_all_default_tags(::google::protobuf::BoolValue* use_all_default_tags) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(use_all_default_tags_);
+  delete use_all_default_tags_;
+  if (use_all_default_tags != NULL && use_all_default_tags->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_use_all_default_tags = new ::google::protobuf::BoolValue;
+    new_use_all_default_tags->CopyFrom(*use_all_default_tags);
+    use_all_default_tags = new_use_all_default_tags;
   }
+  use_all_default_tags_ = use_all_default_tags;
   if (use_all_default_tags) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(use_all_default_tags)->GetArena();
-    if (message_arena != submessage_arena) {
-      use_all_default_tags = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, use_all_default_tags, submessage_arena);
-    }
     
   } else {
     
   }
-  use_all_default_tags_ = use_all_default_tags;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.StatsConfig.use_all_default_tags)
 }
 
@@ -3712,18 +3694,15 @@ inline void StatsConfig::set_allocated_use_all_default_tags(::google::protobuf::
 inline bool Watchdog::has_miss_timeout() const {
   return this != internal_default_instance() && miss_timeout_ != NULL;
 }
+inline void Watchdog::clear_miss_timeout() {
+  if (GetArenaNoVirtual() == NULL && miss_timeout_ != NULL) delete miss_timeout_;
+  miss_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& Watchdog::miss_timeout() const {
   const ::google::protobuf::Duration* p = miss_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Watchdog.miss_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* Watchdog::release_miss_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.miss_timeout)
-  
-  ::google::protobuf::Duration* temp = miss_timeout_;
-  miss_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* Watchdog::mutable_miss_timeout() {
   
@@ -3733,23 +3712,26 @@ inline ::google::protobuf::Duration* Watchdog::mutable_miss_timeout() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Watchdog.miss_timeout)
   return miss_timeout_;
 }
+inline ::google::protobuf::Duration* Watchdog::release_miss_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.miss_timeout)
+  
+  ::google::protobuf::Duration* temp = miss_timeout_;
+  miss_timeout_ = NULL;
+  return temp;
+}
 inline void Watchdog::set_allocated_miss_timeout(::google::protobuf::Duration* miss_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(miss_timeout_);
+  delete miss_timeout_;
+  if (miss_timeout != NULL && miss_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_miss_timeout = new ::google::protobuf::Duration;
+    new_miss_timeout->CopyFrom(*miss_timeout);
+    miss_timeout = new_miss_timeout;
   }
+  miss_timeout_ = miss_timeout;
   if (miss_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(miss_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      miss_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, miss_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  miss_timeout_ = miss_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Watchdog.miss_timeout)
 }
 
@@ -3757,18 +3739,15 @@ inline void Watchdog::set_allocated_miss_timeout(::google::protobuf::Duration* m
 inline bool Watchdog::has_megamiss_timeout() const {
   return this != internal_default_instance() && megamiss_timeout_ != NULL;
 }
+inline void Watchdog::clear_megamiss_timeout() {
+  if (GetArenaNoVirtual() == NULL && megamiss_timeout_ != NULL) delete megamiss_timeout_;
+  megamiss_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& Watchdog::megamiss_timeout() const {
   const ::google::protobuf::Duration* p = megamiss_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Watchdog.megamiss_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* Watchdog::release_megamiss_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.megamiss_timeout)
-  
-  ::google::protobuf::Duration* temp = megamiss_timeout_;
-  megamiss_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* Watchdog::mutable_megamiss_timeout() {
   
@@ -3778,23 +3757,26 @@ inline ::google::protobuf::Duration* Watchdog::mutable_megamiss_timeout() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Watchdog.megamiss_timeout)
   return megamiss_timeout_;
 }
+inline ::google::protobuf::Duration* Watchdog::release_megamiss_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.megamiss_timeout)
+  
+  ::google::protobuf::Duration* temp = megamiss_timeout_;
+  megamiss_timeout_ = NULL;
+  return temp;
+}
 inline void Watchdog::set_allocated_megamiss_timeout(::google::protobuf::Duration* megamiss_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(megamiss_timeout_);
+  delete megamiss_timeout_;
+  if (megamiss_timeout != NULL && megamiss_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_megamiss_timeout = new ::google::protobuf::Duration;
+    new_megamiss_timeout->CopyFrom(*megamiss_timeout);
+    megamiss_timeout = new_megamiss_timeout;
   }
+  megamiss_timeout_ = megamiss_timeout;
   if (megamiss_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(megamiss_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      megamiss_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, megamiss_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  megamiss_timeout_ = megamiss_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Watchdog.megamiss_timeout)
 }
 
@@ -3802,18 +3784,15 @@ inline void Watchdog::set_allocated_megamiss_timeout(::google::protobuf::Duratio
 inline bool Watchdog::has_kill_timeout() const {
   return this != internal_default_instance() && kill_timeout_ != NULL;
 }
+inline void Watchdog::clear_kill_timeout() {
+  if (GetArenaNoVirtual() == NULL && kill_timeout_ != NULL) delete kill_timeout_;
+  kill_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& Watchdog::kill_timeout() const {
   const ::google::protobuf::Duration* p = kill_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Watchdog.kill_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* Watchdog::release_kill_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.kill_timeout)
-  
-  ::google::protobuf::Duration* temp = kill_timeout_;
-  kill_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* Watchdog::mutable_kill_timeout() {
   
@@ -3823,23 +3802,26 @@ inline ::google::protobuf::Duration* Watchdog::mutable_kill_timeout() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Watchdog.kill_timeout)
   return kill_timeout_;
 }
+inline ::google::protobuf::Duration* Watchdog::release_kill_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.kill_timeout)
+  
+  ::google::protobuf::Duration* temp = kill_timeout_;
+  kill_timeout_ = NULL;
+  return temp;
+}
 inline void Watchdog::set_allocated_kill_timeout(::google::protobuf::Duration* kill_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(kill_timeout_);
+  delete kill_timeout_;
+  if (kill_timeout != NULL && kill_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_kill_timeout = new ::google::protobuf::Duration;
+    new_kill_timeout->CopyFrom(*kill_timeout);
+    kill_timeout = new_kill_timeout;
   }
+  kill_timeout_ = kill_timeout;
   if (kill_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(kill_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      kill_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, kill_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  kill_timeout_ = kill_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Watchdog.kill_timeout)
 }
 
@@ -3847,18 +3829,15 @@ inline void Watchdog::set_allocated_kill_timeout(::google::protobuf::Duration* k
 inline bool Watchdog::has_multikill_timeout() const {
   return this != internal_default_instance() && multikill_timeout_ != NULL;
 }
+inline void Watchdog::clear_multikill_timeout() {
+  if (GetArenaNoVirtual() == NULL && multikill_timeout_ != NULL) delete multikill_timeout_;
+  multikill_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& Watchdog::multikill_timeout() const {
   const ::google::protobuf::Duration* p = multikill_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Watchdog.multikill_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* Watchdog::release_multikill_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.multikill_timeout)
-  
-  ::google::protobuf::Duration* temp = multikill_timeout_;
-  multikill_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* Watchdog::mutable_multikill_timeout() {
   
@@ -3868,23 +3847,26 @@ inline ::google::protobuf::Duration* Watchdog::mutable_multikill_timeout() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Watchdog.multikill_timeout)
   return multikill_timeout_;
 }
+inline ::google::protobuf::Duration* Watchdog::release_multikill_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Watchdog.multikill_timeout)
+  
+  ::google::protobuf::Duration* temp = multikill_timeout_;
+  multikill_timeout_ = NULL;
+  return temp;
+}
 inline void Watchdog::set_allocated_multikill_timeout(::google::protobuf::Duration* multikill_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(multikill_timeout_);
+  delete multikill_timeout_;
+  if (multikill_timeout != NULL && multikill_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_multikill_timeout = new ::google::protobuf::Duration;
+    new_multikill_timeout->CopyFrom(*multikill_timeout);
+    multikill_timeout = new_multikill_timeout;
   }
+  multikill_timeout_ = multikill_timeout;
   if (multikill_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(multikill_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      multikill_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, multikill_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  multikill_timeout_ = multikill_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Watchdog.multikill_timeout)
 }
 
@@ -4116,6 +4098,9 @@ inline void RateLimitServiceConfig::set_allocated_cluster_name(::std::string* cl
 inline int Bootstrap_StaticResources::listeners_size() const {
   return listeners_.size();
 }
+inline void Bootstrap_StaticResources::clear_listeners() {
+  listeners_.Clear();
+}
 inline const ::envoy::api::v2::Listener& Bootstrap_StaticResources::listeners(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.StaticResources.listeners)
   return listeners_.Get(index);
@@ -4143,6 +4128,9 @@ Bootstrap_StaticResources::listeners() const {
 inline int Bootstrap_StaticResources::clusters_size() const {
   return clusters_.size();
 }
+inline void Bootstrap_StaticResources::clear_clusters() {
+  clusters_.Clear();
+}
 inline const ::envoy::api::v2::Cluster& Bootstrap_StaticResources::clusters(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.StaticResources.clusters)
   return clusters_.Get(index);
@@ -4169,6 +4157,9 @@ Bootstrap_StaticResources::clusters() const {
 // repeated .envoy.api.v2.Secret secrets = 3;
 inline int Bootstrap_StaticResources::secrets_size() const {
   return secrets_.size();
+}
+inline void Bootstrap_StaticResources::clear_secrets() {
+  secrets_.Clear();
 }
 inline const ::envoy::api::v2::Secret& Bootstrap_StaticResources::secrets(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.StaticResources.secrets)
@@ -4201,18 +4192,15 @@ Bootstrap_StaticResources::secrets() const {
 inline bool Bootstrap_DynamicResources_DeprecatedV1::has_sds_config() const {
   return this != internal_default_instance() && sds_config_ != NULL;
 }
+inline void Bootstrap_DynamicResources_DeprecatedV1::clear_sds_config() {
+  if (GetArenaNoVirtual() == NULL && sds_config_ != NULL) delete sds_config_;
+  sds_config_ = NULL;
+}
 inline const ::envoy::api::v2::ConfigSource& Bootstrap_DynamicResources_DeprecatedV1::sds_config() const {
   const ::envoy::api::v2::ConfigSource* p = sds_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1.sds_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ConfigSource*>(
       &::envoy::api::v2::_ConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources_DeprecatedV1::release_sds_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1.sds_config)
-  
-  ::envoy::api::v2::ConfigSource* temp = sds_config_;
-  sds_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources_DeprecatedV1::mutable_sds_config() {
   
@@ -4222,22 +4210,21 @@ inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources_DeprecatedV1::
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1.sds_config)
   return sds_config_;
 }
+inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources_DeprecatedV1::release_sds_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1.sds_config)
+  
+  ::envoy::api::v2::ConfigSource* temp = sds_config_;
+  sds_config_ = NULL;
+  return temp;
+}
 inline void Bootstrap_DynamicResources_DeprecatedV1::set_allocated_sds_config(::envoy::api::v2::ConfigSource* sds_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(sds_config_);
-  }
+  delete sds_config_;
+  sds_config_ = sds_config;
   if (sds_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      sds_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, sds_config, submessage_arena);
-    }
     
   } else {
     
   }
-  sds_config_ = sds_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.DynamicResources.DeprecatedV1.sds_config)
 }
 
@@ -4249,18 +4236,15 @@ inline void Bootstrap_DynamicResources_DeprecatedV1::set_allocated_sds_config(::
 inline bool Bootstrap_DynamicResources::has_lds_config() const {
   return this != internal_default_instance() && lds_config_ != NULL;
 }
+inline void Bootstrap_DynamicResources::clear_lds_config() {
+  if (GetArenaNoVirtual() == NULL && lds_config_ != NULL) delete lds_config_;
+  lds_config_ = NULL;
+}
 inline const ::envoy::api::v2::ConfigSource& Bootstrap_DynamicResources::lds_config() const {
   const ::envoy::api::v2::ConfigSource* p = lds_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.DynamicResources.lds_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ConfigSource*>(
       &::envoy::api::v2::_ConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::release_lds_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.lds_config)
-  
-  ::envoy::api::v2::ConfigSource* temp = lds_config_;
-  lds_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::mutable_lds_config() {
   
@@ -4270,22 +4254,21 @@ inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::mutable_lds_c
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.DynamicResources.lds_config)
   return lds_config_;
 }
+inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::release_lds_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.lds_config)
+  
+  ::envoy::api::v2::ConfigSource* temp = lds_config_;
+  lds_config_ = NULL;
+  return temp;
+}
 inline void Bootstrap_DynamicResources::set_allocated_lds_config(::envoy::api::v2::ConfigSource* lds_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(lds_config_);
-  }
+  delete lds_config_;
+  lds_config_ = lds_config;
   if (lds_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      lds_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, lds_config, submessage_arena);
-    }
     
   } else {
     
   }
-  lds_config_ = lds_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.DynamicResources.lds_config)
 }
 
@@ -4293,18 +4276,15 @@ inline void Bootstrap_DynamicResources::set_allocated_lds_config(::envoy::api::v
 inline bool Bootstrap_DynamicResources::has_cds_config() const {
   return this != internal_default_instance() && cds_config_ != NULL;
 }
+inline void Bootstrap_DynamicResources::clear_cds_config() {
+  if (GetArenaNoVirtual() == NULL && cds_config_ != NULL) delete cds_config_;
+  cds_config_ = NULL;
+}
 inline const ::envoy::api::v2::ConfigSource& Bootstrap_DynamicResources::cds_config() const {
   const ::envoy::api::v2::ConfigSource* p = cds_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.DynamicResources.cds_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ConfigSource*>(
       &::envoy::api::v2::_ConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::release_cds_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.cds_config)
-  
-  ::envoy::api::v2::ConfigSource* temp = cds_config_;
-  cds_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::mutable_cds_config() {
   
@@ -4314,22 +4294,21 @@ inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::mutable_cds_c
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.DynamicResources.cds_config)
   return cds_config_;
 }
+inline ::envoy::api::v2::ConfigSource* Bootstrap_DynamicResources::release_cds_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.cds_config)
+  
+  ::envoy::api::v2::ConfigSource* temp = cds_config_;
+  cds_config_ = NULL;
+  return temp;
+}
 inline void Bootstrap_DynamicResources::set_allocated_cds_config(::envoy::api::v2::ConfigSource* cds_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(cds_config_);
-  }
+  delete cds_config_;
+  cds_config_ = cds_config;
   if (cds_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      cds_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, cds_config, submessage_arena);
-    }
     
   } else {
     
   }
-  cds_config_ = cds_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.DynamicResources.cds_config)
 }
 
@@ -4337,18 +4316,15 @@ inline void Bootstrap_DynamicResources::set_allocated_cds_config(::envoy::api::v
 inline bool Bootstrap_DynamicResources::has_ads_config() const {
   return this != internal_default_instance() && ads_config_ != NULL;
 }
+inline void Bootstrap_DynamicResources::clear_ads_config() {
+  if (GetArenaNoVirtual() == NULL && ads_config_ != NULL) delete ads_config_;
+  ads_config_ = NULL;
+}
 inline const ::envoy::api::v2::ApiConfigSource& Bootstrap_DynamicResources::ads_config() const {
   const ::envoy::api::v2::ApiConfigSource* p = ads_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.DynamicResources.ads_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ApiConfigSource*>(
       &::envoy::api::v2::_ApiConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ApiConfigSource* Bootstrap_DynamicResources::release_ads_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.ads_config)
-  
-  ::envoy::api::v2::ApiConfigSource* temp = ads_config_;
-  ads_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ApiConfigSource* Bootstrap_DynamicResources::mutable_ads_config() {
   
@@ -4358,22 +4334,21 @@ inline ::envoy::api::v2::ApiConfigSource* Bootstrap_DynamicResources::mutable_ad
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.DynamicResources.ads_config)
   return ads_config_;
 }
+inline ::envoy::api::v2::ApiConfigSource* Bootstrap_DynamicResources::release_ads_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.ads_config)
+  
+  ::envoy::api::v2::ApiConfigSource* temp = ads_config_;
+  ads_config_ = NULL;
+  return temp;
+}
 inline void Bootstrap_DynamicResources::set_allocated_ads_config(::envoy::api::v2::ApiConfigSource* ads_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(ads_config_);
-  }
+  delete ads_config_;
+  ads_config_ = ads_config;
   if (ads_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      ads_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, ads_config, submessage_arena);
-    }
     
   } else {
     
   }
-  ads_config_ = ads_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.DynamicResources.ads_config)
 }
 
@@ -4382,9 +4357,7 @@ inline bool Bootstrap_DynamicResources::has_deprecated_v1() const {
   return this != internal_default_instance() && deprecated_v1_ != NULL;
 }
 inline void Bootstrap_DynamicResources::clear_deprecated_v1() {
-  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) {
-    delete deprecated_v1_;
-  }
+  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) delete deprecated_v1_;
   deprecated_v1_ = NULL;
 }
 inline const ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1& Bootstrap_DynamicResources::deprecated_v1() const {
@@ -4392,13 +4365,6 @@ inline const ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1& Bootstra
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.DynamicResources.deprecated_v1)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1*>(
       &::envoy::api::v2::_Bootstrap_DynamicResources_DeprecatedV1_default_instance_);
-}
-inline ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* Bootstrap_DynamicResources::release_deprecated_v1() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.deprecated_v1)
-  
-  ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* temp = deprecated_v1_;
-  deprecated_v1_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* Bootstrap_DynamicResources::mutable_deprecated_v1() {
   
@@ -4408,22 +4374,21 @@ inline ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* Bootstrap_Dyna
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.DynamicResources.deprecated_v1)
   return deprecated_v1_;
 }
+inline ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* Bootstrap_DynamicResources::release_deprecated_v1() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.DynamicResources.deprecated_v1)
+  
+  ::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* temp = deprecated_v1_;
+  deprecated_v1_ = NULL;
+  return temp;
+}
 inline void Bootstrap_DynamicResources::set_allocated_deprecated_v1(::envoy::api::v2::Bootstrap_DynamicResources_DeprecatedV1* deprecated_v1) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete deprecated_v1_;
-  }
+  delete deprecated_v1_;
+  deprecated_v1_ = deprecated_v1;
   if (deprecated_v1) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      deprecated_v1 = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, deprecated_v1, submessage_arena);
-    }
     
   } else {
     
   }
-  deprecated_v1_ = deprecated_v1;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.DynamicResources.deprecated_v1)
 }
 
@@ -4435,18 +4400,15 @@ inline void Bootstrap_DynamicResources::set_allocated_deprecated_v1(::envoy::api
 inline bool Bootstrap::has_node() const {
   return this != internal_default_instance() && node_ != NULL;
 }
+inline void Bootstrap::clear_node() {
+  if (GetArenaNoVirtual() == NULL && node_ != NULL) delete node_;
+  node_ = NULL;
+}
 inline const ::envoy::api::v2::Node& Bootstrap::node() const {
   const ::envoy::api::v2::Node* p = node_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.node)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Node*>(
       &::envoy::api::v2::_Node_default_instance_);
-}
-inline ::envoy::api::v2::Node* Bootstrap::release_node() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.node)
-  
-  ::envoy::api::v2::Node* temp = node_;
-  node_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Node* Bootstrap::mutable_node() {
   
@@ -4456,22 +4418,21 @@ inline ::envoy::api::v2::Node* Bootstrap::mutable_node() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.node)
   return node_;
 }
+inline ::envoy::api::v2::Node* Bootstrap::release_node() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.node)
+  
+  ::envoy::api::v2::Node* temp = node_;
+  node_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_node(::envoy::api::v2::Node* node) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(node_);
-  }
+  delete node_;
+  node_ = node;
   if (node) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      node = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, node, submessage_arena);
-    }
     
   } else {
     
   }
-  node_ = node;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.node)
 }
 
@@ -4480,9 +4441,7 @@ inline bool Bootstrap::has_static_resources() const {
   return this != internal_default_instance() && static_resources_ != NULL;
 }
 inline void Bootstrap::clear_static_resources() {
-  if (GetArenaNoVirtual() == NULL && static_resources_ != NULL) {
-    delete static_resources_;
-  }
+  if (GetArenaNoVirtual() == NULL && static_resources_ != NULL) delete static_resources_;
   static_resources_ = NULL;
 }
 inline const ::envoy::api::v2::Bootstrap_StaticResources& Bootstrap::static_resources() const {
@@ -4490,13 +4449,6 @@ inline const ::envoy::api::v2::Bootstrap_StaticResources& Bootstrap::static_reso
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.static_resources)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Bootstrap_StaticResources*>(
       &::envoy::api::v2::_Bootstrap_StaticResources_default_instance_);
-}
-inline ::envoy::api::v2::Bootstrap_StaticResources* Bootstrap::release_static_resources() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.static_resources)
-  
-  ::envoy::api::v2::Bootstrap_StaticResources* temp = static_resources_;
-  static_resources_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Bootstrap_StaticResources* Bootstrap::mutable_static_resources() {
   
@@ -4506,22 +4458,21 @@ inline ::envoy::api::v2::Bootstrap_StaticResources* Bootstrap::mutable_static_re
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.static_resources)
   return static_resources_;
 }
+inline ::envoy::api::v2::Bootstrap_StaticResources* Bootstrap::release_static_resources() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.static_resources)
+  
+  ::envoy::api::v2::Bootstrap_StaticResources* temp = static_resources_;
+  static_resources_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_static_resources(::envoy::api::v2::Bootstrap_StaticResources* static_resources) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete static_resources_;
-  }
+  delete static_resources_;
+  static_resources_ = static_resources;
   if (static_resources) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      static_resources = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, static_resources, submessage_arena);
-    }
     
   } else {
     
   }
-  static_resources_ = static_resources;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.static_resources)
 }
 
@@ -4530,9 +4481,7 @@ inline bool Bootstrap::has_dynamic_resources() const {
   return this != internal_default_instance() && dynamic_resources_ != NULL;
 }
 inline void Bootstrap::clear_dynamic_resources() {
-  if (GetArenaNoVirtual() == NULL && dynamic_resources_ != NULL) {
-    delete dynamic_resources_;
-  }
+  if (GetArenaNoVirtual() == NULL && dynamic_resources_ != NULL) delete dynamic_resources_;
   dynamic_resources_ = NULL;
 }
 inline const ::envoy::api::v2::Bootstrap_DynamicResources& Bootstrap::dynamic_resources() const {
@@ -4540,13 +4489,6 @@ inline const ::envoy::api::v2::Bootstrap_DynamicResources& Bootstrap::dynamic_re
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.dynamic_resources)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Bootstrap_DynamicResources*>(
       &::envoy::api::v2::_Bootstrap_DynamicResources_default_instance_);
-}
-inline ::envoy::api::v2::Bootstrap_DynamicResources* Bootstrap::release_dynamic_resources() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.dynamic_resources)
-  
-  ::envoy::api::v2::Bootstrap_DynamicResources* temp = dynamic_resources_;
-  dynamic_resources_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Bootstrap_DynamicResources* Bootstrap::mutable_dynamic_resources() {
   
@@ -4556,22 +4498,21 @@ inline ::envoy::api::v2::Bootstrap_DynamicResources* Bootstrap::mutable_dynamic_
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.dynamic_resources)
   return dynamic_resources_;
 }
+inline ::envoy::api::v2::Bootstrap_DynamicResources* Bootstrap::release_dynamic_resources() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.dynamic_resources)
+  
+  ::envoy::api::v2::Bootstrap_DynamicResources* temp = dynamic_resources_;
+  dynamic_resources_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_dynamic_resources(::envoy::api::v2::Bootstrap_DynamicResources* dynamic_resources) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete dynamic_resources_;
-  }
+  delete dynamic_resources_;
+  dynamic_resources_ = dynamic_resources;
   if (dynamic_resources) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      dynamic_resources = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, dynamic_resources, submessage_arena);
-    }
     
   } else {
     
   }
-  dynamic_resources_ = dynamic_resources;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.dynamic_resources)
 }
 
@@ -4580,9 +4521,7 @@ inline bool Bootstrap::has_cluster_manager() const {
   return this != internal_default_instance() && cluster_manager_ != NULL;
 }
 inline void Bootstrap::clear_cluster_manager() {
-  if (GetArenaNoVirtual() == NULL && cluster_manager_ != NULL) {
-    delete cluster_manager_;
-  }
+  if (GetArenaNoVirtual() == NULL && cluster_manager_ != NULL) delete cluster_manager_;
   cluster_manager_ = NULL;
 }
 inline const ::envoy::api::v2::ClusterManager& Bootstrap::cluster_manager() const {
@@ -4590,13 +4529,6 @@ inline const ::envoy::api::v2::ClusterManager& Bootstrap::cluster_manager() cons
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.cluster_manager)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ClusterManager*>(
       &::envoy::api::v2::_ClusterManager_default_instance_);
-}
-inline ::envoy::api::v2::ClusterManager* Bootstrap::release_cluster_manager() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.cluster_manager)
-  
-  ::envoy::api::v2::ClusterManager* temp = cluster_manager_;
-  cluster_manager_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ClusterManager* Bootstrap::mutable_cluster_manager() {
   
@@ -4606,22 +4538,21 @@ inline ::envoy::api::v2::ClusterManager* Bootstrap::mutable_cluster_manager() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.cluster_manager)
   return cluster_manager_;
 }
+inline ::envoy::api::v2::ClusterManager* Bootstrap::release_cluster_manager() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.cluster_manager)
+  
+  ::envoy::api::v2::ClusterManager* temp = cluster_manager_;
+  cluster_manager_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_cluster_manager(::envoy::api::v2::ClusterManager* cluster_manager) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete cluster_manager_;
-  }
+  delete cluster_manager_;
+  cluster_manager_ = cluster_manager;
   if (cluster_manager) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      cluster_manager = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, cluster_manager, submessage_arena);
-    }
     
   } else {
     
   }
-  cluster_manager_ = cluster_manager;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.cluster_manager)
 }
 
@@ -4713,9 +4644,7 @@ inline bool Bootstrap::has_stats_config() const {
   return this != internal_default_instance() && stats_config_ != NULL;
 }
 inline void Bootstrap::clear_stats_config() {
-  if (GetArenaNoVirtual() == NULL && stats_config_ != NULL) {
-    delete stats_config_;
-  }
+  if (GetArenaNoVirtual() == NULL && stats_config_ != NULL) delete stats_config_;
   stats_config_ = NULL;
 }
 inline const ::envoy::api::v2::StatsConfig& Bootstrap::stats_config() const {
@@ -4723,13 +4652,6 @@ inline const ::envoy::api::v2::StatsConfig& Bootstrap::stats_config() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.stats_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::StatsConfig*>(
       &::envoy::api::v2::_StatsConfig_default_instance_);
-}
-inline ::envoy::api::v2::StatsConfig* Bootstrap::release_stats_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.stats_config)
-  
-  ::envoy::api::v2::StatsConfig* temp = stats_config_;
-  stats_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::StatsConfig* Bootstrap::mutable_stats_config() {
   
@@ -4739,22 +4661,21 @@ inline ::envoy::api::v2::StatsConfig* Bootstrap::mutable_stats_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.stats_config)
   return stats_config_;
 }
+inline ::envoy::api::v2::StatsConfig* Bootstrap::release_stats_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.stats_config)
+  
+  ::envoy::api::v2::StatsConfig* temp = stats_config_;
+  stats_config_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_stats_config(::envoy::api::v2::StatsConfig* stats_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete stats_config_;
-  }
+  delete stats_config_;
+  stats_config_ = stats_config;
   if (stats_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      stats_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, stats_config, submessage_arena);
-    }
     
   } else {
     
   }
-  stats_config_ = stats_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.stats_config)
 }
 
@@ -4762,18 +4683,15 @@ inline void Bootstrap::set_allocated_stats_config(::envoy::api::v2::StatsConfig*
 inline bool Bootstrap::has_stats_flush_interval() const {
   return this != internal_default_instance() && stats_flush_interval_ != NULL;
 }
+inline void Bootstrap::clear_stats_flush_interval() {
+  if (GetArenaNoVirtual() == NULL && stats_flush_interval_ != NULL) delete stats_flush_interval_;
+  stats_flush_interval_ = NULL;
+}
 inline const ::google::protobuf::Duration& Bootstrap::stats_flush_interval() const {
   const ::google::protobuf::Duration* p = stats_flush_interval_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.stats_flush_interval)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* Bootstrap::release_stats_flush_interval() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.stats_flush_interval)
-  
-  ::google::protobuf::Duration* temp = stats_flush_interval_;
-  stats_flush_interval_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* Bootstrap::mutable_stats_flush_interval() {
   
@@ -4783,23 +4701,26 @@ inline ::google::protobuf::Duration* Bootstrap::mutable_stats_flush_interval() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.stats_flush_interval)
   return stats_flush_interval_;
 }
+inline ::google::protobuf::Duration* Bootstrap::release_stats_flush_interval() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.stats_flush_interval)
+  
+  ::google::protobuf::Duration* temp = stats_flush_interval_;
+  stats_flush_interval_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_stats_flush_interval(::google::protobuf::Duration* stats_flush_interval) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(stats_flush_interval_);
+  delete stats_flush_interval_;
+  if (stats_flush_interval != NULL && stats_flush_interval->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_stats_flush_interval = new ::google::protobuf::Duration;
+    new_stats_flush_interval->CopyFrom(*stats_flush_interval);
+    stats_flush_interval = new_stats_flush_interval;
   }
+  stats_flush_interval_ = stats_flush_interval;
   if (stats_flush_interval) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(stats_flush_interval)->GetArena();
-    if (message_arena != submessage_arena) {
-      stats_flush_interval = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, stats_flush_interval, submessage_arena);
-    }
     
   } else {
     
   }
-  stats_flush_interval_ = stats_flush_interval;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.stats_flush_interval)
 }
 
@@ -4808,9 +4729,7 @@ inline bool Bootstrap::has_watchdog() const {
   return this != internal_default_instance() && watchdog_ != NULL;
 }
 inline void Bootstrap::clear_watchdog() {
-  if (GetArenaNoVirtual() == NULL && watchdog_ != NULL) {
-    delete watchdog_;
-  }
+  if (GetArenaNoVirtual() == NULL && watchdog_ != NULL) delete watchdog_;
   watchdog_ = NULL;
 }
 inline const ::envoy::api::v2::Watchdog& Bootstrap::watchdog() const {
@@ -4818,13 +4737,6 @@ inline const ::envoy::api::v2::Watchdog& Bootstrap::watchdog() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.watchdog)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Watchdog*>(
       &::envoy::api::v2::_Watchdog_default_instance_);
-}
-inline ::envoy::api::v2::Watchdog* Bootstrap::release_watchdog() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.watchdog)
-  
-  ::envoy::api::v2::Watchdog* temp = watchdog_;
-  watchdog_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Watchdog* Bootstrap::mutable_watchdog() {
   
@@ -4834,22 +4746,21 @@ inline ::envoy::api::v2::Watchdog* Bootstrap::mutable_watchdog() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.watchdog)
   return watchdog_;
 }
+inline ::envoy::api::v2::Watchdog* Bootstrap::release_watchdog() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.watchdog)
+  
+  ::envoy::api::v2::Watchdog* temp = watchdog_;
+  watchdog_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_watchdog(::envoy::api::v2::Watchdog* watchdog) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete watchdog_;
-  }
+  delete watchdog_;
+  watchdog_ = watchdog;
   if (watchdog) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      watchdog = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, watchdog, submessage_arena);
-    }
     
   } else {
     
   }
-  watchdog_ = watchdog;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.watchdog)
 }
 
@@ -4858,9 +4769,7 @@ inline bool Bootstrap::has_tracing() const {
   return this != internal_default_instance() && tracing_ != NULL;
 }
 inline void Bootstrap::clear_tracing() {
-  if (GetArenaNoVirtual() == NULL && tracing_ != NULL) {
-    delete tracing_;
-  }
+  if (GetArenaNoVirtual() == NULL && tracing_ != NULL) delete tracing_;
   tracing_ = NULL;
 }
 inline const ::envoy::api::v2::Tracing& Bootstrap::tracing() const {
@@ -4868,13 +4777,6 @@ inline const ::envoy::api::v2::Tracing& Bootstrap::tracing() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.tracing)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Tracing*>(
       &::envoy::api::v2::_Tracing_default_instance_);
-}
-inline ::envoy::api::v2::Tracing* Bootstrap::release_tracing() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.tracing)
-  
-  ::envoy::api::v2::Tracing* temp = tracing_;
-  tracing_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Tracing* Bootstrap::mutable_tracing() {
   
@@ -4884,22 +4786,21 @@ inline ::envoy::api::v2::Tracing* Bootstrap::mutable_tracing() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.tracing)
   return tracing_;
 }
+inline ::envoy::api::v2::Tracing* Bootstrap::release_tracing() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.tracing)
+  
+  ::envoy::api::v2::Tracing* temp = tracing_;
+  tracing_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_tracing(::envoy::api::v2::Tracing* tracing) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete tracing_;
-  }
+  delete tracing_;
+  tracing_ = tracing;
   if (tracing) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      tracing = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tracing, submessage_arena);
-    }
     
   } else {
     
   }
-  tracing_ = tracing;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.tracing)
 }
 
@@ -4908,9 +4809,7 @@ inline bool Bootstrap::has_rate_limit_service() const {
   return this != internal_default_instance() && rate_limit_service_ != NULL;
 }
 inline void Bootstrap::clear_rate_limit_service() {
-  if (GetArenaNoVirtual() == NULL && rate_limit_service_ != NULL) {
-    delete rate_limit_service_;
-  }
+  if (GetArenaNoVirtual() == NULL && rate_limit_service_ != NULL) delete rate_limit_service_;
   rate_limit_service_ = NULL;
 }
 inline const ::envoy::api::v2::RateLimitServiceConfig& Bootstrap::rate_limit_service() const {
@@ -4918,13 +4817,6 @@ inline const ::envoy::api::v2::RateLimitServiceConfig& Bootstrap::rate_limit_ser
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.rate_limit_service)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RateLimitServiceConfig*>(
       &::envoy::api::v2::_RateLimitServiceConfig_default_instance_);
-}
-inline ::envoy::api::v2::RateLimitServiceConfig* Bootstrap::release_rate_limit_service() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.rate_limit_service)
-  
-  ::envoy::api::v2::RateLimitServiceConfig* temp = rate_limit_service_;
-  rate_limit_service_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RateLimitServiceConfig* Bootstrap::mutable_rate_limit_service() {
   
@@ -4934,22 +4826,21 @@ inline ::envoy::api::v2::RateLimitServiceConfig* Bootstrap::mutable_rate_limit_s
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.rate_limit_service)
   return rate_limit_service_;
 }
+inline ::envoy::api::v2::RateLimitServiceConfig* Bootstrap::release_rate_limit_service() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.rate_limit_service)
+  
+  ::envoy::api::v2::RateLimitServiceConfig* temp = rate_limit_service_;
+  rate_limit_service_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_rate_limit_service(::envoy::api::v2::RateLimitServiceConfig* rate_limit_service) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete rate_limit_service_;
-  }
+  delete rate_limit_service_;
+  rate_limit_service_ = rate_limit_service;
   if (rate_limit_service) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      rate_limit_service = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, rate_limit_service, submessage_arena);
-    }
     
   } else {
     
   }
-  rate_limit_service_ = rate_limit_service;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.rate_limit_service)
 }
 
@@ -4958,9 +4849,7 @@ inline bool Bootstrap::has_runtime() const {
   return this != internal_default_instance() && runtime_ != NULL;
 }
 inline void Bootstrap::clear_runtime() {
-  if (GetArenaNoVirtual() == NULL && runtime_ != NULL) {
-    delete runtime_;
-  }
+  if (GetArenaNoVirtual() == NULL && runtime_ != NULL) delete runtime_;
   runtime_ = NULL;
 }
 inline const ::envoy::api::v2::Runtime& Bootstrap::runtime() const {
@@ -4968,13 +4857,6 @@ inline const ::envoy::api::v2::Runtime& Bootstrap::runtime() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.runtime)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Runtime*>(
       &::envoy::api::v2::_Runtime_default_instance_);
-}
-inline ::envoy::api::v2::Runtime* Bootstrap::release_runtime() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.runtime)
-  
-  ::envoy::api::v2::Runtime* temp = runtime_;
-  runtime_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Runtime* Bootstrap::mutable_runtime() {
   
@@ -4984,22 +4866,21 @@ inline ::envoy::api::v2::Runtime* Bootstrap::mutable_runtime() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.runtime)
   return runtime_;
 }
+inline ::envoy::api::v2::Runtime* Bootstrap::release_runtime() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.runtime)
+  
+  ::envoy::api::v2::Runtime* temp = runtime_;
+  runtime_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_runtime(::envoy::api::v2::Runtime* runtime) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete runtime_;
-  }
+  delete runtime_;
+  runtime_ = runtime;
   if (runtime) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      runtime = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, runtime, submessage_arena);
-    }
     
   } else {
     
   }
-  runtime_ = runtime;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.runtime)
 }
 
@@ -5008,9 +4889,7 @@ inline bool Bootstrap::has_admin() const {
   return this != internal_default_instance() && admin_ != NULL;
 }
 inline void Bootstrap::clear_admin() {
-  if (GetArenaNoVirtual() == NULL && admin_ != NULL) {
-    delete admin_;
-  }
+  if (GetArenaNoVirtual() == NULL && admin_ != NULL) delete admin_;
   admin_ = NULL;
 }
 inline const ::envoy::api::v2::Admin& Bootstrap::admin() const {
@@ -5018,13 +4897,6 @@ inline const ::envoy::api::v2::Admin& Bootstrap::admin() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Bootstrap.admin)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Admin*>(
       &::envoy::api::v2::_Admin_default_instance_);
-}
-inline ::envoy::api::v2::Admin* Bootstrap::release_admin() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.admin)
-  
-  ::envoy::api::v2::Admin* temp = admin_;
-  admin_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Admin* Bootstrap::mutable_admin() {
   
@@ -5034,22 +4906,21 @@ inline ::envoy::api::v2::Admin* Bootstrap::mutable_admin() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Bootstrap.admin)
   return admin_;
 }
+inline ::envoy::api::v2::Admin* Bootstrap::release_admin() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Bootstrap.admin)
+  
+  ::envoy::api::v2::Admin* temp = admin_;
+  admin_ = NULL;
+  return temp;
+}
 inline void Bootstrap::set_allocated_admin(::envoy::api::v2::Admin* admin) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete admin_;
-  }
+  delete admin_;
+  admin_ = admin;
   if (admin) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      admin = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, admin, submessage_arena);
-    }
     
   } else {
     
   }
-  admin_ = admin;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Bootstrap.admin)
 }
 

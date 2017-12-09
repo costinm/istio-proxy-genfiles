@@ -268,6 +268,9 @@ inline void Status::set_allocated_message(::std::string* message) {
 inline int Status::details_size() const {
   return details_.size();
 }
+inline void Status::clear_details() {
+  details_.Clear();
+}
 inline const ::google::protobuf::Any& Status::details(int index) const {
   // @@protoc_insertion_point(field_get:google.rpc.Status.details)
   return details_.Get(index);

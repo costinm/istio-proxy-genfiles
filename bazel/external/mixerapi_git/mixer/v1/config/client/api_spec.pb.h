@@ -207,8 +207,8 @@ class HTTPAPISpec : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void clear_attributes();
   static const int kAttributesFieldNumber = 1;
   const ::istio::mixer::v1::Attributes& attributes() const;
-  ::istio::mixer::v1::Attributes* release_attributes();
   ::istio::mixer::v1::Attributes* mutable_attributes();
+  ::istio::mixer::v1::Attributes* release_attributes();
   void set_allocated_attributes(::istio::mixer::v1::Attributes* attributes);
 
   // @@protoc_insertion_point(class_scope:istio.mixer.v1.config.client.HTTPAPISpec)
@@ -331,8 +331,8 @@ class HTTPAPISpecPattern : public ::google::protobuf::Message /* @@protoc_insert
   void clear_attributes();
   static const int kAttributesFieldNumber = 1;
   const ::istio::mixer::v1::Attributes& attributes() const;
-  ::istio::mixer::v1::Attributes* release_attributes();
   ::istio::mixer::v1::Attributes* mutable_attributes();
+  ::istio::mixer::v1::Attributes* release_attributes();
   void set_allocated_attributes(::istio::mixer::v1::Attributes* attributes);
 
   // string uri_template = 3;
@@ -814,18 +814,15 @@ class HTTPAPISpecBinding : public ::google::protobuf::Message /* @@protoc_insert
 inline bool HTTPAPISpec::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
+inline void HTTPAPISpec::clear_attributes() {
+  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
+  attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& HTTPAPISpec::attributes() const {
   const ::istio::mixer::v1::Attributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HTTPAPISpec.attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* HTTPAPISpec::release_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HTTPAPISpec.attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = attributes_;
-  attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* HTTPAPISpec::mutable_attributes() {
   
@@ -835,22 +832,21 @@ inline ::istio::mixer::v1::Attributes* HTTPAPISpec::mutable_attributes() {
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.HTTPAPISpec.attributes)
   return attributes_;
 }
+inline ::istio::mixer::v1::Attributes* HTTPAPISpec::release_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HTTPAPISpec.attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = attributes_;
+  attributes_ = NULL;
+  return temp;
+}
 inline void HTTPAPISpec::set_allocated_attributes(::istio::mixer::v1::Attributes* attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(attributes_);
-  }
+  delete attributes_;
+  attributes_ = attributes;
   if (attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  attributes_ = attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.HTTPAPISpec.attributes)
 }
 
@@ -922,18 +918,15 @@ HTTPAPISpec::api_keys() const {
 inline bool HTTPAPISpecPattern::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
+inline void HTTPAPISpecPattern::clear_attributes() {
+  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
+  attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& HTTPAPISpecPattern::attributes() const {
   const ::istio::mixer::v1::Attributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HTTPAPISpecPattern.attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* HTTPAPISpecPattern::release_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HTTPAPISpecPattern.attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = attributes_;
-  attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* HTTPAPISpecPattern::mutable_attributes() {
   
@@ -943,22 +936,21 @@ inline ::istio::mixer::v1::Attributes* HTTPAPISpecPattern::mutable_attributes() 
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.HTTPAPISpecPattern.attributes)
   return attributes_;
 }
+inline ::istio::mixer::v1::Attributes* HTTPAPISpecPattern::release_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HTTPAPISpecPattern.attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = attributes_;
+  attributes_ = NULL;
+  return temp;
+}
 inline void HTTPAPISpecPattern::set_allocated_attributes(::istio::mixer::v1::Attributes* attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(attributes_);
-  }
+  delete attributes_;
+  attributes_ = attributes;
   if (attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  attributes_ = attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.HTTPAPISpecPattern.attributes)
 }
 
@@ -1629,6 +1621,9 @@ inline void HTTPAPISpecReference::set_allocated_namespace_(::std::string* namesp
 // repeated .istio.mixer.v1.config.client.IstioService services = 1;
 inline int HTTPAPISpecBinding::services_size() const {
   return services_.size();
+}
+inline void HTTPAPISpecBinding::clear_services() {
+  services_.Clear();
 }
 inline const ::istio::mixer::v1::config::client::IstioService& HTTPAPISpecBinding::services(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HTTPAPISpecBinding.services)

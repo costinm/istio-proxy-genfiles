@@ -234,8 +234,8 @@ class ServiceConfig : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_mixer_attributes();
   static const int kMixerAttributesFieldNumber = 3;
   const ::istio::mixer::v1::Attributes& mixer_attributes() const;
-  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   ::istio::mixer::v1::Attributes* mutable_mixer_attributes();
+  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   void set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes);
 
   // .istio.mixer.v1.config.client.EndUserAuthenticationPolicySpec end_user_authn_spec = 6;
@@ -243,8 +243,8 @@ class ServiceConfig : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_end_user_authn_spec();
   static const int kEndUserAuthnSpecFieldNumber = 6;
   const ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec& end_user_authn_spec() const;
-  ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* release_end_user_authn_spec();
   ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* mutable_end_user_authn_spec();
+  ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* release_end_user_authn_spec();
   void set_allocated_end_user_authn_spec(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* end_user_authn_spec);
 
   // bool disable_check_calls = 1;
@@ -553,8 +553,8 @@ class HttpClientConfig : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_transport();
   static const int kTransportFieldNumber = 1;
   const ::istio::mixer::v1::config::client::TransportConfig& transport() const;
-  ::istio::mixer::v1::config::client::TransportConfig* release_transport();
   ::istio::mixer::v1::config::client::TransportConfig* mutable_transport();
+  ::istio::mixer::v1::config::client::TransportConfig* release_transport();
   void set_allocated_transport(::istio::mixer::v1::config::client::TransportConfig* transport);
 
   // .istio.mixer.v1.Attributes mixer_attributes = 4;
@@ -562,8 +562,8 @@ class HttpClientConfig : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_mixer_attributes();
   static const int kMixerAttributesFieldNumber = 4;
   const ::istio::mixer::v1::Attributes& mixer_attributes() const;
-  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   ::istio::mixer::v1::Attributes* mutable_mixer_attributes();
+  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   void set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes);
 
   // .istio.mixer.v1.Attributes forward_attributes = 5;
@@ -571,8 +571,8 @@ class HttpClientConfig : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_forward_attributes();
   static const int kForwardAttributesFieldNumber = 5;
   const ::istio::mixer::v1::Attributes& forward_attributes() const;
-  ::istio::mixer::v1::Attributes* release_forward_attributes();
   ::istio::mixer::v1::Attributes* mutable_forward_attributes();
+  ::istio::mixer::v1::Attributes* release_forward_attributes();
   void set_allocated_forward_attributes(::istio::mixer::v1::Attributes* forward_attributes);
 
   // @@protoc_insertion_point(class_scope:istio.mixer.v1.config.client.HttpClientConfig)
@@ -682,8 +682,8 @@ class TcpClientConfig : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_transport();
   static const int kTransportFieldNumber = 1;
   const ::istio::mixer::v1::config::client::TransportConfig& transport() const;
-  ::istio::mixer::v1::config::client::TransportConfig* release_transport();
   ::istio::mixer::v1::config::client::TransportConfig* mutable_transport();
+  ::istio::mixer::v1::config::client::TransportConfig* release_transport();
   void set_allocated_transport(::istio::mixer::v1::config::client::TransportConfig* transport);
 
   // .istio.mixer.v1.Attributes mixer_attributes = 2;
@@ -691,8 +691,8 @@ class TcpClientConfig : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_mixer_attributes();
   static const int kMixerAttributesFieldNumber = 2;
   const ::istio::mixer::v1::Attributes& mixer_attributes() const;
-  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   ::istio::mixer::v1::Attributes* mutable_mixer_attributes();
+  ::istio::mixer::v1::Attributes* release_mixer_attributes();
   void set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes);
 
   // .istio.mixer.v1.config.client.QuotaSpec connection_quota_spec = 5;
@@ -700,8 +700,8 @@ class TcpClientConfig : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_connection_quota_spec();
   static const int kConnectionQuotaSpecFieldNumber = 5;
   const ::istio::mixer::v1::config::client::QuotaSpec& connection_quota_spec() const;
-  ::istio::mixer::v1::config::client::QuotaSpec* release_connection_quota_spec();
   ::istio::mixer::v1::config::client::QuotaSpec* mutable_connection_quota_spec();
+  ::istio::mixer::v1::config::client::QuotaSpec* release_connection_quota_spec();
   void set_allocated_connection_quota_spec(::istio::mixer::v1::config::client::QuotaSpec* connection_quota_spec);
 
   // bool disable_check_calls = 3;
@@ -772,18 +772,15 @@ inline void ServiceConfig::set_disable_report_calls(bool value) {
 inline bool ServiceConfig::has_mixer_attributes() const {
   return this != internal_default_instance() && mixer_attributes_ != NULL;
 }
+inline void ServiceConfig::clear_mixer_attributes() {
+  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) delete mixer_attributes_;
+  mixer_attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& ServiceConfig::mixer_attributes() const {
   const ::istio::mixer::v1::Attributes* p = mixer_attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.ServiceConfig.mixer_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* ServiceConfig::release_mixer_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.ServiceConfig.mixer_attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
-  mixer_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* ServiceConfig::mutable_mixer_attributes() {
   
@@ -793,28 +790,30 @@ inline ::istio::mixer::v1::Attributes* ServiceConfig::mutable_mixer_attributes()
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.ServiceConfig.mixer_attributes)
   return mixer_attributes_;
 }
+inline ::istio::mixer::v1::Attributes* ServiceConfig::release_mixer_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.ServiceConfig.mixer_attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
+  mixer_attributes_ = NULL;
+  return temp;
+}
 inline void ServiceConfig::set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(mixer_attributes_);
-  }
+  delete mixer_attributes_;
+  mixer_attributes_ = mixer_attributes;
   if (mixer_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      mixer_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, mixer_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  mixer_attributes_ = mixer_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.ServiceConfig.mixer_attributes)
 }
 
 // repeated .istio.mixer.v1.config.client.HTTPAPISpec http_api_spec = 4;
 inline int ServiceConfig::http_api_spec_size() const {
   return http_api_spec_.size();
+}
+inline void ServiceConfig::clear_http_api_spec() {
+  http_api_spec_.Clear();
 }
 inline const ::istio::mixer::v1::config::client::HTTPAPISpec& ServiceConfig::http_api_spec(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.ServiceConfig.http_api_spec)
@@ -843,6 +842,9 @@ ServiceConfig::http_api_spec() const {
 inline int ServiceConfig::quota_spec_size() const {
   return quota_spec_.size();
 }
+inline void ServiceConfig::clear_quota_spec() {
+  quota_spec_.Clear();
+}
 inline const ::istio::mixer::v1::config::client::QuotaSpec& ServiceConfig::quota_spec(int index) const {
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.ServiceConfig.quota_spec)
   return quota_spec_.Get(index);
@@ -870,18 +872,15 @@ ServiceConfig::quota_spec() const {
 inline bool ServiceConfig::has_end_user_authn_spec() const {
   return this != internal_default_instance() && end_user_authn_spec_ != NULL;
 }
+inline void ServiceConfig::clear_end_user_authn_spec() {
+  if (GetArenaNoVirtual() == NULL && end_user_authn_spec_ != NULL) delete end_user_authn_spec_;
+  end_user_authn_spec_ = NULL;
+}
 inline const ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec& ServiceConfig::end_user_authn_spec() const {
   const ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* p = end_user_authn_spec_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.ServiceConfig.end_user_authn_spec)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec*>(
       &::istio::mixer::v1::config::client::_EndUserAuthenticationPolicySpec_default_instance_);
-}
-inline ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* ServiceConfig::release_end_user_authn_spec() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.ServiceConfig.end_user_authn_spec)
-  
-  ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* temp = end_user_authn_spec_;
-  end_user_authn_spec_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* ServiceConfig::mutable_end_user_authn_spec() {
   
@@ -891,22 +890,21 @@ inline ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* Serv
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.ServiceConfig.end_user_authn_spec)
   return end_user_authn_spec_;
 }
+inline ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* ServiceConfig::release_end_user_authn_spec() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.ServiceConfig.end_user_authn_spec)
+  
+  ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* temp = end_user_authn_spec_;
+  end_user_authn_spec_ = NULL;
+  return temp;
+}
 inline void ServiceConfig::set_allocated_end_user_authn_spec(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec* end_user_authn_spec) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(end_user_authn_spec_);
-  }
+  delete end_user_authn_spec_;
+  end_user_authn_spec_ = end_user_authn_spec;
   if (end_user_authn_spec) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      end_user_authn_spec = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, end_user_authn_spec, submessage_arena);
-    }
     
   } else {
     
   }
-  end_user_authn_spec_ = end_user_authn_spec;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.ServiceConfig.end_user_authn_spec)
 }
 
@@ -981,9 +979,7 @@ inline bool HttpClientConfig::has_transport() const {
   return this != internal_default_instance() && transport_ != NULL;
 }
 inline void HttpClientConfig::clear_transport() {
-  if (GetArenaNoVirtual() == NULL && transport_ != NULL) {
-    delete transport_;
-  }
+  if (GetArenaNoVirtual() == NULL && transport_ != NULL) delete transport_;
   transport_ = NULL;
 }
 inline const ::istio::mixer::v1::config::client::TransportConfig& HttpClientConfig::transport() const {
@@ -991,13 +987,6 @@ inline const ::istio::mixer::v1::config::client::TransportConfig& HttpClientConf
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HttpClientConfig.transport)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::config::client::TransportConfig*>(
       &::istio::mixer::v1::config::client::_TransportConfig_default_instance_);
-}
-inline ::istio::mixer::v1::config::client::TransportConfig* HttpClientConfig::release_transport() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.transport)
-  
-  ::istio::mixer::v1::config::client::TransportConfig* temp = transport_;
-  transport_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::config::client::TransportConfig* HttpClientConfig::mutable_transport() {
   
@@ -1007,22 +996,21 @@ inline ::istio::mixer::v1::config::client::TransportConfig* HttpClientConfig::mu
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.HttpClientConfig.transport)
   return transport_;
 }
+inline ::istio::mixer::v1::config::client::TransportConfig* HttpClientConfig::release_transport() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.transport)
+  
+  ::istio::mixer::v1::config::client::TransportConfig* temp = transport_;
+  transport_ = NULL;
+  return temp;
+}
 inline void HttpClientConfig::set_allocated_transport(::istio::mixer::v1::config::client::TransportConfig* transport) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete transport_;
-  }
+  delete transport_;
+  transport_ = transport;
   if (transport) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      transport = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, transport, submessage_arena);
-    }
     
   } else {
     
   }
-  transport_ = transport;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.HttpClientConfig.transport)
 }
 
@@ -1101,18 +1089,15 @@ inline void HttpClientConfig::set_allocated_default_destination_service(::std::s
 inline bool HttpClientConfig::has_mixer_attributes() const {
   return this != internal_default_instance() && mixer_attributes_ != NULL;
 }
+inline void HttpClientConfig::clear_mixer_attributes() {
+  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) delete mixer_attributes_;
+  mixer_attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& HttpClientConfig::mixer_attributes() const {
   const ::istio::mixer::v1::Attributes* p = mixer_attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HttpClientConfig.mixer_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* HttpClientConfig::release_mixer_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.mixer_attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
-  mixer_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* HttpClientConfig::mutable_mixer_attributes() {
   
@@ -1122,22 +1107,21 @@ inline ::istio::mixer::v1::Attributes* HttpClientConfig::mutable_mixer_attribute
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.HttpClientConfig.mixer_attributes)
   return mixer_attributes_;
 }
+inline ::istio::mixer::v1::Attributes* HttpClientConfig::release_mixer_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.mixer_attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
+  mixer_attributes_ = NULL;
+  return temp;
+}
 inline void HttpClientConfig::set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(mixer_attributes_);
-  }
+  delete mixer_attributes_;
+  mixer_attributes_ = mixer_attributes;
   if (mixer_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      mixer_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, mixer_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  mixer_attributes_ = mixer_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.HttpClientConfig.mixer_attributes)
 }
 
@@ -1145,18 +1129,15 @@ inline void HttpClientConfig::set_allocated_mixer_attributes(::istio::mixer::v1:
 inline bool HttpClientConfig::has_forward_attributes() const {
   return this != internal_default_instance() && forward_attributes_ != NULL;
 }
+inline void HttpClientConfig::clear_forward_attributes() {
+  if (GetArenaNoVirtual() == NULL && forward_attributes_ != NULL) delete forward_attributes_;
+  forward_attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& HttpClientConfig::forward_attributes() const {
   const ::istio::mixer::v1::Attributes* p = forward_attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.HttpClientConfig.forward_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* HttpClientConfig::release_forward_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.forward_attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = forward_attributes_;
-  forward_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* HttpClientConfig::mutable_forward_attributes() {
   
@@ -1166,22 +1147,21 @@ inline ::istio::mixer::v1::Attributes* HttpClientConfig::mutable_forward_attribu
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.HttpClientConfig.forward_attributes)
   return forward_attributes_;
 }
+inline ::istio::mixer::v1::Attributes* HttpClientConfig::release_forward_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.HttpClientConfig.forward_attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = forward_attributes_;
+  forward_attributes_ = NULL;
+  return temp;
+}
 inline void HttpClientConfig::set_allocated_forward_attributes(::istio::mixer::v1::Attributes* forward_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(forward_attributes_);
-  }
+  delete forward_attributes_;
+  forward_attributes_ = forward_attributes;
   if (forward_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      forward_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, forward_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  forward_attributes_ = forward_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.HttpClientConfig.forward_attributes)
 }
 
@@ -1194,9 +1174,7 @@ inline bool TcpClientConfig::has_transport() const {
   return this != internal_default_instance() && transport_ != NULL;
 }
 inline void TcpClientConfig::clear_transport() {
-  if (GetArenaNoVirtual() == NULL && transport_ != NULL) {
-    delete transport_;
-  }
+  if (GetArenaNoVirtual() == NULL && transport_ != NULL) delete transport_;
   transport_ = NULL;
 }
 inline const ::istio::mixer::v1::config::client::TransportConfig& TcpClientConfig::transport() const {
@@ -1204,13 +1182,6 @@ inline const ::istio::mixer::v1::config::client::TransportConfig& TcpClientConfi
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.TcpClientConfig.transport)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::config::client::TransportConfig*>(
       &::istio::mixer::v1::config::client::_TransportConfig_default_instance_);
-}
-inline ::istio::mixer::v1::config::client::TransportConfig* TcpClientConfig::release_transport() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.transport)
-  
-  ::istio::mixer::v1::config::client::TransportConfig* temp = transport_;
-  transport_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::config::client::TransportConfig* TcpClientConfig::mutable_transport() {
   
@@ -1220,22 +1191,21 @@ inline ::istio::mixer::v1::config::client::TransportConfig* TcpClientConfig::mut
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.TcpClientConfig.transport)
   return transport_;
 }
+inline ::istio::mixer::v1::config::client::TransportConfig* TcpClientConfig::release_transport() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.transport)
+  
+  ::istio::mixer::v1::config::client::TransportConfig* temp = transport_;
+  transport_ = NULL;
+  return temp;
+}
 inline void TcpClientConfig::set_allocated_transport(::istio::mixer::v1::config::client::TransportConfig* transport) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete transport_;
-  }
+  delete transport_;
+  transport_ = transport;
   if (transport) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      transport = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, transport, submessage_arena);
-    }
     
   } else {
     
   }
-  transport_ = transport;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.TcpClientConfig.transport)
 }
 
@@ -1243,18 +1213,15 @@ inline void TcpClientConfig::set_allocated_transport(::istio::mixer::v1::config:
 inline bool TcpClientConfig::has_mixer_attributes() const {
   return this != internal_default_instance() && mixer_attributes_ != NULL;
 }
+inline void TcpClientConfig::clear_mixer_attributes() {
+  if (GetArenaNoVirtual() == NULL && mixer_attributes_ != NULL) delete mixer_attributes_;
+  mixer_attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::Attributes& TcpClientConfig::mixer_attributes() const {
   const ::istio::mixer::v1::Attributes* p = mixer_attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.TcpClientConfig.mixer_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::Attributes*>(
       &::istio::mixer::v1::_Attributes_default_instance_);
-}
-inline ::istio::mixer::v1::Attributes* TcpClientConfig::release_mixer_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.mixer_attributes)
-  
-  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
-  mixer_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::Attributes* TcpClientConfig::mutable_mixer_attributes() {
   
@@ -1264,22 +1231,21 @@ inline ::istio::mixer::v1::Attributes* TcpClientConfig::mutable_mixer_attributes
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.TcpClientConfig.mixer_attributes)
   return mixer_attributes_;
 }
+inline ::istio::mixer::v1::Attributes* TcpClientConfig::release_mixer_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.mixer_attributes)
+  
+  ::istio::mixer::v1::Attributes* temp = mixer_attributes_;
+  mixer_attributes_ = NULL;
+  return temp;
+}
 inline void TcpClientConfig::set_allocated_mixer_attributes(::istio::mixer::v1::Attributes* mixer_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(mixer_attributes_);
-  }
+  delete mixer_attributes_;
+  mixer_attributes_ = mixer_attributes;
   if (mixer_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      mixer_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, mixer_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  mixer_attributes_ = mixer_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.TcpClientConfig.mixer_attributes)
 }
 
@@ -1315,18 +1281,15 @@ inline void TcpClientConfig::set_disable_report_calls(bool value) {
 inline bool TcpClientConfig::has_connection_quota_spec() const {
   return this != internal_default_instance() && connection_quota_spec_ != NULL;
 }
+inline void TcpClientConfig::clear_connection_quota_spec() {
+  if (GetArenaNoVirtual() == NULL && connection_quota_spec_ != NULL) delete connection_quota_spec_;
+  connection_quota_spec_ = NULL;
+}
 inline const ::istio::mixer::v1::config::client::QuotaSpec& TcpClientConfig::connection_quota_spec() const {
   const ::istio::mixer::v1::config::client::QuotaSpec* p = connection_quota_spec_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.config.client.TcpClientConfig.connection_quota_spec)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::config::client::QuotaSpec*>(
       &::istio::mixer::v1::config::client::_QuotaSpec_default_instance_);
-}
-inline ::istio::mixer::v1::config::client::QuotaSpec* TcpClientConfig::release_connection_quota_spec() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.connection_quota_spec)
-  
-  ::istio::mixer::v1::config::client::QuotaSpec* temp = connection_quota_spec_;
-  connection_quota_spec_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::config::client::QuotaSpec* TcpClientConfig::mutable_connection_quota_spec() {
   
@@ -1336,22 +1299,21 @@ inline ::istio::mixer::v1::config::client::QuotaSpec* TcpClientConfig::mutable_c
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.config.client.TcpClientConfig.connection_quota_spec)
   return connection_quota_spec_;
 }
+inline ::istio::mixer::v1::config::client::QuotaSpec* TcpClientConfig::release_connection_quota_spec() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.config.client.TcpClientConfig.connection_quota_spec)
+  
+  ::istio::mixer::v1::config::client::QuotaSpec* temp = connection_quota_spec_;
+  connection_quota_spec_ = NULL;
+  return temp;
+}
 inline void TcpClientConfig::set_allocated_connection_quota_spec(::istio::mixer::v1::config::client::QuotaSpec* connection_quota_spec) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(connection_quota_spec_);
-  }
+  delete connection_quota_spec_;
+  connection_quota_spec_ = connection_quota_spec;
   if (connection_quota_spec) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      connection_quota_spec = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, connection_quota_spec, submessage_arena);
-    }
     
   } else {
     
   }
-  connection_quota_spec_ = connection_quota_spec;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.config.client.TcpClientConfig.connection_quota_spec)
 }
 

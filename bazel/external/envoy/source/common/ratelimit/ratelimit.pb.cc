@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace pb {
 namespace lyft {
@@ -59,11 +55,7 @@ namespace protobuf_source_2fcommon_2fratelimit_2fratelimit_2eproto {
 void InitDefaultsRateLimitRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_source_2fcommon_2fratelimit_2fratelimit_2eproto::InitDefaultsRateLimitDescriptor();
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimitRequest_default_instance_;
@@ -81,11 +73,7 @@ void InitDefaultsRateLimitRequest() {
 void InitDefaultsRateLimitDescriptor_EntryImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimitDescriptor_Entry_default_instance_;
     new (ptr) ::pb::lyft::ratelimit::RateLimitDescriptor_Entry();
@@ -102,11 +90,7 @@ void InitDefaultsRateLimitDescriptor_Entry() {
 void InitDefaultsRateLimitDescriptorImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_source_2fcommon_2fratelimit_2fratelimit_2eproto::InitDefaultsRateLimitDescriptor_Entry();
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimitDescriptor_default_instance_;
@@ -124,11 +108,7 @@ void InitDefaultsRateLimitDescriptor() {
 void InitDefaultsRateLimitImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimit_default_instance_;
     new (ptr) ::pb::lyft::ratelimit::RateLimit();
@@ -145,11 +125,7 @@ void InitDefaultsRateLimit() {
 void InitDefaultsRateLimitResponse_DescriptorStatusImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_source_2fcommon_2fratelimit_2fratelimit_2eproto::InitDefaultsRateLimit();
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimitResponse_DescriptorStatus_default_instance_;
@@ -167,11 +143,7 @@ void InitDefaultsRateLimitResponse_DescriptorStatus() {
 void InitDefaultsRateLimitResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_source_2fcommon_2fratelimit_2fratelimit_2eproto::InitDefaultsRateLimitResponse_DescriptorStatus();
   {
     void* ptr = &::pb::lyft::ratelimit::_RateLimitResponse_default_instance_;
@@ -477,7 +449,8 @@ bool RateLimitRequest::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_descriptors()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_descriptors()));
         } else {
           goto handle_unusual;
         }
@@ -556,7 +529,7 @@ void RateLimitRequest::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->descriptors_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->descriptors(static_cast<int>(i)), deterministic, target);
   }
 
@@ -583,7 +556,7 @@ size_t RateLimitRequest::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->descriptors(static_cast<int>(i)));
     }
   }
@@ -1064,7 +1037,8 @@ bool RateLimitDescriptor::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_entries()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_entries()));
         } else {
           goto handle_unusual;
         }
@@ -1122,7 +1096,7 @@ void RateLimitDescriptor::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->entries_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->entries(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1149,7 +1123,7 @@ size_t RateLimitDescriptor::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->entries(static_cast<int>(i)));
     }
   }
@@ -1623,7 +1597,7 @@ bool RateLimitResponse_DescriptorStatus::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_current_limit()));
         } else {
           goto handle_unusual;
@@ -1711,7 +1685,7 @@ void RateLimitResponse_DescriptorStatus::SerializeWithCachedSizes(
   // .pb.lyft.ratelimit.RateLimit current_limit = 2;
   if (this->has_current_limit()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->current_limit_, deterministic, target);
   }
 
@@ -1740,7 +1714,7 @@ size_t RateLimitResponse_DescriptorStatus::ByteSizeLong() const {
   // .pb.lyft.ratelimit.RateLimit current_limit = 2;
   if (this->has_current_limit()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->current_limit_);
   }
 
@@ -1937,7 +1911,8 @@ bool RateLimitResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_statuses()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_statuses()));
         } else {
           goto handle_unusual;
         }
@@ -2007,7 +1982,7 @@ void RateLimitResponse::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->statuses_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->statuses(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2034,7 +2009,7 @@ size_t RateLimitResponse::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->statuses(static_cast<int>(i)));
     }
   }

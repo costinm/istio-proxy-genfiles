@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -49,11 +45,7 @@ namespace protobuf_api_2fprotocol_2eproto {
 void InitDefaultsTcpProtocolOptionsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_TcpProtocolOptions_default_instance_;
     new (ptr) ::envoy::api::v2::TcpProtocolOptions();
@@ -70,11 +62,7 @@ void InitDefaultsTcpProtocolOptions() {
 void InitDefaultsHttp1ProtocolOptionsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   {
     void* ptr = &::envoy::api::v2::_Http1ProtocolOptions_default_instance_;
@@ -92,11 +80,7 @@ void InitDefaultsHttp1ProtocolOptions() {
 void InitDefaultsHttp2ProtocolOptionsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsUInt32Value();
   {
     void* ptr = &::envoy::api::v2::_Http2ProtocolOptions_default_instance_;
@@ -114,11 +98,7 @@ void InitDefaultsHttp2ProtocolOptions() {
 void InitDefaultsGrpcProtocolOptionsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fprotocol_2eproto::InitDefaultsHttp2ProtocolOptions();
   {
     void* ptr = &::envoy::api::v2::_GrpcProtocolOptions_default_instance_;
@@ -436,12 +416,6 @@ void Http1ProtocolOptions::InitAsDefaultInstance() {
   ::envoy::api::v2::_Http1ProtocolOptions_default_instance_._instance.get_mutable()->allow_absolute_url_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
 }
-void Http1ProtocolOptions::clear_allow_absolute_url() {
-  if (GetArenaNoVirtual() == NULL && allow_absolute_url_ != NULL) {
-    delete allow_absolute_url_;
-  }
-  allow_absolute_url_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Http1ProtocolOptions::kAllowAbsoluteUrlFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -531,7 +505,7 @@ bool Http1ProtocolOptions::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_allow_absolute_url()));
         } else {
           goto handle_unusual;
@@ -588,7 +562,7 @@ void Http1ProtocolOptions::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue allow_absolute_url = 1;
   if (this->has_allow_absolute_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->allow_absolute_url_, deterministic, target);
   }
 
@@ -612,7 +586,7 @@ size_t Http1ProtocolOptions::ByteSizeLong() const {
   // .google.protobuf.BoolValue allow_absolute_url = 1;
   if (this->has_allow_absolute_url()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->allow_absolute_url_);
   }
 
@@ -696,30 +670,6 @@ void Http2ProtocolOptions::InitAsDefaultInstance() {
       ::google::protobuf::UInt32Value::internal_default_instance());
   ::envoy::api::v2::_Http2ProtocolOptions_default_instance_._instance.get_mutable()->initial_connection_window_size_ = const_cast< ::google::protobuf::UInt32Value*>(
       ::google::protobuf::UInt32Value::internal_default_instance());
-}
-void Http2ProtocolOptions::clear_hpack_table_size() {
-  if (GetArenaNoVirtual() == NULL && hpack_table_size_ != NULL) {
-    delete hpack_table_size_;
-  }
-  hpack_table_size_ = NULL;
-}
-void Http2ProtocolOptions::clear_max_concurrent_streams() {
-  if (GetArenaNoVirtual() == NULL && max_concurrent_streams_ != NULL) {
-    delete max_concurrent_streams_;
-  }
-  max_concurrent_streams_ = NULL;
-}
-void Http2ProtocolOptions::clear_initial_stream_window_size() {
-  if (GetArenaNoVirtual() == NULL && initial_stream_window_size_ != NULL) {
-    delete initial_stream_window_size_;
-  }
-  initial_stream_window_size_ = NULL;
-}
-void Http2ProtocolOptions::clear_initial_connection_window_size() {
-  if (GetArenaNoVirtual() == NULL && initial_connection_window_size_ != NULL) {
-    delete initial_connection_window_size_;
-  }
-  initial_connection_window_size_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Http2ProtocolOptions::kHpackTableSizeFieldNumber;
@@ -845,7 +795,7 @@ bool Http2ProtocolOptions::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_hpack_table_size()));
         } else {
           goto handle_unusual;
@@ -857,7 +807,7 @@ bool Http2ProtocolOptions::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_max_concurrent_streams()));
         } else {
           goto handle_unusual;
@@ -869,7 +819,7 @@ bool Http2ProtocolOptions::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_initial_stream_window_size()));
         } else {
           goto handle_unusual;
@@ -881,7 +831,7 @@ bool Http2ProtocolOptions::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_initial_connection_window_size()));
         } else {
           goto handle_unusual;
@@ -956,28 +906,28 @@ void Http2ProtocolOptions::SerializeWithCachedSizes(
   // .google.protobuf.UInt32Value hpack_table_size = 1;
   if (this->has_hpack_table_size()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->hpack_table_size_, deterministic, target);
   }
 
   // .google.protobuf.UInt32Value max_concurrent_streams = 2;
   if (this->has_max_concurrent_streams()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->max_concurrent_streams_, deterministic, target);
   }
 
   // .google.protobuf.UInt32Value initial_stream_window_size = 3;
   if (this->has_initial_stream_window_size()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->initial_stream_window_size_, deterministic, target);
   }
 
   // .google.protobuf.UInt32Value initial_connection_window_size = 4;
   if (this->has_initial_connection_window_size()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->initial_connection_window_size_, deterministic, target);
   }
 
@@ -1001,28 +951,28 @@ size_t Http2ProtocolOptions::ByteSizeLong() const {
   // .google.protobuf.UInt32Value hpack_table_size = 1;
   if (this->has_hpack_table_size()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->hpack_table_size_);
   }
 
   // .google.protobuf.UInt32Value max_concurrent_streams = 2;
   if (this->has_max_concurrent_streams()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->max_concurrent_streams_);
   }
 
   // .google.protobuf.UInt32Value initial_stream_window_size = 3;
   if (this->has_initial_stream_window_size()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->initial_stream_window_size_);
   }
 
   // .google.protobuf.UInt32Value initial_connection_window_size = 4;
   if (this->has_initial_connection_window_size()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->initial_connection_window_size_);
   }
 
@@ -1202,7 +1152,7 @@ bool GrpcProtocolOptions::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_http2_protocol_options()));
         } else {
           goto handle_unusual;
@@ -1259,7 +1209,7 @@ void GrpcProtocolOptions::SerializeWithCachedSizes(
   // .envoy.api.v2.Http2ProtocolOptions http2_protocol_options = 1;
   if (this->has_http2_protocol_options()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->http2_protocol_options_, deterministic, target);
   }
 
@@ -1283,7 +1233,7 @@ size_t GrpcProtocolOptions::ByteSizeLong() const {
   // .envoy.api.v2.Http2ProtocolOptions http2_protocol_options = 1;
   if (this->has_http2_protocol_options()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->http2_protocol_options_);
   }
 

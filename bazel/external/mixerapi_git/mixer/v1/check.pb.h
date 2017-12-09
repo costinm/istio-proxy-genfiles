@@ -381,8 +381,8 @@ class CheckRequest : public ::google::protobuf::Message /* @@protoc_insertion_po
   void clear_attributes();
   static const int kAttributesFieldNumber = 1;
   const ::istio::mixer::v1::CompressedAttributes& attributes() const;
-  ::istio::mixer::v1::CompressedAttributes* release_attributes();
   ::istio::mixer::v1::CompressedAttributes* mutable_attributes();
+  ::istio::mixer::v1::CompressedAttributes* release_attributes();
   void set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes);
 
   // uint32 global_word_count = 2;
@@ -497,8 +497,8 @@ class CheckResponse_PreconditionResult : public ::google::protobuf::Message /* @
   void clear_status();
   static const int kStatusFieldNumber = 1;
   const ::google::rpc::Status& status() const;
-  ::google::rpc::Status* release_status();
   ::google::rpc::Status* mutable_status();
+  ::google::rpc::Status* release_status();
   void set_allocated_status(::google::rpc::Status* status);
 
   // .google.protobuf.Duration valid_duration = 2 [(.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];
@@ -506,8 +506,8 @@ class CheckResponse_PreconditionResult : public ::google::protobuf::Message /* @
   void clear_valid_duration();
   static const int kValidDurationFieldNumber = 2;
   const ::google::protobuf::Duration& valid_duration() const;
-  ::google::protobuf::Duration* release_valid_duration();
   ::google::protobuf::Duration* mutable_valid_duration();
+  ::google::protobuf::Duration* release_valid_duration();
   void set_allocated_valid_duration(::google::protobuf::Duration* valid_duration);
 
   // .istio.mixer.v1.CompressedAttributes attributes = 4 [(.gogoproto.nullable) = false];
@@ -515,8 +515,8 @@ class CheckResponse_PreconditionResult : public ::google::protobuf::Message /* @
   void clear_attributes();
   static const int kAttributesFieldNumber = 4;
   const ::istio::mixer::v1::CompressedAttributes& attributes() const;
-  ::istio::mixer::v1::CompressedAttributes* release_attributes();
   ::istio::mixer::v1::CompressedAttributes* mutable_attributes();
+  ::istio::mixer::v1::CompressedAttributes* release_attributes();
   void set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes);
 
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
@@ -524,8 +524,8 @@ class CheckResponse_PreconditionResult : public ::google::protobuf::Message /* @
   void clear_referenced_attributes();
   static const int kReferencedAttributesFieldNumber = 5;
   const ::istio::mixer::v1::ReferencedAttributes& referenced_attributes() const;
-  ::istio::mixer::v1::ReferencedAttributes* release_referenced_attributes();
   ::istio::mixer::v1::ReferencedAttributes* mutable_referenced_attributes();
+  ::istio::mixer::v1::ReferencedAttributes* release_referenced_attributes();
   void set_allocated_referenced_attributes(::istio::mixer::v1::ReferencedAttributes* referenced_attributes);
 
   // int32 valid_use_count = 3;
@@ -636,8 +636,8 @@ class CheckResponse_QuotaResult : public ::google::protobuf::Message /* @@protoc
   void clear_valid_duration();
   static const int kValidDurationFieldNumber = 1;
   const ::google::protobuf::Duration& valid_duration() const;
-  ::google::protobuf::Duration* release_valid_duration();
   ::google::protobuf::Duration* mutable_valid_duration();
+  ::google::protobuf::Duration* release_valid_duration();
   void set_allocated_valid_duration(::google::protobuf::Duration* valid_duration);
 
   // .istio.mixer.v1.ReferencedAttributes referenced_attributes = 5 [(.gogoproto.nullable) = false];
@@ -645,8 +645,8 @@ class CheckResponse_QuotaResult : public ::google::protobuf::Message /* @@protoc
   void clear_referenced_attributes();
   static const int kReferencedAttributesFieldNumber = 5;
   const ::istio::mixer::v1::ReferencedAttributes& referenced_attributes() const;
-  ::istio::mixer::v1::ReferencedAttributes* release_referenced_attributes();
   ::istio::mixer::v1::ReferencedAttributes* mutable_referenced_attributes();
+  ::istio::mixer::v1::ReferencedAttributes* release_referenced_attributes();
   void set_allocated_referenced_attributes(::istio::mixer::v1::ReferencedAttributes* referenced_attributes);
 
   // int64 granted_amount = 2;
@@ -788,8 +788,8 @@ class CheckResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_precondition();
   static const int kPreconditionFieldNumber = 2;
   const ::istio::mixer::v1::CheckResponse_PreconditionResult& precondition() const;
-  ::istio::mixer::v1::CheckResponse_PreconditionResult* release_precondition();
   ::istio::mixer::v1::CheckResponse_PreconditionResult* mutable_precondition();
+  ::istio::mixer::v1::CheckResponse_PreconditionResult* release_precondition();
   void set_allocated_precondition(::istio::mixer::v1::CheckResponse_PreconditionResult* precondition);
 
   // @@protoc_insertion_point(class_scope:istio.mixer.v1.CheckResponse)
@@ -1144,18 +1144,15 @@ inline void CheckRequest_QuotaParams::set_best_effort(bool value) {
 inline bool CheckRequest::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
+inline void CheckRequest::clear_attributes() {
+  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
+  attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::CompressedAttributes& CheckRequest::attributes() const {
   const ::istio::mixer::v1::CompressedAttributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckRequest.attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::CompressedAttributes*>(
       &::istio::mixer::v1::_CompressedAttributes_default_instance_);
-}
-inline ::istio::mixer::v1::CompressedAttributes* CheckRequest::release_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckRequest.attributes)
-  
-  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
-  attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::CompressedAttributes* CheckRequest::mutable_attributes() {
   
@@ -1165,22 +1162,21 @@ inline ::istio::mixer::v1::CompressedAttributes* CheckRequest::mutable_attribute
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckRequest.attributes)
   return attributes_;
 }
+inline ::istio::mixer::v1::CompressedAttributes* CheckRequest::release_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckRequest.attributes)
+  
+  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
+  attributes_ = NULL;
+  return temp;
+}
 inline void CheckRequest::set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(attributes_);
-  }
+  delete attributes_;
+  attributes_ = attributes;
   if (attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  attributes_ = attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckRequest.attributes)
 }
 
@@ -1277,18 +1273,15 @@ CheckRequest::mutable_quotas() {
 inline bool CheckResponse_PreconditionResult::has_status() const {
   return this != internal_default_instance() && status_ != NULL;
 }
+inline void CheckResponse_PreconditionResult::clear_status() {
+  if (GetArenaNoVirtual() == NULL && status_ != NULL) delete status_;
+  status_ = NULL;
+}
 inline const ::google::rpc::Status& CheckResponse_PreconditionResult::status() const {
   const ::google::rpc::Status* p = status_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.PreconditionResult.status)
   return p != NULL ? *p : *reinterpret_cast<const ::google::rpc::Status*>(
       &::google::rpc::_Status_default_instance_);
-}
-inline ::google::rpc::Status* CheckResponse_PreconditionResult::release_status() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.status)
-  
-  ::google::rpc::Status* temp = status_;
-  status_ = NULL;
-  return temp;
 }
 inline ::google::rpc::Status* CheckResponse_PreconditionResult::mutable_status() {
   
@@ -1298,22 +1291,21 @@ inline ::google::rpc::Status* CheckResponse_PreconditionResult::mutable_status()
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.PreconditionResult.status)
   return status_;
 }
+inline ::google::rpc::Status* CheckResponse_PreconditionResult::release_status() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.status)
+  
+  ::google::rpc::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
 inline void CheckResponse_PreconditionResult::set_allocated_status(::google::rpc::Status* status) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(status_);
-  }
+  delete status_;
+  status_ = status;
   if (status) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      status = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, status, submessage_arena);
-    }
     
   } else {
     
   }
-  status_ = status;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.PreconditionResult.status)
 }
 
@@ -1321,18 +1313,15 @@ inline void CheckResponse_PreconditionResult::set_allocated_status(::google::rpc
 inline bool CheckResponse_PreconditionResult::has_valid_duration() const {
   return this != internal_default_instance() && valid_duration_ != NULL;
 }
+inline void CheckResponse_PreconditionResult::clear_valid_duration() {
+  if (GetArenaNoVirtual() == NULL && valid_duration_ != NULL) delete valid_duration_;
+  valid_duration_ = NULL;
+}
 inline const ::google::protobuf::Duration& CheckResponse_PreconditionResult::valid_duration() const {
   const ::google::protobuf::Duration* p = valid_duration_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.PreconditionResult.valid_duration)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* CheckResponse_PreconditionResult::release_valid_duration() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.valid_duration)
-  
-  ::google::protobuf::Duration* temp = valid_duration_;
-  valid_duration_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* CheckResponse_PreconditionResult::mutable_valid_duration() {
   
@@ -1342,23 +1331,26 @@ inline ::google::protobuf::Duration* CheckResponse_PreconditionResult::mutable_v
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.PreconditionResult.valid_duration)
   return valid_duration_;
 }
+inline ::google::protobuf::Duration* CheckResponse_PreconditionResult::release_valid_duration() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.valid_duration)
+  
+  ::google::protobuf::Duration* temp = valid_duration_;
+  valid_duration_ = NULL;
+  return temp;
+}
 inline void CheckResponse_PreconditionResult::set_allocated_valid_duration(::google::protobuf::Duration* valid_duration) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(valid_duration_);
+  delete valid_duration_;
+  if (valid_duration != NULL && valid_duration->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_valid_duration = new ::google::protobuf::Duration;
+    new_valid_duration->CopyFrom(*valid_duration);
+    valid_duration = new_valid_duration;
   }
+  valid_duration_ = valid_duration;
   if (valid_duration) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(valid_duration)->GetArena();
-    if (message_arena != submessage_arena) {
-      valid_duration = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, valid_duration, submessage_arena);
-    }
     
   } else {
     
   }
-  valid_duration_ = valid_duration;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.PreconditionResult.valid_duration)
 }
 
@@ -1380,18 +1372,15 @@ inline void CheckResponse_PreconditionResult::set_valid_use_count(::google::prot
 inline bool CheckResponse_PreconditionResult::has_attributes() const {
   return this != internal_default_instance() && attributes_ != NULL;
 }
+inline void CheckResponse_PreconditionResult::clear_attributes() {
+  if (GetArenaNoVirtual() == NULL && attributes_ != NULL) delete attributes_;
+  attributes_ = NULL;
+}
 inline const ::istio::mixer::v1::CompressedAttributes& CheckResponse_PreconditionResult::attributes() const {
   const ::istio::mixer::v1::CompressedAttributes* p = attributes_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::CompressedAttributes*>(
       &::istio::mixer::v1::_CompressedAttributes_default_instance_);
-}
-inline ::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResult::release_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
-  
-  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
-  attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResult::mutable_attributes() {
   
@@ -1401,22 +1390,21 @@ inline ::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResul
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
   return attributes_;
 }
+inline ::istio::mixer::v1::CompressedAttributes* CheckResponse_PreconditionResult::release_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
+  
+  ::istio::mixer::v1::CompressedAttributes* temp = attributes_;
+  attributes_ = NULL;
+  return temp;
+}
 inline void CheckResponse_PreconditionResult::set_allocated_attributes(::istio::mixer::v1::CompressedAttributes* attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(attributes_);
-  }
+  delete attributes_;
+  attributes_ = attributes;
   if (attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  attributes_ = attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.PreconditionResult.attributes)
 }
 
@@ -1425,9 +1413,7 @@ inline bool CheckResponse_PreconditionResult::has_referenced_attributes() const 
   return this != internal_default_instance() && referenced_attributes_ != NULL;
 }
 inline void CheckResponse_PreconditionResult::clear_referenced_attributes() {
-  if (GetArenaNoVirtual() == NULL && referenced_attributes_ != NULL) {
-    delete referenced_attributes_;
-  }
+  if (GetArenaNoVirtual() == NULL && referenced_attributes_ != NULL) delete referenced_attributes_;
   referenced_attributes_ = NULL;
 }
 inline const ::istio::mixer::v1::ReferencedAttributes& CheckResponse_PreconditionResult::referenced_attributes() const {
@@ -1435,13 +1421,6 @@ inline const ::istio::mixer::v1::ReferencedAttributes& CheckResponse_Preconditio
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.PreconditionResult.referenced_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::ReferencedAttributes*>(
       &::istio::mixer::v1::_ReferencedAttributes_default_instance_);
-}
-inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_PreconditionResult::release_referenced_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.referenced_attributes)
-  
-  ::istio::mixer::v1::ReferencedAttributes* temp = referenced_attributes_;
-  referenced_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_PreconditionResult::mutable_referenced_attributes() {
   
@@ -1451,22 +1430,21 @@ inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_PreconditionResul
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.PreconditionResult.referenced_attributes)
   return referenced_attributes_;
 }
+inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_PreconditionResult::release_referenced_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.PreconditionResult.referenced_attributes)
+  
+  ::istio::mixer::v1::ReferencedAttributes* temp = referenced_attributes_;
+  referenced_attributes_ = NULL;
+  return temp;
+}
 inline void CheckResponse_PreconditionResult::set_allocated_referenced_attributes(::istio::mixer::v1::ReferencedAttributes* referenced_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete referenced_attributes_;
-  }
+  delete referenced_attributes_;
+  referenced_attributes_ = referenced_attributes;
   if (referenced_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      referenced_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, referenced_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  referenced_attributes_ = referenced_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.PreconditionResult.referenced_attributes)
 }
 
@@ -1478,18 +1456,15 @@ inline void CheckResponse_PreconditionResult::set_allocated_referenced_attribute
 inline bool CheckResponse_QuotaResult::has_valid_duration() const {
   return this != internal_default_instance() && valid_duration_ != NULL;
 }
+inline void CheckResponse_QuotaResult::clear_valid_duration() {
+  if (GetArenaNoVirtual() == NULL && valid_duration_ != NULL) delete valid_duration_;
+  valid_duration_ = NULL;
+}
 inline const ::google::protobuf::Duration& CheckResponse_QuotaResult::valid_duration() const {
   const ::google::protobuf::Duration* p = valid_duration_;
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.QuotaResult.valid_duration)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* CheckResponse_QuotaResult::release_valid_duration() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.QuotaResult.valid_duration)
-  
-  ::google::protobuf::Duration* temp = valid_duration_;
-  valid_duration_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* CheckResponse_QuotaResult::mutable_valid_duration() {
   
@@ -1499,23 +1474,26 @@ inline ::google::protobuf::Duration* CheckResponse_QuotaResult::mutable_valid_du
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.QuotaResult.valid_duration)
   return valid_duration_;
 }
+inline ::google::protobuf::Duration* CheckResponse_QuotaResult::release_valid_duration() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.QuotaResult.valid_duration)
+  
+  ::google::protobuf::Duration* temp = valid_duration_;
+  valid_duration_ = NULL;
+  return temp;
+}
 inline void CheckResponse_QuotaResult::set_allocated_valid_duration(::google::protobuf::Duration* valid_duration) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(valid_duration_);
+  delete valid_duration_;
+  if (valid_duration != NULL && valid_duration->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_valid_duration = new ::google::protobuf::Duration;
+    new_valid_duration->CopyFrom(*valid_duration);
+    valid_duration = new_valid_duration;
   }
+  valid_duration_ = valid_duration;
   if (valid_duration) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(valid_duration)->GetArena();
-    if (message_arena != submessage_arena) {
-      valid_duration = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, valid_duration, submessage_arena);
-    }
     
   } else {
     
   }
-  valid_duration_ = valid_duration;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.QuotaResult.valid_duration)
 }
 
@@ -1538,9 +1516,7 @@ inline bool CheckResponse_QuotaResult::has_referenced_attributes() const {
   return this != internal_default_instance() && referenced_attributes_ != NULL;
 }
 inline void CheckResponse_QuotaResult::clear_referenced_attributes() {
-  if (GetArenaNoVirtual() == NULL && referenced_attributes_ != NULL) {
-    delete referenced_attributes_;
-  }
+  if (GetArenaNoVirtual() == NULL && referenced_attributes_ != NULL) delete referenced_attributes_;
   referenced_attributes_ = NULL;
 }
 inline const ::istio::mixer::v1::ReferencedAttributes& CheckResponse_QuotaResult::referenced_attributes() const {
@@ -1548,13 +1524,6 @@ inline const ::istio::mixer::v1::ReferencedAttributes& CheckResponse_QuotaResult
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.QuotaResult.referenced_attributes)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::ReferencedAttributes*>(
       &::istio::mixer::v1::_ReferencedAttributes_default_instance_);
-}
-inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_QuotaResult::release_referenced_attributes() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.QuotaResult.referenced_attributes)
-  
-  ::istio::mixer::v1::ReferencedAttributes* temp = referenced_attributes_;
-  referenced_attributes_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_QuotaResult::mutable_referenced_attributes() {
   
@@ -1564,22 +1533,21 @@ inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_QuotaResult::muta
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.QuotaResult.referenced_attributes)
   return referenced_attributes_;
 }
+inline ::istio::mixer::v1::ReferencedAttributes* CheckResponse_QuotaResult::release_referenced_attributes() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.QuotaResult.referenced_attributes)
+  
+  ::istio::mixer::v1::ReferencedAttributes* temp = referenced_attributes_;
+  referenced_attributes_ = NULL;
+  return temp;
+}
 inline void CheckResponse_QuotaResult::set_allocated_referenced_attributes(::istio::mixer::v1::ReferencedAttributes* referenced_attributes) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete referenced_attributes_;
-  }
+  delete referenced_attributes_;
+  referenced_attributes_ = referenced_attributes;
   if (referenced_attributes) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      referenced_attributes = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, referenced_attributes, submessage_arena);
-    }
     
   } else {
     
   }
-  referenced_attributes_ = referenced_attributes;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.QuotaResult.referenced_attributes)
 }
 
@@ -1594,9 +1562,7 @@ inline bool CheckResponse::has_precondition() const {
   return this != internal_default_instance() && precondition_ != NULL;
 }
 inline void CheckResponse::clear_precondition() {
-  if (GetArenaNoVirtual() == NULL && precondition_ != NULL) {
-    delete precondition_;
-  }
+  if (GetArenaNoVirtual() == NULL && precondition_ != NULL) delete precondition_;
   precondition_ = NULL;
 }
 inline const ::istio::mixer::v1::CheckResponse_PreconditionResult& CheckResponse::precondition() const {
@@ -1604,13 +1570,6 @@ inline const ::istio::mixer::v1::CheckResponse_PreconditionResult& CheckResponse
   // @@protoc_insertion_point(field_get:istio.mixer.v1.CheckResponse.precondition)
   return p != NULL ? *p : *reinterpret_cast<const ::istio::mixer::v1::CheckResponse_PreconditionResult*>(
       &::istio::mixer::v1::_CheckResponse_PreconditionResult_default_instance_);
-}
-inline ::istio::mixer::v1::CheckResponse_PreconditionResult* CheckResponse::release_precondition() {
-  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.precondition)
-  
-  ::istio::mixer::v1::CheckResponse_PreconditionResult* temp = precondition_;
-  precondition_ = NULL;
-  return temp;
 }
 inline ::istio::mixer::v1::CheckResponse_PreconditionResult* CheckResponse::mutable_precondition() {
   
@@ -1620,22 +1579,21 @@ inline ::istio::mixer::v1::CheckResponse_PreconditionResult* CheckResponse::muta
   // @@protoc_insertion_point(field_mutable:istio.mixer.v1.CheckResponse.precondition)
   return precondition_;
 }
+inline ::istio::mixer::v1::CheckResponse_PreconditionResult* CheckResponse::release_precondition() {
+  // @@protoc_insertion_point(field_release:istio.mixer.v1.CheckResponse.precondition)
+  
+  ::istio::mixer::v1::CheckResponse_PreconditionResult* temp = precondition_;
+  precondition_ = NULL;
+  return temp;
+}
 inline void CheckResponse::set_allocated_precondition(::istio::mixer::v1::CheckResponse_PreconditionResult* precondition) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete precondition_;
-  }
+  delete precondition_;
+  precondition_ = precondition;
   if (precondition) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      precondition = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, precondition, submessage_arena);
-    }
     
   } else {
     
   }
-  precondition_ = precondition;
   // @@protoc_insertion_point(field_set_allocated:istio.mixer.v1.CheckResponse.precondition)
 }
 

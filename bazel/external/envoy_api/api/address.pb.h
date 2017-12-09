@@ -31,7 +31,6 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include <google/protobuf/wrappers.pb.h>
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_api_2faddress_2eproto {
@@ -193,7 +192,7 @@ class Pipe : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // string path = 1 [(.validate.rules) = {
+  // string path = 1;
   void clear_path();
   static const int kPathFieldNumber = 1;
   const ::std::string& path() const;
@@ -360,7 +359,7 @@ class SocketAddress : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_resolver_name();
   void set_allocated_resolver_name(::std::string* resolver_name);
 
-  // .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
+  // .envoy.api.v2.SocketAddress.Protocol protocol = 1;
   void clear_protocol();
   static const int kProtocolFieldNumber = 1;
   ::envoy::api::v2::SocketAddress_Protocol protocol() const;
@@ -501,13 +500,13 @@ class BindConfig : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
+  // .envoy.api.v2.SocketAddress source_address = 1;
   bool has_source_address() const;
   void clear_source_address();
   static const int kSourceAddressFieldNumber = 1;
   const ::envoy::api::v2::SocketAddress& source_address() const;
-  ::envoy::api::v2::SocketAddress* release_source_address();
   ::envoy::api::v2::SocketAddress* mutable_source_address();
+  ::envoy::api::v2::SocketAddress* release_source_address();
   void set_allocated_source_address(::envoy::api::v2::SocketAddress* source_address);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.BindConfig)
@@ -614,8 +613,8 @@ class Address : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   void clear_socket_address();
   static const int kSocketAddressFieldNumber = 1;
   const ::envoy::api::v2::SocketAddress& socket_address() const;
-  ::envoy::api::v2::SocketAddress* release_socket_address();
   ::envoy::api::v2::SocketAddress* mutable_socket_address();
+  ::envoy::api::v2::SocketAddress* release_socket_address();
   void set_allocated_socket_address(::envoy::api::v2::SocketAddress* socket_address);
 
   // .envoy.api.v2.Pipe pipe = 2;
@@ -623,8 +622,8 @@ class Address : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   void clear_pipe();
   static const int kPipeFieldNumber = 2;
   const ::envoy::api::v2::Pipe& pipe() const;
-  ::envoy::api::v2::Pipe* release_pipe();
   ::envoy::api::v2::Pipe* mutable_pipe();
+  ::envoy::api::v2::Pipe* release_pipe();
   void set_allocated_pipe(::envoy::api::v2::Pipe* pipe);
 
   AddressCase address_case() const;
@@ -733,7 +732,7 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // string address_prefix = 1 [(.validate.rules) = {
+  // string address_prefix = 1;
   void clear_address_prefix();
   static const int kAddressPrefixFieldNumber = 1;
   const ::std::string& address_prefix() const;
@@ -747,13 +746,13 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_address_prefix();
   void set_allocated_address_prefix(::std::string* address_prefix);
 
-  // .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value prefix_len = 2;
   bool has_prefix_len() const;
   void clear_prefix_len();
   static const int kPrefixLenFieldNumber = 2;
   const ::google::protobuf::UInt32Value& prefix_len() const;
-  ::google::protobuf::UInt32Value* release_prefix_len();
   ::google::protobuf::UInt32Value* mutable_prefix_len();
+  ::google::protobuf::UInt32Value* release_prefix_len();
   void set_allocated_prefix_len(::google::protobuf::UInt32Value* prefix_len);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.CidrRange)
@@ -777,7 +776,7 @@ class CidrRange : public ::google::protobuf::Message /* @@protoc_insertion_point
 #endif  // __GNUC__
 // Pipe
 
-// string path = 1 [(.validate.rules) = {
+// string path = 1;
 inline void Pipe::clear_path() {
   path_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -834,7 +833,7 @@ inline void Pipe::set_allocated_path(::std::string* path) {
 
 // SocketAddress
 
-// .envoy.api.v2.SocketAddress.Protocol protocol = 1 [(.validate.rules) = {
+// .envoy.api.v2.SocketAddress.Protocol protocol = 1;
 inline void SocketAddress::clear_protocol() {
   protocol_ = 0;
 }
@@ -1091,14 +1090,12 @@ inline SocketAddress::PortSpecifierCase SocketAddress::port_specifier_case() con
 
 // BindConfig
 
-// .envoy.api.v2.SocketAddress source_address = 1 [(.validate.rules) = {
+// .envoy.api.v2.SocketAddress source_address = 1;
 inline bool BindConfig::has_source_address() const {
   return this != internal_default_instance() && source_address_ != NULL;
 }
 inline void BindConfig::clear_source_address() {
-  if (GetArenaNoVirtual() == NULL && source_address_ != NULL) {
-    delete source_address_;
-  }
+  if (GetArenaNoVirtual() == NULL && source_address_ != NULL) delete source_address_;
   source_address_ = NULL;
 }
 inline const ::envoy::api::v2::SocketAddress& BindConfig::source_address() const {
@@ -1106,13 +1103,6 @@ inline const ::envoy::api::v2::SocketAddress& BindConfig::source_address() const
   // @@protoc_insertion_point(field_get:envoy.api.v2.BindConfig.source_address)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::SocketAddress*>(
       &::envoy::api::v2::_SocketAddress_default_instance_);
-}
-inline ::envoy::api::v2::SocketAddress* BindConfig::release_source_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.BindConfig.source_address)
-  
-  ::envoy::api::v2::SocketAddress* temp = source_address_;
-  source_address_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::SocketAddress* BindConfig::mutable_source_address() {
   
@@ -1122,22 +1112,21 @@ inline ::envoy::api::v2::SocketAddress* BindConfig::mutable_source_address() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.BindConfig.source_address)
   return source_address_;
 }
+inline ::envoy::api::v2::SocketAddress* BindConfig::release_source_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.BindConfig.source_address)
+  
+  ::envoy::api::v2::SocketAddress* temp = source_address_;
+  source_address_ = NULL;
+  return temp;
+}
 inline void BindConfig::set_allocated_source_address(::envoy::api::v2::SocketAddress* source_address) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete source_address_;
-  }
+  delete source_address_;
+  source_address_ = source_address;
   if (source_address) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      source_address = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, source_address, submessage_arena);
-    }
     
   } else {
     
   }
-  source_address_ = source_address;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.BindConfig.source_address)
 }
 
@@ -1158,22 +1147,11 @@ inline void Address::clear_socket_address() {
     clear_has_address();
   }
 }
-inline ::envoy::api::v2::SocketAddress* Address::release_socket_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Address.socket_address)
-  if (has_socket_address()) {
-    clear_has_address();
-      ::envoy::api::v2::SocketAddress* temp = address_.socket_address_;
-    address_.socket_address_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::SocketAddress& Address::socket_address() const {
+inline  const ::envoy::api::v2::SocketAddress& Address::socket_address() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Address.socket_address)
   return has_socket_address()
       ? *address_.socket_address_
-      : *reinterpret_cast< ::envoy::api::v2::SocketAddress*>(&::envoy::api::v2::_SocketAddress_default_instance_);
+      : ::envoy::api::v2::SocketAddress::default_instance();
 }
 inline ::envoy::api::v2::SocketAddress* Address::mutable_socket_address() {
   if (!has_socket_address()) {
@@ -1183,6 +1161,25 @@ inline ::envoy::api::v2::SocketAddress* Address::mutable_socket_address() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Address.socket_address)
   return address_.socket_address_;
+}
+inline ::envoy::api::v2::SocketAddress* Address::release_socket_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Address.socket_address)
+  if (has_socket_address()) {
+    clear_has_address();
+    ::envoy::api::v2::SocketAddress* temp = address_.socket_address_;
+    address_.socket_address_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Address::set_allocated_socket_address(::envoy::api::v2::SocketAddress* socket_address) {
+  clear_address();
+  if (socket_address) {
+    set_has_socket_address();
+    address_.socket_address_ = socket_address;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Address.socket_address)
 }
 
 // .envoy.api.v2.Pipe pipe = 2;
@@ -1198,22 +1195,11 @@ inline void Address::clear_pipe() {
     clear_has_address();
   }
 }
-inline ::envoy::api::v2::Pipe* Address::release_pipe() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Address.pipe)
-  if (has_pipe()) {
-    clear_has_address();
-      ::envoy::api::v2::Pipe* temp = address_.pipe_;
-    address_.pipe_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::Pipe& Address::pipe() const {
+inline  const ::envoy::api::v2::Pipe& Address::pipe() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Address.pipe)
   return has_pipe()
       ? *address_.pipe_
-      : *reinterpret_cast< ::envoy::api::v2::Pipe*>(&::envoy::api::v2::_Pipe_default_instance_);
+      : ::envoy::api::v2::Pipe::default_instance();
 }
 inline ::envoy::api::v2::Pipe* Address::mutable_pipe() {
   if (!has_pipe()) {
@@ -1223,6 +1209,25 @@ inline ::envoy::api::v2::Pipe* Address::mutable_pipe() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Address.pipe)
   return address_.pipe_;
+}
+inline ::envoy::api::v2::Pipe* Address::release_pipe() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Address.pipe)
+  if (has_pipe()) {
+    clear_has_address();
+    ::envoy::api::v2::Pipe* temp = address_.pipe_;
+    address_.pipe_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Address::set_allocated_pipe(::envoy::api::v2::Pipe* pipe) {
+  clear_address();
+  if (pipe) {
+    set_has_pipe();
+    address_.pipe_ = pipe;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Address.pipe)
 }
 
 inline bool Address::has_address() const {
@@ -1238,7 +1243,7 @@ inline Address::AddressCase Address::address_case() const {
 
 // CidrRange
 
-// string address_prefix = 1 [(.validate.rules) = {
+// string address_prefix = 1;
 inline void CidrRange::clear_address_prefix() {
   address_prefix_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1291,22 +1296,19 @@ inline void CidrRange::set_allocated_address_prefix(::std::string* address_prefi
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CidrRange.address_prefix)
 }
 
-// .google.protobuf.UInt32Value prefix_len = 2 [(.validate.rules) = {
+// .google.protobuf.UInt32Value prefix_len = 2;
 inline bool CidrRange::has_prefix_len() const {
   return this != internal_default_instance() && prefix_len_ != NULL;
+}
+inline void CidrRange::clear_prefix_len() {
+  if (GetArenaNoVirtual() == NULL && prefix_len_ != NULL) delete prefix_len_;
+  prefix_len_ = NULL;
 }
 inline const ::google::protobuf::UInt32Value& CidrRange::prefix_len() const {
   const ::google::protobuf::UInt32Value* p = prefix_len_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.CidrRange.prefix_len)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::UInt32Value*>(
       &::google::protobuf::_UInt32Value_default_instance_);
-}
-inline ::google::protobuf::UInt32Value* CidrRange::release_prefix_len() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CidrRange.prefix_len)
-  
-  ::google::protobuf::UInt32Value* temp = prefix_len_;
-  prefix_len_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::UInt32Value* CidrRange::mutable_prefix_len() {
   
@@ -1316,23 +1318,26 @@ inline ::google::protobuf::UInt32Value* CidrRange::mutable_prefix_len() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CidrRange.prefix_len)
   return prefix_len_;
 }
+inline ::google::protobuf::UInt32Value* CidrRange::release_prefix_len() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CidrRange.prefix_len)
+  
+  ::google::protobuf::UInt32Value* temp = prefix_len_;
+  prefix_len_ = NULL;
+  return temp;
+}
 inline void CidrRange::set_allocated_prefix_len(::google::protobuf::UInt32Value* prefix_len) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(prefix_len_);
+  delete prefix_len_;
+  if (prefix_len != NULL && prefix_len->GetArena() != NULL) {
+    ::google::protobuf::UInt32Value* new_prefix_len = new ::google::protobuf::UInt32Value;
+    new_prefix_len->CopyFrom(*prefix_len);
+    prefix_len = new_prefix_len;
   }
+  prefix_len_ = prefix_len;
   if (prefix_len) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(prefix_len)->GetArena();
-    if (message_arena != submessage_arena) {
-      prefix_len = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, prefix_len, submessage_arena);
-    }
     
   } else {
     
   }
-  prefix_len_ = prefix_len;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CidrRange.prefix_len)
 }
 

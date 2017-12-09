@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -178,11 +174,7 @@ namespace protobuf_api_2frds_2eproto {
 void InitDefaultsWeightedCluster_ClusterWeightImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsUInt32Value();
   protobuf_api_2fbase_2eproto::InitDefaultsMetadata();
   {
@@ -201,11 +193,7 @@ void InitDefaultsWeightedCluster_ClusterWeight() {
 void InitDefaultsWeightedClusterImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsWeightedCluster_ClusterWeight();
   {
     void* ptr = &::envoy::api::v2::_WeightedCluster_default_instance_;
@@ -223,11 +211,7 @@ void InitDefaultsWeightedCluster() {
 void InitDefaultsRouteMatchImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   protobuf_api_2fbase_2eproto::InitDefaultsRuntimeUInt32();
   protobuf_api_2frds_2eproto::InitDefaultsHeaderMatcher();
@@ -247,11 +231,7 @@ void InitDefaultsRouteMatch() {
 void InitDefaultsCorsPolicyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   {
     void* ptr = &::envoy::api::v2::_CorsPolicy_default_instance_;
@@ -269,11 +249,7 @@ void InitDefaultsCorsPolicy() {
 void InitDefaultsRouteAction_RetryPolicyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsUInt32Value();
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   {
@@ -292,11 +268,7 @@ void InitDefaultsRouteAction_RetryPolicy() {
 void InitDefaultsRouteAction_RequestMirrorPolicyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RouteAction_RequestMirrorPolicy_default_instance_;
     new (ptr) ::envoy::api::v2::RouteAction_RequestMirrorPolicy();
@@ -313,11 +285,7 @@ void InitDefaultsRouteAction_RequestMirrorPolicy() {
 void InitDefaultsRouteAction_HashPolicy_HeaderImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RouteAction_HashPolicy_Header_default_instance_;
     new (ptr) ::envoy::api::v2::RouteAction_HashPolicy_Header();
@@ -334,11 +302,7 @@ void InitDefaultsRouteAction_HashPolicy_Header() {
 void InitDefaultsRouteAction_HashPolicy_CookieImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   {
     void* ptr = &::envoy::api::v2::_RouteAction_HashPolicy_Cookie_default_instance_;
@@ -356,11 +320,7 @@ void InitDefaultsRouteAction_HashPolicy_Cookie() {
 void InitDefaultsRouteAction_HashPolicy_ConnectionPropertiesImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RouteAction_HashPolicy_ConnectionProperties_default_instance_;
     new (ptr) ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties();
@@ -377,11 +337,7 @@ void InitDefaultsRouteAction_HashPolicy_ConnectionProperties() {
 void InitDefaultsRouteAction_HashPolicyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsRouteAction_HashPolicy_Header();
   protobuf_api_2frds_2eproto::InitDefaultsRouteAction_HashPolicy_Cookie();
   protobuf_api_2frds_2eproto::InitDefaultsRouteAction_HashPolicy_ConnectionProperties();
@@ -401,11 +357,7 @@ void InitDefaultsRouteAction_HashPolicy() {
 void InitDefaultsRouteActionImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsWeightedCluster();
   protobuf_api_2fbase_2eproto::InitDefaultsMetadata();
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
@@ -432,11 +384,7 @@ void InitDefaultsRouteAction() {
 void InitDefaultsRedirectActionImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RedirectAction_default_instance_;
     new (ptr) ::envoy::api::v2::RedirectAction();
@@ -453,11 +401,7 @@ void InitDefaultsRedirectAction() {
 void InitDefaultsDecoratorImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_Decorator_default_instance_;
     new (ptr) ::envoy::api::v2::Decorator();
@@ -474,17 +418,12 @@ void InitDefaultsDecorator() {
 void InitDefaultsRouteImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsRouteMatch();
   protobuf_api_2frds_2eproto::InitDefaultsRouteAction();
   protobuf_api_2frds_2eproto::InitDefaultsRedirectAction();
   protobuf_api_2fbase_2eproto::InitDefaultsMetadata();
   protobuf_api_2frds_2eproto::InitDefaultsDecorator();
-  protobuf_api_2fauth_2eproto::InitDefaultsAuthAction();
   {
     void* ptr = &::envoy::api::v2::_Route_default_instance_;
     new (ptr) ::envoy::api::v2::Route();
@@ -501,11 +440,7 @@ void InitDefaultsRoute() {
 void InitDefaultsVirtualClusterImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_VirtualCluster_default_instance_;
     new (ptr) ::envoy::api::v2::VirtualCluster();
@@ -522,11 +457,7 @@ void InitDefaultsVirtualCluster() {
 void InitDefaultsRateLimit_Action_SourceClusterImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RateLimit_Action_SourceCluster_default_instance_;
     new (ptr) ::envoy::api::v2::RateLimit_Action_SourceCluster();
@@ -543,11 +474,7 @@ void InitDefaultsRateLimit_Action_SourceCluster() {
 void InitDefaultsRateLimit_Action_DestinationClusterImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RateLimit_Action_DestinationCluster_default_instance_;
     new (ptr) ::envoy::api::v2::RateLimit_Action_DestinationCluster();
@@ -564,11 +491,7 @@ void InitDefaultsRateLimit_Action_DestinationCluster() {
 void InitDefaultsRateLimit_Action_RequestHeadersImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RateLimit_Action_RequestHeaders_default_instance_;
     new (ptr) ::envoy::api::v2::RateLimit_Action_RequestHeaders();
@@ -585,11 +508,7 @@ void InitDefaultsRateLimit_Action_RequestHeaders() {
 void InitDefaultsRateLimit_Action_RemoteAddressImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RateLimit_Action_RemoteAddress_default_instance_;
     new (ptr) ::envoy::api::v2::RateLimit_Action_RemoteAddress();
@@ -606,11 +525,7 @@ void InitDefaultsRateLimit_Action_RemoteAddress() {
 void InitDefaultsRateLimit_Action_GenericKeyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_RateLimit_Action_GenericKey_default_instance_;
     new (ptr) ::envoy::api::v2::RateLimit_Action_GenericKey();
@@ -627,11 +542,7 @@ void InitDefaultsRateLimit_Action_GenericKey() {
 void InitDefaultsRateLimit_Action_HeaderValueMatchImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   protobuf_api_2frds_2eproto::InitDefaultsHeaderMatcher();
   {
@@ -650,11 +561,7 @@ void InitDefaultsRateLimit_Action_HeaderValueMatch() {
 void InitDefaultsRateLimit_ActionImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsRateLimit_Action_SourceCluster();
   protobuf_api_2frds_2eproto::InitDefaultsRateLimit_Action_DestinationCluster();
   protobuf_api_2frds_2eproto::InitDefaultsRateLimit_Action_RequestHeaders();
@@ -677,11 +584,7 @@ void InitDefaultsRateLimit_Action() {
 void InitDefaultsRateLimitImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsUInt32Value();
   protobuf_api_2frds_2eproto::InitDefaultsRateLimit_Action();
   {
@@ -700,11 +603,7 @@ void InitDefaultsRateLimit() {
 void InitDefaultsHeaderMatcherImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   {
     void* ptr = &::envoy::api::v2::_HeaderMatcher_default_instance_;
@@ -722,17 +621,12 @@ void InitDefaultsHeaderMatcher() {
 void InitDefaultsVirtualHostImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsRoute();
   protobuf_api_2frds_2eproto::InitDefaultsVirtualCluster();
   protobuf_api_2frds_2eproto::InitDefaultsRateLimit();
   protobuf_api_2fbase_2eproto::InitDefaultsHeaderValueOption();
   protobuf_api_2frds_2eproto::InitDefaultsCorsPolicy();
-  protobuf_api_2fauth_2eproto::InitDefaultsAuthAction();
   {
     void* ptr = &::envoy::api::v2::_VirtualHost_default_instance_;
     new (ptr) ::envoy::api::v2::VirtualHost();
@@ -749,11 +643,7 @@ void InitDefaultsVirtualHost() {
 void InitDefaultsRouteConfigurationImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2frds_2eproto::InitDefaultsVirtualHost();
   protobuf_api_2fbase_2eproto::InitDefaultsHeaderValueOption();
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
@@ -771,7 +661,7 @@ void InitDefaultsRouteConfiguration() {
 }
 
 ::google::protobuf::Metadata file_level_metadata[26];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -873,8 +763,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, request_mirror_policy_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, priority_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, request_headers_to_add_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, response_headers_to_add_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, response_headers_to_remove_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, rate_limits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, include_vh_rate_limits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteAction, hash_policy_),
@@ -889,7 +777,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RedirectAction, host_redirect_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RedirectAction, path_redirect_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RedirectAction, response_code_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Decorator, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -906,7 +793,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   offsetof(::envoy::api::v2::RouteDefaultTypeInternal, redirect_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Route, metadata_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Route, decorator_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Route, auth_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::Route, action_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualCluster, _internal_metadata_),
@@ -992,10 +878,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, virtual_clusters_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, rate_limits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, request_headers_to_add_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, response_headers_to_add_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, response_headers_to_remove_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, cors_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::VirtualHost, auth_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::envoy::api::v2::RouteConfiguration, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1021,21 +904,21 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 67, -1, sizeof(::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties)},
   { 73, -1, sizeof(::envoy::api::v2::RouteAction_HashPolicy)},
   { 82, -1, sizeof(::envoy::api::v2::RouteAction)},
-  { 108, -1, sizeof(::envoy::api::v2::RedirectAction)},
-  { 116, -1, sizeof(::envoy::api::v2::Decorator)},
-  { 122, -1, sizeof(::envoy::api::v2::Route)},
-  { 134, -1, sizeof(::envoy::api::v2::VirtualCluster)},
-  { 142, -1, sizeof(::envoy::api::v2::RateLimit_Action_SourceCluster)},
-  { 147, -1, sizeof(::envoy::api::v2::RateLimit_Action_DestinationCluster)},
-  { 152, -1, sizeof(::envoy::api::v2::RateLimit_Action_RequestHeaders)},
-  { 159, -1, sizeof(::envoy::api::v2::RateLimit_Action_RemoteAddress)},
-  { 164, -1, sizeof(::envoy::api::v2::RateLimit_Action_GenericKey)},
-  { 170, -1, sizeof(::envoy::api::v2::RateLimit_Action_HeaderValueMatch)},
-  { 178, -1, sizeof(::envoy::api::v2::RateLimit_Action)},
-  { 190, -1, sizeof(::envoy::api::v2::RateLimit)},
-  { 198, -1, sizeof(::envoy::api::v2::HeaderMatcher)},
-  { 206, -1, sizeof(::envoy::api::v2::VirtualHost)},
-  { 222, -1, sizeof(::envoy::api::v2::RouteConfiguration)},
+  { 106, -1, sizeof(::envoy::api::v2::RedirectAction)},
+  { 113, -1, sizeof(::envoy::api::v2::Decorator)},
+  { 119, -1, sizeof(::envoy::api::v2::Route)},
+  { 130, -1, sizeof(::envoy::api::v2::VirtualCluster)},
+  { 138, -1, sizeof(::envoy::api::v2::RateLimit_Action_SourceCluster)},
+  { 143, -1, sizeof(::envoy::api::v2::RateLimit_Action_DestinationCluster)},
+  { 148, -1, sizeof(::envoy::api::v2::RateLimit_Action_RequestHeaders)},
+  { 155, -1, sizeof(::envoy::api::v2::RateLimit_Action_RemoteAddress)},
+  { 160, -1, sizeof(::envoy::api::v2::RateLimit_Action_GenericKey)},
+  { 166, -1, sizeof(::envoy::api::v2::RateLimit_Action_HeaderValueMatch)},
+  { 174, -1, sizeof(::envoy::api::v2::RateLimit_Action)},
+  { 186, -1, sizeof(::envoy::api::v2::RateLimit)},
+  { 194, -1, sizeof(::envoy::api::v2::HeaderMatcher)},
+  { 202, -1, sizeof(::envoy::api::v2::VirtualHost)},
+  { 215, -1, sizeof(::envoy::api::v2::RouteConfiguration)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1089,156 +972,135 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\rapi/rds.proto\022\014envoy.api.v2\032\016api/auth."
-      "proto\032\016api/base.proto\032\023api/discovery.pro"
-      "to\032\034google/api/annotations.proto\032\036google"
-      "/protobuf/duration.proto\032\036google/protobu"
-      "f/wrappers.proto\032\027validate/validate.prot"
-      "o\"\214\002\n\017WeightedCluster\022I\n\010clusters\030\001 \003(\0132"
-      "+.envoy.api.v2.WeightedCluster.ClusterWe"
-      "ightB\n\272\351\300\003\005\222\001\002\010\001\022\032\n\022runtime_key_prefix\030\002"
-      " \001(\t\032\221\001\n\rClusterWeight\022\027\n\004name\030\001 \001(\tB\t\272\351"
-      "\300\003\004r\002\020\001\0227\n\006weight\030\002 \001(\0132\034.google.protobu"
-      "f.UInt32ValueB\t\272\351\300\003\004*\002\030d\022.\n\016metadata_mat"
-      "ch\030\003 \001(\0132\026.envoy.api.v2.Metadata\"\350\001\n\nRou"
-      "teMatch\022\020\n\006prefix\030\001 \001(\tH\000\022\016\n\004path\030\002 \001(\tH"
-      "\000\022\017\n\005regex\030\003 \001(\tH\000\0222\n\016case_sensitive\030\004 \001"
-      "(\0132\032.google.protobuf.BoolValue\022,\n\007runtim"
-      "e\030\005 \001(\0132\033.envoy.api.v2.RuntimeUInt32\022,\n\007"
-      "headers\030\006 \003(\0132\033.envoy.api.v2.HeaderMatch"
-      "erB\027\n\016path_specifier\022\005\270\351\300\003\001\"\335\001\n\nCorsPoli"
-      "cy\022\024\n\014allow_origin\030\001 \003(\t\022\025\n\rallow_method"
-      "s\030\002 \001(\t\022\025\n\rallow_headers\030\003 \001(\t\022\026\n\016expose"
-      "_headers\030\004 \001(\t\022\017\n\007max_age\030\005 \001(\t\0225\n\021allow"
-      "_credentials\030\006 \001(\0132\032.google.protobuf.Boo"
-      "lValue\022+\n\007enabled\030\007 \001(\0132\032.google.protobu"
-      "f.BoolValue\"\311\014\n\013RouteAction\022\021\n\007cluster\030\001"
-      " \001(\tH\000\022\030\n\016cluster_header\030\002 \001(\tH\000\022:\n\021weig"
-      "hted_clusters\030\003 \001(\0132\035.envoy.api.v2.Weigh"
-      "tedClusterH\000\022.\n\016metadata_match\030\004 \001(\0132\026.e"
-      "nvoy.api.v2.Metadata\022\026\n\016prefix_rewrite\030\005"
-      " \001(\t\022\026\n\014host_rewrite\030\006 \001(\tH\001\0227\n\021auto_hos"
-      "t_rewrite\030\007 \001(\0132\032.google.protobuf.BoolVa"
-      "lueH\001\022*\n\007timeout\030\010 \001(\0132\031.google.protobuf"
-      ".Duration\022;\n\014retry_policy\030\t \001(\0132%.envoy."
-      "api.v2.RouteAction.RetryPolicy\022L\n\025reques"
-      "t_mirror_policy\030\n \001(\0132-.envoy.api.v2.Rou"
-      "teAction.RequestMirrorPolicy\022/\n\010priority"
-      "\030\013 \001(\0162\035.envoy.api.v2.RoutingPriority\022\?\n"
-      "\026request_headers_to_add\030\014 \003(\0132\037.envoy.ap"
-      "i.v2.HeaderValueOption\022@\n\027response_heade"
-      "rs_to_add\030\022 \003(\0132\037.envoy.api.v2.HeaderVal"
-      "ueOption\022\"\n\032response_headers_to_remove\030\023"
-      " \003(\t\022,\n\013rate_limits\030\r \003(\0132\027.envoy.api.v2"
-      ".RateLimit\022:\n\026include_vh_rate_limits\030\016 \001"
-      "(\0132\032.google.protobuf.BoolValue\0229\n\013hash_p"
-      "olicy\030\017 \003(\0132$.envoy.api.v2.RouteAction.H"
-      "ashPolicy\0221\n\ruse_websocket\030\020 \001(\0132\032.googl"
-      "e.protobuf.BoolValue\022&\n\004cors\030\021 \001(\0132\030.env"
-      "oy.api.v2.CorsPolicy\032\206\001\n\013RetryPolicy\022\020\n\010"
-      "retry_on\030\001 \001(\t\0221\n\013num_retries\030\002 \001(\0132\034.go"
-      "ogle.protobuf.UInt32Value\0222\n\017per_try_tim"
-      "eout\030\003 \001(\0132\031.google.protobuf.Duration\032F\n"
-      "\023RequestMirrorPolicy\022\032\n\007cluster\030\001 \001(\tB\t\272"
-      "\351\300\003\004r\002\020\001\022\023\n\013runtime_key\030\002 \001(\t\032\241\003\n\nHashPo"
-      "licy\022=\n\006header\030\001 \001(\0132+.envoy.api.v2.Rout"
-      "eAction.HashPolicy.HeaderH\000\022=\n\006cookie\030\002 "
-      "\001(\0132+.envoy.api.v2.RouteAction.HashPolic"
-      "y.CookieH\000\022Z\n\025connection_properties\030\003 \001("
-      "\01329.envoy.api.v2.RouteAction.HashPolicy."
-      "ConnectionPropertiesH\000\032(\n\006Header\022\036\n\013head"
-      "er_name\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\032I\n\006Cookie\022\027\n\004na"
-      "me\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022&\n\003ttl\030\002 \001(\0132\031.googl"
-      "e.protobuf.Duration\032)\n\024ConnectionPropert"
-      "ies\022\021\n\tsource_ip\030\001 \001(\010B\031\n\020policy_specifi"
-      "er\022\005\270\351\300\003\001B\032\n\021cluster_specifier\022\005\270\351\300\003\001B\030\n"
-      "\026host_rewrite_specifier\"\201\002\n\016RedirectActi"
-      "on\022\025\n\rhost_redirect\030\001 \001(\t\022\025\n\rpath_redire"
-      "ct\030\002 \001(\t\022H\n\rresponse_code\030\003 \001(\01621.envoy."
-      "api.v2.RedirectAction.RedirectResponseCo"
-      "de\"w\n\024RedirectResponseCode\022\025\n\021MOVED_PERM"
-      "ANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022T"
-      "EMPORARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIREC"
-      "T\020\004\")\n\tDecorator\022\034\n\toperation\030\001 \001(\tB\t\272\351\300"
-      "\003\004r\002\020\001\"\251\002\n\005Route\0223\n\005match\030\001 \001(\0132\030.envoy."
-      "api.v2.RouteMatchB\n\272\351\300\003\005\212\001\002\020\001\022*\n\005route\030\002"
-      " \001(\0132\031.envoy.api.v2.RouteActionH\000\0220\n\010red"
-      "irect\030\003 \001(\0132\034.envoy.api.v2.RedirectActio"
-      "nH\000\022(\n\010metadata\030\004 \001(\0132\026.envoy.api.v2.Met"
-      "adata\022*\n\tdecorator\030\005 \001(\0132\027.envoy.api.v2."
-      "Decorator\022&\n\004auth\030\006 \001(\0132\030.envoy.api.v2.A"
-      "uthActionB\017\n\006action\022\005\270\351\300\003\001\"r\n\016VirtualClu"
-      "ster\022\032\n\007pattern\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022\027\n\004name"
-      "\030\002 \001(\tB\t\272\351\300\003\004r\002\020\001\022+\n\006method\030\003 \001(\0162\033.envo"
-      "y.api.v2.RequestMethod\"\335\007\n\tRateLimit\0226\n\005"
+      "\n\rapi/rds.proto\022\014envoy.api.v2\032\016api/base."
+      "proto\032\023api/discovery.proto\032\034google/api/a"
+      "nnotations.proto\032\036google/protobuf/durati"
+      "on.proto\032\036google/protobuf/wrappers.proto"
+      "\"\351\001\n\017WeightedCluster\022=\n\010clusters\030\001 \003(\0132+"
+      ".envoy.api.v2.WeightedCluster.ClusterWei"
+      "ght\022\032\n\022runtime_key_prefix\030\002 \001(\t\032{\n\rClust"
+      "erWeight\022\014\n\004name\030\001 \001(\t\022,\n\006weight\030\002 \001(\0132\034"
+      ".google.protobuf.UInt32Value\022.\n\016metadata"
+      "_match\030\003 \001(\0132\026.envoy.api.v2.Metadata\"\341\001\n"
+      "\nRouteMatch\022\020\n\006prefix\030\001 \001(\tH\000\022\016\n\004path\030\002 "
+      "\001(\tH\000\022\017\n\005regex\030\003 \001(\tH\000\0222\n\016case_sensitive"
+      "\030\004 \001(\0132\032.google.protobuf.BoolValue\022,\n\007ru"
+      "ntime\030\005 \001(\0132\033.envoy.api.v2.RuntimeUInt32"
+      "\022,\n\007headers\030\006 \003(\0132\033.envoy.api.v2.HeaderM"
+      "atcherB\020\n\016path_specifier\"\335\001\n\nCorsPolicy\022"
+      "\024\n\014allow_origin\030\001 \003(\t\022\025\n\rallow_methods\030\002"
+      " \001(\t\022\025\n\rallow_headers\030\003 \001(\t\022\026\n\016expose_he"
+      "aders\030\004 \001(\t\022\017\n\007max_age\030\005 \001(\t\0225\n\021allow_cr"
+      "edentials\030\006 \001(\0132\032.google.protobuf.BoolVa"
+      "lue\022+\n\007enabled\030\007 \001(\0132\032.google.protobuf.B"
+      "oolValue\"\264\013\n\013RouteAction\022\021\n\007cluster\030\001 \001("
+      "\tH\000\022\030\n\016cluster_header\030\002 \001(\tH\000\022:\n\021weighte"
+      "d_clusters\030\003 \001(\0132\035.envoy.api.v2.Weighted"
+      "ClusterH\000\022.\n\016metadata_match\030\004 \001(\0132\026.envo"
+      "y.api.v2.Metadata\022\026\n\016prefix_rewrite\030\005 \001("
+      "\t\022\026\n\014host_rewrite\030\006 \001(\tH\001\0227\n\021auto_host_r"
+      "ewrite\030\007 \001(\0132\032.google.protobuf.BoolValue"
+      "H\001\022*\n\007timeout\030\010 \001(\0132\031.google.protobuf.Du"
+      "ration\022;\n\014retry_policy\030\t \001(\0132%.envoy.api"
+      ".v2.RouteAction.RetryPolicy\022L\n\025request_m"
+      "irror_policy\030\n \001(\0132-.envoy.api.v2.RouteA"
+      "ction.RequestMirrorPolicy\022/\n\010priority\030\013 "
+      "\001(\0162\035.envoy.api.v2.RoutingPriority\022\?\n\026re"
+      "quest_headers_to_add\030\014 \003(\0132\037.envoy.api.v"
+      "2.HeaderValueOption\022,\n\013rate_limits\030\r \003(\013"
+      "2\027.envoy.api.v2.RateLimit\022:\n\026include_vh_"
+      "rate_limits\030\016 \001(\0132\032.google.protobuf.Bool"
+      "Value\0229\n\013hash_policy\030\017 \003(\0132$.envoy.api.v"
+      "2.RouteAction.HashPolicy\0221\n\ruse_websocke"
+      "t\030\020 \001(\0132\032.google.protobuf.BoolValue\022&\n\004c"
+      "ors\030\021 \001(\0132\030.envoy.api.v2.CorsPolicy\032\206\001\n\013"
+      "RetryPolicy\022\020\n\010retry_on\030\001 \001(\t\0221\n\013num_ret"
+      "ries\030\002 \001(\0132\034.google.protobuf.UInt32Value"
+      "\0222\n\017per_try_timeout\030\003 \001(\0132\031.google.proto"
+      "buf.Duration\032;\n\023RequestMirrorPolicy\022\017\n\007c"
+      "luster\030\001 \001(\t\022\023\n\013runtime_key\030\002 \001(\t\032\204\003\n\nHa"
+      "shPolicy\022=\n\006header\030\001 \001(\0132+.envoy.api.v2."
+      "RouteAction.HashPolicy.HeaderH\000\022=\n\006cooki"
+      "e\030\002 \001(\0132+.envoy.api.v2.RouteAction.HashP"
+      "olicy.CookieH\000\022Z\n\025connection_properties\030"
+      "\003 \001(\01329.envoy.api.v2.RouteAction.HashPol"
+      "icy.ConnectionPropertiesH\000\032\035\n\006Header\022\023\n\013"
+      "header_name\030\001 \001(\t\032>\n\006Cookie\022\014\n\004name\030\001 \001("
+      "\t\022&\n\003ttl\030\002 \001(\0132\031.google.protobuf.Duratio"
+      "n\032)\n\024ConnectionProperties\022\021\n\tsource_ip\030\001"
+      " \001(\010B\022\n\020policy_specifierB\023\n\021cluster_spec"
+      "ifierB\030\n\026host_rewrite_specifier\">\n\016Redir"
+      "ectAction\022\025\n\rhost_redirect\030\001 \001(\t\022\025\n\rpath"
+      "_redirect\030\002 \001(\t\"\036\n\tDecorator\022\021\n\toperatio"
+      "n\030\001 \001(\t\"\356\001\n\005Route\022\'\n\005match\030\001 \001(\0132\030.envoy"
+      ".api.v2.RouteMatch\022*\n\005route\030\002 \001(\0132\031.envo"
+      "y.api.v2.RouteActionH\000\0220\n\010redirect\030\003 \001(\013"
+      "2\034.envoy.api.v2.RedirectActionH\000\022(\n\010meta"
+      "data\030\004 \001(\0132\026.envoy.api.v2.Metadata\022*\n\tde"
+      "corator\030\005 \001(\0132\027.envoy.api.v2.DecoratorB\010"
+      "\n\006action\"\\\n\016VirtualCluster\022\017\n\007pattern\030\001 "
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022+\n\006method\030\003 \001(\0162\033.envo"
+      "y.api.v2.RequestMethod\"\210\007\n\tRateLimit\022+\n\005"
       "stage\030\001 \001(\0132\034.google.protobuf.UInt32Valu"
-      "eB\t\272\351\300\003\004*\002\030\n\022\023\n\013disable_key\030\002 \001(\t\022:\n\007act"
-      "ions\030\003 \003(\0132\036.envoy.api.v2.RateLimit.Acti"
-      "onB\t\272\351\300\003\004r\002\020\001\032\306\006\n\006Action\022F\n\016source_clust"
-      "er\030\001 \001(\0132,.envoy.api.v2.RateLimit.Action"
-      ".SourceClusterH\000\022P\n\023destination_cluster\030"
-      "\002 \001(\01321.envoy.api.v2.RateLimit.Action.De"
-      "stinationClusterH\000\022H\n\017request_headers\030\003 "
-      "\001(\0132-.envoy.api.v2.RateLimit.Action.Requ"
-      "estHeadersH\000\022F\n\016remote_address\030\004 \001(\0132,.e"
-      "nvoy.api.v2.RateLimit.Action.RemoteAddre"
-      "ssH\000\022@\n\013generic_key\030\005 \001(\0132).envoy.api.v2"
-      ".RateLimit.Action.GenericKeyH\000\022M\n\022header"
-      "_value_match\030\006 \001(\0132/.envoy.api.v2.RateLi"
-      "mit.Action.HeaderValueMatchH\000\032\017\n\rSourceC"
-      "luster\032\024\n\022DestinationCluster\032S\n\016RequestH"
-      "eaders\022\036\n\013header_name\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022!"
-      "\n\016descriptor_key\030\002 \001(\tB\t\272\351\300\003\004r\002\020\001\032\017\n\rRem"
-      "oteAddress\0321\n\nGenericKey\022#\n\020descriptor_v"
-      "alue\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\032\243\001\n\020HeaderValueMat"
-      "ch\022#\n\020descriptor_value\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022"
-      "0\n\014expect_match\030\002 \001(\0132\032.google.protobuf."
-      "BoolValue\0228\n\007headers\030\003 \003(\0132\033.envoy.api.v"
-      "2.HeaderMatcherB\n\272\351\300\003\005\222\001\002\010\001B\031\n\020action_sp"
-      "ecifier\022\005\270\351\300\003\001\"b\n\rHeaderMatcher\022\027\n\004name\030"
-      "\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022\r\n\005value\030\002 \001(\t\022)\n\005regex"
-      "\030\003 \001(\0132\032.google.protobuf.BoolValue\"\304\004\n\013V"
-      "irtualHost\022\027\n\004name\030\001 \001(\tB\t\272\351\300\003\004r\002\020\001\022\033\n\007d"
-      "omains\030\002 \003(\tB\n\272\351\300\003\005\222\001\002\010\001\022#\n\006routes\030\003 \003(\013"
-      "2\023.envoy.api.v2.Route\022A\n\013require_tls\030\004 \001"
-      "(\0162,.envoy.api.v2.VirtualHost.TlsRequire"
-      "mentType\0226\n\020virtual_clusters\030\005 \003(\0132\034.env"
-      "oy.api.v2.VirtualCluster\022,\n\013rate_limits\030"
-      "\006 \003(\0132\027.envoy.api.v2.RateLimit\022\?\n\026reques"
-      "t_headers_to_add\030\007 \003(\0132\037.envoy.api.v2.He"
-      "aderValueOption\022@\n\027response_headers_to_a"
-      "dd\030\n \003(\0132\037.envoy.api.v2.HeaderValueOptio"
-      "n\022\"\n\032response_headers_to_remove\030\013 \003(\t\022&\n"
-      "\004cors\030\010 \001(\0132\030.envoy.api.v2.CorsPolicy\022&\n"
-      "\004auth\030\t \001(\0132\030.envoy.api.v2.AuthAction\":\n"
-      "\022TlsRequirementType\022\010\n\004NONE\020\000\022\021\n\rEXTERNA"
-      "L_ONLY\020\001\022\007\n\003ALL\020\002\"\321\002\n\022RouteConfiguration"
-      "\022\014\n\004name\030\001 \001(\t\0220\n\rvirtual_hosts\030\002 \003(\0132\031."
-      "envoy.api.v2.VirtualHost\022\035\n\025internal_onl"
-      "y_headers\030\003 \003(\t\022@\n\027response_headers_to_a"
-      "dd\030\004 \003(\0132\037.envoy.api.v2.HeaderValueOptio"
-      "n\022\"\n\032response_headers_to_remove\030\005 \003(\t\022\?\n"
-      "\026request_headers_to_add\030\006 \003(\0132\037.envoy.ap"
-      "i.v2.HeaderValueOption\0225\n\021validate_clust"
-      "ers\030\007 \001(\0132\032.google.protobuf.BoolValue2\337\001"
-      "\n\025RouteDiscoveryService\022U\n\014StreamRoutes\022"
-      "\036.envoy.api.v2.DiscoveryRequest\032\037.envoy."
-      "api.v2.DiscoveryResponse\"\000(\0010\001\022o\n\013FetchR"
-      "outes\022\036.envoy.api.v2.DiscoveryRequest\032\037."
-      "envoy.api.v2.DiscoveryResponse\"\037\202\323\344\223\002\031\"\024"
-      "/v2/discovery:routes:\001*b\006proto3"
+      "e\022\023\n\013disable_key\030\002 \001(\t\022/\n\007actions\030\003 \003(\0132"
+      "\036.envoy.api.v2.RateLimit.Action\032\207\006\n\006Acti"
+      "on\022F\n\016source_cluster\030\001 \001(\0132,.envoy.api.v"
+      "2.RateLimit.Action.SourceClusterH\000\022P\n\023de"
+      "stination_cluster\030\002 \001(\01321.envoy.api.v2.R"
+      "ateLimit.Action.DestinationClusterH\000\022H\n\017"
+      "request_headers\030\003 \001(\0132-.envoy.api.v2.Rat"
+      "eLimit.Action.RequestHeadersH\000\022F\n\016remote"
+      "_address\030\004 \001(\0132,.envoy.api.v2.RateLimit."
+      "Action.RemoteAddressH\000\022@\n\013generic_key\030\005 "
+      "\001(\0132).envoy.api.v2.RateLimit.Action.Gene"
+      "ricKeyH\000\022M\n\022header_value_match\030\006 \001(\0132/.e"
+      "nvoy.api.v2.RateLimit.Action.HeaderValue"
+      "MatchH\000\032\017\n\rSourceCluster\032\024\n\022DestinationC"
+      "luster\032=\n\016RequestHeaders\022\023\n\013header_name\030"
+      "\001 \001(\t\022\026\n\016descriptor_key\030\002 \001(\t\032\017\n\rRemoteA"
+      "ddress\032&\n\nGenericKey\022\030\n\020descriptor_value"
+      "\030\001 \001(\t\032\214\001\n\020HeaderValueMatch\022\030\n\020descripto"
+      "r_value\030\001 \001(\t\0220\n\014expect_match\030\002 \001(\0132\032.go"
+      "ogle.protobuf.BoolValue\022,\n\007headers\030\003 \003(\013"
+      "2\033.envoy.api.v2.HeaderMatcherB\022\n\020action_"
+      "specifier\"W\n\rHeaderMatcher\022\014\n\004name\030\001 \001(\t"
+      "\022\r\n\005value\030\002 \001(\t\022)\n\005regex\030\003 \001(\0132\032.google."
+      "protobuf.BoolValue\"\237\003\n\013VirtualHost\022\014\n\004na"
+      "me\030\001 \001(\t\022\017\n\007domains\030\002 \003(\t\022#\n\006routes\030\003 \003("
+      "\0132\023.envoy.api.v2.Route\022A\n\013require_tls\030\004 "
+      "\001(\0162,.envoy.api.v2.VirtualHost.TlsRequir"
+      "ementType\0226\n\020virtual_clusters\030\005 \003(\0132\034.en"
+      "voy.api.v2.VirtualCluster\022,\n\013rate_limits"
+      "\030\006 \003(\0132\027.envoy.api.v2.RateLimit\022\?\n\026reque"
+      "st_headers_to_add\030\007 \003(\0132\037.envoy.api.v2.H"
+      "eaderValueOption\022&\n\004cors\030\010 \001(\0132\030.envoy.a"
+      "pi.v2.CorsPolicy\":\n\022TlsRequirementType\022\010"
+      "\n\004NONE\020\000\022\021\n\rEXTERNAL_ONLY\020\001\022\007\n\003ALL\020\002\"\321\002\n"
+      "\022RouteConfiguration\022\014\n\004name\030\001 \001(\t\0220\n\rvir"
+      "tual_hosts\030\002 \003(\0132\031.envoy.api.v2.VirtualH"
+      "ost\022\035\n\025internal_only_headers\030\003 \003(\t\022@\n\027re"
+      "sponse_headers_to_add\030\004 \003(\0132\037.envoy.api."
+      "v2.HeaderValueOption\022\"\n\032response_headers"
+      "_to_remove\030\005 \003(\t\022\?\n\026request_headers_to_a"
+      "dd\030\006 \003(\0132\037.envoy.api.v2.HeaderValueOptio"
+      "n\0225\n\021validate_clusters\030\007 \001(\0132\032.google.pr"
+      "otobuf.BoolValue2\337\001\n\025RouteDiscoveryServi"
+      "ce\022U\n\014StreamRoutes\022\036.envoy.api.v2.Discov"
+      "eryRequest\032\037.envoy.api.v2.DiscoveryRespo"
+      "nse\"\000(\0010\001\022o\n\013FetchRoutes\022\036.envoy.api.v2."
+      "DiscoveryRequest\032\037.envoy.api.v2.Discover"
+      "yResponse\"\037\202\323\344\223\002\031\"\024/v2/discovery:routes:"
+      "\001*b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 5511);
+      descriptor, 4730);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/rds.proto", &protobuf_RegisterTypes);
-  ::protobuf_api_2fauth_2eproto::AddDescriptors();
   ::protobuf_api_2fbase_2eproto::AddDescriptors();
   ::protobuf_api_2fdiscovery_2eproto::AddDescriptors();
   ::protobuf_google_2fapi_2fannotations_2eproto::AddDescriptors();
   ::protobuf_google_2fprotobuf_2fduration_2eproto::AddDescriptors();
   ::protobuf_google_2fprotobuf_2fwrappers_2eproto::AddDescriptors();
-  ::protobuf_validate_2fvalidate_2eproto::AddDescriptors();
 }
 
 void AddDescriptors() {
@@ -1255,36 +1117,9 @@ struct StaticDescriptorInitializer {
 namespace envoy {
 namespace api {
 namespace v2 {
-const ::google::protobuf::EnumDescriptor* RedirectAction_RedirectResponseCode_descriptor() {
-  protobuf_api_2frds_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_api_2frds_2eproto::file_level_enum_descriptors[0];
-}
-bool RedirectAction_RedirectResponseCode_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const RedirectAction_RedirectResponseCode RedirectAction::MOVED_PERMANENTLY;
-const RedirectAction_RedirectResponseCode RedirectAction::FOUND;
-const RedirectAction_RedirectResponseCode RedirectAction::SEE_OTHER;
-const RedirectAction_RedirectResponseCode RedirectAction::TEMPORARY_REDIRECT;
-const RedirectAction_RedirectResponseCode RedirectAction::PERMANENT_REDIRECT;
-const RedirectAction_RedirectResponseCode RedirectAction::RedirectResponseCode_MIN;
-const RedirectAction_RedirectResponseCode RedirectAction::RedirectResponseCode_MAX;
-const int RedirectAction::RedirectResponseCode_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* VirtualHost_TlsRequirementType_descriptor() {
   protobuf_api_2frds_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_api_2frds_2eproto::file_level_enum_descriptors[1];
+  return protobuf_api_2frds_2eproto::file_level_enum_descriptors[0];
 }
 bool VirtualHost_TlsRequirementType_IsValid(int value) {
   switch (value) {
@@ -1313,18 +1148,6 @@ void WeightedCluster_ClusterWeight::InitAsDefaultInstance() {
       ::google::protobuf::UInt32Value::internal_default_instance());
   ::envoy::api::v2::_WeightedCluster_ClusterWeight_default_instance_._instance.get_mutable()->metadata_match_ = const_cast< ::envoy::api::v2::Metadata*>(
       ::envoy::api::v2::Metadata::internal_default_instance());
-}
-void WeightedCluster_ClusterWeight::clear_weight() {
-  if (GetArenaNoVirtual() == NULL && weight_ != NULL) {
-    delete weight_;
-  }
-  weight_ = NULL;
-}
-void WeightedCluster_ClusterWeight::clear_metadata_match() {
-  if (GetArenaNoVirtual() == NULL && metadata_match_ != NULL) {
-    delete metadata_match_;
-  }
-  metadata_match_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int WeightedCluster_ClusterWeight::kNameFieldNumber;
@@ -1432,7 +1255,7 @@ bool WeightedCluster_ClusterWeight::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string name = 1 [(.validate.rules) = {
+      // string name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -1448,11 +1271,11 @@ bool WeightedCluster_ClusterWeight::MergePartialFromCodedStream(
         break;
       }
 
-      // .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+      // .google.protobuf.UInt32Value weight = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_weight()));
         } else {
           goto handle_unusual;
@@ -1464,7 +1287,7 @@ bool WeightedCluster_ClusterWeight::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_metadata_match()));
         } else {
           goto handle_unusual;
@@ -1498,7 +1321,7 @@ void WeightedCluster_ClusterWeight::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -1508,7 +1331,7 @@ void WeightedCluster_ClusterWeight::SerializeWithCachedSizes(
       1, this->name(), output);
   }
 
-  // .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value weight = 2;
   if (this->has_weight()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->weight_, output);
@@ -1534,7 +1357,7 @@ void WeightedCluster_ClusterWeight::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -1545,17 +1368,17 @@ void WeightedCluster_ClusterWeight::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value weight = 2;
   if (this->has_weight()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->weight_, deterministic, target);
   }
 
   // .envoy.api.v2.Metadata metadata_match = 3;
   if (this->has_metadata_match()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->metadata_match_, deterministic, target);
   }
 
@@ -1576,24 +1399,24 @@ size_t WeightedCluster_ClusterWeight::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->name());
   }
 
-  // .google.protobuf.UInt32Value weight = 2 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value weight = 2;
   if (this->has_weight()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->weight_);
   }
 
   // .envoy.api.v2.Metadata metadata_match = 3;
   if (this->has_metadata_match()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->metadata_match_);
   }
 
@@ -1763,11 +1586,12 @@ bool WeightedCluster::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+      // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_clusters()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_clusters()));
         } else {
           goto handle_unusual;
         }
@@ -1816,7 +1640,7 @@ void WeightedCluster::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->clusters_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1847,11 +1671,11 @@ void WeightedCluster::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->clusters_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->clusters(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1883,13 +1707,13 @@ size_t WeightedCluster::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1 [(.validate.rules) = {
+  // repeated .envoy.api.v2.WeightedCluster.ClusterWeight clusters = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->clusters_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->clusters(static_cast<int>(i)));
     }
   }
@@ -1986,18 +1810,6 @@ void RouteMatch::InitAsDefaultInstance() {
       ::google::protobuf::BoolValue::internal_default_instance());
   ::envoy::api::v2::_RouteMatch_default_instance_._instance.get_mutable()->runtime_ = const_cast< ::envoy::api::v2::RuntimeUInt32*>(
       ::envoy::api::v2::RuntimeUInt32::internal_default_instance());
-}
-void RouteMatch::clear_case_sensitive() {
-  if (GetArenaNoVirtual() == NULL && case_sensitive_ != NULL) {
-    delete case_sensitive_;
-  }
-  case_sensitive_ = NULL;
-}
-void RouteMatch::clear_runtime() {
-  if (GetArenaNoVirtual() == NULL && runtime_ != NULL) {
-    delete runtime_;
-  }
-  runtime_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteMatch::kPrefixFieldNumber;
@@ -2201,7 +2013,7 @@ bool RouteMatch::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_case_sensitive()));
         } else {
           goto handle_unusual;
@@ -2213,7 +2025,7 @@ bool RouteMatch::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_runtime()));
         } else {
           goto handle_unusual;
@@ -2225,7 +2037,8 @@ bool RouteMatch::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_headers()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_headers()));
         } else {
           goto handle_unusual;
         }
@@ -2357,14 +2170,14 @@ void RouteMatch::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue case_sensitive = 4;
   if (this->has_case_sensitive()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->case_sensitive_, deterministic, target);
   }
 
   // .envoy.api.v2.RuntimeUInt32 runtime = 5;
   if (this->has_runtime()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->runtime_, deterministic, target);
   }
 
@@ -2372,7 +2185,7 @@ void RouteMatch::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->headers_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, this->headers(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2399,7 +2212,7 @@ size_t RouteMatch::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->headers(static_cast<int>(i)));
     }
   }
@@ -2407,14 +2220,14 @@ size_t RouteMatch::ByteSizeLong() const {
   // .google.protobuf.BoolValue case_sensitive = 4;
   if (this->has_case_sensitive()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->case_sensitive_);
   }
 
   // .envoy.api.v2.RuntimeUInt32 runtime = 5;
   if (this->has_runtime()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->runtime_);
   }
 
@@ -2545,18 +2358,6 @@ void CorsPolicy::InitAsDefaultInstance() {
       ::google::protobuf::BoolValue::internal_default_instance());
   ::envoy::api::v2::_CorsPolicy_default_instance_._instance.get_mutable()->enabled_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
-}
-void CorsPolicy::clear_allow_credentials() {
-  if (GetArenaNoVirtual() == NULL && allow_credentials_ != NULL) {
-    delete allow_credentials_;
-  }
-  allow_credentials_ = NULL;
-}
-void CorsPolicy::clear_enabled() {
-  if (GetArenaNoVirtual() == NULL && enabled_ != NULL) {
-    delete enabled_;
-  }
-  enabled_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CorsPolicy::kAllowOriginFieldNumber;
@@ -2776,7 +2577,7 @@ bool CorsPolicy::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_allow_credentials()));
         } else {
           goto handle_unusual;
@@ -2788,7 +2589,7 @@ bool CorsPolicy::MergePartialFromCodedStream(
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_enabled()));
         } else {
           goto handle_unusual;
@@ -2955,14 +2756,14 @@ void CorsPolicy::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue allow_credentials = 6;
   if (this->has_allow_credentials()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, *this->allow_credentials_, deterministic, target);
   }
 
   // .google.protobuf.BoolValue enabled = 7;
   if (this->has_enabled()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         7, *this->enabled_, deterministic, target);
   }
 
@@ -3022,14 +2823,14 @@ size_t CorsPolicy::ByteSizeLong() const {
   // .google.protobuf.BoolValue allow_credentials = 6;
   if (this->has_allow_credentials()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->allow_credentials_);
   }
 
   // .google.protobuf.BoolValue enabled = 7;
   if (this->has_enabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->enabled_);
   }
 
@@ -3135,18 +2936,6 @@ void RouteAction_RetryPolicy::InitAsDefaultInstance() {
       ::google::protobuf::UInt32Value::internal_default_instance());
   ::envoy::api::v2::_RouteAction_RetryPolicy_default_instance_._instance.get_mutable()->per_try_timeout_ = const_cast< ::google::protobuf::Duration*>(
       ::google::protobuf::Duration::internal_default_instance());
-}
-void RouteAction_RetryPolicy::clear_num_retries() {
-  if (GetArenaNoVirtual() == NULL && num_retries_ != NULL) {
-    delete num_retries_;
-  }
-  num_retries_ = NULL;
-}
-void RouteAction_RetryPolicy::clear_per_try_timeout() {
-  if (GetArenaNoVirtual() == NULL && per_try_timeout_ != NULL) {
-    delete per_try_timeout_;
-  }
-  per_try_timeout_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteAction_RetryPolicy::kRetryOnFieldNumber;
@@ -3274,7 +3063,7 @@ bool RouteAction_RetryPolicy::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_num_retries()));
         } else {
           goto handle_unusual;
@@ -3286,7 +3075,7 @@ bool RouteAction_RetryPolicy::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_per_try_timeout()));
         } else {
           goto handle_unusual;
@@ -3370,14 +3159,14 @@ void RouteAction_RetryPolicy::SerializeWithCachedSizes(
   // .google.protobuf.UInt32Value num_retries = 2;
   if (this->has_num_retries()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->num_retries_, deterministic, target);
   }
 
   // .google.protobuf.Duration per_try_timeout = 3;
   if (this->has_per_try_timeout()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->per_try_timeout_, deterministic, target);
   }
 
@@ -3408,14 +3197,14 @@ size_t RouteAction_RetryPolicy::ByteSizeLong() const {
   // .google.protobuf.UInt32Value num_retries = 2;
   if (this->has_num_retries()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->num_retries_);
   }
 
   // .google.protobuf.Duration per_try_timeout = 3;
   if (this->has_per_try_timeout()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->per_try_timeout_);
   }
 
@@ -3590,7 +3379,7 @@ bool RouteAction_RequestMirrorPolicy::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string cluster = 1 [(.validate.rules) = {
+      // string cluster = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -3648,7 +3437,7 @@ void RouteAction_RequestMirrorPolicy::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string cluster = 1 [(.validate.rules) = {
+  // string cluster = 1;
   if (this->cluster().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster().data(), static_cast<int>(this->cluster().length()),
@@ -3682,7 +3471,7 @@ void RouteAction_RequestMirrorPolicy::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string cluster = 1 [(.validate.rules) = {
+  // string cluster = 1;
   if (this->cluster().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->cluster().data(), static_cast<int>(this->cluster().length()),
@@ -3721,7 +3510,7 @@ size_t RouteAction_RequestMirrorPolicy::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string cluster = 1 [(.validate.rules) = {
+  // string cluster = 1;
   if (this->cluster().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -3895,7 +3684,7 @@ bool RouteAction_HashPolicy_Header::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string header_name = 1 [(.validate.rules) = {
+      // string header_name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -3937,7 +3726,7 @@ void RouteAction_HashPolicy_Header::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->header_name().data(), static_cast<int>(this->header_name().length()),
@@ -3961,7 +3750,7 @@ void RouteAction_HashPolicy_Header::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->header_name().data(), static_cast<int>(this->header_name().length()),
@@ -3989,7 +3778,7 @@ size_t RouteAction_HashPolicy_Header::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -4071,12 +3860,6 @@ void RouteAction_HashPolicy_Header::InternalSwap(RouteAction_HashPolicy_Header* 
 void RouteAction_HashPolicy_Cookie::InitAsDefaultInstance() {
   ::envoy::api::v2::_RouteAction_HashPolicy_Cookie_default_instance_._instance.get_mutable()->ttl_ = const_cast< ::google::protobuf::Duration*>(
       ::google::protobuf::Duration::internal_default_instance());
-}
-void RouteAction_HashPolicy_Cookie::clear_ttl() {
-  if (GetArenaNoVirtual() == NULL && ttl_ != NULL) {
-    delete ttl_;
-  }
-  ttl_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteAction_HashPolicy_Cookie::kNameFieldNumber;
@@ -4171,7 +3954,7 @@ bool RouteAction_HashPolicy_Cookie::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string name = 1 [(.validate.rules) = {
+      // string name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -4191,7 +3974,7 @@ bool RouteAction_HashPolicy_Cookie::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ttl()));
         } else {
           goto handle_unusual;
@@ -4225,7 +4008,7 @@ void RouteAction_HashPolicy_Cookie::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -4255,7 +4038,7 @@ void RouteAction_HashPolicy_Cookie::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -4269,7 +4052,7 @@ void RouteAction_HashPolicy_Cookie::SerializeWithCachedSizes(
   // .google.protobuf.Duration ttl = 2;
   if (this->has_ttl()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->ttl_, deterministic, target);
   }
 
@@ -4290,7 +4073,7 @@ size_t RouteAction_HashPolicy_Cookie::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -4300,7 +4083,7 @@ size_t RouteAction_HashPolicy_Cookie::ByteSizeLong() const {
   // .google.protobuf.Duration ttl = 2;
   if (this->has_ttl()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->ttl_);
   }
 
@@ -4624,48 +4407,6 @@ void RouteAction_HashPolicy::InitAsDefaultInstance() {
   ::envoy::api::v2::_RouteAction_HashPolicy_default_instance_.connection_properties_ = const_cast< ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties*>(
       ::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties::internal_default_instance());
 }
-void RouteAction_HashPolicy::set_allocated_header(::envoy::api::v2::RouteAction_HashPolicy_Header* header) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_policy_specifier();
-  if (header) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      header = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, header, submessage_arena);
-    }
-    set_has_header();
-    policy_specifier_.header_ = header;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.header)
-}
-void RouteAction_HashPolicy::set_allocated_cookie(::envoy::api::v2::RouteAction_HashPolicy_Cookie* cookie) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_policy_specifier();
-  if (cookie) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      cookie = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, cookie, submessage_arena);
-    }
-    set_has_cookie();
-    policy_specifier_.cookie_ = cookie;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.cookie)
-}
-void RouteAction_HashPolicy::set_allocated_connection_properties(::envoy::api::v2::RouteAction_HashPolicy_ConnectionProperties* connection_properties) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_policy_specifier();
-  if (connection_properties) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      connection_properties = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, connection_properties, submessage_arena);
-    }
-    set_has_connection_properties();
-    policy_specifier_.connection_properties_ = connection_properties;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.HashPolicy.connection_properties)
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteAction_HashPolicy::kHeaderFieldNumber;
 const int RouteAction_HashPolicy::kCookieFieldNumber;
@@ -4792,7 +4533,7 @@ bool RouteAction_HashPolicy::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_header()));
         } else {
           goto handle_unusual;
@@ -4804,7 +4545,7 @@ bool RouteAction_HashPolicy::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_cookie()));
         } else {
           goto handle_unusual;
@@ -4816,7 +4557,7 @@ bool RouteAction_HashPolicy::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_connection_properties()));
         } else {
           goto handle_unusual;
@@ -4885,21 +4626,21 @@ void RouteAction_HashPolicy::SerializeWithCachedSizes(
   // .envoy.api.v2.RouteAction.HashPolicy.Header header = 1;
   if (has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *policy_specifier_.header_, deterministic, target);
   }
 
   // .envoy.api.v2.RouteAction.HashPolicy.Cookie cookie = 2;
   if (has_cookie()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *policy_specifier_.cookie_, deterministic, target);
   }
 
   // .envoy.api.v2.RouteAction.HashPolicy.ConnectionProperties connection_properties = 3;
   if (has_connection_properties()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *policy_specifier_.connection_properties_, deterministic, target);
   }
 
@@ -4924,21 +4665,21 @@ size_t RouteAction_HashPolicy::ByteSizeLong() const {
     // .envoy.api.v2.RouteAction.HashPolicy.Header header = 1;
     case kHeader: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *policy_specifier_.header_);
       break;
     }
     // .envoy.api.v2.RouteAction.HashPolicy.Cookie cookie = 2;
     case kCookie: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *policy_specifier_.cookie_);
       break;
     }
     // .envoy.api.v2.RouteAction.HashPolicy.ConnectionProperties connection_properties = 3;
     case kConnectionProperties: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *policy_specifier_.connection_properties_);
       break;
     }
@@ -5058,71 +4799,6 @@ void RouteAction::InitAsDefaultInstance() {
   ::envoy::api::v2::_RouteAction_default_instance_._instance.get_mutable()->cors_ = const_cast< ::envoy::api::v2::CorsPolicy*>(
       ::envoy::api::v2::CorsPolicy::internal_default_instance());
 }
-void RouteAction::set_allocated_weighted_clusters(::envoy::api::v2::WeightedCluster* weighted_clusters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_cluster_specifier();
-  if (weighted_clusters) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      weighted_clusters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, weighted_clusters, submessage_arena);
-    }
-    set_has_weighted_clusters();
-    cluster_specifier_.weighted_clusters_ = weighted_clusters;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.weighted_clusters)
-}
-void RouteAction::clear_metadata_match() {
-  if (GetArenaNoVirtual() == NULL && metadata_match_ != NULL) {
-    delete metadata_match_;
-  }
-  metadata_match_ = NULL;
-}
-void RouteAction::set_allocated_auto_host_rewrite(::google::protobuf::BoolValue* auto_host_rewrite) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_host_rewrite_specifier();
-  if (auto_host_rewrite) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(auto_host_rewrite)->GetArena();
-    if (message_arena != submessage_arena) {
-      auto_host_rewrite = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, auto_host_rewrite, submessage_arena);
-    }
-    set_has_auto_host_rewrite();
-    host_rewrite_specifier_.auto_host_rewrite_ = auto_host_rewrite;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RouteAction.auto_host_rewrite)
-}
-void RouteAction::clear_auto_host_rewrite() {
-  if (has_auto_host_rewrite()) {
-    delete host_rewrite_specifier_.auto_host_rewrite_;
-    clear_has_host_rewrite_specifier();
-  }
-}
-void RouteAction::clear_timeout() {
-  if (GetArenaNoVirtual() == NULL && timeout_ != NULL) {
-    delete timeout_;
-  }
-  timeout_ = NULL;
-}
-void RouteAction::clear_request_headers_to_add() {
-  request_headers_to_add_.Clear();
-}
-void RouteAction::clear_response_headers_to_add() {
-  response_headers_to_add_.Clear();
-}
-void RouteAction::clear_include_vh_rate_limits() {
-  if (GetArenaNoVirtual() == NULL && include_vh_rate_limits_ != NULL) {
-    delete include_vh_rate_limits_;
-  }
-  include_vh_rate_limits_ = NULL;
-}
-void RouteAction::clear_use_websocket() {
-  if (GetArenaNoVirtual() == NULL && use_websocket_ != NULL) {
-    delete use_websocket_;
-  }
-  use_websocket_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteAction::kClusterFieldNumber;
 const int RouteAction::kClusterHeaderFieldNumber;
@@ -5136,8 +4812,6 @@ const int RouteAction::kRetryPolicyFieldNumber;
 const int RouteAction::kRequestMirrorPolicyFieldNumber;
 const int RouteAction::kPriorityFieldNumber;
 const int RouteAction::kRequestHeadersToAddFieldNumber;
-const int RouteAction::kResponseHeadersToAddFieldNumber;
-const int RouteAction::kResponseHeadersToRemoveFieldNumber;
 const int RouteAction::kRateLimitsFieldNumber;
 const int RouteAction::kIncludeVhRateLimitsFieldNumber;
 const int RouteAction::kHashPolicyFieldNumber;
@@ -5159,8 +4833,6 @@ RouteAction::RouteAction(const RouteAction& from)
       request_headers_to_add_(from.request_headers_to_add_),
       rate_limits_(from.rate_limits_),
       hash_policy_(from.hash_policy_),
-      response_headers_to_add_(from.response_headers_to_add_),
-      response_headers_to_remove_(from.response_headers_to_remove_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   prefix_rewrite_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -5343,8 +5015,6 @@ void RouteAction::Clear() {
   request_headers_to_add_.Clear();
   rate_limits_.Clear();
   hash_policy_.Clear();
-  response_headers_to_add_.Clear();
-  response_headers_to_remove_.Clear();
   prefix_rewrite_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && metadata_match_ != NULL) {
     delete metadata_match_;
@@ -5426,7 +5096,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_weighted_clusters()));
         } else {
           goto handle_unusual;
@@ -5438,7 +5108,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_metadata_match()));
         } else {
           goto handle_unusual;
@@ -5482,7 +5152,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_auto_host_rewrite()));
         } else {
           goto handle_unusual;
@@ -5494,7 +5164,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_timeout()));
         } else {
           goto handle_unusual;
@@ -5506,7 +5176,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_retry_policy()));
         } else {
           goto handle_unusual;
@@ -5518,7 +5188,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 10: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_request_mirror_policy()));
         } else {
           goto handle_unusual;
@@ -5545,7 +5215,8 @@ bool RouteAction::MergePartialFromCodedStream(
       case 12: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_request_headers_to_add()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_request_headers_to_add()));
         } else {
           goto handle_unusual;
         }
@@ -5556,7 +5227,8 @@ bool RouteAction::MergePartialFromCodedStream(
       case 13: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_rate_limits()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_rate_limits()));
         } else {
           goto handle_unusual;
         }
@@ -5567,7 +5239,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 14: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(114u /* 114 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_include_vh_rate_limits()));
         } else {
           goto handle_unusual;
@@ -5579,7 +5251,8 @@ bool RouteAction::MergePartialFromCodedStream(
       case 15: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(122u /* 122 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_hash_policy()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_hash_policy()));
         } else {
           goto handle_unusual;
         }
@@ -5590,7 +5263,7 @@ bool RouteAction::MergePartialFromCodedStream(
       case 16: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(130u /* 130 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_use_websocket()));
         } else {
           goto handle_unusual;
@@ -5602,36 +5275,8 @@ bool RouteAction::MergePartialFromCodedStream(
       case 17: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(138u /* 138 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_cors()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(146u /* 146 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_response_headers_to_add()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string response_headers_to_remove = 19;
-      case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(154u /* 154 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->add_response_headers_to_remove()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->response_headers_to_remove(this->response_headers_to_remove_size() - 1).data(),
-            static_cast<int>(this->response_headers_to_remove(this->response_headers_to_remove_size() - 1).length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "envoy.api.v2.RouteAction.response_headers_to_remove"));
         } else {
           goto handle_unusual;
         }
@@ -5785,23 +5430,6 @@ void RouteAction::SerializeWithCachedSizes(
       17, *this->cors_, output);
   }
 
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->response_headers_to_add_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      18, this->response_headers_to_add(static_cast<int>(i)), output);
-  }
-
-  // repeated string response_headers_to_remove = 19;
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->response_headers_to_remove(i).data(), static_cast<int>(this->response_headers_to_remove(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "envoy.api.v2.RouteAction.response_headers_to_remove");
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      19, this->response_headers_to_remove(i), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -5841,14 +5469,14 @@ void RouteAction::SerializeWithCachedSizes(
   // .envoy.api.v2.WeightedCluster weighted_clusters = 3;
   if (has_weighted_clusters()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *cluster_specifier_.weighted_clusters_, deterministic, target);
   }
 
   // .envoy.api.v2.Metadata metadata_match = 4;
   if (this->has_metadata_match()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->metadata_match_, deterministic, target);
   }
 
@@ -5877,28 +5505,28 @@ void RouteAction::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue auto_host_rewrite = 7;
   if (has_auto_host_rewrite()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         7, *host_rewrite_specifier_.auto_host_rewrite_, deterministic, target);
   }
 
   // .google.protobuf.Duration timeout = 8;
   if (this->has_timeout()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         8, *this->timeout_, deterministic, target);
   }
 
   // .envoy.api.v2.RouteAction.RetryPolicy retry_policy = 9;
   if (this->has_retry_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         9, *this->retry_policy_, deterministic, target);
   }
 
   // .envoy.api.v2.RouteAction.RequestMirrorPolicy request_mirror_policy = 10;
   if (this->has_request_mirror_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         10, *this->request_mirror_policy_, deterministic, target);
   }
 
@@ -5912,7 +5540,7 @@ void RouteAction::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->request_headers_to_add_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         12, this->request_headers_to_add(static_cast<int>(i)), deterministic, target);
   }
 
@@ -5920,14 +5548,14 @@ void RouteAction::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->rate_limits_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         13, this->rate_limits(static_cast<int>(i)), deterministic, target);
   }
 
   // .google.protobuf.BoolValue include_vh_rate_limits = 14;
   if (this->has_include_vh_rate_limits()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         14, *this->include_vh_rate_limits_, deterministic, target);
   }
 
@@ -5935,40 +5563,22 @@ void RouteAction::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->hash_policy_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         15, this->hash_policy(static_cast<int>(i)), deterministic, target);
   }
 
   // .google.protobuf.BoolValue use_websocket = 16;
   if (this->has_use_websocket()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         16, *this->use_websocket_, deterministic, target);
   }
 
   // .envoy.api.v2.CorsPolicy cors = 17;
   if (this->has_cors()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         17, *this->cors_, deterministic, target);
-  }
-
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->response_headers_to_add_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        18, this->response_headers_to_add(static_cast<int>(i)), deterministic, target);
-  }
-
-  // repeated string response_headers_to_remove = 19;
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->response_headers_to_remove(i).data(), static_cast<int>(this->response_headers_to_remove(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "envoy.api.v2.RouteAction.response_headers_to_remove");
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteStringToArray(19, this->response_headers_to_remove(i), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5994,7 +5604,7 @@ size_t RouteAction::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->request_headers_to_add(static_cast<int>(i)));
     }
   }
@@ -6005,7 +5615,7 @@ size_t RouteAction::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->rate_limits(static_cast<int>(i)));
     }
   }
@@ -6016,28 +5626,9 @@ size_t RouteAction::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->hash_policy(static_cast<int>(i)));
     }
-  }
-
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 18;
-  {
-    unsigned int count = static_cast<unsigned int>(this->response_headers_to_add_size());
-    total_size += 2UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->response_headers_to_add(static_cast<int>(i)));
-    }
-  }
-
-  // repeated string response_headers_to_remove = 19;
-  total_size += 2 *
-      ::google::protobuf::internal::FromIntSize(this->response_headers_to_remove_size());
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-      this->response_headers_to_remove(i));
   }
 
   // string prefix_rewrite = 5;
@@ -6050,49 +5641,49 @@ size_t RouteAction::ByteSizeLong() const {
   // .envoy.api.v2.Metadata metadata_match = 4;
   if (this->has_metadata_match()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->metadata_match_);
   }
 
   // .google.protobuf.Duration timeout = 8;
   if (this->has_timeout()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->timeout_);
   }
 
   // .envoy.api.v2.RouteAction.RetryPolicy retry_policy = 9;
   if (this->has_retry_policy()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->retry_policy_);
   }
 
   // .envoy.api.v2.RouteAction.RequestMirrorPolicy request_mirror_policy = 10;
   if (this->has_request_mirror_policy()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->request_mirror_policy_);
   }
 
   // .google.protobuf.BoolValue include_vh_rate_limits = 14;
   if (this->has_include_vh_rate_limits()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->include_vh_rate_limits_);
   }
 
   // .google.protobuf.BoolValue use_websocket = 16;
   if (this->has_use_websocket()) {
     total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->use_websocket_);
   }
 
   // .envoy.api.v2.CorsPolicy cors = 17;
   if (this->has_cors()) {
     total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->cors_);
   }
 
@@ -6120,7 +5711,7 @@ size_t RouteAction::ByteSizeLong() const {
     // .envoy.api.v2.WeightedCluster weighted_clusters = 3;
     case kWeightedClusters: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *cluster_specifier_.weighted_clusters_);
       break;
     }
@@ -6139,7 +5730,7 @@ size_t RouteAction::ByteSizeLong() const {
     // .google.protobuf.BoolValue auto_host_rewrite = 7;
     case kAutoHostRewrite: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *host_rewrite_specifier_.auto_host_rewrite_);
       break;
     }
@@ -6179,8 +5770,6 @@ void RouteAction::MergeFrom(const RouteAction& from) {
   request_headers_to_add_.MergeFrom(from.request_headers_to_add_);
   rate_limits_.MergeFrom(from.rate_limits_);
   hash_policy_.MergeFrom(from.hash_policy_);
-  response_headers_to_add_.MergeFrom(from.response_headers_to_add_);
-  response_headers_to_remove_.MergeFrom(from.response_headers_to_remove_);
   if (from.prefix_rewrite().size() > 0) {
 
     prefix_rewrite_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.prefix_rewrite_);
@@ -6268,8 +5857,6 @@ void RouteAction::InternalSwap(RouteAction* other) {
   request_headers_to_add_.InternalSwap(&other->request_headers_to_add_);
   rate_limits_.InternalSwap(&other->rate_limits_);
   hash_policy_.InternalSwap(&other->hash_policy_);
-  response_headers_to_add_.InternalSwap(&other->response_headers_to_add_);
-  response_headers_to_remove_.InternalSwap(&other->response_headers_to_remove_);
   prefix_rewrite_.Swap(&other->prefix_rewrite_);
   swap(metadata_match_, other->metadata_match_);
   swap(timeout_, other->timeout_);
@@ -6300,7 +5887,6 @@ void RedirectAction::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RedirectAction::kHostRedirectFieldNumber;
 const int RedirectAction::kPathRedirectFieldNumber;
-const int RedirectAction::kResponseCodeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RedirectAction::RedirectAction()
@@ -6324,14 +5910,12 @@ RedirectAction::RedirectAction(const RedirectAction& from)
   if (from.path_redirect().size() > 0) {
     path_redirect_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.path_redirect_);
   }
-  response_code_ = from.response_code_;
   // @@protoc_insertion_point(copy_constructor:envoy.api.v2.RedirectAction)
 }
 
 void RedirectAction::SharedCtor() {
   host_redirect_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   path_redirect_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  response_code_ = 0;
   _cached_size_ = 0;
 }
 
@@ -6376,7 +5960,6 @@ void RedirectAction::Clear() {
 
   host_redirect_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   path_redirect_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  response_code_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -6416,21 +5999,6 @@ bool RedirectAction::MergePartialFromCodedStream(
             this->path_redirect().data(), static_cast<int>(this->path_redirect().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "envoy.api.v2.RedirectAction.path_redirect"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_response_code(static_cast< ::envoy::api::v2::RedirectAction_RedirectResponseCode >(value));
         } else {
           goto handle_unusual;
         }
@@ -6483,12 +6051,6 @@ void RedirectAction::SerializeWithCachedSizes(
       2, this->path_redirect(), output);
   }
 
-  // .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-  if (this->response_code() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      3, this->response_code(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -6525,12 +6087,6 @@ void RedirectAction::SerializeWithCachedSizes(
         2, this->path_redirect(), target);
   }
 
-  // .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-  if (this->response_code() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      3, this->response_code(), target);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -6560,12 +6116,6 @@ size_t RedirectAction::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->path_redirect());
-  }
-
-  // .envoy.api.v2.RedirectAction.RedirectResponseCode response_code = 3;
-  if (this->response_code() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->response_code());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6605,9 +6155,6 @@ void RedirectAction::MergeFrom(const RedirectAction& from) {
 
     path_redirect_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.path_redirect_);
   }
-  if (from.response_code() != 0) {
-    set_response_code(from.response_code());
-  }
 }
 
 void RedirectAction::CopyFrom(const ::google::protobuf::Message& from) {
@@ -6636,7 +6183,6 @@ void RedirectAction::InternalSwap(RedirectAction* other) {
   using std::swap;
   host_redirect_.Swap(&other->host_redirect_);
   path_redirect_.Swap(&other->path_redirect_);
-  swap(response_code_, other->response_code_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -6732,7 +6278,7 @@ bool Decorator::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string operation = 1 [(.validate.rules) = {
+      // string operation = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -6774,7 +6320,7 @@ void Decorator::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string operation = 1 [(.validate.rules) = {
+  // string operation = 1;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->operation().data(), static_cast<int>(this->operation().length()),
@@ -6798,7 +6344,7 @@ void Decorator::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string operation = 1 [(.validate.rules) = {
+  // string operation = 1;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->operation().data(), static_cast<int>(this->operation().length()),
@@ -6826,7 +6372,7 @@ size_t Decorator::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string operation = 1 [(.validate.rules) = {
+  // string operation = 1;
   if (this->operation().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -6916,48 +6462,6 @@ void Route::InitAsDefaultInstance() {
       ::envoy::api::v2::Metadata::internal_default_instance());
   ::envoy::api::v2::_Route_default_instance_._instance.get_mutable()->decorator_ = const_cast< ::envoy::api::v2::Decorator*>(
       ::envoy::api::v2::Decorator::internal_default_instance());
-  ::envoy::api::v2::_Route_default_instance_._instance.get_mutable()->auth_ = const_cast< ::envoy::api::v2::AuthAction*>(
-      ::envoy::api::v2::AuthAction::internal_default_instance());
-}
-void Route::set_allocated_route(::envoy::api::v2::RouteAction* route) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action();
-  if (route) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      route = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, route, submessage_arena);
-    }
-    set_has_route();
-    action_.route_ = route;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.route)
-}
-void Route::set_allocated_redirect(::envoy::api::v2::RedirectAction* redirect) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action();
-  if (redirect) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      redirect = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, redirect, submessage_arena);
-    }
-    set_has_redirect();
-    action_.redirect_ = redirect;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Route.redirect)
-}
-void Route::clear_metadata() {
-  if (GetArenaNoVirtual() == NULL && metadata_ != NULL) {
-    delete metadata_;
-  }
-  metadata_ = NULL;
-}
-void Route::clear_auth() {
-  if (GetArenaNoVirtual() == NULL && auth_ != NULL) {
-    delete auth_;
-  }
-  auth_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Route::kMatchFieldNumber;
@@ -6965,7 +6469,6 @@ const int Route::kRouteFieldNumber;
 const int Route::kRedirectFieldNumber;
 const int Route::kMetadataFieldNumber;
 const int Route::kDecoratorFieldNumber;
-const int Route::kAuthFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Route::Route()
@@ -6996,11 +6499,6 @@ Route::Route(const Route& from)
   } else {
     decorator_ = NULL;
   }
-  if (from.has_auth()) {
-    auth_ = new ::envoy::api::v2::AuthAction(*from.auth_);
-  } else {
-    auth_ = NULL;
-  }
   clear_has_action();
   switch (from.action_case()) {
     case kRoute: {
@@ -7020,8 +6518,8 @@ Route::Route(const Route& from)
 
 void Route::SharedCtor() {
   ::memset(&match_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&auth_) -
-      reinterpret_cast<char*>(&match_)) + sizeof(auth_));
+      reinterpret_cast<char*>(&decorator_) -
+      reinterpret_cast<char*>(&match_)) + sizeof(decorator_));
   clear_has_action();
   _cached_size_ = 0;
 }
@@ -7035,7 +6533,6 @@ void Route::SharedDtor() {
   if (this != internal_default_instance()) delete match_;
   if (this != internal_default_instance()) delete metadata_;
   if (this != internal_default_instance()) delete decorator_;
-  if (this != internal_default_instance()) delete auth_;
   if (has_action()) {
     clear_action();
   }
@@ -7101,10 +6598,6 @@ void Route::Clear() {
     delete decorator_;
   }
   decorator_ = NULL;
-  if (GetArenaNoVirtual() == NULL && auth_ != NULL) {
-    delete auth_;
-  }
-  auth_ = NULL;
   clear_action();
   _internal_metadata_.Clear();
 }
@@ -7119,11 +6612,11 @@ bool Route::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+      // .envoy.api.v2.RouteMatch match = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_match()));
         } else {
           goto handle_unusual;
@@ -7135,7 +6628,7 @@ bool Route::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_route()));
         } else {
           goto handle_unusual;
@@ -7147,7 +6640,7 @@ bool Route::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_redirect()));
         } else {
           goto handle_unusual;
@@ -7159,7 +6652,7 @@ bool Route::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_metadata()));
         } else {
           goto handle_unusual;
@@ -7171,20 +6664,8 @@ bool Route::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_decorator()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .envoy.api.v2.AuthAction auth = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_auth()));
         } else {
           goto handle_unusual;
         }
@@ -7217,7 +6698,7 @@ void Route::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+  // .envoy.api.v2.RouteMatch match = 1;
   if (this->has_match()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->match_, output);
@@ -7247,12 +6728,6 @@ void Route::SerializeWithCachedSizes(
       5, *this->decorator_, output);
   }
 
-  // .envoy.api.v2.AuthAction auth = 6;
-  if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *this->auth_, output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -7267,46 +6742,39 @@ void Route::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+  // .envoy.api.v2.RouteMatch match = 1;
   if (this->has_match()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->match_, deterministic, target);
   }
 
   // .envoy.api.v2.RouteAction route = 2;
   if (has_route()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *action_.route_, deterministic, target);
   }
 
   // .envoy.api.v2.RedirectAction redirect = 3;
   if (has_redirect()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *action_.redirect_, deterministic, target);
   }
 
   // .envoy.api.v2.Metadata metadata = 4;
   if (this->has_metadata()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->metadata_, deterministic, target);
   }
 
   // .envoy.api.v2.Decorator decorator = 5;
   if (this->has_decorator()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->decorator_, deterministic, target);
-  }
-
-  // .envoy.api.v2.AuthAction auth = 6;
-  if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, *this->auth_, deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7326,46 +6794,39 @@ size_t Route::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .envoy.api.v2.RouteMatch match = 1 [(.validate.rules) = {
+  // .envoy.api.v2.RouteMatch match = 1;
   if (this->has_match()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->match_);
   }
 
   // .envoy.api.v2.Metadata metadata = 4;
   if (this->has_metadata()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->metadata_);
   }
 
   // .envoy.api.v2.Decorator decorator = 5;
   if (this->has_decorator()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->decorator_);
-  }
-
-  // .envoy.api.v2.AuthAction auth = 6;
-  if (this->has_auth()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->auth_);
   }
 
   switch (action_case()) {
     // .envoy.api.v2.RouteAction route = 2;
     case kRoute: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_.route_);
       break;
     }
     // .envoy.api.v2.RedirectAction redirect = 3;
     case kRedirect: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_.redirect_);
       break;
     }
@@ -7411,9 +6872,6 @@ void Route::MergeFrom(const Route& from) {
   if (from.has_decorator()) {
     mutable_decorator()->::envoy::api::v2::Decorator::MergeFrom(from.decorator());
   }
-  if (from.has_auth()) {
-    mutable_auth()->::envoy::api::v2::AuthAction::MergeFrom(from.auth());
-  }
   switch (from.action_case()) {
     case kRoute: {
       mutable_route()->::envoy::api::v2::RouteAction::MergeFrom(from.route());
@@ -7456,7 +6914,6 @@ void Route::InternalSwap(Route* other) {
   swap(match_, other->match_);
   swap(metadata_, other->metadata_);
   swap(decorator_, other->decorator_);
-  swap(auth_, other->auth_);
   swap(action_, other->action_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -7566,7 +7023,7 @@ bool VirtualCluster::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string pattern = 1 [(.validate.rules) = {
+      // string pattern = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -7582,7 +7039,7 @@ bool VirtualCluster::MergePartialFromCodedStream(
         break;
       }
 
-      // string name = 2 [(.validate.rules) = {
+      // string name = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -7639,7 +7096,7 @@ void VirtualCluster::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string pattern = 1 [(.validate.rules) = {
+  // string pattern = 1;
   if (this->pattern().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->pattern().data(), static_cast<int>(this->pattern().length()),
@@ -7649,7 +7106,7 @@ void VirtualCluster::SerializeWithCachedSizes(
       1, this->pattern(), output);
   }
 
-  // string name = 2 [(.validate.rules) = {
+  // string name = 2;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -7679,7 +7136,7 @@ void VirtualCluster::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string pattern = 1 [(.validate.rules) = {
+  // string pattern = 1;
   if (this->pattern().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->pattern().data(), static_cast<int>(this->pattern().length()),
@@ -7690,7 +7147,7 @@ void VirtualCluster::SerializeWithCachedSizes(
         1, this->pattern(), target);
   }
 
-  // string name = 2 [(.validate.rules) = {
+  // string name = 2;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -7724,14 +7181,14 @@ size_t VirtualCluster::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string pattern = 1 [(.validate.rules) = {
+  // string pattern = 1;
   if (this->pattern().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->pattern());
   }
 
-  // string name = 2 [(.validate.rules) = {
+  // string name = 2;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -8304,7 +7761,7 @@ bool RateLimit_Action_RequestHeaders::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string header_name = 1 [(.validate.rules) = {
+      // string header_name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -8320,7 +7777,7 @@ bool RateLimit_Action_RequestHeaders::MergePartialFromCodedStream(
         break;
       }
 
-      // string descriptor_key = 2 [(.validate.rules) = {
+      // string descriptor_key = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -8362,7 +7819,7 @@ void RateLimit_Action_RequestHeaders::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->header_name().data(), static_cast<int>(this->header_name().length()),
@@ -8372,7 +7829,7 @@ void RateLimit_Action_RequestHeaders::SerializeWithCachedSizes(
       1, this->header_name(), output);
   }
 
-  // string descriptor_key = 2 [(.validate.rules) = {
+  // string descriptor_key = 2;
   if (this->descriptor_key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_key().data(), static_cast<int>(this->descriptor_key().length()),
@@ -8396,7 +7853,7 @@ void RateLimit_Action_RequestHeaders::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->header_name().data(), static_cast<int>(this->header_name().length()),
@@ -8407,7 +7864,7 @@ void RateLimit_Action_RequestHeaders::SerializeWithCachedSizes(
         1, this->header_name(), target);
   }
 
-  // string descriptor_key = 2 [(.validate.rules) = {
+  // string descriptor_key = 2;
   if (this->descriptor_key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_key().data(), static_cast<int>(this->descriptor_key().length()),
@@ -8435,14 +7892,14 @@ size_t RateLimit_Action_RequestHeaders::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string header_name = 1 [(.validate.rules) = {
+  // string header_name = 1;
   if (this->header_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->header_name());
   }
 
-  // string descriptor_key = 2 [(.validate.rules) = {
+  // string descriptor_key = 2;
   if (this->descriptor_key().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -8803,7 +8260,7 @@ bool RateLimit_Action_GenericKey::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string descriptor_value = 1 [(.validate.rules) = {
+      // string descriptor_value = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -8845,7 +8302,7 @@ void RateLimit_Action_GenericKey::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_value().data(), static_cast<int>(this->descriptor_value().length()),
@@ -8869,7 +8326,7 @@ void RateLimit_Action_GenericKey::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_value().data(), static_cast<int>(this->descriptor_value().length()),
@@ -8897,7 +8354,7 @@ size_t RateLimit_Action_GenericKey::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -8979,12 +8436,6 @@ void RateLimit_Action_GenericKey::InternalSwap(RateLimit_Action_GenericKey* othe
 void RateLimit_Action_HeaderValueMatch::InitAsDefaultInstance() {
   ::envoy::api::v2::_RateLimit_Action_HeaderValueMatch_default_instance_._instance.get_mutable()->expect_match_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
-}
-void RateLimit_Action_HeaderValueMatch::clear_expect_match() {
-  if (GetArenaNoVirtual() == NULL && expect_match_ != NULL) {
-    delete expect_match_;
-  }
-  expect_match_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RateLimit_Action_HeaderValueMatch::kDescriptorValueFieldNumber;
@@ -9082,7 +8533,7 @@ bool RateLimit_Action_HeaderValueMatch::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string descriptor_value = 1 [(.validate.rules) = {
+      // string descriptor_value = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -9102,7 +8553,7 @@ bool RateLimit_Action_HeaderValueMatch::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_expect_match()));
         } else {
           goto handle_unusual;
@@ -9110,11 +8561,12 @@ bool RateLimit_Action_HeaderValueMatch::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+      // repeated .envoy.api.v2.HeaderMatcher headers = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_headers()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_headers()));
         } else {
           goto handle_unusual;
         }
@@ -9147,7 +8599,7 @@ void RateLimit_Action_HeaderValueMatch::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_value().data(), static_cast<int>(this->descriptor_value().length()),
@@ -9163,7 +8615,7 @@ void RateLimit_Action_HeaderValueMatch::SerializeWithCachedSizes(
       2, *this->expect_match_, output);
   }
 
-  // repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.HeaderMatcher headers = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->headers_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -9184,7 +8636,7 @@ void RateLimit_Action_HeaderValueMatch::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->descriptor_value().data(), static_cast<int>(this->descriptor_value().length()),
@@ -9198,15 +8650,15 @@ void RateLimit_Action_HeaderValueMatch::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue expect_match = 2;
   if (this->has_expect_match()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->expect_match_, deterministic, target);
   }
 
-  // repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.HeaderMatcher headers = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->headers_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, this->headers(static_cast<int>(i)), deterministic, target);
   }
 
@@ -9227,18 +8679,18 @@ size_t RateLimit_Action_HeaderValueMatch::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .envoy.api.v2.HeaderMatcher headers = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.HeaderMatcher headers = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->headers_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->headers(static_cast<int>(i)));
     }
   }
 
-  // string descriptor_value = 1 [(.validate.rules) = {
+  // string descriptor_value = 1;
   if (this->descriptor_value().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -9248,7 +8700,7 @@ size_t RateLimit_Action_HeaderValueMatch::ByteSizeLong() const {
   // .google.protobuf.BoolValue expect_match = 2;
   if (this->has_expect_match()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->expect_match_);
   }
 
@@ -9343,90 +8795,6 @@ void RateLimit_Action::InitAsDefaultInstance() {
       ::envoy::api::v2::RateLimit_Action_GenericKey::internal_default_instance());
   ::envoy::api::v2::_RateLimit_Action_default_instance_.header_value_match_ = const_cast< ::envoy::api::v2::RateLimit_Action_HeaderValueMatch*>(
       ::envoy::api::v2::RateLimit_Action_HeaderValueMatch::internal_default_instance());
-}
-void RateLimit_Action::set_allocated_source_cluster(::envoy::api::v2::RateLimit_Action_SourceCluster* source_cluster) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (source_cluster) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      source_cluster = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, source_cluster, submessage_arena);
-    }
-    set_has_source_cluster();
-    action_specifier_.source_cluster_ = source_cluster;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.source_cluster)
-}
-void RateLimit_Action::set_allocated_destination_cluster(::envoy::api::v2::RateLimit_Action_DestinationCluster* destination_cluster) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (destination_cluster) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      destination_cluster = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, destination_cluster, submessage_arena);
-    }
-    set_has_destination_cluster();
-    action_specifier_.destination_cluster_ = destination_cluster;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.destination_cluster)
-}
-void RateLimit_Action::set_allocated_request_headers(::envoy::api::v2::RateLimit_Action_RequestHeaders* request_headers) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (request_headers) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      request_headers = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, request_headers, submessage_arena);
-    }
-    set_has_request_headers();
-    action_specifier_.request_headers_ = request_headers;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.request_headers)
-}
-void RateLimit_Action::set_allocated_remote_address(::envoy::api::v2::RateLimit_Action_RemoteAddress* remote_address) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (remote_address) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      remote_address = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, remote_address, submessage_arena);
-    }
-    set_has_remote_address();
-    action_specifier_.remote_address_ = remote_address;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.remote_address)
-}
-void RateLimit_Action::set_allocated_generic_key(::envoy::api::v2::RateLimit_Action_GenericKey* generic_key) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (generic_key) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      generic_key = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, generic_key, submessage_arena);
-    }
-    set_has_generic_key();
-    action_specifier_.generic_key_ = generic_key;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.generic_key)
-}
-void RateLimit_Action::set_allocated_header_value_match(::envoy::api::v2::RateLimit_Action_HeaderValueMatch* header_value_match) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_action_specifier();
-  if (header_value_match) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      header_value_match = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, header_value_match, submessage_arena);
-    }
-    set_has_header_value_match();
-    action_specifier_.header_value_match_ = header_value_match;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.RateLimit.Action.header_value_match)
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RateLimit_Action::kSourceClusterFieldNumber;
@@ -9581,7 +8949,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_source_cluster()));
         } else {
           goto handle_unusual;
@@ -9593,7 +8961,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_destination_cluster()));
         } else {
           goto handle_unusual;
@@ -9605,7 +8973,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_request_headers()));
         } else {
           goto handle_unusual;
@@ -9617,7 +8985,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_remote_address()));
         } else {
           goto handle_unusual;
@@ -9629,7 +8997,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_generic_key()));
         } else {
           goto handle_unusual;
@@ -9641,7 +9009,7 @@ bool RateLimit_Action::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_header_value_match()));
         } else {
           goto handle_unusual;
@@ -9728,42 +9096,42 @@ void RateLimit_Action::SerializeWithCachedSizes(
   // .envoy.api.v2.RateLimit.Action.SourceCluster source_cluster = 1;
   if (has_source_cluster()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *action_specifier_.source_cluster_, deterministic, target);
   }
 
   // .envoy.api.v2.RateLimit.Action.DestinationCluster destination_cluster = 2;
   if (has_destination_cluster()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *action_specifier_.destination_cluster_, deterministic, target);
   }
 
   // .envoy.api.v2.RateLimit.Action.RequestHeaders request_headers = 3;
   if (has_request_headers()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *action_specifier_.request_headers_, deterministic, target);
   }
 
   // .envoy.api.v2.RateLimit.Action.RemoteAddress remote_address = 4;
   if (has_remote_address()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *action_specifier_.remote_address_, deterministic, target);
   }
 
   // .envoy.api.v2.RateLimit.Action.GenericKey generic_key = 5;
   if (has_generic_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *action_specifier_.generic_key_, deterministic, target);
   }
 
   // .envoy.api.v2.RateLimit.Action.HeaderValueMatch header_value_match = 6;
   if (has_header_value_match()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, *action_specifier_.header_value_match_, deterministic, target);
   }
 
@@ -9788,42 +9156,42 @@ size_t RateLimit_Action::ByteSizeLong() const {
     // .envoy.api.v2.RateLimit.Action.SourceCluster source_cluster = 1;
     case kSourceCluster: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.source_cluster_);
       break;
     }
     // .envoy.api.v2.RateLimit.Action.DestinationCluster destination_cluster = 2;
     case kDestinationCluster: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.destination_cluster_);
       break;
     }
     // .envoy.api.v2.RateLimit.Action.RequestHeaders request_headers = 3;
     case kRequestHeaders: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.request_headers_);
       break;
     }
     // .envoy.api.v2.RateLimit.Action.RemoteAddress remote_address = 4;
     case kRemoteAddress: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.remote_address_);
       break;
     }
     // .envoy.api.v2.RateLimit.Action.GenericKey generic_key = 5;
     case kGenericKey: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.generic_key_);
       break;
     }
     // .envoy.api.v2.RateLimit.Action.HeaderValueMatch header_value_match = 6;
     case kHeaderValueMatch: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *action_specifier_.header_value_match_);
       break;
     }
@@ -9933,12 +9301,6 @@ void RateLimit::InitAsDefaultInstance() {
   ::envoy::api::v2::_RateLimit_default_instance_._instance.get_mutable()->stage_ = const_cast< ::google::protobuf::UInt32Value*>(
       ::google::protobuf::UInt32Value::internal_default_instance());
 }
-void RateLimit::clear_stage() {
-  if (GetArenaNoVirtual() == NULL && stage_ != NULL) {
-    delete stage_;
-  }
-  stage_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RateLimit::kStageFieldNumber;
 const int RateLimit::kDisableKeyFieldNumber;
@@ -10035,11 +9397,11 @@ bool RateLimit::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+      // .google.protobuf.UInt32Value stage = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_stage()));
         } else {
           goto handle_unusual;
@@ -10063,11 +9425,12 @@ bool RateLimit::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+      // repeated .envoy.api.v2.RateLimit.Action actions = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_actions()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_actions()));
         } else {
           goto handle_unusual;
         }
@@ -10100,7 +9463,7 @@ void RateLimit::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value stage = 1;
   if (this->has_stage()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->stage_, output);
@@ -10116,7 +9479,7 @@ void RateLimit::SerializeWithCachedSizes(
       2, this->disable_key(), output);
   }
 
-  // repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.RateLimit.Action actions = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->actions_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -10137,10 +9500,10 @@ void RateLimit::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value stage = 1;
   if (this->has_stage()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->stage_, deterministic, target);
   }
 
@@ -10155,11 +9518,11 @@ void RateLimit::SerializeWithCachedSizes(
         2, this->disable_key(), target);
   }
 
-  // repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.RateLimit.Action actions = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->actions_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, this->actions(static_cast<int>(i)), deterministic, target);
   }
 
@@ -10180,13 +9543,13 @@ size_t RateLimit::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .envoy.api.v2.RateLimit.Action actions = 3 [(.validate.rules) = {
+  // repeated .envoy.api.v2.RateLimit.Action actions = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->actions_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->actions(static_cast<int>(i)));
     }
   }
@@ -10198,10 +9561,10 @@ size_t RateLimit::ByteSizeLong() const {
         this->disable_key());
   }
 
-  // .google.protobuf.UInt32Value stage = 1 [(.validate.rules) = {
+  // .google.protobuf.UInt32Value stage = 1;
   if (this->has_stage()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->stage_);
   }
 
@@ -10286,12 +9649,6 @@ void RateLimit::InternalSwap(RateLimit* other) {
 void HeaderMatcher::InitAsDefaultInstance() {
   ::envoy::api::v2::_HeaderMatcher_default_instance_._instance.get_mutable()->regex_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
-}
-void HeaderMatcher::clear_regex() {
-  if (GetArenaNoVirtual() == NULL && regex_ != NULL) {
-    delete regex_;
-  }
-  regex_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int HeaderMatcher::kNameFieldNumber;
@@ -10394,7 +9751,7 @@ bool HeaderMatcher::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string name = 1 [(.validate.rules) = {
+      // string name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -10430,7 +9787,7 @@ bool HeaderMatcher::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_regex()));
         } else {
           goto handle_unusual;
@@ -10464,7 +9821,7 @@ void HeaderMatcher::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -10504,7 +9861,7 @@ void HeaderMatcher::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -10529,7 +9886,7 @@ void HeaderMatcher::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue regex = 3;
   if (this->has_regex()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->regex_, deterministic, target);
   }
 
@@ -10550,7 +9907,7 @@ size_t HeaderMatcher::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -10567,7 +9924,7 @@ size_t HeaderMatcher::ByteSizeLong() const {
   // .google.protobuf.BoolValue regex = 3;
   if (this->has_regex()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->regex_);
   }
 
@@ -10655,20 +10012,6 @@ void HeaderMatcher::InternalSwap(HeaderMatcher* other) {
 void VirtualHost::InitAsDefaultInstance() {
   ::envoy::api::v2::_VirtualHost_default_instance_._instance.get_mutable()->cors_ = const_cast< ::envoy::api::v2::CorsPolicy*>(
       ::envoy::api::v2::CorsPolicy::internal_default_instance());
-  ::envoy::api::v2::_VirtualHost_default_instance_._instance.get_mutable()->auth_ = const_cast< ::envoy::api::v2::AuthAction*>(
-      ::envoy::api::v2::AuthAction::internal_default_instance());
-}
-void VirtualHost::clear_request_headers_to_add() {
-  request_headers_to_add_.Clear();
-}
-void VirtualHost::clear_response_headers_to_add() {
-  response_headers_to_add_.Clear();
-}
-void VirtualHost::clear_auth() {
-  if (GetArenaNoVirtual() == NULL && auth_ != NULL) {
-    delete auth_;
-  }
-  auth_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int VirtualHost::kNameFieldNumber;
@@ -10678,10 +10021,7 @@ const int VirtualHost::kRequireTlsFieldNumber;
 const int VirtualHost::kVirtualClustersFieldNumber;
 const int VirtualHost::kRateLimitsFieldNumber;
 const int VirtualHost::kRequestHeadersToAddFieldNumber;
-const int VirtualHost::kResponseHeadersToAddFieldNumber;
-const int VirtualHost::kResponseHeadersToRemoveFieldNumber;
 const int VirtualHost::kCorsFieldNumber;
-const int VirtualHost::kAuthFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VirtualHost::VirtualHost()
@@ -10700,8 +10040,6 @@ VirtualHost::VirtualHost(const VirtualHost& from)
       virtual_clusters_(from.virtual_clusters_),
       rate_limits_(from.rate_limits_),
       request_headers_to_add_(from.request_headers_to_add_),
-      response_headers_to_add_(from.response_headers_to_add_),
-      response_headers_to_remove_(from.response_headers_to_remove_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -10712,11 +10050,6 @@ VirtualHost::VirtualHost(const VirtualHost& from)
     cors_ = new ::envoy::api::v2::CorsPolicy(*from.cors_);
   } else {
     cors_ = NULL;
-  }
-  if (from.has_auth()) {
-    auth_ = new ::envoy::api::v2::AuthAction(*from.auth_);
-  } else {
-    auth_ = NULL;
   }
   require_tls_ = from.require_tls_;
   // @@protoc_insertion_point(copy_constructor:envoy.api.v2.VirtualHost)
@@ -10738,7 +10071,6 @@ VirtualHost::~VirtualHost() {
 void VirtualHost::SharedDtor() {
   name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete cors_;
-  if (this != internal_default_instance()) delete auth_;
 }
 
 void VirtualHost::SetCachedSize(int size) const {
@@ -10775,17 +10107,11 @@ void VirtualHost::Clear() {
   virtual_clusters_.Clear();
   rate_limits_.Clear();
   request_headers_to_add_.Clear();
-  response_headers_to_add_.Clear();
-  response_headers_to_remove_.Clear();
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && cors_ != NULL) {
     delete cors_;
   }
   cors_ = NULL;
-  if (GetArenaNoVirtual() == NULL && auth_ != NULL) {
-    delete auth_;
-  }
-  auth_ = NULL;
   require_tls_ = 0;
   _internal_metadata_.Clear();
 }
@@ -10800,7 +10126,7 @@ bool VirtualHost::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string name = 1 [(.validate.rules) = {
+      // string name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -10816,7 +10142,7 @@ bool VirtualHost::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string domains = 2 [(.validate.rules) = {
+      // repeated string domains = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -10837,7 +10163,8 @@ bool VirtualHost::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_routes()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_routes()));
         } else {
           goto handle_unusual;
         }
@@ -10863,7 +10190,8 @@ bool VirtualHost::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_virtual_clusters()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_virtual_clusters()));
         } else {
           goto handle_unusual;
         }
@@ -10874,7 +10202,8 @@ bool VirtualHost::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_rate_limits()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_rate_limits()));
         } else {
           goto handle_unusual;
         }
@@ -10885,7 +10214,8 @@ bool VirtualHost::MergePartialFromCodedStream(
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_request_headers_to_add()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_request_headers_to_add()));
         } else {
           goto handle_unusual;
         }
@@ -10896,48 +10226,8 @@ bool VirtualHost::MergePartialFromCodedStream(
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_cors()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .envoy.api.v2.AuthAction auth = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_auth()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_response_headers_to_add()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string response_headers_to_remove = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->add_response_headers_to_remove()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->response_headers_to_remove(this->response_headers_to_remove_size() - 1).data(),
-            static_cast<int>(this->response_headers_to_remove(this->response_headers_to_remove_size() - 1).length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "envoy.api.v2.VirtualHost.response_headers_to_remove"));
         } else {
           goto handle_unusual;
         }
@@ -10970,7 +10260,7 @@ void VirtualHost::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -10980,7 +10270,7 @@ void VirtualHost::SerializeWithCachedSizes(
       1, this->name(), output);
   }
 
-  // repeated string domains = 2 [(.validate.rules) = {
+  // repeated string domains = 2;
   for (int i = 0, n = this->domains_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->domains(i).data(), static_cast<int>(this->domains(i).length()),
@@ -11030,29 +10320,6 @@ void VirtualHost::SerializeWithCachedSizes(
       8, *this->cors_, output);
   }
 
-  // .envoy.api.v2.AuthAction auth = 9;
-  if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, *this->auth_, output);
-  }
-
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->response_headers_to_add_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, this->response_headers_to_add(static_cast<int>(i)), output);
-  }
-
-  // repeated string response_headers_to_remove = 11;
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->response_headers_to_remove(i).data(), static_cast<int>(this->response_headers_to_remove(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "envoy.api.v2.VirtualHost.response_headers_to_remove");
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      11, this->response_headers_to_remove(i), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -11067,7 +10334,7 @@ void VirtualHost::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
@@ -11078,7 +10345,7 @@ void VirtualHost::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // repeated string domains = 2 [(.validate.rules) = {
+  // repeated string domains = 2;
   for (int i = 0, n = this->domains_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->domains(i).data(), static_cast<int>(this->domains(i).length()),
@@ -11092,7 +10359,7 @@ void VirtualHost::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->routes_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, this->routes(static_cast<int>(i)), deterministic, target);
   }
 
@@ -11106,7 +10373,7 @@ void VirtualHost::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->virtual_clusters_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, this->virtual_clusters(static_cast<int>(i)), deterministic, target);
   }
 
@@ -11114,7 +10381,7 @@ void VirtualHost::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->rate_limits_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, this->rate_limits(static_cast<int>(i)), deterministic, target);
   }
 
@@ -11122,40 +10389,15 @@ void VirtualHost::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->request_headers_to_add_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         7, this->request_headers_to_add(static_cast<int>(i)), deterministic, target);
   }
 
   // .envoy.api.v2.CorsPolicy cors = 8;
   if (this->has_cors()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         8, *this->cors_, deterministic, target);
-  }
-
-  // .envoy.api.v2.AuthAction auth = 9;
-  if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, *this->auth_, deterministic, target);
-  }
-
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->response_headers_to_add_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, this->response_headers_to_add(static_cast<int>(i)), deterministic, target);
-  }
-
-  // repeated string response_headers_to_remove = 11;
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->response_headers_to_remove(i).data(), static_cast<int>(this->response_headers_to_remove(i).length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "envoy.api.v2.VirtualHost.response_headers_to_remove");
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteStringToArray(11, this->response_headers_to_remove(i), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -11175,7 +10417,7 @@ size_t VirtualHost::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated string domains = 2 [(.validate.rules) = {
+  // repeated string domains = 2;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->domains_size());
   for (int i = 0, n = this->domains_size(); i < n; i++) {
@@ -11189,7 +10431,7 @@ size_t VirtualHost::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->routes(static_cast<int>(i)));
     }
   }
@@ -11200,7 +10442,7 @@ size_t VirtualHost::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->virtual_clusters(static_cast<int>(i)));
     }
   }
@@ -11211,7 +10453,7 @@ size_t VirtualHost::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->rate_limits(static_cast<int>(i)));
     }
   }
@@ -11222,31 +10464,12 @@ size_t VirtualHost::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->request_headers_to_add(static_cast<int>(i)));
     }
   }
 
-  // repeated .envoy.api.v2.HeaderValueOption response_headers_to_add = 10;
-  {
-    unsigned int count = static_cast<unsigned int>(this->response_headers_to_add_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->response_headers_to_add(static_cast<int>(i)));
-    }
-  }
-
-  // repeated string response_headers_to_remove = 11;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->response_headers_to_remove_size());
-  for (int i = 0, n = this->response_headers_to_remove_size(); i < n; i++) {
-    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-      this->response_headers_to_remove(i));
-  }
-
-  // string name = 1 [(.validate.rules) = {
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -11256,15 +10479,8 @@ size_t VirtualHost::ByteSizeLong() const {
   // .envoy.api.v2.CorsPolicy cors = 8;
   if (this->has_cors()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->cors_);
-  }
-
-  // .envoy.api.v2.AuthAction auth = 9;
-  if (this->has_auth()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->auth_);
   }
 
   // .envoy.api.v2.VirtualHost.TlsRequirementType require_tls = 4;
@@ -11307,17 +10523,12 @@ void VirtualHost::MergeFrom(const VirtualHost& from) {
   virtual_clusters_.MergeFrom(from.virtual_clusters_);
   rate_limits_.MergeFrom(from.rate_limits_);
   request_headers_to_add_.MergeFrom(from.request_headers_to_add_);
-  response_headers_to_add_.MergeFrom(from.response_headers_to_add_);
-  response_headers_to_remove_.MergeFrom(from.response_headers_to_remove_);
   if (from.name().size() > 0) {
 
     name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   if (from.has_cors()) {
     mutable_cors()->::envoy::api::v2::CorsPolicy::MergeFrom(from.cors());
-  }
-  if (from.has_auth()) {
-    mutable_auth()->::envoy::api::v2::AuthAction::MergeFrom(from.auth());
   }
   if (from.require_tls() != 0) {
     set_require_tls(from.require_tls());
@@ -11353,11 +10564,8 @@ void VirtualHost::InternalSwap(VirtualHost* other) {
   virtual_clusters_.InternalSwap(&other->virtual_clusters_);
   rate_limits_.InternalSwap(&other->rate_limits_);
   request_headers_to_add_.InternalSwap(&other->request_headers_to_add_);
-  response_headers_to_add_.InternalSwap(&other->response_headers_to_add_);
-  response_headers_to_remove_.InternalSwap(&other->response_headers_to_remove_);
   name_.Swap(&other->name_);
   swap(cors_, other->cors_);
-  swap(auth_, other->auth_);
   swap(require_tls_, other->require_tls_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -11374,18 +10582,6 @@ void VirtualHost::InternalSwap(VirtualHost* other) {
 void RouteConfiguration::InitAsDefaultInstance() {
   ::envoy::api::v2::_RouteConfiguration_default_instance_._instance.get_mutable()->validate_clusters_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
-}
-void RouteConfiguration::clear_response_headers_to_add() {
-  response_headers_to_add_.Clear();
-}
-void RouteConfiguration::clear_request_headers_to_add() {
-  request_headers_to_add_.Clear();
-}
-void RouteConfiguration::clear_validate_clusters() {
-  if (GetArenaNoVirtual() == NULL && validate_clusters_ != NULL) {
-    delete validate_clusters_;
-  }
-  validate_clusters_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RouteConfiguration::kNameFieldNumber;
@@ -11515,7 +10711,8 @@ bool RouteConfiguration::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_virtual_hosts()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_virtual_hosts()));
         } else {
           goto handle_unusual;
         }
@@ -11543,7 +10740,8 @@ bool RouteConfiguration::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_response_headers_to_add()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_response_headers_to_add()));
         } else {
           goto handle_unusual;
         }
@@ -11571,7 +10769,8 @@ bool RouteConfiguration::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_request_headers_to_add()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_request_headers_to_add()));
         } else {
           goto handle_unusual;
         }
@@ -11582,7 +10781,7 @@ bool RouteConfiguration::MergePartialFromCodedStream(
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_validate_clusters()));
         } else {
           goto handle_unusual;
@@ -11702,7 +10901,7 @@ void RouteConfiguration::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->virtual_hosts_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->virtual_hosts(static_cast<int>(i)), deterministic, target);
   }
 
@@ -11720,7 +10919,7 @@ void RouteConfiguration::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->response_headers_to_add_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, this->response_headers_to_add(static_cast<int>(i)), deterministic, target);
   }
 
@@ -11738,14 +10937,14 @@ void RouteConfiguration::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->request_headers_to_add_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, this->request_headers_to_add(static_cast<int>(i)), deterministic, target);
   }
 
   // .google.protobuf.BoolValue validate_clusters = 7;
   if (this->has_validate_clusters()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         7, *this->validate_clusters_, deterministic, target);
   }
 
@@ -11772,7 +10971,7 @@ size_t RouteConfiguration::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->virtual_hosts(static_cast<int>(i)));
     }
   }
@@ -11791,7 +10990,7 @@ size_t RouteConfiguration::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->response_headers_to_add(static_cast<int>(i)));
     }
   }
@@ -11810,7 +11009,7 @@ size_t RouteConfiguration::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->request_headers_to_add(static_cast<int>(i)));
     }
   }
@@ -11825,7 +11024,7 @@ size_t RouteConfiguration::ByteSizeLong() const {
   // .google.protobuf.BoolValue validate_clusters = 7;
   if (this->has_validate_clusters()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->validate_clusters_);
   }
 

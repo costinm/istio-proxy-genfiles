@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -60,11 +56,7 @@ namespace protobuf_mixer_2fv1_2fconfig_2fclient_2fauth_2eproto {
 void InitDefaultsJWT_LocationImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_JWT_Location_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::JWT_Location();
@@ -81,11 +73,7 @@ void InitDefaultsJWT_Location() {
 void InitDefaultsJWTImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_google_2fprotobuf_2fduration_2eproto::InitDefaultsDuration();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fauth_2eproto::InitDefaultsJWT_Location();
   {
@@ -104,11 +92,7 @@ void InitDefaultsJWT() {
 void InitDefaultsEndUserAuthenticationPolicySpecImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fauth_2eproto::InitDefaultsJWT();
   {
     void* ptr = &::istio::mixer::v1::config::client::_EndUserAuthenticationPolicySpec_default_instance_;
@@ -126,11 +110,7 @@ void InitDefaultsEndUserAuthenticationPolicySpec() {
 void InitDefaultsEndUserAuthenticationPolicySpecReferenceImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_EndUserAuthenticationPolicySpecReference_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpecReference();
@@ -147,11 +127,7 @@ void InitDefaultsEndUserAuthenticationPolicySpecReference() {
 void InitDefaultsEndUserAuthenticationPolicySpecBindingImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fservice_2eproto::InitDefaultsIstioService();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fauth_2eproto::InitDefaultsEndUserAuthenticationPolicySpecReference();
   {
@@ -189,6 +165,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::config::client::JWT, forward_jwt_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::config::client::JWT, public_key_cache_duration_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::config::client::JWT, locations_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::config::client::JWT, jwks_uri_envoy_cluster_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -213,9 +190,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::istio::mixer::v1::config::client::JWT_Location)},
   { 8, -1, sizeof(::istio::mixer::v1::config::client::JWT)},
-  { 19, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec)},
-  { 25, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpecReference)},
-  { 32, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpecBinding)},
+  { 20, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpec)},
+  { 26, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpecReference)},
+  { 33, -1, sizeof(::istio::mixer::v1::config::client::EndUserAuthenticationPolicySpecBinding)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -251,26 +228,27 @@ void AddDescriptorsImpl() {
       "\n!mixer/v1/config/client/auth.proto\022\034ist"
       "io.mixer.v1.config.client\032\024gogoproto/gog"
       "o.proto\032\036google/protobuf/duration.proto\032"
-      "$mixer/v1/config/client/service.proto\"\205\002"
+      "$mixer/v1/config/client/service.proto\"\245\002"
       "\n\003JWT\022\016\n\006issuer\030\001 \001(\t\022\021\n\taudiences\030\002 \003(\t"
       "\022\020\n\010jwks_uri\030\003 \001(\t\022\023\n\013forward_jwt\030\004 \001(\010\022"
       "<\n\031public_key_cache_duration\030\005 \001(\0132\031.goo"
       "gle.protobuf.Duration\022=\n\tlocations\030\006 \003(\013"
       "2*.istio.mixer.v1.config.client.JWT.Loca"
-      "tion\0327\n\010Location\022\020\n\006header\030\001 \001(\tH\000\022\017\n\005qu"
-      "ery\030\002 \001(\tH\000B\010\n\006scheme\"R\n\037EndUserAuthenti"
-      "cationPolicySpec\022/\n\004jwts\030\002 \003(\0132!.istio.m"
-      "ixer.v1.config.client.JWT\"K\n(EndUserAuth"
-      "enticationPolicySpecReference\022\014\n\004name\030\001 "
-      "\001(\t\022\021\n\tnamespace\030\002 \001(\t\"\300\001\n&EndUserAuthen"
-      "ticationPolicySpecBinding\022<\n\010services\030\001 "
-      "\003(\0132*.istio.mixer.v1.config.client.Istio"
-      "Service\022X\n\010policies\030\002 \003(\0132F.istio.mixer."
-      "v1.config.client.EndUserAuthenticationPo"
-      "licySpecReferenceB\014\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
+      "tion\022\036\n\026jwks_uri_envoy_cluster\030\007 \001(\t\0327\n\010"
+      "Location\022\020\n\006header\030\001 \001(\tH\000\022\017\n\005query\030\002 \001("
+      "\tH\000B\010\n\006scheme\"R\n\037EndUserAuthenticationPo"
+      "licySpec\022/\n\004jwts\030\002 \003(\0132!.istio.mixer.v1."
+      "config.client.JWT\"K\n(EndUserAuthenticati"
+      "onPolicySpecReference\022\014\n\004name\030\001 \001(\t\022\021\n\tn"
+      "amespace\030\002 \001(\t\"\300\001\n&EndUserAuthentication"
+      "PolicySpecBinding\022<\n\010services\030\001 \003(\0132*.is"
+      "tio.mixer.v1.config.client.IstioService\022"
+      "X\n\010policies\030\002 \003(\0132F.istio.mixer.v1.confi"
+      "g.client.EndUserAuthenticationPolicySpec"
+      "ReferenceB\014\310\341\036\000\250\342\036\000\360\341\036\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 799);
+      descriptor, 831);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "mixer/v1/config/client/auth.proto", &protobuf_RegisterTypes);
   ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
@@ -652,12 +630,6 @@ void JWT::InitAsDefaultInstance() {
   ::istio::mixer::v1::config::client::_JWT_default_instance_._instance.get_mutable()->public_key_cache_duration_ = const_cast< ::google::protobuf::Duration*>(
       ::google::protobuf::Duration::internal_default_instance());
 }
-void JWT::clear_public_key_cache_duration() {
-  if (GetArenaNoVirtual() == NULL && public_key_cache_duration_ != NULL) {
-    delete public_key_cache_duration_;
-  }
-  public_key_cache_duration_ = NULL;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int JWT::kIssuerFieldNumber;
 const int JWT::kAudiencesFieldNumber;
@@ -665,6 +637,7 @@ const int JWT::kJwksUriFieldNumber;
 const int JWT::kForwardJwtFieldNumber;
 const int JWT::kPublicKeyCacheDurationFieldNumber;
 const int JWT::kLocationsFieldNumber;
+const int JWT::kJwksUriEnvoyClusterFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 JWT::JWT()
@@ -690,6 +663,10 @@ JWT::JWT(const JWT& from)
   if (from.jwks_uri().size() > 0) {
     jwks_uri_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.jwks_uri_);
   }
+  jwks_uri_envoy_cluster_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.jwks_uri_envoy_cluster().size() > 0) {
+    jwks_uri_envoy_cluster_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.jwks_uri_envoy_cluster_);
+  }
   if (from.has_public_key_cache_duration()) {
     public_key_cache_duration_ = new ::google::protobuf::Duration(*from.public_key_cache_duration_);
   } else {
@@ -702,6 +679,7 @@ JWT::JWT(const JWT& from)
 void JWT::SharedCtor() {
   issuer_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   jwks_uri_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  jwks_uri_envoy_cluster_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&public_key_cache_duration_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&forward_jwt_) -
       reinterpret_cast<char*>(&public_key_cache_duration_)) + sizeof(forward_jwt_));
@@ -716,6 +694,7 @@ JWT::~JWT() {
 void JWT::SharedDtor() {
   issuer_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   jwks_uri_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  jwks_uri_envoy_cluster_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete public_key_cache_duration_;
 }
 
@@ -752,6 +731,7 @@ void JWT::Clear() {
   locations_.Clear();
   issuer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   jwks_uri_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  jwks_uri_envoy_cluster_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && public_key_cache_duration_ != NULL) {
     delete public_key_cache_duration_;
   }
@@ -837,7 +817,7 @@ bool JWT::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_public_key_cache_duration()));
         } else {
           goto handle_unusual;
@@ -849,7 +829,24 @@ bool JWT::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_locations()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_locations()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string jwks_uri_envoy_cluster = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_jwks_uri_envoy_cluster()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->jwks_uri_envoy_cluster().data(), static_cast<int>(this->jwks_uri_envoy_cluster().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster"));
         } else {
           goto handle_unusual;
         }
@@ -930,6 +927,16 @@ void JWT::SerializeWithCachedSizes(
       6, this->locations(static_cast<int>(i)), output);
   }
 
+  // string jwks_uri_envoy_cluster = 7;
+  if (this->jwks_uri_envoy_cluster().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->jwks_uri_envoy_cluster().data(), static_cast<int>(this->jwks_uri_envoy_cluster().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      7, this->jwks_uri_envoy_cluster(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -984,7 +991,7 @@ void JWT::SerializeWithCachedSizes(
   // .google.protobuf.Duration public_key_cache_duration = 5;
   if (this->has_public_key_cache_duration()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->public_key_cache_duration_, deterministic, target);
   }
 
@@ -992,8 +999,19 @@ void JWT::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->locations_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, this->locations(static_cast<int>(i)), deterministic, target);
+  }
+
+  // string jwks_uri_envoy_cluster = 7;
+  if (this->jwks_uri_envoy_cluster().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->jwks_uri_envoy_cluster().data(), static_cast<int>(this->jwks_uri_envoy_cluster().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "istio.mixer.v1.config.client.JWT.jwks_uri_envoy_cluster");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        7, this->jwks_uri_envoy_cluster(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1027,7 +1045,7 @@ size_t JWT::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->locations(static_cast<int>(i)));
     }
   }
@@ -1046,10 +1064,17 @@ size_t JWT::ByteSizeLong() const {
         this->jwks_uri());
   }
 
+  // string jwks_uri_envoy_cluster = 7;
+  if (this->jwks_uri_envoy_cluster().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->jwks_uri_envoy_cluster());
+  }
+
   // .google.protobuf.Duration public_key_cache_duration = 5;
   if (this->has_public_key_cache_duration()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->public_key_cache_duration_);
   }
 
@@ -1097,6 +1122,10 @@ void JWT::MergeFrom(const JWT& from) {
 
     jwks_uri_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.jwks_uri_);
   }
+  if (from.jwks_uri_envoy_cluster().size() > 0) {
+
+    jwks_uri_envoy_cluster_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.jwks_uri_envoy_cluster_);
+  }
   if (from.has_public_key_cache_duration()) {
     mutable_public_key_cache_duration()->::google::protobuf::Duration::MergeFrom(from.public_key_cache_duration());
   }
@@ -1133,6 +1162,7 @@ void JWT::InternalSwap(JWT* other) {
   locations_.InternalSwap(&other->locations_);
   issuer_.Swap(&other->issuer_);
   jwks_uri_.Swap(&other->jwks_uri_);
+  jwks_uri_envoy_cluster_.Swap(&other->jwks_uri_envoy_cluster_);
   swap(public_key_cache_duration_, other->public_key_cache_duration_);
   swap(forward_jwt_, other->forward_jwt_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -1229,7 +1259,8 @@ bool EndUserAuthenticationPolicySpec::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_jwts()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_jwts()));
         } else {
           goto handle_unusual;
         }
@@ -1287,7 +1318,7 @@ void EndUserAuthenticationPolicySpec::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->jwts_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->jwts(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1314,7 +1345,7 @@ size_t EndUserAuthenticationPolicySpec::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->jwts(static_cast<int>(i)));
     }
   }
@@ -1703,9 +1734,6 @@ void EndUserAuthenticationPolicySpecReference::InternalSwap(EndUserAuthenticatio
 
 void EndUserAuthenticationPolicySpecBinding::InitAsDefaultInstance() {
 }
-void EndUserAuthenticationPolicySpecBinding::clear_services() {
-  services_.Clear();
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int EndUserAuthenticationPolicySpecBinding::kServicesFieldNumber;
 const int EndUserAuthenticationPolicySpecBinding::kPoliciesFieldNumber;
@@ -1789,7 +1817,8 @@ bool EndUserAuthenticationPolicySpecBinding::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_services()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_services()));
         } else {
           goto handle_unusual;
         }
@@ -1800,7 +1829,8 @@ bool EndUserAuthenticationPolicySpecBinding::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_policies()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_policies()));
         } else {
           goto handle_unusual;
         }
@@ -1865,7 +1895,7 @@ void EndUserAuthenticationPolicySpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->services_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->services(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1873,7 +1903,7 @@ void EndUserAuthenticationPolicySpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->policies_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->policies(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1900,7 +1930,7 @@ size_t EndUserAuthenticationPolicySpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->services(static_cast<int>(i)));
     }
   }
@@ -1911,7 +1941,7 @@ size_t EndUserAuthenticationPolicySpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->policies(static_cast<int>(i)));
     }
   }

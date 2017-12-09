@@ -581,8 +581,8 @@ class TlsCertificate : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_certificate_chain();
   static const int kCertificateChainFieldNumber = 1;
   const ::envoy::api::v2::DataSource& certificate_chain() const;
-  ::envoy::api::v2::DataSource* release_certificate_chain();
   ::envoy::api::v2::DataSource* mutable_certificate_chain();
+  ::envoy::api::v2::DataSource* release_certificate_chain();
   void set_allocated_certificate_chain(::envoy::api::v2::DataSource* certificate_chain);
 
   // .envoy.api.v2.DataSource private_key = 2;
@@ -590,8 +590,8 @@ class TlsCertificate : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_private_key();
   static const int kPrivateKeyFieldNumber = 2;
   const ::envoy::api::v2::DataSource& private_key() const;
-  ::envoy::api::v2::DataSource* release_private_key();
   ::envoy::api::v2::DataSource* mutable_private_key();
+  ::envoy::api::v2::DataSource* release_private_key();
   void set_allocated_private_key(::envoy::api::v2::DataSource* private_key);
 
   // .envoy.api.v2.DataSource password = 3;
@@ -599,8 +599,8 @@ class TlsCertificate : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_password();
   static const int kPasswordFieldNumber = 3;
   const ::envoy::api::v2::DataSource& password() const;
-  ::envoy::api::v2::DataSource* release_password();
   ::envoy::api::v2::DataSource* mutable_password();
+  ::envoy::api::v2::DataSource* release_password();
   void set_allocated_password(::envoy::api::v2::DataSource* password);
 
   // .envoy.api.v2.DataSource ocsp_staple = 4;
@@ -608,8 +608,8 @@ class TlsCertificate : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_ocsp_staple();
   static const int kOcspStapleFieldNumber = 4;
   const ::envoy::api::v2::DataSource& ocsp_staple() const;
-  ::envoy::api::v2::DataSource* release_ocsp_staple();
   ::envoy::api::v2::DataSource* mutable_ocsp_staple();
+  ::envoy::api::v2::DataSource* release_ocsp_staple();
   void set_allocated_ocsp_staple(::envoy::api::v2::DataSource* ocsp_staple);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.TlsCertificate)
@@ -885,8 +885,8 @@ class CertificateValidationContext : public ::google::protobuf::Message /* @@pro
   void clear_trusted_ca();
   static const int kTrustedCaFieldNumber = 1;
   const ::envoy::api::v2::DataSource& trusted_ca() const;
-  ::envoy::api::v2::DataSource* release_trusted_ca();
   ::envoy::api::v2::DataSource* mutable_trusted_ca();
+  ::envoy::api::v2::DataSource* release_trusted_ca();
   void set_allocated_trusted_ca(::envoy::api::v2::DataSource* trusted_ca);
 
   // .google.protobuf.BoolValue require_ocsp_staple = 5;
@@ -894,8 +894,8 @@ class CertificateValidationContext : public ::google::protobuf::Message /* @@pro
   void clear_require_ocsp_staple();
   static const int kRequireOcspStapleFieldNumber = 5;
   const ::google::protobuf::BoolValue& require_ocsp_staple() const;
-  ::google::protobuf::BoolValue* release_require_ocsp_staple();
   ::google::protobuf::BoolValue* mutable_require_ocsp_staple();
+  ::google::protobuf::BoolValue* release_require_ocsp_staple();
   void set_allocated_require_ocsp_staple(::google::protobuf::BoolValue* require_ocsp_staple);
 
   // .google.protobuf.BoolValue require_signed_certificate_timestamp = 6;
@@ -903,8 +903,8 @@ class CertificateValidationContext : public ::google::protobuf::Message /* @@pro
   void clear_require_signed_certificate_timestamp();
   static const int kRequireSignedCertificateTimestampFieldNumber = 6;
   const ::google::protobuf::BoolValue& require_signed_certificate_timestamp() const;
-  ::google::protobuf::BoolValue* release_require_signed_certificate_timestamp();
   ::google::protobuf::BoolValue* mutable_require_signed_certificate_timestamp();
+  ::google::protobuf::BoolValue* release_require_signed_certificate_timestamp();
   void set_allocated_require_signed_certificate_timestamp(::google::protobuf::BoolValue* require_signed_certificate_timestamp);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.CertificateValidationContext)
@@ -1165,8 +1165,8 @@ class CommonTlsContext : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_tls_params();
   static const int kTlsParamsFieldNumber = 1;
   const ::envoy::api::v2::TlsParameters& tls_params() const;
-  ::envoy::api::v2::TlsParameters* release_tls_params();
   ::envoy::api::v2::TlsParameters* mutable_tls_params();
+  ::envoy::api::v2::TlsParameters* release_tls_params();
   void set_allocated_tls_params(::envoy::api::v2::TlsParameters* tls_params);
 
   // .envoy.api.v2.CertificateValidationContext validation_context = 3;
@@ -1174,8 +1174,8 @@ class CommonTlsContext : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_validation_context();
   static const int kValidationContextFieldNumber = 3;
   const ::envoy::api::v2::CertificateValidationContext& validation_context() const;
-  ::envoy::api::v2::CertificateValidationContext* release_validation_context();
   ::envoy::api::v2::CertificateValidationContext* mutable_validation_context();
+  ::envoy::api::v2::CertificateValidationContext* release_validation_context();
   void set_allocated_validation_context(::envoy::api::v2::CertificateValidationContext* validation_context);
 
   // .envoy.api.v2.CommonTlsContext.DeprecatedV1 deprecated_v1 = 5;
@@ -1183,8 +1183,8 @@ class CommonTlsContext : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_deprecated_v1();
   static const int kDeprecatedV1FieldNumber = 5;
   const ::envoy::api::v2::CommonTlsContext_DeprecatedV1& deprecated_v1() const;
-  ::envoy::api::v2::CommonTlsContext_DeprecatedV1* release_deprecated_v1();
   ::envoy::api::v2::CommonTlsContext_DeprecatedV1* mutable_deprecated_v1();
+  ::envoy::api::v2::CommonTlsContext_DeprecatedV1* release_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::CommonTlsContext_DeprecatedV1* deprecated_v1);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.CommonTlsContext)
@@ -1304,8 +1304,8 @@ class UpstreamTlsContext : public ::google::protobuf::Message /* @@protoc_insert
   void clear_common_tls_context();
   static const int kCommonTlsContextFieldNumber = 1;
   const ::envoy::api::v2::CommonTlsContext& common_tls_context() const;
-  ::envoy::api::v2::CommonTlsContext* release_common_tls_context();
   ::envoy::api::v2::CommonTlsContext* mutable_common_tls_context();
+  ::envoy::api::v2::CommonTlsContext* release_common_tls_context();
   void set_allocated_common_tls_context(::envoy::api::v2::CommonTlsContext* common_tls_context);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.UpstreamTlsContext)
@@ -1413,8 +1413,8 @@ class DownstreamTlsContext : public ::google::protobuf::Message /* @@protoc_inse
   void clear_common_tls_context();
   static const int kCommonTlsContextFieldNumber = 1;
   const ::envoy::api::v2::CommonTlsContext& common_tls_context() const;
-  ::envoy::api::v2::CommonTlsContext* release_common_tls_context();
   ::envoy::api::v2::CommonTlsContext* mutable_common_tls_context();
+  ::envoy::api::v2::CommonTlsContext* release_common_tls_context();
   void set_allocated_common_tls_context(::envoy::api::v2::CommonTlsContext* common_tls_context);
 
   // .google.protobuf.BoolValue require_client_certificate = 2;
@@ -1422,8 +1422,8 @@ class DownstreamTlsContext : public ::google::protobuf::Message /* @@protoc_inse
   void clear_require_client_certificate();
   static const int kRequireClientCertificateFieldNumber = 2;
   const ::google::protobuf::BoolValue& require_client_certificate() const;
-  ::google::protobuf::BoolValue* release_require_client_certificate();
   ::google::protobuf::BoolValue* mutable_require_client_certificate();
+  ::google::protobuf::BoolValue* release_require_client_certificate();
   void set_allocated_require_client_certificate(::google::protobuf::BoolValue* require_client_certificate);
 
   // .google.protobuf.BoolValue require_sni = 3;
@@ -1431,8 +1431,8 @@ class DownstreamTlsContext : public ::google::protobuf::Message /* @@protoc_inse
   void clear_require_sni();
   static const int kRequireSniFieldNumber = 3;
   const ::google::protobuf::BoolValue& require_sni() const;
-  ::google::protobuf::BoolValue* release_require_sni();
   ::google::protobuf::BoolValue* mutable_require_sni();
+  ::google::protobuf::BoolValue* release_require_sni();
   void set_allocated_require_sni(::google::protobuf::BoolValue* require_sni);
 
   // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 4;
@@ -1440,8 +1440,8 @@ class DownstreamTlsContext : public ::google::protobuf::Message /* @@protoc_inse
   void clear_session_ticket_keys();
   static const int kSessionTicketKeysFieldNumber = 4;
   const ::envoy::api::v2::TlsSessionTicketKeys& session_ticket_keys() const;
-  ::envoy::api::v2::TlsSessionTicketKeys* release_session_ticket_keys();
   ::envoy::api::v2::TlsSessionTicketKeys* mutable_session_ticket_keys();
+  ::envoy::api::v2::TlsSessionTicketKeys* release_session_ticket_keys();
   void set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys);
 
   // .envoy.api.v2.SdsSecretConfig session_ticket_keys_sds_secret_config = 5;
@@ -1449,8 +1449,8 @@ class DownstreamTlsContext : public ::google::protobuf::Message /* @@protoc_inse
   void clear_session_ticket_keys_sds_secret_config();
   static const int kSessionTicketKeysSdsSecretConfigFieldNumber = 5;
   const ::envoy::api::v2::SdsSecretConfig& session_ticket_keys_sds_secret_config() const;
-  ::envoy::api::v2::SdsSecretConfig* release_session_ticket_keys_sds_secret_config();
   ::envoy::api::v2::SdsSecretConfig* mutable_session_ticket_keys_sds_secret_config();
+  ::envoy::api::v2::SdsSecretConfig* release_session_ticket_keys_sds_secret_config();
   void set_allocated_session_ticket_keys_sds_secret_config(::envoy::api::v2::SdsSecretConfig* session_ticket_keys_sds_secret_config);
 
   SessionTicketKeysTypeCase session_ticket_keys_type_case() const;
@@ -1581,8 +1581,8 @@ class SdsSecretConfig : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_sds_config();
   static const int kSdsConfigFieldNumber = 2;
   const ::envoy::api::v2::ConfigSource& sds_config() const;
-  ::envoy::api::v2::ConfigSource* release_sds_config();
   ::envoy::api::v2::ConfigSource* mutable_sds_config();
+  ::envoy::api::v2::ConfigSource* release_sds_config();
   void set_allocated_sds_config(::envoy::api::v2::ConfigSource* sds_config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.SdsSecretConfig)
@@ -1704,8 +1704,8 @@ class Secret : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   void clear_tls_certificate();
   static const int kTlsCertificateFieldNumber = 2;
   const ::envoy::api::v2::TlsCertificate& tls_certificate() const;
-  ::envoy::api::v2::TlsCertificate* release_tls_certificate();
   ::envoy::api::v2::TlsCertificate* mutable_tls_certificate();
+  ::envoy::api::v2::TlsCertificate* release_tls_certificate();
   void set_allocated_tls_certificate(::envoy::api::v2::TlsCertificate* tls_certificate);
 
   // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 3;
@@ -1713,8 +1713,8 @@ class Secret : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   void clear_session_ticket_keys();
   static const int kSessionTicketKeysFieldNumber = 3;
   const ::envoy::api::v2::TlsSessionTicketKeys& session_ticket_keys() const;
-  ::envoy::api::v2::TlsSessionTicketKeys* release_session_ticket_keys();
   ::envoy::api::v2::TlsSessionTicketKeys* mutable_session_ticket_keys();
+  ::envoy::api::v2::TlsSessionTicketKeys* release_session_ticket_keys();
   void set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys);
 
   TypeCase type_case() const;
@@ -2129,9 +2129,7 @@ inline bool TlsCertificate::has_certificate_chain() const {
   return this != internal_default_instance() && certificate_chain_ != NULL;
 }
 inline void TlsCertificate::clear_certificate_chain() {
-  if (GetArenaNoVirtual() == NULL && certificate_chain_ != NULL) {
-    delete certificate_chain_;
-  }
+  if (GetArenaNoVirtual() == NULL && certificate_chain_ != NULL) delete certificate_chain_;
   certificate_chain_ = NULL;
 }
 inline const ::envoy::api::v2::DataSource& TlsCertificate::certificate_chain() const {
@@ -2139,13 +2137,6 @@ inline const ::envoy::api::v2::DataSource& TlsCertificate::certificate_chain() c
   // @@protoc_insertion_point(field_get:envoy.api.v2.TlsCertificate.certificate_chain)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DataSource*>(
       &::envoy::api::v2::_DataSource_default_instance_);
-}
-inline ::envoy::api::v2::DataSource* TlsCertificate::release_certificate_chain() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.certificate_chain)
-  
-  ::envoy::api::v2::DataSource* temp = certificate_chain_;
-  certificate_chain_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_certificate_chain() {
   
@@ -2155,22 +2146,21 @@ inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_certificate_chain()
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.TlsCertificate.certificate_chain)
   return certificate_chain_;
 }
+inline ::envoy::api::v2::DataSource* TlsCertificate::release_certificate_chain() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.certificate_chain)
+  
+  ::envoy::api::v2::DataSource* temp = certificate_chain_;
+  certificate_chain_ = NULL;
+  return temp;
+}
 inline void TlsCertificate::set_allocated_certificate_chain(::envoy::api::v2::DataSource* certificate_chain) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete certificate_chain_;
-  }
+  delete certificate_chain_;
+  certificate_chain_ = certificate_chain;
   if (certificate_chain) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      certificate_chain = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, certificate_chain, submessage_arena);
-    }
     
   } else {
     
   }
-  certificate_chain_ = certificate_chain;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TlsCertificate.certificate_chain)
 }
 
@@ -2179,9 +2169,7 @@ inline bool TlsCertificate::has_private_key() const {
   return this != internal_default_instance() && private_key_ != NULL;
 }
 inline void TlsCertificate::clear_private_key() {
-  if (GetArenaNoVirtual() == NULL && private_key_ != NULL) {
-    delete private_key_;
-  }
+  if (GetArenaNoVirtual() == NULL && private_key_ != NULL) delete private_key_;
   private_key_ = NULL;
 }
 inline const ::envoy::api::v2::DataSource& TlsCertificate::private_key() const {
@@ -2189,13 +2177,6 @@ inline const ::envoy::api::v2::DataSource& TlsCertificate::private_key() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.TlsCertificate.private_key)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DataSource*>(
       &::envoy::api::v2::_DataSource_default_instance_);
-}
-inline ::envoy::api::v2::DataSource* TlsCertificate::release_private_key() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.private_key)
-  
-  ::envoy::api::v2::DataSource* temp = private_key_;
-  private_key_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_private_key() {
   
@@ -2205,22 +2186,21 @@ inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_private_key() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.TlsCertificate.private_key)
   return private_key_;
 }
+inline ::envoy::api::v2::DataSource* TlsCertificate::release_private_key() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.private_key)
+  
+  ::envoy::api::v2::DataSource* temp = private_key_;
+  private_key_ = NULL;
+  return temp;
+}
 inline void TlsCertificate::set_allocated_private_key(::envoy::api::v2::DataSource* private_key) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete private_key_;
-  }
+  delete private_key_;
+  private_key_ = private_key;
   if (private_key) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      private_key = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, private_key, submessage_arena);
-    }
     
   } else {
     
   }
-  private_key_ = private_key;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TlsCertificate.private_key)
 }
 
@@ -2229,9 +2209,7 @@ inline bool TlsCertificate::has_password() const {
   return this != internal_default_instance() && password_ != NULL;
 }
 inline void TlsCertificate::clear_password() {
-  if (GetArenaNoVirtual() == NULL && password_ != NULL) {
-    delete password_;
-  }
+  if (GetArenaNoVirtual() == NULL && password_ != NULL) delete password_;
   password_ = NULL;
 }
 inline const ::envoy::api::v2::DataSource& TlsCertificate::password() const {
@@ -2239,13 +2217,6 @@ inline const ::envoy::api::v2::DataSource& TlsCertificate::password() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.TlsCertificate.password)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DataSource*>(
       &::envoy::api::v2::_DataSource_default_instance_);
-}
-inline ::envoy::api::v2::DataSource* TlsCertificate::release_password() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.password)
-  
-  ::envoy::api::v2::DataSource* temp = password_;
-  password_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_password() {
   
@@ -2255,22 +2226,21 @@ inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_password() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.TlsCertificate.password)
   return password_;
 }
+inline ::envoy::api::v2::DataSource* TlsCertificate::release_password() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.password)
+  
+  ::envoy::api::v2::DataSource* temp = password_;
+  password_ = NULL;
+  return temp;
+}
 inline void TlsCertificate::set_allocated_password(::envoy::api::v2::DataSource* password) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete password_;
-  }
+  delete password_;
+  password_ = password;
   if (password) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      password = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, password, submessage_arena);
-    }
     
   } else {
     
   }
-  password_ = password;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TlsCertificate.password)
 }
 
@@ -2279,9 +2249,7 @@ inline bool TlsCertificate::has_ocsp_staple() const {
   return this != internal_default_instance() && ocsp_staple_ != NULL;
 }
 inline void TlsCertificate::clear_ocsp_staple() {
-  if (GetArenaNoVirtual() == NULL && ocsp_staple_ != NULL) {
-    delete ocsp_staple_;
-  }
+  if (GetArenaNoVirtual() == NULL && ocsp_staple_ != NULL) delete ocsp_staple_;
   ocsp_staple_ = NULL;
 }
 inline const ::envoy::api::v2::DataSource& TlsCertificate::ocsp_staple() const {
@@ -2289,13 +2257,6 @@ inline const ::envoy::api::v2::DataSource& TlsCertificate::ocsp_staple() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.TlsCertificate.ocsp_staple)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DataSource*>(
       &::envoy::api::v2::_DataSource_default_instance_);
-}
-inline ::envoy::api::v2::DataSource* TlsCertificate::release_ocsp_staple() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.ocsp_staple)
-  
-  ::envoy::api::v2::DataSource* temp = ocsp_staple_;
-  ocsp_staple_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_ocsp_staple() {
   
@@ -2305,22 +2266,21 @@ inline ::envoy::api::v2::DataSource* TlsCertificate::mutable_ocsp_staple() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.TlsCertificate.ocsp_staple)
   return ocsp_staple_;
 }
+inline ::envoy::api::v2::DataSource* TlsCertificate::release_ocsp_staple() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.TlsCertificate.ocsp_staple)
+  
+  ::envoy::api::v2::DataSource* temp = ocsp_staple_;
+  ocsp_staple_ = NULL;
+  return temp;
+}
 inline void TlsCertificate::set_allocated_ocsp_staple(::envoy::api::v2::DataSource* ocsp_staple) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete ocsp_staple_;
-  }
+  delete ocsp_staple_;
+  ocsp_staple_ = ocsp_staple;
   if (ocsp_staple) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      ocsp_staple = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, ocsp_staple, submessage_arena);
-    }
     
   } else {
     
   }
-  ocsp_staple_ = ocsp_staple;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.TlsCertificate.ocsp_staple)
 }
 
@@ -2397,9 +2357,7 @@ inline bool CertificateValidationContext::has_trusted_ca() const {
   return this != internal_default_instance() && trusted_ca_ != NULL;
 }
 inline void CertificateValidationContext::clear_trusted_ca() {
-  if (GetArenaNoVirtual() == NULL && trusted_ca_ != NULL) {
-    delete trusted_ca_;
-  }
+  if (GetArenaNoVirtual() == NULL && trusted_ca_ != NULL) delete trusted_ca_;
   trusted_ca_ = NULL;
 }
 inline const ::envoy::api::v2::DataSource& CertificateValidationContext::trusted_ca() const {
@@ -2407,13 +2365,6 @@ inline const ::envoy::api::v2::DataSource& CertificateValidationContext::trusted
   // @@protoc_insertion_point(field_get:envoy.api.v2.CertificateValidationContext.trusted_ca)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::DataSource*>(
       &::envoy::api::v2::_DataSource_default_instance_);
-}
-inline ::envoy::api::v2::DataSource* CertificateValidationContext::release_trusted_ca() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.trusted_ca)
-  
-  ::envoy::api::v2::DataSource* temp = trusted_ca_;
-  trusted_ca_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::DataSource* CertificateValidationContext::mutable_trusted_ca() {
   
@@ -2423,22 +2374,21 @@ inline ::envoy::api::v2::DataSource* CertificateValidationContext::mutable_trust
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CertificateValidationContext.trusted_ca)
   return trusted_ca_;
 }
+inline ::envoy::api::v2::DataSource* CertificateValidationContext::release_trusted_ca() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.trusted_ca)
+  
+  ::envoy::api::v2::DataSource* temp = trusted_ca_;
+  trusted_ca_ = NULL;
+  return temp;
+}
 inline void CertificateValidationContext::set_allocated_trusted_ca(::envoy::api::v2::DataSource* trusted_ca) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete trusted_ca_;
-  }
+  delete trusted_ca_;
+  trusted_ca_ = trusted_ca;
   if (trusted_ca) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      trusted_ca = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, trusted_ca, submessage_arena);
-    }
     
   } else {
     
   }
-  trusted_ca_ = trusted_ca;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CertificateValidationContext.trusted_ca)
 }
 
@@ -2653,18 +2603,15 @@ CertificateValidationContext::mutable_verify_subject_alt_name() {
 inline bool CertificateValidationContext::has_require_ocsp_staple() const {
   return this != internal_default_instance() && require_ocsp_staple_ != NULL;
 }
+inline void CertificateValidationContext::clear_require_ocsp_staple() {
+  if (GetArenaNoVirtual() == NULL && require_ocsp_staple_ != NULL) delete require_ocsp_staple_;
+  require_ocsp_staple_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& CertificateValidationContext::require_ocsp_staple() const {
   const ::google::protobuf::BoolValue* p = require_ocsp_staple_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.CertificateValidationContext.require_ocsp_staple)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* CertificateValidationContext::release_require_ocsp_staple() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.require_ocsp_staple)
-  
-  ::google::protobuf::BoolValue* temp = require_ocsp_staple_;
-  require_ocsp_staple_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* CertificateValidationContext::mutable_require_ocsp_staple() {
   
@@ -2674,23 +2621,26 @@ inline ::google::protobuf::BoolValue* CertificateValidationContext::mutable_requ
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CertificateValidationContext.require_ocsp_staple)
   return require_ocsp_staple_;
 }
+inline ::google::protobuf::BoolValue* CertificateValidationContext::release_require_ocsp_staple() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.require_ocsp_staple)
+  
+  ::google::protobuf::BoolValue* temp = require_ocsp_staple_;
+  require_ocsp_staple_ = NULL;
+  return temp;
+}
 inline void CertificateValidationContext::set_allocated_require_ocsp_staple(::google::protobuf::BoolValue* require_ocsp_staple) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(require_ocsp_staple_);
+  delete require_ocsp_staple_;
+  if (require_ocsp_staple != NULL && require_ocsp_staple->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_require_ocsp_staple = new ::google::protobuf::BoolValue;
+    new_require_ocsp_staple->CopyFrom(*require_ocsp_staple);
+    require_ocsp_staple = new_require_ocsp_staple;
   }
+  require_ocsp_staple_ = require_ocsp_staple;
   if (require_ocsp_staple) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(require_ocsp_staple)->GetArena();
-    if (message_arena != submessage_arena) {
-      require_ocsp_staple = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, require_ocsp_staple, submessage_arena);
-    }
     
   } else {
     
   }
-  require_ocsp_staple_ = require_ocsp_staple;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CertificateValidationContext.require_ocsp_staple)
 }
 
@@ -2698,18 +2648,15 @@ inline void CertificateValidationContext::set_allocated_require_ocsp_staple(::go
 inline bool CertificateValidationContext::has_require_signed_certificate_timestamp() const {
   return this != internal_default_instance() && require_signed_certificate_timestamp_ != NULL;
 }
+inline void CertificateValidationContext::clear_require_signed_certificate_timestamp() {
+  if (GetArenaNoVirtual() == NULL && require_signed_certificate_timestamp_ != NULL) delete require_signed_certificate_timestamp_;
+  require_signed_certificate_timestamp_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& CertificateValidationContext::require_signed_certificate_timestamp() const {
   const ::google::protobuf::BoolValue* p = require_signed_certificate_timestamp_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.CertificateValidationContext.require_signed_certificate_timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* CertificateValidationContext::release_require_signed_certificate_timestamp() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.require_signed_certificate_timestamp)
-  
-  ::google::protobuf::BoolValue* temp = require_signed_certificate_timestamp_;
-  require_signed_certificate_timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* CertificateValidationContext::mutable_require_signed_certificate_timestamp() {
   
@@ -2719,23 +2666,26 @@ inline ::google::protobuf::BoolValue* CertificateValidationContext::mutable_requ
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CertificateValidationContext.require_signed_certificate_timestamp)
   return require_signed_certificate_timestamp_;
 }
+inline ::google::protobuf::BoolValue* CertificateValidationContext::release_require_signed_certificate_timestamp() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CertificateValidationContext.require_signed_certificate_timestamp)
+  
+  ::google::protobuf::BoolValue* temp = require_signed_certificate_timestamp_;
+  require_signed_certificate_timestamp_ = NULL;
+  return temp;
+}
 inline void CertificateValidationContext::set_allocated_require_signed_certificate_timestamp(::google::protobuf::BoolValue* require_signed_certificate_timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(require_signed_certificate_timestamp_);
+  delete require_signed_certificate_timestamp_;
+  if (require_signed_certificate_timestamp != NULL && require_signed_certificate_timestamp->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_require_signed_certificate_timestamp = new ::google::protobuf::BoolValue;
+    new_require_signed_certificate_timestamp->CopyFrom(*require_signed_certificate_timestamp);
+    require_signed_certificate_timestamp = new_require_signed_certificate_timestamp;
   }
+  require_signed_certificate_timestamp_ = require_signed_certificate_timestamp;
   if (require_signed_certificate_timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(require_signed_certificate_timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      require_signed_certificate_timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, require_signed_certificate_timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  require_signed_certificate_timestamp_ = require_signed_certificate_timestamp;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CertificateValidationContext.require_signed_certificate_timestamp)
 }
 
@@ -2805,9 +2755,7 @@ inline bool CommonTlsContext::has_tls_params() const {
   return this != internal_default_instance() && tls_params_ != NULL;
 }
 inline void CommonTlsContext::clear_tls_params() {
-  if (GetArenaNoVirtual() == NULL && tls_params_ != NULL) {
-    delete tls_params_;
-  }
+  if (GetArenaNoVirtual() == NULL && tls_params_ != NULL) delete tls_params_;
   tls_params_ = NULL;
 }
 inline const ::envoy::api::v2::TlsParameters& CommonTlsContext::tls_params() const {
@@ -2815,13 +2763,6 @@ inline const ::envoy::api::v2::TlsParameters& CommonTlsContext::tls_params() con
   // @@protoc_insertion_point(field_get:envoy.api.v2.CommonTlsContext.tls_params)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::TlsParameters*>(
       &::envoy::api::v2::_TlsParameters_default_instance_);
-}
-inline ::envoy::api::v2::TlsParameters* CommonTlsContext::release_tls_params() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.tls_params)
-  
-  ::envoy::api::v2::TlsParameters* temp = tls_params_;
-  tls_params_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::TlsParameters* CommonTlsContext::mutable_tls_params() {
   
@@ -2831,22 +2772,21 @@ inline ::envoy::api::v2::TlsParameters* CommonTlsContext::mutable_tls_params() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CommonTlsContext.tls_params)
   return tls_params_;
 }
+inline ::envoy::api::v2::TlsParameters* CommonTlsContext::release_tls_params() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.tls_params)
+  
+  ::envoy::api::v2::TlsParameters* temp = tls_params_;
+  tls_params_ = NULL;
+  return temp;
+}
 inline void CommonTlsContext::set_allocated_tls_params(::envoy::api::v2::TlsParameters* tls_params) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete tls_params_;
-  }
+  delete tls_params_;
+  tls_params_ = tls_params;
   if (tls_params) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      tls_params = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tls_params, submessage_arena);
-    }
     
   } else {
     
   }
-  tls_params_ = tls_params;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CommonTlsContext.tls_params)
 }
 
@@ -2915,9 +2855,7 @@ inline bool CommonTlsContext::has_validation_context() const {
   return this != internal_default_instance() && validation_context_ != NULL;
 }
 inline void CommonTlsContext::clear_validation_context() {
-  if (GetArenaNoVirtual() == NULL && validation_context_ != NULL) {
-    delete validation_context_;
-  }
+  if (GetArenaNoVirtual() == NULL && validation_context_ != NULL) delete validation_context_;
   validation_context_ = NULL;
 }
 inline const ::envoy::api::v2::CertificateValidationContext& CommonTlsContext::validation_context() const {
@@ -2925,13 +2863,6 @@ inline const ::envoy::api::v2::CertificateValidationContext& CommonTlsContext::v
   // @@protoc_insertion_point(field_get:envoy.api.v2.CommonTlsContext.validation_context)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CertificateValidationContext*>(
       &::envoy::api::v2::_CertificateValidationContext_default_instance_);
-}
-inline ::envoy::api::v2::CertificateValidationContext* CommonTlsContext::release_validation_context() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.validation_context)
-  
-  ::envoy::api::v2::CertificateValidationContext* temp = validation_context_;
-  validation_context_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CertificateValidationContext* CommonTlsContext::mutable_validation_context() {
   
@@ -2941,22 +2872,21 @@ inline ::envoy::api::v2::CertificateValidationContext* CommonTlsContext::mutable
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CommonTlsContext.validation_context)
   return validation_context_;
 }
+inline ::envoy::api::v2::CertificateValidationContext* CommonTlsContext::release_validation_context() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.validation_context)
+  
+  ::envoy::api::v2::CertificateValidationContext* temp = validation_context_;
+  validation_context_ = NULL;
+  return temp;
+}
 inline void CommonTlsContext::set_allocated_validation_context(::envoy::api::v2::CertificateValidationContext* validation_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete validation_context_;
-  }
+  delete validation_context_;
+  validation_context_ = validation_context;
   if (validation_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      validation_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, validation_context, submessage_arena);
-    }
     
   } else {
     
   }
-  validation_context_ = validation_context;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CommonTlsContext.validation_context)
 }
 
@@ -3034,9 +2964,7 @@ inline bool CommonTlsContext::has_deprecated_v1() const {
   return this != internal_default_instance() && deprecated_v1_ != NULL;
 }
 inline void CommonTlsContext::clear_deprecated_v1() {
-  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) {
-    delete deprecated_v1_;
-  }
+  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) delete deprecated_v1_;
   deprecated_v1_ = NULL;
 }
 inline const ::envoy::api::v2::CommonTlsContext_DeprecatedV1& CommonTlsContext::deprecated_v1() const {
@@ -3044,13 +2972,6 @@ inline const ::envoy::api::v2::CommonTlsContext_DeprecatedV1& CommonTlsContext::
   // @@protoc_insertion_point(field_get:envoy.api.v2.CommonTlsContext.deprecated_v1)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CommonTlsContext_DeprecatedV1*>(
       &::envoy::api::v2::_CommonTlsContext_DeprecatedV1_default_instance_);
-}
-inline ::envoy::api::v2::CommonTlsContext_DeprecatedV1* CommonTlsContext::release_deprecated_v1() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.deprecated_v1)
-  
-  ::envoy::api::v2::CommonTlsContext_DeprecatedV1* temp = deprecated_v1_;
-  deprecated_v1_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CommonTlsContext_DeprecatedV1* CommonTlsContext::mutable_deprecated_v1() {
   
@@ -3060,22 +2981,21 @@ inline ::envoy::api::v2::CommonTlsContext_DeprecatedV1* CommonTlsContext::mutabl
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.CommonTlsContext.deprecated_v1)
   return deprecated_v1_;
 }
+inline ::envoy::api::v2::CommonTlsContext_DeprecatedV1* CommonTlsContext::release_deprecated_v1() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.CommonTlsContext.deprecated_v1)
+  
+  ::envoy::api::v2::CommonTlsContext_DeprecatedV1* temp = deprecated_v1_;
+  deprecated_v1_ = NULL;
+  return temp;
+}
 inline void CommonTlsContext::set_allocated_deprecated_v1(::envoy::api::v2::CommonTlsContext_DeprecatedV1* deprecated_v1) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete deprecated_v1_;
-  }
+  delete deprecated_v1_;
+  deprecated_v1_ = deprecated_v1;
   if (deprecated_v1) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      deprecated_v1 = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, deprecated_v1, submessage_arena);
-    }
     
   } else {
     
   }
-  deprecated_v1_ = deprecated_v1;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.CommonTlsContext.deprecated_v1)
 }
 
@@ -3088,9 +3008,7 @@ inline bool UpstreamTlsContext::has_common_tls_context() const {
   return this != internal_default_instance() && common_tls_context_ != NULL;
 }
 inline void UpstreamTlsContext::clear_common_tls_context() {
-  if (GetArenaNoVirtual() == NULL && common_tls_context_ != NULL) {
-    delete common_tls_context_;
-  }
+  if (GetArenaNoVirtual() == NULL && common_tls_context_ != NULL) delete common_tls_context_;
   common_tls_context_ = NULL;
 }
 inline const ::envoy::api::v2::CommonTlsContext& UpstreamTlsContext::common_tls_context() const {
@@ -3098,13 +3016,6 @@ inline const ::envoy::api::v2::CommonTlsContext& UpstreamTlsContext::common_tls_
   // @@protoc_insertion_point(field_get:envoy.api.v2.UpstreamTlsContext.common_tls_context)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CommonTlsContext*>(
       &::envoy::api::v2::_CommonTlsContext_default_instance_);
-}
-inline ::envoy::api::v2::CommonTlsContext* UpstreamTlsContext::release_common_tls_context() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.UpstreamTlsContext.common_tls_context)
-  
-  ::envoy::api::v2::CommonTlsContext* temp = common_tls_context_;
-  common_tls_context_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CommonTlsContext* UpstreamTlsContext::mutable_common_tls_context() {
   
@@ -3114,22 +3025,21 @@ inline ::envoy::api::v2::CommonTlsContext* UpstreamTlsContext::mutable_common_tl
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.UpstreamTlsContext.common_tls_context)
   return common_tls_context_;
 }
+inline ::envoy::api::v2::CommonTlsContext* UpstreamTlsContext::release_common_tls_context() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.UpstreamTlsContext.common_tls_context)
+  
+  ::envoy::api::v2::CommonTlsContext* temp = common_tls_context_;
+  common_tls_context_ = NULL;
+  return temp;
+}
 inline void UpstreamTlsContext::set_allocated_common_tls_context(::envoy::api::v2::CommonTlsContext* common_tls_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete common_tls_context_;
-  }
+  delete common_tls_context_;
+  common_tls_context_ = common_tls_context;
   if (common_tls_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      common_tls_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, common_tls_context, submessage_arena);
-    }
     
   } else {
     
   }
-  common_tls_context_ = common_tls_context;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.UpstreamTlsContext.common_tls_context)
 }
 
@@ -3195,9 +3105,7 @@ inline bool DownstreamTlsContext::has_common_tls_context() const {
   return this != internal_default_instance() && common_tls_context_ != NULL;
 }
 inline void DownstreamTlsContext::clear_common_tls_context() {
-  if (GetArenaNoVirtual() == NULL && common_tls_context_ != NULL) {
-    delete common_tls_context_;
-  }
+  if (GetArenaNoVirtual() == NULL && common_tls_context_ != NULL) delete common_tls_context_;
   common_tls_context_ = NULL;
 }
 inline const ::envoy::api::v2::CommonTlsContext& DownstreamTlsContext::common_tls_context() const {
@@ -3205,13 +3113,6 @@ inline const ::envoy::api::v2::CommonTlsContext& DownstreamTlsContext::common_tl
   // @@protoc_insertion_point(field_get:envoy.api.v2.DownstreamTlsContext.common_tls_context)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::CommonTlsContext*>(
       &::envoy::api::v2::_CommonTlsContext_default_instance_);
-}
-inline ::envoy::api::v2::CommonTlsContext* DownstreamTlsContext::release_common_tls_context() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.common_tls_context)
-  
-  ::envoy::api::v2::CommonTlsContext* temp = common_tls_context_;
-  common_tls_context_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::CommonTlsContext* DownstreamTlsContext::mutable_common_tls_context() {
   
@@ -3221,22 +3122,21 @@ inline ::envoy::api::v2::CommonTlsContext* DownstreamTlsContext::mutable_common_
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DownstreamTlsContext.common_tls_context)
   return common_tls_context_;
 }
+inline ::envoy::api::v2::CommonTlsContext* DownstreamTlsContext::release_common_tls_context() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.common_tls_context)
+  
+  ::envoy::api::v2::CommonTlsContext* temp = common_tls_context_;
+  common_tls_context_ = NULL;
+  return temp;
+}
 inline void DownstreamTlsContext::set_allocated_common_tls_context(::envoy::api::v2::CommonTlsContext* common_tls_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete common_tls_context_;
-  }
+  delete common_tls_context_;
+  common_tls_context_ = common_tls_context;
   if (common_tls_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      common_tls_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, common_tls_context, submessage_arena);
-    }
     
   } else {
     
   }
-  common_tls_context_ = common_tls_context;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.common_tls_context)
 }
 
@@ -3244,18 +3144,15 @@ inline void DownstreamTlsContext::set_allocated_common_tls_context(::envoy::api:
 inline bool DownstreamTlsContext::has_require_client_certificate() const {
   return this != internal_default_instance() && require_client_certificate_ != NULL;
 }
+inline void DownstreamTlsContext::clear_require_client_certificate() {
+  if (GetArenaNoVirtual() == NULL && require_client_certificate_ != NULL) delete require_client_certificate_;
+  require_client_certificate_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& DownstreamTlsContext::require_client_certificate() const {
   const ::google::protobuf::BoolValue* p = require_client_certificate_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.DownstreamTlsContext.require_client_certificate)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* DownstreamTlsContext::release_require_client_certificate() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.require_client_certificate)
-  
-  ::google::protobuf::BoolValue* temp = require_client_certificate_;
-  require_client_certificate_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* DownstreamTlsContext::mutable_require_client_certificate() {
   
@@ -3265,23 +3162,26 @@ inline ::google::protobuf::BoolValue* DownstreamTlsContext::mutable_require_clie
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DownstreamTlsContext.require_client_certificate)
   return require_client_certificate_;
 }
+inline ::google::protobuf::BoolValue* DownstreamTlsContext::release_require_client_certificate() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.require_client_certificate)
+  
+  ::google::protobuf::BoolValue* temp = require_client_certificate_;
+  require_client_certificate_ = NULL;
+  return temp;
+}
 inline void DownstreamTlsContext::set_allocated_require_client_certificate(::google::protobuf::BoolValue* require_client_certificate) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(require_client_certificate_);
+  delete require_client_certificate_;
+  if (require_client_certificate != NULL && require_client_certificate->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_require_client_certificate = new ::google::protobuf::BoolValue;
+    new_require_client_certificate->CopyFrom(*require_client_certificate);
+    require_client_certificate = new_require_client_certificate;
   }
+  require_client_certificate_ = require_client_certificate;
   if (require_client_certificate) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(require_client_certificate)->GetArena();
-    if (message_arena != submessage_arena) {
-      require_client_certificate = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, require_client_certificate, submessage_arena);
-    }
     
   } else {
     
   }
-  require_client_certificate_ = require_client_certificate;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.require_client_certificate)
 }
 
@@ -3289,18 +3189,15 @@ inline void DownstreamTlsContext::set_allocated_require_client_certificate(::goo
 inline bool DownstreamTlsContext::has_require_sni() const {
   return this != internal_default_instance() && require_sni_ != NULL;
 }
+inline void DownstreamTlsContext::clear_require_sni() {
+  if (GetArenaNoVirtual() == NULL && require_sni_ != NULL) delete require_sni_;
+  require_sni_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& DownstreamTlsContext::require_sni() const {
   const ::google::protobuf::BoolValue* p = require_sni_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.DownstreamTlsContext.require_sni)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* DownstreamTlsContext::release_require_sni() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.require_sni)
-  
-  ::google::protobuf::BoolValue* temp = require_sni_;
-  require_sni_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* DownstreamTlsContext::mutable_require_sni() {
   
@@ -3310,23 +3207,26 @@ inline ::google::protobuf::BoolValue* DownstreamTlsContext::mutable_require_sni(
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DownstreamTlsContext.require_sni)
   return require_sni_;
 }
+inline ::google::protobuf::BoolValue* DownstreamTlsContext::release_require_sni() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.require_sni)
+  
+  ::google::protobuf::BoolValue* temp = require_sni_;
+  require_sni_ = NULL;
+  return temp;
+}
 inline void DownstreamTlsContext::set_allocated_require_sni(::google::protobuf::BoolValue* require_sni) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(require_sni_);
+  delete require_sni_;
+  if (require_sni != NULL && require_sni->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_require_sni = new ::google::protobuf::BoolValue;
+    new_require_sni->CopyFrom(*require_sni);
+    require_sni = new_require_sni;
   }
+  require_sni_ = require_sni;
   if (require_sni) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(require_sni)->GetArena();
-    if (message_arena != submessage_arena) {
-      require_sni = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, require_sni, submessage_arena);
-    }
     
   } else {
     
   }
-  require_sni_ = require_sni;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.require_sni)
 }
 
@@ -3343,22 +3243,11 @@ inline void DownstreamTlsContext::clear_session_ticket_keys() {
     clear_has_session_ticket_keys_type();
   }
 }
-inline ::envoy::api::v2::TlsSessionTicketKeys* DownstreamTlsContext::release_session_ticket_keys() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
-  if (has_session_ticket_keys()) {
-    clear_has_session_ticket_keys_type();
-      ::envoy::api::v2::TlsSessionTicketKeys* temp = session_ticket_keys_type_.session_ticket_keys_;
-    session_ticket_keys_type_.session_ticket_keys_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::TlsSessionTicketKeys& DownstreamTlsContext::session_ticket_keys() const {
+inline  const ::envoy::api::v2::TlsSessionTicketKeys& DownstreamTlsContext::session_ticket_keys() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
   return has_session_ticket_keys()
       ? *session_ticket_keys_type_.session_ticket_keys_
-      : *reinterpret_cast< ::envoy::api::v2::TlsSessionTicketKeys*>(&::envoy::api::v2::_TlsSessionTicketKeys_default_instance_);
+      : ::envoy::api::v2::TlsSessionTicketKeys::default_instance();
 }
 inline ::envoy::api::v2::TlsSessionTicketKeys* DownstreamTlsContext::mutable_session_ticket_keys() {
   if (!has_session_ticket_keys()) {
@@ -3368,6 +3257,25 @@ inline ::envoy::api::v2::TlsSessionTicketKeys* DownstreamTlsContext::mutable_ses
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
   return session_ticket_keys_type_.session_ticket_keys_;
+}
+inline ::envoy::api::v2::TlsSessionTicketKeys* DownstreamTlsContext::release_session_ticket_keys() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
+  if (has_session_ticket_keys()) {
+    clear_has_session_ticket_keys_type();
+    ::envoy::api::v2::TlsSessionTicketKeys* temp = session_ticket_keys_type_.session_ticket_keys_;
+    session_ticket_keys_type_.session_ticket_keys_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void DownstreamTlsContext::set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys) {
+  clear_session_ticket_keys_type();
+  if (session_ticket_keys) {
+    set_has_session_ticket_keys();
+    session_ticket_keys_type_.session_ticket_keys_ = session_ticket_keys;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
 }
 
 // .envoy.api.v2.SdsSecretConfig session_ticket_keys_sds_secret_config = 5;
@@ -3383,22 +3291,11 @@ inline void DownstreamTlsContext::clear_session_ticket_keys_sds_secret_config() 
     clear_has_session_ticket_keys_type();
   }
 }
-inline ::envoy::api::v2::SdsSecretConfig* DownstreamTlsContext::release_session_ticket_keys_sds_secret_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
-  if (has_session_ticket_keys_sds_secret_config()) {
-    clear_has_session_ticket_keys_type();
-      ::envoy::api::v2::SdsSecretConfig* temp = session_ticket_keys_type_.session_ticket_keys_sds_secret_config_;
-    session_ticket_keys_type_.session_ticket_keys_sds_secret_config_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::SdsSecretConfig& DownstreamTlsContext::session_ticket_keys_sds_secret_config() const {
+inline  const ::envoy::api::v2::SdsSecretConfig& DownstreamTlsContext::session_ticket_keys_sds_secret_config() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
   return has_session_ticket_keys_sds_secret_config()
       ? *session_ticket_keys_type_.session_ticket_keys_sds_secret_config_
-      : *reinterpret_cast< ::envoy::api::v2::SdsSecretConfig*>(&::envoy::api::v2::_SdsSecretConfig_default_instance_);
+      : ::envoy::api::v2::SdsSecretConfig::default_instance();
 }
 inline ::envoy::api::v2::SdsSecretConfig* DownstreamTlsContext::mutable_session_ticket_keys_sds_secret_config() {
   if (!has_session_ticket_keys_sds_secret_config()) {
@@ -3408,6 +3305,25 @@ inline ::envoy::api::v2::SdsSecretConfig* DownstreamTlsContext::mutable_session_
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
   return session_ticket_keys_type_.session_ticket_keys_sds_secret_config_;
+}
+inline ::envoy::api::v2::SdsSecretConfig* DownstreamTlsContext::release_session_ticket_keys_sds_secret_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
+  if (has_session_ticket_keys_sds_secret_config()) {
+    clear_has_session_ticket_keys_type();
+    ::envoy::api::v2::SdsSecretConfig* temp = session_ticket_keys_type_.session_ticket_keys_sds_secret_config_;
+    session_ticket_keys_type_.session_ticket_keys_sds_secret_config_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void DownstreamTlsContext::set_allocated_session_ticket_keys_sds_secret_config(::envoy::api::v2::SdsSecretConfig* session_ticket_keys_sds_secret_config) {
+  clear_session_ticket_keys_type();
+  if (session_ticket_keys_sds_secret_config) {
+    set_has_session_ticket_keys_sds_secret_config();
+    session_ticket_keys_type_.session_ticket_keys_sds_secret_config_ = session_ticket_keys_sds_secret_config;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
 }
 
 inline bool DownstreamTlsContext::has_session_ticket_keys_type() const {
@@ -3480,18 +3396,15 @@ inline void SdsSecretConfig::set_allocated_name(::std::string* name) {
 inline bool SdsSecretConfig::has_sds_config() const {
   return this != internal_default_instance() && sds_config_ != NULL;
 }
+inline void SdsSecretConfig::clear_sds_config() {
+  if (GetArenaNoVirtual() == NULL && sds_config_ != NULL) delete sds_config_;
+  sds_config_ = NULL;
+}
 inline const ::envoy::api::v2::ConfigSource& SdsSecretConfig::sds_config() const {
   const ::envoy::api::v2::ConfigSource* p = sds_config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.SdsSecretConfig.sds_config)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ConfigSource*>(
       &::envoy::api::v2::_ConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ConfigSource* SdsSecretConfig::release_sds_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.SdsSecretConfig.sds_config)
-  
-  ::envoy::api::v2::ConfigSource* temp = sds_config_;
-  sds_config_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ConfigSource* SdsSecretConfig::mutable_sds_config() {
   
@@ -3501,22 +3414,21 @@ inline ::envoy::api::v2::ConfigSource* SdsSecretConfig::mutable_sds_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.SdsSecretConfig.sds_config)
   return sds_config_;
 }
+inline ::envoy::api::v2::ConfigSource* SdsSecretConfig::release_sds_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.SdsSecretConfig.sds_config)
+  
+  ::envoy::api::v2::ConfigSource* temp = sds_config_;
+  sds_config_ = NULL;
+  return temp;
+}
 inline void SdsSecretConfig::set_allocated_sds_config(::envoy::api::v2::ConfigSource* sds_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(sds_config_);
-  }
+  delete sds_config_;
+  sds_config_ = sds_config;
   if (sds_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      sds_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, sds_config, submessage_arena);
-    }
     
   } else {
     
   }
-  sds_config_ = sds_config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.SdsSecretConfig.sds_config)
 }
 
@@ -3590,22 +3502,11 @@ inline void Secret::clear_tls_certificate() {
     clear_has_type();
   }
 }
-inline ::envoy::api::v2::TlsCertificate* Secret::release_tls_certificate() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Secret.tls_certificate)
-  if (has_tls_certificate()) {
-    clear_has_type();
-      ::envoy::api::v2::TlsCertificate* temp = type_.tls_certificate_;
-    type_.tls_certificate_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::TlsCertificate& Secret::tls_certificate() const {
+inline  const ::envoy::api::v2::TlsCertificate& Secret::tls_certificate() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Secret.tls_certificate)
   return has_tls_certificate()
       ? *type_.tls_certificate_
-      : *reinterpret_cast< ::envoy::api::v2::TlsCertificate*>(&::envoy::api::v2::_TlsCertificate_default_instance_);
+      : ::envoy::api::v2::TlsCertificate::default_instance();
 }
 inline ::envoy::api::v2::TlsCertificate* Secret::mutable_tls_certificate() {
   if (!has_tls_certificate()) {
@@ -3615,6 +3516,25 @@ inline ::envoy::api::v2::TlsCertificate* Secret::mutable_tls_certificate() {
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Secret.tls_certificate)
   return type_.tls_certificate_;
+}
+inline ::envoy::api::v2::TlsCertificate* Secret::release_tls_certificate() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Secret.tls_certificate)
+  if (has_tls_certificate()) {
+    clear_has_type();
+    ::envoy::api::v2::TlsCertificate* temp = type_.tls_certificate_;
+    type_.tls_certificate_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Secret::set_allocated_tls_certificate(::envoy::api::v2::TlsCertificate* tls_certificate) {
+  clear_type();
+  if (tls_certificate) {
+    set_has_tls_certificate();
+    type_.tls_certificate_ = tls_certificate;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Secret.tls_certificate)
 }
 
 // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 3;
@@ -3630,22 +3550,11 @@ inline void Secret::clear_session_ticket_keys() {
     clear_has_type();
   }
 }
-inline ::envoy::api::v2::TlsSessionTicketKeys* Secret::release_session_ticket_keys() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.Secret.session_ticket_keys)
-  if (has_session_ticket_keys()) {
-    clear_has_type();
-      ::envoy::api::v2::TlsSessionTicketKeys* temp = type_.session_ticket_keys_;
-    type_.session_ticket_keys_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::TlsSessionTicketKeys& Secret::session_ticket_keys() const {
+inline  const ::envoy::api::v2::TlsSessionTicketKeys& Secret::session_ticket_keys() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.Secret.session_ticket_keys)
   return has_session_ticket_keys()
       ? *type_.session_ticket_keys_
-      : *reinterpret_cast< ::envoy::api::v2::TlsSessionTicketKeys*>(&::envoy::api::v2::_TlsSessionTicketKeys_default_instance_);
+      : ::envoy::api::v2::TlsSessionTicketKeys::default_instance();
 }
 inline ::envoy::api::v2::TlsSessionTicketKeys* Secret::mutable_session_ticket_keys() {
   if (!has_session_ticket_keys()) {
@@ -3655,6 +3564,25 @@ inline ::envoy::api::v2::TlsSessionTicketKeys* Secret::mutable_session_ticket_ke
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.Secret.session_ticket_keys)
   return type_.session_ticket_keys_;
+}
+inline ::envoy::api::v2::TlsSessionTicketKeys* Secret::release_session_ticket_keys() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.Secret.session_ticket_keys)
+  if (has_session_ticket_keys()) {
+    clear_has_type();
+    ::envoy::api::v2::TlsSessionTicketKeys* temp = type_.session_ticket_keys_;
+    type_.session_ticket_keys_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void Secret::set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys) {
+  clear_type();
+  if (session_ticket_keys) {
+    set_has_session_ticket_keys();
+    type_.session_ticket_keys_ = session_ticket_keys;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Secret.session_ticket_keys)
 }
 
 inline bool Secret::has_type() const {

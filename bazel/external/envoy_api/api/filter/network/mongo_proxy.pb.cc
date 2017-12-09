@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -38,11 +34,7 @@ namespace protobuf_api_2ffilter_2fnetwork_2fmongo_5fproxy_2eproto {
 void InitDefaultsMongoProxyImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2ffilter_2ffault_2eproto::InitDefaultsFaultDelay();
   {
     void* ptr = &::envoy::api::v2::filter::network::_MongoProxy_default_instance_;
@@ -101,17 +93,16 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n$api/filter/network/mongo_proxy.proto\022\033"
       "envoy.api.v2.filter.network\032\026api/filter/"
-      "fault.proto\032\027validate/validate.proto\"p\n\n"
-      "MongoProxy\022\036\n\013stat_prefix\030\001 \001(\tB\t\272\351\300\003\004r\002"
-      "\020\001\022\022\n\naccess_log\030\002 \001(\t\022.\n\005delay\030\003 \001(\0132\037."
-      "envoy.api.v2.filter.FaultDelayb\006proto3"
+      "fault.proto\"e\n\nMongoProxy\022\023\n\013stat_prefix"
+      "\030\001 \001(\t\022\022\n\naccess_log\030\002 \001(\t\022.\n\005delay\030\003 \001("
+      "\0132\037.envoy.api.v2.filter.FaultDelayb\006prot"
+      "o3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 238);
+      descriptor, 202);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "api/filter/network/mongo_proxy.proto", &protobuf_RegisterTypes);
   ::protobuf_api_2ffilter_2ffault_2eproto::AddDescriptors();
-  ::protobuf_validate_2fvalidate_2eproto::AddDescriptors();
 }
 
 void AddDescriptors() {
@@ -136,12 +127,6 @@ namespace network {
 void MongoProxy::InitAsDefaultInstance() {
   ::envoy::api::v2::filter::network::_MongoProxy_default_instance_._instance.get_mutable()->delay_ = const_cast< ::envoy::api::v2::filter::FaultDelay*>(
       ::envoy::api::v2::filter::FaultDelay::internal_default_instance());
-}
-void MongoProxy::clear_delay() {
-  if (GetArenaNoVirtual() == NULL && delay_ != NULL) {
-    delete delay_;
-  }
-  delay_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int MongoProxy::kStatPrefixFieldNumber;
@@ -244,7 +229,7 @@ bool MongoProxy::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string stat_prefix = 1 [(.validate.rules) = {
+      // string stat_prefix = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -280,7 +265,7 @@ bool MongoProxy::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_delay()));
         } else {
           goto handle_unusual;
@@ -314,7 +299,7 @@ void MongoProxy::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string stat_prefix = 1 [(.validate.rules) = {
+  // string stat_prefix = 1;
   if (this->stat_prefix().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->stat_prefix().data(), static_cast<int>(this->stat_prefix().length()),
@@ -354,7 +339,7 @@ void MongoProxy::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string stat_prefix = 1 [(.validate.rules) = {
+  // string stat_prefix = 1;
   if (this->stat_prefix().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->stat_prefix().data(), static_cast<int>(this->stat_prefix().length()),
@@ -379,7 +364,7 @@ void MongoProxy::SerializeWithCachedSizes(
   // .envoy.api.v2.filter.FaultDelay delay = 3;
   if (this->has_delay()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->delay_, deterministic, target);
   }
 
@@ -400,7 +385,7 @@ size_t MongoProxy::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string stat_prefix = 1 [(.validate.rules) = {
+  // string stat_prefix = 1;
   if (this->stat_prefix().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -417,7 +402,7 @@ size_t MongoProxy::ByteSizeLong() const {
   // .envoy.api.v2.filter.FaultDelay delay = 3;
   if (this->has_delay()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->delay_);
   }
 

@@ -275,8 +275,8 @@ class Rds : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_config_source();
   static const int kConfigSourceFieldNumber = 1;
   const ::envoy::api::v2::ConfigSource& config_source() const;
-  ::envoy::api::v2::ConfigSource* release_config_source();
   ::envoy::api::v2::ConfigSource* mutable_config_source();
+  ::envoy::api::v2::ConfigSource* release_config_source();
   void set_allocated_config_source(::envoy::api::v2::ConfigSource* config_source);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.http.Rds)
@@ -501,8 +501,8 @@ class HttpFilter : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_config();
   static const int kConfigFieldNumber = 2;
   const ::google::protobuf::Struct& config() const;
-  ::google::protobuf::Struct* release_config();
   ::google::protobuf::Struct* mutable_config();
+  ::google::protobuf::Struct* release_config();
   void set_allocated_config(::google::protobuf::Struct* config);
 
   // .envoy.api.v2.filter.http.HttpFilter.DeprecatedV1 deprecated_v1 = 3;
@@ -510,8 +510,8 @@ class HttpFilter : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_deprecated_v1();
   static const int kDeprecatedV1FieldNumber = 3;
   const ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1& deprecated_v1() const;
-  ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* release_deprecated_v1();
   ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* mutable_deprecated_v1();
+  ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* release_deprecated_v1();
   void set_allocated_deprecated_v1(::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* deprecated_v1);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.http.HttpFilter)
@@ -762,8 +762,8 @@ class HttpConnectionManager_SetCurrentClientCertDetails : public ::google::proto
   void clear_subject();
   static const int kSubjectFieldNumber = 1;
   const ::google::protobuf::BoolValue& subject() const;
-  ::google::protobuf::BoolValue* release_subject();
   ::google::protobuf::BoolValue* mutable_subject();
+  ::google::protobuf::BoolValue* release_subject();
   void set_allocated_subject(::google::protobuf::BoolValue* subject);
 
   // .google.protobuf.BoolValue san = 2;
@@ -771,8 +771,8 @@ class HttpConnectionManager_SetCurrentClientCertDetails : public ::google::proto
   void clear_san();
   static const int kSanFieldNumber = 2;
   const ::google::protobuf::BoolValue& san() const;
-  ::google::protobuf::BoolValue* release_san();
   ::google::protobuf::BoolValue* mutable_san();
+  ::google::protobuf::BoolValue* release_san();
   void set_allocated_san(::google::protobuf::BoolValue* san);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails)
@@ -995,8 +995,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_add_user_agent();
   static const int kAddUserAgentFieldNumber = 6;
   const ::google::protobuf::BoolValue& add_user_agent() const;
-  ::google::protobuf::BoolValue* release_add_user_agent();
   ::google::protobuf::BoolValue* mutable_add_user_agent();
+  ::google::protobuf::BoolValue* release_add_user_agent();
   void set_allocated_add_user_agent(::google::protobuf::BoolValue* add_user_agent);
 
   // .envoy.api.v2.filter.http.HttpConnectionManager.Tracing tracing = 7;
@@ -1004,8 +1004,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_tracing();
   static const int kTracingFieldNumber = 7;
   const ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing& tracing() const;
-  ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* release_tracing();
   ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* mutable_tracing();
+  ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* release_tracing();
   void set_allocated_tracing(::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* tracing);
 
   // .envoy.api.v2.Http1ProtocolOptions http_protocol_options = 8;
@@ -1013,8 +1013,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_http_protocol_options();
   static const int kHttpProtocolOptionsFieldNumber = 8;
   const ::envoy::api::v2::Http1ProtocolOptions& http_protocol_options() const;
-  ::envoy::api::v2::Http1ProtocolOptions* release_http_protocol_options();
   ::envoy::api::v2::Http1ProtocolOptions* mutable_http_protocol_options();
+  ::envoy::api::v2::Http1ProtocolOptions* release_http_protocol_options();
   void set_allocated_http_protocol_options(::envoy::api::v2::Http1ProtocolOptions* http_protocol_options);
 
   // .envoy.api.v2.Http2ProtocolOptions http2_protocol_options = 9;
@@ -1022,8 +1022,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_http2_protocol_options();
   static const int kHttp2ProtocolOptionsFieldNumber = 9;
   const ::envoy::api::v2::Http2ProtocolOptions& http2_protocol_options() const;
-  ::envoy::api::v2::Http2ProtocolOptions* release_http2_protocol_options();
   ::envoy::api::v2::Http2ProtocolOptions* mutable_http2_protocol_options();
+  ::envoy::api::v2::Http2ProtocolOptions* release_http2_protocol_options();
   void set_allocated_http2_protocol_options(::envoy::api::v2::Http2ProtocolOptions* http2_protocol_options);
 
   // .google.protobuf.Duration idle_timeout = 11;
@@ -1031,8 +1031,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_idle_timeout();
   static const int kIdleTimeoutFieldNumber = 11;
   const ::google::protobuf::Duration& idle_timeout() const;
-  ::google::protobuf::Duration* release_idle_timeout();
   ::google::protobuf::Duration* mutable_idle_timeout();
+  ::google::protobuf::Duration* release_idle_timeout();
   void set_allocated_idle_timeout(::google::protobuf::Duration* idle_timeout);
 
   // .google.protobuf.Duration drain_timeout = 12;
@@ -1040,8 +1040,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_drain_timeout();
   static const int kDrainTimeoutFieldNumber = 12;
   const ::google::protobuf::Duration& drain_timeout() const;
-  ::google::protobuf::Duration* release_drain_timeout();
   ::google::protobuf::Duration* mutable_drain_timeout();
+  ::google::protobuf::Duration* release_drain_timeout();
   void set_allocated_drain_timeout(::google::protobuf::Duration* drain_timeout);
 
   // .google.protobuf.BoolValue use_remote_address = 14;
@@ -1049,8 +1049,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_use_remote_address();
   static const int kUseRemoteAddressFieldNumber = 14;
   const ::google::protobuf::BoolValue& use_remote_address() const;
-  ::google::protobuf::BoolValue* release_use_remote_address();
   ::google::protobuf::BoolValue* mutable_use_remote_address();
+  ::google::protobuf::BoolValue* release_use_remote_address();
   void set_allocated_use_remote_address(::google::protobuf::BoolValue* use_remote_address);
 
   // .google.protobuf.BoolValue generate_request_id = 15;
@@ -1058,8 +1058,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_generate_request_id();
   static const int kGenerateRequestIdFieldNumber = 15;
   const ::google::protobuf::BoolValue& generate_request_id() const;
-  ::google::protobuf::BoolValue* release_generate_request_id();
   ::google::protobuf::BoolValue* mutable_generate_request_id();
+  ::google::protobuf::BoolValue* release_generate_request_id();
   void set_allocated_generate_request_id(::google::protobuf::BoolValue* generate_request_id);
 
   // .envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails set_current_client_cert_details = 17;
@@ -1067,8 +1067,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_set_current_client_cert_details();
   static const int kSetCurrentClientCertDetailsFieldNumber = 17;
   const ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails& set_current_client_cert_details() const;
-  ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* release_set_current_client_cert_details();
   ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* mutable_set_current_client_cert_details();
+  ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* release_set_current_client_cert_details();
   void set_allocated_set_current_client_cert_details(::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* set_current_client_cert_details);
 
   // .envoy.api.v2.filter.http.HttpConnectionManager.CodecType codec_type = 1;
@@ -1088,8 +1088,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_rds();
   static const int kRdsFieldNumber = 3;
   const ::envoy::api::v2::filter::http::Rds& rds() const;
-  ::envoy::api::v2::filter::http::Rds* release_rds();
   ::envoy::api::v2::filter::http::Rds* mutable_rds();
+  ::envoy::api::v2::filter::http::Rds* release_rds();
   void set_allocated_rds(::envoy::api::v2::filter::http::Rds* rds);
 
   // .envoy.api.v2.RouteConfiguration route_config = 4;
@@ -1097,8 +1097,8 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
   void clear_route_config();
   static const int kRouteConfigFieldNumber = 4;
   const ::envoy::api::v2::RouteConfiguration& route_config() const;
-  ::envoy::api::v2::RouteConfiguration* release_route_config();
   ::envoy::api::v2::RouteConfiguration* mutable_route_config();
+  ::envoy::api::v2::RouteConfiguration* release_route_config();
   void set_allocated_route_config(::envoy::api::v2::RouteConfiguration* route_config);
 
   RouteSpecifierCase route_specifier_case() const;
@@ -1153,18 +1153,15 @@ class HttpConnectionManager : public ::google::protobuf::Message /* @@protoc_ins
 inline bool Rds::has_config_source() const {
   return this != internal_default_instance() && config_source_ != NULL;
 }
+inline void Rds::clear_config_source() {
+  if (GetArenaNoVirtual() == NULL && config_source_ != NULL) delete config_source_;
+  config_source_ = NULL;
+}
 inline const ::envoy::api::v2::ConfigSource& Rds::config_source() const {
   const ::envoy::api::v2::ConfigSource* p = config_source_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.Rds.config_source)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::ConfigSource*>(
       &::envoy::api::v2::_ConfigSource_default_instance_);
-}
-inline ::envoy::api::v2::ConfigSource* Rds::release_config_source() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.Rds.config_source)
-  
-  ::envoy::api::v2::ConfigSource* temp = config_source_;
-  config_source_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::ConfigSource* Rds::mutable_config_source() {
   
@@ -1174,22 +1171,21 @@ inline ::envoy::api::v2::ConfigSource* Rds::mutable_config_source() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.Rds.config_source)
   return config_source_;
 }
+inline ::envoy::api::v2::ConfigSource* Rds::release_config_source() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.Rds.config_source)
+  
+  ::envoy::api::v2::ConfigSource* temp = config_source_;
+  config_source_ = NULL;
+  return temp;
+}
 inline void Rds::set_allocated_config_source(::envoy::api::v2::ConfigSource* config_source) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_source_);
-  }
+  delete config_source_;
+  config_source_ = config_source;
   if (config_source) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      config_source = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config_source, submessage_arena);
-    }
     
   } else {
     
   }
-  config_source_ = config_source;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.Rds.config_source)
 }
 
@@ -1364,18 +1360,15 @@ inline void HttpFilter::set_allocated_name(::std::string* name) {
 inline bool HttpFilter::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
+inline void HttpFilter::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) delete config_;
+  config_ = NULL;
+}
 inline const ::google::protobuf::Struct& HttpFilter::config() const {
   const ::google::protobuf::Struct* p = config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpFilter.config)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
       &::google::protobuf::_Struct_default_instance_);
-}
-inline ::google::protobuf::Struct* HttpFilter::release_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpFilter.config)
-  
-  ::google::protobuf::Struct* temp = config_;
-  config_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Struct* HttpFilter::mutable_config() {
   
@@ -1385,23 +1378,26 @@ inline ::google::protobuf::Struct* HttpFilter::mutable_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpFilter.config)
   return config_;
 }
+inline ::google::protobuf::Struct* HttpFilter::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpFilter.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
 inline void HttpFilter::set_allocated_config(::google::protobuf::Struct* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  delete config_;
+  if (config != NULL && config->GetArena() != NULL) {
+    ::google::protobuf::Struct* new_config = new ::google::protobuf::Struct;
+    new_config->CopyFrom(*config);
+    config = new_config;
   }
+  config_ = config;
   if (config) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
     
   } else {
     
   }
-  config_ = config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpFilter.config)
 }
 
@@ -1410,9 +1406,7 @@ inline bool HttpFilter::has_deprecated_v1() const {
   return this != internal_default_instance() && deprecated_v1_ != NULL;
 }
 inline void HttpFilter::clear_deprecated_v1() {
-  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) {
-    delete deprecated_v1_;
-  }
+  if (GetArenaNoVirtual() == NULL && deprecated_v1_ != NULL) delete deprecated_v1_;
   deprecated_v1_ = NULL;
 }
 inline const ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1& HttpFilter::deprecated_v1() const {
@@ -1420,13 +1414,6 @@ inline const ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1& HttpFilter
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpFilter.deprecated_v1)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1*>(
       &::envoy::api::v2::filter::http::_HttpFilter_DeprecatedV1_default_instance_);
-}
-inline ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* HttpFilter::release_deprecated_v1() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpFilter.deprecated_v1)
-  
-  ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* temp = deprecated_v1_;
-  deprecated_v1_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* HttpFilter::mutable_deprecated_v1() {
   
@@ -1436,22 +1423,21 @@ inline ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* HttpFilter::muta
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpFilter.deprecated_v1)
   return deprecated_v1_;
 }
+inline ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* HttpFilter::release_deprecated_v1() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpFilter.deprecated_v1)
+  
+  ::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* temp = deprecated_v1_;
+  deprecated_v1_ = NULL;
+  return temp;
+}
 inline void HttpFilter::set_allocated_deprecated_v1(::envoy::api::v2::filter::http::HttpFilter_DeprecatedV1* deprecated_v1) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete deprecated_v1_;
-  }
+  delete deprecated_v1_;
+  deprecated_v1_ = deprecated_v1;
   if (deprecated_v1) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      deprecated_v1 = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, deprecated_v1, submessage_arena);
-    }
     
   } else {
     
   }
-  deprecated_v1_ = deprecated_v1;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpFilter.deprecated_v1)
 }
 
@@ -1550,18 +1536,15 @@ HttpConnectionManager_Tracing::mutable_request_headers_for_tags() {
 inline bool HttpConnectionManager_SetCurrentClientCertDetails::has_subject() const {
   return this != internal_default_instance() && subject_ != NULL;
 }
+inline void HttpConnectionManager_SetCurrentClientCertDetails::clear_subject() {
+  if (GetArenaNoVirtual() == NULL && subject_ != NULL) delete subject_;
+  subject_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HttpConnectionManager_SetCurrentClientCertDetails::subject() const {
   const ::google::protobuf::BoolValue* p = subject_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.subject)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::release_subject() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.subject)
-  
-  ::google::protobuf::BoolValue* temp = subject_;
-  subject_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::mutable_subject() {
   
@@ -1571,23 +1554,26 @@ inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCert
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.subject)
   return subject_;
 }
+inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::release_subject() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.subject)
+  
+  ::google::protobuf::BoolValue* temp = subject_;
+  subject_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager_SetCurrentClientCertDetails::set_allocated_subject(::google::protobuf::BoolValue* subject) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(subject_);
+  delete subject_;
+  if (subject != NULL && subject->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_subject = new ::google::protobuf::BoolValue;
+    new_subject->CopyFrom(*subject);
+    subject = new_subject;
   }
+  subject_ = subject;
   if (subject) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(subject)->GetArena();
-    if (message_arena != submessage_arena) {
-      subject = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, subject, submessage_arena);
-    }
     
   } else {
     
   }
-  subject_ = subject;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.subject)
 }
 
@@ -1595,18 +1581,15 @@ inline void HttpConnectionManager_SetCurrentClientCertDetails::set_allocated_sub
 inline bool HttpConnectionManager_SetCurrentClientCertDetails::has_san() const {
   return this != internal_default_instance() && san_ != NULL;
 }
+inline void HttpConnectionManager_SetCurrentClientCertDetails::clear_san() {
+  if (GetArenaNoVirtual() == NULL && san_ != NULL) delete san_;
+  san_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HttpConnectionManager_SetCurrentClientCertDetails::san() const {
   const ::google::protobuf::BoolValue* p = san_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.san)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::release_san() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.san)
-  
-  ::google::protobuf::BoolValue* temp = san_;
-  san_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::mutable_san() {
   
@@ -1616,23 +1599,26 @@ inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCert
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.san)
   return san_;
 }
+inline ::google::protobuf::BoolValue* HttpConnectionManager_SetCurrentClientCertDetails::release_san() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.san)
+  
+  ::google::protobuf::BoolValue* temp = san_;
+  san_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager_SetCurrentClientCertDetails::set_allocated_san(::google::protobuf::BoolValue* san) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(san_);
+  delete san_;
+  if (san != NULL && san->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_san = new ::google::protobuf::BoolValue;
+    new_san->CopyFrom(*san);
+    san = new_san;
   }
+  san_ = san;
   if (san) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(san)->GetArena();
-    if (message_arena != submessage_arena) {
-      san = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, san, submessage_arena);
-    }
     
   } else {
     
   }
-  san_ = san;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.SetCurrentClientCertDetails.san)
 }
 
@@ -1720,22 +1706,11 @@ inline void HttpConnectionManager::clear_rds() {
     clear_has_route_specifier();
   }
 }
-inline ::envoy::api::v2::filter::http::Rds* HttpConnectionManager::release_rds() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.rds)
-  if (has_rds()) {
-    clear_has_route_specifier();
-      ::envoy::api::v2::filter::http::Rds* temp = route_specifier_.rds_;
-    route_specifier_.rds_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::http::Rds& HttpConnectionManager::rds() const {
+inline  const ::envoy::api::v2::filter::http::Rds& HttpConnectionManager::rds() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.rds)
   return has_rds()
       ? *route_specifier_.rds_
-      : *reinterpret_cast< ::envoy::api::v2::filter::http::Rds*>(&::envoy::api::v2::filter::http::_Rds_default_instance_);
+      : ::envoy::api::v2::filter::http::Rds::default_instance();
 }
 inline ::envoy::api::v2::filter::http::Rds* HttpConnectionManager::mutable_rds() {
   if (!has_rds()) {
@@ -1746,6 +1721,25 @@ inline ::envoy::api::v2::filter::http::Rds* HttpConnectionManager::mutable_rds()
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.rds)
   return route_specifier_.rds_;
 }
+inline ::envoy::api::v2::filter::http::Rds* HttpConnectionManager::release_rds() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.rds)
+  if (has_rds()) {
+    clear_has_route_specifier();
+    ::envoy::api::v2::filter::http::Rds* temp = route_specifier_.rds_;
+    route_specifier_.rds_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void HttpConnectionManager::set_allocated_rds(::envoy::api::v2::filter::http::Rds* rds) {
+  clear_route_specifier();
+  if (rds) {
+    set_has_rds();
+    route_specifier_.rds_ = rds;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.rds)
+}
 
 // .envoy.api.v2.RouteConfiguration route_config = 4;
 inline bool HttpConnectionManager::has_route_config() const {
@@ -1754,22 +1748,17 @@ inline bool HttpConnectionManager::has_route_config() const {
 inline void HttpConnectionManager::set_has_route_config() {
   _oneof_case_[0] = kRouteConfig;
 }
-inline ::envoy::api::v2::RouteConfiguration* HttpConnectionManager::release_route_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.route_config)
+inline void HttpConnectionManager::clear_route_config() {
   if (has_route_config()) {
+    delete route_specifier_.route_config_;
     clear_has_route_specifier();
-      ::envoy::api::v2::RouteConfiguration* temp = route_specifier_.route_config_;
-    route_specifier_.route_config_ = NULL;
-    return temp;
-  } else {
-    return NULL;
   }
 }
-inline const ::envoy::api::v2::RouteConfiguration& HttpConnectionManager::route_config() const {
+inline  const ::envoy::api::v2::RouteConfiguration& HttpConnectionManager::route_config() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.route_config)
   return has_route_config()
       ? *route_specifier_.route_config_
-      : *reinterpret_cast< ::envoy::api::v2::RouteConfiguration*>(&::envoy::api::v2::_RouteConfiguration_default_instance_);
+      : ::envoy::api::v2::RouteConfiguration::default_instance();
 }
 inline ::envoy::api::v2::RouteConfiguration* HttpConnectionManager::mutable_route_config() {
   if (!has_route_config()) {
@@ -1779,6 +1768,25 @@ inline ::envoy::api::v2::RouteConfiguration* HttpConnectionManager::mutable_rout
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.route_config)
   return route_specifier_.route_config_;
+}
+inline ::envoy::api::v2::RouteConfiguration* HttpConnectionManager::release_route_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.route_config)
+  if (has_route_config()) {
+    clear_has_route_specifier();
+    ::envoy::api::v2::RouteConfiguration* temp = route_specifier_.route_config_;
+    route_specifier_.route_config_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void HttpConnectionManager::set_allocated_route_config(::envoy::api::v2::RouteConfiguration* route_config) {
+  clear_route_specifier();
+  if (route_config) {
+    set_has_route_config();
+    route_specifier_.route_config_ = route_config;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.route_config)
 }
 
 // repeated .envoy.api.v2.filter.http.HttpFilter http_filters = 5;
@@ -1815,18 +1823,15 @@ HttpConnectionManager::http_filters() const {
 inline bool HttpConnectionManager::has_add_user_agent() const {
   return this != internal_default_instance() && add_user_agent_ != NULL;
 }
+inline void HttpConnectionManager::clear_add_user_agent() {
+  if (GetArenaNoVirtual() == NULL && add_user_agent_ != NULL) delete add_user_agent_;
+  add_user_agent_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HttpConnectionManager::add_user_agent() const {
   const ::google::protobuf::BoolValue* p = add_user_agent_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.add_user_agent)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HttpConnectionManager::release_add_user_agent() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.add_user_agent)
-  
-  ::google::protobuf::BoolValue* temp = add_user_agent_;
-  add_user_agent_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_add_user_agent() {
   
@@ -1836,23 +1841,26 @@ inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_add_user_ag
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.add_user_agent)
   return add_user_agent_;
 }
+inline ::google::protobuf::BoolValue* HttpConnectionManager::release_add_user_agent() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.add_user_agent)
+  
+  ::google::protobuf::BoolValue* temp = add_user_agent_;
+  add_user_agent_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_add_user_agent(::google::protobuf::BoolValue* add_user_agent) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(add_user_agent_);
+  delete add_user_agent_;
+  if (add_user_agent != NULL && add_user_agent->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_add_user_agent = new ::google::protobuf::BoolValue;
+    new_add_user_agent->CopyFrom(*add_user_agent);
+    add_user_agent = new_add_user_agent;
   }
+  add_user_agent_ = add_user_agent;
   if (add_user_agent) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(add_user_agent)->GetArena();
-    if (message_arena != submessage_arena) {
-      add_user_agent = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, add_user_agent, submessage_arena);
-    }
     
   } else {
     
   }
-  add_user_agent_ = add_user_agent;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.add_user_agent)
 }
 
@@ -1861,9 +1869,7 @@ inline bool HttpConnectionManager::has_tracing() const {
   return this != internal_default_instance() && tracing_ != NULL;
 }
 inline void HttpConnectionManager::clear_tracing() {
-  if (GetArenaNoVirtual() == NULL && tracing_ != NULL) {
-    delete tracing_;
-  }
+  if (GetArenaNoVirtual() == NULL && tracing_ != NULL) delete tracing_;
   tracing_ = NULL;
 }
 inline const ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing& HttpConnectionManager::tracing() const {
@@ -1871,13 +1877,6 @@ inline const ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing& Http
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.tracing)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing*>(
       &::envoy::api::v2::filter::http::_HttpConnectionManager_Tracing_default_instance_);
-}
-inline ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* HttpConnectionManager::release_tracing() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.tracing)
-  
-  ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* temp = tracing_;
-  tracing_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* HttpConnectionManager::mutable_tracing() {
   
@@ -1887,22 +1886,21 @@ inline ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* HttpConnec
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.tracing)
   return tracing_;
 }
+inline ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* HttpConnectionManager::release_tracing() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.tracing)
+  
+  ::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* temp = tracing_;
+  tracing_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_tracing(::envoy::api::v2::filter::http::HttpConnectionManager_Tracing* tracing) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete tracing_;
-  }
+  delete tracing_;
+  tracing_ = tracing;
   if (tracing) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      tracing = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tracing, submessage_arena);
-    }
     
   } else {
     
   }
-  tracing_ = tracing;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.tracing)
 }
 
@@ -1910,18 +1908,15 @@ inline void HttpConnectionManager::set_allocated_tracing(::envoy::api::v2::filte
 inline bool HttpConnectionManager::has_http_protocol_options() const {
   return this != internal_default_instance() && http_protocol_options_ != NULL;
 }
+inline void HttpConnectionManager::clear_http_protocol_options() {
+  if (GetArenaNoVirtual() == NULL && http_protocol_options_ != NULL) delete http_protocol_options_;
+  http_protocol_options_ = NULL;
+}
 inline const ::envoy::api::v2::Http1ProtocolOptions& HttpConnectionManager::http_protocol_options() const {
   const ::envoy::api::v2::Http1ProtocolOptions* p = http_protocol_options_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.http_protocol_options)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Http1ProtocolOptions*>(
       &::envoy::api::v2::_Http1ProtocolOptions_default_instance_);
-}
-inline ::envoy::api::v2::Http1ProtocolOptions* HttpConnectionManager::release_http_protocol_options() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.http_protocol_options)
-  
-  ::envoy::api::v2::Http1ProtocolOptions* temp = http_protocol_options_;
-  http_protocol_options_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Http1ProtocolOptions* HttpConnectionManager::mutable_http_protocol_options() {
   
@@ -1931,22 +1926,21 @@ inline ::envoy::api::v2::Http1ProtocolOptions* HttpConnectionManager::mutable_ht
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.http_protocol_options)
   return http_protocol_options_;
 }
+inline ::envoy::api::v2::Http1ProtocolOptions* HttpConnectionManager::release_http_protocol_options() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.http_protocol_options)
+  
+  ::envoy::api::v2::Http1ProtocolOptions* temp = http_protocol_options_;
+  http_protocol_options_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_http_protocol_options(::envoy::api::v2::Http1ProtocolOptions* http_protocol_options) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(http_protocol_options_);
-  }
+  delete http_protocol_options_;
+  http_protocol_options_ = http_protocol_options;
   if (http_protocol_options) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      http_protocol_options = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, http_protocol_options, submessage_arena);
-    }
     
   } else {
     
   }
-  http_protocol_options_ = http_protocol_options;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.http_protocol_options)
 }
 
@@ -1954,18 +1948,15 @@ inline void HttpConnectionManager::set_allocated_http_protocol_options(::envoy::
 inline bool HttpConnectionManager::has_http2_protocol_options() const {
   return this != internal_default_instance() && http2_protocol_options_ != NULL;
 }
+inline void HttpConnectionManager::clear_http2_protocol_options() {
+  if (GetArenaNoVirtual() == NULL && http2_protocol_options_ != NULL) delete http2_protocol_options_;
+  http2_protocol_options_ = NULL;
+}
 inline const ::envoy::api::v2::Http2ProtocolOptions& HttpConnectionManager::http2_protocol_options() const {
   const ::envoy::api::v2::Http2ProtocolOptions* p = http2_protocol_options_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.http2_protocol_options)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::Http2ProtocolOptions*>(
       &::envoy::api::v2::_Http2ProtocolOptions_default_instance_);
-}
-inline ::envoy::api::v2::Http2ProtocolOptions* HttpConnectionManager::release_http2_protocol_options() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.http2_protocol_options)
-  
-  ::envoy::api::v2::Http2ProtocolOptions* temp = http2_protocol_options_;
-  http2_protocol_options_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::Http2ProtocolOptions* HttpConnectionManager::mutable_http2_protocol_options() {
   
@@ -1975,22 +1966,21 @@ inline ::envoy::api::v2::Http2ProtocolOptions* HttpConnectionManager::mutable_ht
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.http2_protocol_options)
   return http2_protocol_options_;
 }
+inline ::envoy::api::v2::Http2ProtocolOptions* HttpConnectionManager::release_http2_protocol_options() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.http2_protocol_options)
+  
+  ::envoy::api::v2::Http2ProtocolOptions* temp = http2_protocol_options_;
+  http2_protocol_options_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_http2_protocol_options(::envoy::api::v2::Http2ProtocolOptions* http2_protocol_options) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(http2_protocol_options_);
-  }
+  delete http2_protocol_options_;
+  http2_protocol_options_ = http2_protocol_options;
   if (http2_protocol_options) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      http2_protocol_options = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, http2_protocol_options, submessage_arena);
-    }
     
   } else {
     
   }
-  http2_protocol_options_ = http2_protocol_options;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.http2_protocol_options)
 }
 
@@ -2051,18 +2041,15 @@ inline void HttpConnectionManager::set_allocated_server_name(::std::string* serv
 inline bool HttpConnectionManager::has_idle_timeout() const {
   return this != internal_default_instance() && idle_timeout_ != NULL;
 }
+inline void HttpConnectionManager::clear_idle_timeout() {
+  if (GetArenaNoVirtual() == NULL && idle_timeout_ != NULL) delete idle_timeout_;
+  idle_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& HttpConnectionManager::idle_timeout() const {
   const ::google::protobuf::Duration* p = idle_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.idle_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* HttpConnectionManager::release_idle_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.idle_timeout)
-  
-  ::google::protobuf::Duration* temp = idle_timeout_;
-  idle_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* HttpConnectionManager::mutable_idle_timeout() {
   
@@ -2072,23 +2059,26 @@ inline ::google::protobuf::Duration* HttpConnectionManager::mutable_idle_timeout
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.idle_timeout)
   return idle_timeout_;
 }
+inline ::google::protobuf::Duration* HttpConnectionManager::release_idle_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.idle_timeout)
+  
+  ::google::protobuf::Duration* temp = idle_timeout_;
+  idle_timeout_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_idle_timeout(::google::protobuf::Duration* idle_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(idle_timeout_);
+  delete idle_timeout_;
+  if (idle_timeout != NULL && idle_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_idle_timeout = new ::google::protobuf::Duration;
+    new_idle_timeout->CopyFrom(*idle_timeout);
+    idle_timeout = new_idle_timeout;
   }
+  idle_timeout_ = idle_timeout;
   if (idle_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(idle_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      idle_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, idle_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  idle_timeout_ = idle_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.idle_timeout)
 }
 
@@ -2096,18 +2086,15 @@ inline void HttpConnectionManager::set_allocated_idle_timeout(::google::protobuf
 inline bool HttpConnectionManager::has_drain_timeout() const {
   return this != internal_default_instance() && drain_timeout_ != NULL;
 }
+inline void HttpConnectionManager::clear_drain_timeout() {
+  if (GetArenaNoVirtual() == NULL && drain_timeout_ != NULL) delete drain_timeout_;
+  drain_timeout_ = NULL;
+}
 inline const ::google::protobuf::Duration& HttpConnectionManager::drain_timeout() const {
   const ::google::protobuf::Duration* p = drain_timeout_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.drain_timeout)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Duration*>(
       &::google::protobuf::_Duration_default_instance_);
-}
-inline ::google::protobuf::Duration* HttpConnectionManager::release_drain_timeout() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.drain_timeout)
-  
-  ::google::protobuf::Duration* temp = drain_timeout_;
-  drain_timeout_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Duration* HttpConnectionManager::mutable_drain_timeout() {
   
@@ -2117,29 +2104,35 @@ inline ::google::protobuf::Duration* HttpConnectionManager::mutable_drain_timeou
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.drain_timeout)
   return drain_timeout_;
 }
+inline ::google::protobuf::Duration* HttpConnectionManager::release_drain_timeout() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.drain_timeout)
+  
+  ::google::protobuf::Duration* temp = drain_timeout_;
+  drain_timeout_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_drain_timeout(::google::protobuf::Duration* drain_timeout) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(drain_timeout_);
+  delete drain_timeout_;
+  if (drain_timeout != NULL && drain_timeout->GetArena() != NULL) {
+    ::google::protobuf::Duration* new_drain_timeout = new ::google::protobuf::Duration;
+    new_drain_timeout->CopyFrom(*drain_timeout);
+    drain_timeout = new_drain_timeout;
   }
+  drain_timeout_ = drain_timeout;
   if (drain_timeout) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(drain_timeout)->GetArena();
-    if (message_arena != submessage_arena) {
-      drain_timeout = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, drain_timeout, submessage_arena);
-    }
     
   } else {
     
   }
-  drain_timeout_ = drain_timeout;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.drain_timeout)
 }
 
 // repeated .envoy.api.v2.filter.AccessLog access_log = 13;
 inline int HttpConnectionManager::access_log_size() const {
   return access_log_.size();
+}
+inline void HttpConnectionManager::clear_access_log() {
+  access_log_.Clear();
 }
 inline const ::envoy::api::v2::filter::AccessLog& HttpConnectionManager::access_log(int index) const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.access_log)
@@ -2168,18 +2161,15 @@ HttpConnectionManager::access_log() const {
 inline bool HttpConnectionManager::has_use_remote_address() const {
   return this != internal_default_instance() && use_remote_address_ != NULL;
 }
+inline void HttpConnectionManager::clear_use_remote_address() {
+  if (GetArenaNoVirtual() == NULL && use_remote_address_ != NULL) delete use_remote_address_;
+  use_remote_address_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HttpConnectionManager::use_remote_address() const {
   const ::google::protobuf::BoolValue* p = use_remote_address_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.use_remote_address)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HttpConnectionManager::release_use_remote_address() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.use_remote_address)
-  
-  ::google::protobuf::BoolValue* temp = use_remote_address_;
-  use_remote_address_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_use_remote_address() {
   
@@ -2189,23 +2179,26 @@ inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_use_remote_
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.use_remote_address)
   return use_remote_address_;
 }
+inline ::google::protobuf::BoolValue* HttpConnectionManager::release_use_remote_address() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.use_remote_address)
+  
+  ::google::protobuf::BoolValue* temp = use_remote_address_;
+  use_remote_address_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_use_remote_address(::google::protobuf::BoolValue* use_remote_address) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(use_remote_address_);
+  delete use_remote_address_;
+  if (use_remote_address != NULL && use_remote_address->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_use_remote_address = new ::google::protobuf::BoolValue;
+    new_use_remote_address->CopyFrom(*use_remote_address);
+    use_remote_address = new_use_remote_address;
   }
+  use_remote_address_ = use_remote_address;
   if (use_remote_address) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(use_remote_address)->GetArena();
-    if (message_arena != submessage_arena) {
-      use_remote_address = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, use_remote_address, submessage_arena);
-    }
     
   } else {
     
   }
-  use_remote_address_ = use_remote_address;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.use_remote_address)
 }
 
@@ -2213,18 +2206,15 @@ inline void HttpConnectionManager::set_allocated_use_remote_address(::google::pr
 inline bool HttpConnectionManager::has_generate_request_id() const {
   return this != internal_default_instance() && generate_request_id_ != NULL;
 }
+inline void HttpConnectionManager::clear_generate_request_id() {
+  if (GetArenaNoVirtual() == NULL && generate_request_id_ != NULL) delete generate_request_id_;
+  generate_request_id_ = NULL;
+}
 inline const ::google::protobuf::BoolValue& HttpConnectionManager::generate_request_id() const {
   const ::google::protobuf::BoolValue* p = generate_request_id_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.generate_request_id)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::BoolValue*>(
       &::google::protobuf::_BoolValue_default_instance_);
-}
-inline ::google::protobuf::BoolValue* HttpConnectionManager::release_generate_request_id() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.generate_request_id)
-  
-  ::google::protobuf::BoolValue* temp = generate_request_id_;
-  generate_request_id_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_generate_request_id() {
   
@@ -2234,23 +2224,26 @@ inline ::google::protobuf::BoolValue* HttpConnectionManager::mutable_generate_re
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.generate_request_id)
   return generate_request_id_;
 }
+inline ::google::protobuf::BoolValue* HttpConnectionManager::release_generate_request_id() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.generate_request_id)
+  
+  ::google::protobuf::BoolValue* temp = generate_request_id_;
+  generate_request_id_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_generate_request_id(::google::protobuf::BoolValue* generate_request_id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(generate_request_id_);
+  delete generate_request_id_;
+  if (generate_request_id != NULL && generate_request_id->GetArena() != NULL) {
+    ::google::protobuf::BoolValue* new_generate_request_id = new ::google::protobuf::BoolValue;
+    new_generate_request_id->CopyFrom(*generate_request_id);
+    generate_request_id = new_generate_request_id;
   }
+  generate_request_id_ = generate_request_id;
   if (generate_request_id) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(generate_request_id)->GetArena();
-    if (message_arena != submessage_arena) {
-      generate_request_id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, generate_request_id, submessage_arena);
-    }
     
   } else {
     
   }
-  generate_request_id_ = generate_request_id;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.generate_request_id)
 }
 
@@ -2273,9 +2266,7 @@ inline bool HttpConnectionManager::has_set_current_client_cert_details() const {
   return this != internal_default_instance() && set_current_client_cert_details_ != NULL;
 }
 inline void HttpConnectionManager::clear_set_current_client_cert_details() {
-  if (GetArenaNoVirtual() == NULL && set_current_client_cert_details_ != NULL) {
-    delete set_current_client_cert_details_;
-  }
+  if (GetArenaNoVirtual() == NULL && set_current_client_cert_details_ != NULL) delete set_current_client_cert_details_;
   set_current_client_cert_details_ = NULL;
 }
 inline const ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails& HttpConnectionManager::set_current_client_cert_details() const {
@@ -2283,13 +2274,6 @@ inline const ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentCli
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.http.HttpConnectionManager.set_current_client_cert_details)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails*>(
       &::envoy::api::v2::filter::http::_HttpConnectionManager_SetCurrentClientCertDetails_default_instance_);
-}
-inline ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* HttpConnectionManager::release_set_current_client_cert_details() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.set_current_client_cert_details)
-  
-  ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* temp = set_current_client_cert_details_;
-  set_current_client_cert_details_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* HttpConnectionManager::mutable_set_current_client_cert_details() {
   
@@ -2299,22 +2283,21 @@ inline ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCer
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.http.HttpConnectionManager.set_current_client_cert_details)
   return set_current_client_cert_details_;
 }
+inline ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* HttpConnectionManager::release_set_current_client_cert_details() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.http.HttpConnectionManager.set_current_client_cert_details)
+  
+  ::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* temp = set_current_client_cert_details_;
+  set_current_client_cert_details_ = NULL;
+  return temp;
+}
 inline void HttpConnectionManager::set_allocated_set_current_client_cert_details(::envoy::api::v2::filter::http::HttpConnectionManager_SetCurrentClientCertDetails* set_current_client_cert_details) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete set_current_client_cert_details_;
-  }
+  delete set_current_client_cert_details_;
+  set_current_client_cert_details_ = set_current_client_cert_details;
   if (set_current_client_cert_details) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      set_current_client_cert_details = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, set_current_client_cert_details, submessage_arena);
-    }
     
   } else {
     
   }
-  set_current_client_cert_details_ = set_current_client_cert_details;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.http.HttpConnectionManager.set_current_client_cert_details)
 }
 

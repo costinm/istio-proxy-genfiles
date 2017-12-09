@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace istio {
 namespace mixer {
@@ -76,11 +72,7 @@ namespace protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto {
 void InitDefaultsQuotaSpecImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsQuotaRule();
   {
     void* ptr = &::istio::mixer::v1::config::client::_QuotaSpec_default_instance_;
@@ -98,11 +90,7 @@ void InitDefaultsQuotaSpec() {
 void InitDefaultsQuotaRuleImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsAttributeMatch();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsQuota();
   {
@@ -121,11 +109,7 @@ void InitDefaultsQuotaRule() {
 void InitDefaultsStringMatchImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_StringMatch_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::StringMatch();
@@ -142,11 +126,7 @@ void InitDefaultsStringMatch() {
 void InitDefaultsAttributeMatch_ClauseEntry_DoNotUseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsStringMatch();
   {
     void* ptr = &::istio::mixer::v1::config::client::_AttributeMatch_ClauseEntry_DoNotUse_default_instance_;
@@ -163,11 +143,7 @@ void InitDefaultsAttributeMatch_ClauseEntry_DoNotUse() {
 void InitDefaultsAttributeMatchImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsAttributeMatch_ClauseEntry_DoNotUse();
   {
     void* ptr = &::istio::mixer::v1::config::client::_AttributeMatch_default_instance_;
@@ -185,11 +161,7 @@ void InitDefaultsAttributeMatch() {
 void InitDefaultsQuotaImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_Quota_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::Quota();
@@ -206,11 +178,7 @@ void InitDefaultsQuota() {
 void InitDefaultsQuotaSpecBinding_QuotaSpecReferenceImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::istio::mixer::v1::config::client::_QuotaSpecBinding_QuotaSpecReference_default_instance_;
     new (ptr) ::istio::mixer::v1::config::client::QuotaSpecBinding_QuotaSpecReference();
@@ -227,11 +195,7 @@ void InitDefaultsQuotaSpecBinding_QuotaSpecReference() {
 void InitDefaultsQuotaSpecBindingImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_mixer_2fv1_2fconfig_2fclient_2fservice_2eproto::InitDefaultsIstioService();
   protobuf_mixer_2fv1_2fconfig_2fclient_2fquota_2eproto::InitDefaultsQuotaSpecBinding_QuotaSpecReference();
   {
@@ -485,7 +449,8 @@ bool QuotaSpec::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_rules()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_rules()));
         } else {
           goto handle_unusual;
         }
@@ -543,7 +508,7 @@ void QuotaSpec::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->rules_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->rules(static_cast<int>(i)), deterministic, target);
   }
 
@@ -570,7 +535,7 @@ size_t QuotaSpec::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->rules(static_cast<int>(i)));
     }
   }
@@ -729,7 +694,8 @@ bool QuotaRule::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_match()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_match()));
         } else {
           goto handle_unusual;
         }
@@ -740,7 +706,8 @@ bool QuotaRule::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_quotas()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quotas()));
         } else {
           goto handle_unusual;
         }
@@ -805,7 +772,7 @@ void QuotaRule::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->match_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->match(static_cast<int>(i)), deterministic, target);
   }
 
@@ -813,7 +780,7 @@ void QuotaRule::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->quotas_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->quotas(static_cast<int>(i)), deterministic, target);
   }
 
@@ -840,7 +807,7 @@ size_t QuotaRule::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->match(static_cast<int>(i)));
     }
   }
@@ -851,7 +818,7 @@ size_t QuotaRule::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->quotas(static_cast<int>(i)));
     }
   }
@@ -2307,9 +2274,6 @@ void QuotaSpecBinding_QuotaSpecReference::InternalSwap(QuotaSpecBinding_QuotaSpe
 
 void QuotaSpecBinding::InitAsDefaultInstance() {
 }
-void QuotaSpecBinding::clear_services() {
-  services_.Clear();
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int QuotaSpecBinding::kServicesFieldNumber;
 const int QuotaSpecBinding::kQuotaSpecsFieldNumber;
@@ -2393,7 +2357,8 @@ bool QuotaSpecBinding::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_services()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_services()));
         } else {
           goto handle_unusual;
         }
@@ -2404,7 +2369,8 @@ bool QuotaSpecBinding::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_quota_specs()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quota_specs()));
         } else {
           goto handle_unusual;
         }
@@ -2469,7 +2435,7 @@ void QuotaSpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->services_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->services(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2477,7 +2443,7 @@ void QuotaSpecBinding::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->quota_specs_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->quota_specs(static_cast<int>(i)), deterministic, target);
   }
 
@@ -2504,7 +2470,7 @@ size_t QuotaSpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->services(static_cast<int>(i)));
     }
   }
@@ -2515,7 +2481,7 @@ size_t QuotaSpecBinding::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->quota_specs(static_cast<int>(i)));
     }
   }

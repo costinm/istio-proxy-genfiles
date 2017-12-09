@@ -14,10 +14,6 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
 namespace envoy {
 namespace api {
@@ -90,11 +86,7 @@ namespace protobuf_api_2fsds_2eproto {
 void InitDefaultsDataSourceImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_DataSource_default_instance_;
     new (ptr) ::envoy::api::v2::DataSource();
@@ -111,11 +103,7 @@ void InitDefaultsDataSource() {
 void InitDefaultsTlsParametersImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_TlsParameters_default_instance_;
     new (ptr) ::envoy::api::v2::TlsParameters();
@@ -132,11 +120,7 @@ void InitDefaultsTlsParameters() {
 void InitDefaultsTlsCertificateImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsDataSource();
   {
     void* ptr = &::envoy::api::v2::_TlsCertificate_default_instance_;
@@ -154,11 +138,7 @@ void InitDefaultsTlsCertificate() {
 void InitDefaultsTlsSessionTicketKeysImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsDataSource();
   {
     void* ptr = &::envoy::api::v2::_TlsSessionTicketKeys_default_instance_;
@@ -176,11 +156,7 @@ void InitDefaultsTlsSessionTicketKeys() {
 void InitDefaultsCertificateValidationContextImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsDataSource();
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   {
@@ -199,11 +175,7 @@ void InitDefaultsCertificateValidationContext() {
 void InitDefaultsCommonTlsContext_DeprecatedV1Impl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::envoy::api::v2::_CommonTlsContext_DeprecatedV1_default_instance_;
     new (ptr) ::envoy::api::v2::CommonTlsContext_DeprecatedV1();
@@ -220,11 +192,7 @@ void InitDefaultsCommonTlsContext_DeprecatedV1() {
 void InitDefaultsCommonTlsContextImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsTlsParameters();
   protobuf_api_2fsds_2eproto::InitDefaultsTlsCertificate();
   protobuf_api_2fsds_2eproto::InitDefaultsSdsSecretConfig();
@@ -246,11 +214,7 @@ void InitDefaultsCommonTlsContext() {
 void InitDefaultsUpstreamTlsContextImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsCommonTlsContext();
   {
     void* ptr = &::envoy::api::v2::_UpstreamTlsContext_default_instance_;
@@ -268,11 +232,7 @@ void InitDefaultsUpstreamTlsContext() {
 void InitDefaultsDownstreamTlsContextImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsCommonTlsContext();
   protobuf_google_2fprotobuf_2fwrappers_2eproto::InitDefaultsBoolValue();
   protobuf_api_2fsds_2eproto::InitDefaultsTlsSessionTicketKeys();
@@ -293,11 +253,7 @@ void InitDefaultsDownstreamTlsContext() {
 void InitDefaultsSdsSecretConfigImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fbase_2eproto::InitDefaultsConfigSource();
   {
     void* ptr = &::envoy::api::v2::_SdsSecretConfig_default_instance_;
@@ -315,11 +271,7 @@ void InitDefaultsSdsSecretConfig() {
 void InitDefaultsSecretImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
   ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_api_2fsds_2eproto::InitDefaultsTlsCertificate();
   protobuf_api_2fsds_2eproto::InitDefaultsTlsSessionTicketKeys();
   {
@@ -1463,7 +1415,7 @@ bool TlsCertificate::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_certificate_chain()));
         } else {
           goto handle_unusual;
@@ -1475,7 +1427,7 @@ bool TlsCertificate::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_private_key()));
         } else {
           goto handle_unusual;
@@ -1487,7 +1439,7 @@ bool TlsCertificate::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_password()));
         } else {
           goto handle_unusual;
@@ -1499,7 +1451,7 @@ bool TlsCertificate::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ocsp_staple()));
         } else {
           goto handle_unusual;
@@ -1511,7 +1463,8 @@ bool TlsCertificate::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_signed_certificate_timestamp()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_signed_certificate_timestamp()));
         } else {
           goto handle_unusual;
         }
@@ -1592,28 +1545,28 @@ void TlsCertificate::SerializeWithCachedSizes(
   // .envoy.api.v2.DataSource certificate_chain = 1;
   if (this->has_certificate_chain()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->certificate_chain_, deterministic, target);
   }
 
   // .envoy.api.v2.DataSource private_key = 2;
   if (this->has_private_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->private_key_, deterministic, target);
   }
 
   // .envoy.api.v2.DataSource password = 3;
   if (this->has_password()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->password_, deterministic, target);
   }
 
   // .envoy.api.v2.DataSource ocsp_staple = 4;
   if (this->has_ocsp_staple()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *this->ocsp_staple_, deterministic, target);
   }
 
@@ -1621,7 +1574,7 @@ void TlsCertificate::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->signed_certificate_timestamp_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, this->signed_certificate_timestamp(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1648,7 +1601,7 @@ size_t TlsCertificate::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->signed_certificate_timestamp(static_cast<int>(i)));
     }
   }
@@ -1656,28 +1609,28 @@ size_t TlsCertificate::ByteSizeLong() const {
   // .envoy.api.v2.DataSource certificate_chain = 1;
   if (this->has_certificate_chain()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->certificate_chain_);
   }
 
   // .envoy.api.v2.DataSource private_key = 2;
   if (this->has_private_key()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->private_key_);
   }
 
   // .envoy.api.v2.DataSource password = 3;
   if (this->has_password()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->password_);
   }
 
   // .envoy.api.v2.DataSource ocsp_staple = 4;
   if (this->has_ocsp_staple()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->ocsp_staple_);
   }
 
@@ -1848,7 +1801,8 @@ bool TlsSessionTicketKeys::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_keys()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_keys()));
         } else {
           goto handle_unusual;
         }
@@ -1906,7 +1860,7 @@ void TlsSessionTicketKeys::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->keys_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, this->keys(static_cast<int>(i)), deterministic, target);
   }
 
@@ -1933,7 +1887,7 @@ size_t TlsSessionTicketKeys::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->keys(static_cast<int>(i)));
     }
   }
@@ -2014,18 +1968,6 @@ void CertificateValidationContext::InitAsDefaultInstance() {
       ::google::protobuf::BoolValue::internal_default_instance());
   ::envoy::api::v2::_CertificateValidationContext_default_instance_._instance.get_mutable()->require_signed_certificate_timestamp_ = const_cast< ::google::protobuf::BoolValue*>(
       ::google::protobuf::BoolValue::internal_default_instance());
-}
-void CertificateValidationContext::clear_require_ocsp_staple() {
-  if (GetArenaNoVirtual() == NULL && require_ocsp_staple_ != NULL) {
-    delete require_ocsp_staple_;
-  }
-  require_ocsp_staple_ = NULL;
-}
-void CertificateValidationContext::clear_require_signed_certificate_timestamp() {
-  if (GetArenaNoVirtual() == NULL && require_signed_certificate_timestamp_ != NULL) {
-    delete require_signed_certificate_timestamp_;
-  }
-  require_signed_certificate_timestamp_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CertificateValidationContext::kTrustedCaFieldNumber;
@@ -2149,7 +2091,7 @@ bool CertificateValidationContext::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_trusted_ca()));
         } else {
           goto handle_unusual;
@@ -2212,7 +2154,7 @@ bool CertificateValidationContext::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_require_ocsp_staple()));
         } else {
           goto handle_unusual;
@@ -2224,7 +2166,7 @@ bool CertificateValidationContext::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_require_signed_certificate_timestamp()));
         } else {
           goto handle_unusual;
@@ -2323,7 +2265,7 @@ void CertificateValidationContext::SerializeWithCachedSizes(
   // .envoy.api.v2.DataSource trusted_ca = 1;
   if (this->has_trusted_ca()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->trusted_ca_, deterministic, target);
   }
 
@@ -2360,14 +2302,14 @@ void CertificateValidationContext::SerializeWithCachedSizes(
   // .google.protobuf.BoolValue require_ocsp_staple = 5;
   if (this->has_require_ocsp_staple()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->require_ocsp_staple_, deterministic, target);
   }
 
   // .google.protobuf.BoolValue require_signed_certificate_timestamp = 6;
   if (this->has_require_signed_certificate_timestamp()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, *this->require_signed_certificate_timestamp_, deterministic, target);
   }
 
@@ -2415,21 +2357,21 @@ size_t CertificateValidationContext::ByteSizeLong() const {
   // .envoy.api.v2.DataSource trusted_ca = 1;
   if (this->has_trusted_ca()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->trusted_ca_);
   }
 
   // .google.protobuf.BoolValue require_ocsp_staple = 5;
   if (this->has_require_ocsp_staple()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->require_ocsp_staple_);
   }
 
   // .google.protobuf.BoolValue require_signed_certificate_timestamp = 6;
   if (this->has_require_signed_certificate_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->require_signed_certificate_timestamp_);
   }
 
@@ -2904,7 +2846,7 @@ bool CommonTlsContext::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tls_params()));
         } else {
           goto handle_unusual;
@@ -2916,7 +2858,8 @@ bool CommonTlsContext::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_tls_certificates()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_tls_certificates()));
         } else {
           goto handle_unusual;
         }
@@ -2927,7 +2870,7 @@ bool CommonTlsContext::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_validation_context()));
         } else {
           goto handle_unusual;
@@ -2956,7 +2899,7 @@ bool CommonTlsContext::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_deprecated_v1()));
         } else {
           goto handle_unusual;
@@ -2968,7 +2911,8 @@ bool CommonTlsContext::MergePartialFromCodedStream(
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_tls_certificate_sds_secret_configs()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_tls_certificate_sds_secret_configs()));
         } else {
           goto handle_unusual;
         }
@@ -3060,7 +3004,7 @@ void CommonTlsContext::SerializeWithCachedSizes(
   // .envoy.api.v2.TlsParameters tls_params = 1;
   if (this->has_tls_params()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->tls_params_, deterministic, target);
   }
 
@@ -3068,14 +3012,14 @@ void CommonTlsContext::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->tls_certificates_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, this->tls_certificates(static_cast<int>(i)), deterministic, target);
   }
 
   // .envoy.api.v2.CertificateValidationContext validation_context = 3;
   if (this->has_validation_context()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->validation_context_, deterministic, target);
   }
 
@@ -3092,7 +3036,7 @@ void CommonTlsContext::SerializeWithCachedSizes(
   // .envoy.api.v2.CommonTlsContext.DeprecatedV1 deprecated_v1 = 5;
   if (this->has_deprecated_v1()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *this->deprecated_v1_, deterministic, target);
   }
 
@@ -3100,7 +3044,7 @@ void CommonTlsContext::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->tls_certificate_sds_secret_configs_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         6, this->tls_certificate_sds_secret_configs(static_cast<int>(i)), deterministic, target);
   }
 
@@ -3127,7 +3071,7 @@ size_t CommonTlsContext::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->tls_certificates(static_cast<int>(i)));
     }
   }
@@ -3146,7 +3090,7 @@ size_t CommonTlsContext::ByteSizeLong() const {
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->tls_certificate_sds_secret_configs(static_cast<int>(i)));
     }
   }
@@ -3154,21 +3098,21 @@ size_t CommonTlsContext::ByteSizeLong() const {
   // .envoy.api.v2.TlsParameters tls_params = 1;
   if (this->has_tls_params()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->tls_params_);
   }
 
   // .envoy.api.v2.CertificateValidationContext validation_context = 3;
   if (this->has_validation_context()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->validation_context_);
   }
 
   // .envoy.api.v2.CommonTlsContext.DeprecatedV1 deprecated_v1 = 5;
   if (this->has_deprecated_v1()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->deprecated_v1_);
   }
 
@@ -3358,7 +3302,7 @@ bool UpstreamTlsContext::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_common_tls_context()));
         } else {
           goto handle_unusual;
@@ -3441,7 +3385,7 @@ void UpstreamTlsContext::SerializeWithCachedSizes(
   // .envoy.api.v2.CommonTlsContext common_tls_context = 1;
   if (this->has_common_tls_context()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->common_tls_context_, deterministic, target);
   }
 
@@ -3483,7 +3427,7 @@ size_t UpstreamTlsContext::ByteSizeLong() const {
   // .envoy.api.v2.CommonTlsContext common_tls_context = 1;
   if (this->has_common_tls_context()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->common_tls_context_);
   }
 
@@ -3574,46 +3518,6 @@ void DownstreamTlsContext::InitAsDefaultInstance() {
       ::envoy::api::v2::TlsSessionTicketKeys::internal_default_instance());
   ::envoy::api::v2::_DownstreamTlsContext_default_instance_.session_ticket_keys_sds_secret_config_ = const_cast< ::envoy::api::v2::SdsSecretConfig*>(
       ::envoy::api::v2::SdsSecretConfig::internal_default_instance());
-}
-void DownstreamTlsContext::clear_require_client_certificate() {
-  if (GetArenaNoVirtual() == NULL && require_client_certificate_ != NULL) {
-    delete require_client_certificate_;
-  }
-  require_client_certificate_ = NULL;
-}
-void DownstreamTlsContext::clear_require_sni() {
-  if (GetArenaNoVirtual() == NULL && require_sni_ != NULL) {
-    delete require_sni_;
-  }
-  require_sni_ = NULL;
-}
-void DownstreamTlsContext::set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_session_ticket_keys_type();
-  if (session_ticket_keys) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      session_ticket_keys = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, session_ticket_keys, submessage_arena);
-    }
-    set_has_session_ticket_keys();
-    session_ticket_keys_type_.session_ticket_keys_ = session_ticket_keys;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.session_ticket_keys)
-}
-void DownstreamTlsContext::set_allocated_session_ticket_keys_sds_secret_config(::envoy::api::v2::SdsSecretConfig* session_ticket_keys_sds_secret_config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_session_ticket_keys_type();
-  if (session_ticket_keys_sds_secret_config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      session_ticket_keys_sds_secret_config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, session_ticket_keys_sds_secret_config, submessage_arena);
-    }
-    set_has_session_ticket_keys_sds_secret_config();
-    session_ticket_keys_type_.session_ticket_keys_sds_secret_config_ = session_ticket_keys_sds_secret_config;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.DownstreamTlsContext.session_ticket_keys_sds_secret_config)
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DownstreamTlsContext::kCommonTlsContextFieldNumber;
@@ -3768,7 +3672,7 @@ bool DownstreamTlsContext::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_common_tls_context()));
         } else {
           goto handle_unusual;
@@ -3780,7 +3684,7 @@ bool DownstreamTlsContext::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_require_client_certificate()));
         } else {
           goto handle_unusual;
@@ -3792,7 +3696,7 @@ bool DownstreamTlsContext::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_require_sni()));
         } else {
           goto handle_unusual;
@@ -3804,7 +3708,7 @@ bool DownstreamTlsContext::MergePartialFromCodedStream(
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_session_ticket_keys()));
         } else {
           goto handle_unusual;
@@ -3816,7 +3720,7 @@ bool DownstreamTlsContext::MergePartialFromCodedStream(
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_session_ticket_keys_sds_secret_config()));
         } else {
           goto handle_unusual;
@@ -3897,35 +3801,35 @@ void DownstreamTlsContext::SerializeWithCachedSizes(
   // .envoy.api.v2.CommonTlsContext common_tls_context = 1;
   if (this->has_common_tls_context()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         1, *this->common_tls_context_, deterministic, target);
   }
 
   // .google.protobuf.BoolValue require_client_certificate = 2;
   if (this->has_require_client_certificate()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->require_client_certificate_, deterministic, target);
   }
 
   // .google.protobuf.BoolValue require_sni = 3;
   if (this->has_require_sni()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *this->require_sni_, deterministic, target);
   }
 
   // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 4;
   if (has_session_ticket_keys()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         4, *session_ticket_keys_type_.session_ticket_keys_, deterministic, target);
   }
 
   // .envoy.api.v2.SdsSecretConfig session_ticket_keys_sds_secret_config = 5;
   if (has_session_ticket_keys_sds_secret_config()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         5, *session_ticket_keys_type_.session_ticket_keys_sds_secret_config_, deterministic, target);
   }
 
@@ -3949,21 +3853,21 @@ size_t DownstreamTlsContext::ByteSizeLong() const {
   // .envoy.api.v2.CommonTlsContext common_tls_context = 1;
   if (this->has_common_tls_context()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->common_tls_context_);
   }
 
   // .google.protobuf.BoolValue require_client_certificate = 2;
   if (this->has_require_client_certificate()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->require_client_certificate_);
   }
 
   // .google.protobuf.BoolValue require_sni = 3;
   if (this->has_require_sni()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->require_sni_);
   }
 
@@ -3971,14 +3875,14 @@ size_t DownstreamTlsContext::ByteSizeLong() const {
     // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 4;
     case kSessionTicketKeys: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *session_ticket_keys_type_.session_ticket_keys_);
       break;
     }
     // .envoy.api.v2.SdsSecretConfig session_ticket_keys_sds_secret_config = 5;
     case kSessionTicketKeysSdsSecretConfig: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *session_ticket_keys_type_.session_ticket_keys_sds_secret_config_);
       break;
     }
@@ -4083,12 +3987,6 @@ void DownstreamTlsContext::InternalSwap(DownstreamTlsContext* other) {
 void SdsSecretConfig::InitAsDefaultInstance() {
   ::envoy::api::v2::_SdsSecretConfig_default_instance_._instance.get_mutable()->sds_config_ = const_cast< ::envoy::api::v2::ConfigSource*>(
       ::envoy::api::v2::ConfigSource::internal_default_instance());
-}
-void SdsSecretConfig::clear_sds_config() {
-  if (GetArenaNoVirtual() == NULL && sds_config_ != NULL) {
-    delete sds_config_;
-  }
-  sds_config_ = NULL;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SdsSecretConfig::kNameFieldNumber;
@@ -4203,7 +4101,7 @@ bool SdsSecretConfig::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_sds_config()));
         } else {
           goto handle_unusual;
@@ -4281,7 +4179,7 @@ void SdsSecretConfig::SerializeWithCachedSizes(
   // .envoy.api.v2.ConfigSource sds_config = 2;
   if (this->has_sds_config()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *this->sds_config_, deterministic, target);
   }
 
@@ -4312,7 +4210,7 @@ size_t SdsSecretConfig::ByteSizeLong() const {
   // .envoy.api.v2.ConfigSource sds_config = 2;
   if (this->has_sds_config()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->sds_config_);
   }
 
@@ -4397,34 +4295,6 @@ void Secret::InitAsDefaultInstance() {
       ::envoy::api::v2::TlsCertificate::internal_default_instance());
   ::envoy::api::v2::_Secret_default_instance_.session_ticket_keys_ = const_cast< ::envoy::api::v2::TlsSessionTicketKeys*>(
       ::envoy::api::v2::TlsSessionTicketKeys::internal_default_instance());
-}
-void Secret::set_allocated_tls_certificate(::envoy::api::v2::TlsCertificate* tls_certificate) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_type();
-  if (tls_certificate) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      tls_certificate = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tls_certificate, submessage_arena);
-    }
-    set_has_tls_certificate();
-    type_.tls_certificate_ = tls_certificate;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Secret.tls_certificate)
-}
-void Secret::set_allocated_session_ticket_keys(::envoy::api::v2::TlsSessionTicketKeys* session_ticket_keys) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  clear_type();
-  if (session_ticket_keys) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      session_ticket_keys = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, session_ticket_keys, submessage_arena);
-    }
-    set_has_session_ticket_keys();
-    type_.session_ticket_keys_ = session_ticket_keys;
-  }
-  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.Secret.session_ticket_keys)
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Secret::kNameFieldNumber;
@@ -4567,7 +4437,7 @@ bool Secret::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tls_certificate()));
         } else {
           goto handle_unusual;
@@ -4579,7 +4449,7 @@ bool Secret::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_session_ticket_keys()));
         } else {
           goto handle_unusual;
@@ -4663,14 +4533,14 @@ void Secret::SerializeWithCachedSizes(
   // .envoy.api.v2.TlsCertificate tls_certificate = 2;
   if (has_tls_certificate()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         2, *type_.tls_certificate_, deterministic, target);
   }
 
   // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 3;
   if (has_session_ticket_keys()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
+      InternalWriteMessageNoVirtualToArray(
         3, *type_.session_ticket_keys_, deterministic, target);
   }
 
@@ -4702,14 +4572,14 @@ size_t Secret::ByteSizeLong() const {
     // .envoy.api.v2.TlsCertificate tls_certificate = 2;
     case kTlsCertificate: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *type_.tls_certificate_);
       break;
     }
     // .envoy.api.v2.TlsSessionTicketKeys session_ticket_keys = 3;
     case kSessionTicketKeys: {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *type_.session_ticket_keys_);
       break;
     }

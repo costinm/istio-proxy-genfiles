@@ -257,8 +257,8 @@ class ComparisonFilter : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_value();
   static const int kValueFieldNumber = 2;
   const ::envoy::api::v2::RuntimeUInt32& value() const;
-  ::envoy::api::v2::RuntimeUInt32* release_value();
   ::envoy::api::v2::RuntimeUInt32* mutable_value();
+  ::envoy::api::v2::RuntimeUInt32* release_value();
   void set_allocated_value(::envoy::api::v2::RuntimeUInt32* value);
 
   // .envoy.api.v2.filter.ComparisonFilter.Op op = 1;
@@ -366,8 +366,8 @@ class StatusCodeFilter : public ::google::protobuf::Message /* @@protoc_insertio
   void clear_comparison();
   static const int kComparisonFieldNumber = 1;
   const ::envoy::api::v2::filter::ComparisonFilter& comparison() const;
-  ::envoy::api::v2::filter::ComparisonFilter* release_comparison();
   ::envoy::api::v2::filter::ComparisonFilter* mutable_comparison();
+  ::envoy::api::v2::filter::ComparisonFilter* release_comparison();
   void set_allocated_comparison(::envoy::api::v2::filter::ComparisonFilter* comparison);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.StatusCodeFilter)
@@ -468,8 +468,8 @@ class DurationFilter : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_comparison();
   static const int kComparisonFieldNumber = 1;
   const ::envoy::api::v2::filter::ComparisonFilter& comparison() const;
-  ::envoy::api::v2::filter::ComparisonFilter* release_comparison();
   ::envoy::api::v2::filter::ComparisonFilter* mutable_comparison();
+  ::envoy::api::v2::filter::ComparisonFilter* release_comparison();
   void set_allocated_comparison(::envoy::api::v2::filter::ComparisonFilter* comparison);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.DurationFilter)
@@ -1082,8 +1082,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_status_code_filter();
   static const int kStatusCodeFilterFieldNumber = 1;
   const ::envoy::api::v2::filter::StatusCodeFilter& status_code_filter() const;
-  ::envoy::api::v2::filter::StatusCodeFilter* release_status_code_filter();
   ::envoy::api::v2::filter::StatusCodeFilter* mutable_status_code_filter();
+  ::envoy::api::v2::filter::StatusCodeFilter* release_status_code_filter();
   void set_allocated_status_code_filter(::envoy::api::v2::filter::StatusCodeFilter* status_code_filter);
 
   // .envoy.api.v2.filter.DurationFilter duration_filter = 2;
@@ -1091,8 +1091,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_duration_filter();
   static const int kDurationFilterFieldNumber = 2;
   const ::envoy::api::v2::filter::DurationFilter& duration_filter() const;
-  ::envoy::api::v2::filter::DurationFilter* release_duration_filter();
   ::envoy::api::v2::filter::DurationFilter* mutable_duration_filter();
+  ::envoy::api::v2::filter::DurationFilter* release_duration_filter();
   void set_allocated_duration_filter(::envoy::api::v2::filter::DurationFilter* duration_filter);
 
   // .envoy.api.v2.filter.NotHealthCheckFilter not_health_check_filter = 3;
@@ -1100,8 +1100,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_not_health_check_filter();
   static const int kNotHealthCheckFilterFieldNumber = 3;
   const ::envoy::api::v2::filter::NotHealthCheckFilter& not_health_check_filter() const;
-  ::envoy::api::v2::filter::NotHealthCheckFilter* release_not_health_check_filter();
   ::envoy::api::v2::filter::NotHealthCheckFilter* mutable_not_health_check_filter();
+  ::envoy::api::v2::filter::NotHealthCheckFilter* release_not_health_check_filter();
   void set_allocated_not_health_check_filter(::envoy::api::v2::filter::NotHealthCheckFilter* not_health_check_filter);
 
   // .envoy.api.v2.filter.TraceableFilter traceable_filter = 4;
@@ -1109,8 +1109,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_traceable_filter();
   static const int kTraceableFilterFieldNumber = 4;
   const ::envoy::api::v2::filter::TraceableFilter& traceable_filter() const;
-  ::envoy::api::v2::filter::TraceableFilter* release_traceable_filter();
   ::envoy::api::v2::filter::TraceableFilter* mutable_traceable_filter();
+  ::envoy::api::v2::filter::TraceableFilter* release_traceable_filter();
   void set_allocated_traceable_filter(::envoy::api::v2::filter::TraceableFilter* traceable_filter);
 
   // .envoy.api.v2.filter.RuntimeFilter runtime_filter = 5;
@@ -1118,8 +1118,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_runtime_filter();
   static const int kRuntimeFilterFieldNumber = 5;
   const ::envoy::api::v2::filter::RuntimeFilter& runtime_filter() const;
-  ::envoy::api::v2::filter::RuntimeFilter* release_runtime_filter();
   ::envoy::api::v2::filter::RuntimeFilter* mutable_runtime_filter();
+  ::envoy::api::v2::filter::RuntimeFilter* release_runtime_filter();
   void set_allocated_runtime_filter(::envoy::api::v2::filter::RuntimeFilter* runtime_filter);
 
   // .envoy.api.v2.filter.AndFilter and_filter = 6;
@@ -1127,8 +1127,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_and_filter();
   static const int kAndFilterFieldNumber = 6;
   const ::envoy::api::v2::filter::AndFilter& and_filter() const;
-  ::envoy::api::v2::filter::AndFilter* release_and_filter();
   ::envoy::api::v2::filter::AndFilter* mutable_and_filter();
+  ::envoy::api::v2::filter::AndFilter* release_and_filter();
   void set_allocated_and_filter(::envoy::api::v2::filter::AndFilter* and_filter);
 
   // .envoy.api.v2.filter.OrFilter or_filter = 7;
@@ -1136,8 +1136,8 @@ class AccessLogFilter : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_or_filter();
   static const int kOrFilterFieldNumber = 7;
   const ::envoy::api::v2::filter::OrFilter& or_filter() const;
-  ::envoy::api::v2::filter::OrFilter* release_or_filter();
   ::envoy::api::v2::filter::OrFilter* mutable_or_filter();
+  ::envoy::api::v2::filter::OrFilter* release_or_filter();
   void set_allocated_or_filter(::envoy::api::v2::filter::OrFilter* or_filter);
 
   FilterSpecifierCase filter_specifier_case() const;
@@ -1397,8 +1397,8 @@ class AccessLog : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_filter();
   static const int kFilterFieldNumber = 2;
   const ::envoy::api::v2::filter::AccessLogFilter& filter() const;
-  ::envoy::api::v2::filter::AccessLogFilter* release_filter();
   ::envoy::api::v2::filter::AccessLogFilter* mutable_filter();
+  ::envoy::api::v2::filter::AccessLogFilter* release_filter();
   void set_allocated_filter(::envoy::api::v2::filter::AccessLogFilter* filter);
 
   // .google.protobuf.Struct config = 3;
@@ -1406,8 +1406,8 @@ class AccessLog : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_config();
   static const int kConfigFieldNumber = 3;
   const ::google::protobuf::Struct& config() const;
-  ::google::protobuf::Struct* release_config();
   ::google::protobuf::Struct* mutable_config();
+  ::google::protobuf::Struct* release_config();
   void set_allocated_config(::google::protobuf::Struct* config);
 
   // @@protoc_insertion_point(class_scope:envoy.api.v2.filter.AccessLog)
@@ -1450,18 +1450,15 @@ inline void ComparisonFilter::set_op(::envoy::api::v2::filter::ComparisonFilter_
 inline bool ComparisonFilter::has_value() const {
   return this != internal_default_instance() && value_ != NULL;
 }
+inline void ComparisonFilter::clear_value() {
+  if (GetArenaNoVirtual() == NULL && value_ != NULL) delete value_;
+  value_ = NULL;
+}
 inline const ::envoy::api::v2::RuntimeUInt32& ComparisonFilter::value() const {
   const ::envoy::api::v2::RuntimeUInt32* p = value_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.ComparisonFilter.value)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::RuntimeUInt32*>(
       &::envoy::api::v2::_RuntimeUInt32_default_instance_);
-}
-inline ::envoy::api::v2::RuntimeUInt32* ComparisonFilter::release_value() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.ComparisonFilter.value)
-  
-  ::envoy::api::v2::RuntimeUInt32* temp = value_;
-  value_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::RuntimeUInt32* ComparisonFilter::mutable_value() {
   
@@ -1471,22 +1468,21 @@ inline ::envoy::api::v2::RuntimeUInt32* ComparisonFilter::mutable_value() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.ComparisonFilter.value)
   return value_;
 }
+inline ::envoy::api::v2::RuntimeUInt32* ComparisonFilter::release_value() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.ComparisonFilter.value)
+  
+  ::envoy::api::v2::RuntimeUInt32* temp = value_;
+  value_ = NULL;
+  return temp;
+}
 inline void ComparisonFilter::set_allocated_value(::envoy::api::v2::RuntimeUInt32* value) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(value_);
-  }
+  delete value_;
+  value_ = value;
   if (value) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      value = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, value, submessage_arena);
-    }
     
   } else {
     
   }
-  value_ = value;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.ComparisonFilter.value)
 }
 
@@ -1499,9 +1495,7 @@ inline bool StatusCodeFilter::has_comparison() const {
   return this != internal_default_instance() && comparison_ != NULL;
 }
 inline void StatusCodeFilter::clear_comparison() {
-  if (GetArenaNoVirtual() == NULL && comparison_ != NULL) {
-    delete comparison_;
-  }
+  if (GetArenaNoVirtual() == NULL && comparison_ != NULL) delete comparison_;
   comparison_ = NULL;
 }
 inline const ::envoy::api::v2::filter::ComparisonFilter& StatusCodeFilter::comparison() const {
@@ -1509,13 +1503,6 @@ inline const ::envoy::api::v2::filter::ComparisonFilter& StatusCodeFilter::compa
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.StatusCodeFilter.comparison)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::ComparisonFilter*>(
       &::envoy::api::v2::filter::_ComparisonFilter_default_instance_);
-}
-inline ::envoy::api::v2::filter::ComparisonFilter* StatusCodeFilter::release_comparison() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.StatusCodeFilter.comparison)
-  
-  ::envoy::api::v2::filter::ComparisonFilter* temp = comparison_;
-  comparison_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::ComparisonFilter* StatusCodeFilter::mutable_comparison() {
   
@@ -1525,22 +1512,21 @@ inline ::envoy::api::v2::filter::ComparisonFilter* StatusCodeFilter::mutable_com
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.StatusCodeFilter.comparison)
   return comparison_;
 }
+inline ::envoy::api::v2::filter::ComparisonFilter* StatusCodeFilter::release_comparison() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.StatusCodeFilter.comparison)
+  
+  ::envoy::api::v2::filter::ComparisonFilter* temp = comparison_;
+  comparison_ = NULL;
+  return temp;
+}
 inline void StatusCodeFilter::set_allocated_comparison(::envoy::api::v2::filter::ComparisonFilter* comparison) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete comparison_;
-  }
+  delete comparison_;
+  comparison_ = comparison;
   if (comparison) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      comparison = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, comparison, submessage_arena);
-    }
     
   } else {
     
   }
-  comparison_ = comparison;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.StatusCodeFilter.comparison)
 }
 
@@ -1553,9 +1539,7 @@ inline bool DurationFilter::has_comparison() const {
   return this != internal_default_instance() && comparison_ != NULL;
 }
 inline void DurationFilter::clear_comparison() {
-  if (GetArenaNoVirtual() == NULL && comparison_ != NULL) {
-    delete comparison_;
-  }
+  if (GetArenaNoVirtual() == NULL && comparison_ != NULL) delete comparison_;
   comparison_ = NULL;
 }
 inline const ::envoy::api::v2::filter::ComparisonFilter& DurationFilter::comparison() const {
@@ -1563,13 +1547,6 @@ inline const ::envoy::api::v2::filter::ComparisonFilter& DurationFilter::compari
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.DurationFilter.comparison)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::ComparisonFilter*>(
       &::envoy::api::v2::filter::_ComparisonFilter_default_instance_);
-}
-inline ::envoy::api::v2::filter::ComparisonFilter* DurationFilter::release_comparison() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.DurationFilter.comparison)
-  
-  ::envoy::api::v2::filter::ComparisonFilter* temp = comparison_;
-  comparison_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::ComparisonFilter* DurationFilter::mutable_comparison() {
   
@@ -1579,22 +1556,21 @@ inline ::envoy::api::v2::filter::ComparisonFilter* DurationFilter::mutable_compa
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.DurationFilter.comparison)
   return comparison_;
 }
+inline ::envoy::api::v2::filter::ComparisonFilter* DurationFilter::release_comparison() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.DurationFilter.comparison)
+  
+  ::envoy::api::v2::filter::ComparisonFilter* temp = comparison_;
+  comparison_ = NULL;
+  return temp;
+}
 inline void DurationFilter::set_allocated_comparison(::envoy::api::v2::filter::ComparisonFilter* comparison) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete comparison_;
-  }
+  delete comparison_;
+  comparison_ = comparison;
   if (comparison) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      comparison = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, comparison, submessage_arena);
-    }
     
   } else {
     
   }
-  comparison_ = comparison;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.DurationFilter.comparison)
 }
 
@@ -1748,22 +1724,11 @@ inline void AccessLogFilter::clear_status_code_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::StatusCodeFilter* AccessLogFilter::release_status_code_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.status_code_filter)
-  if (has_status_code_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::StatusCodeFilter* temp = filter_specifier_.status_code_filter_;
-    filter_specifier_.status_code_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::StatusCodeFilter& AccessLogFilter::status_code_filter() const {
+inline  const ::envoy::api::v2::filter::StatusCodeFilter& AccessLogFilter::status_code_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.status_code_filter)
   return has_status_code_filter()
       ? *filter_specifier_.status_code_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::StatusCodeFilter*>(&::envoy::api::v2::filter::_StatusCodeFilter_default_instance_);
+      : ::envoy::api::v2::filter::StatusCodeFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::StatusCodeFilter* AccessLogFilter::mutable_status_code_filter() {
   if (!has_status_code_filter()) {
@@ -1773,6 +1738,25 @@ inline ::envoy::api::v2::filter::StatusCodeFilter* AccessLogFilter::mutable_stat
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.status_code_filter)
   return filter_specifier_.status_code_filter_;
+}
+inline ::envoy::api::v2::filter::StatusCodeFilter* AccessLogFilter::release_status_code_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.status_code_filter)
+  if (has_status_code_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::StatusCodeFilter* temp = filter_specifier_.status_code_filter_;
+    filter_specifier_.status_code_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_status_code_filter(::envoy::api::v2::filter::StatusCodeFilter* status_code_filter) {
+  clear_filter_specifier();
+  if (status_code_filter) {
+    set_has_status_code_filter();
+    filter_specifier_.status_code_filter_ = status_code_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.status_code_filter)
 }
 
 // .envoy.api.v2.filter.DurationFilter duration_filter = 2;
@@ -1788,22 +1772,11 @@ inline void AccessLogFilter::clear_duration_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::DurationFilter* AccessLogFilter::release_duration_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.duration_filter)
-  if (has_duration_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::DurationFilter* temp = filter_specifier_.duration_filter_;
-    filter_specifier_.duration_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::DurationFilter& AccessLogFilter::duration_filter() const {
+inline  const ::envoy::api::v2::filter::DurationFilter& AccessLogFilter::duration_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.duration_filter)
   return has_duration_filter()
       ? *filter_specifier_.duration_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::DurationFilter*>(&::envoy::api::v2::filter::_DurationFilter_default_instance_);
+      : ::envoy::api::v2::filter::DurationFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::DurationFilter* AccessLogFilter::mutable_duration_filter() {
   if (!has_duration_filter()) {
@@ -1813,6 +1786,25 @@ inline ::envoy::api::v2::filter::DurationFilter* AccessLogFilter::mutable_durati
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.duration_filter)
   return filter_specifier_.duration_filter_;
+}
+inline ::envoy::api::v2::filter::DurationFilter* AccessLogFilter::release_duration_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.duration_filter)
+  if (has_duration_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::DurationFilter* temp = filter_specifier_.duration_filter_;
+    filter_specifier_.duration_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_duration_filter(::envoy::api::v2::filter::DurationFilter* duration_filter) {
+  clear_filter_specifier();
+  if (duration_filter) {
+    set_has_duration_filter();
+    filter_specifier_.duration_filter_ = duration_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.duration_filter)
 }
 
 // .envoy.api.v2.filter.NotHealthCheckFilter not_health_check_filter = 3;
@@ -1828,22 +1820,11 @@ inline void AccessLogFilter::clear_not_health_check_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::NotHealthCheckFilter* AccessLogFilter::release_not_health_check_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.not_health_check_filter)
-  if (has_not_health_check_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::NotHealthCheckFilter* temp = filter_specifier_.not_health_check_filter_;
-    filter_specifier_.not_health_check_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::NotHealthCheckFilter& AccessLogFilter::not_health_check_filter() const {
+inline  const ::envoy::api::v2::filter::NotHealthCheckFilter& AccessLogFilter::not_health_check_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.not_health_check_filter)
   return has_not_health_check_filter()
       ? *filter_specifier_.not_health_check_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::NotHealthCheckFilter*>(&::envoy::api::v2::filter::_NotHealthCheckFilter_default_instance_);
+      : ::envoy::api::v2::filter::NotHealthCheckFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::NotHealthCheckFilter* AccessLogFilter::mutable_not_health_check_filter() {
   if (!has_not_health_check_filter()) {
@@ -1853,6 +1834,25 @@ inline ::envoy::api::v2::filter::NotHealthCheckFilter* AccessLogFilter::mutable_
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.not_health_check_filter)
   return filter_specifier_.not_health_check_filter_;
+}
+inline ::envoy::api::v2::filter::NotHealthCheckFilter* AccessLogFilter::release_not_health_check_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.not_health_check_filter)
+  if (has_not_health_check_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::NotHealthCheckFilter* temp = filter_specifier_.not_health_check_filter_;
+    filter_specifier_.not_health_check_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_not_health_check_filter(::envoy::api::v2::filter::NotHealthCheckFilter* not_health_check_filter) {
+  clear_filter_specifier();
+  if (not_health_check_filter) {
+    set_has_not_health_check_filter();
+    filter_specifier_.not_health_check_filter_ = not_health_check_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.not_health_check_filter)
 }
 
 // .envoy.api.v2.filter.TraceableFilter traceable_filter = 4;
@@ -1868,22 +1868,11 @@ inline void AccessLogFilter::clear_traceable_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::TraceableFilter* AccessLogFilter::release_traceable_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.traceable_filter)
-  if (has_traceable_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::TraceableFilter* temp = filter_specifier_.traceable_filter_;
-    filter_specifier_.traceable_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::TraceableFilter& AccessLogFilter::traceable_filter() const {
+inline  const ::envoy::api::v2::filter::TraceableFilter& AccessLogFilter::traceable_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.traceable_filter)
   return has_traceable_filter()
       ? *filter_specifier_.traceable_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::TraceableFilter*>(&::envoy::api::v2::filter::_TraceableFilter_default_instance_);
+      : ::envoy::api::v2::filter::TraceableFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::TraceableFilter* AccessLogFilter::mutable_traceable_filter() {
   if (!has_traceable_filter()) {
@@ -1893,6 +1882,25 @@ inline ::envoy::api::v2::filter::TraceableFilter* AccessLogFilter::mutable_trace
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.traceable_filter)
   return filter_specifier_.traceable_filter_;
+}
+inline ::envoy::api::v2::filter::TraceableFilter* AccessLogFilter::release_traceable_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.traceable_filter)
+  if (has_traceable_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::TraceableFilter* temp = filter_specifier_.traceable_filter_;
+    filter_specifier_.traceable_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_traceable_filter(::envoy::api::v2::filter::TraceableFilter* traceable_filter) {
+  clear_filter_specifier();
+  if (traceable_filter) {
+    set_has_traceable_filter();
+    filter_specifier_.traceable_filter_ = traceable_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.traceable_filter)
 }
 
 // .envoy.api.v2.filter.RuntimeFilter runtime_filter = 5;
@@ -1908,22 +1916,11 @@ inline void AccessLogFilter::clear_runtime_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::RuntimeFilter* AccessLogFilter::release_runtime_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.runtime_filter)
-  if (has_runtime_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::RuntimeFilter* temp = filter_specifier_.runtime_filter_;
-    filter_specifier_.runtime_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::RuntimeFilter& AccessLogFilter::runtime_filter() const {
+inline  const ::envoy::api::v2::filter::RuntimeFilter& AccessLogFilter::runtime_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.runtime_filter)
   return has_runtime_filter()
       ? *filter_specifier_.runtime_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::RuntimeFilter*>(&::envoy::api::v2::filter::_RuntimeFilter_default_instance_);
+      : ::envoy::api::v2::filter::RuntimeFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::RuntimeFilter* AccessLogFilter::mutable_runtime_filter() {
   if (!has_runtime_filter()) {
@@ -1933,6 +1930,25 @@ inline ::envoy::api::v2::filter::RuntimeFilter* AccessLogFilter::mutable_runtime
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.runtime_filter)
   return filter_specifier_.runtime_filter_;
+}
+inline ::envoy::api::v2::filter::RuntimeFilter* AccessLogFilter::release_runtime_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.runtime_filter)
+  if (has_runtime_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::RuntimeFilter* temp = filter_specifier_.runtime_filter_;
+    filter_specifier_.runtime_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_runtime_filter(::envoy::api::v2::filter::RuntimeFilter* runtime_filter) {
+  clear_filter_specifier();
+  if (runtime_filter) {
+    set_has_runtime_filter();
+    filter_specifier_.runtime_filter_ = runtime_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.runtime_filter)
 }
 
 // .envoy.api.v2.filter.AndFilter and_filter = 6;
@@ -1948,22 +1964,11 @@ inline void AccessLogFilter::clear_and_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::AndFilter* AccessLogFilter::release_and_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.and_filter)
-  if (has_and_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::AndFilter* temp = filter_specifier_.and_filter_;
-    filter_specifier_.and_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::AndFilter& AccessLogFilter::and_filter() const {
+inline  const ::envoy::api::v2::filter::AndFilter& AccessLogFilter::and_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.and_filter)
   return has_and_filter()
       ? *filter_specifier_.and_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::AndFilter*>(&::envoy::api::v2::filter::_AndFilter_default_instance_);
+      : ::envoy::api::v2::filter::AndFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::AndFilter* AccessLogFilter::mutable_and_filter() {
   if (!has_and_filter()) {
@@ -1973,6 +1978,25 @@ inline ::envoy::api::v2::filter::AndFilter* AccessLogFilter::mutable_and_filter(
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.and_filter)
   return filter_specifier_.and_filter_;
+}
+inline ::envoy::api::v2::filter::AndFilter* AccessLogFilter::release_and_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.and_filter)
+  if (has_and_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::AndFilter* temp = filter_specifier_.and_filter_;
+    filter_specifier_.and_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_and_filter(::envoy::api::v2::filter::AndFilter* and_filter) {
+  clear_filter_specifier();
+  if (and_filter) {
+    set_has_and_filter();
+    filter_specifier_.and_filter_ = and_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.and_filter)
 }
 
 // .envoy.api.v2.filter.OrFilter or_filter = 7;
@@ -1988,22 +2012,11 @@ inline void AccessLogFilter::clear_or_filter() {
     clear_has_filter_specifier();
   }
 }
-inline ::envoy::api::v2::filter::OrFilter* AccessLogFilter::release_or_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.or_filter)
-  if (has_or_filter()) {
-    clear_has_filter_specifier();
-      ::envoy::api::v2::filter::OrFilter* temp = filter_specifier_.or_filter_;
-    filter_specifier_.or_filter_ = NULL;
-    return temp;
-  } else {
-    return NULL;
-  }
-}
-inline const ::envoy::api::v2::filter::OrFilter& AccessLogFilter::or_filter() const {
+inline  const ::envoy::api::v2::filter::OrFilter& AccessLogFilter::or_filter() const {
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLogFilter.or_filter)
   return has_or_filter()
       ? *filter_specifier_.or_filter_
-      : *reinterpret_cast< ::envoy::api::v2::filter::OrFilter*>(&::envoy::api::v2::filter::_OrFilter_default_instance_);
+      : ::envoy::api::v2::filter::OrFilter::default_instance();
 }
 inline ::envoy::api::v2::filter::OrFilter* AccessLogFilter::mutable_or_filter() {
   if (!has_or_filter()) {
@@ -2013,6 +2026,25 @@ inline ::envoy::api::v2::filter::OrFilter* AccessLogFilter::mutable_or_filter() 
   }
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLogFilter.or_filter)
   return filter_specifier_.or_filter_;
+}
+inline ::envoy::api::v2::filter::OrFilter* AccessLogFilter::release_or_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLogFilter.or_filter)
+  if (has_or_filter()) {
+    clear_has_filter_specifier();
+    ::envoy::api::v2::filter::OrFilter* temp = filter_specifier_.or_filter_;
+    filter_specifier_.or_filter_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline void AccessLogFilter::set_allocated_or_filter(::envoy::api::v2::filter::OrFilter* or_filter) {
+  clear_filter_specifier();
+  if (or_filter) {
+    set_has_or_filter();
+    filter_specifier_.or_filter_ = or_filter;
+  }
+  // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLogFilter.or_filter)
 }
 
 inline bool AccessLogFilter::has_filter_specifier() const {
@@ -2196,9 +2228,7 @@ inline bool AccessLog::has_filter() const {
   return this != internal_default_instance() && filter_ != NULL;
 }
 inline void AccessLog::clear_filter() {
-  if (GetArenaNoVirtual() == NULL && filter_ != NULL) {
-    delete filter_;
-  }
+  if (GetArenaNoVirtual() == NULL && filter_ != NULL) delete filter_;
   filter_ = NULL;
 }
 inline const ::envoy::api::v2::filter::AccessLogFilter& AccessLog::filter() const {
@@ -2206,13 +2236,6 @@ inline const ::envoy::api::v2::filter::AccessLogFilter& AccessLog::filter() cons
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLog.filter)
   return p != NULL ? *p : *reinterpret_cast<const ::envoy::api::v2::filter::AccessLogFilter*>(
       &::envoy::api::v2::filter::_AccessLogFilter_default_instance_);
-}
-inline ::envoy::api::v2::filter::AccessLogFilter* AccessLog::release_filter() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLog.filter)
-  
-  ::envoy::api::v2::filter::AccessLogFilter* temp = filter_;
-  filter_ = NULL;
-  return temp;
 }
 inline ::envoy::api::v2::filter::AccessLogFilter* AccessLog::mutable_filter() {
   
@@ -2222,22 +2245,21 @@ inline ::envoy::api::v2::filter::AccessLogFilter* AccessLog::mutable_filter() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLog.filter)
   return filter_;
 }
+inline ::envoy::api::v2::filter::AccessLogFilter* AccessLog::release_filter() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLog.filter)
+  
+  ::envoy::api::v2::filter::AccessLogFilter* temp = filter_;
+  filter_ = NULL;
+  return temp;
+}
 inline void AccessLog::set_allocated_filter(::envoy::api::v2::filter::AccessLogFilter* filter) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete filter_;
-  }
+  delete filter_;
+  filter_ = filter;
   if (filter) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      filter = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, filter, submessage_arena);
-    }
     
   } else {
     
   }
-  filter_ = filter;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLog.filter)
 }
 
@@ -2245,18 +2267,15 @@ inline void AccessLog::set_allocated_filter(::envoy::api::v2::filter::AccessLogF
 inline bool AccessLog::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
+inline void AccessLog::clear_config() {
+  if (GetArenaNoVirtual() == NULL && config_ != NULL) delete config_;
+  config_ = NULL;
+}
 inline const ::google::protobuf::Struct& AccessLog::config() const {
   const ::google::protobuf::Struct* p = config_;
   // @@protoc_insertion_point(field_get:envoy.api.v2.filter.AccessLog.config)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Struct*>(
       &::google::protobuf::_Struct_default_instance_);
-}
-inline ::google::protobuf::Struct* AccessLog::release_config() {
-  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLog.config)
-  
-  ::google::protobuf::Struct* temp = config_;
-  config_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Struct* AccessLog::mutable_config() {
   
@@ -2266,23 +2285,26 @@ inline ::google::protobuf::Struct* AccessLog::mutable_config() {
   // @@protoc_insertion_point(field_mutable:envoy.api.v2.filter.AccessLog.config)
   return config_;
 }
+inline ::google::protobuf::Struct* AccessLog::release_config() {
+  // @@protoc_insertion_point(field_release:envoy.api.v2.filter.AccessLog.config)
+  
+  ::google::protobuf::Struct* temp = config_;
+  config_ = NULL;
+  return temp;
+}
 inline void AccessLog::set_allocated_config(::google::protobuf::Struct* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  delete config_;
+  if (config != NULL && config->GetArena() != NULL) {
+    ::google::protobuf::Struct* new_config = new ::google::protobuf::Struct;
+    new_config->CopyFrom(*config);
+    config = new_config;
   }
+  config_ = config;
   if (config) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(config)->GetArena();
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
     
   } else {
     
   }
-  config_ = config;
   // @@protoc_insertion_point(field_set_allocated:envoy.api.v2.filter.AccessLog.config)
 }
 

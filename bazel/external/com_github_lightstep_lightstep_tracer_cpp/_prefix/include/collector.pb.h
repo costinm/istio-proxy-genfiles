@@ -597,8 +597,8 @@ class Log : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_timestamp();
   static const int kTimestampFieldNumber = 1;
   const ::google::protobuf::Timestamp& timestamp() const;
-  ::google::protobuf::Timestamp* release_timestamp();
   ::google::protobuf::Timestamp* mutable_timestamp();
+  ::google::protobuf::Timestamp* release_timestamp();
   void set_allocated_timestamp(::google::protobuf::Timestamp* timestamp);
 
   // @@protoc_insertion_point(class_scope:lightstep.collector.Log)
@@ -726,8 +726,8 @@ class Reference : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_span_context();
   static const int kSpanContextFieldNumber = 2;
   const ::lightstep::collector::SpanContext& span_context() const;
-  ::lightstep::collector::SpanContext* release_span_context();
   ::lightstep::collector::SpanContext* mutable_span_context();
+  ::lightstep::collector::SpanContext* release_span_context();
   void set_allocated_span_context(::lightstep::collector::SpanContext* span_context);
 
   // .lightstep.collector.Reference.Relationship relationship = 1;
@@ -885,8 +885,8 @@ class Span : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   void clear_span_context();
   static const int kSpanContextFieldNumber = 1;
   const ::lightstep::collector::SpanContext& span_context() const;
-  ::lightstep::collector::SpanContext* release_span_context();
   ::lightstep::collector::SpanContext* mutable_span_context();
+  ::lightstep::collector::SpanContext* release_span_context();
   void set_allocated_span_context(::lightstep::collector::SpanContext* span_context);
 
   // .google.protobuf.Timestamp start_timestamp = 4;
@@ -894,8 +894,8 @@ class Span : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   void clear_start_timestamp();
   static const int kStartTimestampFieldNumber = 4;
   const ::google::protobuf::Timestamp& start_timestamp() const;
-  ::google::protobuf::Timestamp* release_start_timestamp();
   ::google::protobuf::Timestamp* mutable_start_timestamp();
+  ::google::protobuf::Timestamp* release_start_timestamp();
   void set_allocated_start_timestamp(::google::protobuf::Timestamp* start_timestamp);
 
   // uint64 duration_micros = 5;
@@ -1301,8 +1301,8 @@ class InternalMetrics : public ::google::protobuf::Message /* @@protoc_insertion
   void clear_start_timestamp();
   static const int kStartTimestampFieldNumber = 1;
   const ::google::protobuf::Timestamp& start_timestamp() const;
-  ::google::protobuf::Timestamp* release_start_timestamp();
   ::google::protobuf::Timestamp* mutable_start_timestamp();
+  ::google::protobuf::Timestamp* release_start_timestamp();
   void set_allocated_start_timestamp(::google::protobuf::Timestamp* start_timestamp);
 
   // uint64 duration_micros = 2;
@@ -1532,8 +1532,8 @@ class ReportRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_reporter();
   static const int kReporterFieldNumber = 1;
   const ::lightstep::collector::Reporter& reporter() const;
-  ::lightstep::collector::Reporter* release_reporter();
   ::lightstep::collector::Reporter* mutable_reporter();
+  ::lightstep::collector::Reporter* release_reporter();
   void set_allocated_reporter(::lightstep::collector::Reporter* reporter);
 
   // .lightstep.collector.Auth auth = 2;
@@ -1541,8 +1541,8 @@ class ReportRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_auth();
   static const int kAuthFieldNumber = 2;
   const ::lightstep::collector::Auth& auth() const;
-  ::lightstep::collector::Auth* release_auth();
   ::lightstep::collector::Auth* mutable_auth();
+  ::lightstep::collector::Auth* release_auth();
   void set_allocated_auth(::lightstep::collector::Auth* auth);
 
   // .lightstep.collector.InternalMetrics internal_metrics = 6;
@@ -1550,8 +1550,8 @@ class ReportRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   void clear_internal_metrics();
   static const int kInternalMetricsFieldNumber = 6;
   const ::lightstep::collector::InternalMetrics& internal_metrics() const;
-  ::lightstep::collector::InternalMetrics* release_internal_metrics();
   ::lightstep::collector::InternalMetrics* mutable_internal_metrics();
+  ::lightstep::collector::InternalMetrics* release_internal_metrics();
   void set_allocated_internal_metrics(::lightstep::collector::InternalMetrics* internal_metrics);
 
   // uint32 timestamp_offset_micros = 5;
@@ -1795,8 +1795,8 @@ class ReportResponse : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_receive_timestamp();
   static const int kReceiveTimestampFieldNumber = 2;
   const ::google::protobuf::Timestamp& receive_timestamp() const;
-  ::google::protobuf::Timestamp* release_receive_timestamp();
   ::google::protobuf::Timestamp* mutable_receive_timestamp();
+  ::google::protobuf::Timestamp* release_receive_timestamp();
   void set_allocated_receive_timestamp(::google::protobuf::Timestamp* receive_timestamp);
 
   // .google.protobuf.Timestamp transmit_timestamp = 3;
@@ -1804,8 +1804,8 @@ class ReportResponse : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_transmit_timestamp();
   static const int kTransmitTimestampFieldNumber = 3;
   const ::google::protobuf::Timestamp& transmit_timestamp() const;
-  ::google::protobuf::Timestamp* release_transmit_timestamp();
   ::google::protobuf::Timestamp* mutable_transmit_timestamp();
+  ::google::protobuf::Timestamp* release_transmit_timestamp();
   void set_allocated_transmit_timestamp(::google::protobuf::Timestamp* transmit_timestamp);
 
   // @@protoc_insertion_point(class_scope:lightstep.collector.ReportResponse)
@@ -2230,18 +2230,15 @@ inline KeyValue::ValueCase KeyValue::value_case() const {
 inline bool Log::has_timestamp() const {
   return this != internal_default_instance() && timestamp_ != NULL;
 }
+inline void Log::clear_timestamp() {
+  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) delete timestamp_;
+  timestamp_ = NULL;
+}
 inline const ::google::protobuf::Timestamp& Log::timestamp() const {
   const ::google::protobuf::Timestamp* p = timestamp_;
   // @@protoc_insertion_point(field_get:lightstep.collector.Log.timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
-}
-inline ::google::protobuf::Timestamp* Log::release_timestamp() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.Log.timestamp)
-  
-  ::google::protobuf::Timestamp* temp = timestamp_;
-  timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Timestamp* Log::mutable_timestamp() {
   
@@ -2251,23 +2248,26 @@ inline ::google::protobuf::Timestamp* Log::mutable_timestamp() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.Log.timestamp)
   return timestamp_;
 }
+inline ::google::protobuf::Timestamp* Log::release_timestamp() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.Log.timestamp)
+  
+  ::google::protobuf::Timestamp* temp = timestamp_;
+  timestamp_ = NULL;
+  return temp;
+}
 inline void Log::set_allocated_timestamp(::google::protobuf::Timestamp* timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(timestamp_);
+  delete timestamp_;
+  if (timestamp != NULL && timestamp->GetArena() != NULL) {
+    ::google::protobuf::Timestamp* new_timestamp = new ::google::protobuf::Timestamp;
+    new_timestamp->CopyFrom(*timestamp);
+    timestamp = new_timestamp;
   }
+  timestamp_ = timestamp;
   if (timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  timestamp_ = timestamp;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.Log.timestamp)
 }
 
@@ -2324,9 +2324,7 @@ inline bool Reference::has_span_context() const {
   return this != internal_default_instance() && span_context_ != NULL;
 }
 inline void Reference::clear_span_context() {
-  if (GetArenaNoVirtual() == NULL && span_context_ != NULL) {
-    delete span_context_;
-  }
+  if (GetArenaNoVirtual() == NULL && span_context_ != NULL) delete span_context_;
   span_context_ = NULL;
 }
 inline const ::lightstep::collector::SpanContext& Reference::span_context() const {
@@ -2334,13 +2332,6 @@ inline const ::lightstep::collector::SpanContext& Reference::span_context() cons
   // @@protoc_insertion_point(field_get:lightstep.collector.Reference.span_context)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::collector::SpanContext*>(
       &::lightstep::collector::_SpanContext_default_instance_);
-}
-inline ::lightstep::collector::SpanContext* Reference::release_span_context() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.Reference.span_context)
-  
-  ::lightstep::collector::SpanContext* temp = span_context_;
-  span_context_ = NULL;
-  return temp;
 }
 inline ::lightstep::collector::SpanContext* Reference::mutable_span_context() {
   
@@ -2350,22 +2341,21 @@ inline ::lightstep::collector::SpanContext* Reference::mutable_span_context() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.Reference.span_context)
   return span_context_;
 }
+inline ::lightstep::collector::SpanContext* Reference::release_span_context() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.Reference.span_context)
+  
+  ::lightstep::collector::SpanContext* temp = span_context_;
+  span_context_ = NULL;
+  return temp;
+}
 inline void Reference::set_allocated_span_context(::lightstep::collector::SpanContext* span_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete span_context_;
-  }
+  delete span_context_;
+  span_context_ = span_context;
   if (span_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      span_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, span_context, submessage_arena);
-    }
     
   } else {
     
   }
-  span_context_ = span_context;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.Reference.span_context)
 }
 
@@ -2378,9 +2368,7 @@ inline bool Span::has_span_context() const {
   return this != internal_default_instance() && span_context_ != NULL;
 }
 inline void Span::clear_span_context() {
-  if (GetArenaNoVirtual() == NULL && span_context_ != NULL) {
-    delete span_context_;
-  }
+  if (GetArenaNoVirtual() == NULL && span_context_ != NULL) delete span_context_;
   span_context_ = NULL;
 }
 inline const ::lightstep::collector::SpanContext& Span::span_context() const {
@@ -2388,13 +2376,6 @@ inline const ::lightstep::collector::SpanContext& Span::span_context() const {
   // @@protoc_insertion_point(field_get:lightstep.collector.Span.span_context)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::collector::SpanContext*>(
       &::lightstep::collector::_SpanContext_default_instance_);
-}
-inline ::lightstep::collector::SpanContext* Span::release_span_context() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.Span.span_context)
-  
-  ::lightstep::collector::SpanContext* temp = span_context_;
-  span_context_ = NULL;
-  return temp;
 }
 inline ::lightstep::collector::SpanContext* Span::mutable_span_context() {
   
@@ -2404,22 +2385,21 @@ inline ::lightstep::collector::SpanContext* Span::mutable_span_context() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.Span.span_context)
   return span_context_;
 }
+inline ::lightstep::collector::SpanContext* Span::release_span_context() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.Span.span_context)
+  
+  ::lightstep::collector::SpanContext* temp = span_context_;
+  span_context_ = NULL;
+  return temp;
+}
 inline void Span::set_allocated_span_context(::lightstep::collector::SpanContext* span_context) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete span_context_;
-  }
+  delete span_context_;
+  span_context_ = span_context;
   if (span_context) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      span_context = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, span_context, submessage_arena);
-    }
     
   } else {
     
   }
-  span_context_ = span_context;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.Span.span_context)
 }
 
@@ -2510,18 +2490,15 @@ Span::references() const {
 inline bool Span::has_start_timestamp() const {
   return this != internal_default_instance() && start_timestamp_ != NULL;
 }
+inline void Span::clear_start_timestamp() {
+  if (GetArenaNoVirtual() == NULL && start_timestamp_ != NULL) delete start_timestamp_;
+  start_timestamp_ = NULL;
+}
 inline const ::google::protobuf::Timestamp& Span::start_timestamp() const {
   const ::google::protobuf::Timestamp* p = start_timestamp_;
   // @@protoc_insertion_point(field_get:lightstep.collector.Span.start_timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
-}
-inline ::google::protobuf::Timestamp* Span::release_start_timestamp() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.Span.start_timestamp)
-  
-  ::google::protobuf::Timestamp* temp = start_timestamp_;
-  start_timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Timestamp* Span::mutable_start_timestamp() {
   
@@ -2531,23 +2508,26 @@ inline ::google::protobuf::Timestamp* Span::mutable_start_timestamp() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.Span.start_timestamp)
   return start_timestamp_;
 }
+inline ::google::protobuf::Timestamp* Span::release_start_timestamp() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.Span.start_timestamp)
+  
+  ::google::protobuf::Timestamp* temp = start_timestamp_;
+  start_timestamp_ = NULL;
+  return temp;
+}
 inline void Span::set_allocated_start_timestamp(::google::protobuf::Timestamp* start_timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(start_timestamp_);
+  delete start_timestamp_;
+  if (start_timestamp != NULL && start_timestamp->GetArena() != NULL) {
+    ::google::protobuf::Timestamp* new_start_timestamp = new ::google::protobuf::Timestamp;
+    new_start_timestamp->CopyFrom(*start_timestamp);
+    start_timestamp = new_start_timestamp;
   }
+  start_timestamp_ = start_timestamp;
   if (start_timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(start_timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      start_timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, start_timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  start_timestamp_ = start_timestamp;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.Span.start_timestamp)
 }
 
@@ -2805,18 +2785,15 @@ inline MetricsSample::ValueCase MetricsSample::value_case() const {
 inline bool InternalMetrics::has_start_timestamp() const {
   return this != internal_default_instance() && start_timestamp_ != NULL;
 }
+inline void InternalMetrics::clear_start_timestamp() {
+  if (GetArenaNoVirtual() == NULL && start_timestamp_ != NULL) delete start_timestamp_;
+  start_timestamp_ = NULL;
+}
 inline const ::google::protobuf::Timestamp& InternalMetrics::start_timestamp() const {
   const ::google::protobuf::Timestamp* p = start_timestamp_;
   // @@protoc_insertion_point(field_get:lightstep.collector.InternalMetrics.start_timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
-}
-inline ::google::protobuf::Timestamp* InternalMetrics::release_start_timestamp() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.InternalMetrics.start_timestamp)
-  
-  ::google::protobuf::Timestamp* temp = start_timestamp_;
-  start_timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Timestamp* InternalMetrics::mutable_start_timestamp() {
   
@@ -2826,23 +2803,26 @@ inline ::google::protobuf::Timestamp* InternalMetrics::mutable_start_timestamp()
   // @@protoc_insertion_point(field_mutable:lightstep.collector.InternalMetrics.start_timestamp)
   return start_timestamp_;
 }
+inline ::google::protobuf::Timestamp* InternalMetrics::release_start_timestamp() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.InternalMetrics.start_timestamp)
+  
+  ::google::protobuf::Timestamp* temp = start_timestamp_;
+  start_timestamp_ = NULL;
+  return temp;
+}
 inline void InternalMetrics::set_allocated_start_timestamp(::google::protobuf::Timestamp* start_timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(start_timestamp_);
+  delete start_timestamp_;
+  if (start_timestamp != NULL && start_timestamp->GetArena() != NULL) {
+    ::google::protobuf::Timestamp* new_start_timestamp = new ::google::protobuf::Timestamp;
+    new_start_timestamp->CopyFrom(*start_timestamp);
+    start_timestamp = new_start_timestamp;
   }
+  start_timestamp_ = start_timestamp;
   if (start_timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(start_timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      start_timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, start_timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  start_timestamp_ = start_timestamp;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.InternalMetrics.start_timestamp)
 }
 
@@ -3016,9 +2996,7 @@ inline bool ReportRequest::has_reporter() const {
   return this != internal_default_instance() && reporter_ != NULL;
 }
 inline void ReportRequest::clear_reporter() {
-  if (GetArenaNoVirtual() == NULL && reporter_ != NULL) {
-    delete reporter_;
-  }
+  if (GetArenaNoVirtual() == NULL && reporter_ != NULL) delete reporter_;
   reporter_ = NULL;
 }
 inline const ::lightstep::collector::Reporter& ReportRequest::reporter() const {
@@ -3026,13 +3004,6 @@ inline const ::lightstep::collector::Reporter& ReportRequest::reporter() const {
   // @@protoc_insertion_point(field_get:lightstep.collector.ReportRequest.reporter)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::collector::Reporter*>(
       &::lightstep::collector::_Reporter_default_instance_);
-}
-inline ::lightstep::collector::Reporter* ReportRequest::release_reporter() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.reporter)
-  
-  ::lightstep::collector::Reporter* temp = reporter_;
-  reporter_ = NULL;
-  return temp;
 }
 inline ::lightstep::collector::Reporter* ReportRequest::mutable_reporter() {
   
@@ -3042,22 +3013,21 @@ inline ::lightstep::collector::Reporter* ReportRequest::mutable_reporter() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.ReportRequest.reporter)
   return reporter_;
 }
+inline ::lightstep::collector::Reporter* ReportRequest::release_reporter() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.reporter)
+  
+  ::lightstep::collector::Reporter* temp = reporter_;
+  reporter_ = NULL;
+  return temp;
+}
 inline void ReportRequest::set_allocated_reporter(::lightstep::collector::Reporter* reporter) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reporter_;
-  }
+  delete reporter_;
+  reporter_ = reporter;
   if (reporter) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      reporter = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, reporter, submessage_arena);
-    }
     
   } else {
     
   }
-  reporter_ = reporter;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.ReportRequest.reporter)
 }
 
@@ -3066,9 +3036,7 @@ inline bool ReportRequest::has_auth() const {
   return this != internal_default_instance() && auth_ != NULL;
 }
 inline void ReportRequest::clear_auth() {
-  if (GetArenaNoVirtual() == NULL && auth_ != NULL) {
-    delete auth_;
-  }
+  if (GetArenaNoVirtual() == NULL && auth_ != NULL) delete auth_;
   auth_ = NULL;
 }
 inline const ::lightstep::collector::Auth& ReportRequest::auth() const {
@@ -3076,13 +3044,6 @@ inline const ::lightstep::collector::Auth& ReportRequest::auth() const {
   // @@protoc_insertion_point(field_get:lightstep.collector.ReportRequest.auth)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::collector::Auth*>(
       &::lightstep::collector::_Auth_default_instance_);
-}
-inline ::lightstep::collector::Auth* ReportRequest::release_auth() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.auth)
-  
-  ::lightstep::collector::Auth* temp = auth_;
-  auth_ = NULL;
-  return temp;
 }
 inline ::lightstep::collector::Auth* ReportRequest::mutable_auth() {
   
@@ -3092,22 +3053,21 @@ inline ::lightstep::collector::Auth* ReportRequest::mutable_auth() {
   // @@protoc_insertion_point(field_mutable:lightstep.collector.ReportRequest.auth)
   return auth_;
 }
+inline ::lightstep::collector::Auth* ReportRequest::release_auth() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.auth)
+  
+  ::lightstep::collector::Auth* temp = auth_;
+  auth_ = NULL;
+  return temp;
+}
 inline void ReportRequest::set_allocated_auth(::lightstep::collector::Auth* auth) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete auth_;
-  }
+  delete auth_;
+  auth_ = auth;
   if (auth) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      auth = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, auth, submessage_arena);
-    }
     
   } else {
     
   }
-  auth_ = auth;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.ReportRequest.auth)
 }
 
@@ -3160,9 +3120,7 @@ inline bool ReportRequest::has_internal_metrics() const {
   return this != internal_default_instance() && internal_metrics_ != NULL;
 }
 inline void ReportRequest::clear_internal_metrics() {
-  if (GetArenaNoVirtual() == NULL && internal_metrics_ != NULL) {
-    delete internal_metrics_;
-  }
+  if (GetArenaNoVirtual() == NULL && internal_metrics_ != NULL) delete internal_metrics_;
   internal_metrics_ = NULL;
 }
 inline const ::lightstep::collector::InternalMetrics& ReportRequest::internal_metrics() const {
@@ -3170,13 +3128,6 @@ inline const ::lightstep::collector::InternalMetrics& ReportRequest::internal_me
   // @@protoc_insertion_point(field_get:lightstep.collector.ReportRequest.internal_metrics)
   return p != NULL ? *p : *reinterpret_cast<const ::lightstep::collector::InternalMetrics*>(
       &::lightstep::collector::_InternalMetrics_default_instance_);
-}
-inline ::lightstep::collector::InternalMetrics* ReportRequest::release_internal_metrics() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.internal_metrics)
-  
-  ::lightstep::collector::InternalMetrics* temp = internal_metrics_;
-  internal_metrics_ = NULL;
-  return temp;
 }
 inline ::lightstep::collector::InternalMetrics* ReportRequest::mutable_internal_metrics() {
   
@@ -3186,22 +3137,21 @@ inline ::lightstep::collector::InternalMetrics* ReportRequest::mutable_internal_
   // @@protoc_insertion_point(field_mutable:lightstep.collector.ReportRequest.internal_metrics)
   return internal_metrics_;
 }
+inline ::lightstep::collector::InternalMetrics* ReportRequest::release_internal_metrics() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.ReportRequest.internal_metrics)
+  
+  ::lightstep::collector::InternalMetrics* temp = internal_metrics_;
+  internal_metrics_ = NULL;
+  return temp;
+}
 inline void ReportRequest::set_allocated_internal_metrics(::lightstep::collector::InternalMetrics* internal_metrics) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete internal_metrics_;
-  }
+  delete internal_metrics_;
+  internal_metrics_ = internal_metrics;
   if (internal_metrics) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      internal_metrics = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, internal_metrics, submessage_arena);
-    }
     
   } else {
     
   }
-  internal_metrics_ = internal_metrics;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.ReportRequest.internal_metrics)
 }
 
@@ -3261,18 +3211,15 @@ ReportResponse::commands() const {
 inline bool ReportResponse::has_receive_timestamp() const {
   return this != internal_default_instance() && receive_timestamp_ != NULL;
 }
+inline void ReportResponse::clear_receive_timestamp() {
+  if (GetArenaNoVirtual() == NULL && receive_timestamp_ != NULL) delete receive_timestamp_;
+  receive_timestamp_ = NULL;
+}
 inline const ::google::protobuf::Timestamp& ReportResponse::receive_timestamp() const {
   const ::google::protobuf::Timestamp* p = receive_timestamp_;
   // @@protoc_insertion_point(field_get:lightstep.collector.ReportResponse.receive_timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
-}
-inline ::google::protobuf::Timestamp* ReportResponse::release_receive_timestamp() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.ReportResponse.receive_timestamp)
-  
-  ::google::protobuf::Timestamp* temp = receive_timestamp_;
-  receive_timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Timestamp* ReportResponse::mutable_receive_timestamp() {
   
@@ -3282,23 +3229,26 @@ inline ::google::protobuf::Timestamp* ReportResponse::mutable_receive_timestamp(
   // @@protoc_insertion_point(field_mutable:lightstep.collector.ReportResponse.receive_timestamp)
   return receive_timestamp_;
 }
+inline ::google::protobuf::Timestamp* ReportResponse::release_receive_timestamp() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.ReportResponse.receive_timestamp)
+  
+  ::google::protobuf::Timestamp* temp = receive_timestamp_;
+  receive_timestamp_ = NULL;
+  return temp;
+}
 inline void ReportResponse::set_allocated_receive_timestamp(::google::protobuf::Timestamp* receive_timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(receive_timestamp_);
+  delete receive_timestamp_;
+  if (receive_timestamp != NULL && receive_timestamp->GetArena() != NULL) {
+    ::google::protobuf::Timestamp* new_receive_timestamp = new ::google::protobuf::Timestamp;
+    new_receive_timestamp->CopyFrom(*receive_timestamp);
+    receive_timestamp = new_receive_timestamp;
   }
+  receive_timestamp_ = receive_timestamp;
   if (receive_timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(receive_timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      receive_timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, receive_timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  receive_timestamp_ = receive_timestamp;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.ReportResponse.receive_timestamp)
 }
 
@@ -3306,18 +3256,15 @@ inline void ReportResponse::set_allocated_receive_timestamp(::google::protobuf::
 inline bool ReportResponse::has_transmit_timestamp() const {
   return this != internal_default_instance() && transmit_timestamp_ != NULL;
 }
+inline void ReportResponse::clear_transmit_timestamp() {
+  if (GetArenaNoVirtual() == NULL && transmit_timestamp_ != NULL) delete transmit_timestamp_;
+  transmit_timestamp_ = NULL;
+}
 inline const ::google::protobuf::Timestamp& ReportResponse::transmit_timestamp() const {
   const ::google::protobuf::Timestamp* p = transmit_timestamp_;
   // @@protoc_insertion_point(field_get:lightstep.collector.ReportResponse.transmit_timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
-}
-inline ::google::protobuf::Timestamp* ReportResponse::release_transmit_timestamp() {
-  // @@protoc_insertion_point(field_release:lightstep.collector.ReportResponse.transmit_timestamp)
-  
-  ::google::protobuf::Timestamp* temp = transmit_timestamp_;
-  transmit_timestamp_ = NULL;
-  return temp;
 }
 inline ::google::protobuf::Timestamp* ReportResponse::mutable_transmit_timestamp() {
   
@@ -3327,23 +3274,26 @@ inline ::google::protobuf::Timestamp* ReportResponse::mutable_transmit_timestamp
   // @@protoc_insertion_point(field_mutable:lightstep.collector.ReportResponse.transmit_timestamp)
   return transmit_timestamp_;
 }
+inline ::google::protobuf::Timestamp* ReportResponse::release_transmit_timestamp() {
+  // @@protoc_insertion_point(field_release:lightstep.collector.ReportResponse.transmit_timestamp)
+  
+  ::google::protobuf::Timestamp* temp = transmit_timestamp_;
+  transmit_timestamp_ = NULL;
+  return temp;
+}
 inline void ReportResponse::set_allocated_transmit_timestamp(::google::protobuf::Timestamp* transmit_timestamp) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(transmit_timestamp_);
+  delete transmit_timestamp_;
+  if (transmit_timestamp != NULL && transmit_timestamp->GetArena() != NULL) {
+    ::google::protobuf::Timestamp* new_transmit_timestamp = new ::google::protobuf::Timestamp;
+    new_transmit_timestamp->CopyFrom(*transmit_timestamp);
+    transmit_timestamp = new_transmit_timestamp;
   }
+  transmit_timestamp_ = transmit_timestamp;
   if (transmit_timestamp) {
-    ::google::protobuf::Arena* submessage_arena =
-      reinterpret_cast< ::google::protobuf::MessageLite*>(transmit_timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      transmit_timestamp = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, transmit_timestamp, submessage_arena);
-    }
     
   } else {
     
   }
-  transmit_timestamp_ = transmit_timestamp;
   // @@protoc_insertion_point(field_set_allocated:lightstep.collector.ReportResponse.transmit_timestamp)
 }
 

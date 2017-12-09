@@ -714,8 +714,8 @@ class RateLimitResponse_DescriptorStatus : public ::google::protobuf::Message /*
   void clear_current_limit();
   static const int kCurrentLimitFieldNumber = 2;
   const ::pb::lyft::ratelimit::RateLimit& current_limit() const;
-  ::pb::lyft::ratelimit::RateLimit* release_current_limit();
   ::pb::lyft::ratelimit::RateLimit* mutable_current_limit();
+  ::pb::lyft::ratelimit::RateLimit* release_current_limit();
   void set_allocated_current_limit(::pb::lyft::ratelimit::RateLimit* current_limit);
 
   // .pb.lyft.ratelimit.RateLimitResponse.Code code = 1;
@@ -1176,9 +1176,7 @@ inline bool RateLimitResponse_DescriptorStatus::has_current_limit() const {
   return this != internal_default_instance() && current_limit_ != NULL;
 }
 inline void RateLimitResponse_DescriptorStatus::clear_current_limit() {
-  if (GetArenaNoVirtual() == NULL && current_limit_ != NULL) {
-    delete current_limit_;
-  }
+  if (GetArenaNoVirtual() == NULL && current_limit_ != NULL) delete current_limit_;
   current_limit_ = NULL;
 }
 inline const ::pb::lyft::ratelimit::RateLimit& RateLimitResponse_DescriptorStatus::current_limit() const {
@@ -1186,13 +1184,6 @@ inline const ::pb::lyft::ratelimit::RateLimit& RateLimitResponse_DescriptorStatu
   // @@protoc_insertion_point(field_get:pb.lyft.ratelimit.RateLimitResponse.DescriptorStatus.current_limit)
   return p != NULL ? *p : *reinterpret_cast<const ::pb::lyft::ratelimit::RateLimit*>(
       &::pb::lyft::ratelimit::_RateLimit_default_instance_);
-}
-inline ::pb::lyft::ratelimit::RateLimit* RateLimitResponse_DescriptorStatus::release_current_limit() {
-  // @@protoc_insertion_point(field_release:pb.lyft.ratelimit.RateLimitResponse.DescriptorStatus.current_limit)
-  
-  ::pb::lyft::ratelimit::RateLimit* temp = current_limit_;
-  current_limit_ = NULL;
-  return temp;
 }
 inline ::pb::lyft::ratelimit::RateLimit* RateLimitResponse_DescriptorStatus::mutable_current_limit() {
   
@@ -1202,22 +1193,21 @@ inline ::pb::lyft::ratelimit::RateLimit* RateLimitResponse_DescriptorStatus::mut
   // @@protoc_insertion_point(field_mutable:pb.lyft.ratelimit.RateLimitResponse.DescriptorStatus.current_limit)
   return current_limit_;
 }
+inline ::pb::lyft::ratelimit::RateLimit* RateLimitResponse_DescriptorStatus::release_current_limit() {
+  // @@protoc_insertion_point(field_release:pb.lyft.ratelimit.RateLimitResponse.DescriptorStatus.current_limit)
+  
+  ::pb::lyft::ratelimit::RateLimit* temp = current_limit_;
+  current_limit_ = NULL;
+  return temp;
+}
 inline void RateLimitResponse_DescriptorStatus::set_allocated_current_limit(::pb::lyft::ratelimit::RateLimit* current_limit) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete current_limit_;
-  }
+  delete current_limit_;
+  current_limit_ = current_limit;
   if (current_limit) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      current_limit = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, current_limit, submessage_arena);
-    }
     
   } else {
     
   }
-  current_limit_ = current_limit;
   // @@protoc_insertion_point(field_set_allocated:pb.lyft.ratelimit.RateLimitResponse.DescriptorStatus.current_limit)
 }
 
